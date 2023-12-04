@@ -1267,6 +1267,8 @@ template {
 }
 
 .steps-investor__item-txt,
+.region__item-stat__text,
+.region__text,
 .footer__info-link {
   font-size: 20px;
   font-weight: 400;
@@ -1854,6 +1856,159 @@ fieldset {
   font-weight: 600;
   line-height: 140%;
   margin-bottom: 2px;
+}
+
+.region {
+  overflow: hidden;
+}
+
+.region__container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+}
+
+.region__titles {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  margin: 0 0 40px 0;
+}
+
+.region__items-one {
+  display: flex;
+  gap: 20px;
+  min-height: 240px;
+}
+
+.region__items-two {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr 2fr;
+  grid-template-rows: 240px 240px;
+  margin: 20px 0 0 0;
+  gap: 20px;
+}
+
+.region__items-two__stat-container,
+.region__items-one__stat-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  grid-template-rows: 240px;
+  grid-column: span 2;
+}
+
+.region__items-one__stat-container {
+  gap: 20px;
+}
+
+.region__title {
+  color: #2f2f2f;
+}
+
+.region__text {
+  justify-self: end;
+  text-align: center;
+  color: #2f2f2f;
+}
+
+.region__item-stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.region__item-stat__text {
+  color: #2f2f2f;
+}
+
+.region__item-stat__quantity {
+  color: #2d6fd0;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.region__stat-one {
+  flex: 0 1 320px;
+}
+
+.region__stat-two {
+  flex: 0 1 320px;
+}
+
+.region__pic-one {
+  flex: 0 2 840px;
+}
+
+.region__item-pic__img {
+  border-radius: 4px;
+  height: 240px;
+}
+
+.region__stat-three {
+  grid-column: span 1;
+  grid-row: 1/1;
+}
+
+.region__stat-four {
+  grid-column: span 1;
+  grid-row: 1/1;
+  padding: 40px 40px 40px 0;
+}
+
+.region__text-four {
+  max-width: 224px;
+}
+
+.region__item-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  grid-column: 3/3;
+  grid-row: span 2;
+  border-radius: 4px;
+  padding: 40px;
+  position: relative;
+}
+
+.region__item-chart-title {
+  align-self: start;
+  color: #2f2f2f;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.region__item-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+  border-radius: 4px;
+  min-height: 240px;
+}
+
+.region__item-about__link {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+
+.region__item-about__link:hover {
+  border-bottom: none;
+}
+
+.region__item-pic__img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .steps-investor__container {
@@ -2459,6 +2614,79 @@ fieldset {
     left: 275px;
   }
 
+  .region__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 32px 0;
+  }
+
+  .region__text {
+    text-align: start;
+  }
+
+  .region__text,
+  .region__item-stat__text {
+    font-size: 18px;
+  }
+
+  .region__item-stat__quantity {
+    font-size: 32px;
+  }
+
+  .region__item-stat {
+    padding: 40px;
+  }
+
+  .region__items-one {
+    flex-direction: column;
+  }
+
+  .region__items-two {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, auto);
+  }
+
+  .region__items-two__stat-container {
+    gap: 20px;
+  }
+
+  .region__pic-one {
+    flex: 0 0 auto;
+  }
+
+  .region__stat-three {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
+
+  .region__stat-four {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    padding: 40px;
+  }
+
+  .region__text-four {
+    max-width: 224px;
+  }
+
+  .region__item-chart {
+    grid-column: span 2;
+  }
+
+  .region__item-chart-title {
+    font-size: 24px;
+  }
+
+  .region__item-about {
+    grid-column: 1/1;
+    grid-row: 4/4;
+  }
+
+  .region__pic-two {
+    grid-column: 2/2;
+    grid-row: 4/4;
+  }
+
   .steps-investor__img {
     display: none;
   }
@@ -2708,6 +2936,55 @@ fieldset {
   .governor__desc-gover-name {
     font-weight: 500;
     margin-bottom: 4px;
+  }
+
+  .region__title {
+    padding: 0 20px 0 0;
+  }
+
+  .region__text {
+    text-align: start;
+  }
+
+  .region__text,
+  .region__item-stat__text {
+    font-size: 16px;
+  }
+
+  .region__item-stat {
+    padding: 40px;
+  }
+
+  .region__items-one {
+    flex-direction: column;
+  }
+
+  .region__items-two {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .region__items-one__stat-container,
+  .region__items-two__stat-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .region__item-stat {
+    gap: 52px 0;
+  }
+
+  .region__stat-one,
+  .region__stat-two {
+    flex: 0 1 auto;
+  }
+
+  .region__item-chart-title {
+    font-size: 20px;
+  }
+
+  .region__item-about {
+    order: 1;
   }
 
   .steps-investor__item {

@@ -1,0 +1,232 @@
+.region {
+  overflow: hidden;
+  &__container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+  }
+  &__titles {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    margin: 0 0 40px 0;
+  }
+  &__items-one {
+    display: flex;
+    gap: 20px;
+    min-height: 240px;
+  }
+  &__items-two {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr 2fr;
+    grid-template-rows: 240px 240px;
+    margin: 20px 0 0 0;
+    gap: 20px;
+  }
+  &__items-two__stat-container,
+  &__items-one__stat-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    grid-template-rows: 240px;
+    grid-column: span 2;
+  }
+  &__items-one__stat-container {
+    gap: 20px;
+  }
+  &__title {
+    color: $black;
+  }
+  &__text {
+    justify-self: end;
+    text-align: center;
+    color: $black;
+    @extend %mainTxt;
+  }
+  &__item-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  &__item-stat__text {
+    color: $black;
+    @extend %mainTxt;
+  }
+  &__item-stat__quantity {
+    color: $bluePrimary;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+  &__stat-one {
+    flex: 0 1 320px;
+  }
+  &__stat-two {
+    flex: 0 1 320px;
+  }
+  &__pic-one {
+    flex: 0 2 840px;
+  }
+  &__item-pic__img {
+    border-radius: 4px;
+    height: 240px;
+  }
+  &__stat-three {
+    grid-column: span 1;
+    grid-row: 1/1;
+  }
+  &__stat-four {
+    grid-column: span 1;
+    grid-row: 1/1;
+    padding: 40px 40px 40px 0;
+  }
+  &__text-four {
+    max-width: 224px;
+  }
+  &__item-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    grid-column: 3/3;
+    grid-row: span 2;
+    border-radius: 4px;
+    padding: 40px;
+    position: relative;
+  }
+  &__item-chart-title {
+    align-self: start;
+    color: $black;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+  &__item-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $blueGradient;
+    border-radius: 4px;
+    min-height: 240px;
+  }
+  &__item-about__link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    &:hover {
+      border-bottom: none;
+    }
+  }
+  &__item-pic__img {
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: $tablet) {
+  .region {
+    &__titles {
+      display: flex;
+      flex-direction: column;
+      gap: 32px 0;
+    }
+    &__text {
+      text-align: start;
+    }
+    &__text,
+    &__item-stat__text {
+      font-size: 18px;
+    }
+    &__item-stat__quantity {
+      font-size: 32px;
+    }
+    &__item-stat {
+      padding: 40px;
+    }
+    &__items-one {
+      flex-direction: column;
+    }
+    &__items-two {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(1, auto);
+    }
+    &__items-two__stat-container {
+      gap: 20px;
+    }
+    &__pic-one {
+      flex: 0 0 auto;
+    }
+    &__stat-three {
+      grid-column: 1/1;
+      grid-row: 1/1;
+    }
+    &__stat-four {
+      grid-column: 2/2;
+      grid-row: 1/1;
+      padding: 40px;
+    }
+    &__text-four {
+      max-width: 224px;
+    }
+    &__item-chart {
+      grid-column: span 2;
+    }
+    &__item-chart-title {
+      font-size: 24px;
+    }
+    &__item-about {
+      grid-column: 1/1;
+      grid-row: 4/4;
+    }
+    &__pic-two {
+      grid-column: 2/2;
+      grid-row: 4/4;
+    }
+  }
+}
+@media screen and (max-width: $mob) {
+  .region {
+    &__title {
+      padding: 0 20px 0 0;
+    }
+    &__text {
+      text-align: start;
+    }
+    &__text,
+    &__item-stat__text {
+      font-size: 16px;
+    }
+    &__item-stat {
+      padding: 40px;
+    }
+    &__items-one {
+      flex-direction: column;
+    }
+    &__items-two {
+      display: flex;
+      flex-direction: column;
+    }
+    &__items-one__stat-container,
+    &__items-two__stat-container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__item-stat {
+      gap: 52px 0;
+    }
+    &__stat-one,
+    &__stat-two {
+      flex: 0 1 auto;
+    }
+    &__item-chart-title {
+      font-size: 20px;
+    }
+    &__item-about {
+      order: 1;
+    }
+  }
+}
