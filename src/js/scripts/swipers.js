@@ -96,7 +96,6 @@ function initNewsSlider() {
   }
 }
 
-
 function initSliders() {
   initBenefitsSlider();
   initSuccessHistSlider();
