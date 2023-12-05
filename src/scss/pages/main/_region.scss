@@ -141,9 +141,9 @@
     line-height: 140%;
     border-bottom: 1px solid #fff;
     cursor: pointer;
-
+    transition: $transitionBorder;
     &:hover {
-      border-bottom: none;
+      border-bottom: transparent;
     }
   }
 
