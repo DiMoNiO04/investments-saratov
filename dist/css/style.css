@@ -1242,6 +1242,8 @@ svg {
 .calculator__item label,
 .calculator__item div,
 .input-file label,
+.input-labels .input__item label,
+.input-labels .input__item div,
 .slider-navigation__fraction,
 .slider-navigation__btns-next,
 .slider-navigation__btns-prev,
@@ -1307,6 +1309,7 @@ svg {
   justify-content: space-between;
 }
 
+.account__content--appeals .account__fieldset-file,
 .account__fieldset-radioboxs,
 .account__fieldset-inputs,
 .calculator__block-radiobtns,
@@ -1320,7 +1323,8 @@ svg {
 .modal-pers-cab__title,
 .modal-write__btns,
 .footer__info-socials,
-.textarea__textarea {
+.textarea__textarea,
+.input-labels .input__items {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1351,6 +1355,7 @@ svg {
 .textarea__textarea textarea,
 .textarea__textarea textarea::placeholder,
 .dropdown-def .dropdown__value,
+.input-labels .input__item span,
 .input__input input,
 .input__input input::placeholder {
   font-size: 16px;
@@ -1412,6 +1417,7 @@ svg {
   line-height: 130%;
 }
 
+.account__content--appeals .account__fieldset-desc,
 .account__table-item div:last-child,
 .account__table-item,
 .account__fieldset-linkin__text,
@@ -2022,6 +2028,69 @@ fieldset {
 .input.--focus.--error .input__input {
   border-color: #e33b32;
   box-shadow: 0px 0px 0px 3px #fddddc;
+}
+
+.input-labels .input__items {
+  flex-wrap: wrap;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.input-labels .input__item label,
+.input-labels .input__item div {
+  padding: 11px 16px;
+  border-radius: 4px;
+  background-color: #f5f6f6;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: border 0.5s ease;
+}
+
+.input-labels .input__item input {
+  display: none;
+}
+
+.input-labels .input__item input:checked + label {
+  border-color: #2d6fd0;
+}
+
+.input-labels .input__item input:checked + label span {
+  color: #2d6fd0;
+}
+
+.input-labels .input__item input:checked + label svg use {
+  stroke: #2d6fd0;
+}
+
+.input-labels .input__item svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.input-labels .input__item svg use {
+  stroke: #2f2f2f;
+  transition: stroke 0.5s ease-in-out;
+}
+
+.input-labels .input__item span {
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.input-labels .input__item.active {
+  border-color: #2d6fd0;
+}
+
+.input-labels .input__item.active svg use {
+  stroke: #2d6fd0;
+}
+
+.input-labels .input__item.active label {
+  color: #2d6fd0;
 }
 
 .input--password button svg:first-child {
@@ -4222,8 +4291,31 @@ fieldset {
   width: 286px;
 }
 
-.account__back {
+.account__menu {
   display: none;
+}
+
+.account__back {
+  display: flex;
+}
+
+.account__menu,
+.account__back {
+  align-items: center;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+}
+
+.account__menu svg,
+.account__back svg {
+  width: 20px;
+  height: 20px;
+}
+
+.account__menu span,
+.account__back span {
+  font-size: 16px;
+  line-height: 140%;
 }
 
 .account__fieldset-linkins {
@@ -4341,7 +4433,7 @@ fieldset {
 .account__fieldset {
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
+  row-gap: 20px;
 }
 
 .account__status {
@@ -4475,6 +4567,28 @@ fieldset {
 
 .account__table-btn:disabled svg path {
   stroke: #dee2e7;
+}
+
+.account__content--appeals {
+  display: none;
+}
+
+.account__content--appeals.--active {
+  display: flex;
+}
+
+.account__content--appeals .account__fieldset-input {
+  width: 100%;
+}
+
+.account__content--appeals .account__fieldset-file {
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  row-gap: 4px;
+}
+
+.account__content--appeals .textarea__textarea {
+  height: 154px;
 }
 
 @media screen and (min-width: 1365px) {
@@ -5527,21 +5641,8 @@ fieldset {
     flex-basis: calc(50% - 8px);
   }
 
-  .account__back {
+  .account__menu {
     display: flex;
-    align-items: center;
-    -moz-column-gap: 4px;
-         column-gap: 4px;
-  }
-
-  .account__back svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .account__back span {
-    font-size: 16px;
-    line-height: 140%;
   }
 
   .account__btn {
@@ -5680,6 +5781,17 @@ fieldset {
     position: static;
     width: 100%;
     justify-content: space-between;
+  }
+
+  .input label {
+    -moz-column-gap: 4px;
+         column-gap: 4px;
+  }
+
+  .input-labels .input__items {
+    row-gap: 16px;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
   }
 
   .radiobox label {
@@ -6442,6 +6554,11 @@ fieldset {
 
   .account__table {
     border: none;
+  }
+
+  .account__content--appeals .account__fieldset-file {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

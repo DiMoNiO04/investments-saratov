@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Мои организации</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231209211418" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231209211418" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231209223721" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231209223721" />
 </head>
 
 
@@ -101,8 +101,8 @@
           </button>
         </div>
       </aside>
-      <div class="account__content">
-        <button type="button" class="account__back js-account-menu-open">
+      <div class="account__content account__content--appeals --active" data-content-block="appeals-main">
+        <button type="button" class="account__menu js-account-menu-open">
           <svg>
             <use xlink:href="assets/img/icons/icons.svg#arrow-left-black"></use>
           </svg>
@@ -110,7 +110,7 @@
         </button>
         <div class="account__titles">
           <div class="account__title">Мои обращения</div>
-          <button type="button" class="account__title-btn btn btn-def">
+          <button type="button" class="account__title-btn btn btn-def" data-content-btn="appeals-new">
             <svg
               class="--mob"
               xmlns="http://www.w3.org/2000/svg"
@@ -402,6 +402,80 @@
           </div>
         </div>
       </div>
+      <div class="account__content account__content--appeals" data-content-block="appeals-new">
+        <button type="button" class="account__back" data-content-btn="appeals-main">
+          <svg>
+            <use xlink:href="assets/img/icons/icons.svg#arrow-left-black"></use>
+          </svg>
+          <span>Назад</span>
+        </button>
+        <div class="account__titles">
+          <div class="account__title">Мои обращения</div>
+        </div>
+        <form id="appeal-create" class="account__form">
+          <div class="account__fieldset">
+            <div class="account__fieldset-title">Создать обращение</div>
+            <div class="account__fieldset-input input input-labels">
+              <div class="input__head">Выберите категорию обращения*</div>
+              <div class="input__items">
+                <div class="input__item">
+                  <input id="category-1" type="radio" name="category" value="category-1" />
+                  <label for="category-1">
+                    <span>Поиск площадки</span>
+                  </label>
+                </div>
+                <div class="input__item">
+                  <input id="category-2" type="radio" name="category" value="category-2" />
+                  <label for="category-2">
+                    <span>Поиск кадров</span>
+                  </label>
+                </div>
+                <div class="input__item">
+                  <input id="category-3" type="radio" name="category" value="category-3" />
+                  <label for="category-3">
+                    <span>Льготное финансирование</span>
+                  </label>
+                </div>
+                <div class="input__item">
+                  <input id="category-4" type="radio" name="category" value="category-4" />
+                  <label for="category-4">
+                    <span>Представить сфой проект</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="account__fieldset-input input">
+              <div class="input__head">Тема обращения*</div>
+              <div class="input__input">
+                <input autocomplete="off" type="text" placeholder="Введите тему обращения" />
+              </div>
+              <div class="input__hint">Error</div>
+            </div>
+            <div class="account__fieldset-textarea textarea">
+              <div class="textarea__head">Текст обращения</div>
+              <div class="textarea__textarea">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Введите текст"></textarea>
+              </div>
+              <div class="textarea__hint">Error</div>
+            </div>
+            <div class="account__fieldset-file">
+              <div class="account__fieldset-input-file input input-file">
+                <label for="file-add" class="">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#file-icon"></use>
+                  </svg>
+                  <span>Прикрепить файл</span>
+                </label>
+                <input id="file-add" type="file" />
+              </div>
+              <p class="account__fieldset-desc">Размер не более 2 Mb.</p>
+            </div>
+          </div>
+          <button form="appeal-create" type="submit" class="account__btn btn btn-def">
+            <span>Отправить обращение</span>
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -642,8 +716,8 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231209211418"></script>
-<script src="js/app.min.js?_v=20231209211418"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231209223721"></script>
+<script src="js/app.min.js?_v=20231209223721"></script>
 
   </body>
 </html>

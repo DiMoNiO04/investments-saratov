@@ -141,6 +141,75 @@
   }
 }
 
+.input-labels {
+  .input {
+    &__items {
+      @extend %flexCenterStart;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      column-gap: 20px;
+    }
+
+    &__item {
+      label,
+      div {
+        @extend %flexCenter;
+        padding: 11px 16px;
+        border-radius: 4px;
+        background-color: $bgGreyLight;
+        column-gap: 8px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: $transitionBorder;
+      }
+
+      input {
+        display: none;
+      }
+
+      input:checked + label {
+        border-color: $bluePrimary;
+
+        span {
+          color: $bluePrimary;
+        }
+
+        svg use {
+          stroke: $bluePrimary;
+        }
+      }
+
+      svg {
+        @include sizes(20px, 20px);
+        flex-shrink: 0;
+
+        use {
+          stroke: $black;
+          transition: stroke 0.5s ease-in-out;
+        }
+      }
+
+      span {
+        @extend %regular16;
+        cursor: pointer;
+        transition: $transitionColor;
+      }
+
+      &.active {
+        svg use {
+          stroke: $bluePrimary;
+        }
+
+        label {
+          color: $bluePrimary;
+        }
+
+        border-color: $bluePrimary;
+      }
+    }
+  }
+}
+
 .input--password {
   button {
     svg {
@@ -195,6 +264,23 @@
     svg use,
     label span {
       stroke: $blueHover;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .input {
+    label {
+      column-gap: 4px;
+    }
+  }
+
+  .input-labels {
+    .input {
+      &__items {
+        row-gap: 16px;
+        column-gap: 16px;
+      }
     }
   }
 }
