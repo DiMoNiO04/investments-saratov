@@ -132,6 +132,10 @@
       span {
         color: $blueHover;
       }
+
+      svg path {
+        fill: $blueHover;
+      }
     }
   }
 
@@ -142,8 +146,8 @@
       color: $blue-1;
     }
 
-    svg use {
-      stroke: $blue-1;
+    svg path {
+      fill: $blue-1;
     }
   }
 }

@@ -1,0 +1,23 @@
+.tooltip {
+  @include sizes(166px, 40px);
+  position: fixed;
+  padding: 8px 12px 12px 12px;
+  border-radius: 4px;
+  text-align: center;
+  background-image: url('../assets/img/icons/tooltip.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 166px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+@media screen and (max-width: $tablet) {
+  .tooltip {
+    @include sizes(170px, 36px);
+    background-image: url('../assets/img/icons/tooltip-mob.svg');
+    padding: 8px 12px;
+  }
+}

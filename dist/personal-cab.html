@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Персональные данные</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231208153112" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231208153112" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231209211418" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231209211418" />
 </head>
 
 
@@ -13,50 +13,100 @@
     <main><section class="account">
   <div class="container">
     <div class="account__container">
-      <aside class="account-menu">
+      <aside class="account-menu js-account-menu">
         <div class="account-menu__items">
           <a class="account-menu__item active" href="./personal-cab.html">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#personal-cab"></use>
-            </svg>
-            <span>Персональные данные</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#personal-cab"></use>
+              </svg>
+              <span>Персональные данные</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
           <a class="account-menu__item" href="./organization.html">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#organization"></use>
-            </svg>
-            <span>Мои организации</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#organization"></use>
+              </svg>
+              <span>Мои организации</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
         </div>
         <div class="account-menu__items">
           <a class="account-menu__item" href="./appeals.html">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#appeals"></use>
-            </svg>
-            <span>Мои обращения</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#appeals"></use>
+              </svg>
+              <span>Мои обращения</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
         </div>
         <div class="account-menu__items">
           <a class="account-menu__item" href="./settings.html">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#settings"></use>
-            </svg>
-            <span>Настройки</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#settings"></use>
+              </svg>
+              <span>Настройки</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
           <button type="button" class="account-menu__item" data-modal="exit-confirmation">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#exit"></use>
-            </svg>
-            <span>Выйти</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#exit"></use>
+              </svg>
+              <span>Выйти</span>
+            </div>
           </button>
         </div>
       </aside>
       <div class="account__content">
-        <button type="button" class="account__back">
+        <button type="button" class="account__back js-account-menu-open">
           <svg>
             <use xlink:href="assets/img/icons/icons.svg#arrow-left-black"></use>
           </svg>
-          <span>Назад</span>
+          <span>Меню</span>
         </button>
         <div class="account__title">Персональные данные</div>
         <form id="pers-data-form" class="account__form">
@@ -350,8 +400,8 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231208153112"></script>
-<script src="js/app.min.js?_v=20231208153112"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231209211418"></script>
+<script src="js/app.min.js?_v=20231209211418"></script>
 
   </body>
 </html>

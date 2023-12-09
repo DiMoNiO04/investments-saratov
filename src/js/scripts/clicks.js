@@ -1,3 +1,5 @@
+import { fadeIn } from '../modules/animation.js';
+
 function clickFullText() {
   if (document.querySelector('.js-dropdown-list')) {
     const dropdownLists = document.querySelectorAll('.js-dropdown-list');
@@ -62,8 +64,37 @@ function clickCalculatorBtn() {
   }
 }
 
+function openAsideMenuProfile() {
+  if (document.querySelector('.js-account-menu')) {
+    const asideContent = document.querySelector('.js-account-menu');
+    const asideBtn = document.querySelector('.js-account-menu-open');
+
+    asideBtn.addEventListener('click', () => {
+      asideContent.classList.add('active');
+      document.body.classList.add('hidden');
+    });
+  }
+}
+
+function toggleAddOrganization() {
+  if (document.querySelector('.js-add-org-btn')) {
+    const addBtn = document.querySelector('.js-add-org-btn');
+
+    addBtn.addEventListener('click', () => {
+      const fieldset = document.querySelector('.account__fieldset.--active');
+      const title = fieldset.querySelector('.account__fieldset-subtitles');
+      const contentNewOrg = fieldset.querySelector('.account__fieldset-block--new');
+
+      fadeIn(title, 750, 'flex');
+      fadeIn(contentNewOrg, 750, 'block');
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   addActiveFirstStepsOnLoad();
   clickFullText();
   clickCalculatorBtn();
+  openAsideMenuProfile();
+  toggleAddOrganization();
 });

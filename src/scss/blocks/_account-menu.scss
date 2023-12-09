@@ -2,7 +2,8 @@
   padding: 40px 20px;
   border-radius: 4px;
   background-color: $white;
-  flex: 0 0 311px;
+  width: 311px;
+  flex-shrink: 0;
   height: fit-content;
 
   &__items {
@@ -15,8 +16,7 @@
   }
 
   &__item {
-    @extend %flexCenterStart;
-    column-gap: 8px;
+    @extend %flexCenterBetween;
     padding: 11px;
     border-radius: 4px;
     width: 100%;
@@ -25,17 +25,12 @@
       margin-bottom: 8px;
     }
 
-    svg {
-      @include sizes(20px, 20px);
-      fill: $black;
-    }
-
     span {
       @extend %regular16;
     }
 
     &:hover {
-      svg {
+      .account-menu__item-main svg {
         fill: $bluePrimary;
       }
 
@@ -45,15 +40,39 @@
     }
 
     &.active {
-      background-color: #e8f0ff;
+      @media screen and (min-width: $tablet) {
+        background-color: #e8f0ff;
+      }
 
-      svg {
+      .account-menu__item-main svg {
         fill: $bluePrimary;
       }
 
+      .account-menu__item-icon svg {
+        stroke: $bluePrimary;
+      }
+
       span {
+        font-weight: 500;
         color: $bluePrimary;
       }
+    }
+  }
+
+  &__item-main {
+    @extend %flexStartBetween;
+    column-gap: 8px;
+
+    svg {
+      @include sizes(20px, 20px);
+    }
+  }
+
+  &__item-icon {
+    display: none;
+
+    svg {
+      stroke: $black;
     }
   }
 }
@@ -66,6 +85,60 @@
 
 @media screen and (max-width: $tablet) {
   .account-menu {
-    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 88px;
+    position: fixed;
+    z-index: 10;
+    padding: 40px;
+    flex-direction: column;
+    overflow: scroll;
+    transform: translateX(-100%);
+    transition: $transitionTransform;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    &__item-icon {
+      display: block;
+    }
+
+    &__items:nth-child(2) {
+      margin: 18px 0;
+      padding: 16px 0;
+    }
+
+    &__item {
+      padding: 12px 0;
+
+      span {
+        line-height: 130%;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+
+      &.active {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .account-menu {
+    padding: 32px 16px;
+
+    &__item:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &__items:nth-child(2) {
+      margin: 20px 0;
+      padding: 18px 0;
+    }
   }
 }

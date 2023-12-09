@@ -15,5 +15,7 @@ import './scripts/modal.js';
 import './scripts/animation.js';
 import './scripts/header.js';
 import './scripts/content.js';
+import './scripts/script.js';
+import './scripts/tooltips.js';
 
 flsFunctions.isWebp();

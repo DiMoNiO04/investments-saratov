@@ -26,9 +26,6 @@ export const html = () => {
             cover: 0,
             to: ['css', 'js'],
           },
-          output: {
-            file: 'gulp/version.json',
-          },
         })
       )
     )

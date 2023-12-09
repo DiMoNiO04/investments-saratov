@@ -1,44 +1,395 @@
 <section class="account">
   <div class="container">
     <div class="account__container">
-      <aside class="account-menu">
+      <aside class="account-menu js-account-menu">
         <div class="account-menu__items">
           <a class="account-menu__item" href="./personal-cab.html">
-            <svg>
-              <use xlink:href="@img/icons/icons.svg#personal-cab"></use>
-            </svg>
-            <span>Персональные данные</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#personal-cab"></use>
+              </svg>
+              <span>Персональные данные</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
           <a class="account-menu__item" href="./organization.html">
-            <svg>
-              <use xlink:href="@img/icons/icons.svg#organization"></use>
-            </svg>
-            <span>Мои организации</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#organization"></use>
+              </svg>
+              <span>Мои организации</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
         </div>
         <div class="account-menu__items">
           <a class="account-menu__item active" href="./appeals.html">
-            <svg>
-              <use xlink:href="@img/icons/icons.svg#appeals"></use>
-            </svg>
-            <span>Мои обращения</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#appeals"></use>
+              </svg>
+              <span>Мои обращения</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
         </div>
         <div class="account-menu__items">
           <a class="account-menu__item" href="./settings.html">
-            <svg>
-              <use xlink:href="@img/icons/icons.svg#settings"></use>
-            </svg>
-            <span>Настройки</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#settings"></use>
+              </svg>
+              <span>Настройки</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
           <button type="button" class="account-menu__item" data-modal="exit-confirmation">
-            <svg>
-              <use xlink:href="@img/icons/icons.svg#exit"></use>
-            </svg>
-            <span>Выйти</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#exit"></use>
+              </svg>
+              <span>Выйти</span>
+            </div>
           </button>
         </div>
       </aside>
+      <div class="account__content">
+        <button type="button" class="account__back js-account-menu-open">
+          <svg>
+            <use xlink:href="@img/icons/icons.svg#arrow-left-black"></use>
+          </svg>
+          <span>Меню</span>
+        </button>
+        <div class="account__titles">
+          <div class="account__title">Мои обращения</div>
+          <button type="button" class="account__title-btn btn btn-def">
+            <svg
+              class="--mob"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="21"
+              viewBox="0 0 20 21"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 10.5C3 10.0858 3.33579 9.75 3.75 9.75H16.25C16.6642 9.75 17 10.0858 17 10.5C17 10.9142 16.6642 11.25 16.25 11.25H3.75C3.33579 11.25 3 10.9142 3 10.5Z"
+                fill="#2D6FD0"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10 3.5C10.4142 3.5 10.75 3.83579 10.75 4.25V16.75C10.75 17.1642 10.4142 17.5 10 17.5C9.58579 17.5 9.25 17.1642 9.25 16.75V4.25C9.25 3.83579 9.58579 3.5 10 3.5Z"
+                fill="#2D6FD0"
+              />
+            </svg>
+            <span class="--desc">Создать обращение</span>
+          </button>
+        </div>
+        <div class="account__appeals">
+          <div class="account__status">
+            <div class="account__status-dropdown dropdown dropdown-def js-dropdown">
+              <div class="dropdown__headline">Статус</div>
+              <div class="dropdown__header js-dropdown-inner">
+                <div class="dropdown__value js-dropdown-value">Выберите из списка</div>
+                <button type="button" class="dropdown__btn">
+                  <svg>
+                    <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__items" data-simplebar>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-1" type="radio" name="item" value="item-1" />
+                    <label for="item-1">Item-1</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-2" type="radio" name="item" value="item-2" />
+                    <label for="item-2">Item-2</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-3" type="radio" name="item" value="item-3" />
+                    <label for="item-3">Item-3</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-4" type="radio" name="item" value="item-4" />
+                    <label for="item-4">Item-4</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-5" type="radio" name="item" value="item-5" />
+                    <label for="item-5">Item-5</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-6" type="radio" name="item" value="item-6" />
+                    <label for="item-6">Item-6</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="account__status-input input">
+              <div class="input__input">
+                <button type="button">
+                  <svg>
+                    <use xlink:href="@img/icons/icons.svg#search"></use>
+                  </svg>
+                </button>
+                <input type="text" placeholder="Поиск" />
+              </div>
+              <div class="input__hint">Error</div>
+            </div>
+          </div>
+          <div class="account__table">
+            <div class="account__table-header">
+              <div>Категория</div>
+              <div>Тема обращения</div>
+              <div>Статус</div>
+              <div>Дата изменения</div>
+            </div>
+            <div class="account__table-items">
+              <div class="account__table-item">
+                <div class="--mob">Категория</div>
+                <div>Поиск площадки</div>
+              </div>
+              <div class="account__table-item">
+                <div class="--mob">Тема обращения</div>
+                <div>Поиск площадки для инвестиционного проекта ааааааааааааааааааа</div>
+              </div>
+              <div class="account__table-item">
+                <div class="--mob">Статус</div>
+                <div>
+                  <span>Рассмотрение</span>
+                </div>
+              </div>
+              <div class="account__table-item">
+                <div class="--mob">Дата изменения</div>
+                <div>20.10.2023</div>
+              </div>
+              <div class="account__table-item">
+                <div class="account__table-btns --desc">
+                  <button type="button" class="account__table-btn" data-tooltip="Перейти в чат">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M10.0003 15C14.6027 15 18.3337 10 18.3337 10C18.3337 10 14.6027 5 10.0003 5C5.39795 5 1.66699 10 1.66699 10C1.66699 10 5.39795 15 10.0003 15Z"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.99967 11.6668C10.9201 11.6668 11.6663 10.9206 11.6663 10.0002C11.6663 9.07969 10.9201 8.3335 9.99967 8.3335C9.0792 8.3335 8.33301 9.07969 8.33301 10.0002C8.33301 10.9206 9.0792 11.6668 9.99967 11.6668Z"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button type="button" class="account__table-btn" data-tooltip="Закрыть обращение">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M15 15L5 5"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 5L5 15"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="account__table-btns --mob">
+                  <button type="button" class="btn btn-sec">
+                    <span>Закрыть обращение</span>
+                  </button>
+                  <button type="button" class="btn btn-def">
+                    <span>Перейти в чат</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="account__table-items --close">
+              <div class="account__table-item">
+                <div class="--mob">Категория</div>
+                <div>Льготное финансирование</div>
+              </div>
+              <div class="account__table-item">
+                <div class="--mob">Тема обращения</div>
+                <div>Поиск площадки для инвестиционного проекта ааааааааааааааааааа</div>
+              </div>
+              <div class="account__table-item">
+                <div class="--mob">Статус</div>
+                <div>
+                  <span>Закрыто</span>
+                </div>
+              </div>
+              <div class="account__table-item">
+                <div class="--mob">Дата изменения</div>
+                <div>20.10.2023</div>
+              </div>
+              <div class="account__table-item">
+                <div class="account__table-btns --desc">
+                  <button type="button" class="account__table-btn" data-tooltip="Перейти в чат">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M10.0003 15C14.6027 15 18.3337 10 18.3337 10C18.3337 10 14.6027 5 10.0003 5C5.39795 5 1.66699 10 1.66699 10C1.66699 10 5.39795 15 10.0003 15Z"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.99967 11.6668C10.9201 11.6668 11.6663 10.9206 11.6663 10.0002C11.6663 9.07969 10.9201 8.3335 9.99967 8.3335C9.0792 8.3335 8.33301 9.07969 8.33301 10.0002C8.33301 10.9206 9.0792 11.6668 9.99967 11.6668Z"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button type="button" class="account__table-btn" disabled data-tooltip="Закрыть обращение">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M15 15L5 5"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 5L5 15"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="account__table-btns --mob">
+                  <button type="button" class="btn btn-sec">
+                    <span>Закрыть обращение</span>
+                  </button>
+                  <button type="button" class="btn btn-def">
+                    <span>Перейти в чат</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="account__table-items">
+              <div class="account__table-item">
+                <div class="--mob">Категория</div>
+                <div>Представить свой проект</div>
+              </div>
+              <div class="account__table-item">
+                <div class="--mob">Тема обращения</div>
+                <div>Поиск площадки для инвестиционного проекта ааааааааааааааааааа</div>
+              </div>
+              <div class="account__table-item">
+                <div class="--mob">Статус</div>
+                <div>
+                  <span>Рассмотрение</span>
+                </div>
+              </div>
+              <div class="account__table-item">
+                <div class="--mob">Дата изменения</div>
+                <div>20.10.2023</div>
+              </div>
+              <div class="account__table-item">
+                <div class="account__table-btns --desc">
+                  <button type="button" class="account__table-btn" data-tooltip="Перейти в чат">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M10.0003 15C14.6027 15 18.3337 10 18.3337 10C18.3337 10 14.6027 5 10.0003 5C5.39795 5 1.66699 10 1.66699 10C1.66699 10 5.39795 15 10.0003 15Z"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.99967 11.6668C10.9201 11.6668 11.6663 10.9206 11.6663 10.0002C11.6663 9.07969 10.9201 8.3335 9.99967 8.3335C9.0792 8.3335 8.33301 9.07969 8.33301 10.0002C8.33301 10.9206 9.0792 11.6668 9.99967 11.6668Z"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button type="button" class="account__table-btn" data-tooltip="Закрыть обращение">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M15 15L5 5"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 5L5 15"
+                        stroke="#2D6FD0"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="account__table-btns --mob">
+                  <button type="button" class="btn btn-sec">
+                    <span>Закрыть обращение</span>
+                  </button>
+                  <button type="button" class="btn btn-def">
+                    <span>Перейти в чат</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

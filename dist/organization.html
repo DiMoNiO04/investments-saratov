@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Мои организации</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231208153112" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231208153112" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231209211418" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231209211418" />
 </head>
 
 
@@ -13,54 +13,104 @@
     <main><section class="account">
   <div class="container">
     <div class="account__container">
-      <aside class="account-menu">
+      <aside class="account-menu js-account-menu">
         <div class="account-menu__items">
           <a class="account-menu__item" href="./personal-cab.html">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#personal-cab"></use>
-            </svg>
-            <span>Персональные данные</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#personal-cab"></use>
+              </svg>
+              <span>Персональные данные</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
           <a class="account-menu__item active" href="./organization.html">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#organization"></use>
-            </svg>
-            <span>Мои организации</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#organization"></use>
+              </svg>
+              <span>Мои организации</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
         </div>
         <div class="account-menu__items">
           <a class="account-menu__item" href="./appeals.html">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#appeals"></use>
-            </svg>
-            <span>Мои обращения</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#appeals"></use>
+              </svg>
+              <span>Мои обращения</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
         </div>
         <div class="account-menu__items">
           <a class="account-menu__item" href="./settings.html">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#settings"></use>
-            </svg>
-            <span>Настройки</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#settings"></use>
+              </svg>
+              <span>Настройки</span>
+            </div>
+            <div class="account-menu__item-icon">
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 4.66669L13.3333 10.5L7.5 16.3334"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </a>
           <button type="button" class="account-menu__item" data-modal="exit-confirmation">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#exit"></use>
-            </svg>
-            <span>Выйти</span>
+            <div class="account-menu__item-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#exit"></use>
+              </svg>
+              <span>Выйти</span>
+            </div>
           </button>
         </div>
       </aside>
       <div class="account__content">
-        <button type="button" class="account__back">
+        <button type="button" class="account__back js-account-menu-open">
           <svg>
             <use xlink:href="assets/img/icons/icons.svg#arrow-left-black"></use>
           </svg>
-          <span>Назад</span>
+          <span>Меню</span>
         </button>
         <div class="account__titles">
           <div class="account__title">Мои организации</div>
-          <button type="button" class="account__title-btn btn btn-sec btn--icon">
+          <button type="button" class="account__title-btn btn btn-sec btn--icon js-add-org-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
               <path
                 fill-rule="evenodd"
@@ -94,81 +144,191 @@
         <form id="organization-form" action="" class="account__form account__form--organization">
           <fieldset class="account__fieldset --active" data-content-block="bussiness-1">
             <div class="account__fieldset-title">Данные организации</div>
-            <div class="account__fieldset-inputs account__fieldset-inputs--organization">
-              <div class="account__fieldset-input input">
-                <div class="input__head">Полное наименование организации*</div>
-                <div class="input__input">
-                  <input autocomplete="off" type="text" placeholder="Введите наименование" />
-                </div>
-                <div class="input__hint">Error</div>
+            <div class="account__fieldset-block">
+              <div class="account__fieldset-subtitles" style="display: none">
+                <p class="account__fieldset-subtitle">Организация №1</p>
               </div>
-              <div class="account__fieldset-input input">
-                <div class="input__head">ИНН*</div>
-                <div class="input__input">
-                  <input autocomplete="off" type="text" placeholder="Введите ИНН" />
+              <div class="account__fieldset-inputs account__fieldset-inputs--organization">
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Полное наименование организации*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите наименование" />
+                  </div>
+                  <div class="input__hint">Error</div>
                 </div>
-                <div class="input__hint">Error</div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">ИНН*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите ИНН" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Электронная почта*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Номер телефона*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="tel" placeholder="Введите номер телефона" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
               </div>
-              <div class="account__fieldset-input input">
-                <div class="input__head">Электронная почта*</div>
-                <div class="input__input">
-                  <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
-                </div>
-                <div class="input__hint">Error</div>
+            </div>
+
+            <!--Блок для добавления-->
+            <div class="account__fieldset-block account__fieldset-block--new" style="display: none">
+              <div class="account__fieldset-subtitles">
+                <p class="account__fieldset-subtitle">Организация №2</p>
+                <button type="button" class="account__fieldset-del">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#delete-icon"></use>
+                  </svg>
+                  <span>Удалить организацию</span>
+                </button>
               </div>
-              <div class="account__fieldset-input input">
-                <div class="input__head">Номер телефона*</div>
-                <div class="input__input">
-                  <input autocomplete="off" type="tel" placeholder="Введите номер телефона" />
+              <div class="account__fieldset-inputs account__fieldset-inputs--organization">
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Полное наименование организации*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите наименование" />
+                  </div>
+                  <div class="input__hint">Error</div>
                 </div>
-                <div class="input__hint">Error</div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">ИНН*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите ИНН" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Электронная почта*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Номер телефона*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="tel" placeholder="Введите номер телефона" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
               </div>
             </div>
           </fieldset>
           <fieldset class="account__fieldset" data-content-block="bussiness-2">
             <div class="account__fieldset-title">Данные индивидуального предпринимателя</div>
-            <div class="account__fieldset-inputs">
-              <div class="account__fieldset-input input">
-                <div class="input__head">Имя*</div>
-                <div class="input__input">
-                  <input autocomplete="off" type="text" placeholder="Введите имя" />
-                </div>
-                <div class="input__hint">Error</div>
+            <div class="account__fieldset-block">
+              <div class="account__fieldset-subtitles" style="display: none">
+                <p class="account__fieldset-subtitle">Организация №1</p>
               </div>
-              <div class="account__fieldset-input input">
-                <div class="input__head">Фамилия*</div>
-                <div class="input__input">
-                  <input autocomplete="off" type="text" placeholder="Введите фамилию" />
+              <div class="account__fieldset-inputs">
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Имя*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите имя" />
+                  </div>
+                  <div class="input__hint">Error</div>
                 </div>
-                <div class="input__hint">Error</div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Фамилия*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите фамилию" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Отчество</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите отчество" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">ИНН*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите ИНН" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Электронная почта*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Номер телефона*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="tel" placeholder="Введите номер телефона" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
               </div>
-              <div class="account__fieldset-input input">
-                <div class="input__head">Отчество</div>
-                <div class="input__input">
-                  <input autocomplete="off" type="text" placeholder="Введите отчество" />
-                </div>
-                <div class="input__hint">Error</div>
+            </div>
+
+            <!--Блок для добавления-->
+            <div class="account__fieldset-block account__fieldset-block--new" style="display: none">
+              <div class="account__fieldset-subtitles">
+                <p class="account__fieldset-subtitle">Организация №2</p>
+                <button type="button" class="account__fieldset-del">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#delete-icon"></use>
+                  </svg>
+                  <span>Удалить организацию</span>
+                </button>
               </div>
-              <div class="account__fieldset-input input">
-                <div class="input__head">ИНН*</div>
-                <div class="input__input">
-                  <input autocomplete="off" type="text" placeholder="Введите ИНН" />
+              <div class="account__fieldset-inputs">
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Имя*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите имя" />
+                  </div>
+                  <div class="input__hint">Error</div>
                 </div>
-                <div class="input__hint">Error</div>
-              </div>
-              <div class="account__fieldset-input input">
-                <div class="input__head">Электронная почта*</div>
-                <div class="input__input">
-                  <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Фамилия*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите фамилию" />
+                  </div>
+                  <div class="input__hint">Error</div>
                 </div>
-                <div class="input__hint">Error</div>
-              </div>
-              <div class="account__fieldset-input input">
-                <div class="input__head">Номер телефона*</div>
-                <div class="input__input">
-                  <input autocomplete="off" type="tel" placeholder="Введите номер телефона" />
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Отчество</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите отчество" />
+                  </div>
+                  <div class="input__hint">Error</div>
                 </div>
-                <div class="input__hint">Error</div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">ИНН*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="text" placeholder="Введите ИНН" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Электронная почта*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="account__fieldset-input input">
+                  <div class="input__head">Номер телефона*</div>
+                  <div class="input__input">
+                    <input autocomplete="off" type="tel" placeholder="Введите номер телефона" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
               </div>
             </div>
           </fieldset>
@@ -417,8 +577,8 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231208153112"></script>
-<script src="js/app.min.js?_v=20231208153112"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231209211418"></script>
+<script src="js/app.min.js?_v=20231209211418"></script>
 
   </body>
 </html>
