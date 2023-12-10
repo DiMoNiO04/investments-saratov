@@ -17,5 +17,6 @@ import './scripts/header.js';
 import './scripts/content.js';
 import './scripts/script.js';
 import './scripts/tooltips.js';
+import './scripts/chat.js';
 
 flsFunctions.isWebp();

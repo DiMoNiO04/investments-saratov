@@ -36,6 +36,7 @@
     div span {
       @extend %secondaryTextRegular;
       color: $bluePrimary;
+      cursor: pointer;
 
       &:hover {
         color: $black;

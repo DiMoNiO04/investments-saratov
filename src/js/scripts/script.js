@@ -1,6 +1,6 @@
 import { TABLET } from '../modules/consts.js';
 
-if (window.innerWidth < TABLET) {
+if (window.outerWidth < TABLET) {
   if (
     window.location.href.includes('auth-reg') ||
     window.location.href.includes('personal') ||

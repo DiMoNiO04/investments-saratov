@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Мои организации</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231209223721" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231209223721" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231211010718" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231211010718" />
 </head>
 
 
@@ -101,7 +101,7 @@
           </button>
         </div>
       </aside>
-      <div class="account__content account__content--appeals --active" data-content-block="appeals-main">
+      <div class="account__content account__content--appeals" data-content-block="appeals-main">
         <button type="button" class="account__menu js-account-menu-open">
           <svg>
             <use xlink:href="assets/img/icons/icons.svg#arrow-left-black"></use>
@@ -216,7 +216,12 @@
               </div>
               <div class="account__table-item">
                 <div class="account__table-btns --desc">
-                  <button type="button" class="account__table-btn" data-tooltip="Перейти в чат">
+                  <button
+                    type="button"
+                    class="account__table-btn"
+                    data-tooltip="Перейти в чат"
+                    data-content-btn="appeals-chat"
+                  >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                       <path
                         d="M10.0003 15C14.6027 15 18.3337 10 18.3337 10C18.3337 10 14.6027 5 10.0003 5C5.39795 5 1.66699 10 1.66699 10C1.66699 10 5.39795 15 10.0003 15Z"
@@ -257,7 +262,7 @@
                   <button type="button" class="btn btn-sec">
                     <span>Закрыть обращение</span>
                   </button>
-                  <button type="button" class="btn btn-def">
+                  <button type="button" class="btn btn-def" data-content-btn="appeals-chat">
                     <span>Перейти в чат</span>
                   </button>
                 </div>
@@ -284,7 +289,12 @@
               </div>
               <div class="account__table-item">
                 <div class="account__table-btns --desc">
-                  <button type="button" class="account__table-btn" data-tooltip="Перейти в чат">
+                  <button
+                    type="button"
+                    class="account__table-btn"
+                    data-tooltip="Перейти в чат"
+                    data-content-btn="appeals-chat"
+                  >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                       <path
                         d="M10.0003 15C14.6027 15 18.3337 10 18.3337 10C18.3337 10 14.6027 5 10.0003 5C5.39795 5 1.66699 10 1.66699 10C1.66699 10 5.39795 15 10.0003 15Z"
@@ -325,7 +335,7 @@
                   <button type="button" class="btn btn-sec">
                     <span>Закрыть обращение</span>
                   </button>
-                  <button type="button" class="btn btn-def">
+                  <button type="button" class="btn btn-def" data-content-btn="appeals-chat">
                     <span>Перейти в чат</span>
                   </button>
                 </div>
@@ -352,7 +362,12 @@
               </div>
               <div class="account__table-item">
                 <div class="account__table-btns --desc">
-                  <button type="button" class="account__table-btn" data-tooltip="Перейти в чат">
+                  <button
+                    type="button"
+                    class="account__table-btn"
+                    data-tooltip="Перейти в чат"
+                    data-content-btn="appeals-chat"
+                  >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                       <path
                         d="M10.0003 15C14.6027 15 18.3337 10 18.3337 10C18.3337 10 14.6027 5 10.0003 5C5.39795 5 1.66699 10 1.66699 10C1.66699 10 5.39795 15 10.0003 15Z"
@@ -393,7 +408,7 @@
                   <button type="button" class="btn btn-sec">
                     <span>Закрыть обращение</span>
                   </button>
-                  <button type="button" class="btn btn-def">
+                  <button type="button" class="btn btn-def" data-content-btn="appeals-chat">
                     <span>Перейти в чат</span>
                   </button>
                 </div>
@@ -475,6 +490,237 @@
             <span>Отправить обращение</span>
           </button>
         </form>
+      </div>
+      <div class="account__content account__content--appeals --active" data-content-block="appeals-chat">
+        <div class="appeals__chat chat">
+          <div class="chat__left">
+            <button type="button" class="account__back" data-content-btn="appeals-main">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-left-black"></use>
+              </svg>
+              <span>Назад</span>
+            </button>
+            <div class="account__titles">
+              <div class="account__title">Обращение</div>
+            </div>
+            <div class="chat__menu">
+              <div class="chat__menu-input input">
+                <div class="input__input">
+                  <button type="button">
+                    <svg>
+                      <use xlink:href="assets/img/icons/icons.svg#search"></use>
+                    </svg>
+                  </button>
+                  <input type="text" placeholder="Введите запрос" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="chat__menu-list">
+                <div class="chat__menu-items" data-simplebar>
+                  <div class="chat__menu-item --active">
+                    <div class="chat__menu-dates">
+                      <div class="chat__menu-date">Обращение от 25.03.2023</div>
+                      <div class="chat__menu-time">11:04</div>
+                    </div>
+                    <div class="chat__menu-cont">
+                      <div class="chat__menu-theme">Тема</div>
+                      <div class="chat__menu-desc">
+                        <div class="chat__menu-name">Описание проблемы в 2 словах</div>
+                        <div class="chat__menu-count">
+                          <span>5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat__menu-item">
+                    <div class="chat__menu-dates">
+                      <div class="chat__menu-date">Обращение от 25.03.2023</div>
+                      <div class="chat__menu-time">11:04</div>
+                    </div>
+                    <div class="chat__menu-cont">
+                      <div class="chat__menu-theme">Тема</div>
+                      <div class="chat__menu-desc">
+                        <div class="chat__menu-name">
+                          Описание проблемы в 2 словах проблемы в 2 словах проблемы в 2 словах
+                        </div>
+                        <div class="chat__menu-count">
+                          <span>5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat__menu-item">
+                    <div class="chat__menu-dates">
+                      <div class="chat__menu-date">Обращение от 25.03.2023</div>
+                      <div class="chat__menu-time">11:04</div>
+                    </div>
+                    <div class="chat__menu-cont">
+                      <div class="chat__menu-theme">Тема</div>
+                      <div class="chat__menu-desc">
+                        <div class="chat__menu-name">Описание проблемы в 2 словах</div>
+                        <div class="chat__menu-count">
+                          <span>5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat__menu-item">
+                    <div class="chat__menu-dates">
+                      <div class="chat__menu-date">Обращение от 25.03.2023</div>
+                      <div class="chat__menu-time">11:04</div>
+                    </div>
+                    <div class="chat__menu-cont">
+                      <div class="chat__menu-theme">Тема</div>
+                      <div class="chat__menu-desc">
+                        <div class="chat__menu-name">Описание проблемы в 2 словах</div>
+                        <div class="chat__menu-count">
+                          <span>5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat__menu-item">
+                    <div class="chat__menu-dates">
+                      <div class="chat__menu-date">Обращение от 25.03.2023</div>
+                      <div class="chat__menu-time">11:04</div>
+                    </div>
+                    <div class="chat__menu-cont">
+                      <div class="chat__menu-theme">Тема</div>
+                      <div class="chat__menu-desc">
+                        <div class="chat__menu-name">Описание проблемы в 2 словах</div>
+                        <div class="chat__menu-count">
+                          <span>5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat__menu-item">
+                    <div class="chat__menu-dates">
+                      <div class="chat__menu-date">Обращение от 25.03.2023</div>
+                      <div class="chat__menu-time">11:04</div>
+                    </div>
+                    <div class="chat__menu-cont">
+                      <div class="chat__menu-theme">Тема</div>
+                      <div class="chat__menu-desc">
+                        <div class="chat__menu-name">Описание проблемы в 2 словах</div>
+                        <div class="chat__menu-count">
+                          <span>5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat__menu-item">
+                    <div class="chat__menu-dates">
+                      <div class="chat__menu-date">Обращение от 25.03.2023</div>
+                      <div class="chat__menu-time">11:04</div>
+                    </div>
+                    <div class="chat__menu-cont">
+                      <div class="chat__menu-theme">Тема</div>
+                      <div class="chat__menu-desc">
+                        <div class="chat__menu-name">Описание проблемы в 2 словах</div>
+                        <div class="chat__menu-count">
+                          <span>5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat__content">
+            <div class="chat__content-theme">
+              <button type="button" class="chat__content-button">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#arrow-left-black"></use>
+                </svg>
+              </button>
+              <div class="chat__content-titles">
+                <div class="chat__content-title">Тема</div>
+                <div class="chat__content-name">Краткое описание проблемы</div>
+              </div>
+            </div>
+            <div class="chat__content-chat">
+              <div class="chat__content-blocks">
+                <div class="chat__content-block --user">
+                  <div class="chat__content-block-titles">
+                    <div class="chat__content-block-name">Пользователь Имя фамилия</div>
+                    <div class="chat__content-block-time">10:20</div>
+                  </div>
+                  <div class="chat__content-block-text">
+                    У меня возникли некоторые вопросы относительно инвестиционных возможностей на вашем сайте. Я бы
+                    хотел уточнить информацию о доступных проектах, а также получить консультацию по процессу
+                    инвестирования. Буду благодарен за помощь и оперативный ответ.
+                  </div>
+                </div>
+                <div class="chat__content-block">
+                  <div class="chat__content-block-titles">
+                    <div class="chat__content-block-name">Админ Имя Фамилия</div>
+                    <div class="chat__content-block-time">10:20</div>
+                  </div>
+                  <div class="chat__content-block-text">
+                    У меня возникли некоторые вопросы относительно инвестиционных возможностей на вашем сайте. Я бы
+                    хотел уточнить информацию о доступных проектах, а также получить консультацию по процессу
+                    инвестирования. Буду благодарен за помощь и оперативный ответ.
+                  </div>
+                </div>
+                <div class="chat__content-block --user">
+                  <div class="chat__content-block-titles">
+                    <div class="chat__content-block-name">Пользователь Имя фамилия</div>
+                    <div class="chat__content-block-time">10:20</div>
+                  </div>
+                  <div class="chat__content-block-text">
+                    У меня возникли некоторые вопросы относительно инвестиционных возможностей на вашем сайте. Я бы
+                    хотел уточнить информацию о доступных проектах, а также получить консультацию по процессу
+                    инвестирования. Буду благодарен за помощь и оперативный ответ.
+                  </div>
+                </div>
+                <div class="chat__content-block">
+                  <div class="chat__content-block-titles">
+                    <div class="chat__content-block-name">Админ Имя Фамилия</div>
+                    <div class="chat__content-block-time">10:20</div>
+                  </div>
+                  <div class="chat__content-block-text">
+                    У меня возникли некоторые вопросы относительно инвестиционных возможностей на вашем сайте. Я бы
+                    хотел уточнить информацию о доступных проектах, а также получить консультацию по процессу
+                    инвестирования. Буду благодарен за помощь и оперативный ответ.
+                  </div>
+                </div>
+                <div class="chat__content-new">
+                  <div>Непрочитанные сообщения</div>
+                  <div>Сегодня</div>
+                </div>
+                <div class="chat__content-block --user">
+                  <div class="chat__content-block-titles">
+                    <div class="chat__content-block-name">Пользователь Имя фамилия</div>
+                    <div class="chat__content-block-time">10:20</div>
+                  </div>
+                  <div class="chat__content-block-text">
+                    У меня возникли некоторые вопросы относительно инвестиционных возможностей на вашем сайте. Я бы
+                    хотел уточнить информацию о доступных проектах, а также получить консультацию по процессу
+                    инвестирования. Буду благодарен за помощь и оперативный ответ.
+                  </div>
+                </div>
+              </div>
+              <form id="send-sms" class="chat__content-form">
+                <div class="chat__content-input-file input input-file">
+                  <label for="file-add" class="">
+                    <svg>
+                      <use xlink:href="assets/img/icons/icons.svg#file-icon"></use>
+                    </svg>
+                  </label>
+                  <input id="file-add" type="file" />
+                </div>
+                <textarea rows="1" class="chat__content-tetarea" placeholder="Введите текст"></textarea>
+                <button class="chat__content-btn" type="submit" form="send-sms">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#submit-sms"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -716,8 +962,8 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231209223721"></script>
-<script src="js/app.min.js?_v=20231209223721"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231211010718"></script>
+<script src="js/app.min.js?_v=20231211010718"></script>
 
   </body>
 </html>

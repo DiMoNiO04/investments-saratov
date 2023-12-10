@@ -91,10 +91,25 @@ function toggleAddOrganization() {
   }
 }
 
+function toggleActive() {
+  if (document.querySelector('.js-toggles')) {
+    const togglesEl = document.querySelector('.js-toggles');
+    const toggles = togglesEl.querySelectorAll('.js-toggle');
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        toggles.forEach((el) => el.classList.remove('--active'));
+        toggle.classList.add('--active');
+      });
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   addActiveFirstStepsOnLoad();
   clickFullText();
   clickCalculatorBtn();
   openAsideMenuProfile();
   toggleAddOrganization();
+  toggleActive();
 });

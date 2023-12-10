@@ -21,7 +21,9 @@
   }
 
   &__title {
-    @extend %h3;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
   }
 
   &__fieldset-title {
@@ -553,6 +555,10 @@
 
     &__fieldset-input {
       flex-basis: 100%;
+    }
+
+    &__title {
+      font-size: 24px;
     }
 
     &__filedset {

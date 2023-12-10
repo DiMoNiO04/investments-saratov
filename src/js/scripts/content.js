@@ -28,6 +28,10 @@ function changeContent() {
 
       contents.forEach((cont) => cont.classList.remove('--active'));
       activeContent.forEach((content) => content.classList.add('--active'));
+
+      if (document.querySelector('.tooltip')) {
+        document.querySelector('.tooltip').remove();
+      }
     });
   });
 }

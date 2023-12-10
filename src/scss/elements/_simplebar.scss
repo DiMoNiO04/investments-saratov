@@ -3,6 +3,7 @@
   width: 4px;
   border-radius: 10rem;
   margin-right: 4px;
+  cursor: pointer;
 }
 
 .simplebar-scrollbar::before {
@@ -22,4 +23,16 @@
 
 .simplebar-scrollbar.simplebar-visible::before {
   opacity: 1;
+}
+
+@media screen and (max-width: $tablet) {
+  .chat .simplebar-track.simplebar-vertical {
+    margin-right: -24px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .chat .simplebar-track.simplebar-vertical {
+    margin-right: -10px;
+  }
 }
