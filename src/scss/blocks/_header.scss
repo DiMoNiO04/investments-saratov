@@ -1,7 +1,7 @@
 .header {
   @extend %flexColumn;
   background-color: $white;
-  position: fixed;
+  // position: fixed;
   z-index: 10;
   top: 0;
   left: 0;

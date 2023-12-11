@@ -29,6 +29,9 @@ function changeContent() {
       contents.forEach((cont) => cont.classList.remove('--active'));
       activeContent.forEach((content) => content.classList.add('--active'));
 
+      btns.forEach((but) => but.classList.remove('--active'));
+      btn.classList.add('--active');
+
       if (document.querySelector('.tooltip')) {
         document.querySelector('.tooltip').remove();
       }

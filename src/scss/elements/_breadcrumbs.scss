@@ -1,0 +1,58 @@
+.breadcrumbs {
+  margin: 62px 0;
+
+  &__container {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+
+    & > span {
+      color: $black;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 120%;
+      cursor: default;
+    }
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+
+    span {
+      color: $black60;
+      font-size: 16px;
+      line-height: 120%;
+    }
+
+    &:hover span {
+      color: $black;
+      text-shadow:
+        0 0 0.2px $black,
+        0 0 0.2px $black;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .breadcrumbs {
+    margin: 50px 0;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .breadcrumbs {
+    margin: 40px 0;
+
+    a span {
+      font-size: 14px;
+    }
+
+    &__container {
+      & > span {
+        font-size: 14px;
+      }
+    }
+  }
+}

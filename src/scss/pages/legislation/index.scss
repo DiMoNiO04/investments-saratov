@@ -1,0 +1,169 @@
+.legislation {
+  &__contents {
+    width: 870px;
+  }
+
+  &__content {
+    display: none;
+
+    &.--active {
+      display: flex;
+    }
+  }
+
+  &__title {
+    color: $black;
+  }
+
+  &__btns {
+    display: flex;
+    margin-top: 54px;
+
+    button {
+      flex: 0 0 50%;
+      text-align: center;
+      padding: 8.5px 0;
+      border-bottom: 1px solid #d3dce4;
+
+      &:hover {
+        span {
+          color: $blueHover;
+        }
+      }
+
+      span {
+        color: $greyTxt;
+        @extend %regular16;
+
+        &:first-child {
+          display: block;
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
+
+      &.--active {
+        border-bottom: 2px solid $bluePrimary;
+
+        span {
+          color: $bluePrimary;
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 40px;
+    margin-top: 40px;
+  }
+
+  &__item-title {
+    @extend %subheader;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+
+  &__item-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 16px;
+  }
+
+  &__item-txt {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 16px;
+  }
+
+  &__item-btn {
+    @extend %flexCenterStart;
+    column-gap: 16px;
+    background-color: $white;
+    border-radius: 4px;
+    padding: 20px;
+
+    a {
+      color: $bluePrimary;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 130%;
+      transition: $transitionColor;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  &__item-icon {
+    @include sizes(40px, 40px);
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .legislation {
+    &__btns {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .legislation {
+    &__contents {
+      width: 100%;
+    }
+
+    &__btns {
+      margin-top: 32px;
+
+      &__btns {
+        display: flex;
+        margin-top: 54px;
+      }
+    }
+
+    &__items {
+      margin-top: 32px;
+    }
+
+    &__item-title {
+      line-height: 120%;
+    }
+
+    &__item-btn {
+      padding: 16px;
+      align-items: flex-start;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .legislation {
+    &__btns {
+      button {
+        span {
+          &:first-child {
+            display: none;
+          }
+
+          &:last-child {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
