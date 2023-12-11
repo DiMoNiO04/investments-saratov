@@ -1,0 +1,62 @@
+.pagination {
+  @extend %flexCenter;
+  column-gap: 16px;
+
+  &__btn {
+    @extend %flexCenter;
+    @include sizes(40px, 40px);
+    border-radius: 4px;
+    border: 1px solid $inputGreyStroke;
+    background: $white;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+    transition: $transitionBorder;
+
+    span {
+      color: $greyTxt;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      transition: $transitionColor;
+    }
+
+    svg {
+      @include sizes(16px, 16px);
+      stroke: $greyTxt;
+      transition: $transitionStroke;
+    }
+
+    &.--active {
+      background: $blueGradient;
+
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  button {
+    &:hover {
+      border-color: $black;
+
+      svg {
+        stroke: $black;
+      }
+
+      span {
+        color: $black;
+      }
+    }
+  }
+
+  div {
+    cursor: default;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .pagination {
+    &__btn {
+      @include sizes(32px, 32px);
+    }
+  }
+}
