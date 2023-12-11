@@ -1,0 +1,134 @@
+.story {
+  &__title {
+    max-width: 900px;
+    color: $black;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    @include sizes(100%, 500px);
+    margin-bottom: 40px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  &__items {
+    padding: 32px;
+    background-color: $white;
+    row-gap: 24px;
+    border-radius: 4px;
+    flex: 0 0 630px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item-title {
+    @extend %mainTxt;
+    margin-bottom: 12px;
+  }
+
+  &__item-txt {
+    @extend %h3;
+    color: $bluePrimary;
+  }
+
+  &__descs {
+    @extend %flexColumn;
+    justify-content: space-between;
+  }
+
+  &__desc-title {
+    @extend %h3;
+    margin-bottom: 32px;
+  }
+
+  &__desc-txt {
+    @extend %mainTxt;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .story {
+    &__items {
+      flex-basis: 480px;
+    }
+
+    &__item-title,
+    &__desc-txt {
+      line-height: 130%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .story {
+    &__title {
+      max-width: 100%;
+      margin-bottom: 32px;
+    }
+
+    &__img {
+      height: 400px;
+      margin-bottom: 32px;
+    }
+
+    &__blocks {
+      flex-direction: column;
+    }
+
+    &__items {
+      flex-basis: auto;
+    }
+
+    &__blocks {
+      row-gap: 32px;
+    }
+
+    &__desc-title {
+      margin-bottom: 24px;
+    }
+
+    &__desc-txt {
+      margin-bottom: 32px;
+    }
+
+    &__btn {
+      padding: 16px 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .story {
+    &__items {
+      padding: 20px;
+    }
+
+    &__item-title {
+      margin-bottom: 8px;
+    }
+
+    &__desc-title {
+      margin-bottom: 20px;
+    }
+
+    &__btn {
+      padding: 11px 28px;
+
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+}

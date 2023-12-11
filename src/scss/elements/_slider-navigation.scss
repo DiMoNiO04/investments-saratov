@@ -50,6 +50,10 @@
 .slider-navigation--rel {
   position: static;
 
+  .slider-navigation__btns {
+    column-gap: 20px;
+  }
+
   .slider-navigation__btns-next,
   .slider-navigation__btns-prev {
     background-color: $white;
