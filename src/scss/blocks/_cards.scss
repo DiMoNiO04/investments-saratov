@@ -9,6 +9,18 @@
   }
 }
 
+.cards-page--infrastructure {
+  .card {
+    &__content {
+      min-height: 238px;
+    }
+
+    &__content-title {
+      -webkit-line-clamp: 2;
+    }
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .cards {
     .card {

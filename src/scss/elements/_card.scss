@@ -19,7 +19,7 @@
   }
 
   &__content-title {
-    @include croppingText(3);
+    @include croppingText(2);
     font-size: 18px;
     font-weight: 600;
     line-height: 130%;

@@ -220,6 +220,48 @@
   }
 }
 
+.modal-infrastructure {
+  .modal__close {
+    svg {
+      stroke: $black;
+    }
+  }
+
+  &__inner {
+    width: 837px;
+  }
+
+  &__blocks {
+    @extend %flexColumn;
+    row-gap: 40px;
+    padding: 50px 60px 60px;
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  &__item-tit {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  &__item-txt {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+}
+
 @media screen and (max-width: $laptop) {
   .modal-pers-cab--succes {
     &__btn {
@@ -231,6 +273,12 @@
     row-gap: 40px;
     width: 500px;
     padding: 50px 54px;
+  }
+
+  .modal-infrastructure {
+    &__title {
+      font-size: 26px;
+    }
   }
 }
 
@@ -308,6 +356,16 @@
 
     &--exit {
       padding: 40px;
+      row-gap: 32px;
+    }
+  }
+
+  .modal-infrastructure {
+    &__inner {
+      width: 554px;
+    }
+
+    &__blocks {
       row-gap: 32px;
     }
   }
@@ -395,6 +453,20 @@
         row-gap: 16px;
         width: 100%;
       }
+    }
+  }
+
+  .modal-infrastructure {
+    &__inner {
+      width: 100%;
+    }
+
+    &__blocks {
+      padding: 72px 24px 40px 24px;
+    }
+
+    &__title {
+      font-size: 20px;
     }
   }
 }

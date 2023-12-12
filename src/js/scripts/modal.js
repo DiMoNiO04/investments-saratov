@@ -90,3 +90,6 @@ const requestSent = document.querySelector('[data-modal="request-sent"]') ? new 
 const exitConfirmation = document.querySelector('[data-modal="exit-confirmation"]')
   ? new Modal('exit-confirmation')
   : null;
+const descInfractureProject = document.querySelector('[data-modal="desc-infracture-project"]')
+  ? new Modal('desc-infracture-project')
+  : null;
