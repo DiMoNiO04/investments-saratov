@@ -1,0 +1,30 @@
+.cards {
+  @extend %flexStretchBetween;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+
+  .card {
+    width: calc(100% / 3 - 40px / 3);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .cards {
+    .card {
+      width: calc(100% / 2 - 20px / 2);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  @media screen and (max-width: $mob) {
+    .cards {
+      row-gap: 16px;
+
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}

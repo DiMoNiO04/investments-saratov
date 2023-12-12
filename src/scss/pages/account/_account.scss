@@ -433,10 +433,7 @@
     &__table-item:nth-child(1),
     &__table-item:nth-child(2) {
       div:last-child {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        @include croppingText(2);
         white-space: wrap;
       }
     }

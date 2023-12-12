@@ -1,0 +1,235 @@
+.project-desc {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    max-width: 900px;
+    color: $black;
+  }
+
+  &__img {
+    @include sizes(100%, 500px);
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  &__items {
+    padding: 32px;
+    background-color: $white;
+    row-gap: 24px;
+    border-radius: 4px;
+    flex: 0 0 630px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item-title {
+    @extend %mainTxt;
+    margin-bottom: 12px;
+  }
+
+  &__item-txt {
+    @extend %h3;
+    color: $bluePrimary;
+  }
+
+  &__descs {
+    @extend %flexColumn;
+    justify-content: space-between;
+    row-gap: 24px;
+  }
+
+  &__desc-title {
+    @extend %h3;
+  }
+
+  &__desc-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 16px;
+  }
+
+  &__desc-txt {
+    @extend %mainTxt;
+  }
+
+  &__desc {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__desc-items {
+    @extend %flexColumn;
+    row-gap: 8px;
+
+    li {
+      @extend %flexStart;
+      position: relative;
+      column-gap: 16px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 130%;
+
+      &::before {
+        @include sizes(32px, 14px);
+        content: '';
+        background: url('../assets/img/icons/bullet-long.svg');
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.project-desc--investor {
+  .project-desc {
+    &__desc {
+      row-gap: 20px;
+    }
+
+    &__desc-title {
+      margin-bottom: 0;
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .project-desc {
+    &__items {
+      flex-basis: 480px;
+    }
+
+    &__desc {
+      row-gap: 32px;
+    }
+
+    &__desc-items li {
+      font-size: 18px;
+      line-height: 120%;
+    }
+
+    &__item-title,
+    &__desc-txt {
+      line-height: 130%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .project-desc {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__desc {
+      row-gap: 24px;
+    }
+
+    &__title {
+      max-width: 100%;
+    }
+
+    &__img {
+      height: 400px;
+    }
+
+    &__blocks {
+      flex-direction: column;
+    }
+
+    &__items {
+      flex-basis: auto;
+    }
+
+    &__blocks {
+      row-gap: 32px;
+    }
+
+    &__btn {
+      padding: 16px 32px;
+    }
+  }
+
+  .project-desc--investor {
+    .project-desc {
+      &__items {
+        padding: 24px;
+      }
+
+      &__item:not(:last-child) {
+        margin-bottom: 19px;
+      }
+
+      &__desc-title {
+        line-height: 120%;
+      }
+
+      &__descs {
+        row-gap: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .project-desc {
+    &__descs {
+      row-gap: 32px;
+    }
+
+    &__items {
+      padding: 20px;
+    }
+
+    &__item-title {
+      margin-bottom: 8px;
+    }
+
+    &__btn {
+      padding: 11px 28px;
+
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .project-desc--investor {
+    .project-desc {
+      &__items {
+        padding: 19px;
+      }
+
+      &__item:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      &__btn {
+        padding: 16px 32px;
+      }
+
+      &__desc-items {
+        li {
+          &::before {
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+}

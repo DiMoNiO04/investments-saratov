@@ -8,13 +8,13 @@
     @include sizes(20px, 20px);
 
     svg {
-      stroke: $textIconsLightBaseSecond;
+      stroke: $greyTxt;
       transition: $transitionTransform;
     }
   }
 
   &__headline {
-    color: $textIconsLightBaseMain;
+    color: #323539;
   }
 
   &__header {

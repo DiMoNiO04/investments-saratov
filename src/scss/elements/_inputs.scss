@@ -9,12 +9,7 @@
     @extend %hidden;
     @extend %secondaryTextRegular;
     color: $greyTxt;
-    transition:
-      $transitionColor,
-      $transitionOpacity,
-      $transitionBoxShadow,
-      $transitionVisibility,
-      margin 0.5s ease;
+    transition: $transitionColor, $transitionOpacity, $transitionBoxShadow, $transitionVisibility, $transitionMargin;
     height: 0;
     margin-top: 0;
   }
@@ -37,7 +32,7 @@
 
     button svg {
       stroke: $greyTxt;
-      transition: stroke 0.5s ease;
+      transition: $transitionStroke;
     }
 
     input,
@@ -185,7 +180,7 @@
 
         use {
           stroke: $black;
-          transition: stroke 0.5s ease-in-out;
+          transition: $transitionStroke;
         }
       }
 

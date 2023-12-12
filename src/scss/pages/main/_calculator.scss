@@ -82,7 +82,7 @@
 
       use {
         stroke: $black;
-        transition: stroke 0.5s ease-in-out;
+        transition: $transitionStroke;
       }
     }
 

@@ -3,6 +3,13 @@
   height: $height;
 }
 
+@mixin croppingText($rows) {
+  display: -webkit-box;
+  -webkit-line-clamp: $rows;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @mixin noScrollLine() {
   &::-webkit-scrollbar {
     width: 0;

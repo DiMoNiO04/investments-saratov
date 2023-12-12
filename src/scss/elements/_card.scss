@@ -19,10 +19,7 @@
   }
 
   &__content-title {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    @include croppingText(3);
     font-size: 18px;
     font-weight: 600;
     line-height: 130%;
@@ -33,7 +30,6 @@
     display: flex;
     align-items: center;
     column-gap: 8px;
-    flex-wrap: wrap;
 
     span {
       font-size: 16px;
@@ -44,6 +40,7 @@
       }
 
       &:last-child {
+        @include croppingText(1);
         font-weight: 400;
       }
     }
@@ -68,6 +65,8 @@
     font-weight: 600;
     line-height: 140%;
     border-bottom: 1px solid $black;
+    width: fit-content;
+    margin: 0 0 0 auto;
 
     &:hover {
       border-color: transparent;

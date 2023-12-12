@@ -13,12 +13,7 @@
     margin-top: 8px;
     color: $greyTxt;
     transition: $transitionColor;
-    transition:
-      $transitionColor,
-      $transitionOpacity,
-      $transitionBoxShadow,
-      $transitionVisibility,
-      margin 0.5s ease;
+    transition: $transitionColor, $transitionOpacity, $transitionBoxShadow, $transitionVisibility, $transitionMargin;
     margin-top: 0;
     height: 0;
   }
