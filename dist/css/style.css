@@ -1202,6 +1202,7 @@ svg {
   visibility: visible;
 }
 
+.regional-project__container,
 .cards-page__container,
 .story__descs,
 .legislation__items,
@@ -1280,6 +1281,7 @@ svg {
   justify-content: flex-start;
 }
 
+.regional-project__prices-blocks,
 .similar-stories__titles,
 .account__fieldset-subtitles,
 .account__titles,
@@ -1312,8 +1314,8 @@ svg {
   justify-content: space-between;
 }
 
-.steps-investor__content,
-.cards {
+.regional-project__direction-items,
+.steps-investor__content {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -1355,6 +1357,8 @@ svg {
   justify-content: flex-start;
 }
 
+.regional-project__descs,
+.regional-project__titles,
 .account-menu__item-main,
 .footer__lists,
 .footer__top {
@@ -1415,6 +1419,7 @@ svg {
   text-transform: uppercase;
 }
 
+.regional-project__title,
 .subtitle {
   font-size: 58px;
   font-weight: 600;
@@ -1434,6 +1439,10 @@ svg {
   line-height: 120%;
 }
 
+.regional-project__direction-item,
+.regional-project__prices-txt,
+.regional-project__desc p,
+.regional-project__subtitle,
 .story__desc-txt,
 .story__item-title,
 .news__card-content-text,
@@ -1494,6 +1503,8 @@ svg {
   line-height: 120%;
 }
 
+.regional-project__prices-title,
+.regional-project__direction-title,
 .legislation__item-title,
 .recovery-pass__title,
 .calculator__block-title,
@@ -1712,6 +1723,8 @@ fieldset {
 
 .subtitle {
   color: #ffffff;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 
 .hidden {
@@ -2673,6 +2686,25 @@ fieldset {
   font-weight: 600;
   line-height: 130%;
   margin-bottom: 20px;
+}
+
+.card__content-items li {
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card__content-items li b {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.card__content-items li:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .card__content-item {
@@ -3664,6 +3696,9 @@ fieldset {
 }
 
 .cards {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
   flex-wrap: wrap;
   row-gap: 20px;
   -moz-column-gap: 20px;
@@ -4095,7 +4130,7 @@ fieldset {
   -moz-column-gap: 80px;
        column-gap: 80px;
   row-gap: 48px;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .success-hist__slide-item {
@@ -5469,6 +5504,84 @@ fieldset {
   row-gap: 40px;
 }
 
+.regional-project__container {
+  row-gap: 40px;
+}
+
+.regional-project__titles {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.regional-project__title {
+  width: 760px;
+  flex-shrink: 0;
+}
+
+.regional-project__prices-title,
+.regional-project__direction-title {
+  margin-bottom: 20px;
+  width: 760px;
+}
+
+.regional-project__descs {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.regional-project__desc p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.regional-project__desc li {
+  display: flex;
+  align-items: flex-start;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.regional-project__desc li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.regional-project__desc span {
+  color: #2d6fd0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.regional-project__prices-blocks {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.regional-project__prices-block {
+  padding: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.regional-project__prices-price {
+  color: #2d6fd0;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 24px;
+}
+
+.regional-project__direction-items {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.regional-project__direction-item {
+  padding: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  flex: calc(33.3333333333% - 6.6666666667px);
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -5542,6 +5655,7 @@ fieldset {
     font-size: 64px;
   }
 
+  .regional-project__title,
   .subtitle {
     font-size: 48px;
   }
@@ -5556,6 +5670,10 @@ fieldset {
     font-size: 26px;
   }
 
+  .regional-project__direction-item,
+  .regional-project__prices-txt,
+  .regional-project__desc p,
+  .regional-project__subtitle,
   .story__desc-txt,
   .story__item-title,
   .news__card-content-text,
@@ -5572,6 +5690,8 @@ fieldset {
     line-height: 140%;
   }
 
+  .regional-project__prices-title,
+  .regional-project__direction-title,
   .legislation__item-title,
   .recovery-pass__title,
   .calculator__block-title,
@@ -5749,6 +5869,11 @@ fieldset {
 
   .success-hist__slide-desc {
     font-size: 32px;
+  }
+
+  .success-hist__slide-items {
+    -moz-column-gap: 50px;
+         column-gap: 50px;
   }
 
   .success-hist__slide-content {
@@ -5969,6 +6094,33 @@ fieldset {
   .story__desc-txt {
     line-height: 130%;
   }
+
+  .regional-project__title,
+  .regional-project__prices-title,
+  .regional-project__direction-title {
+    width: 580px;
+  }
+
+  .regional-project__subtitle,
+  .regional-project__prices-title,
+  .regional-project__direction-title,
+  .regional-project__direction-item,
+  .regional-project__prices-txt,
+  .regional-project__desc p {
+    line-height: 130%;
+  }
+
+  .regional-project__prices-block {
+    padding: 24px;
+  }
+
+  .regional-project__prices-price {
+    font-size: 32px;
+  }
+
+  .regional-project__direction-item {
+    padding: 24px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -5982,6 +6134,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .regional-project__title,
   .subtitle {
     font-size: 40px;
   }
@@ -6984,6 +7137,67 @@ fieldset {
   .cards-page__container {
     row-gap: 32px;
   }
+
+  .regional-project__container {
+    row-gap: 32px;
+  }
+
+  .regional-project__titles {
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  .regional-project__title,
+  .regional-project__prices-title,
+  .regional-project__direction-title {
+    width: 100%;
+  }
+
+  .regional-project__prices-title {
+    line-height: 120%;
+  }
+
+  .regional-project__prices-blocks {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .regional-project__descs {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  .regional-project__direction-items {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .regional-project__direction-item {
+    width: 100%;
+    min-height: 120px;
+  }
+
+  .regional-project__prices-price {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .regional-project__desc li {
+    align-items: center;
+  }
+
+  .regional-project__desc span {
+    font-size: 28px;
+    min-width: 54px;
+  }
+
+  .regional-project__direction-items {
+    row-gap: 16px;
+  }
+
+  .regional-project__direction-item {
+    min-height: 166px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -6993,6 +7207,7 @@ fieldset {
     line-height: 110%;
   }
 
+  .regional-project__title,
   .subtitle {
     font-size: 32px;
   }
@@ -7007,6 +7222,10 @@ fieldset {
     font-size: 24px;
   }
 
+  .regional-project__direction-item,
+  .regional-project__prices-txt,
+  .regional-project__desc p,
+  .regional-project__subtitle,
   .story__desc-txt,
   .story__item-title,
   .news__card-content-text,
@@ -7022,6 +7241,8 @@ fieldset {
     font-size: 16px;
   }
 
+  .regional-project__prices-title,
+  .regional-project__direction-title,
   .legislation__item-title,
   .recovery-pass__title,
   .calculator__block-title,
@@ -7095,6 +7316,14 @@ fieldset {
     font-size: 14px;
     max-width: 160px;
     max-width: 100%;
+  }
+
+  .card__content-items b {
+    font-size: 16px;
+  }
+
+  .card__content-items li {
+    font-size: 14px;
   }
 
   .card__content-item span:last-child {

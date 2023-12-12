@@ -1,0 +1,198 @@
+.regional-project {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__titles {
+    @extend %flexStartBetween;
+    column-gap: 20px;
+  }
+
+  &__title {
+    @extend %h2;
+    width: 760px;
+    flex-shrink: 0;
+  }
+
+  &__subtitle {
+    @extend %mainTxt;
+  }
+
+  &__prices-title,
+  &__direction-title {
+    margin-bottom: 20px;
+    @extend %subheader;
+    width: 760px;
+  }
+
+  &__descs {
+    @extend %flexStartBetween;
+    column-gap: 20px;
+  }
+
+  &__desc {
+    p {
+      @extend %mainTxt;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 8px;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    span {
+      color: $bluePrimary;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+  }
+
+  &__prices-blocks {
+    @extend %flexCenterBetween;
+    column-gap: 20px;
+  }
+
+  &__prices-block {
+    padding: 32px;
+    border-radius: 4px;
+    background-color: $white;
+  }
+
+  &__prices-price {
+    color: $bluePrimary;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 24px;
+  }
+
+  &__prices-txt {
+    @extend %mainTxt;
+  }
+
+  &__direction-items {
+    @extend %flexStretchBetween;
+    column-gap: 20px;
+  }
+
+  &__direction-item {
+    @extend %mainTxt;
+    padding: 32px;
+    border-radius: 4px;
+    background-color: $white;
+    flex: calc(100% / 3 - 20px / 3);
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .regional-project {
+    &__title,
+    &__prices-title,
+    &__direction-title {
+      width: 580px;
+    }
+
+    &__subtitle,
+    &__prices-title,
+    &__direction-title,
+    &__direction-item,
+    &__prices-txt,
+    &__desc p {
+      line-height: 130%;
+    }
+
+    &__prices-block {
+      padding: 24px;
+    }
+
+    &__prices-price {
+      font-size: 32px;
+    }
+
+    &__direction-item {
+      padding: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .regional-project {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__titles {
+      flex-direction: column;
+      row-gap: 32px;
+    }
+
+    &__title,
+    &__prices-title,
+    &__direction-title {
+      width: 100%;
+    }
+
+    &__prices-title {
+      line-height: 120%;
+    }
+
+    &__prices-blocks {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__descs {
+      flex-direction: column;
+      row-gap: 12px;
+    }
+
+    &__direction-items {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__direction-item {
+      width: 100%;
+      min-height: 120px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .regional-project {
+    &__prices-price {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    &__desc {
+      li {
+        align-items: center;
+      }
+
+      span {
+        font-size: 28px;
+        min-width: 54px;
+      }
+    }
+
+    &__direction-items {
+      row-gap: 16px;
+    }
+
+    &__direction-item {
+      min-height: 166px;
+    }
+  }
+}

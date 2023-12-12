@@ -26,6 +26,24 @@
     margin-bottom: 20px;
   }
 
+  &__content-items {
+    li {
+      font-size: 16px;
+      line-height: 130%;
+      font-weight: 400;
+      @include croppingText(1);
+
+      b {
+        font-weight: 600;
+        margin-right: 8px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
   &__content-item {
     display: flex;
     align-items: center;
@@ -106,6 +124,16 @@
 
 @media screen and (max-width: $mob) {
   .card {
+    &__content-items {
+      b {
+        font-size: 16px;
+      }
+
+      li {
+        font-size: 14px;
+      }
+    }
+
     &__content-item {
       span {
         &:last-child {

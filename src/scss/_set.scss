@@ -160,6 +160,7 @@ fieldset {
 .subtitle {
   @extend %h2;
   color: $white;
+  hyphens: auto;
 }
 
 .hidden {
