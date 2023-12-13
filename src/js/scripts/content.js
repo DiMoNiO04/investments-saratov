@@ -30,7 +30,11 @@ function changeContent() {
       activeContent.forEach((content) => content.classList.add('--active'));
 
       btns.forEach((but) => but.classList.remove('--active'));
-      btn.classList.add('--active');
+      btns.forEach((bt) => {
+        if (bt.getAttribute('data-content-btn') === btn.getAttribute('data-content-btn')) {
+          bt.classList.add('--active');
+        }
+      });
 
       if (document.querySelector('.tooltip')) {
         document.querySelector('.tooltip').remove();

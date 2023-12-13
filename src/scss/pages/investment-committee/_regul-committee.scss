@@ -1,0 +1,168 @@
+.regul-committee {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 60px;
+  }
+
+  &__head {
+    max-width: 870px;
+  }
+
+  &__title {
+    @extend %h2;
+    flex-shrink: 0;
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    @extend %mainTxt;
+    margin-bottom: 16px;
+  }
+
+  &__doc {
+    border-radius: 4px;
+    background: $white;
+    @extend %flexCenterStart;
+    column-gap: 16px;
+    padding: 20px;
+
+    &-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    &-link {
+      color: $bluePrimary;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 130%;
+    }
+  }
+
+  &__advan {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__order {
+    &-items {
+      @extend %gridColumnThree;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    &-item {
+      border-radius: 4px;
+      background-color: $white;
+      padding: 32px;
+      @extend %flexColumn;
+      @extend %flexStart;
+      row-gap: 32px;
+    }
+
+    &-num {
+      color: $bluePrimary;
+      @extend %h3;
+    }
+
+    &-text {
+      @extend %mainTxt;
+    }
+  }
+
+  &__ask {
+    &_name {
+      @extend %subheader;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__ask {
+    &-title {
+      @extend %subheader;
+      color: $blackName;
+      margin-bottom: 20px;
+    }
+
+    &-items {
+      @extend %gridColumnThree;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    &-item {
+      border-radius: 4px;
+      background-color: $white;
+      padding: 32px;
+      @extend %flexColumn;
+      @extend %flexStartBetween;
+
+      &:last-child {
+        background: var(--blue-gradient, linear-gradient(94deg, #144286 0%, #2d6fd0 100%));
+        @extend %flexStart;
+        row-gap: 32px;
+
+        .regul-committee__ask-soc {
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &-text {
+      @extend %mainTxt;
+    }
+
+    &-soc {
+      a {
+        @extend %h3;
+        display: block;
+        @include mb(8px);
+        color: $bluePrimary;
+      }
+    }
+
+    &-info {
+      @extend %flexCenterStart;
+      column-gap: 16px;
+    }
+
+    &-icon {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+    }
+
+    &-content {
+      @extend %flexColumn;
+      row-gap: 2px;
+    }
+
+    &-name {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 130%;
+      color: $white;
+    }
+
+    &-post {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 130%;
+      color: $white;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .regul-committee {
+  }
+}
+
+@media screen and (max-width: $tablet) {
+}
+
+@media screen and (max-width: $mob) {
+}

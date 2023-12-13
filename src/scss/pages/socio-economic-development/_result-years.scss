@@ -1,0 +1,39 @@
+.result-years {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %h2;
+  }
+
+  &__items {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  &__item {
+    border-radius: 4px;
+    background: $white;
+    padding: 20px;
+    @extend %flexCenterStart;
+    column-gap: 16px;
+    height: 82px;
+    flex-shrink: 0;
+
+    &-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    &-link {
+      color: $bluePrimary;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+  }
+}

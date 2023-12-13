@@ -1,0 +1,41 @@
+.invest-committee {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__titles {
+    @extend %flexStartBetween;
+    column-gap: 20px;
+  }
+
+  &__title {
+    @extend %h2;
+    width: 740px;
+    flex-shrink: 0;
+  }
+
+  &__subtitle {
+    @extend %mainTxt;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__image {
+    @extend %imageCoverWidth;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+}
+
+@media screen and (max-width: $tablet) {
+}
+
+@media screen and (max-width: $mob) {
+}

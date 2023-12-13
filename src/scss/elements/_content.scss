@@ -1,0 +1,45 @@
+.content {
+  strong {
+    @extend %subheader;
+    margin-bottom: 20px;
+  }
+
+  p {
+    @extend %mainTxt;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  ul {
+    & > li {
+      @extend %mainTxt;
+      position: relative;
+      padding-left: 36px;
+      margin-bottom: 12px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 12px;
+        background-color: $bluePrimary;
+        width: 24px;
+        height: 2px;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

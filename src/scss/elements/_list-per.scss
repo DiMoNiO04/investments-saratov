@@ -1,0 +1,114 @@
+.list-per {
+  &__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  &__item {
+    @extend %flexCenter;
+    background-color: $white;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+    color: $bluePrimary;
+    text-align: center;
+    height: 90px;
+  }
+}
+
+.list-per--municipal {
+  .list-per {
+    &__items {
+      @extend %gridColumnSix;
+    }
+  }
+}
+
+.list-per--districs {
+  .list-per {
+    &__items {
+      @extend %gridColumnFour;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .list-per {
+    &__title {
+      font-size: 40px;
+    }
+  }
+
+  .list-per--municipal {
+    .list-per {
+      &__items {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .list-per--municipal {
+    .list-per {
+      &__items {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  .list-per--districs {
+    .list-per {
+      &__items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .list-per {
+    &__title {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+
+    &__items {
+      row-gap: 16px;
+      column-gap: 16px;
+    }
+
+    &__item {
+      hyphens: auto;
+      font-size: 16px;
+      padding: 10px;
+      height: 62px;
+    }
+  }
+
+  .list-per--municipal {
+    .list-per {
+      &__items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  .list-per--districs {
+    .list-per {
+      &__items {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

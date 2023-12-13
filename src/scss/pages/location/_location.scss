@@ -1,0 +1,217 @@
+.location {
+  &__titles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    color: $black;
+  }
+
+  &__txt {
+    p {
+      font-size: 20px;
+      line-height: 130%;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__map {
+    position: relative;
+  }
+
+  &__map-img {
+    @include sizes(1122px, 677px);
+    margin: 0 auto;
+  }
+
+  &__map-country {
+    @extend %h3;
+    position: absolute;
+    left: 44%;
+    top: 41.5%;
+  }
+
+  &__map-city {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    @extend %h3;
+    position: absolute;
+    color: $white;
+    bottom: 18.5%;
+    left: 35.5%;
+  }
+
+  &__map-city__pin {
+    @include sizes(12px, 12px);
+    @extend %flexCenter;
+    background-color: #ffffff80;
+    border-radius: 50%;
+    position: relative;
+
+    &::after {
+      content: '';
+      @include sizes(8px, 8px);
+      background-color: $white;
+      display: block;
+      border-radius: 50%;
+      opacity: 1;
+    }
+  }
+
+  &__map-squary {
+    @extend %flexColumn;
+    row-gap: 4px;
+    position: absolute;
+    bottom: 6.8%;
+    right: 24.3%;
+
+    span {
+      &:first-child {
+        color: $bluePrimary;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 120%;
+      }
+      &:last-child {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 130%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .location {
+    &__map-img {
+      height: 591px;
+    }
+
+    &__map-country {
+      left: 44.5%;
+      top: 40.5%;
+    }
+
+    &__map-city {
+      left: 33.5%;
+    }
+
+    &__map-squary {
+      bottom: 2%;
+      right: 28.6%;
+
+      span {
+        &:first-child {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .location {
+    margin-bottom: 110px;
+
+    &__titles {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 48px;
+    }
+
+    &__txt p {
+      font-size: 18px;
+    }
+
+    &__map-img {
+      @include sizes(100%, auto);
+    }
+
+    &__map-country {
+      left: 42.8%;
+      top: 39%;
+    }
+
+    &__map-city {
+      left: 26.5%;
+      bottom: 17.5%;
+    }
+
+    &__map-squary {
+      bottom: -2%;
+      right: 5%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .location {
+    margin-bottom: 170px;
+
+    &__titles {
+      margin-bottom: 52px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__txt {
+      p {
+        font-size: 16px;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    &__map-country {
+      font-size: 18px;
+      left: 38%;
+    }
+
+    &__map-city {
+      font-size: 18px;
+      column-gap: 6px;
+      left: 21%;
+    }
+
+    &__map-img {
+      min-width: 338px;
+      left: -5px;
+      position: relative;
+    }
+
+    &__map-city__pin {
+      @include sizes(8px, 8px);
+
+      &::after {
+        @include sizes(4px, 4px);
+      }
+    }
+
+    &__map-squary {
+      top: 100%;
+      left: 0;
+      margin-top: 30px;
+
+      span {
+        &:first-child {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
