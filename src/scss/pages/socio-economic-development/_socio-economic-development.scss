@@ -1,0 +1,106 @@
+.soceconomic-develop {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__titles {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__title {
+    @extend %h2;
+    padding-right: 20px;
+  }
+
+  &__subtitle {
+    @extend %mainTxt;
+    padding-right: 20px;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__item {
+    padding: 40px 32px;
+    border-radius: 4px;
+    background-color: $white;
+
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: center;
+    column-gap: 40px;
+
+    &-result {
+      @extend %flexColumn;
+    }
+
+    &-price {
+      color: $bluePrimary;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 120%;
+    }
+
+    &-bottom {
+      @extend %flexCenterStart;
+      column-gap: 12px;
+    }
+
+    &-content {
+      @extend %flexColumn;
+      row-gap: 12px;
+
+      ul {
+        @extend %flexColumn;
+        row-gap: 8px;
+
+        li {
+          @extend %flexEndStart;
+          column-gap: 12px;
+
+          b {
+            color: $bluePrimary;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 130%;
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 130%;
+
+            &:not(:last-child) {
+              margin-bottom: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &-name {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 120%;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+}
+
+@media screen and (max-width: $tablet) {
+}
+
+@media screen and (max-width: $mob) {
+}

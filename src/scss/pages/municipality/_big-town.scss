@@ -1,0 +1,87 @@
+.big-town {
+  &__title-container {
+    @extend %flexCenterBetween;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    color: $black;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    @extend %flexCenterBetween;
+    background-color: $white;
+    border-radius: 0 0 4px 4px;
+    padding: 32px;
+  }
+
+  &__city {
+    @extend %subheader;
+  }
+
+  &__peoples {
+    @extend %h3;
+    color: $bluePrimary;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .big-town {
+    &__title {
+      font-size: 40px;
+    }
+
+    &__desc {
+      padding: 24px;
+    }
+
+    &__city {
+      line-height: 130%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .big-town {
+    &__title {
+      font-size: 40px;
+    }
+
+    &__city {
+      line-height: 130%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .big-town {
+    .container {
+      padding: 0;
+    }
+
+    &__title-container {
+      margin-bottom: 32px;
+      padding: 0 16px;
+    }
+
+    &__swiper {
+      padding: 0 16px;
+    }
+
+    &__desc {
+      padding: 20px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__navigation {
+      display: none;
+    }
+  }
+}

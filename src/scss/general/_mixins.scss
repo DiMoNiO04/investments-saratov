@@ -15,6 +15,7 @@
     width: 0;
     height: 0;
   }
+
   scrollbar-width: none;
 }
 
@@ -35,5 +36,30 @@
 
   .--mob {
     display: none;
+  }
+}
+
+// Марджины
+@mixin mr($value) {
+  &:not(:last-child) {
+    margin-right: $value;
+  }
+}
+
+@mixin ml($value) {
+  &:not(:last-child) {
+    margin-left: $value;
+  }
+}
+
+@mixin mb($value) {
+  &:not(:last-child) {
+    margin-bottom: $value;
+  }
+}
+
+@mixin mt($value) {
+  &:not(:last-child) {
+    margin-top: $value;
   }
 }

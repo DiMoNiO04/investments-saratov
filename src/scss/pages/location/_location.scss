@@ -118,6 +118,8 @@
 
 @media screen and (max-width: $tablet) {
   .location {
+    margin-bottom: 110px;
+
     &__titles {
       grid-template-columns: repeat(1, 1fr);
       row-gap: 32px;
@@ -155,6 +157,8 @@
 
 @media screen and (max-width: $mob) {
   .location {
+    margin-bottom: 170px;
+
     &__titles {
       margin-bottom: 52px;
     }
@@ -176,18 +180,16 @@
     &__map-country {
       font-size: 18px;
       left: 38%;
-      top: 27%;
     }
 
     &__map-city {
       font-size: 18px;
       column-gap: 6px;
       left: 21%;
-      bottom: 41%;
     }
 
     &__map-img {
-      width: 338px;
+      min-width: 338px;
       left: -5px;
       position: relative;
     }
@@ -201,8 +203,9 @@
     }
 
     &__map-squary {
+      top: 100%;
+      left: 0;
       margin-top: 30px;
-      position: static;
 
       span {
         &:first-child {

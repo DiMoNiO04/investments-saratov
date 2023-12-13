@@ -26,6 +26,9 @@
 @import './elements/breadcrumbs.scss';
 @import './elements/card.scss';
 @import './elements/pagination.scss';
+@import './elements/list-per.scss';
+@import './elements/link-file.scss';
+@import './elements/content.scss';
 
 // Blocks
 @import './blocks/footer.scss';
@@ -46,3 +49,6 @@
 @import './pages/stories/index.scss';
 @import './pages/regional-project/index.scss';
 @import './pages/location/index.scss';
+@import './pages/municipality/index.scss';
+@import './pages/socio-economic-development/index.scss';
+@import './pages/investment-committee/index.scss';
