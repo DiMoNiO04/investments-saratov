@@ -1,0 +1,282 @@
+.transport-inf {
+  &__title {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 110%;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  &__block {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &:nth-child(1) {
+      background-color: $white;
+
+      .transport-inf__block-title,
+      .transport-inf__block-txt {
+        color: $black;
+      }
+
+      .transport-inf__block-img {
+        height: 210px;
+        position: relative;
+        left: -35px;
+      }
+    }
+  }
+
+  &__block-img img {
+    border-radius: 4px;
+  }
+
+  &__block-desc {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    right: 32px;
+  }
+
+  &__block-title {
+    @extend %subheader;
+    color: $white;
+    margin-bottom: 12px;
+  }
+
+  &__block-txt {
+    @extend %regular18;
+    color: $white;
+  }
+
+  &__block-img {
+    @extend %fullSize;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    overflow: hidden;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      @include sizes(100%, 2px);
+      background-color: #dee2e7;
+      display: block;
+      top: 86px;
+      left: 28px;
+    }
+
+    &:not(:last-child) {
+      .transport-inf__item-txt {
+        max-width: 208px;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-right: 16px;
+    }
+  }
+
+  &__item-icon {
+    @extend %flexCenter;
+    @include sizes(68px, 68px);
+    border-radius: 50%;
+    background-color: $white;
+    margin-bottom: 28px;
+
+    svg {
+      @include sizes(40px, 40px);
+    }
+  }
+
+  &__item-txt {
+    @extend %regular18;
+    position: relative;
+    padding-top: 16px;
+    left: 25px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      @include sizes(12px, 12px);
+      border-radius: 50%;
+      background-color: #dee2e7;
+      display: block;
+      top: -14px;
+      left: 3px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .transport-inf {
+    &__title {
+      font-size: 40px;
+    }
+
+    &__block-img {
+      min-height: 507px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .transport-inf {
+    margin-bottom: 60px;
+
+    &__blocks {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 413px 324px;
+      row-gap: 20px;
+      margin-bottom: 70px;
+    }
+
+    &__block-img {
+      min-height: auto;
+    }
+
+    &__block {
+      &:first-child {
+        grid-row: 2;
+        grid-column: 1/3;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-row: 1;
+      }
+
+      &:nth-child(1) .transport-inf__block-img {
+        height: 185px;
+        left: -21%;
+      }
+    }
+
+    &__block-desc {
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+    }
+
+    &__block-title {
+      line-height: 120%;
+    }
+
+    &__block-txt {
+      font-size: 18px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      row-gap: 30px;
+    }
+
+    &__item {
+      &:not(:last-child)::after {
+        top: 71.5px;
+      }
+    }
+
+    &__item-icon {
+      @include sizes(60px, 60px);
+      margin-bottom: 20px;
+
+      svg {
+        @include sizes(36px, 36px);
+      }
+    }
+
+    &__item-txt {
+      padding-top: 14px;
+      left: 16px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .transport-inf {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      row-gap: 27px;
+    }
+
+    &__item {
+      &:not(:last-child)::after {
+        top: 61.5px;
+      }
+    }
+
+    &__item-icon {
+      @include sizes(48px, 48px);
+
+      svg {
+        @include sizes(30px, 30px);
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+
+    &__blocks {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__block-img {
+      min-height: 100%;
+      height: 340px;
+    }
+
+    &__block {
+      &:nth-child(2) {
+        order: -1;
+      }
+
+      &:nth-child(1) .transport-inf__block-img {
+        height: 141px;
+        left: -9%;
+      }
+    }
+
+    &__block-desc {
+      left: 20px;
+      right: 20px;
+    }
+
+    &__block-title {
+      font-size: 24px;
+    }
+
+    &__block-txt {
+      font-size: 16px;
+    }
+
+    &__item-txt {
+      font-size: 16px;
+
+      &::before {
+        top: -12px;
+        left: 2px;
+      }
+    }
+  }
+}
