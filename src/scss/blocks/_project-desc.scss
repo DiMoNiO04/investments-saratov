@@ -22,27 +22,28 @@
     column-gap: 40px;
   }
 
-  &__list {
+  &__items {
     padding: 32px;
     background-color: $white;
     row-gap: 24px;
     border-radius: 4px;
     flex: 0 0 630px;
+  }
 
-    li {
-      &:not(:last-child) {
-        margin-bottom: 24px;
-      }
-
-      @extend %mainTxt;
-
-      b {
-        @extend %h3;
-        margin-top: 12px;
-        display: block;
-        color: $bluePrimary;
-      }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
     }
+  }
+
+  &__item-title {
+    @extend %mainTxt;
+    margin-bottom: 12px;
+  }
+
+  &__item-txt {
+    @extend %h3;
+    color: $bluePrimary;
   }
 
   &__descs {
@@ -109,13 +110,8 @@
 
 @media screen and (max-width: $laptop) {
   .project-desc {
-    &__list {
+    &__items {
       flex-basis: 480px;
-
-      li,
-      b {
-        line-height: 130%;
-      }
     }
 
     &__desc {
@@ -156,7 +152,7 @@
       flex-direction: column;
     }
 
-    &__list {
+    &__items {
       flex-basis: auto;
     }
 
@@ -171,12 +167,12 @@
 
   .project-desc--investor {
     .project-desc {
-      &__list {
+      &__items {
         padding: 24px;
+      }
 
-        li:not(:last-child) {
-          margin-bottom: 19px;
-        }
+      &__item:not(:last-child) {
+        margin-bottom: 19px;
       }
 
       &__desc-title {
@@ -196,12 +192,12 @@
       row-gap: 32px;
     }
 
-    &__list {
+    &__items {
       padding: 20px;
+    }
 
-      li b {
-        margin-top: 8px;
-      }
+    &__item-title {
+      margin-bottom: 8px;
     }
 
     &__btn {
@@ -215,16 +211,12 @@
 
   .project-desc--investor {
     .project-desc {
-      &__list {
+      &__items {
         padding: 19px;
+      }
 
-        li:not(:last-child) {
-          margin-bottom: 16px;
-        }
-
-        b {
-          margin-top: 8px;
-        }
+      &__item:not(:last-child) {
+        margin-bottom: 16px;
       }
 
       &__btn {

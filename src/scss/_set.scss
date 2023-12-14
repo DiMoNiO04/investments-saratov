@@ -160,6 +160,7 @@ fieldset {
 .subtitle {
   @extend %h2;
   color: $white;
+  hyphens: auto;
 }
 
 .hidden {
@@ -194,10 +195,6 @@ fieldset {
 
   .section {
     margin-bottom: 100px;
-  }
-
-  .subtitle {
-    hyphens: auto;
   }
 }
 

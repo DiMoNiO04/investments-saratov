@@ -6,7 +6,7 @@
   &__left {
     background-color: $bluePrimary;
     padding: 120px 0 0 190px;
-    width: 51.5%;
+    width: 990px;
     position: relative;
     overflow: hidden;
   }
@@ -42,7 +42,7 @@
   &__right {
     background-color: $white;
     padding: 120px 110px;
-    width: 48.5%;
+    width: 930px;
 
     .ask-question__titles {
       display: none;
