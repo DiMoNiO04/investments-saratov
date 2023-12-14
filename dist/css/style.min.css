@@ -6998,8 +6998,23 @@ fieldset {
   font-weight: 600;
   line-height: 120%;
 }
-.soceconomic-develop__item-bottom {
-  column-gap: 12px;
+.soceconomic-develop__item-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+.soceconomic-develop__item-count {
+  color: #2d6fd0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-right: 12px;
+}
+.soceconomic-develop__item-tooltip {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 .soceconomic-develop__item-content {
   row-gap: 12px;
@@ -7018,7 +7033,6 @@ fieldset {
 }
 .soceconomic-develop__item-content ul li p {
   font-size: 16px;
-  font-weight: 400;
   line-height: 130%;
 }
 .soceconomic-develop__item-content ul li p:not(:last-child) {
@@ -7030,6 +7044,109 @@ fieldset {
   line-height: 120%;
 }
 
+@media screen and (max-width: 1919px) {
+  .soceconomic-develop__title {
+    padding-right: 0;
+  }
+  .soceconomic-develop__subtitle {
+    padding-right: 0;
+  }
+  .soceconomic-develop__item {
+    grid-template-columns: 340px 1fr;
+  }
+  .soceconomic-develop__item-price {
+    font-size: 40px;
+    line-height: 110%;
+  }
+  .soceconomic-develop__item-name {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .soceconomic-develop__titles {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+  .soceconomic-develop__subtitle p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .soceconomic-develop__item {
+    grid-template-columns: 268px 1fr;
+    column-gap: 32px;
+    padding: 32px 24px;
+  }
+  .soceconomic-develop__item-price {
+    font-size: 36px;
+    line-height: 110%;
+  }
+  .soceconomic-develop__item-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+  }
+  .soceconomic-develop__item-count {
+    font-size: 20px;
+    line-height: 120%;
+    margin-right: 8px;
+  }
+  .soceconomic-develop__item-tooltip {
+    width: 20px;
+    height: 20px;
+  }
+  .soceconomic-develop__item-name {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .soceconomic-develop__subtitle p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .soceconomic-develop__item {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+  .soceconomic-develop__item-price {
+    font-size: 32px;
+  }
+  .soceconomic-develop__item-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+  }
+  .soceconomic-develop__item-count {
+    font-size: 18px;
+    line-height: 130%;
+  }
+  .soceconomic-develop__item-tooltip {
+    width: 20px;
+    height: 20px;
+  }
+  .soceconomic-develop__item-name {
+    font-size: 26px;
+    word-break: break-word;
+  }
+  .soceconomic-develop__item-content ul {
+    row-gap: 8px;
+  }
+  .soceconomic-develop__item-content ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2px;
+  }
+  .soceconomic-develop__item-content ul li b {
+    color: #2d6fd0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  .soceconomic-develop__item-content ul li p {
+    font-size: 16px;
+    line-height: 130%;
+  }
+  .soceconomic-develop__item-content ul li p:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
 .result-years__container {
   row-gap: 40px;
 }
@@ -7039,16 +7156,27 @@ fieldset {
 }
 .result-years__item {
   border-radius: 4px;
-  background: #ffffff;
+  background-color: #ffffff;
   padding: 20px;
   column-gap: 16px;
-  height: 82px;
-  flex-shrink: 0;
+  cursor: pointer;
+}
+.result-years__item:hover {
+  background-color: #2d6fd0;
+}
+.result-years__item:hover .result-years__item-icon svg use {
+  stroke: #ffffff;
+}
+.result-years__item:hover .result-years__item-link {
+  color: #ffffff;
 }
 .result-years__item-icon {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
+}
+.result-years__item-icon svg use {
+  stroke: #2d6fd0;
 }
 .result-years__item-link {
   color: #2d6fd0;
@@ -7057,6 +7185,11 @@ fieldset {
   line-height: 130%;
 }
 
+@media screen and (max-width: 1365px) {
+  .result-years__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .invest-committee__container {
   row-gap: 40px;
 }

@@ -16,17 +16,38 @@
 
   &__item {
     border-radius: 4px;
-    background: $white;
+    background-color: $white;
     padding: 20px;
     @extend %flexCenterStart;
     column-gap: 16px;
-    height: 82px;
-    flex-shrink: 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $bluePrimary;
+
+      .result-years__item-icon {
+        svg {
+          use {
+            stroke: $white;
+          }
+        }
+      }
+
+      .result-years__item-link {
+        color: $white;
+      }
+    }
 
     &-icon {
       width: 40px;
       height: 40px;
       flex-shrink: 0;
+
+      svg {
+        use {
+          stroke: $bluePrimary;
+        }
+      }
     }
 
     &-link {
@@ -37,3 +58,15 @@
     }
   }
 }
+
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {
+  .result-years {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {}
