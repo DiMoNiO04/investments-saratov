@@ -2,47 +2,52 @@
   <div class="container">
     <div class="footer__container">
       <div class="footer__top">
-        <a href="./main.html" class="footer__logo logo">
-          <picture>
-            <source media="(min-width: 1365px)" srcset="@img/icons/logo.svg" />
-            <source media="(max-width: 1366px)" srcset="@img/icons/logo-sm.svg" />
-            <img src="@img/icons/logo.svg" alt="logo" />
-          </picture>
-        </a>
-        <div class="footer__info">
-          <div class="footer__info-block">
-            <p class="footer__info-title">Email</p>
-            <a href="mailto:investsaratov@mai.ru" class="footer__info-link">investsaratov@mai.ru</a>
-          </div>
-          <div class="footer__info-block">
-            <p class="footer__info-title">Телефон</p>
-            <a href="tel:+78452695262" class="footer__info-link">+7 (8452) 69-52-62</a>
-          </div>
-          <div class="footer__info-block">
-            <p class="footer__info-title">Социальные сети</p>
-            <div class="footer__info-socials">
-              <a href="#">
-                <svg width="20" height="20">
-                  <use xlink:href="@img/icons/icons.svg#tg"></use>
-                </svg>
-              </a>
-              <a href="#">
-                <svg width="20" height="20">
-                  <use xlink:href="@img/icons/icons.svg#odnok"></use>
-                </svg>
-              </a>
-              <a href="#">
-                <svg width="20" height="20">
-                  <use xlink:href="@img/icons/icons.svg#vk"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="footer__info-block">
-            <p class="footer__info-title">Режим работы</p>
-            <p class="footer__info-link">с 9:00 до 18:00 пн-пт</p>
+        <div class="footer__logo-column">
+          <a href="./main.html" class="footer__logo logo">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="@img/icons/logo.svg" />
+              <img src="@img/icons/logo-sm.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+
+        <!-- <div class="footer__info"> -->
+        <div class="footer__info-block">
+          <p class="footer__info-title">Email</p>
+          <a href="mailto:investsaratov@mai.ru" class="footer__info-link">investsaratov@mai.ru</a>
+        </div>
+        <div class="footer__info-block">
+          <p class="footer__info-title">Телефон</p>
+          <a href="tel:+78452695262" class="footer__info-link">+7 (8452) 69-52-62</a>
+        </div>
+        <div class="footer__info-block">
+          <p class="footer__info-title">Социальные сети</p>
+          <div class="footer__info-socials">
+            <a href="#">
+              <svg width="20" height="20">
+                <use xlink:href="@img/icons/icons.svg#tg"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="20" height="20">
+                <use xlink:href="@img/icons/icons.svg#odnok"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="20" height="20">
+                <use xlink:href="@img/icons/icons.svg#vk"></use>
+              </svg>
+            </a>
           </div>
         </div>
+        <div class="footer__info-block">
+          <p class="footer__info-title">Режим работы</p>
+          <p class="footer__info-link">с 9:00 до 18:00 пн-пт</p>
+        </div>
+        <!-- </div>
+        <div class="footer__info"> -->
+
+        <!-- </div> -->
       </div>
       <div class="footer__center">
         <div class="footer__lists">
@@ -175,8 +180,20 @@
                 <a href="#">Площадки с объектами капитального строительства</a>
               </li>
             </ul>
+            <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+              <p>Инвестстандарт</p>
+              <svg width="20" height="20">
+                <use xlink:href="@img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+              <p>Контакты</p>
+              <svg width="20" height="20">
+                <use xlink:href="@img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
           </div>
-          <div class="footer__list js-dropdown-list">
+          <div class="footer__list footer__list-hide js-dropdown-list">
             <div class="footer__list-title js-dropdown-title">
               <a href="#">Инвестстандарт</a>
             </div>
@@ -266,7 +283,7 @@
               </li>
             </div>
           </div>
-          <div class="footer__list js-dropdown-list">
+          <div class="footer__list footer__list-hide js-dropdown-list">
             <div class="footer__list-title js-dropdown-title">
               <a href="#">Контакты</a>
             </div>

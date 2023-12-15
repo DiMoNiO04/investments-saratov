@@ -1,7 +1,7 @@
 %regular16 {
   font-size: 16px;
   font-weight: 400;
-  line-height: 140%;
+  line-height: 130%;
 }
 
 %medium18 {
@@ -94,10 +94,16 @@
   }
 }
 
+%mediumMainTxt {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
 %secondaryTextRegular {
   font-size: 14px;
   font-weight: 400;
-  line-height: 140%;
+  line-height: 130%;
 }
 
 %secondaryTextRegular12 {
@@ -108,13 +114,13 @@
 %mediumTextRegular {
   font-size: 14px;
   font-weight: 500;
-  line-height: 140%;
+  line-height: 130%;
 }
 
 %semiboldTextRegular {
   font-size: 14px;
   font-weight: 600;
-  line-height: 120%;
+  line-height: 130%;
 }
 
 %subheader {
@@ -135,5 +141,5 @@
 %semibold16 {
   font-size: 16px;
   font-weight: 600;
-  line-height: 140%;
+  line-height: 130%;
 }

@@ -3,95 +3,106 @@
 
   a {
     transition: $transitionColor;
+
     &:hover {
       color: $white;
     }
   }
 
   &__top {
-    @extend %flexStartBetween;
-    padding: 100px 0 45px;
-    border-bottom: 1px solid #525252;
-    column-gap: 86px;
+    @extend %gridColumnFive;
+    padding: 100px 0 50px;
+    border-bottom: 1px solid $greyLine;
+    column-gap: 80px;
+    row-gap: 32px;
   }
 
   &__logo {
+    display: inline-block;
     @include sizes(258px, 64px);
     flex-shrink: 0;
-  }
 
-  &__info {
-    @extend %flexCenterEnd;
-    row-gap: 32px;
-    column-gap: 20px;
-    flex-wrap: wrap;
-    width: 640px;
-  }
-
-  &__info-title {
-    @extend %regular16;
-    margin-bottom: 16px;
-    line-height: normal;
-    color: $grey;
-  }
-
-  &__info-block {
-    width: 310px;
-
-    &:last-child {
-      margin-top: -12px;
+    &-column {
+      grid-column-start: 1;
+      grid-column-end: 4;
     }
   }
 
-  &__info-link {
-    @extend %mainTxt;
-    color: $white;
-    line-height: normal;
-  }
+  &__info {
+    &-title {
+      @extend %regular16;
+      margin-bottom: 16px;
+      color: $grey;
+    }
 
-  &__info-socials {
-    @extend %flexCenterStart;
-    column-gap: 20px;
+    &-link {
+      @extend %mediumMainTxt;
+      color: $white;
+    }
 
-    a svg {
-      @include sizes(32px, 32px);
+    &-socials {
+      @extend %flexCenterStart;
+      column-gap: 20px;
+
+      a {
+        @include sizes(32px, 32px);
+      }
+    }
+
+    &-block {
+      &:nth-child(4) {
+        grid-column-start: 4;
+        grid-column-end: 5;
+      }
+
+      &:nth-child(5) {
+        grid-column-start: 5;
+        grid-column-end: 6;
+      }
     }
   }
 
   &__center {
     margin-top: 50px;
     padding-bottom: 50px;
-    border-bottom: 1px solid #525252;
+    border-bottom: 1px solid $greyLine;
   }
 
   &__lists {
-    @extend %flexStartBetween;
-    column-gap: 40px;
-    row-gap: 40px;
-    flex-wrap: wrap;
+    @extend %gridColumnFive;
+    column-gap: 80px;
+    row-gap: 60px;
   }
 
   &__list {
-    width: 265px;
-  }
+    &-title {
+      @extend %flexCenterBetween;
 
-  &__list-title {
-    @extend %flexCenterBetween;
-    p,
-    a {
-      @extend %semibold16;
-      color: $white;
-    }
-    svg {
-      display: none;
-      transition: $transitionTransform;
-    }
-  }
+      p,
+      a {
+        @extend %semibold16;
+        color: $white;
+      }
 
-  &__list-items {
-    padding-top: 21px;
-    @extend %flexColumn;
-    row-gap: 16px;
+      svg {
+        display: none;
+        transition: $transitionTransform;
+      }
+
+      &:not(:first-child) {
+        margin-top: 40px;
+      }
+
+      &-hide {
+        display: block;
+      }
+    }
+
+    &-items {
+      padding-top: 24px;
+      @extend %flexColumn;
+      row-gap: 16px;
+    }
   }
 
   &__item {
@@ -102,26 +113,70 @@
   &__bottom {
     @extend %flexCenterBetween;
     padding: 32px 0;
-  }
 
-  &__bottom-txt {
-    @extend %secondaryTextRegular;
-    color: $grey;
+    &-txt {
+      @extend %secondaryTextRegular;
+      color: $grey;
+    }
   }
 }
 
 @media screen and (max-width: $laptop) {
   .footer {
+    &__logo {
+      &-column {
+        grid-column-end: 3;
+      }
+    }
+
     &__bottom-txt {
       font-size: 16px;
     }
 
-    &__bottom {
-      padding-bottom: 20px;
+    &__top {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 40px;
+    }
+
+    &__center {
+      padding-bottom: 40px;
+    }
+
+    &__lists {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 40px;
+      row-gap: 40px;
     }
 
     &__list {
-      width: 200px;
+      &-items {
+        padding-top: 20px;
+        row-gap: 12px;
+      }
+
+      &-title {
+        &-hide {
+          display: block;
+        }
+      }
+
+      &-hide {
+        display: none;
+      }
+    }
+
+    &__info {
+      &-block {
+        &:nth-child(4) {
+          grid-column-start: 3;
+          grid-column-end: 4;
+        }
+
+        &:nth-child(5) {
+          grid-column-start: 4;
+          grid-column-end: 5;
+        }
+      }
     }
   }
 }
@@ -129,19 +184,62 @@
 @media screen and (max-width: $tablet) {
   .footer {
     &__top {
-      padding: 80px 0 47px;
+      padding: 80px 0 50px;
+      // display: flex;
+      // justify-content: flex-end;
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      column-gap: 40px;
     }
 
-    &__bottom {
-      padding-bottom: 8px;
+    &__logo {
+      width: 39px;
+      height: 64px;
+
+      &-column {
+        margin-right: auto;
+      }
+    }
+
+    &__center {
+      margin-top: 32px;
+      padding-bottom: 0;
+      border-bottom: 0;
     }
 
     &__info {
-      width: 494px;
-    }
+      width: fit-content;
 
-    &__info-block {
-      width: 237px;
+      &-block {
+        &:nth-child(1) {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+
+        &:nth-child(2) {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+
+        &:nth-child(3) {
+          grid-column-start: 2;
+          grid-column-end: 3;
+        }
+
+        &:nth-child(4) {
+          grid-column-start: 2;
+          grid-column-end: 3;
+        }
+
+        &:nth-child(5) {
+          grid-column-start: 2;
+          grid-column-end: 3;
+        }
+      }
     }
 
     &__list-title p,
@@ -150,13 +248,27 @@
     }
 
     &__lists {
+      grid-template-columns: repeat(1, 1fr);
       row-gap: 0;
+      margin-bottom: 32px;
     }
 
     &__list {
       padding: 20px 0;
       border-bottom: 1px solid #424242;
       width: 100%;
+
+      &-title {
+        display: flex;
+
+        &-hide {
+          display: none;
+        }
+      }
+
+      &-hide {
+        display: block;
+      }
 
       &:first-child {
         padding-top: 0;
@@ -188,16 +300,6 @@
       opacity: 0;
     }
 
-    &__logo {
-      width: 39px;
-    }
-
-    &__center {
-      margin-top: 30px;
-      padding-bottom: 0;
-      border-bottom: 0;
-    }
-
     &__list-title {
       transition: $transitionPadding;
 
@@ -211,17 +313,8 @@
 
 @media screen and (max-width: $mob) {
   .footer {
-    &__logo {
-      width: 39px;
-    }
-
     &__top {
-      padding: 60px 0 30px;
-    }
-
-    &__info,
-    &__info-block {
-      width: 203px;
+      padding: 60px 0 32px;
     }
 
     &__info {
@@ -247,14 +340,8 @@
       flex-direction: column;
     }
 
-    &__item,
-    &__bottom-txt {
-      line-height: normal;
-    }
-
     &__list-title p {
       font-size: 16px;
-      line-height: normal;
     }
 
     &__bottom {

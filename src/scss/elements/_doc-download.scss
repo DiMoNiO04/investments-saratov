@@ -46,11 +46,3 @@
     }
   }
 }
-
-@media screen and (max-width: $mob) {
-  .doc-download {
-    &__item {
-      align-items: flex-start;
-    }
-  }
-}

@@ -14,26 +14,61 @@
     row-gap: 20px;
   }
 
-  &__item {
-    border-radius: 4px;
-    background: $white;
-    padding: 20px;
-    @extend %flexCenterStart;
-    column-gap: 16px;
-    height: 82px;
-    flex-shrink: 0;
+  // &__item {
+  //   border-radius: 4px;
+  //   background-color: $white;
+  //   padding: 20px;
+  //   @extend %flexCenterStart;
+  //   column-gap: 16px;
+  //   cursor: pointer;
 
-    &-icon {
-      width: 40px;
-      height: 40px;
-      flex-shrink: 0;
-    }
+  //   &:hover {
+  //     background-color: $bluePrimary;
 
-    &-link {
-      color: $bluePrimary;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 130%;
+  //     .result-years__item-icon {
+  //       svg {
+  //         use {
+  //           stroke: $white;
+  //         }
+  //       }
+  //     }
+
+  //     .result-years__item-link {
+  //       color: $white;
+  //     }
+  //   }
+
+  //   &-icon {
+  //     width: 40px;
+  //     height: 40px;
+  //     flex-shrink: 0;
+
+  //     svg {
+  //       use {
+  //         stroke: $bluePrimary;
+  //       }
+  //     }
+  //   }
+
+  //   &-name {
+  //     color: $bluePrimary;
+  //     font-size: 16px;
+  //     font-weight: 500;
+  //     line-height: 130%;
+  //   }
+  // }
+}
+
+@media screen and (max-width: $laptop) {
+}
+
+@media screen and (max-width: $tablet) {
+  .result-years {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
+}
+
+@media screen and (max-width: $mob) {
 }

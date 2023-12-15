@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Инвестиционный комитет</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231215132502" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231215132502" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231215153838" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231215153838" />
 </head>
 
 
   <body>
-    <header class="header header--transparent">
+    <!-- <header class="header header--transparent"> -->
+<header class="header">
   <div class="header-top">
     <div class="container">
       <div class="header-top__container">
@@ -36,35 +37,21 @@
             <p>Горячая линия</p>
           </div>
           <div class="header-top__panel">
-            <div class="header-top__btns">
-              <button type="button" class="header-top__btns-search">
-                <svg>
-                  <use xlink:href="assets/img/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-              <div class="header-top__dropdown dropdown dropdown-sec js-dropdown">
-                <div class="dropdown__header js-dropdown-inner">
-                  <div class="dropdown__value js-dropdown-value">RU</div>
-                  <button type="button" class="dropdown__btn">
-                    <svg>
-                      <use xlink:href="assets/img/icons/icons.svg#arrow-caret-down"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="dropdown__content">
-                  <div class="dropdown__items">
-                    <div class="dropdown__item js-dropdown-item active">
-                      <input id="ru" type="radio" name="lang" value="lang-1" checked />
-                      <label for="ru">RU</label>
-                    </div>
-                    <div class="dropdown__item js-dropdown-item">
-                      <input id="lang-2" type="radio" name="lang" value="lang-2" />
-                      <label for="lang-2">EN</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!-- <div class="header-top__btns"> -->
+            <button type="button" class="header-top__btns-search">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#search"></use>
+              </svg>
+              <span>Поиск</span>
+            </button>
+
+            <!-- </div> -->
+            <a href="#" class="header-bottom__btn">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#map-pinned"></use>
+              </svg>
+              <p>Инвестиционная карта</p>
+            </a>
             <div class="header-top__socials">
               <a href="#" class="header-top__social">
                 <svg>
@@ -82,9 +69,31 @@
                 </svg>
               </a>
             </div>
-            <a href="#" class="header-top__btn btn btn-sec">
+            <div class="header-top__dropdown dropdown dropdown-sec js-dropdown">
+              <div class="dropdown__header js-dropdown-inner">
+                <div class="dropdown__value js-dropdown-value">RU</div>
+                <button type="button" class="dropdown__btn">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#arrow-caret-down"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__items">
+                  <div class="dropdown__item js-dropdown-item active">
+                    <input id="ru" type="radio" name="lang" value="lang-1" checked />
+                    <label for="ru">RU</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="lang-2" type="radio" name="lang" value="lang-2" />
+                    <label for="lang-2">EN</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <a href="#" class="header-top__btn btn btn-sec">
               <span>Линия прямых обращений</span>
-            </a>
+            </a> -->
           </div>
         </div>
         <button type="button" class="header-top__burger --mob">
@@ -116,19 +125,13 @@
                 <a href="#">Инвестору</a>
               </li>
               <li>
-                <a href="#">Поддержка</a>
-              </li>
-              <li>
                 <a href="#">Площадки</a>
               </li>
               <li>
-                <a href="#">ГЧП</a>
+                <a href="#">Поддержка</a>
               </li>
               <li>
-                <a href="#">Документы</a>
-              </li>
-              <li>
-                <a href="#">Медиа</a>
+                <a href="#">Линия прямых обращений</a>
               </li>
               <li>
                 <a href="#">Контакты</a>
@@ -137,12 +140,6 @@
           </nav>
         </div>
         <div class="header-bottom__btns">
-          <a href="#" class="header-bottom__btn">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#map-pinned"></use>
-            </svg>
-            <p>Инвестиционная карта</p>
-          </a>
           <a href="#" class="header-bottom__btn">
             <svg>
               <use xlink:href="assets/img/icons/icons.svg#entrance"></use>
@@ -154,8 +151,7 @@
     </div>
   </div>
 </header>
-
-    <main>
+ <main>
   <div class="breadcrumbs">
   <div class="container">
     <div class="breadcrumbs__container">
@@ -171,32 +167,30 @@
     </div>
   </div>
 </div>
-
-  <section class="section invest-committee">
+ <section class="section invest-committee">
   <div class="container">
     <div class="invest-committee__container">
       <div class="invest-committee__titles">
         <div class="invest-committee__title">Инвестиционный комитет</div>
         <div class="invest-committee__subtitle">
-          <p>Инвестиционный комитет – это площадка для разрешения разногласий между инвестором, органами власти субъекта РФ, органами местного самоуправления, уполномоченными организациями в досудебном порядке.</p>
+          <p>
+            Инвестиционный комитет – это площадка для разрешения разногласий между инвестором, органами власти субъекта
+            РФ, органами местного самоуправления, уполномоченными организациями в досудебном порядке.
+          </p>
         </div>
       </div>
       <div class="invest-committee__image">
-        <picture><source srcset="assets/img/backgr-image/1.webp" type="image/webp"><img src="assets/img/backgr-image/1.jpg" alt=""></picture>
+        <picture><source srcset="assets/img/backgr-image/1.webp" type="image/webp"><img src="assets/img/backgr-image/1.jpg" alt="" /></picture>
       </div>
     </div>
   </div>
 </section>
-  <section class="section regul-committee">
+ <section class="section regul-committee">
   <div class="container">
     <div class="regul-committee__container">
       <div class="regul-committee__head">
-        <div class="regul-committee__title">
-          Положение об инвестиционном комитете при Губернаторе области
-        </div>
-        <div class="regul-committee__descr">
-          Утверждено постановлением Губернатора области № 185 от 08.06.2022.
-        </div>
+        <div class="regul-committee__title">Положение об инвестиционном комитете при Губернаторе области</div>
+        <div class="regul-committee__descr">Утверждено постановлением Губернатора области № 185 от 08.06.2022.</div>
         <div class="regul-committee__doc">
           <div class="regul-committee__doc-icon">
             <svg width="40" height="40">
@@ -213,9 +207,11 @@
           <strong>В него входят:</strong>
           <ul>
             <li>Высшее должностное лицо субъекта</li>
-            <li>Представители органов исполнительной власти в сфере экономики, инвестиционной политики, промышленности и
+            <li>
+              Представители органов исполнительной власти в сфере экономики, инвестиционной политики, промышленности и
               энергетики, сельского хозяйства, ресурсоснабжающих организаций, деловых объединений, представители
-              инвесторов</li>
+              инвесторов
+            </li>
           </ul>
         </div>
         <div class="regul-committee__advan-column content">
@@ -224,8 +220,10 @@
             <li>Разрешение разногласий и споров инвесторов в досудебном порядке</li>
             <li>Защиту прав и законных интересов инвестора</li>
           </ul>
-          <p>Досудебное разрешение спорных вопросов – это основное отличие инвесткомитета от созданного ранее
-            инвестиционного совета.</p>
+          <p>
+            Досудебное разрешение спорных вопросов – это основное отличие инвесткомитета от созданного ранее
+            инвестиционного совета.
+          </p>
         </div>
       </div>
       <div class="regul-committee__order">
@@ -255,22 +253,16 @@
         </div>
       </div>
       <div class="regul-committee__ask">
-        <div class="regul-committee__ask-title">
-          Проблемные вопросы можно отправить:
-        </div>
+        <div class="regul-committee__ask-title">Проблемные вопросы можно отправить:</div>
         <div class="regul-committee__ask-items">
           <div class="regul-committee__ask-item">
-            <div class="regul-committee__ask-text">
-              Министерство инвестиционной политики Саратовской области
-            </div>
+            <div class="regul-committee__ask-text">Министерство инвестиционной политики Саратовской области</div>
             <div class="regul-committee__ask-soc">
               <a class="regul-committee__ask-mail" href="mailto:mininvest@saratov.gov.ru">mininvest@saratov.gov.ru</a>
             </div>
           </div>
           <div class="regul-committee__ask-item">
-            <div class="regul-committee__ask-text">
-              Корпорация развития Саратовской области
-            </div>
+            <div class="regul-committee__ask-text">Корпорация развития Саратовской области</div>
 
             <div class="regul-committee__ask-soc">
               <a class="regul-committee__ask-mail" href="mailto:aokrso@mail.ru">aokrso@mail.ru</a>
@@ -298,6 +290,7 @@
     </div>
   </div>
 </section>
+
   <section class="ask-question">
   <div class="ask-question__container">
     <div class="ask-question__left">
@@ -352,51 +345,57 @@
 </section>
 
 </main>
+
     <footer class="footer">
   <div class="container">
     <div class="footer__container">
       <div class="footer__top">
-        <a href="./main.html" class="footer__logo logo">
-          <picture>
-            <source media="(min-width: 1365px)" srcset="assets/img/icons/logo.svg" />
-            <source media="(max-width: 1366px)" srcset="assets/img/icons/logo-sm.svg" />
-            <img src="assets/img/icons/logo.svg" alt="logo" />
-          </picture>
-        </a>
-        <div class="footer__info">
-          <div class="footer__info-block">
-            <p class="footer__info-title">Email</p>
-            <a href="mailto:investsaratov@mai.ru" class="footer__info-link">investsaratov@mai.ru</a>
-          </div>
-          <div class="footer__info-block">
-            <p class="footer__info-title">Телефон</p>
-            <a href="tel:+78452695262" class="footer__info-link">+7 (8452) 69-52-62</a>
-          </div>
-          <div class="footer__info-block">
-            <p class="footer__info-title">Социальные сети</p>
-            <div class="footer__info-socials">
-              <a href="#">
-                <svg width="20" height="20">
-                  <use xlink:href="assets/img/icons/icons.svg#tg"></use>
-                </svg>
-              </a>
-              <a href="#">
-                <svg width="20" height="20">
-                  <use xlink:href="assets/img/icons/icons.svg#odnok"></use>
-                </svg>
-              </a>
-              <a href="#">
-                <svg width="20" height="20">
-                  <use xlink:href="assets/img/icons/icons.svg#vk"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="footer__info-block">
-            <p class="footer__info-title">Режим работы</p>
-            <p class="footer__info-link">с 9:00 до 18:00 пн-пт</p>
+        <div class="footer__logo-column">
+          <a href="./main.html" class="footer__logo logo">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="assets/img/icons/logo.svg" />
+              <img src="assets/img/icons/logo-sm.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+
+        <!-- <div class="footer__info"> -->
+        <div class="footer__info-block">
+          <p class="footer__info-title">Email</p>
+          <a href="mailto:investsaratov@mai.ru" class="footer__info-link">investsaratov@mai.ru</a>
+        </div>
+        <div class="footer__info-block">
+          <p class="footer__info-title">Телефон</p>
+          <a href="tel:+78452695262" class="footer__info-link">+7 (8452) 69-52-62</a>
+        </div>
+        <div class="footer__info-block">
+          <p class="footer__info-title">Социальные сети</p>
+          <div class="footer__info-socials">
+            <a href="#">
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#tg"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#odnok"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#vk"></use>
+              </svg>
+            </a>
           </div>
         </div>
+        <div class="footer__info-block">
+          <p class="footer__info-title">Режим работы</p>
+          <p class="footer__info-link">с 9:00 до 18:00 пн-пт</p>
+        </div>
+        <!-- </div>
+        <div class="footer__info"> -->
+
+        <!-- </div> -->
       </div>
       <div class="footer__center">
         <div class="footer__lists">
@@ -529,8 +528,20 @@
                 <a href="#">Площадки с объектами капитального строительства</a>
               </li>
             </ul>
+            <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+              <p>Инвестстандарт</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+              <p>Контакты</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
           </div>
-          <div class="footer__list js-dropdown-list">
+          <div class="footer__list footer__list-hide js-dropdown-list">
             <div class="footer__list-title js-dropdown-title">
               <a href="#">Инвестстандарт</a>
             </div>
@@ -620,7 +631,7 @@
               </li>
             </div>
           </div>
-          <div class="footer__list js-dropdown-list">
+          <div class="footer__list footer__list-hide js-dropdown-list">
             <div class="footer__list-title js-dropdown-title">
               <a href="#">Контакты</a>
             </div>
@@ -634,8 +645,7 @@
     </div>
   </div>
 </footer>
-
-    <!--Модалка Написать обращение-->
+ <!--Модалка Написать обращение-->
 <div class="modal close-x" data-modal="write-request">
   <div class="modal__inner">
     <div class="modal__content modal-write --main">
@@ -919,11 +929,11 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231215132502"></script>
-<script src="//code.jquery.com/jquery-1.10.2.js?_v=20231215132502"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20231215132502"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231215153838"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js?_v=20231215153838"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20231215153838"></script>
 
-<script src="js/main.js?_v=20231215132502"></script>
+<script src="js/main.js?_v=20231215153838"></script>
 
   </body>
 </html>

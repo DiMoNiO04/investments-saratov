@@ -42,7 +42,7 @@
 
   &__advan {
     @extend %gridColumnTwo;
-    column-gap: 20px; 
+    column-gap: 20px;
   }
 
   &__order {
@@ -99,7 +99,7 @@
       @extend %flexStartBetween;
 
       &:last-child {
-        background: var(--blue-gradient, linear-gradient(94deg, #144286 0%, #2D6FD0 100%));
+        background: var(--blue-gradient, linear-gradient(94deg, #144286 0%, #2d6fd0 100%));
         @extend %flexStart;
         row-gap: 32px;
 
@@ -154,15 +154,15 @@
       color: $white;
     }
   }
-
 }
 
 @media screen and (max-width: $laptop) {
   .regul-committee {
-    
   }
 }
 
-@media screen and (max-width: $tablet) {}
+@media screen and (max-width: $tablet) {
+}
 
-@media screen and (max-width: $mob) {}
+@media screen and (max-width: $mob) {
+}
