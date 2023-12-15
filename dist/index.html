@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Инвестиционный портал Саратовской области</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231215132502" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231215132502" />
+</head>
+
+
+  <body class="index">
+    <div class="base">
+      <h1>Инвестиционный портал Саратовской области</h1>
+      <h2>Cтраницы:</h2>
+      <ol>
+        <li>
+          <a target="_blank" href="./main.html">Главная</a>
+        </li>
+        <li>
+          <a target="_blank" href="./auth-reg.html">Вход-Регистрация</a>
+        </li>
+        <li>
+          <a target="_blank" href="./personal-cab.html">Персональные данные</a>
+        </li>
+        <li>
+          <a target="_blank" href="./organization.html">Мои организации</a>
+        </li>
+        <li>
+          <a target="_blank" href="./appeals.html">Мои обращения</a>
+        </li>
+        <li>
+          <a target="_blank" href="./settings.html">Настройки</a>
+        </li>
+        <li>
+          <a target="_blank" href="./legislation.html">Законодательство</a>
+        </li>
+        <li>
+          <a target="_blank" href="./stories.html">Истории успеха</a>
+        </li>
+        <li>
+          <a target="_blank" href="./story.html">История успеха</a>
+        </li>
+        <li>
+          <a target="_blank" href="./investor-required.html">Требуется инвестор</a>
+        </li>
+        <li>
+          <a target="_blank" href="./investor-required-card.html">Требуется инвестор (персональная)</a>
+        </li>
+        <li>
+          <a target="_blank" href="./infrastructure-projects.html">Инфрастуктурные проекты</a>
+        </li>
+        <li>
+          <a target="_blank" href="./regional-investment-project.html">Региональный инвестиционный проект</a>
+        </li>
+        <li>
+          <a target="_blank" href="./location.html">Расположение</a>
+        </li>
+        <li>
+          <a target="_blank" href="./socio-economic-development.html">Социально-экономическое развитие</a>
+        </li>
+        <li>
+          <a target="_blank" href="./investment-committee.html">Инвестиционный комитет</a>
+        </li>
+      </ol>
+      <h2>Модальные окна:</h2>
+      <ol>
+        <li>
+          <button type="button" data-modal-el="write-request">Написать обращение</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="account-create-success">Учетная запись создана успешна</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="email-confirmed">Ваш email подтвержден</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="request-sent">Ваше обращение отправлено</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="exit-confirmation">Подтверждение выхода</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="desc-infracture-project">Инфрастуктурный проект</button>
+        </li>
+      </ol>
+    </div>
+  </body>
+
+  <style>
+    @charset "UTF-8";
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    .index body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      min-width: 40rem;
+      background: #f5f6f6;
+      color: #212121;
+    }
+
+    .index body {
+      padding: 3rem 0;
+      font-family: 'Raleway';
+      font-size: 100%;
+      line-height: 1;
+      font-size: 5rem;
+      letter-spacing: 0.3rem;
+      user-select: none;
+    }
+
+    .base ul,
+    .base ol {
+      margin-bottom: 12rem;
+    }
+
+    .base ul li,
+    .base ol li {
+      font-size: 2.4rem;
+      list-style: none;
+    }
+
+    .base ol {
+      counter-reset: list;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .base ol > li:before {
+      content: '(' counter(list) ') ';
+      counter-increment: list;
+    }
+
+    .base li {
+      margin-bottom: 2rem;
+      font-size: 2.4rem;
+    }
+
+    .base a,
+    .base button {
+      text-decoration: none;
+    }
+
+    .base a,
+    .base button {
+      color: #212121;
+      transition: color 0.5s ease;
+    }
+
+    .base a:hover,
+    .base button:hover {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .base a:hover::before,
+    .base button:hover::before {
+      color: #000;
+    }
+
+    .base h1 {
+      margin-bottom: 7rem;
+      font-size: 7rem;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .base h2 {
+      margin-bottom: 2.5rem;
+      font-size: 3.6rem;
+      font-weight: 300;
+    }
+
+    .base {
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 48em) {
+      html {
+        font-size: 1.5625vw;
+      }
+    }
+  </style>
+
+  <!--Модалка Написать обращение-->
+<div class="modal close-x" data-modal="write-request">
+  <div class="modal__inner">
+    <div class="modal__content modal-write --main">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-write__titles">
+        <div class="modal-write__title">Оставьте ваше обращение</div>
+        <div class="modal-write__subtitle">Заполните форму, и мы свяжемся с вами в ближайшее время</div>
+      </div>
+      <div class="modal-write__content">
+        <form id="modal-write-form" class="modal-write__form">
+          <fieldset class="modal-write__block">
+            <div class="modal-write__block-input input">
+              <div class="input__head">Наименование компании или ИП</div>
+              <div class="input__input">
+                <input autocomplete="off" type="text" placeholder="Введите наименование компании (ИП)" />
+              </div>
+              <div class="input__hint">Error</div>
+            </div>
+            <div class="modal-write__block-input input">
+              <div class="input__head">ФИО</div>
+              <div class="input__input">
+                <input autocomplete="off" type="text" placeholder="Введите ваше ФИО" />
+              </div>
+              <div class="input__hint">Error</div>
+            </div>
+          </fieldset>
+          <fieldset class="modal-write__block">
+            <div class="modal-write__block-input input">
+              <div class="input__head">Телефон</div>
+              <div class="input__input">
+                <input autocomplete="off" type="tel" placeholder="Введите ваш телефон" />
+              </div>
+              <div class="input__hint">Error</div>
+            </div>
+            <div class="modal-write__block-input input">
+              <div class="input__head">Электронная почта</div>
+              <div class="input__input">
+                <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+              </div>
+              <div class="input__hint">Error</div>
+            </div>
+          </fieldset>
+          <fieldset class="modal-write__block">
+            <div class="modal-write__block-dropdown dropdown dropdown-def js-dropdown">
+              <div class="dropdown__headline">Headline</div>
+              <div class="dropdown__header js-dropdown-inner">
+                <div class="dropdown__value js-dropdown-value">Dropdown</div>
+                <button type="button" class="dropdown__btn">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#arrow-black-down"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__items" data-simplebar>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-1" type="radio" name="item" value="item-1" />
+                    <label for="item-1">Item-1</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-2" type="radio" name="item" value="item-2" />
+                    <label for="item-2">Item-2</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-3" type="radio" name="item" value="item-3" />
+                    <label for="item-3">Item-3</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-4" type="radio" name="item" value="item-4" />
+                    <label for="item-4">Item-4</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-5" type="radio" name="item" value="item-5" />
+                    <label for="item-5">Item-5</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-6" type="radio" name="item" value="item-6" />
+                    <label for="item-6">Item-6</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="modal-write__block">
+            <div class="textarea">
+              <div class="textarea__head">Текст обращения</div>
+              <div class="textarea__textarea">
+                <textarea name="#" placeholder="Опишите суть вопроса или предложения"></textarea>
+              </div>
+              <div class="textarea__hint">Error</div>
+            </div>
+          </fieldset>
+          <fieldset class="modal-write__block">
+            <div class="input input-file">
+              <label for="file-add" class="">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#file-icon"></use>
+                </svg>
+                <span>Прикрепить файл</span>
+              </label>
+              <input id="file-add" type="file" />
+            </div>
+          </fieldset>
+        </form>
+        <div class="modal-write__btns">
+          <button type="button" class="btn btn-def">
+            <span>Задать вопрос</span>
+          </button>
+          <div class="modal-write__btns-desc">
+            Заполняя форму обратной связи, вы соглашаетесь с <a href="#">политикой конфиденциальности.</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__content modal-write --success" style="display: none">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-write__title">Ваше обращение отправлено</div>
+      <button type="button" class="modal-write__btn btn btn-def close-x">
+        <span class="close-x">Хорошо</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Учетная запись создана успешна"-->
+<div class="modal close-x" data-modal="account-create-success">
+  <div class="modal__inner">
+    <div class="modal__content modal-pers-cab modal-pers-cab--success">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-pers-cab__content">
+        <div class="modal-pers-cab__title">
+          <svg>
+            <use class="close-x" xlink:href="assets/img/icons/icons.svg#icon-succes"></use>
+          </svg>
+          <p>Учетная запись создана успешно</p>
+        </div>
+        <p class="modal-pers-cab__txt">
+          Для завершения процедуры регистрации в личном кабинете необходимо активировать учетную запись и подтвердить
+          E-mail. Письмо со ссылкой для подтверждения отправлено на
+          <a href="mailto:ivanivanov@mail.ru">ivanivanov@mail.ru.</a>
+        </p>
+      </div>
+      <button type="button" class="modal-pers-cab__btn btn btn-def close-x">
+        <span class="close-x">Хорошо</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Ваш email подтвержден"-->
+<div class="modal close-x" data-modal="email-confirmed">
+  <div class="modal__inner">
+    <div class="modal__content modal-pers-cab modal-pers-cab--email">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-pres-cab__content">
+        <div class="modal-pers-cab__title">
+          <svg>
+            <use xlink:href="assets/img/icons/icons.svg#icon-succes"></use>
+          </svg>
+          <p>Ваш E-mail подтвержден!</p>
+        </div>
+      </div>
+      <button type="button" class="modal-pers-cab__btn btn btn-def close-x">
+        <span class="close-x">Войти в кабинет</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Ваше обращение отправлено"-->
+<div class="modal close-x" data-modal="request-sent">
+  <div class="modal__inner">
+    <div class="modal__content modal-pers-cab modal-pers-cab--sent">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-pres-cab__content">
+        <div class="modal-pers-cab__title">
+          <svg>
+            <use xlink:href="assets/img/icons/icons.svg#icon-succes"></use>
+          </svg>
+          <p>Ваше обращение отправлено</p>
+        </div>
+      </div>
+      <button type="button" class="modal-pers-cab__btn btn btn-def close-x">
+        <span class="close-x">Хорошо</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Подтверждение выхода из аккаунта"-->
+<div class="modal close-x" data-modal="exit-confirmation">
+  <div class="modal__inner">
+    <div class="modal__content modal-pers-cab modal-pers-cab--exit">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-pres-cab__content">
+        <div class="modal-pers-cab__title">
+          <p>Вы действительно хотите выйти из личного кабинета?</p>
+        </div>
+      </div>
+      <div class="modal-pers-cab__btns">
+        <button type="button" class="modal-pers-cab__btn btn btn-sec close-x">
+          <span class="close-x">Отмена</span>
+        </button>
+        <button type="button" class="modal-pers-cab__btn btn btn-def close-x">
+          <span class="close-x">Выйти</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка "Инфракстуктурные проекты" -->
+<div class="modal modal-infrastructure close-x" data-modal="desc-infracture-project">
+  <div class="modal__inner modal-infrastructure__inner">
+    <div class="modal__content modal-infrastructure__content">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal-2"></use>
+        </svg>
+      </button>
+      <div class="modal-infrastructure__blocks">
+        <div class="modal-infrastructure__title">Модернизация гидротурбин ступени №1-21,24</div>
+        <ul class="modal-infrastructure__items">
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Типы работ</p>
+            <p class="modal-infrastructure__item-txt">Модернизация</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Заказчик:</p>
+            <p class="modal-infrastructure__item-txt">ПАО «РусГидро» Филиал «Саратовская ГЭС»</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Суммарный объем инвестиций:</p>
+            <p class="modal-infrastructure__item-txt">63 400 000,00 тыс. ₽</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">В т.ч. внебюджетные:</p>
+            <p class="modal-infrastructure__item-txt">63 400 000,00 тыс. ₽</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Местоположение объекта:</p>
+            <p class="modal-infrastructure__item-txt">Балаковский муниципальный район области</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Сроки:</p>
+            <p class="modal-infrastructure__item-txt">2011-2028</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Степень готовности:</p>
+            <p class="modal-infrastructure__item-txt">
+              Проводятся строительно-монтажные работы на газотурбинах: ст.№ 1, ст.№5, ст.№9
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="./js/main.js?_v=20231215132502"></script>
+</html>
