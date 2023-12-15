@@ -21,3 +21,62 @@
     padding: 8px 12px;
   }
 }
+
+.tooltip--map {
+  @include sizes(243px, 68px);
+  position: fixed;
+  padding: 8px 12px 12px 12px;
+  border-radius: 4px;
+  text-align: center;
+  background-image: url('../assets/img/icons/tooltip.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 130%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255);
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #dee2e7;
+  }
+}
+
+.ui-widget.ui-widget-content {
+  border: 1px solid #c5c5c5;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.ui-tooltip {
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 4;
+  max-width: 200px;
+  color: $black;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+@media screen and (max-width: $tablet) {
+  .tooltip {
+    @include sizes(170px, 36px);
+    background-image: url('../assets/img/icons/tooltip-mob.svg');
+    padding: 8px 12px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ui-tooltip {
+    padding: 8px 12px;
+    max-width: 140px;
+    font-size: 10px;
+  }
+}

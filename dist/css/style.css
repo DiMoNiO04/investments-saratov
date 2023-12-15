@@ -1387,7 +1387,7 @@ svg {
 .modal-pers-cab__title,
 .modal-write__btns,
 .footer__info-socials,
-.link-file,
+.doc-download__item,
 .textarea__textarea,
 .input-labels .input__items {
   display: flex;
@@ -2715,6 +2715,50 @@ fieldset {
   line-height: 130%;
 }
 
+.tooltip--map {
+  width: 243px;
+  height: 68px;
+  position: fixed;
+  padding: 8px 12px 12px 12px;
+  border-radius: 4px;
+  text-align: center;
+  background-image: url("../assets/img/icons/tooltip.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.tooltip--map span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 130%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #dee2e7;
+}
+
+.ui-widget.ui-widget-content {
+  border: 1px solid #c5c5c5;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.ui-tooltip {
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 4;
+  max-width: 200px;
+  color: #2f2f2f;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
 .breadcrumbs {
   margin: 62px 0;
 }
@@ -2932,31 +2976,16 @@ fieldset {
   color: #2d6fd0;
   text-align: center;
   height: 90px;
+  transition: color 0.4s ease, background-color 0.4s ease;
 }
 
-.link-file {
-  -moz-column-gap: 16px;
-       column-gap: 16px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  padding: 20px;
+.list-per__item:hover {
+  color: #ffffff;
+  background-color: #2d6fd0;
 }
 
-.link-file svg {
-  width: 40px;
-  height: 40px;
-}
-
-.link-file a {
-  color: #2d6fd0;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 130%;
-  transition: color 0.4s ease;
-}
-
-.link-file a:hover {
-  color: #2f2f2f;
+.list-per--districs .list-per__item {
+  height: 98px;
 }
 
 .content strong {
@@ -2993,6 +3022,47 @@ fieldset {
 
 .content ul:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.doc-download__item {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 20px;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.doc-download__item:hover {
+  background-color: #2d6fd0;
+}
+
+.doc-download__item:hover .doc-download__item-icon svg use {
+  stroke: #ffffff;
+}
+
+.doc-download__item:hover .doc-download__item-name {
+  color: #ffffff;
+}
+
+.doc-download__item-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.doc-download__item-icon svg use {
+  stroke: #2d6fd0;
+  transition: stroke 0.4s ease;
+}
+
+.doc-download__item-name {
+  color: #2d6fd0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  transition: color 0.4s ease;
 }
 
 .footer {
@@ -3803,7 +3873,7 @@ fieldset {
 .ask-question__left {
   background-color: #2d6fd0;
   padding: 120px 0 0 190px;
-  width: 51.5%;
+  width: 50%;
   position: relative;
   overflow: hidden;
 }
@@ -3839,7 +3909,7 @@ fieldset {
 .ask-question__right {
   background-color: #ffffff;
   padding: 120px 110px;
-  width: 48.5%;
+  width: 50%;
 }
 
 .ask-question__right .ask-question__titles {
@@ -6049,6 +6119,25 @@ fieldset {
   padding-right: 20px;
 }
 
+.municipality__map {
+  max-width: 1375px;
+  max-height: 751px;
+  display: block;
+  margin: 0 auto;
+}
+
+.municipality__map-item {
+  transition: fill 0.4s ease-in-out;
+}
+
+.municipality__map-item:hover {
+  fill: #2d6fd0;
+}
+
+.municipality__descs {
+  margin-top: 40px;
+}
+
 .municipality__desc {
   padding-right: 20px;
 }
@@ -6068,7 +6157,7 @@ fieldset {
   border-radius: 4px;
   background: #ffffff;
   padding: 32px;
-  flex: 0 0 calc(20% - 4px);
+  flex: 0 0 calc(20% - 16px);
 }
 
 .municipality__descs-item span:first-child {
@@ -6107,6 +6196,11 @@ fieldset {
   text-transform: uppercase;
 }
 
+.big-town__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .big-town__desc {
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
@@ -6125,7 +6219,7 @@ fieldset {
   margin-bottom: 40px;
 }
 
-.invest-authorize .link-file {
+.invest-authorize__link {
   max-width: 760px;
 }
 
@@ -7021,15 +7115,8 @@ fieldset {
     flex-wrap: wrap;
   }
 
-  .municipality__title,
-  .municipality__desc {
-    padding: 0;
-  }
-
   .municipality__titles {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 32px;
-    margin-bottom: 32px;
+    margin-bottom: 26px;
   }
 
   .municipality__descs-item span:first-child {
@@ -7049,6 +7136,14 @@ fieldset {
 
   .big-town__title {
     font-size: 40px;
+  }
+
+  .big-town__img {
+    height: 340px;
+  }
+
+  .big-town__title-container {
+    margin-bottom: 30px;
   }
 
   .big-town__desc {
@@ -7118,6 +7213,13 @@ fieldset {
     padding: 8px 12px;
   }
 
+  .tooltip {
+    width: 170px;
+    height: 36px;
+    background-image: url("../assets/img/icons/tooltip-mob.svg");
+    padding: 8px 12px;
+  }
+
   .breadcrumbs {
     margin: 50px 0;
   }
@@ -7133,6 +7235,10 @@ fieldset {
 
   .card__content-title {
     margin-bottom: 16px;
+  }
+
+  .list-per__title {
+    margin-bottom: 32px;
   }
 
   .list-per--municipal .list-per__items {
@@ -8297,6 +8403,34 @@ fieldset {
     right: 5%;
   }
 
+  .municipality__titles {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+    margin-bottom: 20px;
+  }
+
+  .municipality__title,
+  .municipality__desc {
+    padding: 0;
+  }
+
+  .municipality__title {
+    font-size: 48px;
+  }
+
+  .municipality__descs {
+    margin-top: 32px;
+  }
+
+  .municipality__descs-title {
+    margin-bottom: 24px;
+  }
+
+  .municipality__map {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
   .big-town__title {
     font-size: 40px;
   }
@@ -8307,6 +8441,7 @@ fieldset {
 
   .invest-authorize__title {
     margin-bottom: 32px;
+    font-size: 36px;
   }
 }
 
@@ -8439,6 +8574,12 @@ fieldset {
     margin-right: -10px;
   }
 
+  .ui-tooltip {
+    padding: 8px 12px;
+    max-width: 140px;
+    font-size: 10px;
+  }
+
   .breadcrumbs {
     margin: 40px 0;
   }
@@ -8513,7 +8654,14 @@ fieldset {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .link-file {
+  .list-per--districs .list-per__item {
+    padding: 20px;
+    font-size: 18px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .doc-download__item {
     align-items: flex-start;
   }
 
@@ -9610,6 +9758,26 @@ fieldset {
     margin-bottom: 24px;
   }
 
+  .municipality__titles {
+    margin-bottom: 26px;
+  }
+
+  .municipality__title {
+    font-size: 32px;
+  }
+
+  .municipality__descs {
+    margin-top: 26px;
+  }
+
+  .municipality__descs-item span:last-child {
+    font-size: 18px;
+  }
+
+  .municipality__descs-item:last-child {
+    min-height: 145px;
+  }
+
   .municipality__desc p {
     line-height: 130%;
   }
@@ -9636,6 +9804,10 @@ fieldset {
   }
 
   .big-town__title {
+    font-size: 24px;
+  }
+
+  .big-town__city {
     font-size: 24px;
   }
 

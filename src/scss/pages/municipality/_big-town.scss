@@ -12,6 +12,12 @@
     text-transform: uppercase;
   }
 
+  &__img {
+    img {
+      object-fit: cover;
+    }
+  }
+
   &__desc {
     @extend %flexCenterBetween;
     background-color: $white;
@@ -33,6 +39,14 @@
   .big-town {
     &__title {
       font-size: 40px;
+    }
+
+    &__img {
+      height: 340px;
+    }
+
+    &__title-container {
+      margin-bottom: 30px;
     }
 
     &__desc {
@@ -77,6 +91,10 @@
     }
 
     &__title {
+      font-size: 24px;
+    }
+
+    &__city {
       font-size: 24px;
     }
 

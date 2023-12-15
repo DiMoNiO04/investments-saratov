@@ -9,6 +9,24 @@
     padding-right: 20px;
   }
 
+  &__map {
+    max-width: 1375px;
+    max-height: 751px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__map-item {
+    transition: fill 0.4s ease-in-out;
+    &:hover {
+      fill: $bluePrimary;
+    }
+  }
+
+  &__descs {
+    margin-top: 40px;
+  }
+
   &__desc {
     padding-right: 20px;
     p {
@@ -33,7 +51,7 @@
     border-radius: 4px;
     background: $white;
     padding: 32px;
-    flex: 0 0 calc(100% / 5 - 20px / 5);
+    flex: 0 0 calc(100% / 5 - 80px / 5);
 
     span {
       &:first-child {
@@ -74,15 +92,13 @@
       flex-wrap: wrap;
     }
 
-    &__title,
-    &__desc {
-      padding: 0;
+    &__titles {
+      margin-bottom: 26px;
     }
 
-    &__titles {
-      grid-template-columns: repeat(1, 1fr);
-      row-gap: 32px;
-      margin-bottom: 32px;
+    &__map {
+      // max-width: 955px;
+      // max-height: 528px;
     }
 
     &__descs-item {
@@ -108,11 +124,65 @@
   }
 }
 
+@media screen and (max-width: $tablet) {
+  .municipality {
+    &__titles {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+      margin-bottom: 20px;
+    }
+
+    &__title,
+    &__desc {
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 48px;
+    }
+
+    &__descs {
+      margin-top: 32px;
+    }
+
+    &__descs-title {
+      margin-bottom: 24px;
+    }
+
+    &__map {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: $mob) {
   .municipality {
     &__descs-title {
       font-size: 26px;
       margin-bottom: 24px;
+    }
+
+    &__titles {
+      margin-bottom: 26px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__descs {
+      margin-top: 26px;
+    }
+
+    &__descs-item {
+      span:last-child {
+        font-size: 18px;
+      }
+
+      &:last-child {
+        min-height: 145px;
+      }
     }
 
     &__desc {
