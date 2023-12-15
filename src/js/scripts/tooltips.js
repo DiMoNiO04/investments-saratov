@@ -53,8 +53,24 @@ function tooltip() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', tooltip);
+function removeHelperTooltips() {
+  const items = document.querySelectorAll('.municipality__map-item');
+
+  if (items) {
+    items.forEach((item) => {
+      item.addEventListener('mouseleave', () => {
+        const helps = document.querySelectorAll('.ui-helper-hidden-accessible');
+        helps.forEach((help) => help.remove());
+      });
+    });
+  }
+}
 
 $('.municipality__map-item').tooltip({
   track: true,
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  removeHelperTooltips();
+  tooltip();
 });

@@ -1407,7 +1407,8 @@ svg {
 .municipality__titles,
 .regul-committee__advan,
 .result-years__items,
-.soceconomic-develop__titles {
+.soceconomic-develop__titles,
+.footer__right {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -3091,7 +3092,6 @@ fieldset {
   border-bottom: 1px solid #525252;
   -moz-column-gap: 80px;
        column-gap: 80px;
-  row-gap: 32px;
 }
 
 .footer__logo {
@@ -3104,6 +3104,14 @@ fieldset {
 .footer__logo-column {
   grid-column-start: 1;
   grid-column-end: 4;
+}
+
+.footer__right {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  row-gap: 32px;
 }
 
 .footer__info-title {
@@ -3123,16 +3131,6 @@ fieldset {
 .footer__info-socials a {
   width: 32px;
   height: 32px;
-}
-
-.footer__info-block:nth-child(4) {
-  grid-column-start: 4;
-  grid-column-end: 5;
-}
-
-.footer__info-block:nth-child(5) {
-  grid-column-start: 5;
-  grid-column-end: 6;
 }
 
 .footer__center {
@@ -3903,7 +3901,7 @@ fieldset {
 .ask-question__left {
   background-color: #2d6fd0;
   padding: 120px 0 0 190px;
-  width: 51.5%;
+  width: 50%;
   position: relative;
   overflow: hidden;
 }
@@ -3939,7 +3937,7 @@ fieldset {
 .ask-question__right {
   background-color: #ffffff;
   padding: 120px 110px;
-  width: 48.5%;
+  width: 50%;
 }
 
 .ask-question__right .ask-question__titles {
@@ -6696,6 +6694,13 @@ fieldset {
          column-gap: 40px;
   }
 
+  .footer__right {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+
   .footer__center {
     padding-bottom: 40px;
   }
@@ -6718,16 +6723,6 @@ fieldset {
 
   .footer__list-hide {
     display: none;
-  }
-
-  .footer__info-block:nth-child(4) {
-    grid-column-start: 3;
-    grid-column-end: 4;
-  }
-
-  .footer__info-block:nth-child(5) {
-    grid-column-start: 4;
-    grid-column-end: 5;
   }
 
   .modal-pers-cab--succes__btn {
@@ -7321,8 +7316,8 @@ fieldset {
 
   .footer__top {
     padding: 80px 0 50px;
-    display: grid;
-    grid-template-columns: 40px 1fr;
+    display: flex;
+    justify-content: flex-end;
     -moz-column-gap: 40px;
          column-gap: 40px;
   }
@@ -7345,35 +7340,6 @@ fieldset {
   .footer__info {
     width: -moz-fit-content;
     width: fit-content;
-  }
-
-  .footer__info-block:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  .footer__info-block:nth-child(2) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  .footer__info-block:nth-child(3) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  .footer__info-block:nth-child(4) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  .footer__info-block:nth-child(5) {
-    grid-column-start: 2;
-    grid-column-end: 3;
   }
 
   .footer__list-title p,
@@ -7419,7 +7385,6 @@ fieldset {
 
   .footer__list.active .footer__list-items {
     overflow: visible;
-    padding-top: 12px;
     opacity: 1;
   }
 
@@ -8829,21 +8794,26 @@ fieldset {
     padding: 60px 0 32px;
   }
 
+  .footer__right {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+
   .footer__info {
     row-gap: 20px;
   }
 
-  .footer__info-block:last-child {
-    margin-top: 0;
-  }
-
   .footer__info-title {
-    margin-bottom: 11px;
+    margin-bottom: 8px;
     font-size: 14px;
   }
 
   .footer__info-link {
     font-size: 16px;
+  }
+
+  .footer__info-block:last-child {
+    margin-top: 0;
   }
 
   .footer__lists {

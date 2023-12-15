@@ -1,4 +1,5 @@
 import { fadeIn } from '../modules/animation.js';
+import { TABLET } from '../modules/consts.js';
 
 function clickFullText() {
   if (document.querySelector('.js-dropdown-list')) {
@@ -9,7 +10,7 @@ function clickFullText() {
       const dropdownContent = dropdownList.querySelector('.js-dropdown-content');
 
       if (
-        (dropdownList.classList.contains('footer__list') && window.innerWidth < 768) ||
+        (dropdownList.classList.contains('footer__list') && window.innerWidth < TABLET) ||
         !dropdownList.classList.contains('footer__list')
       ) {
         dropdownTitle.addEventListener('click', () => {
@@ -112,4 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
   openAsideMenuProfile();
   toggleAddOrganization();
   toggleActive();
+});
+
+window.addEventListener('resize', () => {
+  clickFullText();
 });
