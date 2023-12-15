@@ -185,36 +185,6 @@ function initStorySlider() {
   }
 }
 
-function initBigTownSlider() {
-  if (document.querySelector('.big-town__swiper')) {
-    const slider = document.querySelector('.big-town__swiper');
-    const btnPrev = slider.parentElement.querySelector('.slider-navigation__btns-prev');
-    const btnNext = slider.parentElement.querySelector('.slider-navigation__btns-next');
-
-    new Swiper(slider, {
-      modules: [Navigation],
-      spaceBetween: 20,
-      speed: 1000,
-      loop: true,
-      navigation: {
-        nextEl: btnNext,
-        prevEl: btnPrev,
-      },
-      breakpoints: {
-        300: {
-          slidesPerView: 1.06,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1366: {
-          slidesPerView: 3,
-        },
-      },
-    });
-  }
-}
-
 function initSliders() {
   initBenefitsSlider();
   initSuccessHistSlider();
@@ -224,7 +194,6 @@ function initSliders() {
   initNewsSlider();
 
   initStorySlider();
-  initBigTownSlider();
 }
 // ----------------------------------------------------------------- //
 

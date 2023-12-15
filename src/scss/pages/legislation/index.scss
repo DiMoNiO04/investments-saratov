@@ -33,9 +33,7 @@
 
       span {
         color: $greyTxt;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 140%;
+        @extend %regular16;
 
         &:first-child {
           display: block;
