@@ -1,11 +1,8 @@
 .header {
   @extend %flexColumn;
   background-color: $white;
-  // position: fixed;
   z-index: 10;
-
   transition: background 0.5s ease-in;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -15,6 +12,8 @@
   height: 160px;
 
   &.test {
+    height: auto;
+
     .header-top {
       display: none;
     }
@@ -85,12 +84,12 @@
       border-left: 1px solid $inputGreyStroke;
       padding-top: 32px;
       padding-bottom: 25px;
+      padding-left: 24px;
       width: 100%;
     }
 
     &__phone {
       @extend %flexColumn;
-      margin-left: 24px;
 
       p {
         font-size: 14px;
@@ -98,7 +97,8 @@
     }
 
     &__panel {
-      @extend %flexCenterBetween;
+      @extend %flexCenterEnd;
+      width: 100%;
       column-gap: 32px;
     }
 
@@ -138,6 +138,7 @@
     }
 
     &__dropdown {
+      width: fit-content;
       .dropdown {
         &__content {
           @include sizes(auto, auto);
@@ -156,6 +157,15 @@
         &__btn {
           @include sizes(12px, 12px);
         }
+      }
+    }
+
+    &__search {
+      &-wr {
+        margin-right: auto;
+        @extend %flexCenterBetween;
+        width: 100%;
+        position: relative;
       }
     }
   }
@@ -246,14 +256,6 @@
     &-bottom__list {
       column-gap: 24px;
     }
-
-    &-bottom__list li {
-
-      // &:nth-child(2),
-      // &:nth-child(6) {
-      //   display: none;
-      // }
-    }
   }
 }
 
@@ -306,5 +308,39 @@
       @include sizes(32px, 32px);
       flex-shrink: 0;
     }
+  }
+}
+
+.form-search {
+  @extend %flexCenter;
+  position: absolute;
+  left: 0;
+  height: 46px;
+  right: 0;
+  width: 100%;
+
+  &__input {
+    color: var(--txt-grey-txt, #858C95);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    padding: 12px;
+
+    border-radius: 4px 0px 0px 4px;
+    border: 1px solid var(--input-grey-stroke, #DEE2E7);
+    background-color: $white;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__button {
+    border-radius: 0px 4px 4px 0px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+    background: var(--blue-gradient, linear-gradient(94deg, #144286 0%, #2D6FD0 100%));
+    padding: 12px 20px;
+    height: 100%;
   }
 }
