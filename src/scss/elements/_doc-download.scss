@@ -1,0 +1,56 @@
+.doc-download {
+  &__item {
+    border-radius: 4px;
+    background-color: $white;
+    padding: 20px;
+    @extend %flexCenterStart;
+    column-gap: 16px;
+    cursor: pointer;
+    transition: $transitionBgCol;
+
+    &:hover {
+      background-color: $bluePrimary;
+
+      .doc-download__item-icon {
+        svg {
+          use {
+            stroke: $white;
+          }
+        }
+      }
+
+      .doc-download__item-name {
+        color: $white;
+      }
+    }
+
+    &-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+
+      svg {
+        use {
+          stroke: $bluePrimary;
+          transition: $transitionStroke;
+        }
+      }
+    }
+
+    &-name {
+      color: $bluePrimary;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 130%;
+      transition: $transitionColor;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .doc-download {
+    &__item {
+      align-items: flex-start;
+    }
+  }
+}

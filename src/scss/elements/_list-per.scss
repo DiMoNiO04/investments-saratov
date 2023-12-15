@@ -23,6 +23,12 @@
     color: $bluePrimary;
     text-align: center;
     height: 90px;
+    transition: $transitionColor, $transitionBgCol;
+
+    &:hover {
+      color: $white;
+      background-color: $bluePrimary;
+    }
   }
 }
 
@@ -38,6 +44,10 @@
   .list-per {
     &__items {
       @extend %gridColumnFour;
+    }
+
+    &__item {
+      height: 98px;
     }
   }
 }
@@ -59,6 +69,12 @@
 }
 
 @media screen and (max-width: $tablet) {
+  .list-per {
+    &__title {
+      margin-bottom: 32px;
+    }
+  }
+
   .list-per--municipal {
     .list-per {
       &__items {
@@ -108,6 +124,12 @@
     .list-per {
       &__items {
         grid-template-columns: repeat(1, 1fr);
+      }
+
+      &__item {
+        padding: 20px;
+        font-size: 18px;
+        height: fit-content;
       }
     }
   }

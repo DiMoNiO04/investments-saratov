@@ -54,3 +54,7 @@ function tooltip() {
 }
 
 document.addEventListener('DOMContentLoaded', tooltip);
+
+$('.municipality__map-item').tooltip({
+  track: true,
+});
