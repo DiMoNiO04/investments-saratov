@@ -22,3 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollHeader();
   }
 });
+
+//При скролле
+var mainNav = document.querySelector('.header');
+
+window.onscroll = function() {
+    windowScroll();
+};
+
+function windowScroll() {
+mainNav.classList.toggle("test", mainNav.scrollTop > 50 || document.documentElement.scrollTop > 50);
+}

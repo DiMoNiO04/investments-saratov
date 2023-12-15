@@ -1,4 +1,5 @@
-<header class="header header--transparent">
+<!-- <header class="header header--transparent"> -->
+<header class="header">
   <div class="header-top">
     <div class="container">
       <div class="header-top__container">
@@ -24,35 +25,22 @@
             <p>Горячая линия</p>
           </div>
           <div class="header-top__panel">
-            <div class="header-top__btns">
-              <button type="button" class="header-top__btns-search">
-                <svg>
-                  <use xlink:href="@img/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-              <div class="header-top__dropdown dropdown dropdown-sec js-dropdown">
-                <div class="dropdown__header js-dropdown-inner">
-                  <div class="dropdown__value js-dropdown-value">RU</div>
-                  <button type="button" class="dropdown__btn">
-                    <svg>
-                      <use xlink:href="@img/icons/icons.svg#arrow-caret-down"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="dropdown__content">
-                  <div class="dropdown__items">
-                    <div class="dropdown__item js-dropdown-item active">
-                      <input id="ru" type="radio" name="lang" value="lang-1" checked />
-                      <label for="ru">RU</label>
-                    </div>
-                    <div class="dropdown__item js-dropdown-item">
-                      <input id="lang-2" type="radio" name="lang" value="lang-2" />
-                      <label for="lang-2">EN</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            <!-- <div class="header-top__btns"> -->
+            <button type="button" class="header-top__btns-search">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#search"></use>
+              </svg>
+              <span>Поиск</span>
+            </button>
+
+            <!-- </div> -->
+            <a href="#" class="header-bottom__btn">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#map-pinned"></use>
+              </svg>
+              <p>Инвестиционная карта</p>
+            </a>
             <div class="header-top__socials">
               <a href="#" class="header-top__social">
                 <svg>
@@ -70,9 +58,31 @@
                 </svg>
               </a>
             </div>
-            <a href="#" class="header-top__btn btn btn-sec">
+            <div class="header-top__dropdown dropdown dropdown-sec js-dropdown">
+              <div class="dropdown__header js-dropdown-inner">
+                <div class="dropdown__value js-dropdown-value">RU</div>
+                <button type="button" class="dropdown__btn">
+                  <svg>
+                    <use xlink:href="@img/icons/icons.svg#arrow-caret-down"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__items">
+                  <div class="dropdown__item js-dropdown-item active">
+                    <input id="ru" type="radio" name="lang" value="lang-1" checked />
+                    <label for="ru">RU</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="lang-2" type="radio" name="lang" value="lang-2" />
+                    <label for="lang-2">EN</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <a href="#" class="header-top__btn btn btn-sec">
               <span>Линия прямых обращений</span>
-            </a>
+            </a> -->
           </div>
         </div>
         <button type="button" class="header-top__burger --mob">
@@ -104,19 +114,13 @@
                 <a href="#">Инвестору</a>
               </li>
               <li>
-                <a href="#">Поддержка</a>
-              </li>
-              <li>
                 <a href="#">Площадки</a>
               </li>
               <li>
-                <a href="#">ГЧП</a>
+                <a href="#">Поддержка</a>
               </li>
               <li>
-                <a href="#">Документы</a>
-              </li>
-              <li>
-                <a href="#">Медиа</a>
+                <a href="#">Линия прямых обращений</a>
               </li>
               <li>
                 <a href="#">Контакты</a>
@@ -125,12 +129,7 @@
           </nav>
         </div>
         <div class="header-bottom__btns">
-          <a href="#" class="header-bottom__btn">
-            <svg>
-              <use xlink:href="@img/icons/icons.svg#map-pinned"></use>
-            </svg>
-            <p>Инвестиционная карта</p>
-          </a>
+
           <a href="#" class="header-bottom__btn">
             <svg>
               <use xlink:href="@img/icons/icons.svg#entrance"></use>

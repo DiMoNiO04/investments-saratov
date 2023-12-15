@@ -14,6 +14,7 @@
     padding: 100px 0 50px;
     border-bottom: 1px solid $greyLine;
     column-gap: 80px;
+    row-gap: 32px;
   }
 
   &__logo {
@@ -28,10 +29,6 @@
   }
 
   &__info {
-    width: 100%;
-    @extend %flexColumn;
-    row-gap: 32px;
-
     &-title {
       @extend %regular16;
       margin-bottom: 16px;
@@ -49,6 +46,18 @@
 
       a {
         @include sizes(32px, 32px);
+      }
+    }
+
+    &-block {
+      &:nth-child(4) {
+        grid-column-start: 4;
+        grid-column-end: 5;
+      }
+
+      &:nth-child(5) {
+        grid-column-start: 5;
+        grid-column-end: 6;
       }
     }
   }
@@ -156,6 +165,20 @@
       }
 
     }
+
+    &__info {
+      &-block {
+        &:nth-child(4) {
+          grid-column-start: 3;
+          grid-column-end: 4;
+        }
+
+        &:nth-child(5) {
+          grid-column-start: 4;
+          grid-column-end: 5;
+        }
+      }
+    }
   }
 }
 
@@ -163,8 +186,10 @@
   .footer {
     &__top {
       padding: 80px 0 50px;
-      display: flex;
-      justify-content: flex-end;
+      // display: flex;
+      // justify-content: flex-end;
+      display: grid;
+      grid-template-columns: 40px 1fr;
       column-gap: 40px;
     }
 
@@ -185,6 +210,37 @@
 
     &__info {
       width: fit-content;
+
+      &-block {
+        &:nth-child(1) {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+
+        &:nth-child(2) {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+
+        &:nth-child(3) {
+          grid-column-start: 2;
+          grid-column-end: 3;
+        }
+
+        &:nth-child(4) {
+          grid-column-start: 2;
+          grid-column-end: 3;
+        }
+
+        &:nth-child(5) {
+          grid-column-start: 2;
+          grid-column-end: 3;
+        }
+      }
     }
 
     &__list-title p,
@@ -262,11 +318,6 @@
   .footer {
     &__top {
       padding: 60px 0 32px;
-    }
-
-    &__info,
-    &__info-block {
-      // width: 203px;
     }
 
     &__info {

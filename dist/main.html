@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231215125323" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231215125323" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 
   <body>
-    <header class="header header--transparent">
+    <!-- <header class="header header--transparent"> -->
+<header class="header">
   <div class="header-top">
     <div class="container">
       <div class="header-top__container">
@@ -36,35 +37,22 @@
             <p>Горячая линия</p>
           </div>
           <div class="header-top__panel">
-            <div class="header-top__btns">
-              <button type="button" class="header-top__btns-search">
-                <svg>
-                  <use xlink:href="assets/img/icons/icons.svg#search"></use>
-                </svg>
-              </button>
-              <div class="header-top__dropdown dropdown dropdown-sec js-dropdown">
-                <div class="dropdown__header js-dropdown-inner">
-                  <div class="dropdown__value js-dropdown-value">RU</div>
-                  <button type="button" class="dropdown__btn">
-                    <svg>
-                      <use xlink:href="assets/img/icons/icons.svg#arrow-caret-down"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="dropdown__content">
-                  <div class="dropdown__items">
-                    <div class="dropdown__item js-dropdown-item active">
-                      <input id="ru" type="radio" name="lang" value="lang-1" checked />
-                      <label for="ru">RU</label>
-                    </div>
-                    <div class="dropdown__item js-dropdown-item">
-                      <input id="lang-2" type="radio" name="lang" value="lang-2" />
-                      <label for="lang-2">EN</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            <!-- <div class="header-top__btns"> -->
+            <button type="button" class="header-top__btns-search">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#search"></use>
+              </svg>
+              <span>Поиск</span>
+            </button>
+
+            <!-- </div> -->
+            <a href="#" class="header-bottom__btn">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#map-pinned"></use>
+              </svg>
+              <p>Инвестиционная карта</p>
+            </a>
             <div class="header-top__socials">
               <a href="#" class="header-top__social">
                 <svg>
@@ -82,9 +70,31 @@
                 </svg>
               </a>
             </div>
-            <a href="#" class="header-top__btn btn btn-sec">
+            <div class="header-top__dropdown dropdown dropdown-sec js-dropdown">
+              <div class="dropdown__header js-dropdown-inner">
+                <div class="dropdown__value js-dropdown-value">RU</div>
+                <button type="button" class="dropdown__btn">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#arrow-caret-down"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__items">
+                  <div class="dropdown__item js-dropdown-item active">
+                    <input id="ru" type="radio" name="lang" value="lang-1" checked />
+                    <label for="ru">RU</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="lang-2" type="radio" name="lang" value="lang-2" />
+                    <label for="lang-2">EN</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <a href="#" class="header-top__btn btn btn-sec">
               <span>Линия прямых обращений</span>
-            </a>
+            </a> -->
           </div>
         </div>
         <button type="button" class="header-top__burger --mob">
@@ -116,19 +126,13 @@
                 <a href="#">Инвестору</a>
               </li>
               <li>
-                <a href="#">Поддержка</a>
-              </li>
-              <li>
                 <a href="#">Площадки</a>
               </li>
               <li>
-                <a href="#">ГЧП</a>
+                <a href="#">Поддержка</a>
               </li>
               <li>
-                <a href="#">Документы</a>
-              </li>
-              <li>
-                <a href="#">Медиа</a>
+                <a href="#">Линия прямых обращений</a>
               </li>
               <li>
                 <a href="#">Контакты</a>
@@ -137,12 +141,7 @@
           </nav>
         </div>
         <div class="header-bottom__btns">
-          <a href="#" class="header-bottom__btn">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#map-pinned"></use>
-            </svg>
-            <p>Инвестиционная карта</p>
-          </a>
+
           <a href="#" class="header-bottom__btn">
             <svg>
               <use xlink:href="assets/img/icons/icons.svg#entrance"></use>
@@ -153,8 +152,7 @@
       </div>
     </div>
   </div>
-</header>
- <main>
+</header> <main>
   <section class="section intro">
   <div class="intro__container">
     <div class="container">
@@ -184,42 +182,42 @@
       <div class="swiper-wrapper intro__slider">
         <div class="swiper-slide intro__slide">
           <div class="intro__slide-img">
-            <picture><source srcset="assets/img/intro/1.webp" type="image/webp"><img src="assets/img/intro/1.png" alt="" /></picture>
+            <img src="assets/img/intro/1.png" alt="" />
           </div>
         </div>
         <div class="swiper-slide intro__slide">
           <div class="intro__slide-img">
-            <picture><source srcset="assets/img/intro/2.webp" type="image/webp"><img src="assets/img/intro/2.png" alt="" /></picture>
+            <img src="assets/img/intro/2.png" alt="" />
           </div>
         </div>
         <div class="swiper-slide intro__slide">
           <div class="intro__slide-img">
-            <picture><source srcset="assets/img/intro/3.webp" type="image/webp"><img src="assets/img/intro/3.png" alt="" /></picture>
+            <img src="assets/img/intro/3.png" alt="" />
           </div>
         </div>
         <div class="swiper-slide intro__slide">
           <div class="intro__slide-img">
-            <picture><source srcset="assets/img/intro/4.webp" type="image/webp"><img src="assets/img/intro/4.png" alt="" /></picture>
+            <img src="assets/img/intro/4.png" alt="" />
           </div>
         </div>
         <div class="swiper-slide intro__slide">
           <div class="intro__slide-img">
-            <picture><source srcset="assets/img/intro/5.webp" type="image/webp"><img src="assets/img/intro/5.png" alt="" /></picture>
+            <img src="assets/img/intro/5.png" alt="" />
           </div>
         </div>
         <div class="swiper-slide intro__slide">
           <div class="intro__slide-img">
-            <picture><source srcset="assets/img/intro/6.webp" type="image/webp"><img src="assets/img/intro/6.png" alt="" /></picture>
+            <img src="assets/img/intro/6.png" alt="" />
           </div>
         </div>
         <div class="swiper-slide intro__slide">
           <div class="intro__slide-img">
-            <picture><source srcset="assets/img/intro/7.webp" type="image/webp"><img src="assets/img/intro/7.png" alt="" /></picture>
+            <img src="assets/img/intro/7.png" alt="" />
           </div>
         </div>
         <div class="swiper-slide intro__slide">
           <div class="intro__slide-img">
-            <picture><source srcset="assets/img/intro/8.webp" type="image/webp"><img src="assets/img/intro/8.png" alt="" /></picture>
+            <img src="assets/img/intro/8.png" alt="" />
           </div>
         </div>
       </div>
@@ -255,7 +253,7 @@
           </div>
         </div>
         <div class="region__item-pic region__pic-one">
-          <picture><source srcset="assets/img/region/region-img-1.webp" type="image/webp"><img src="assets/img/region/region-img-1.jpg" class="region__item-pic__img" alt="region-img" /></picture>
+          <img src="assets/img/region/region-img-1.jpg" class="region__item-pic__img" alt="region-img" />
         </div>
       </div>
       <div class="region__items-two">
@@ -284,7 +282,7 @@
           <a href="#!" class="region__item-about__link"> О регионе </a>
         </div>
         <div class="region__item-pic region__pic-two">
-          <picture><source srcset="assets/img/region/region-img-2.webp" type="image/webp"><img src="assets/img/region/region-img-2.jpg" class="region__item-pic__img" alt="region-img" /></picture>
+          <img src="assets/img/region/region-img-2.jpg" class="region__item-pic__img" alt="region-img" />
         </div>
       </div>
     </div>
@@ -655,7 +653,7 @@
       <div class="swiper-wrapper benefits__slider">
         <div class="swiper-slide benefits__slide">
           <div class="benefits__slide-img">
-            <picture><source srcset="assets/img/benefits/1.webp" type="image/webp"><img src="assets/img/benefits/1.png" alt="" /></picture>
+            <img src="assets/img/benefits/1.png" alt="" />
           </div>
           <div class="benefits__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -669,7 +667,7 @@
         </div>
         <div class="swiper-slide benefits__slide">
           <div class="benefits__slide-img">
-            <picture><source srcset="assets/img/benefits/2.webp" type="image/webp"><img src="assets/img/benefits/2.png" alt="" /></picture>
+            <img src="assets/img/benefits/2.png" alt="" />
           </div>
           <div class="benefits__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -683,7 +681,7 @@
         </div>
         <div class="swiper-slide benefits__slide">
           <div class="benefits__slide-img">
-            <picture><source srcset="assets/img/benefits/3.webp" type="image/webp"><img src="assets/img/benefits/3.png" alt="" /></picture>
+            <img src="assets/img/benefits/3.png" alt="" />
           </div>
           <div class="benefits__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -699,7 +697,7 @@
         </div>
         <div class="swiper-slide benefits__slide">
           <div class="benefits__slide-img">
-            <picture><source srcset="assets/img/benefits/4.webp" type="image/webp"><img src="assets/img/benefits/4.png" alt="" /></picture>
+            <img src="assets/img/benefits/4.png" alt="" />
           </div>
           <div class="benefits__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -713,7 +711,7 @@
         </div>
         <div class="swiper-slide benefits__slide">
           <div class="benefits__slide-img">
-            <picture><source srcset="assets/img/benefits/5.webp" type="image/webp"><img src="assets/img/benefits/5.png" alt="" /></picture>
+            <img src="assets/img/benefits/5.png" alt="" />
           </div>
           <div class="benefits__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -727,7 +725,7 @@
         </div>
         <div class="swiper-slide benefits__slide">
           <div class="benefits__slide-img">
-            <picture><source srcset="assets/img/benefits/6.webp" type="image/webp"><img src="assets/img/benefits/6.png" alt="" /></picture>
+            <img src="assets/img/benefits/6.png" alt="" />
           </div>
           <div class="benefits__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -880,7 +878,7 @@
           </div>
         </div>
         <div class="steps-investor__img">
-          <picture><source srcset="assets/img/steps-investor.webp" type="image/webp"><img src="assets/img/steps-investor.png" alt="" /></picture>
+          <img src="assets/img/steps-investor.png" alt="" />
         </div>
       </div>
     </div>
@@ -910,7 +908,7 @@
       <div class="swiper-wrapper success-hist__slider">
         <div class="swiper-slide success-hist__slide">
           <div class="success-hist__slide-img">
-            <picture><source srcset="assets/img/success-hist/1.webp" type="image/webp"><img src="assets/img/success-hist/1.png" alt="" /></picture>
+            <img src="assets/img/success-hist/1.png" alt="" />
           </div>
           <div class="success-hist__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -944,7 +942,7 @@
         </div>
         <div class="swiper-slide success-hist__slide">
           <div class="success-hist__slide-img">
-            <picture><source srcset="assets/img/success-hist/2.webp" type="image/webp"><img src="assets/img/success-hist/2.png" alt="" /></picture>
+            <img src="assets/img/success-hist/2.png" alt="" />
           </div>
           <div class="success-hist__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -978,7 +976,7 @@
         </div>
         <div class="swiper-slide success-hist__slide">
           <div class="success-hist__slide-img">
-            <picture><source srcset="assets/img/success-hist/3.webp" type="image/webp"><img src="assets/img/success-hist/3.png" alt="" /></picture>
+            <img src="assets/img/success-hist/3.png" alt="" />
           </div>
           <div class="success-hist__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -1012,7 +1010,7 @@
         </div>
         <div class="swiper-slide success-hist__slide">
           <div class="success-hist__slide-img">
-            <picture><source srcset="assets/img/success-hist/4.webp" type="image/webp"><img src="assets/img/success-hist/4.png" alt="" /></picture>
+            <img src="assets/img/success-hist/4.png" alt="" />
           </div>
           <div class="success-hist__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -1046,7 +1044,7 @@
         </div>
         <div class="swiper-slide success-hist__slide">
           <div class="success-hist__slide-img">
-            <picture><source srcset="assets/img/success-hist/5.webp" type="image/webp"><img src="assets/img/success-hist/5.png" alt="" /></picture>
+            <img src="assets/img/success-hist/5.png" alt="" />
           </div>
           <div class="success-hist__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -1080,7 +1078,7 @@
         </div>
         <div class="swiper-slide success-hist__slide">
           <div class="success-hist__slide-img">
-            <picture><source srcset="assets/img/success-hist/6.webp" type="image/webp"><img src="assets/img/success-hist/6.png" alt="" /></picture>
+            <img src="assets/img/success-hist/6.png" alt="" />
           </div>
           <div class="success-hist__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -1114,7 +1112,7 @@
         </div>
         <div class="swiper-slide success-hist__slide">
           <div class="success-hist__slide-img">
-            <picture><source srcset="assets/img/success-hist/7.webp" type="image/webp"><img src="assets/img/success-hist/7.png" alt="" /></picture>
+            <img src="assets/img/success-hist/7.png" alt="" />
           </div>
           <div class="success-hist__bg">
             <img src="assets/img/icons/icons.svg#slide-bg" alt="" />
@@ -1175,7 +1173,7 @@
         <div class="swiper-wrapper news__slider">
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-1.webp" type="image/webp"><img src="assets/img/news/news-img-1.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-1.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1196,7 +1194,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-2.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1216,7 +1214,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-3.webp" type="image/webp"><img src="assets/img/news/news-img-3.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-3.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1236,7 +1234,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-4.webp" type="image/webp"><img src="assets/img/news/news-img-4.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-4.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1254,7 +1252,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-5.webp" type="image/webp"><img src="assets/img/news/news-img-5.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-5.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1274,7 +1272,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-1.webp" type="image/webp"><img src="assets/img/news/news-img-1.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-1.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1295,7 +1293,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-2.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1315,7 +1313,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-3.webp" type="image/webp"><img src="assets/img/news/news-img-3.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-3.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1335,7 +1333,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-4.webp" type="image/webp"><img src="assets/img/news/news-img-4.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-4.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1353,7 +1351,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-5.webp" type="image/webp"><img src="assets/img/news/news-img-5.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-5.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1373,7 +1371,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-1.webp" type="image/webp"><img src="assets/img/news/news-img-1.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-1.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1394,7 +1392,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-2.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1414,7 +1412,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-3.webp" type="image/webp"><img src="assets/img/news/news-img-3.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-3.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1434,7 +1432,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-4.webp" type="image/webp"><img src="assets/img/news/news-img-4.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-4.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1452,7 +1450,7 @@
           </div>
           <div class="news__card">
             <div class="news__card-pic">
-              <picture><source srcset="assets/img/news/news-img-5.webp" type="image/webp"><img src="assets/img/news/news-img-5.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+              <img src="assets/img/news/news-img-5.png" alt="news-img" class="news__card-main-pic__img" />
             </div>
             <div class="news__card-content">
               <div class="news__card-content-main">
@@ -1501,43 +1499,45 @@
           </a>
         </div>
 
-        <div class="footer__info">
-          <div class="footer__info-block">
-            <p class="footer__info-title">Email</p>
-            <a href="mailto:investsaratov@mai.ru" class="footer__info-link">investsaratov@mai.ru</a>
-          </div>
-          <div class="footer__info-block">
-            <p class="footer__info-title">Социальные сети</p>
-            <div class="footer__info-socials">
-              <a href="#">
-                <svg width="20" height="20">
-                  <use xlink:href="assets/img/icons/icons.svg#tg"></use>
-                </svg>
-              </a>
-              <a href="#">
-                <svg width="20" height="20">
-                  <use xlink:href="assets/img/icons/icons.svg#odnok"></use>
-                </svg>
-              </a>
-              <a href="#">
-                <svg width="20" height="20">
-                  <use xlink:href="assets/img/icons/icons.svg#vk"></use>
-                </svg>
-              </a>
-            </div>
+        <!-- <div class="footer__info"> -->
+        <div class="footer__info-block">
+          <p class="footer__info-title">Email</p>
+          <a href="mailto:investsaratov@mai.ru" class="footer__info-link">investsaratov@mai.ru</a>
+        </div>
+        <div class="footer__info-block">
+          <p class="footer__info-title">Телефон</p>
+          <a href="tel:+78452695262" class="footer__info-link">+7 (8452) 69-52-62</a>
+        </div>
+        <div class="footer__info-block">
+          <p class="footer__info-title">Социальные сети</p>
+          <div class="footer__info-socials">
+            <a href="#">
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#tg"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#odnok"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#vk"></use>
+              </svg>
+            </a>
           </div>
         </div>
-        <div class="footer__info">
-          <div class="footer__info-block">
-            <p class="footer__info-title">Телефон</p>
-            <a href="tel:+78452695262" class="footer__info-link">+7 (8452) 69-52-62</a>
-          </div>
+        <div class="footer__info-block">
+          <p class="footer__info-title">Режим работы</p>
+          <p class="footer__info-link">с 9:00 до 18:00 пн-пт</p>
+        </div>
+        <!-- </div>
+        <div class="footer__info"> -->
 
-          <div class="footer__info-block">
-            <p class="footer__info-title">Режим работы</p>
-            <p class="footer__info-link">с 9:00 до 18:00 пн-пт</p>
-          </div>
-        </div>
+
+
+        <!-- </div> -->
       </div>
       <div class="footer__center">
         <div class="footer__lists">
@@ -2070,8 +2070,8 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231215125323"></script>
-<script src="js/main.js?_v=20231215125323"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+<script src="js/main.js"></script>
 
   </body>
 </html>

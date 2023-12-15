@@ -3,10 +3,22 @@
   background-color: $white;
   // position: fixed;
   z-index: 10;
+
+  transition: background 0.5s ease-in;
+
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  transition: background 0.5s ease-in;
+  display: block;
+  height: 160px;
+
+  &.test {
+    .header-top {
+      display: none;
+    }
+  }
 
   * {
     color: $black;
@@ -46,104 +58,135 @@
     border-bottom: 1px solid $inputGreyStroke;
   }
 
-  &-top__container {
-    @extend %flexCenterStart;
-  }
+  &-top {
+    &__logo {
+      flex-shrink: 0;
+      position: relative;
+      @include sizes(235px, 64px);
+      margin-right: 24px;
 
-  &-top__logo {
-    flex-shrink: 0;
-    position: relative;
-    @include sizes(235px, 64px);
-    margin-right: 20px;
+      a {
+        @extend %fullSize;
+        position: absolute;
+        @extend %visible;
 
-    a {
-      @extend %fullSize;
-      position: absolute;
-      @extend %visible;
-
-      &.header-top__logo--transparent {
-        @extend %hidden;
+        &.header-top__logo--transparent {
+          @extend %hidden;
+        }
       }
     }
-  }
 
-  &-top__content {
-    @extend %flexCenterBetween;
-    border-left: 1px solid $inputGreyStroke;
-    padding: 16px 0;
-  }
-
-  &-bottom {
-    padding: 16px 0;
-  }
-
-  &-bottom__container {
-    @extend %flexCenterBetween;
-  }
-
-  &-top__phone {
-    @extend %flexColumn;
-    row-gap: 4px;
-    margin-left: 24px;
-  }
-
-  &-top__content {
-    width: 100%;
-  }
-
-  &-top__panel {
-    @extend %flexCenterBetween;
-    column-gap: 32px;
-  }
-
-  &-top__socials {
-    @extend %flexCenterBetween;
-    column-gap: 4px;
-
-    svg use {
-      fill: $black;
-      stroke: none;
+    &__container {
+      @extend %flexCenterStart;
     }
 
-    a {
-      @include sizes(32px, 32px);
+    &__content {
+      @extend %flexCenterBetween;
+      border-left: 1px solid $inputGreyStroke;
+      padding-top: 32px;
+      padding-bottom: 25px;
+      width: 100%;
+    }
 
-      &:hover {
-        svg use {
-          fill: $blueHover;
+    &__phone {
+      @extend %flexColumn;
+      margin-left: 24px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &__panel {
+      @extend %flexCenterBetween;
+      column-gap: 32px;
+    }
+
+    &__socials {
+      @extend %flexCenterBetween;
+      column-gap: 4px;
+
+      svg use {
+        fill: $black;
+        stroke: none;
+      }
+
+      a {
+        @include sizes(32px, 32px);
+
+        &:hover {
+          svg use {
+            fill: $blueHover;
+          }
+        }
+      }
+    }
+
+    &__btns {
+      @extend %flexCenterBetween;
+      column-gap: 32px;
+
+      &-search {
+        @extend %flexCenter;
+        column-gap: 8px;
+
+        svg {
+          @include sizes(24px, 24px);
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    &__dropdown {
+      .dropdown {
+        &__content {
+          @include sizes(auto, auto);
+          transition: all 0.5s ease;
+        }
+
+        &__value {
+          @extend %medium18;
+          flex-shrink: 0;
+        }
+
+        &__header {
+          align-items: baseline;
+        }
+
+        &__btn {
+          @include sizes(12px, 12px);
         }
       }
     }
   }
 
-  &-top__btns {
-    @extend %flexCenterBetween;
-    column-gap: 32px;
-  }
+  &-bottom {
+    padding: 16px 0;
 
-  &-top__btns-search {
-    @include sizes(24px, 24px);
-    flex-shrink: 0;
-  }
+    &__container {
+      @extend %flexCenterBetween;
+    }
 
-  &-top__dropdown {
-    .dropdown {
-      &__content {
-        @include sizes(auto, auto);
-        transition: all 0.5s ease;
-      }
+    &__btns {
+      @extend %flexCenterStart;
+      column-gap: 40px;
+    }
 
-      &__value {
-        @extend %medium18;
+    &__btn {
+      @extend %flexCenter;
+      column-gap: 8px;
+
+      svg {
+        @include sizes(24px, 24px);
         flex-shrink: 0;
       }
 
-      &__header {
-        align-items: baseline;
+      p {
+        white-space: nowrap;
       }
 
-      &__btn {
-        @include sizes(12px, 12px);
+      &-burg {
+        @include sizes(32px, 32px);
       }
     }
   }
@@ -152,24 +195,6 @@
   &-bottom__list {
     @extend %flexCenterStart;
     column-gap: 32px;
-  }
-
-  &-bottom__btn-burg {
-    @include sizes(32px, 32px);
-  }
-
-  &-bottom__btns {
-    @extend %flexCenterStart;
-    column-gap: 40px;
-  }
-
-  &-bottom__btn {
-    @extend %flexCenterStart;
-    column-gap: 8px;
-
-    svg {
-      @include sizes(24px, 24px);
-    }
   }
 }
 
@@ -185,20 +210,22 @@
   }
 
   .header {
-    &-top__logo {
-      a {
-        @extend %hidden;
+    &-top {
+      &__logo {
+        a {
+          @extend %hidden;
 
-        &.header-top__logo--transparent {
-          @extend %visible;
+          &.header-top__logo--transparent {
+            @extend %visible;
+          }
         }
       }
-    }
 
-    &-top__socials {
-      svg use {
-        fill: $white;
-        stroke: none;
+      &__socials {
+        svg use {
+          fill: $white;
+          stroke: none;
+        }
       }
     }
   }
@@ -214,22 +241,25 @@
 
 @media screen and (max-width: $laptop) {
   .header {
+
     &-bottom__links,
     &-bottom__list {
       column-gap: 24px;
     }
 
     &-bottom__list li {
-      &:nth-child(2),
-      &:nth-child(6) {
-        display: none;
-      }
+
+      // &:nth-child(2),
+      // &:nth-child(6) {
+      //   display: none;
+      // }
     }
   }
 }
 
 @media screen and (max-width: $tablet) {
   .header {
+
     &-bottom__menu,
     &-top__socials {
       display: none;
@@ -247,6 +277,7 @@
 
 @media screen and (max-width: $mob) {
   .header {
+
     &-bottom,
     &-top__panel {
       display: none;
