@@ -1,0 +1,65 @@
+.invest-decl {
+  &__container {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__desc {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__img {
+    height: 507px;
+
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  &__title {
+    @extend %secondaryH3;
+  }
+
+  &__subtitle {
+    @extend %mainTxt;
+  }
+
+  &__link {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .invest-decl {
+    &__subtitle {
+      line-height: 130%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .invest-decl {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+    }
+
+    &__desc {
+      row-gap: 30px;
+    }
+
+    &__img {
+      height: 395px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .invest-decl {
+    &__img {
+      height: 248px;
+    }
+  }
+}

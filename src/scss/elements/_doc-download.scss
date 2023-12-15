@@ -38,11 +38,24 @@
     }
 
     &-name {
+      @include croppingText(2);
       color: $bluePrimary;
       font-size: 16px;
       font-weight: 500;
       line-height: 130%;
       transition: $transitionColor;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .doc-download {
+    &__item {
+      padding: 16px;
+    }
+
+    &__item-name {
+      @include croppingText(inherit);
     }
   }
 }

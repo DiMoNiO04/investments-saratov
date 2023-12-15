@@ -1203,6 +1203,11 @@ svg {
   visibility: visible;
 }
 
+.invest-corp__content,
+.invest-com__links-item,
+.org-invest__tasks-item,
+.invest-decl__desc,
+.regional-standart__elements-item,
 .municipality__descs-item,
 .regul-committee__ask-content,
 .regul-committee__ask-item,
@@ -1315,7 +1320,6 @@ svg {
 .auth__form-checkboxes,
 .news__card-more,
 .news__title-container,
-.map__titles,
 .region__titles,
 .calculator__titles,
 .chat__content-block-titles,
@@ -1404,15 +1408,22 @@ svg {
   justify-content: space-between;
 }
 
+.invest-rules__links,
+.invest-com__links-items,
+.org-invest__tasks-items,
+.invest-decl__container,
+.regional-standart__titles,
 .municipality__titles,
 .regul-committee__advan,
 .result-years__items,
 .soceconomic-develop__titles,
-.footer__right {
+.footer__right,
+.map__titles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
+.regional-standart__elements-items,
 .regul-committee__ask-items,
 .regul-committee__order-items {
   display: grid;
@@ -1500,6 +1511,7 @@ svg {
   text-transform: uppercase;
 }
 
+.regional-standart__title,
 .regul-committee__title,
 .invest-committee__title,
 .result-years__title,
@@ -1512,6 +1524,8 @@ svg {
   text-transform: uppercase;
 }
 
+.invest-com__links-link,
+.regional-standart__elements-title,
 .big-town__peoples,
 .municipality__descs-title,
 .regul-committee__ask-soc a,
@@ -1531,6 +1545,12 @@ svg {
   line-height: 120%;
 }
 
+.invest-corp__desc-txt,
+.invest-com__links-tit,
+.invest-com__subtitle,
+.org-invest__subtitle,
+.invest-decl__subtitle,
+.regional-standart__subtitle p,
 .municipality__descs-item span:last-child,
 .municipality__desc p,
 .regul-committee__ask-text,
@@ -1546,13 +1566,14 @@ svg {
 .story__item-title,
 .news__card-content-text,
 .news__card-main-text,
-.map__text,
 .region__item-stat__text,
 .region__text,
 .calculator__subtitle,
 .steps-investor__item-txt,
 .project-desc__desc-txt,
 .project-desc__list li,
+.map__text,
+.map__subtitles p,
 .content ul > li,
 .content p {
   font-size: 20px;
@@ -1609,6 +1630,9 @@ svg {
   line-height: 130%;
 }
 
+.invest-com__links-title,
+.org-invest__tasks-title,
+.regional-standart__elements-txt,
 .big-town__city,
 .regul-committee__ask-title,
 .regul-committee__ask_name,
@@ -1633,6 +1657,18 @@ svg {
   font-size: 16px;
   font-weight: 600;
   line-height: 130%;
+}
+
+.invest-rules__title,
+.invest-corp__title,
+.invest-com__title,
+.org-invest__title,
+.invest-decl__title,
+.map__title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 110%;
+  text-transform: uppercase;
 }
 
 @font-face {
@@ -3032,6 +3068,10 @@ fieldset {
 }
 
 .doc-download__item-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   color: #2d6fd0;
   font-size: 16px;
   font-weight: 500;
@@ -3073,6 +3113,100 @@ fieldset {
 
 .list-per--districs .list-per__item {
   height: 98px;
+}
+
+.map__titles {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.map__title {
+  max-width: 760px;
+  color: #2f2f2f;
+}
+
+.map__subtitles p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.map__subtitles-link {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.map__text {
+  max-width: 630px;
+  color: #2f2f2f;
+}
+
+.map__map {
+  margin-top: 6px;
+}
+
+.map__map {
+  width: 1364px;
+  min-height: 778px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.map__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: -64px;
+}
+
+.map__item {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 4px 0;
+  min-height: 131px;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.map__item-quantity {
+  color: #2d6fd0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.map__item-text {
+  color: #2f2f2f;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.map__link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+}
+
+.map__item-link {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+  border-bottom: 1px solid #fff;
+  transition: border 0.4s ease;
+}
+
+.map__item-link:hover {
+  border-bottom: transparent;
+}
+
+.map--invest .map__items {
+  margin-top: -84px;
 }
 
 .footer {
@@ -3404,7 +3538,6 @@ fieldset {
   background-color: #ffffff;
   z-index: 10;
   transition: background 0.5s ease-in;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -3900,10 +4033,17 @@ fieldset {
 
 .ask-question__left {
   background-color: #2d6fd0;
-  padding: 120px 0 0 190px;
   width: 50%;
   position: relative;
   overflow: hidden;
+}
+
+.ask-question__left .ask-question__titles {
+  max-width: 770px;
+  padding: 120px 190px 0 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
 }
 
 .ask-question__img {
@@ -3912,10 +4052,6 @@ fieldset {
   height: 470px;
   left: 0;
   bottom: 24px;
-}
-
-.ask-question__titles {
-  width: 405px;
 }
 
 .ask-question__title {
@@ -3932,6 +4068,7 @@ fieldset {
   font-size: 20px;
   font-weight: 400;
   line-height: 130%;
+  max-width: 80%;
 }
 
 .ask-question__right {
@@ -4754,81 +4891,6 @@ fieldset {
 .region__item-pic__img {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.map__title {
-  max-width: 640px;
-  color: #2f2f2f;
-}
-
-.map__text {
-  max-width: 630px;
-  color: #2f2f2f;
-}
-
-.map__map {
-  margin-top: 6px;
-}
-
-.map__map {
-  width: 1364px;
-  min-height: 778px;
-  margin: 0 auto;
-  height: auto;
-}
-
-.map__items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: -64px;
-}
-
-.map__item {
-  flex: 1 1 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 4px 0;
-  min-height: 131px;
-  padding: 32px;
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-.map__item-quantity {
-  color: #2d6fd0;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 120%;
-}
-
-.map__item-text {
-  color: #2f2f2f;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 140%;
-}
-
-.map__link-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
-}
-
-.map__item-link {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 140%;
-  border-bottom: 1px solid #fff;
-  transition: border 0.4s ease;
-}
-
-.map__item-link:hover {
-  border-bottom: transparent;
 }
 
 .news {
@@ -6507,6 +6569,196 @@ fieldset {
   max-width: 760px;
 }
 
+.regional-standart__titles {
+  margin-bottom: 40px;
+}
+
+.regional-standart__title {
+  padding-right: 40px;
+}
+
+.regional-standart__subtitle {
+  padding-right: 20px;
+}
+
+.regional-standart__subtitle p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.regional-standart__elements-title {
+  max-width: 870px;
+  margin-bottom: 40px;
+}
+
+.regional-standart__elements-items {
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.regional-standart__elements-item {
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+  height: 182px;
+}
+
+.regional-standart__elements-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.invest-decl__container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.invest-decl__desc {
+  row-gap: 40px;
+}
+
+.invest-decl__img {
+  height: 507px;
+}
+
+.invest-decl__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.invest-decl__link {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.org-invest__titles {
+  max-width: 1020px;
+  margin-bottom: 40px;
+}
+
+.org-invest__title {
+  margin-bottom: 40px;
+}
+
+.org-invest__tasks-title {
+  margin-bottom: 20px;
+}
+
+.org-invest__tasks-items {
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.org-invest__tasks-item {
+  justify-content: space-between;
+  row-gap: 12px;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 32px;
+  min-height: 222px;
+}
+
+.org-invest__tasks-item:last-child {
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+}
+
+.org-invest__tasks-item:last-child .org-invest__tasks-num,
+.org-invest__tasks-item:last-child .org-invest__tasks-txt {
+  color: #ffffff;
+}
+
+.org-invest__tasks-num {
+  color: #2d6fd0;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.org-invest__tasks-txt {
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.invest-com__titles {
+  margin-bottom: 40px;
+  max-width: 760px;
+}
+
+.invest-com__title {
+  margin-bottom: 40px;
+}
+
+.invest-com__links-title {
+  margin-bottom: 20px;
+}
+
+.invest-com__links-items {
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.invest-com__links-item {
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+  height: 222px;
+}
+
+.invest-com__links-link {
+  color: #2d6fd0;
+}
+
+.invest-com__links-link:hover {
+  color: #2661d4;
+}
+
+.invest-corp__container {
+  position: relative;
+}
+
+.invest-corp__content {
+  justify-content: space-between;
+  max-width: 800px;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  bottom: 60px;
+}
+
+.invest-corp__img {
+  height: 710px;
+}
+
+.invest-corp__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.invest-corp__title {
+  color: #ffffff;
+}
+
+.invest-corp__desc-txt {
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.invest-rules__title {
+  margin-bottom: 40px;
+}
+
+.invest-rules__links {
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -6580,6 +6832,7 @@ fieldset {
     font-size: 64px;
   }
 
+  .regional-standart__title,
   .regul-committee__title,
   .invest-committee__title,
   .result-years__title,
@@ -6589,6 +6842,8 @@ fieldset {
     font-size: 48px;
   }
 
+  .invest-com__links-link,
+  .regional-standart__elements-title,
   .big-town__peoples,
   .municipality__descs-title,
   .regul-committee__ask-soc a,
@@ -6606,6 +6861,12 @@ fieldset {
     font-size: 26px;
   }
 
+  .invest-corp__desc-txt,
+  .invest-com__links-tit,
+  .invest-com__subtitle,
+  .org-invest__subtitle,
+  .invest-decl__subtitle,
+  .regional-standart__subtitle p,
   .municipality__descs-item span:last-child,
   .municipality__desc p,
   .regul-committee__ask-text,
@@ -6621,19 +6882,23 @@ fieldset {
   .story__item-title,
   .news__card-content-text,
   .news__card-main-text,
-  .map__text,
   .region__item-stat__text,
   .region__text,
   .calculator__subtitle,
   .steps-investor__item-txt,
   .project-desc__desc-txt,
   .project-desc__list li,
+  .map__text,
+  .map__subtitles p,
   .content ul > li,
   .content p {
     font-size: 18px;
     line-height: 140%;
   }
 
+  .invest-com__links-title,
+  .org-invest__tasks-title,
+  .regional-standart__elements-txt,
   .big-town__city,
   .regul-committee__ask-title,
   .regul-committee__ask_name,
@@ -6649,6 +6914,15 @@ fieldset {
   .modal-pers-cab__title p,
   .content strong {
     line-height: 140%;
+  }
+
+  .invest-rules__title,
+  .invest-corp__title,
+  .invest-com__title,
+  .org-invest__title,
+  .invest-decl__title,
+  .map__title {
+    font-size: 40px;
   }
 
   .container {
@@ -6678,6 +6952,37 @@ fieldset {
 
   .list-per--municipal .list-per__items {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .map__map {
+    width: 105%;
+    min-height: 697px;
+    margin-top: 70px;
+    transform: translateX(-30px);
+    position: relative;
+    z-index: -2;
+  }
+
+  .map__items {
+    margin-top: -32px;
+  }
+
+  .map__text {
+    max-width: 580px;
+  }
+
+  .map--invest .map__subtitles p {
+    line-height: 130%;
+  }
+
+  .map--invest .map__subtitles p:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .map--invest .map__map {
+    transform: translate(0);
+    margin-top: 16px;
+    width: 100%;
   }
 
   .footer__logo-column {
@@ -6753,8 +7058,9 @@ fieldset {
     width: 480px;
   }
 
-  .ask-question__right {
-    padding: 120px 93px;
+  .ask-question__left .ask-question__titles {
+    max-width: 590px;
+    padding-right: 93px;
   }
 
   .ask-question__text {
@@ -6923,23 +7229,6 @@ fieldset {
 
   .region__pic-two {
     min-width: 330px;
-  }
-
-  .map__map {
-    width: 105%;
-    min-height: 697px;
-    margin-top: 70px;
-    transform: translateX(-30px);
-    position: relative;
-    z-index: -2;
-  }
-
-  .map__items {
-    margin-top: -32px;
-  }
-
-  .map__text {
-    max-width: 580px;
   }
 
   .authentication__container {
@@ -7222,6 +7511,50 @@ fieldset {
   .invest-authorize__title {
     font-size: 40px;
   }
+
+  .regional-standart__subtitle p {
+    line-height: 130%;
+  }
+
+  .invest-decl__subtitle {
+    line-height: 130%;
+  }
+
+  .org-invest__titles {
+    max-width: 740px;
+  }
+
+  .org-invest__subtitle {
+    line-height: 130%;
+  }
+
+  .org-invest__tasks-num {
+    font-size: 32px;
+  }
+
+  .org-invest__tasks-item {
+    min-height: 237px;
+  }
+
+  .invest-com__subtitle {
+    line-height: 130%;
+  }
+
+  .invest-com__titles {
+    max-width: 730px;
+  }
+
+  .invest-com__links-tit {
+    font-size: 20px;
+  }
+
+  .invest-corp__content {
+    left: 48px;
+  }
+
+  .invest-corp__img {
+    height: 586px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -7237,6 +7570,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .regional-standart__title,
   .regul-committee__title,
   .invest-committee__title,
   .result-years__title,
@@ -7302,6 +7636,17 @@ fieldset {
     margin-bottom: 16px;
   }
 
+  .doc-download__item {
+    padding: 16px;
+  }
+
+  .doc-download__item-name {
+    display: -webkit-box;
+    -webkit-line-clamp: inherit;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
   .list-per__title {
     margin-bottom: 32px;
   }
@@ -7312,6 +7657,65 @@ fieldset {
 
   .list-per--districs .list-per__items {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .map__titles {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px 0;
+  }
+
+  .map__map {
+    width: 100%;
+    min-height: 380px;
+    transform: translateX(0);
+  }
+
+  .map__text {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .map__map {
+    margin-top: 20px;
+    min-height: 388px;
+  }
+
+  .map__items {
+    flex-wrap: wrap;
+    margin-top: -30px;
+  }
+
+  .map__title {
+    max-width: 530px;
+  }
+
+  .map__item {
+    flex: 1 1 334px;
+    padding: 32px 28px;
+    height: 131px;
+    min-height: 103px;
+  }
+
+  .map--invest .map__title {
+    max-width: 100%;
+  }
+
+  .map--invest .map__subtitles p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .map--invest .map__subtitles-link {
+    margin-top: 32px;
+  }
+
+  .map--invest .map__map {
+    margin-top: 24px;
+  }
+
+  .map--invest .map__items {
+    margin-top: -34px;
   }
 
   .footer__top {
@@ -8010,45 +8414,6 @@ fieldset {
     grid-row: 4/4;
   }
 
-  .map__titles {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 32px 0;
-  }
-
-  .map__map {
-    width: 100%;
-    min-height: 380px;
-    transform: translateX(0);
-  }
-
-  .map__text {
-    font-size: 18px;
-    max-width: 100%;
-  }
-
-  .map__map {
-    margin-top: 20px;
-    min-height: 388px;
-  }
-
-  .map__items {
-    flex-wrap: wrap;
-    margin-top: -30px;
-  }
-
-  .map__title {
-    max-width: 530px;
-  }
-
-  .map__item {
-    flex: 1 1 334px;
-    padding: 32px 28px;
-    height: 131px;
-    min-height: 103px;
-  }
-
   .authentication__container {
     margin-top: 128px;
     width: 688px;
@@ -8573,6 +8938,129 @@ fieldset {
   .invest-authorize .doc-download__item {
     align-items: flex-start;
   }
+
+  .regional-standart__titles {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 32px;
+  }
+
+  .regional-standart__subtitle {
+    padding: 0;
+  }
+
+  .regional-standart__title {
+    padding: 0;
+    max-width: 552px;
+    margin-bottom: 32px;
+  }
+
+  .regional-standart__subtitle p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .regional-standart__elements-title {
+    margin-bottom: 32px;
+  }
+
+  .regional-standart__elements-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .regional-standart__elements-item {
+    padding: 24px;
+    height: 194px;
+  }
+
+  .regional-standart__elements-txt {
+    line-height: 130%;
+  }
+
+  .invest-decl__container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+
+  .invest-decl__desc {
+    row-gap: 30px;
+  }
+
+  .invest-decl__img {
+    height: 395px;
+  }
+
+  .org-invest__title,
+  .org-invest__titles {
+    margin-bottom: 32px;
+  }
+
+  .org-invest__tasks-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .org-invest__tasks-item {
+    padding: 24px;
+    min-height: 202px;
+  }
+
+  .invest-com__title {
+    margin-bottom: 32px;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .invest-com__titles {
+    margin-bottom: 28px;
+    max-width: 100%;
+  }
+
+  .invest-com__links-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .invest-com__links-title {
+    margin-bottom: 16px;
+  }
+
+  .invest-com__links-item {
+    padding: 24px;
+    height: 180px;
+  }
+
+  .invest-com__links-tit {
+    font-size: 18px;
+  }
+
+  .invest-com__links-link {
+    font-size: 20px;
+  }
+
+  .invest-corp__img {
+    height: 675px;
+  }
+
+  .invest-corp__content {
+    left: 32px;
+    top: 32px;
+    bottom: 32px;
+    max-width: 560px;
+  }
+
+  .invest-corp__title {
+    font-size: 36px;
+  }
+
+  .invest-corp__desc-txt {
+    margin-bottom: 32px;
+    line-height: 130%;
+  }
+
+  .invest-rules__title {
+    margin-bottom: 32px;
+  }
+
+  .invest-rules__links {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -8582,6 +9070,7 @@ fieldset {
     line-height: 110%;
   }
 
+  .regional-standart__title,
   .regul-committee__title,
   .invest-committee__title,
   .result-years__title,
@@ -8591,6 +9080,8 @@ fieldset {
     font-size: 32px;
   }
 
+  .invest-com__links-link,
+  .regional-standart__elements-title,
   .big-town__peoples,
   .municipality__descs-title,
   .regul-committee__ask-soc a,
@@ -8608,6 +9099,12 @@ fieldset {
     font-size: 24px;
   }
 
+  .invest-corp__desc-txt,
+  .invest-com__links-tit,
+  .invest-com__subtitle,
+  .org-invest__subtitle,
+  .invest-decl__subtitle,
+  .regional-standart__subtitle p,
   .municipality__descs-item span:last-child,
   .municipality__desc p,
   .regul-committee__ask-text,
@@ -8623,18 +9120,22 @@ fieldset {
   .story__item-title,
   .news__card-content-text,
   .news__card-main-text,
-  .map__text,
   .region__item-stat__text,
   .region__text,
   .calculator__subtitle,
   .steps-investor__item-txt,
   .project-desc__desc-txt,
   .project-desc__list li,
+  .map__text,
+  .map__subtitles p,
   .content ul > li,
   .content p {
     font-size: 16px;
   }
 
+  .invest-com__links-title,
+  .org-invest__tasks-title,
+  .regional-standart__elements-txt,
   .big-town__city,
   .regul-committee__ask-title,
   .regul-committee__ask_name,
@@ -8651,6 +9152,15 @@ fieldset {
   .content strong {
     font-size: 20px;
     line-height: 120%;
+  }
+
+  .invest-rules__title,
+  .invest-corp__title,
+  .invest-com__title,
+  .org-invest__title,
+  .invest-decl__title,
+  .map__title {
+    font-size: 24px;
   }
 
   .container {
@@ -8788,6 +9298,46 @@ fieldset {
     font-size: 18px;
     height: -moz-fit-content;
     height: fit-content;
+  }
+
+  .map__text,
+  .map__item-text,
+  .map__item-link {
+    font-size: 16px;
+  }
+
+  .map__map {
+    width: 102%;
+    min-height: 181px;
+    transform: translateX(-5px);
+  }
+
+  .map__item {
+    padding: 20px;
+    height: auto;
+  }
+
+  .map__items {
+    margin-top: -16px;
+    row-gap: 14px;
+  }
+
+  .map--invest .map__title {
+    font-size: 32px;
+  }
+
+  .map--invest .map__map {
+    transform: translate(-5px);
+    margin-top: 38px;
+    width: 103%;
+  }
+
+  .map--invest .map__items {
+    margin-top: -8px;
+  }
+
+  .map--invest .map__subtitles-link {
+    margin-top: 16px;
   }
 
   .footer__top {
@@ -9374,28 +9924,6 @@ fieldset {
 
   .region__item-about {
     width: 100%;
-  }
-
-  .map__text,
-  .map__item-text,
-  .map__item-link {
-    font-size: 16px;
-  }
-
-  .map__map {
-    width: 102%;
-    min-height: 181px;
-    transform: translateX(-5px);
-  }
-
-  .map__item {
-    padding: 20px;
-    height: auto;
-  }
-
-  .map__items {
-    margin-top: -16px;
-    row-gap: 14px;
   }
 
   .news .container {
@@ -9992,6 +10520,86 @@ fieldset {
 
   .invest-authorize__title {
     font-size: 24px;
+  }
+
+  .regional-standart__elements-items {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+  }
+
+  .regional-standart__title {
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .regional-standart__elements-item {
+    height: 160px;
+  }
+
+  .invest-decl__img {
+    height: 248px;
+  }
+
+  .org-invest__tasks-item {
+    min-height: 160px;
+  }
+
+  .org-invest__title {
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .invest-com__titles {
+    margin-bottom: 32px;
+  }
+
+  .invest-com__links-title {
+    margin-bottom: 20px;
+  }
+
+  .invest-com__links-items {
+    row-gap: 16px;
+  }
+
+  .invest-com__links-item {
+    height: 160px;
+    padding: 24px 20px;
+  }
+
+  .invest-com__links-tit {
+    line-height: 130%;
+    font-size: 16px;
+  }
+
+  .invest-corp__content {
+    max-width: 100%;
+    left: 20px;
+    right: 20px;
+  }
+
+  .invest-corp__title {
+    max-width: 90%;
+    font-size: 24px;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .invest-corp__img {
+    height: 580px;
+  }
+
+  .invest-rules__title {
+    font-size: 32px;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .invest-rules__link {
+    align-items: flex-start;
+  }
+
+  .invest-rules__links {
+    row-gap: 16px;
   }
 }
 

@@ -1,0 +1,125 @@
+.invest-com {
+  &__titles {
+    margin-bottom: 40px;
+    max-width: 760px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    @extend %mainTxt;
+  }
+
+  &__links-title {
+    @extend %subheader;
+    margin-bottom: 20px;
+  }
+
+  &__links-items {
+    @extend %gridColumnTwo;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  &__links-item {
+    @extend %flexColumn;
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 32px;
+    height: 222px;
+  }
+
+  &__links-tit {
+    @extend %mainTxt;
+  }
+
+  &__links-link {
+    @extend %h3;
+    color: $bluePrimary;
+
+    &:hover {
+      color: $blueHover;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .invest-com {
+    &__subtitle {
+      line-height: 130%;
+    }
+
+    &__titles {
+      max-width: 730px;
+    }
+
+    &__links-tit {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .invest-com {
+    &__title {
+      margin-bottom: 32px;
+      hyphens: auto;
+    }
+
+    &__titles {
+      margin-bottom: 28px;
+      max-width: 100%;
+    }
+
+    &__links-items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__links-title {
+      margin-bottom: 16px;
+    }
+
+    &__links-item {
+      padding: 24px;
+      height: 180px;
+    }
+
+    &__links-tit {
+      font-size: 18px;
+    }
+
+    &__links-link {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .invest-com {
+    &__titles {
+      margin-bottom: 32px;
+    }
+
+    &__links-title {
+      margin-bottom: 20px;
+    }
+
+    &__links-items {
+      row-gap: 16px;
+    }
+
+    &__links-item {
+      height: 160px;
+      padding: 24px 20px;
+    }
+
+    &__links-tit {
+      line-height: 130%;
+      font-size: 16px;
+    }
+  }
+}

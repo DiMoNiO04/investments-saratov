@@ -1,0 +1,120 @@
+.regional-standart {
+  &__titles {
+    @extend %gridColumnTwo;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @extend %h2;
+    padding-right: 40px;
+  }
+
+  &__subtitle {
+    padding-right: 20px;
+
+    p {
+      @extend %mainTxt;
+      @include mb(12px);
+    }
+  }
+
+  &__elements-title {
+    @extend %h3;
+    max-width: 870px;
+    margin-bottom: 40px;
+  }
+
+  &__elements-items {
+    @extend %gridColumnThree;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  &__elements-item {
+    @extend %flexColumn;
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 32px;
+    height: 182px;
+  }
+
+  &__elements-icon {
+    @include sizes(40px, 40px);
+  }
+
+  &__elements-txt {
+    @extend %subheader;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .regional-standart {
+    &__subtitle {
+      p {
+        line-height: 130%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .regional-standart {
+    &__titles {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 32px;
+    }
+
+    &__subtitle {
+      padding: 0;
+    }
+
+    &__title {
+      padding: 0;
+      max-width: 552px;
+      margin-bottom: 32px;
+    }
+
+    &__subtitle {
+      p {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    &__elements-title {
+      margin-bottom: 32px;
+    }
+
+    &__elements-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__elements-item {
+      padding: 24px;
+      height: 194px;
+    }
+
+    &__elements-txt {
+      line-height: 130%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .regional-standart {
+    &__elements-items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+    }
+
+    &__title {
+      hyphens: auto;
+    }
+
+    &__elements-item {
+      height: 160px;
+    }
+  }
+}

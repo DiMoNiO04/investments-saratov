@@ -143,3 +143,18 @@
   font-weight: 600;
   line-height: 130%;
 }
+
+%secondaryH3 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 110%;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $laptop) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: $mob) {
+    font-size: 24px;
+  }
+}

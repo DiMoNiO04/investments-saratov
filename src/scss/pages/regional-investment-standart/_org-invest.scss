@@ -1,0 +1,107 @@
+.org-invest {
+  &__titles {
+    max-width: 1020px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    @extend %mainTxt;
+  }
+
+  &__tasks-title {
+    @extend %subheader;
+    margin-bottom: 20px;
+  }
+
+  &__tasks-items {
+    @extend %gridColumnTwo;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  &__tasks-item {
+    @extend %flexColumn;
+    justify-content: space-between;
+    row-gap: 12px;
+    border-radius: 4px;
+    background: $white;
+    padding: 32px;
+    min-height: 222px;
+
+    &:last-child {
+      background: $blueGradient;
+
+      .org-invest__tasks-num,
+      .org-invest__tasks-txt {
+        color: $white;
+      }
+    }
+  }
+
+  &__tasks-num {
+    color: $bluePrimary;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  &__tasks-txt {
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .org-invest {
+    &__titles {
+      max-width: 740px;
+    }
+
+    &__subtitle {
+      line-height: 130%;
+    }
+
+    &__tasks-num {
+      font-size: 32px;
+    }
+
+    &__tasks-item {
+      min-height: 237px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .org-invest {
+    &__title,
+    &__titles {
+      margin-bottom: 32px;
+    }
+
+    &__tasks-items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__tasks-item {
+      padding: 24px;
+      min-height: 202px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .org-invest {
+    &__tasks-item {
+      min-height: 160px;
+    }
+
+    &__title {
+      hyphens: auto;
+    }
+  }
+}

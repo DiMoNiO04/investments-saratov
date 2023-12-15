@@ -1,0 +1,91 @@
+.invest-corp {
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+    @extend %flexColumn;
+    justify-content: space-between;
+    max-width: 800px;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    bottom: 60px;
+  }
+
+  &__img {
+    height: 710px;
+
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  &__title {
+    color: $white;
+    @extend %secondaryH3;
+  }
+
+  &__desc-txt {
+    color: $white;
+    @extend %mainTxt;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .invest-corp {
+    &__content {
+      left: 48px;
+    }
+
+    &__img {
+      height: 586px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .invest-corp {
+    &__img {
+      height: 675px;
+    }
+
+    &__content {
+      left: 32px;
+      top: 32px;
+      bottom: 32px;
+      max-width: 560px;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__desc-txt {
+      margin-bottom: 32px;
+      line-height: 130%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .invest-corp {
+    &__content {
+      max-width: 100%;
+      left: 20px;
+      right: 20px;
+    }
+
+    &__title {
+      max-width: 90%;
+      font-size: 24px;
+      hyphens: auto;
+    }
+
+    &__img {
+      height: 580px;
+    }
+  }
+}
