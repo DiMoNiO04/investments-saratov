@@ -1185,7 +1185,7 @@ template {
   justify-content: space-between;
 }
 
-.regul-committee__ask-info, .regul-committee__doc, .result-years__item, .soceconomic-develop__item-bottom, .legislation__item-btn, .account__content--appeals .account__fieldset-file, .account__fieldset-radioboxs, .account__fieldset-inputs, .calculator__block-radiobtns, .calculator__items, .success-hist__slide-items, .header-bottom__btn, .header-bottom__btns, .header-bottom__links, .header-bottom__list, .header-top__container, .modal-pers-cab__title, .modal-write__btns, .footer__info-socials, .textarea__textarea, .input-labels .input__items {
+.regul-committee__ask-info, .regul-committee__doc, .soceconomic-develop__item-bottom, .legislation__item-btn, .account__content--appeals .account__fieldset-file, .account__fieldset-radioboxs, .account__fieldset-inputs, .calculator__block-radiobtns, .calculator__items, .success-hist__slide-items, .header-bottom__btn, .header-bottom__btns, .header-bottom__links, .header-bottom__list, .header-top__container, .modal-pers-cab__title, .modal-write__btns, .footer__info-socials, .doc-download__item, .textarea__textarea, .input-labels .input__items {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -2640,6 +2640,37 @@ fieldset {
 }
 .content ul:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.doc-download__item {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 20px;
+  column-gap: 16px;
+  cursor: pointer;
+}
+.doc-download__item:hover {
+  background-color: #2d6fd0;
+}
+.doc-download__item:hover .doc-download__item-icon svg use {
+  stroke: #ffffff;
+}
+.doc-download__item:hover .doc-download__item-name {
+  color: #ffffff;
+}
+.doc-download__item-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.doc-download__item-icon svg use {
+  stroke: #2d6fd0;
+}
+.doc-download__item-name {
+  color: #2d6fd0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
 }
 
 .footer {
@@ -7122,7 +7153,7 @@ fieldset {
     height: 20px;
   }
   .soceconomic-develop__item-name {
-    font-size: 26px;
+    font-size: 24px;
     word-break: break-word;
   }
   .soceconomic-develop__item-content ul {
@@ -7153,36 +7184,6 @@ fieldset {
 .result-years__items {
   column-gap: 20px;
   row-gap: 20px;
-}
-.result-years__item {
-  border-radius: 4px;
-  background-color: #ffffff;
-  padding: 20px;
-  column-gap: 16px;
-  cursor: pointer;
-}
-.result-years__item:hover {
-  background-color: #2d6fd0;
-}
-.result-years__item:hover .result-years__item-icon svg use {
-  stroke: #ffffff;
-}
-.result-years__item:hover .result-years__item-link {
-  color: #ffffff;
-}
-.result-years__item-icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-.result-years__item-icon svg use {
-  stroke: #2d6fd0;
-}
-.result-years__item-link {
-  color: #2d6fd0;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 130%;
 }
 
 @media screen and (max-width: 1365px) {
