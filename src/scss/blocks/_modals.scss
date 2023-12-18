@@ -262,6 +262,51 @@
   }
 }
 
+.modal-innovative-enterprises {
+  &__inner {
+    width: 837px;
+  }
+
+  &__content {
+    padding: 50px 60px 60px;
+    max-height: 830px;
+    overflow-y: auto;
+  }
+
+  &__title {
+    @extend %h3;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  &__blocks {
+    @extend %flexColumn;
+    row-gap: 16px;
+  }
+
+  &__block {
+    a {
+      color: $bluePrimary;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 130%;
+      margin-bottom: 2px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 130%;
+    }
+  }
+}
+
 @media screen and (max-width: $laptop) {
   .modal-pers-cab--succes {
     &__btn {

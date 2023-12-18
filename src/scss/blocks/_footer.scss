@@ -36,10 +36,6 @@
   }
 
   &__info {
-    // width: 100%;
-    // @extend %flexColumn;
-    // row-gap: 32px;
-
     &-title {
       @extend %regular16;
       margin-bottom: 16px;
@@ -93,7 +89,7 @@
       }
 
       &-hide {
-        display: block;
+        display: none;
       }
     }
 
@@ -281,10 +277,12 @@
 
     &__info {
       row-gap: 20px;
+
       &-title {
         margin-bottom: 8px;
         font-size: 14px;
       }
+
       &-link {
         font-size: 16px;
       }

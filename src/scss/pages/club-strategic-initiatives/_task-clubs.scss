@@ -1,0 +1,83 @@
+.task-clubs {
+  &__container {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__descs {
+    padding-right: 20px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__subtitles {
+    p {
+      @extend %mainTxt;
+      @include mb(8px);
+    }
+  }
+
+  &__pic {
+    background-color: $white;
+    padding: 32px;
+    border-radius: 4px;
+  }
+
+  &__img {
+    @include sizes(408px, 272px);
+    margin: 0 auto;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .task-clubs {
+    &__pic {
+      padding: 0;
+    }
+
+    &__img {
+      @include sizes(526px, 322px);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .task-clubs {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+    }
+
+    &__descs {
+      padding: 0;
+    }
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__img {
+      @include sizes(526px, 352px);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .task-clubs {
+    &__pic {
+      padding: 20px 35px;
+    }
+
+    &__img {
+      width: 100%;
+      height: 209px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.strategy {
+  &__titles {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+    margin-bottom: 96px;
+  }
+
+  &__title {
+    color: $black;
+    padding-right: 20px;
+  }
+
+  &__subtitles {
+    padding-right: 20px;
+
+    p {
+      @extend %mainTxt;
+      @include mb(12px);
+    }
+  }
+
+  &__img {
+    display: block;
+    @include sizes(100%, 500px);
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .strategy {
+    &__titles {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .strategy {
+    &__titles {
+      grid-template-columns: repeat(1, auto);
+      row-gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    &__subtitles {
+      padding: 0;
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    &__img {
+      height: 400px;
+    }
+  }
+}

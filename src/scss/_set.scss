@@ -29,6 +29,20 @@ body {
   color: $black;
   background-color: $bgGreyLight;
   background: $bgGreyLight;
+
+  &.ov-hidden {
+    overflow: hidden;
+  }
+}
+
+main {
+  padding-top: 160px;
+}
+
+@media screen and (max-width: $mob) {
+  main {
+    padding-top: 86px;
+  }
 }
 
 input,
@@ -160,6 +174,7 @@ fieldset {
 .subtitle {
   @extend %h2;
   color: $white;
+  hyphens: auto;
 }
 
 .hidden {
@@ -194,10 +209,6 @@ fieldset {
 
   .section {
     margin-bottom: 100px;
-  }
-
-  .subtitle {
-    hyphens: auto;
   }
 }
 

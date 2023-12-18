@@ -20,5 +20,6 @@ module.exports = {
     'no-unused-expressions': 'off',
     'import/no-mutable-exports': 'off',
     'no-dupe-keys': 'off',
+    'no-use-before-define': 'off',
   },
 };

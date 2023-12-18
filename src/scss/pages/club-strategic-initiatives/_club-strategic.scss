@@ -1,0 +1,40 @@
+.club-strategic {
+  &__container {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__title {
+    padding-right: 20px;
+    @extend %h2;
+  }
+
+  &__subtitles {
+    padding-right: 20px;
+
+    p {
+      @extend %mainTxt;
+      @include mb(12px);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .club-strategic {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+    }
+
+    &__title,
+    &__subtitles {
+      padding: 0;
+    }
+
+    &__subtitles {
+      p {
+        @include mb(8px);
+      }
+    }
+  }
+}

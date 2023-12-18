@@ -93,3 +93,6 @@ const exitConfirmation = document.querySelector('[data-modal="exit-confirmation"
 const descInfractureProject = document.querySelector('[data-modal="desc-infracture-project"]')
   ? new Modal('desc-infracture-project')
   : null;
+const developmentInnovativeEnterprises = document.querySelector('[data-modal="development-innovative-enterprises"]')
+  ? new Modal('development-innovative-enterprises')
+  : null;

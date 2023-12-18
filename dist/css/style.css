@@ -1175,6 +1175,9 @@ svg {
   height: 100%;
 }
 
+.func-public-repres__item-content,
+.func-public-repres__item-btn svg:last-child,
+.func-public-repres__item.active .func-public-repres__item-btn svg:first-child,
 .success-hist__slide-content,
 .benefits__slide-content,
 .steps-investor__item-content,
@@ -1189,6 +1192,9 @@ svg {
   visibility: hidden;
 }
 
+.func-public-repres__item-btn svg:first-child,
+.func-public-repres__item.active .func-public-repres__item-btn svg:last-child,
+.func-public-repres__item.active .func-public-repres__item-content,
 .success-hist__slide.swiper-slide-active .success-hist__slide-content,
 .benefits__slide.swiper-slide-active .benefits__slide-content,
 .steps-investor__item-btn svg:first-child,
@@ -1203,6 +1209,13 @@ svg {
   visibility: visible;
 }
 
+.func-public-repres__item-list,
+.func-public-repres__items,
+.func-public-repres__container,
+.public-representative__item,
+.main-direction__item,
+.priorities__item,
+.strategic-priority__descs,
 .invest-com__links-item,
 .org-invest__tasks-item,
 .invest-decl__desc,
@@ -1252,6 +1265,7 @@ svg {
 .chat__content-blocks,
 .header-top__phone,
 .header,
+.modal-innovative-enterprises__blocks,
 .modal-infrastructure__items,
 .modal-infrastructure__blocks,
 .modal-pers-cab__content,
@@ -1266,6 +1280,7 @@ svg {
   flex-direction: column;
 }
 
+.public-representative__item-icon,
 .municipality__descs-item:last-child,
 .location__map-city__pin,
 .transport-inf__item-icon,
@@ -1278,8 +1293,10 @@ svg {
 .calculator__item label,
 .calculator__item div,
 .chat__menu-count,
+.header-bottom__list-item,
 .header-bottom__btn,
-.header-top__btns-search,
+.header-top__btns-button,
+.form-search,
 .list-per__item,
 .pagination__btn,
 .pagination,
@@ -1295,6 +1312,9 @@ svg {
   justify-content: center;
 }
 
+.func-public-repres__item-list li,
+.func-public-repres__item-title,
+.public-representative__item-top,
 .regul-committee__ask-item:last-child,
 .regul-committee__order-item,
 .authentication__desc-list li,
@@ -1328,9 +1348,9 @@ svg {
 .chat__menu-dates,
 .account-menu__item,
 .header-bottom__container,
+.header-top__search-wr,
 .header-top__btns,
 .header-top__socials,
-.header-top__panel,
 .header-top__content,
 .footer__bottom,
 .footer__list-title,
@@ -1343,6 +1363,7 @@ svg {
   justify-content: space-between;
 }
 
+.func-public-repres__content,
 .municipality__descs-items,
 .transport-inf__blocks,
 .clim-condition__blocks,
@@ -1354,6 +1375,7 @@ svg {
   justify-content: space-between;
 }
 
+.header-top__panel,
 .modal-pers-cab__btns {
   display: flex;
   align-items: center;
@@ -1398,6 +1420,7 @@ svg {
   justify-content: flex-start;
 }
 
+.func-public-repres__item-content,
 .regul-committee__ask-item,
 .invest-committee__titles,
 .regional-project__descs,
@@ -1408,6 +1431,11 @@ svg {
   justify-content: space-between;
 }
 
+.task-clubs__container,
+.club-strategic__container,
+.strategy-grafic__container,
+.strategic-priority__container,
+.strategy__titles,
 .invest-com__links-items,
 .org-invest__tasks-items,
 .invest-decl__container,
@@ -1423,6 +1451,8 @@ svg {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.public-representative__items,
+.main-direction__items,
 .regional-standart__elements-items,
 .regul-committee__ask-items,
 .regul-committee__order-items {
@@ -1430,6 +1460,7 @@ svg {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.tourism-potential__blocks-items,
 .list-per--districs .list-per__items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1463,6 +1494,7 @@ svg {
   line-height: 130%;
 }
 
+.public-representative__item-txt,
 .legislation__btns button span,
 .recovery-pass__back span,
 .auth__socials-title,
@@ -1511,6 +1543,7 @@ svg {
   text-transform: uppercase;
 }
 
+.club-strategic__title,
 .regional-standart__title,
 .regul-committee__title,
 .invest-committee__title,
@@ -1524,6 +1557,8 @@ svg {
   text-transform: uppercase;
 }
 
+.public-representative__item-link,
+.strategy-grafic__grafic-title,
 .invest-com__links-link,
 .regional-standart__elements-title,
 .big-town__peoples,
@@ -1539,12 +1574,23 @@ svg {
 .success-hist__slide-desc,
 .project-desc__desc-title,
 .project-desc__list li b,
+.modal-innovative-enterprises__title,
 .modal-write__title {
   font-size: 32px;
   font-weight: 600;
   line-height: 120%;
 }
 
+.func-public-repres__item-txt,
+.main-direction__item p,
+.main-direction__subtitle,
+.task-clubs__subtitles p,
+.club-strategic__subtitles p,
+.strategy-grafic__desc p,
+.tourism-potential__blocks-txt,
+.tourism-potential__subtitles p,
+.strategic-priority__desc p,
+.strategy__subtitles p,
 .invest-com__links-tit,
 .invest-com__subtitle,
 .org-invest__subtitle,
@@ -1630,6 +1676,10 @@ svg {
   line-height: 130%;
 }
 
+.func-public-repres__item-tit,
+.tourism-potential__blocks-num,
+.tourism-potential__blocks-title,
+.priorities__txt,
 .invest-com__links-title,
 .org-invest__tasks-title,
 .regional-standart__elements-txt,
@@ -1659,6 +1709,14 @@ svg {
   line-height: 130%;
 }
 
+.func-public-repres__title,
+.public-representative__title,
+.main-direction__title,
+.task-clubs__title,
+.strategy-grafic__title,
+.tourism-potential__title,
+.priorities__title,
+.strategic-priority__title,
 .invest-com__title,
 .org-invest__title,
 .invest-decl__title,
@@ -1742,6 +1800,14 @@ body {
   color: #2f2f2f;
   background-color: #f5f6f6;
   background: #f5f6f6;
+}
+
+body.ov-hidden {
+  overflow: hidden;
+}
+
+main {
+  padding-top: 160px;
 }
 
 input,
@@ -1870,6 +1936,8 @@ fieldset {
 
 .subtitle {
   color: #ffffff;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 
 .hidden {
@@ -3115,6 +3183,70 @@ fieldset {
   height: 98px;
 }
 
+.form-search {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 46px;
+  width: 100%;
+  display: none;
+}
+
+.form-search.show {
+  display: flex;
+}
+
+.form-search__input {
+  color: var(--txt-grey-txt, #858c95);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  padding: 12px 40px;
+  border-radius: 4px 0px 0px 4px;
+  border: 1px solid var(--input-grey-stroke, #dee2e7);
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+.form-search__button-open {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.form-search__button-open svg path {
+  stroke: #858c95;
+}
+
+.form-search__button-open:hover svg path {
+  stroke: #2f2f2f;
+}
+
+.form-search__button-close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-search__button-close svg path {
+  fill: #858c95;
+}
+
+.form-search__button-close:hover svg path {
+  fill: #2f2f2f;
+}
+
 .map__titles {
   -moz-column-gap: 20px;
        column-gap: 20px;
@@ -3294,7 +3426,7 @@ fieldset {
 }
 
 .footer__list-title-hide {
-  display: block;
+  display: none;
 }
 
 .footer__list-items {
@@ -3534,10 +3666,50 @@ fieldset {
   line-height: 130%;
 }
 
+.modal-innovative-enterprises__inner {
+  width: 837px;
+}
+
+.modal-innovative-enterprises__content {
+  padding: 50px 60px 60px;
+  max-height: 830px;
+  overflow-y: auto;
+}
+
+.modal-innovative-enterprises__title {
+  margin-bottom: 40px;
+}
+
+.modal-innovative-enterprises__subtitle {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.modal-innovative-enterprises__blocks {
+  row-gap: 16px;
+}
+
+.modal-innovative-enterprises__block a {
+  color: #2d6fd0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 2px;
+}
+
+.modal-innovative-enterprises__block p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
 .header {
   background-color: #ffffff;
   z-index: 10;
   transition: background 0.5s ease-in;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -3546,7 +3718,11 @@ fieldset {
   height: 160px;
 }
 
-.header.test .header-top {
+.header.active {
+  height: auto;
+}
+
+.header.active .header-top {
   display: none;
 }
 
@@ -3562,7 +3738,6 @@ fieldset {
 .header button:not(.dropdown__btn):hover,
 .header a:not(.header-top__social):hover {
   color: #2661d4;
-  font-weight: 600;
 }
 
 .header button:not(.dropdown__btn):hover svg use,
@@ -3596,11 +3771,8 @@ fieldset {
   border-left: 1px solid #dee2e7;
   padding-top: 32px;
   padding-bottom: 25px;
+  padding-left: 24px;
   width: 100%;
-}
-
-.header-top__phone {
-  margin-left: 24px;
 }
 
 .header-top__phone p {
@@ -3608,6 +3780,7 @@ fieldset {
 }
 
 .header-top__panel {
+  width: 100%;
   -moz-column-gap: 32px;
        column-gap: 32px;
 }
@@ -3636,15 +3809,21 @@ fieldset {
        column-gap: 32px;
 }
 
-.header-top__btns-search {
+.header-top__btns-button {
   -moz-column-gap: 8px;
        column-gap: 8px;
+  cursor: pointer;
 }
 
-.header-top__btns-search svg {
-  width: 24px;
-  height: 24px;
+.header-top__btns-button svg {
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
+}
+
+.header-top__dropdown {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .header-top__dropdown .dropdown__content {
@@ -3664,6 +3843,16 @@ fieldset {
 .header-top__dropdown .dropdown__btn {
   width: 12px;
   height: 12px;
+}
+
+.header-top__search-wr {
+  margin-right: auto;
+  width: 100%;
+  position: relative;
+}
+
+.header-top__entrance {
+  display: none;
 }
 
 .header-bottom {
@@ -3693,12 +3882,74 @@ fieldset {
 .header-bottom__btn-burg {
   width: 32px;
   height: 32px;
+  background-image: url(../assets/img/icons/burger-show.svg);
+}
+
+.header-bottom__btn-burg.change {
+  background-image: url(../assets/img/icons/burger-close.svg);
+}
+
+.header-bottom__list-item {
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.header-bottom__list-menu {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 36px;
+  left: -20px;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 325px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.header-bottom__list-menu > li {
+  padding: 12px 20px;
+}
+
+.header-bottom__list-menu.show {
+  display: flex;
+}
+
+.header-bottom__menu.hide {
+  display: none;
 }
 
 .header-bottom__links,
 .header-bottom__list {
   -moz-column-gap: 32px;
        column-gap: 32px;
+}
+
+.header-menu {
+  display: none;
+  background-color: #ffffff;
+  height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.header-menu .footer__list-title p,
+.header-menu .footer__list-title a {
+  color: #2f2f2f;
+}
+
+.header-menu.show {
+  display: block;
 }
 
 .header--transparent {
@@ -4267,7 +4518,10 @@ fieldset {
 
 .picture-text__desc-txt {
   color: #ffffff;
-  margin-bottom: 40px;
+}
+
+.picture-text .btn {
+  margin-top: 40px;
 }
 
 .governor {
@@ -6759,6 +7013,434 @@ fieldset {
   color: #2661d4;
 }
 
+.strategy__titles {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  margin-bottom: 96px;
+}
+
+.strategy__title {
+  color: #2f2f2f;
+  padding-right: 20px;
+}
+
+.strategy__subtitles {
+  padding-right: 20px;
+}
+
+.strategy__subtitles p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.strategy__img {
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+
+.strategy__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.strategic-priority__container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.strategic-priority__descs {
+  row-gap: 40px;
+  padding-right: 20px;
+}
+
+.strategic-priority__desc p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.strategic-priority__img {
+  width: 100%;
+  max-height: 507px;
+}
+
+.strategic-priority__img img {
+  border-radius: 4px;
+}
+
+.priorities__title {
+  margin-bottom: 40px;
+}
+
+.priorities__items {
+  display: flex;
+  align-items: stretch;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.priorities__item {
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 32px 30px;
+  flex: 0 0 calc(25% - 15px);
+  min-height: 182px;
+  height: auto;
+  row-gap: 16px;
+}
+
+.priorities__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.priorities__txt {
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+.tourism-potential__titles {
+  margin-bottom: 32px;
+  width: 760px;
+}
+
+.tourism-potential__title {
+  margin-bottom: 40px;
+}
+
+.tourism-potential__subtitles p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.tourism-potential__blocks-title {
+  margin-bottom: 20px;
+}
+
+.tourism-potential__blocks-items {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.tourism-potential__blocks-item {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+}
+
+.tourism-potential__blocks-num {
+  color: #2d6fd0;
+  margin-bottom: 16px;
+}
+
+.strategy-grafic__container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.strategy-grafic__descs {
+  padding-right: 20px;
+}
+
+.strategy-grafic__title {
+  margin-bottom: 40px;
+}
+
+.strategy-grafic__desc p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.strategy-grafic__grafic {
+  border-radius: 4px;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.strategy-grafic__grafic-title {
+  margin-bottom: 24px;
+}
+
+.strategy-grafic__grafic-img {
+  width: 100%;
+  height: 340px;
+  display: block;
+}
+
+.club-strategic__container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.club-strategic__title {
+  padding-right: 20px;
+}
+
+.club-strategic__subtitles {
+  padding-right: 20px;
+}
+
+.club-strategic__subtitles p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.task-clubs__container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.task-clubs__descs {
+  padding-right: 20px;
+}
+
+.task-clubs__title {
+  margin-bottom: 40px;
+}
+
+.task-clubs__subtitles p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.task-clubs__pic {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.task-clubs__img {
+  width: 408px;
+  height: 272px;
+  margin: 0 auto;
+}
+
+.task-clubs__img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.main-direction__titles {
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+
+.main-direction__title {
+  margin-bottom: 40px;
+}
+
+.main-direction__items {
+  grid-auto-rows: 1fr;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.main-direction__item {
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+  row-gap: 32px;
+}
+
+.main-direction__item svg {
+  width: 40px;
+  height: 40px;
+}
+
+.public-representative__title {
+  margin-bottom: 40px;
+  max-width: 870px;
+}
+
+.public-representative__items {
+  grid-auto-rows: 1fr;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.public-representative__item {
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 32px;
+  row-gap: 30px;
+}
+
+.public-representative__item-link {
+  color: #2d6fd0;
+}
+
+.public-representative__item-link:hover {
+  color: #2661d4;
+}
+
+.public-representative__item-top {
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.public-representative__item-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #2d6fd0;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.public-representative__item-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.public-representative__item-name {
+  margin-bottom: 2px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.func-public-repres__container {
+  row-gap: 40px;
+}
+
+.func-public-repres__title {
+  max-width: 870px;
+}
+
+.func-public-repres__content {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.func-public-repres__img {
+  flex: 0 0 630px;
+}
+
+.func-public-repres__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.func-public-repres__items {
+  row-gap: 20px;
+  width: 100%;
+}
+
+.func-public-repres__item {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 40px 32px;
+  position: relative;
+}
+
+.func-public-repres__item.active .func-public-repres__item-title {
+  padding-bottom: 20px;
+}
+
+.func-public-repres__item-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1.4px solid #2d6fd0;
+  padding: 10px;
+  position: absolute;
+  top: 40px;
+  right: 32px;
+}
+
+.func-public-repres__item-btn svg {
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: calc(50% - 5.5px);
+  left: calc(50% - 5.5px);
+  transition: opacity 0.4s ease, opacity 0.4s ease;
+}
+
+.func-public-repres__item-title {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  transition: padding 0.4s ease;
+  max-width: 90%;
+}
+
+.func-public-repres__item-number {
+  color: #2d6fd0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+.func-public-repres__item-content {
+  padding-left: 48px;
+  height: 0;
+  transition: visibility 0.4s ease, opacity 0.4s ease, height 0.4s ease, padding 0.4s ease;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.func-public-repres__item-desc {
+  padding-right: 20px;
+}
+
+.func-public-repres__item-img {
+  flex-shrink: 0;
+  width: 598px;
+  height: 460px;
+}
+
+.func-public-repres__item-img img {
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.func-public-repres__item-cont p {
+  font-size: 16px;
+}
+
+.func-public-repres__item-cont p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.func-public-repres__item-cont p:not(:last-child) {
+  margin-top: 0;
+}
+
+.func-public-repres .content ul > li {
+  font-size: 16px;
+}
+
+.func-public-repres .content ul > li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.func-public-repres__item-but {
+  margin-top: 40px;
+}
+
+.func-public-repres__item-list {
+  row-gap: 8px;
+}
+
+.func-public-repres__item-list li {
+  position: relative;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.func-public-repres__item-list li::before {
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: url("../assets/img/icons/bullet.svg");
+  flex-shrink: 0;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -6832,6 +7514,7 @@ fieldset {
     font-size: 64px;
   }
 
+  .club-strategic__title,
   .regional-standart__title,
   .regul-committee__title,
   .invest-committee__title,
@@ -6842,6 +7525,8 @@ fieldset {
     font-size: 48px;
   }
 
+  .public-representative__item-link,
+  .strategy-grafic__grafic-title,
   .invest-com__links-link,
   .regional-standart__elements-title,
   .big-town__peoples,
@@ -6857,10 +7542,21 @@ fieldset {
   .success-hist__slide-desc,
   .project-desc__desc-title,
   .project-desc__list li b,
+  .modal-innovative-enterprises__title,
   .modal-write__title {
     font-size: 26px;
   }
 
+  .func-public-repres__item-txt,
+  .main-direction__item p,
+  .main-direction__subtitle,
+  .task-clubs__subtitles p,
+  .club-strategic__subtitles p,
+  .strategy-grafic__desc p,
+  .tourism-potential__blocks-txt,
+  .tourism-potential__subtitles p,
+  .strategic-priority__desc p,
+  .strategy__subtitles p,
   .invest-com__links-tit,
   .invest-com__subtitle,
   .org-invest__subtitle,
@@ -6893,9 +7589,13 @@ fieldset {
   .content ul > li,
   .content p {
     font-size: 18px;
-    line-height: 140%;
+    line-height: 130%;
   }
 
+  .func-public-repres__item-tit,
+  .tourism-potential__blocks-num,
+  .tourism-potential__blocks-title,
+  .priorities__txt,
   .invest-com__links-title,
   .org-invest__tasks-title,
   .regional-standart__elements-txt,
@@ -6916,6 +7616,14 @@ fieldset {
     line-height: 140%;
   }
 
+  .func-public-repres__title,
+  .public-representative__title,
+  .main-direction__title,
+  .task-clubs__title,
+  .strategy-grafic__title,
+  .tourism-potential__title,
+  .priorities__title,
+  .strategic-priority__title,
   .invest-com__title,
   .org-invest__title,
   .invest-decl__title,
@@ -7048,6 +7756,15 @@ fieldset {
   .header-bottom__list {
     -moz-column-gap: 24px;
          column-gap: 24px;
+  }
+
+  .header-top__logo.hide {
+    display: none;
+  }
+
+  .header-top__content.change {
+    padding-left: 0;
+    border-left: none;
   }
 
   .account-menu {
@@ -7555,6 +8272,70 @@ fieldset {
   .invest-com__links-tit {
     font-size: 20px;
   }
+
+  .strategy__titles {
+    margin-bottom: 40px;
+  }
+
+  .strategic-priority__img {
+    max-height: 438px;
+  }
+
+  .priorities__item {
+    min-height: 213px;
+  }
+
+  .priorities__txt {
+    line-height: 130%;
+  }
+
+  .tourism-potential__titles {
+    margin-bottom: 28px;
+  }
+
+  .tourism-potential__title {
+    font-size: 48px;
+  }
+
+  .tourism-potential__blocks-num {
+    margin-bottom: 12px;
+  }
+
+  .tourism-potential__blocks-items {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+
+  .strategy-grafic__grafic-img {
+    height: 244px;
+  }
+
+  .strategy-grafic__grafic-img--columns {
+    height: 258px;
+  }
+
+  .task-clubs__pic {
+    padding: 0;
+  }
+
+  .task-clubs__img {
+    width: 526px;
+    height: 322px;
+  }
+
+  .public-representative__item {
+    row-gap: 20px;
+  }
+
+  .public-representative__item-top {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .func-public-repres__item-img {
+    width: 450px;
+    height: 552px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -7570,6 +8351,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .club-strategic__title,
   .regional-standart__title,
   .regul-committee__title,
   .invest-committee__title,
@@ -7586,11 +8368,6 @@ fieldset {
 
   .section {
     margin-bottom: 100px;
-  }
-
-  .subtitle {
-    -webkit-hyphens: auto;
-            hyphens: auto;
   }
 
   .btn {
@@ -8158,6 +8935,7 @@ fieldset {
 
   .list-templates__title {
     margin-bottom: 32px;
+    font-size: 32px;
   }
 
   .list-templates__links {
@@ -8172,7 +8950,7 @@ fieldset {
     left: 32px;
     top: 32px;
     bottom: 32px;
-    max-width: 560px;
+    max-width: 100%;
   }
 
   .picture-text__title {
@@ -8180,8 +8958,11 @@ fieldset {
   }
 
   .picture-text__desc-txt {
-    margin-bottom: 32px;
     line-height: 130%;
+  }
+
+  .picture-text .btn {
+    margin-top: 32px;
   }
 
   .governor__container {
@@ -9061,6 +9842,192 @@ fieldset {
   .invest-com__links-link {
     font-size: 20px;
   }
+
+  .strategy__titles {
+    grid-template-columns: repeat(1, auto);
+    row-gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .strategy__subtitles {
+    padding: 0;
+  }
+
+  .strategy__subtitles p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .strategy__img {
+    height: 400px;
+  }
+
+  .strategic-priority__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .strategic-priority__descs {
+    row-gap: 32px;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .strategic-priority__title {
+    font-size: 36px;
+  }
+
+  .strategic-priority__img {
+    max-height: 395px;
+  }
+
+  .priorities__item {
+    flex-basis: calc(50% - 10px);
+    padding: 24px;
+    min-height: 194px;
+  }
+
+  .priorities__title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .tourism-potential__titles {
+    width: 100%;
+  }
+
+  .tourism-potential__title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .tourism-potential__blocks-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .tourism-potential__blocks-item {
+    padding: 24px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tourism-potential__blocks-num {
+    margin-bottom: 0;
+  }
+
+  .strategy-grafic__container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+
+  .strategy-grafic__title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .strategy-grafic__grafic-img {
+    height: 292px;
+  }
+
+  .strategy-grafic__descs {
+    padding: 0;
+  }
+
+  .strategy-grafic__grafic-img--columns {
+    height: 321px;
+  }
+
+  .club-strategic__container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+
+  .club-strategic__title,
+  .club-strategic__subtitles {
+    padding: 0;
+  }
+
+  .club-strategic__subtitles p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .task-clubs__container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+
+  .task-clubs__descs {
+    padding: 0;
+  }
+
+  .task-clubs__title {
+    margin-bottom: 32px;
+  }
+
+  .task-clubs__img {
+    width: 526px;
+    height: 352px;
+  }
+
+  .main-direction__title {
+    margin-bottom: 32px;
+  }
+
+  .main-direction__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-direction__item {
+    padding: 24px;
+    row-gap: 20px;
+  }
+
+  .public-representative__title {
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .public-representative__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .public-representative__item-top {
+    flex-direction: row;
+  }
+
+  .public-representative__item {
+    row-gap: 26px;
+  }
+
+  .func-public-repres__item {
+    padding: 32px;
+  }
+
+  .func-public-repres__item-content {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .func-public-repres__item-btn {
+    top: 32px;
+  }
+
+  .func-public-repres__item-desc {
+    padding-right: 0;
+  }
+
+  .func-public-repres__item-content {
+    padding-right: 32px;
+  }
+
+  .func-public-repres .content ul > li {
+    font-size: 18px;
+  }
+
+  .func-public-repres__item-img {
+    width: 100%;
+    height: 265px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -9070,6 +10037,7 @@ fieldset {
     line-height: 110%;
   }
 
+  .club-strategic__title,
   .regional-standart__title,
   .regul-committee__title,
   .invest-committee__title,
@@ -9080,6 +10048,8 @@ fieldset {
     font-size: 32px;
   }
 
+  .public-representative__item-link,
+  .strategy-grafic__grafic-title,
   .invest-com__links-link,
   .regional-standart__elements-title,
   .big-town__peoples,
@@ -9095,10 +10065,21 @@ fieldset {
   .success-hist__slide-desc,
   .project-desc__desc-title,
   .project-desc__list li b,
+  .modal-innovative-enterprises__title,
   .modal-write__title {
     font-size: 24px;
   }
 
+  .func-public-repres__item-txt,
+  .main-direction__item p,
+  .main-direction__subtitle,
+  .task-clubs__subtitles p,
+  .club-strategic__subtitles p,
+  .strategy-grafic__desc p,
+  .tourism-potential__blocks-txt,
+  .tourism-potential__subtitles p,
+  .strategic-priority__desc p,
+  .strategy__subtitles p,
   .invest-com__links-tit,
   .invest-com__subtitle,
   .org-invest__subtitle,
@@ -9133,6 +10114,10 @@ fieldset {
     font-size: 16px;
   }
 
+  .func-public-repres__item-tit,
+  .tourism-potential__blocks-num,
+  .tourism-potential__blocks-title,
+  .priorities__txt,
   .invest-com__links-title,
   .org-invest__tasks-title,
   .regional-standart__elements-txt,
@@ -9154,6 +10139,14 @@ fieldset {
     line-height: 120%;
   }
 
+  .func-public-repres__title,
+  .public-representative__title,
+  .main-direction__title,
+  .task-clubs__title,
+  .strategy-grafic__title,
+  .tourism-potential__title,
+  .priorities__title,
+  .strategic-priority__title,
   .invest-com__title,
   .org-invest__title,
   .invest-decl__title,
@@ -9161,6 +10154,10 @@ fieldset {
   .list-templates__title,
   .map__title {
     font-size: 24px;
+  }
+
+  main {
+    padding-top: 86px;
   }
 
   .container {
@@ -9477,13 +10474,14 @@ fieldset {
     font-size: 20px;
   }
 
-  .header-bottom,
-  .header-top__panel {
-    display: none;
+  .header {
+    height: 86px;
   }
 
   .header-top__container {
-    padding: 16px 0;
+    padding: 12px 0;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
   }
 
   .header-top__logo {
@@ -9498,13 +10496,49 @@ fieldset {
 
   .header-top__phone {
     margin: 0;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .header-top__burger {
     width: 32px;
     height: 32px;
     flex-shrink: 0;
+    background-image: url(../assets/img/icons/burger-show.svg);
+  }
+
+  .header-top__burger.change {
+    background-image: url(../assets/img/icons/burger-close.svg);
+  }
+
+  .header-top__btns-search {
+    display: none;
+  }
+
+  .header-top__dropdown {
+    display: none;
+  }
+
+  .header-top__entrance {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-top__entrance .header-bottom__btn {
+    display: block;
+  }
+
+  .header-bottom {
+    display: none;
+  }
+
+  .header-bottom__btn {
+    display: none;
+  }
+
+  .header-bottom__btn svg {
+    width: 32px;
+    height: 32px;
   }
 
   .account-menu {
@@ -9602,7 +10636,7 @@ fieldset {
   }
 
   .list-templates__title {
-    font-size: 32px;
+    font-size: 24px;
     -webkit-hyphens: auto;
             hyphens: auto;
   }
@@ -9630,6 +10664,30 @@ fieldset {
 
   .picture-text__img {
     height: 580px;
+  }
+
+  .picture-text--agency .picture-text__container {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 32px;
+  }
+
+  .picture-text--agency .picture-text__content {
+    position: static;
+    row-gap: 32px;
+  }
+
+  .picture-text--agency .picture-text__title,
+  .picture-text--agency .picture-text__desc p {
+    color: #2f2f2f;
+  }
+
+  .picture-text--agency .picture-text__img {
+    height: 246px;
+  }
+
+  .picture-text--agency .picture-text .btn span {
+    font-size: 18px;
   }
 
   .governor__container {
@@ -10599,6 +11657,136 @@ fieldset {
 
   .invest-com__links-tit {
     line-height: 130%;
+    font-size: 16px;
+  }
+
+  .strategic-priority__title {
+    font-size: 24px;
+  }
+
+  .strategic-priority__btn span {
+    font-size: 18px;
+  }
+
+  .strategic-priority__img {
+    height: 248px;
+  }
+
+  .priorities__title {
+    font-size: 32px;
+  }
+
+  .priorities__items {
+    row-gap: 16px;
+  }
+
+  .priorities__item {
+    flex-basis: 100%;
+    min-height: 180px;
+  }
+
+  .tourism-potential__titles {
+    margin-bottom: 32px;
+  }
+
+  .tourism-potential__title {
+    font-size: 24px;
+  }
+
+  .strategy-grafic__title {
+    -webkit-hyphens: auto;
+            hyphens: auto;
+    font-size: 24px;
+  }
+
+  .strategy-grafic__grafic {
+    padding: 20px;
+  }
+
+  .strategy-grafic__grafic-title {
+    font-size: 20px;
+  }
+
+  .strategy-grafic__grafic-img {
+    height: 297px;
+  }
+
+  .strategy-grafic__grafic-img--columns {
+    height: 307px;
+  }
+
+  .task-clubs__pic {
+    padding: 20px 35px;
+  }
+
+  .task-clubs__img {
+    width: 100%;
+    height: 209px;
+  }
+
+  .main-direction__subtitle {
+    margin-bottom: 32px;
+  }
+
+  .main-direction__items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  .main-direction__item {
+    row-gap: 16px;
+  }
+
+  .public-representative__item {
+    padding: 24px;
+    row-gap: 0;
+  }
+
+  .public-representative__item-top {
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  .public-representative__item-name {
+    font-size: 16px;
+  }
+
+  .public-representative__item-txt {
+    font-size: 14px;
+  }
+
+  .public-representative__item-link {
+    word-break: break-all;
+  }
+
+  .func-public-repres__title {
+    word-break: break-word;
+    max-width: 100%;
+  }
+
+  .func-public-repres__item-title {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .func-public-repres__item {
+    padding: 20px;
+  }
+
+  .func-public-repres__item-content {
+    padding: 0;
+  }
+
+  .func-public-repres__item-btn {
+    top: 20px;
+    right: 20px;
+  }
+
+  .func-public-repres__item-img {
+    height: 178px;
+  }
+
+  .func-public-repres .content ul > li {
     font-size: 16px;
   }
 }

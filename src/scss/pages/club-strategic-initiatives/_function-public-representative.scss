@@ -1,0 +1,247 @@
+.func-public-repres {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    max-width: 870px;
+  }
+
+  &__content {
+    @extend %flexStretchBetween;
+    column-gap: 20px;
+  }
+
+  &__img {
+    flex: 0 0 630px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 20px;
+    width: 100%;
+  }
+
+  &__item {
+    background-color: $white;
+    border-radius: 4px;
+    padding: 40px 32px;
+    position: relative;
+
+    &.active {
+      .func-public-repres__item-title {
+        padding-bottom: 20px;
+      }
+
+      .func-public-repres__item-content {
+        @extend %visible;
+      }
+
+      .func-public-repres__item-btn {
+        svg {
+          &:first-child {
+            @extend %hidden;
+          }
+
+          &:last-child {
+            @extend %visible;
+          }
+        }
+      }
+    }
+  }
+
+  &__item-btn {
+    @include sizes(32px, 32px);
+    border-radius: 4px;
+    border: 1.4px solid $bluePrimary;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    right: 32px;
+
+    svg {
+      @include sizes(11px, 11px);
+      position: absolute;
+      top: calc(50% - 11px / 2);
+      left: calc(50% - 11px / 2);
+      transition: $transitionOpacity, $transitionOpacity;
+
+      &:first-child {
+        @extend %visible;
+      }
+
+      &:last-child {
+        @extend %hidden;
+      }
+    }
+  }
+
+  &__item-title {
+    @extend %flexStart;
+    column-gap: 20px;
+    transition: $transitionPadding;
+    max-width: 90%;
+  }
+
+  &__item-number {
+    color: $bluePrimary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+
+  &__item-tit {
+    @extend %subheader;
+  }
+
+  &__item-content {
+    @extend %hidden;
+    @extend %flexStartBetween;
+    padding-left: 48px;
+    height: 0;
+    transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
+    column-gap: 20px;
+  }
+
+  &__item-desc {
+    padding-right: 20px;
+  }
+
+  &__item-img {
+    flex-shrink: 0;
+    @include sizes(598px, 460px);
+
+    img {
+      border-radius: 4px;
+      object-fit: cover;
+    }
+  }
+
+  &__item-cont {
+    p {
+      font-size: 16px;
+      @include mb(8px);
+      @include mt(0);
+    }
+  }
+
+  .content {
+    ul > li {
+      font-size: 16px;
+      @include mb(12px);
+    }
+  }
+
+  &__item-txt {
+    @extend %mainTxt;
+  }
+
+  &__item-but {
+    margin-top: 40px;
+  }
+
+  &__item-list {
+    @extend %flexColumn;
+    row-gap: 8px;
+
+    li {
+      @extend %flexStart;
+      position: relative;
+      column-gap: 4px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 140%;
+
+      &::before {
+        @include sizes(20px, 20px);
+        content: '';
+        background: url('../assets/img/icons/bullet.svg');
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .func-public-repres {
+    &__item-img {
+      @include sizes(450px, 552px);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .func-public-repres {
+    &__item {
+      padding: 32px;
+    }
+
+    &__item-content {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__item-btn {
+      top: 32px;
+    }
+
+    &__item-desc {
+      padding-right: 0;
+    }
+
+    &__item-content {
+      padding-right: 32px;
+    }
+
+    .content ul > li {
+      font-size: 18px;
+    }
+
+    &__item-img {
+      @include sizes(100%, 265px);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .func-public-repres {
+    &__title {
+      word-break: break-word;
+      max-width: 100%;
+    }
+
+    &__item-title {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__item {
+      padding: 20px;
+    }
+
+    &__item-content {
+      padding: 0;
+    }
+
+    &__item-btn {
+      top: 20px;
+      right: 20px;
+    }
+
+    &__item-img {
+      height: 178px;
+    }
+
+    .content ul > li {
+      font-size: 16px;
+    }
+  }
+}
