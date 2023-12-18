@@ -15,7 +15,7 @@
   <div class="header-top">
     <div class="container">
       <div class="header-top__container">
-        <div class="header-top__logo logo">
+        <div class="header-top__logo logo js-header-logo">
           <a href="./main.html" class="header-top__logo--transparent">
             <picture>
               <source media="(min-width: 1365px)" srcset="assets/img/icons/logo.svg" />
@@ -25,13 +25,12 @@
           </a>
           <a href="./main.html">
             <picture>
-              <source media="(min-width: 1365px)" srcset="assets/img/icons/logo-2.svg" />
-              <source media="(max-width: 1366px)" srcset="assets/img/icons/logo-2-sm.svg" />
-              <img src="assets/img/icons/logo-2.svg" alt="logo" />
+              <source media="(min-width: 1366px)" srcset="assets/img/icons/logo-2.svg" />
+              <img src="assets/img/icons/logo-2-sm.svg" alt="logo" />
             </picture>
           </a>
         </div>
-        <div class="header-top__content">
+        <div class="header-top__content logo-2.svg">
 
           <div class="header-top__panel">
             <div class="header-top__search-wr">
@@ -40,20 +39,30 @@
                 <p>Горячая линия</p>
               </div>
               <div class="header-top__btns-search">
-                <svg>
-                  <use xlink:href="assets/img/icons/icons.svg#search"></use>
-                </svg>
-                <span>Поиск</span>
+                <div class="header-top__btns-button js-button-search">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#search"></use>
+                  </svg>
+                  <span>Поиск</span>
+                </div>
 
-                <form class="form-search" action="/ru/search.php">
-                  <input class="form-search__input" size="" name="" id="" value="" type="text"
-                    autocomplete="off$white" placeholder="Что ищите?">
-                  <button class="form-search__button">Найти</button>
-                </form>
+                <div class="form-search js-form-search" action="/ru/search.php">
+                  <input class="form-search__input" size="" name="" id="" value="" type="text" autocomplete="off$white"
+                    placeholder="Что ищите?">
+                  <button class="form-search__button-open">
+                    <svg>
+                      <use xlink:href="assets/img/icons/icons.svg#search"></use>
+                    </svg>
+                  </button>
+                  <button class="form-search__button-close js-search-close">
+                    <svg>
+                      <use xlink:href="assets/img/icons/icons.svg#search-close"></use>
+                    </svg>
+                  </button>
+                </div>
 
               </div>
             </div>
-
             <a href="#" class="header-bottom__btn">
               <svg>
                 <use xlink:href="assets/img/icons/icons.svg#map-pinned"></use>
@@ -104,10 +113,17 @@
             </a> -->
           </div>
         </div>
-        <button type="button" class="header-top__burger --mob">
-          <svg>
+        <div class="header-bottom__btns header-top__entrance">
+          <a href="#" class="header-bottom__btn">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#entrance"></use>
+            </svg>
+          </a>
+        </div>
+        <button type="button" class="header-top__burger js-burger --mob">
+          <!-- <svg>
             <use xlink:href="assets/img/icons/icons.svg#list"></use>
-          </svg>
+          </svg> -->
         </button>
       </div>
     </div>
@@ -116,45 +132,313 @@
     <div class="container">
       <div class="header-bottom__container">
         <div class="header-bottom__links">
-          <button type="button" class="header-bottom__btn-burg">
-            <svg>
+          <button type="button" class="header-bottom__btn-burg js-burger">
+            <!-- <svg>
               <use xlink:href="assets/img/icons/icons.svg#list"></use>
-            </svg>
+            </svg> -->
           </button>
-          <nav class="header-bottom__menu">
+          <nav class="nav header-bottom__menu">
             <ul class="header-bottom__list">
-              <li>
-                <a href="#">О регионе</a>
+              <li class="nav__item header-bottom__list-item js-head-link">
+                <a class="nav__link header-bottom__list-link" href="#">О регионе</a>
+                <svg width="12" height="12">
+                  <use xlink:href="assets/img/icons/icons.svg#arrow-black-down"></use>
+                </svg>
+                <ul class="header-bottom__list-menu js-head-menu">
+                  <li class="">
+                    <a href="#">Расположение</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Статистика региона</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Социально-экономическое развитие</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Стратегия</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Истории успеха</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Муниципальные образования</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Инфраструктурные проекты</a>
+                  </li>
+                </ul>
               </li>
-              <li>
-                <a href="#">Инвестстандарт</a>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Инвестстандарт</a>
               </li>
-              <li>
-                <a href="#">Инвестору</a>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Инвестору</a>
               </li>
-              <li>
-                <a href="#">Площадки</a>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Площадки</a>
               </li>
-              <li>
-                <a href="#">Поддержка</a>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Поддержка</a>
               </li>
-              <li>
-                <a href="#">Линия прямых обращений</a>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Линия прямых обращений</a>
               </li>
-              <li>
-                <a href="#">Контакты</a>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Контакты</a>
               </li>
             </ul>
           </nav>
         </div>
         <div class="header-bottom__btns">
-
           <a href="#" class="header-bottom__btn">
             <svg>
               <use xlink:href="assets/img/icons/icons.svg#entrance"></use>
             </svg>
             <p>Войти</p>
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-menu js-header-menu">
+    <div class="container">
+      <div class="footer__lists">
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>О регионе</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <ul class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Расположение</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Статистика региона</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Социально-экономическое развитие</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Стратегия</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Истории успеха</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Муниципальные образования</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Инфраструктурные проекты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Инвестору</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <ul class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Заявка инвестора</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Корпорация развития</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Инвестиционный комитет</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Клуб стратегических инициатив</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Инвестиции в туризм</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Законодательство</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Требуется инвестор</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Кадры</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">План создания объектов</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Опросы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Поддержка</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <ul class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Единое окно</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Помощь инвестору</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Налоговые льготы</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Субсидии</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">СПИК 2.0</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Инфраструктура поддержки</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Инвестиционный договор</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Региональный инвестстандарт</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Калькулятор мер поддержки</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Площадки</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <ul class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Предложить площадку</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Реестр свободных земельных участков</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Преференциальные территории</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Площадки с объектами капитального строительства</a>
+            </li>
+          </ul>
+          <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+            <p>О регионе</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+            <p>Контакты</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="footer__list footer__list-hide js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <a href="#">Инвестстандарт</a>
+          </div>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Линия прямых обращений</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <div class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Получить консультацию</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Мониторинг обращений</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Подать заявку на сопровождение проекта</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Предложить проект</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>ГЧП</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <div class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Проекты ГЧП</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Общие сведения</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Меры поддержки</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Реестр объектов для ГЧП</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Контакты ГЧП</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Документы</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <div class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Законодательство</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Корпоративные облигации</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Презентационные материалы</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Медиа</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <div class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Новости</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Мероприятия</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Фото и видеоотчет</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer__list footer__list-hide js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <a href="#">Контакты</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1672,7 +1956,7 @@
               </li>
             </ul>
             <div class="footer__list-title footer__list-title-hide js-dropdown-title">
-              <p>Инвестстандарт</p>
+              <p>О регионе</p>
               <svg width="20" height="20">
                 <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
               </svg>

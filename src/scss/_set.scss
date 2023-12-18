@@ -29,10 +29,20 @@ body {
   color: $black;
   background-color: $bgGreyLight;
   background: $bgGreyLight;
+
+  &.ov-hidden {
+    overflow: hidden;
+  }
 }
 
 main {
   padding-top: 160px;
+}
+
+@media screen and (max-width: $mob) {
+  main {
+    padding-top: 86px;
+  }
 }
 
 input,
