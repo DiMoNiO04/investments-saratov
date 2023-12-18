@@ -1,4 +1,4 @@
-.invest-corp {
+.picture-text {
   &__container {
     position: relative;
   }
@@ -35,7 +35,7 @@
 }
 
 @media screen and (max-width: $laptop) {
-  .invest-corp {
+  .picture-text {
     &__content {
       left: 48px;
     }
@@ -47,7 +47,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-  .invest-corp {
+  .picture-text {
     &__img {
       height: 675px;
     }
@@ -71,7 +71,7 @@
 }
 
 @media screen and (max-width: $mob) {
-  .invest-corp {
+  .picture-text {
     &__content {
       max-width: 100%;
       left: 20px;

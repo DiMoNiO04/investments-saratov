@@ -1,4 +1,4 @@
-.invest-rules {
+.list-templates {
   &__title {
     @extend %secondaryH3;
     margin-bottom: 40px;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-  .invest-rules {
+  .list-templates {
     &__title {
       margin-bottom: 32px;
     }
@@ -24,7 +24,7 @@
 }
 
 @media screen and (max-width: $mob) {
-  .invest-rules {
+  .list-templates {
     &__title {
       font-size: 32px;
       hyphens: auto;
