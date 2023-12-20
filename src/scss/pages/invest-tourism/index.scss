@@ -1,0 +1,106 @@
+.invest-tourism {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %h2;
+  }
+
+  &__img {
+    @include sizes(100%, 500px);
+
+    img {
+      border-radius: 4px;
+      object-fit: cover;
+    }
+  }
+
+  &__items {
+    @extend %gridColumnThree;
+    column-gap: 20px;
+  }
+
+  &__item {
+    @extend %flexColumn;
+    row-gap: 32px;
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 32px;
+
+    h3 {
+      @extend %h3;
+      color: $bluePrimary;
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 140%;
+      border-bottom: 1px solid;
+      width: fit-content;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .invest-tourism {
+    &__item {
+      h3 {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .invest-tourism {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__img {
+      height: 350px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+    }
+
+    &__item {
+      padding: 24px;
+
+      h3 {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .invest-tourism {
+    &__img {
+      height: 340px;
+    }
+
+    &__item {
+      padding: 20px;
+      row-gap: 24px;
+
+      h3 {
+        font-size: 24px;
+      }
+
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+}

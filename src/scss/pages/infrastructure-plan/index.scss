@@ -1,0 +1,75 @@
+.infr-plan {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__titles {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__title,
+  &__subtitles {
+    padding-right: 20px;
+  }
+
+  &__title {
+    @extend %h2;
+  }
+
+  &__subtitles {
+    p {
+      @include mb(12px);
+      @extend %mainTxt;
+    }
+  }
+
+  &__link {
+    margin-top: 20px;
+    width: fit-content;
+  }
+
+  &__img {
+    @include sizes(100%, 500px);
+
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .infr-plan {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__titles {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+    }
+
+    &__title,
+    &__subtitles {
+      padding: 0;
+    }
+
+    &__img {
+      height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .infr-plan {
+    &__subtitles p {
+      font-size: 18px;
+    }
+
+    &__img {
+      height: 342px;
+    }
+  }
+}

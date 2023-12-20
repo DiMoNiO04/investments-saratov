@@ -1209,6 +1209,9 @@ svg {
   visibility: visible;
 }
 
+.invest-tourism__item,
+.invest-tourism__container,
+.infr-plan__container,
 .polls__items,
 .ao-dev-corp__block,
 .dev-corporation__container,
@@ -1472,6 +1475,7 @@ svg {
   justify-content: space-between;
 }
 
+.infr-plan__titles,
 .dev-corporation__titles,
 .implement-projects__links,
 .agriculture__content,
@@ -1501,6 +1505,7 @@ svg {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.invest-tourism__items,
 .contacts-corp__items,
 .planned-projects__block-items,
 .energy-sector__items,
@@ -1611,6 +1616,8 @@ svg {
   text-transform: uppercase;
 }
 
+.invest-tourism__title,
+.infr-plan__title,
 .polls__title,
 .dev-corporation__title,
 .implement-projects__title,
@@ -1630,6 +1637,7 @@ svg {
   text-transform: uppercase;
 }
 
+.invest-tourism__item h3,
 .planned-projects__block-title,
 .promising-direc__blocks-title,
 .availability-stock__tit,
@@ -1664,6 +1672,7 @@ svg {
   line-height: 120%;
 }
 
+.infr-plan__subtitles p,
 .polls__items li,
 .polls__subtitles p,
 .ao-dev-corp__txt,
@@ -8430,6 +8439,86 @@ fieldset {
   border-color: transparent;
 }
 
+.infr-plan__container {
+  row-gap: 40px;
+}
+
+.infr-plan__titles {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.infr-plan__title,
+.infr-plan__subtitles {
+  padding-right: 20px;
+}
+
+.infr-plan__subtitles p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.infr-plan__link {
+  margin-top: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.infr-plan__img {
+  width: 100%;
+  height: 500px;
+}
+
+.infr-plan__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.invest-tourism__container {
+  row-gap: 40px;
+}
+
+.invest-tourism__img {
+  width: 100%;
+  height: 500px;
+}
+
+.invest-tourism__img img {
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.invest-tourism__items {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.invest-tourism__item {
+  row-gap: 32px;
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+}
+
+.invest-tourism__item h3 {
+  color: #2d6fd0;
+}
+
+.invest-tourism__item a {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+  border-bottom: 1px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.invest-tourism__item a:hover {
+  border-color: transparent;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -8503,6 +8592,8 @@ fieldset {
     font-size: 64px;
   }
 
+  .invest-tourism__title,
+  .infr-plan__title,
   .polls__title,
   .dev-corporation__title,
   .implement-projects__title,
@@ -8519,6 +8610,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .invest-tourism__item h3,
   .planned-projects__block-title,
   .promising-direc__blocks-title,
   .availability-stock__tit,
@@ -8551,6 +8643,7 @@ fieldset {
     font-size: 26px;
   }
 
+  .infr-plan__subtitles p,
   .polls__items li,
   .polls__subtitles p,
   .ao-dev-corp__txt,
@@ -9581,6 +9674,10 @@ fieldset {
   .polls__title {
     flex-basis: 460px;
   }
+
+  .invest-tourism__item h3 {
+    font-size: 32px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -9596,6 +9693,8 @@ fieldset {
     font-size: 48px;
   }
 
+  .invest-tourism__title,
+  .infr-plan__title,
   .polls__title,
   .dev-corporation__title,
   .implement-projects__title,
@@ -11695,6 +11794,62 @@ fieldset {
   .polls__subtitle {
     display: none;
   }
+
+  .infr-plan__container {
+    row-gap: 32px;
+  }
+
+  .infr-plan__titles {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+
+  .infr-plan__title,
+  .infr-plan__subtitles {
+    padding: 0;
+  }
+
+  .infr-plan__img {
+    height: 400px;
+  }
+
+  .invest-tourism__container {
+    row-gap: 32px;
+  }
+
+  .invest-tourism__img {
+    height: 350px;
+  }
+
+  .invest-tourism__items {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+  }
+
+  .invest-tourism__item {
+    padding: 24px;
+  }
+
+  .invest-tourism__item h3 {
+    font-size: 26px;
+  }
+
+  .invest-tourism__img {
+    height: 340px;
+  }
+
+  .invest-tourism__item {
+    padding: 20px;
+    row-gap: 24px;
+  }
+
+  .invest-tourism__item h3 {
+    font-size: 24px;
+  }
+
+  .invest-tourism__item a {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -11704,6 +11859,8 @@ fieldset {
     line-height: 110%;
   }
 
+  .invest-tourism__title,
+  .infr-plan__title,
   .polls__title,
   .dev-corporation__title,
   .implement-projects__title,
@@ -11722,6 +11879,7 @@ fieldset {
             hyphens: auto;
   }
 
+  .invest-tourism__item h3,
   .planned-projects__block-title,
   .promising-direc__blocks-title,
   .availability-stock__tit,
@@ -11754,6 +11912,7 @@ fieldset {
     font-size: 24px;
   }
 
+  .infr-plan__subtitles p,
   .polls__items li,
   .polls__subtitles p,
   .ao-dev-corp__txt,
@@ -13864,6 +14023,14 @@ fieldset {
   .polls__items a {
     margin: 0 0 0 auto;
     font-size: 16px;
+  }
+
+  .infr-plan__subtitles p {
+    font-size: 18px;
+  }
+
+  .infr-plan__img {
+    height: 342px;
   }
 }
 
