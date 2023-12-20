@@ -27,41 +27,61 @@ document.addEventListener('DOMContentLoaded', () => {
 const mainNav = document.querySelector('.header');
 
 function windowScroll() {
-  mainNav.classList.toggle('active', mainNav.scrollTop > 50 || document.documentElement.scrollTop > 50);
+  const isWideScreen = window.innerWidth > 767;
+  if (isWideScreen) {
+    mainNav.classList.toggle('active', mainNav.scrollTop > 50 || document.documentElement.scrollTop > 50);
+  }
 }
-
-window.onscroll = function () {
-  windowScroll();
-};
+windowScroll();
+window.addEventListener('resize', windowScroll);
+window.addEventListener('scroll', windowScroll);
 
 // Поиск в шапке
 const jsformsearch = document.querySelector('.js-form-search');
 const jsbuttonsearch = document.querySelector('.js-button-search');
 const jssearchclose = document.querySelector('.js-search-close');
-const jsheaderlogo = document.querySelector('.js-header-logo');
+const jsheadertopcontainer = document.querySelector('.js-header-top-container');
 const jsheadercontent = document.querySelector('.js-header-content');
+const jssearchinput = document.querySelector('.js-search-input');
 
 jsbuttonsearch.addEventListener('click', () => {
   jsformsearch.classList.add('show');
-  jsheaderlogo.classList.add('hide');
+  jsheadertopcontainer.classList.add('hide');
   jsheadercontent.classList.add('change');
 });
 
 jssearchclose.addEventListener('click', () => {
   jsformsearch.classList.remove('show');
-  jsheaderlogo.classList.remove('hide');
+  jsheadertopcontainer.classList.remove('hide');
   jsheadercontent.classList.remove('change');
+  jssearchinput.value = '';
 });
 
 // Header, наведение на пункты
-const headerbottomlistitem = document.querySelector('.js-head-link');
-headerbottomlistitem.addEventListener('mouseover', () => {
-  const jsheadmenu = headerbottomlistitem.querySelector('.js-head-menu');
-  jsheadmenu.classList.add('show');
+const headerBottomLinks = document.querySelectorAll('.js-head-link');
+const jsHeadMenus = document.querySelectorAll('.js-head-menu');
+
+headerBottomLinks.forEach((headerBottomLink) => {
+  const jsHeadMenu = headerBottomLink.querySelector('.js-head-menu');
+
+  // Добавляем обработчик события для .js-head-link
+  headerBottomLink.addEventListener('mouseover', () => {
+    jsHeadMenu.classList.add('show');
+  });
+
+  headerBottomLink.addEventListener('mouseout', () => {
+    jsHeadMenu.classList.remove('show');
+  });
 });
-headerbottomlistitem.addEventListener('mouseout', () => {
-  const jsheadmenu = headerbottomlistitem.querySelector('.js-head-menu');
-  jsheadmenu.classList.remove('show');
+
+jsHeadMenus.forEach((jsHeadMenu) => {
+  jsHeadMenu.addEventListener('mouseover', () => {
+    jsHeadMenu.classList.add('show');
+  });
+
+  jsHeadMenu.addEventListener('mouseout', () => {
+    jsHeadMenu.classList.remove('show');
+  });
 });
 
 // Бургер

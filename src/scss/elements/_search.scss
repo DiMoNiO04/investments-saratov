@@ -11,6 +11,7 @@
 
   &.show {
     display: flex;
+    z-index: 1;
   }
 
   &__input {
@@ -74,6 +75,18 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .form-search {
+    &-mobile {
+      position: relative;
+      top: 0;
+      transform: none;
+      display: block;
+      margin-bottom: 16px;
     }
   }
 }
