@@ -43,3 +43,13 @@
     }
   }
 }
+
+@media screen and (max-width: $laptop) {
+  .content {
+    ul {
+      & > li {
+        padding-left: 32px;
+      }
+    }
+  }
+}

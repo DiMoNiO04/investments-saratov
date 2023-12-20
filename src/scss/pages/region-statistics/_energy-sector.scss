@@ -1,0 +1,127 @@
+.energy-sector {
+  &__picture {
+    margin-bottom: 20px;
+
+    .picture-text__content {
+      max-width: calc(100% - 120px);
+    }
+
+    .picture-text__items {
+      @extend %flexStretchBetween;
+
+      li {
+        border-radius: 4px;
+        background-color: $white;
+        padding: 32px;
+        width: calc(100% / 5 - 80px / 5);
+        @extend %regular16;
+
+        b {
+          display: block;
+          margin-bottom: 12px;
+          @extend %h3;
+          color: $bluePrimary;
+        }
+      }
+    }
+  }
+
+  &__items {
+    @extend %gridColumnThree;
+    column-gap: 20px;
+
+    li {
+      @extend %flexColumn;
+      row-gap: 32px;
+      border-radius: 4px;
+      background-color: $white;
+      padding: 40px 32px;
+      @extend %regular16;
+    }
+
+    b {
+      display: block;
+      color: $bluePrimary;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .energy-sector__picture .picture-text__content {
+    max-width: calc(100% - 98px);
+  }
+
+  .energy-sector__picture .picture-text__items li {
+    padding: 32px 24px;
+  }
+
+  .energy-sector__items {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .energy-sector {
+    &__picture {
+      .picture-text__content {
+        max-width: calc(100% - 64px);
+      }
+
+      .picture-text__items {
+        flex-wrap: wrap;
+        row-gap: 20px;
+
+        li {
+          width: calc(100% / 3 - 40px / 3);
+          padding: 24px;
+
+          &:nth-child(4),
+          &:nth-child(5) {
+            width: calc(100% / 2 - 20px / 2);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .energy-sector {
+    &__picture {
+      .picture-text__content {
+        position: static;
+        max-width: 100%;
+      }
+
+      .picture-text__title {
+        max-width: 100%;
+        color: $black;
+        margin-bottom: 32px;
+      }
+
+      .picture-text__items {
+        margin-bottom: 16px;
+
+        li:nth-child(n) {
+          width: 100%;
+        }
+      }
+
+      .picture-text__img {
+        height: 320px;
+      }
+    }
+
+    &__grafics {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    &__grafic {
+      width: 100%;
+    }
+  }
+}

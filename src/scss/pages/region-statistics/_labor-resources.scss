@@ -1,0 +1,153 @@
+.labor-resources {
+  &__picture {
+    .picture-text__content {
+      max-width: calc(100% - 120px);
+    }
+
+    .picture-text__items {
+      @extend %flexStretchBetween;
+
+      li {
+        border-radius: 4px;
+        background-color: $white;
+        padding: 32px;
+        width: calc(100% / 4 - 60px / 4);
+        @extend %regular16;
+
+        b {
+          display: block;
+          margin-bottom: 12px;
+          @extend %h3;
+          color: $bluePrimary;
+        }
+      }
+    }
+
+    margin-bottom: 20px;
+  }
+
+  &__grafics {
+    @extend %flexStretchBetween;
+    column-gap: 20px;
+  }
+
+  &__grafic {
+    @extend %flexColumn;
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 40px;
+    width: calc(50% - 20px / 2);
+  }
+
+  &__grafic-title {
+    @extend %h3;
+    margin-bottom: 24px;
+  }
+
+  &__grafic-graf {
+    display: block;
+    height: 340px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .labor-resources {
+    &__picture {
+      .picture-text__content {
+        max-width: calc(100% - 98px);
+      }
+
+      .picture-text__items li {
+        padding: 32px 24px;
+      }
+    }
+
+    &__grafic {
+      padding: 30px;
+    }
+
+    &__grafic-title {
+      margin-bottom: 18px;
+      max-width: 400px;
+    }
+
+    &__grafic-graf {
+      height: 260px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .labor-resources {
+    &__picture {
+      margin-bottom: 32px;
+
+      .picture-text__content {
+        max-width: calc(100% - 64px);
+      }
+
+      .picture-text__items {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+      }
+
+      .picture-text__items li {
+        padding: 24px;
+        width: 100%;
+      }
+    }
+
+    &__grafic {
+      padding: 20px;
+    }
+
+    &__grafic-title {
+      margin-bottom: 11px;
+      max-width: 100%;
+      font-size: 20px;
+    }
+
+    &__grafic-graf {
+      height: 152px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .labor-resources {
+    &__picture {
+      .picture-text__content {
+        position: static;
+        max-width: 100%;
+      }
+
+      .picture-text__title {
+        max-width: 100%;
+        color: $black;
+        margin-bottom: 32px;
+      }
+
+      .picture-text__items {
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+        margin-bottom: 16px;
+      }
+
+      .picture-text__img {
+        height: 320px;
+      }
+    }
+
+    &__grafics {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    &__grafic {
+      width: 100%;
+    }
+  }
+}

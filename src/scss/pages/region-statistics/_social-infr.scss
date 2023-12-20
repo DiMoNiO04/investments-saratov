@@ -1,0 +1,136 @@
+.social-infr {
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__blocks {
+    @extend %gridColumnThree;
+    column-gap: 20px;
+  }
+
+  &__block {
+    border-radius: 4px;
+    background-color: $white;
+    padding: 40px 32px;
+  }
+
+  &__icon {
+    @extend %flexCenter;
+    @include sizes(88px, 88px);
+    background-color: $bluePrimary;
+    border-radius: 50%;
+    margin-bottom: 24px;
+
+    svg {
+      @include sizes(48px, 48px);
+    }
+  }
+
+  &__tit {
+    @extend %h3;
+    margin-bottom: 32px;
+    min-height: 77px;
+  }
+
+  &__items {
+    @extend %gridColumnTwo;
+    row-gap: 24px;
+    column-gap: 24px;
+
+    li {
+      b {
+        @extend %numText;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      @extend %regular16;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .social-infr {
+    &__icon {
+      @include sizes(80px, 80px);
+    }
+
+    &__block {
+      width: 380px;
+    }
+
+    &__items {
+      li {
+        hyphens: auto;
+      }
+    }
+
+    &__tit {
+      min-height: 93px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .social-infr {
+    &__title {
+      margin-bottom: 32px;
+      font-size: 36px;
+    }
+
+    &__blocks {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+
+    &__block {
+      width: 100%;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    &__items {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        width: -webkit-fill-available;
+        hyphens: none;
+      }
+    }
+
+    &__tit {
+      min-height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .social-infr {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__block {
+      padding: 32px 24px;
+    }
+
+    &__icon {
+      @include sizes(64px, 64px);
+
+      svg {
+        @include sizes(36px, 36px);
+      }
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        hyphens: auto;
+      }
+    }
+  }
+}

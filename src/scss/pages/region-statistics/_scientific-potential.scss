@@ -1,0 +1,130 @@
+.scientific-potential {
+  &__container {
+    @extend %flexStretchBetween;
+    column-gap: 20px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__txts {
+    margin-bottom: 32px;
+
+    p {
+      @include mb(8px);
+      @extend %mainTxt;
+    }
+  }
+
+  &__img {
+    flex: 0 0 calc(50% - 20px / 2);
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 20px;
+
+    li {
+      display: flex;
+      align-items: end;
+      column-gap: 16px;
+      padding: 20px 32px;
+      border-radius: 4px;
+      background-color: $white;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 140%;
+      margin-bottom: 4px;
+    }
+
+    b {
+      @extend %numText;
+      min-width: 50px;
+    }
+  }
+
+  &__img {
+    img {
+      border-radius: 4px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .scientific-potential {
+    &__img {
+      flex-basis: calc(41.5% - 20px / 2);
+    }
+
+    &__items {
+      li {
+        column-gap: 8px;
+        align-items: center;
+      }
+
+      b {
+        font-size: 32px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .scientific-potential {
+    &__container {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__title {
+      font-size: 36px;
+      margin-bottom: 32px;
+    }
+
+    &__img {
+      height: 400px;
+      flex-basis: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .scientific-potential {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__txts {
+      margin-bottom: 24px;
+    }
+
+    &__items {
+      li {
+        padding: 20px;
+      }
+
+      b {
+        font-size: 28px;
+        min-width: 44px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+
+    &__img {
+      height: 320px;
+    }
+  }
+}

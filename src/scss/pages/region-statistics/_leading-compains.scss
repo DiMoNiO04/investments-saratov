@@ -1,0 +1,87 @@
+.leading-compains {
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__blocks {
+    @extend %gridColumnTwo;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  &__block {
+    @extend %flexColumn;
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 40px 32px;
+    row-gap: 32px;
+  }
+
+  &__block-icon {
+    @include sizes(88px, 88px);
+    @extend %flexCenter;
+    border-radius: 50%;
+    background-color: $bluePrimary;
+    margin-bottom: 24px;
+
+    svg {
+      @include sizes(48px, 48px);
+    }
+  }
+
+  &__block-tit {
+    @extend %h3;
+  }
+
+  &__block-list {
+    @extend %flexColumn;
+    row-gap: 8px;
+
+    li {
+      @extend %regular16;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .leading-compains {
+    &__title {
+      font-size: 36px;
+      margin-bottom: 32px;
+    }
+
+    &__block {
+      padding: 24px;
+      row-gap: 38px;
+    }
+
+    &__block-tit {
+      hyphens: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .leading-compains {
+    &__title {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+
+    &__blocks {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: 1fr;
+      row-gap: 18px;
+    }
+
+    &__block-tit {
+      font-size: 20px;
+    }
+
+    &__block {
+      row-gap: 30px;
+    }
+  }
+}

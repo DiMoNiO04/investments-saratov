@@ -1,0 +1,52 @@
+.region-statistics {
+  &__titles {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__title,
+  &__subtitle {
+    padding-right: 20px;
+  }
+
+  &__title {
+    @extend %h2;
+  }
+
+  &__subtitle p {
+    @include mb(12px);
+    @extend %mainTxt;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .region-statistics {
+    &__titles {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+    }
+
+    &__title {
+      font-size: 48px;
+    }
+
+    &__title,
+    &__subtitle {
+      padding-right: 0;
+    }
+
+    &__subtitle {
+      p {
+        @include mb(8px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .region-statistics {
+    &__title {
+      font-size: 32px;
+    }
+  }
+}

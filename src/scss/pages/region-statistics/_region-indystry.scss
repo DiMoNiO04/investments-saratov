@@ -1,0 +1,179 @@
+.region-indystry {
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__structure,
+  &__share {
+    border-radius: 4px;
+    background-color: $white;
+    padding: 40px 32px;
+  }
+
+  &__share {
+    @extend %flexColumn;
+    justify-content: space-between;
+  }
+
+  &__h3 {
+    @extend %h3;
+    max-width: 370px;
+    margin-bottom: 32px;
+  }
+
+  &__structure {
+    @extend %flexStartBetween;
+    column-gap: 24px;
+  }
+
+  &__graffic {
+    .region-indystry__h3 {
+      display: none;
+    }
+  }
+
+  &__structure {
+    align-items: center;
+  }
+
+  &__graffic-img {
+    flex-shrink: 0;
+    @include sizes(315px, 315px);
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 20px;
+
+    li {
+      display: flex;
+      column-gap: 8px;
+
+      svg {
+        @include sizes(10px, 10px);
+        flex-shrink: 0;
+        margin-top: 5px;
+      }
+
+      p {
+        @extend %regular16;
+      }
+    }
+  }
+
+  &__blocks {
+    @extend %gridColumnThree;
+    row-gap: 32px;
+    column-gap: 20px;
+
+    li {
+      b {
+        display: block;
+        margin-bottom: 8px;
+        @extend %numText;
+      }
+
+      @extend %regular16;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .region-indystry {
+    &__structure {
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    &__graffic .region-indystry__h3 {
+      display: block;
+      margin: 0;
+    }
+
+    &__graffic {
+      display: flex;
+      align-items: center;
+      column-gap: 32px;
+    }
+
+    &__desc .region-indystry__h3 {
+      display: none;
+    }
+
+    &__h3 {
+      max-width: 100%;
+    }
+
+    &__items {
+      row-gap: 16px;
+    }
+
+    &__graffic-img {
+      @include sizes(173px, 173px);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .region-indystry {
+    &__title {
+      font-size: 36px;
+      margin-bottom: 32px;
+    }
+
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+
+    &__graffic {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .region-indystry {
+    &__title {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+
+    &__structure,
+    &__share {
+      padding: 24px;
+    }
+
+    &__graffic {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      row-gap: 24px;
+    }
+
+    &__graffic-img {
+      margin: 0 auto;
+    }
+
+    &__blocks {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 24px;
+
+      li {
+        font-size: 14px;
+        b {
+          font-size: 28px;
+        }
+      }
+    }
+
+    &__items {
+      row-gap: 12px;
+    }
+  }
+}

@@ -158,3 +158,25 @@
     font-size: 24px;
   }
 }
+
+%numText {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+  color: $bluePrimary;
+
+  @media screen and (max-width: $laptop) {
+    font-size: 32px;
+  }
+}
+
+%numTextBig {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 110%;
+  color: $bluePrimary;
+
+  @media screen and (max-width: $laptop) {
+    font-size: 32px;
+  }
+}

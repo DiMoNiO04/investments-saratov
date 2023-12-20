@@ -1,0 +1,101 @@
+.tourism-potential {
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    @extend %gridColumnThree;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  &__item {
+    border-radius: 4px;
+    background-color: $white;
+    height: 223px;
+    position: relative;
+
+    &--img {
+      .tourism-potential__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .tourism-potential__inf-txt,
+      .tourism-potential__inf-num {
+        color: $white;
+      }
+    }
+  }
+
+  &__inf {
+    @extend %flexColumn;
+    justify-content: space-between;
+    padding: 40px 32px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__img {
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  &__inf-num {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 120%;
+    color: $bluePrimary;
+  }
+
+  &__inf-txt {
+    @extend %regular16;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .tourism-potential {
+    &__inf {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .tourism-potential {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      height: 215px;
+    }
+
+    &__inf {
+      padding: 24px;
+    }
+
+    &__inf-num {
+      font-size: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .tourism-potential {
+    &__items {
+      row-gap: 16px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

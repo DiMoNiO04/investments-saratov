@@ -1,0 +1,152 @@
+.agriculture {
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    @extend %gridColumnTwo;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 20px;
+
+    li {
+      border-radius: 4px;
+      background-color: $white;
+      padding: 20px 32px;
+      font-size: 18px;
+      line-height: 140%;
+
+      b {
+        display: block;
+        margin-bottom: 16px;
+        @extend %numText;
+      }
+    }
+  }
+
+  &__img {
+    img {
+      border-radius: 4px;
+    }
+  }
+
+  &__block {
+    @extend %flexColumn;
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 40px 32px;
+  }
+
+  &__block-tit {
+    @extend %h3;
+  }
+
+  &__block-items {
+    @extend %flexColumn;
+    row-gap: 32px;
+
+    li {
+      @extend %mainTxt;
+
+      b {
+        display: block;
+        margin-bottom: 8px;
+        @extend %numTextBig;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .agriculture {
+    &__items {
+      li {
+        padding-top: 18px;
+        padding-bottom: 18px;
+      }
+    }
+
+    &__block {
+      row-gap: 14px;
+    }
+
+    &__block-tit {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .agriculture {
+    &__title {
+      font-size: 36px;
+      margin-bottom: 32px;
+    }
+
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__items {
+      li {
+        padding: 18px 24px;
+      }
+    }
+
+    &__img {
+      height: 400px;
+    }
+
+    &__block {
+      padding: 24px;
+      row-gap: 24px;
+    }
+
+    &__block-items {
+      row-gap: 26px;
+
+      li b {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .agriculture {
+    &__title {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+
+    &__items {
+      row-gap: 16px;
+
+      li {
+        padding: 20px 24px;
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+
+    &__img {
+      height: 320px;
+    }
+
+    &__block-tit {
+      font-size: 20px;
+    }
+
+    &__block-items li b {
+      font-size: 28px;
+    }
+  }
+}

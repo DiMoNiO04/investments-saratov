@@ -1209,6 +1209,23 @@ svg {
   visibility: visible;
 }
 
+.promising-direc__blocks-item ul,
+.promising-direc__blocks-item,
+.promising-direc__blocks,
+.promising-direc__container,
+.availability-stock__container,
+.agriculture__block-items,
+.agriculture__block,
+.agriculture__items,
+.energy-sector__items li,
+.leading-compains__block-list,
+.leading-compains__block,
+.tourism-potential__inf,
+.inf-tech__item,
+.region-indystry__items,
+.region-indystry__share,
+.scientific-potential__items,
+.labor-resources__grafic,
 .func-public-repres__item-list,
 .func-public-repres__items,
 .func-public-repres__container,
@@ -1280,6 +1297,9 @@ svg {
   flex-direction: column;
 }
 
+.availability-stock__block-icon,
+.leading-compains__block-icon,
+.social-infr__icon,
 .public-representative__item-icon,
 .municipality__descs-item:last-child,
 .location__map-city__pin,
@@ -1363,6 +1383,13 @@ svg {
   justify-content: space-between;
 }
 
+.promising-direc__blocks-items,
+.availability-stock__blocks,
+.energy-sector__picture .picture-text__items,
+.inf-tech__items,
+.scientific-potential__container,
+.labor-resources__grafics,
+.labor-resources__picture .picture-text__items,
 .func-public-repres__content,
 .municipality__descs-items,
 .transport-inf__blocks,
@@ -1420,6 +1447,7 @@ svg {
   justify-content: flex-start;
 }
 
+.region-indystry__structure,
 .func-public-repres__item-content,
 .regul-committee__ask-item,
 .invest-committee__titles,
@@ -1431,6 +1459,13 @@ svg {
   justify-content: space-between;
 }
 
+.agriculture__content,
+.leading-compains__blocks,
+.inf-tech__content,
+.region-indystry__content,
+.social-infr__items,
+.fertile-land__container,
+.region-statistics__titles,
 .task-clubs__container,
 .club-strategic__container,
 .strategy-grafic__container,
@@ -1451,6 +1486,10 @@ svg {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.energy-sector__items,
+.tourism-potential__items,
+.region-indystry__blocks,
+.social-infr__blocks,
 .public-representative__items,
 .main-direction__items,
 .regional-standart__elements-items,
@@ -1494,6 +1533,17 @@ svg {
   line-height: 130%;
 }
 
+.promising-direc__blocks-item ul li,
+.availability-stock__block-txt,
+.energy-sector__items li,
+.energy-sector__picture .picture-text__items li,
+.leading-compains__block-list li,
+.tourism-potential__inf-txt,
+.inf-tech__item,
+.region-indystry__blocks li,
+.region-indystry__items li p,
+.labor-resources__picture .picture-text__items li,
+.social-infr__items li,
 .public-representative__item-txt,
 .legislation__btns button span,
 .recovery-pass__back span,
@@ -1543,6 +1593,7 @@ svg {
   text-transform: uppercase;
 }
 
+.region-statistics__title,
 .club-strategic__title,
 .regional-standart__title,
 .regul-committee__title,
@@ -1557,6 +1608,15 @@ svg {
   text-transform: uppercase;
 }
 
+.promising-direc__blocks-title,
+.availability-stock__tit,
+.agriculture__block-tit,
+.energy-sector__picture .picture-text__items li b,
+.leading-compains__block-tit,
+.region-indystry__h3,
+.labor-resources__grafic-title,
+.labor-resources__picture .picture-text__items li b,
+.social-infr__tit,
 .public-representative__item-link,
 .strategy-grafic__grafic-title,
 .invest-com__links-link,
@@ -1581,6 +1641,10 @@ svg {
   line-height: 120%;
 }
 
+.agriculture__block-items li,
+.scientific-potential__txts p,
+.fertile-land__subtitle p,
+.region-statistics__subtitle p,
 .func-public-repres__item-txt,
 .main-direction__item p,
 .main-direction__subtitle,
@@ -1676,6 +1740,7 @@ svg {
   line-height: 130%;
 }
 
+.promising-direc__blocks-tit,
 .func-public-repres__item-tit,
 .tourism-potential__blocks-num,
 .tourism-potential__blocks-title,
@@ -1709,6 +1774,15 @@ svg {
   line-height: 130%;
 }
 
+.promising-direc__title,
+.availability-stock__title,
+.agriculture__title,
+.leading-compains__title,
+.inf-tech__title,
+.region-indystry__title,
+.scientific-potential__title,
+.social-infr__title,
+.fertile-land__title,
 .func-public-repres__title,
 .public-representative__title,
 .main-direction__title,
@@ -1727,6 +1801,26 @@ svg {
   font-weight: 600;
   line-height: 110%;
   text-transform: uppercase;
+}
+
+.promising-direc__index strong,
+.availability-stock__block-price,
+.agriculture__items li b,
+.inf-tech__item b,
+.region-indystry__blocks li b,
+.scientific-potential__items b,
+.social-infr__items li b {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #2d6fd0;
+}
+
+.agriculture__block-items li b {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 110%;
+  color: #2d6fd0;
 }
 
 @font-face {
@@ -7441,6 +7535,586 @@ fieldset {
   flex-shrink: 0;
 }
 
+.region-statistics__titles {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.region-statistics__title,
+.region-statistics__subtitle {
+  padding-right: 20px;
+}
+
+.region-statistics__subtitle p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.fertile-land__container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.fertile-land__desc {
+  padding-right: 20px;
+}
+
+.fertile-land__title {
+  margin-bottom: 40px;
+}
+
+.fertile-land__subtitle p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.fertile-land__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.social-infr__title {
+  margin-bottom: 40px;
+}
+
+.social-infr__blocks {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.social-infr__block {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 40px 32px;
+}
+
+.social-infr__icon {
+  width: 88px;
+  height: 88px;
+  background-color: #2d6fd0;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.social-infr__icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.social-infr__tit {
+  margin-bottom: 32px;
+  min-height: 77px;
+}
+
+.social-infr__items {
+  row-gap: 24px;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+
+.social-infr__items li b {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.labor-resources__picture {
+  margin-bottom: 20px;
+}
+
+.labor-resources__picture .picture-text__content {
+  max-width: calc(100% - 120px);
+}
+
+.labor-resources__picture .picture-text__items li {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+  width: calc(25% - 15px);
+}
+
+.labor-resources__picture .picture-text__items li b {
+  display: block;
+  margin-bottom: 12px;
+  color: #2d6fd0;
+}
+
+.labor-resources__grafics {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.labor-resources__grafic {
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 40px;
+  width: calc(50% - 10px);
+}
+
+.labor-resources__grafic-title {
+  margin-bottom: 24px;
+}
+
+.labor-resources__grafic-graf {
+  display: block;
+  height: 340px;
+}
+
+.scientific-potential__container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.scientific-potential__title {
+  margin-bottom: 40px;
+}
+
+.scientific-potential__txts {
+  margin-bottom: 32px;
+}
+
+.scientific-potential__txts p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.scientific-potential__img {
+  flex: 0 0 calc(50% - 10px);
+}
+
+.scientific-potential__items {
+  row-gap: 20px;
+}
+
+.scientific-potential__items li {
+  display: flex;
+  align-items: end;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  padding: 20px 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.scientific-potential__items p {
+  font-size: 18px;
+  line-height: 140%;
+  margin-bottom: 4px;
+}
+
+.scientific-potential__items b {
+  min-width: 50px;
+}
+
+.scientific-potential__img img {
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.region-indystry__title {
+  margin-bottom: 40px;
+}
+
+.region-indystry__content {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.region-indystry__structure,
+.region-indystry__share {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 40px 32px;
+}
+
+.region-indystry__share {
+  justify-content: space-between;
+}
+
+.region-indystry__h3 {
+  max-width: 370px;
+  margin-bottom: 32px;
+}
+
+.region-indystry__structure {
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+
+.region-indystry__graffic .region-indystry__h3 {
+  display: none;
+}
+
+.region-indystry__structure {
+  align-items: center;
+}
+
+.region-indystry__graffic-img {
+  flex-shrink: 0;
+  width: 315px;
+  height: 315px;
+}
+
+.region-indystry__items {
+  row-gap: 20px;
+}
+
+.region-indystry__items li {
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.region-indystry__items li svg {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.region-indystry__blocks {
+  row-gap: 32px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.region-indystry__blocks li b {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.inf-tech__title {
+  margin-bottom: 40px;
+}
+
+.inf-tech__content {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.inf-tech__items {
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.inf-tech__item {
+  justify-content: space-between;
+  padding: 32px;
+  min-height: 200px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.inf-tech__item:nth-child(1),
+.inf-tech__item:nth-child(2) {
+  width: calc(50% - 10px);
+}
+
+.inf-tech__item:nth-child(3) {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.inf-tech__item b {
+  display: block;
+}
+
+.inf-tech__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.tourism-potential__title {
+  margin-bottom: 40px;
+}
+
+.tourism-potential__items {
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.tourism-potential__item {
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 223px;
+  position: relative;
+}
+
+.tourism-potential__item--img .tourism-potential__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.tourism-potential__item--img .tourism-potential__inf-txt,
+.tourism-potential__item--img .tourism-potential__inf-num {
+  color: #ffffff;
+}
+
+.tourism-potential__inf {
+  justify-content: space-between;
+  padding: 40px 32px;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.tourism-potential__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.tourism-potential__inf-num {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #2d6fd0;
+}
+
+.leading-compains__title {
+  margin-bottom: 40px;
+}
+
+.leading-compains__blocks {
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.leading-compains__block {
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 40px 32px;
+  row-gap: 32px;
+}
+
+.leading-compains__block-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background-color: #2d6fd0;
+  margin-bottom: 24px;
+}
+
+.leading-compains__block-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.leading-compains__block-list {
+  row-gap: 8px;
+}
+
+.energy-sector__picture {
+  margin-bottom: 20px;
+}
+
+.energy-sector__picture .picture-text__content {
+  max-width: calc(100% - 120px);
+}
+
+.energy-sector__picture .picture-text__items li {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+  width: calc(20% - 16px);
+}
+
+.energy-sector__picture .picture-text__items li b {
+  display: block;
+  margin-bottom: 12px;
+  color: #2d6fd0;
+}
+
+.energy-sector__items {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.energy-sector__items li {
+  row-gap: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 40px 32px;
+}
+
+.energy-sector__items b {
+  display: block;
+  color: #2d6fd0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.agriculture__title {
+  margin-bottom: 40px;
+}
+
+.agriculture__content {
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.agriculture__items {
+  row-gap: 20px;
+}
+
+.agriculture__items li {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 20px 32px;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.agriculture__items li b {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.agriculture__img img {
+  border-radius: 4px;
+}
+
+.agriculture__block {
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 40px 32px;
+}
+
+.agriculture__block-items {
+  row-gap: 32px;
+}
+
+.agriculture__block-items li b {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.availability-stock__container {
+  row-gap: 40px;
+}
+
+.availability-stock__blocks {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.availability-stock__block {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 40px 32px;
+  width: calc(33.3333333333% - 13.3333333333px);
+  flex-shrink: 0;
+}
+
+.availability-stock__block-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background-color: #2d6fd0;
+  margin-bottom: 16px;
+}
+
+.availability-stock__block-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.availability-stock__block-price {
+  margin-bottom: 32px;
+}
+
+.availability-stock__img img {
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.availability-stock__tit {
+  margin-bottom: 20px;
+}
+
+.availability-stock__list {
+  max-width: 760px;
+}
+
+.availability-stock .content ul > li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.promising-direc__container {
+  row-gap: 40px;
+}
+
+.promising-direc__title {
+  max-width: 870px;
+}
+
+.promising-direc__index {
+  display: flex;
+  align-items: flex-end;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.promising-direc__index p {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.promising-direc__blocks {
+  row-gap: 20px;
+}
+
+.promising-direc__blocks-items {
+  flex-wrap: wrap;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.promising-direc__blocks-item {
+  row-gap: 32px;
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+  width: calc(33.3333333333% - 13.3333333333px);
+}
+
+.promising-direc__blocks-item:nth-child(4),
+.promising-direc__blocks-item:nth-child(5) {
+  width: calc(50% - 10px);
+}
+
+.promising-direc__blocks-item ul {
+  row-gap: 4px;
+}
+
+.promising-direc__blocks-tit {
+  color: #2d6fd0;
+}
+
+.promising-direc__blocks-img {
+  width: 100%;
+  height: 500px;
+}
+
+.promising-direc__blocks-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -7514,6 +8188,7 @@ fieldset {
     font-size: 64px;
   }
 
+  .region-statistics__title,
   .club-strategic__title,
   .regional-standart__title,
   .regul-committee__title,
@@ -7525,6 +8200,15 @@ fieldset {
     font-size: 48px;
   }
 
+  .promising-direc__blocks-title,
+  .availability-stock__tit,
+  .agriculture__block-tit,
+  .energy-sector__picture .picture-text__items li b,
+  .leading-compains__block-tit,
+  .region-indystry__h3,
+  .labor-resources__grafic-title,
+  .labor-resources__picture .picture-text__items li b,
+  .social-infr__tit,
   .public-representative__item-link,
   .strategy-grafic__grafic-title,
   .invest-com__links-link,
@@ -7547,6 +8231,10 @@ fieldset {
     font-size: 26px;
   }
 
+  .agriculture__block-items li,
+  .scientific-potential__txts p,
+  .fertile-land__subtitle p,
+  .region-statistics__subtitle p,
   .func-public-repres__item-txt,
   .main-direction__item p,
   .main-direction__subtitle,
@@ -7592,6 +8280,7 @@ fieldset {
     line-height: 130%;
   }
 
+  .promising-direc__blocks-tit,
   .func-public-repres__item-tit,
   .tourism-potential__blocks-num,
   .tourism-potential__blocks-title,
@@ -7616,6 +8305,15 @@ fieldset {
     line-height: 140%;
   }
 
+  .promising-direc__title,
+  .availability-stock__title,
+  .agriculture__title,
+  .leading-compains__title,
+  .inf-tech__title,
+  .region-indystry__title,
+  .scientific-potential__title,
+  .social-infr__title,
+  .fertile-land__title,
   .func-public-repres__title,
   .public-representative__title,
   .main-direction__title,
@@ -7631,6 +8329,20 @@ fieldset {
   .list-templates__title,
   .map__title {
     font-size: 40px;
+  }
+
+  .promising-direc__index strong,
+  .availability-stock__block-price,
+  .agriculture__items li b,
+  .inf-tech__item b,
+  .region-indystry__blocks li b,
+  .scientific-potential__items b,
+  .social-infr__items li b {
+    font-size: 32px;
+  }
+
+  .agriculture__block-items li b {
+    font-size: 32px;
   }
 
   .container {
@@ -7652,6 +8364,10 @@ fieldset {
   .card__content {
     padding: 24px;
     min-height: 290px;
+  }
+
+  .content ul > li {
+    padding-left: 32px;
   }
 
   .list-per__title {
@@ -8336,6 +9052,135 @@ fieldset {
     width: 450px;
     height: 552px;
   }
+
+  .social-infr__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .social-infr__block {
+    width: 380px;
+  }
+
+  .social-infr__items li {
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .social-infr__tit {
+    min-height: 93px;
+  }
+
+  .labor-resources__picture .picture-text__content {
+    max-width: calc(100% - 98px);
+  }
+
+  .labor-resources__picture .picture-text__items li {
+    padding: 32px 24px;
+  }
+
+  .labor-resources__grafic {
+    padding: 30px;
+  }
+
+  .labor-resources__grafic-title {
+    margin-bottom: 18px;
+    max-width: 400px;
+  }
+
+  .labor-resources__grafic-graf {
+    height: 260px;
+  }
+
+  .scientific-potential__img {
+    flex-basis: calc(41.5% - 10px);
+  }
+
+  .scientific-potential__items li {
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+    align-items: center;
+  }
+
+  .scientific-potential__items b {
+    font-size: 32px;
+  }
+
+  .scientific-potential__items p {
+    margin: 0;
+  }
+
+  .region-indystry__structure {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  .region-indystry__graffic .region-indystry__h3 {
+    display: block;
+    margin: 0;
+  }
+
+  .region-indystry__graffic {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+
+  .region-indystry__desc .region-indystry__h3 {
+    display: none;
+  }
+
+  .region-indystry__h3 {
+    max-width: 100%;
+  }
+
+  .region-indystry__items {
+    row-gap: 16px;
+  }
+
+  .region-indystry__graffic-img {
+    width: 173px;
+    height: 173px;
+  }
+
+  .inf-tech__title {
+    max-width: 580px;
+  }
+
+  .tourism-potential__inf {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .energy-sector__picture .picture-text__content {
+    max-width: calc(100% - 98px);
+  }
+
+  .energy-sector__picture .picture-text__items li {
+    padding: 32px 24px;
+  }
+
+  .energy-sector__items {
+    display: none;
+  }
+
+  .agriculture__items li {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .agriculture__block {
+    row-gap: 14px;
+  }
+
+  .agriculture__block-tit br {
+    display: none;
+  }
+
+  .promising-direc__blocks-item {
+    row-gap: 24px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -8351,6 +9196,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .region-statistics__title,
   .club-strategic__title,
   .regional-standart__title,
   .regul-committee__title,
@@ -10028,6 +10874,288 @@ fieldset {
     width: 100%;
     height: 265px;
   }
+
+  .region-statistics__titles {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+
+  .region-statistics__title {
+    font-size: 48px;
+  }
+
+  .region-statistics__title,
+  .region-statistics__subtitle {
+    padding-right: 0;
+  }
+
+  .region-statistics__subtitle p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .fertile-land__container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+
+  .fertile-land__title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .fertile-land__img {
+    height: 400px;
+  }
+
+  .fertile-land__desc {
+    padding-right: 0;
+  }
+
+  .social-infr__title {
+    margin-bottom: 32px;
+    font-size: 36px;
+  }
+
+  .social-infr__blocks {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+
+  .social-infr__block {
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .social-infr__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-infr__items li {
+    width: -webkit-fill-available;
+    -webkit-hyphens: none;
+            hyphens: none;
+  }
+
+  .social-infr__tit {
+    min-height: 100%;
+  }
+
+  .labor-resources__picture {
+    margin-bottom: 32px;
+  }
+
+  .labor-resources__picture .picture-text__content {
+    max-width: calc(100% - 64px);
+  }
+
+  .labor-resources__picture .picture-text__items {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+  }
+
+  .labor-resources__picture .picture-text__items li {
+    padding: 24px;
+    width: 100%;
+  }
+
+  .labor-resources__grafic {
+    padding: 20px;
+  }
+
+  .labor-resources__grafic-title {
+    margin-bottom: 11px;
+    max-width: 100%;
+    font-size: 20px;
+  }
+
+  .labor-resources__grafic-graf {
+    height: 152px;
+  }
+
+  .scientific-potential__container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .scientific-potential__title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .scientific-potential__img {
+    height: 400px;
+    flex-basis: auto;
+  }
+
+  .region-indystry__title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .region-indystry__content {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+
+  .region-indystry__graffic {
+    width: 100%;
+  }
+
+  .inf-tech__title {
+    max-width: 100%;
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .inf-tech__content {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+
+  .inf-tech__img {
+    height: 326px;
+  }
+
+  .tourism-potential__title {
+    margin-bottom: 32px;
+  }
+
+  .tourism-potential__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tourism-potential__item {
+    height: 215px;
+  }
+
+  .tourism-potential__inf {
+    padding: 24px;
+  }
+
+  .tourism-potential__inf-num {
+    font-size: 32px;
+  }
+
+  .leading-compains__title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .leading-compains__block {
+    padding: 24px;
+    row-gap: 38px;
+  }
+
+  .leading-compains__block-tit {
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .energy-sector__picture .picture-text__content {
+    max-width: calc(100% - 64px);
+  }
+
+  .energy-sector__picture .picture-text__items {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .energy-sector__picture .picture-text__items li {
+    width: calc(33.3333333333% - 13.3333333333px);
+    padding: 24px;
+  }
+
+  .energy-sector__picture .picture-text__items li:nth-child(4),
+  .energy-sector__picture .picture-text__items li:nth-child(5) {
+    width: calc(50% - 10px);
+  }
+
+  .agriculture__title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .agriculture__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .agriculture__items li {
+    padding: 18px 24px;
+  }
+
+  .agriculture__img {
+    height: 400px;
+  }
+
+  .agriculture__block {
+    padding: 24px;
+    row-gap: 24px;
+  }
+
+  .agriculture__block-items {
+    row-gap: 26px;
+  }
+
+  .agriculture__block-items li b {
+    font-size: 40px;
+  }
+
+  .availability-stock__container {
+    row-gap: 32px;
+  }
+
+  .availability-stock__title {
+    font-size: 36px;
+  }
+
+  .availability-stock__blocks {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .availability-stock__block {
+    width: calc(50% - 10px);
+    padding: 24px;
+  }
+
+  .availability-stock__block:nth-child(3) {
+    width: 100%;
+  }
+
+  .availability-stock__img {
+    width: 100%;
+    height: 296px;
+  }
+
+  .promising-direc__title {
+    font-size: 36px;
+  }
+
+  .promising-direc__container {
+    row-gap: 32px;
+  }
+
+  .promising-direc__blocks-item {
+    padding: 24px;
+    width: calc(50% - 10px);
+    justify-content: flex-start;
+  }
+
+  .promising-direc__blocks-item:last-child {
+    width: 100%;
+  }
+
+  .promising-direc__blocks-tit {
+    line-height: 120%;
+  }
+
+  .promising-direc__blocks-img {
+    height: 400px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -10037,6 +11165,7 @@ fieldset {
     line-height: 110%;
   }
 
+  .region-statistics__title,
   .club-strategic__title,
   .regional-standart__title,
   .regul-committee__title,
@@ -10048,6 +11177,15 @@ fieldset {
     font-size: 32px;
   }
 
+  .promising-direc__blocks-title,
+  .availability-stock__tit,
+  .agriculture__block-tit,
+  .energy-sector__picture .picture-text__items li b,
+  .leading-compains__block-tit,
+  .region-indystry__h3,
+  .labor-resources__grafic-title,
+  .labor-resources__picture .picture-text__items li b,
+  .social-infr__tit,
   .public-representative__item-link,
   .strategy-grafic__grafic-title,
   .invest-com__links-link,
@@ -10070,6 +11208,10 @@ fieldset {
     font-size: 24px;
   }
 
+  .agriculture__block-items li,
+  .scientific-potential__txts p,
+  .fertile-land__subtitle p,
+  .region-statistics__subtitle p,
   .func-public-repres__item-txt,
   .main-direction__item p,
   .main-direction__subtitle,
@@ -10114,6 +11256,7 @@ fieldset {
     font-size: 16px;
   }
 
+  .promising-direc__blocks-tit,
   .func-public-repres__item-tit,
   .tourism-potential__blocks-num,
   .tourism-potential__blocks-title,
@@ -10139,6 +11282,15 @@ fieldset {
     line-height: 120%;
   }
 
+  .promising-direc__title,
+  .availability-stock__title,
+  .agriculture__title,
+  .leading-compains__title,
+  .inf-tech__title,
+  .region-indystry__title,
+  .scientific-potential__title,
+  .social-infr__title,
+  .fertile-land__title,
   .func-public-repres__title,
   .public-representative__title,
   .main-direction__title,
@@ -11788,6 +12940,302 @@ fieldset {
 
   .func-public-repres .content ul > li {
     font-size: 16px;
+  }
+
+  .region-statistics__title {
+    font-size: 32px;
+  }
+
+  .fertile-land__title {
+    font-size: 24px;
+  }
+
+  .fertile-land__subtitle p:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .social-infr__title {
+    font-size: 24px;
+  }
+
+  .social-infr__block {
+    padding: 32px 24px;
+  }
+
+  .social-infr__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .social-infr__icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social-infr__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-infr__items li {
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .labor-resources__picture .picture-text__content {
+    position: static;
+    max-width: 100%;
+  }
+
+  .labor-resources__picture .picture-text__title {
+    max-width: 100%;
+    color: #2f2f2f;
+    margin-bottom: 32px;
+  }
+
+  .labor-resources__picture .picture-text__items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    margin-bottom: 16px;
+  }
+
+  .labor-resources__picture .picture-text__img {
+    height: 320px;
+  }
+
+  .labor-resources__grafics {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .labor-resources__grafic {
+    width: 100%;
+  }
+
+  .scientific-potential__title {
+    font-size: 24px;
+  }
+
+  .scientific-potential__txts {
+    margin-bottom: 24px;
+  }
+
+  .scientific-potential__items li {
+    padding: 20px;
+  }
+
+  .scientific-potential__items b {
+    font-size: 28px;
+    min-width: 44px;
+  }
+
+  .scientific-potential__items p {
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  .scientific-potential__img {
+    height: 320px;
+  }
+
+  .region-indystry__title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .region-indystry__structure,
+  .region-indystry__share {
+    padding: 24px;
+  }
+
+  .region-indystry__graffic {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 24px;
+  }
+
+  .region-indystry__graffic-img {
+    margin: 0 auto;
+  }
+
+  .region-indystry__blocks {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+  }
+
+  .region-indystry__blocks li {
+    font-size: 14px;
+  }
+
+  .region-indystry__blocks li b {
+    font-size: 28px;
+  }
+
+  .region-indystry__items {
+    row-gap: 12px;
+  }
+
+  .inf-tech__title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .inf-tech__items {
+    row-gap: 16px;
+  }
+
+  .inf-tech__item {
+    padding: 24px;
+    flex-direction: column-reverse;
+    row-gap: 12px;
+    min-height: auto;
+  }
+
+  .inf-tech__item b {
+    font-size: 24px;
+  }
+
+  .inf-tech__item:nth-child(n) {
+    width: 100%;
+  }
+
+  .inf-tech__img {
+    height: 320px;
+  }
+
+  .tourism-potential__items {
+    row-gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .leading-compains__title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .leading-compains__blocks {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1fr;
+    row-gap: 18px;
+  }
+
+  .leading-compains__block-tit {
+    font-size: 20px;
+  }
+
+  .leading-compains__block {
+    row-gap: 30px;
+  }
+
+  .energy-sector__picture .picture-text__content {
+    position: static;
+    max-width: 100%;
+  }
+
+  .energy-sector__picture .picture-text__title {
+    max-width: 100%;
+    color: #2f2f2f;
+    margin-bottom: 32px;
+  }
+
+  .energy-sector__picture .picture-text__items {
+    margin-bottom: 16px;
+  }
+
+  .energy-sector__picture .picture-text__items li:nth-child(n) {
+    width: 100%;
+  }
+
+  .energy-sector__picture .picture-text__img {
+    height: 320px;
+  }
+
+  .energy-sector__grafics {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .energy-sector__grafic {
+    width: 100%;
+  }
+
+  .agriculture__title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .agriculture__items {
+    row-gap: 16px;
+  }
+
+  .agriculture__items li {
+    padding: 20px 24px;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  .agriculture__img {
+    height: 320px;
+  }
+
+  .agriculture__block-tit {
+    font-size: 20px;
+  }
+
+  .agriculture__block-items li b {
+    font-size: 28px;
+  }
+
+  .availability-stock__title {
+    font-size: 24px;
+  }
+
+  .availability-stock__blocks {
+    row-gap: 16px;
+  }
+
+  .availability-stock__block {
+    width: 100%;
+  }
+
+  .availability-stock__block-price {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .availability-stock__img {
+    height: 252px;
+  }
+
+  .promising-direc__container {
+    row-gap: 32px;
+  }
+
+  .promising-direc__title {
+    font-size: 24px;
+  }
+
+  .promising-direc__index {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 14px;
+  }
+
+  .promising-direc__index p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .promising-direc__blocks-items {
+    row-gap: 16px;
+  }
+
+  .promising-direc__blocks-item:nth-child(n) {
+    width: 100%;
+  }
+
+  .promising-direc__blocks-img {
+    height: 320px;
   }
 }
 

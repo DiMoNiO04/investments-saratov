@@ -1,0 +1,65 @@
+.fertile-land {
+  &__container {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__desc {
+    padding-right: 20px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    p {
+      @include mb(8px);
+      @extend %mainTxt;
+    }
+  }
+
+  &__img {
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .fertile-land {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+
+    &__title {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    &__img {
+      height: 400px;
+    }
+
+    &__desc {
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .fertile-land {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__subtitle {
+      p {
+        @include mb(12px);
+      }
+    }
+  }
+}

@@ -1,0 +1,1870 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Статистика региона</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231220092215" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231220092215" />
+</head>
+
+
+  <body>
+    <!-- <header class="header header--transparent"> -->
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__container">
+        <div class="header-top__logo logo js-header-logo">
+          <a href="./main.html" class="header-top__logo--transparent">
+            <picture>
+              <source media="(min-width: 1365px)" srcset="assets/img/icons/logo.svg" />
+              <source media="(max-width: 1366px)" srcset="assets/img/icons/logo-sm.svg" />
+              <img src="assets/img/icons/logo.svg" alt="logo" />
+            </picture>
+          </a>
+          <a href="./main.html">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="assets/img/icons/logo-2.svg" />
+              <img src="assets/img/icons/logo-2-sm.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <div class="header-top__content logo-2.svg">
+          <div class="header-top__panel">
+            <div class="header-top__search-wr">
+              <div class="header-top__phone">
+                <a href="tel:+78452695262">+7 (8452) 69 52 62</a>
+                <p>Горячая линия</p>
+              </div>
+              <div class="header-top__btns-search">
+                <div class="header-top__btns-button js-button-search">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#search"></use>
+                  </svg>
+                  <span>Поиск</span>
+                </div>
+
+                <div class="form-search js-form-search" action="/ru/search.php">
+                  <input
+                    class="form-search__input"
+                    size=""
+                    name=""
+                    id=""
+                    value=""
+                    type="text"
+                    autocomplete="off$white"
+                    placeholder="Что ищите?"
+                  />
+                  <button class="form-search__button-open">
+                    <svg>
+                      <use xlink:href="assets/img/icons/icons.svg#search"></use>
+                    </svg>
+                  </button>
+                  <button class="form-search__button-close js-search-close">
+                    <svg>
+                      <use xlink:href="assets/img/icons/icons.svg#search-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="header-bottom__btn">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#map-pinned"></use>
+              </svg>
+              <p>Инвестиционная карта</p>
+            </a>
+            <div class="header-top__socials">
+              <a href="#" class="header-top__social">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#vk-2"></use>
+                </svg>
+              </a>
+              <a href="#" class="header-top__social">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#tg-2"></use>
+                </svg>
+              </a>
+              <a href="#" class="header-top__social">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#odn-2"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="header-top__dropdown dropdown dropdown-sec js-dropdown">
+              <div class="dropdown__header js-dropdown-inner">
+                <div class="dropdown__value js-dropdown-value">RU</div>
+                <button type="button" class="dropdown__btn">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#arrow-caret-down"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__items">
+                  <div class="dropdown__item js-dropdown-item active">
+                    <input id="ru" type="radio" name="lang" value="lang-1" checked />
+                    <label for="ru">RU</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="lang-2" type="radio" name="lang" value="lang-2" />
+                    <label for="lang-2">EN</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <a href="#" class="header-top__btn btn btn-sec">
+              <span>Линия прямых обращений</span>
+            </a> -->
+          </div>
+        </div>
+        <div class="header-bottom__btns header-top__entrance">
+          <a href="#" class="header-bottom__btn">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#entrance"></use>
+            </svg>
+          </a>
+        </div>
+        <button type="button" class="header-top__burger js-burger --mob">
+          <!-- <svg>
+            <use xlink:href="assets/img/icons/icons.svg#list"></use>
+          </svg> -->
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="container">
+      <div class="header-bottom__container">
+        <div class="header-bottom__links">
+          <button type="button" class="header-bottom__btn-burg js-burger">
+            <!-- <svg>
+              <use xlink:href="assets/img/icons/icons.svg#list"></use>
+            </svg> -->
+          </button>
+          <nav class="nav header-bottom__menu">
+            <ul class="header-bottom__list">
+              <li class="nav__item header-bottom__list-item js-head-link">
+                <a class="nav__link header-bottom__list-link" href="#">О регионе</a>
+                <svg width="12" height="12">
+                  <use xlink:href="assets/img/icons/icons.svg#arrow-black-down"></use>
+                </svg>
+                <ul class="header-bottom__list-menu js-head-menu">
+                  <li class="">
+                    <a href="#">Расположение</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Статистика региона</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Социально-экономическое развитие</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Стратегия</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Истории успеха</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Муниципальные образования</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Инфраструктурные проекты</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Инвестстандарт</a>
+              </li>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Инвестору</a>
+              </li>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Площадки</a>
+              </li>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Поддержка</a>
+              </li>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Линия прямых обращений</a>
+              </li>
+              <li class="nav__item header-bottom__list-item">
+                <a class="nav__link header-bottom__list-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-bottom__btns">
+          <a href="#" class="header-bottom__btn">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#entrance"></use>
+            </svg>
+            <p>Войти</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-menu js-header-menu">
+    <div class="container">
+      <div class="footer__lists">
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>О регионе</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <ul class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Расположение</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Статистика региона</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Социально-экономическое развитие</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Стратегия</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Истории успеха</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Муниципальные образования</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Инфраструктурные проекты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Инвестору</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <ul class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Заявка инвестора</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Корпорация развития</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Инвестиционный комитет</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Клуб стратегических инициатив</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Инвестиции в туризм</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Законодательство</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Требуется инвестор</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Кадры</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">План создания объектов</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Опросы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Поддержка</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <ul class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Единое окно</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Помощь инвестору</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Налоговые льготы</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Субсидии</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">СПИК 2.0</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Инфраструктура поддержки</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Инвестиционный договор</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Региональный инвестстандарт</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Калькулятор мер поддержки</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Площадки</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <ul class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Предложить площадку</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Реестр свободных земельных участков</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Преференциальные территории</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Площадки с объектами капитального строительства</a>
+            </li>
+          </ul>
+          <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+            <p>О регионе</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+            <p>Контакты</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="footer__list footer__list-hide js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <a href="#">Инвестстандарт</a>
+          </div>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Линия прямых обращений</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <div class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Получить консультацию</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Мониторинг обращений</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Подать заявку на сопровождение проекта</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Предложить проект</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>ГЧП</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <div class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Проекты ГЧП</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Общие сведения</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Меры поддержки</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Реестр объектов для ГЧП</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Контакты ГЧП</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Документы</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <div class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Законодательство</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Корпоративные облигации</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Презентационные материалы</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer__list js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <p>Медиа</p>
+            <svg width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+            </svg>
+          </div>
+          <div class="footer__list-items js-dropdown-content">
+            <li class="footer__item">
+              <a href="#">Новости</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Мероприятия</a>
+            </li>
+            <li class="footer__item">
+              <a href="#">Фото и видеоотчет</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer__list footer__list-hide js-dropdown-list">
+          <div class="footer__list-title js-dropdown-title">
+            <a href="#">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ <main>
+  <div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs__container">
+      <a href="#">
+        <span>Главная</span>
+        <span>/</span>
+      </a>
+      <a href="#">
+        <span>О регионе</span>
+        <span>/</span>
+      </a>
+      <span>Статистика региона</span>
+    </div>
+  </div>
+</div>
+ <section class="section region-statistics">
+  <div class="container">
+    <div class="region-statistics__titles">
+      <h1 class="region-statistics__title">Статистика региона</h1>
+      <div class="region-statistics__subtitle">
+        <p>
+          Саратовская область – это регион, обладающий внушительными промышленными, кадровыми и природными ресурсами
+        </p>
+        <p>
+          Мы активно строим удобную для бизнеса и населения инфраструктуру, дороги, детские сады и школы, медицинские
+          центры, открываем новые промышленные предприятия. Собираем рекордный урожай, решаем задачи по
+          импортозамещению, выходим на внешние рынки и применяем инновационные технологии во всех отраслях
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="section fertile-land">
+  <div class="container">
+    <div class="fertile-land__container">
+      <div class="fertile-land__desc">
+        <h2 class="fertile-land__title">
+          КРАЙ ПЛОДОРОДНОЙ ЗЕМЛИ <br />
+          И КУЛЬТУРНЫЙ ЦЕНТР ПОВОЛЖЬЯ
+        </h2>
+        <div class="fertile-land__subtitle">
+          <p>
+            Саратовская область – это волжская природа, простирающаяся от степных тюльпанов на юге до многовековых сосен
+            на севере, самобытные города, сохранившие дух ушедших эпох, богатейшие для глубинки собрания предметов
+            искусства и старины, места, связанные с выдающимися личностями и историческими событиями. Область
+            расположена на берегу одной из самых широких и длинных водных магистралей не только в стране, но и в мире.
+          </p>
+          <p>
+            Здесь, на берегу Волги, уже более 400 лет стоит Саратов – некогда крупный купеческий центр страны, а
+            сегодня – второй по площади город в России после Москвы, край плодородной земли и «золота» региона – пшеницы
+            и подсолнечника, музейный и театральный центр провинции. В областном центре создана самая большая по
+            протяжённости пешеходная зона в Европе – длиной 8 км.
+          </p>
+          <p>
+            С Саратовской областью связаны юношеские годы первого космонавта Юрия Гагарина, здесь он приземлился после
+            первого полёта в космос, отсюда начался новый этап в развитии космической науки и эпохи освоения космоса.
+          </p>
+        </div>
+      </div>
+      <div class="fertile-land__img">
+        <picture><source srcset="assets/img/region-statistics/fending-land.webp" type="image/webp"><img src="assets/img/region-statistics/fending-land.png" alt="" /></picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section social-infr">
+  <div class="container">
+    <div class="social-infr__container">
+      <h2 class="social-infr__title">СОЦИАЛЬНАЯ ИНФРАСТРУКТУРА</h2>
+      <div class="social-infr__blocks">
+        <div class="social-infr__block">
+          <div class="social-infr__top">
+            <div class="social-infr__icon">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#medical-report-clipboard"></use>
+              </svg>
+            </div>
+            <div class="social-infr__tit">Объекты здравохранения</div>
+          </div>
+          <ul class="social-infr__items">
+            <li>
+              <b>57</b>
+              Больниц
+            </li>
+            <li>
+              <b>23</b>
+              Поликлиники
+            </li>
+            <li>
+              <b>17</b>
+              Диспансеры
+            </li>
+            <li>
+              <b>5</b>
+              Медицинские центры
+            </li>
+          </ul>
+        </div>
+        <div class="social-infr__block">
+          <div class="social-infr__top">
+            <div class="social-infr__icon">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#book-reading"></use>
+              </svg>
+            </div>
+            <div class="social-infr__tit">Система дошкольного и школьного образования</div>
+          </div>
+          <ul class="social-infr__items">
+            <li>
+              <b>723</b>
+              Учреждения дошкольного образования
+            </li>
+            <li>
+              <b>697</b>
+              Общеобразовательные организации
+            </li>
+            <li>
+              <b>207</b>
+              Учреждения дополнительного образования
+            </li>
+          </ul>
+        </div>
+        <div class="social-infr__block">
+          <div class="social-infr__top">
+            <div class="social-infr__icon">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#graduation-cap"></use>
+              </svg>
+            </div>
+            <div class="social-infr__tit">Высшее образование</div>
+          </div>
+          <ul class="social-infr__items">
+            <li>
+              <b>7</b>
+              Самостоятельных образовательных организаций
+            </li>
+            <li>
+              <b>10</b>
+              Филиалов
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="section labor-resources">
+  <div class="container">
+    <div class="labor-resources__container">
+      <div class="labor-resources__picture picture-text">
+        <div class="picture-text__container">
+          <div class="picture-text__content">
+            <h2 class="picture-text__title">ТРУДОВЫЕ РЕСУРСЫ</h2>
+            <ul class="picture-text__items">
+              <li>
+                <b>2 404,9 тыс. чел.</b>
+                Население Саратовской области
+              </li>
+              <li>
+                <b>1 189,1 тыс. чел.</b>
+                Экономически активное население
+              </li>
+              <li>
+                <b>1 148,8 тыс. чел.</b>
+                Занято в экономике
+              </li>
+              <li>
+                <b>28,9%</b>
+                Доля рабочей силы с высшим профессиональным образованием
+              </li>
+            </ul>
+          </div>
+          <div class="picture-text__img">
+            <picture><source srcset="assets/img/region-statistics/labor-resources.webp" type="image/webp"><img src="assets/img/region-statistics/labor-resources.png" alt="" /></picture>
+          </div>
+        </div>
+      </div>
+      <div class="labor-resources__grafics">
+        <div class="labor-resources__grafic">
+          <h3 class="labor-resources__grafic-title">
+            Количество безработных, состоящих на учете в службе занятости, человек
+          </h3>
+          <picture class="labor-resources__grafic-graf">
+            <source media="(min-width: 1365px)" srcset="assets/img/region-statistics/unemployed-people.svg" />
+            <source
+              media="(max-width: 1366px) and (min-width: 767px)"
+              srcset="assets/img/region-statistics/unemployed-people-tablet.svg"
+            />
+            <!-- <source media="(max-width: 768px)" srcset="assets/img/maps/main-map-mob.svg" /> -->
+            <img src="assets/img/region-statistics/unemployed-people.svg" alt="" />
+          </picture>
+        </div>
+        <div class="labor-resources__grafic">
+          <h3 class="labor-resources__grafic-title">
+            Уровень регистрируемой <br />
+            безработицы, %
+          </h3>
+          <picture class="labor-resources__grafic-graf">
+            <source media="(min-width: 1365px)" srcset="assets/img/region-statistics/registered-unemployment-rate.svg" />
+            <source
+              media="(max-width: 1366px) and (min-width: 767px)"
+              srcset="assets/img/region-statistics/registered-unemployment-rate-tablet.svg"
+            />
+            <!-- <source media="(max-width: 768px)" srcset="assets/img/maps/main-map-mob.svg" /> -->
+            <img src="assets/img/region-statistics/registered-unemployment-rate.svg" alt="" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="section scientific-potential">
+  <div class="container">
+    <div class="scientific-potential__container">
+      <div class="scientific-potential__desc">
+        <h2 class="scientific-potential__title">НАУЧНЫЙ ПОТЕНЦИАЛ</h2>
+        <div class="scientific-potential__txts">
+          <p>
+            Система образования области является динамично развивающейся, обеспеченной квалифицированными кадрами.
+            Образовательный комплекс обладает высоким потенциалом.
+          </p>
+          <p>
+            Регион известен как один из крупнейших научных центров России. Область представлена комплексом крупных
+            научно-исследовательских и проектных институтов, научно-производственных предприятий и объединений.
+          </p>
+        </div>
+        <ul class="scientific-potential__items">
+          <li>
+            <b>62</b>
+            <p>Предприятия, осуществляющих научные исследования и разработки</p>
+          </li>
+          <li>
+            <b>17</b>
+            <p>Образовательных учреждений высшего образования</p>
+          </li>
+          <li>
+            <b>50</b>
+            <p>Профессиональных образовательных организаций</p>
+          </li>
+          <li>
+            <b>34</b>
+            <p>Отраслевых научно исследовательских институ та  и организации</p>
+          </li>
+          <li>
+            <b>8</b>
+            <p>Научных учреждений Российской академии наук</p>
+          </li>
+        </ul>
+      </div>
+      <div class="scientific-potential__img">
+        <picture><source srcset="assets/img/region-statistics/scientific-potential.webp" type="image/webp"><img src="assets/img/region-statistics/scientific-potential.png" alt="" /></picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section region-indystry">
+  <div class="container">
+    <div class="region-indystry__container">
+      <div class="region-indystry__title">ПРОМЫШЛЕННОСТЬ</div>
+      <div class="region-indystry__content">
+        <div class="region-indystry__structure">
+          <div class="region-indystry__graffic">
+            <div class="region-indystry__graffic-img">
+              <img src="assets/img/region-statistics/region-indystry-graf.svg" alt="График" />
+            </div>
+            <h3 class="region-indystry__h3">Структура промышленности</h3>
+          </div>
+          <div class="region-indystry__desc">
+            <h3 class="region-indystry__h3">Структура промышленности</h3>
+            <ul class="region-indystry__items">
+              <li>
+                <svg fill="#4F86D8">
+                  <use xlink:href="assets/img/icons/icons.svg#circle"></use>
+                </svg>
+                <p>Обрабатывающие производства</p>
+              </li>
+              <li>
+                <svg fill="#2D6FD0">
+                  <use xlink:href="assets/img/icons/icons.svg#circle"></use>
+                </svg>
+                <p>Обеспечение электроэнергией, газом и паром; кондиционирование воздуха</p>
+              </li>
+              <li>
+                <svg fill="#22549E">
+                  <use xlink:href="assets/img/icons/icons.svg#circle"></use>
+                </svg>
+                <p>Добыча полезных ископаемых</p>
+              </li>
+              <li>
+                <svg fill="#17396B">
+                  <use xlink:href="assets/img/icons/icons.svg#circle"></use>
+                </svg>
+                <p>
+                  Водоснабжение, водоотведение, организация сбора и утилизация отходов, деятельность по ликвидации
+                  загрязнений
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="region-indystry__share">
+          <h3 class="region-indystry__h3">Доля производства в масштабах страны</h3>
+          <ul class="region-indystry__blocks">
+            <li>
+              <b>15,8%</b>
+              Серной кислоты
+            </li>
+            <li>
+              <b>11,3%</b>
+              Диванов
+            </li>
+            <li>
+              <b>10,6%</b>
+              Подшипников
+            </li>
+            <li>
+              <b>12,5%</b>
+              Минеральных у добрений
+            </li>
+            <li>
+              <b>3,9%</b>
+              Электроэнергии
+            </li>
+            <li>
+              <b>3,3%</b>
+              Синтетических моющих средств
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="section availability-stock">
+  <div class="container">
+    <div class="availability-stock__container">
+      <h2 class="availability-stock__title">
+        НАЛИЧИЕ ЗАПАСОВ <br />
+        И ПОЛЕЗНЫХ ИСКОПАЕМЫХ
+      </h2>
+      <div class="availability-stock__blocks">
+        <div class="availability-stock__block">
+          <div class="availability-stock__block-top">
+            <div class="availability-stock__block-icon">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#gas-oil-eco-fuel"></use>
+              </svg>
+            </div>
+            <div class="availability-stock__block-price">1 трлн м3</div>
+          </div>
+          <div class="availability-stock__block-txt">Запасов газа на территории Саратовской области</div>
+        </div>
+        <div class="availability-stock__block">
+          <div class="availability-stock__block-top">
+            <div class="availability-stock__block-icon">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#oil-barrel"></use>
+              </svg>
+            </div>
+            <div class="availability-stock__block-price">700 млн тонн</div>
+          </div>
+          <div class="availability-stock__block-txt">Запасов нефти на территории Саратовской области</div>
+        </div>
+        <div class="availability-stock__img">
+          <picture><source srcset="assets/img/region-statistics/availability-stock.webp" type="image/webp"><img src="assets/img/region-statistics/availability-stock.png" alt="" /></picture>
+        </div>
+      </div>
+      <div class="availability-stock__list content">
+        <h3 class="availability-stock__tit">Приоритетные направления развития</h3>
+        <ul>
+          <li>Разработка Савельевского, Озинского, Коцебинского месторождений и добыча горючих сланцев</li>
+          <li>Утилизация попутного нефтяного газа</li>
+          <li>
+            Модернизация производств и внедрение новых технологий для выпуска строительных и отделочных материалов
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="section promising-direc">
+  <div class="container">
+    <div class="promising-direc__container">
+      <h2 class="promising-direc__title">ПЕРСПЕКТИВНЫЕ НАПРАВЛЕНИЯ РАЗВИТИЯ ПРОМЫШЛЕННОГО КОМПЛЕКСА</h2>
+      <div class="promising-direc__index">
+        <strong>108,8%</strong>
+        <p>Индекс промышленного производства</p>
+      </div>
+      <div class="promising-direc__blocks">
+        <h3 class="promising-direc__blocks-title">В рамках производственных цепочек</h3>
+        <div class="promising-direc__blocks-items">
+          <div class="promising-direc__blocks-item">
+            <div class="promising-direc__blocks-tit">Электронные компоненты</div>
+            <ul>
+              <li>АО «НПП «Алмаз»</li>
+              <li>АО «НПЦ «Алмаз-Фазотрон»</li>
+              <li>АО «НПП «Контакт»</li>
+            </ul>
+          </div>
+          <div class="promising-direc__blocks-item">
+            <div class="promising-direc__blocks-tit">Электротехническое оборудование</div>
+            <ul>
+              <li>АО «Саратовский электротехнический завод»</li>
+            </ul>
+          </div>
+          <div class="promising-direc__blocks-item">
+            <div class="promising-direc__blocks-tit">Сигнализаторы загазованности</div>
+            <ul>
+              <li>ООО ЭПО «Сигнал»</li>
+            </ul>
+          </div>
+          <div class="promising-direc__blocks-item">
+            <div class="promising-direc__blocks-tit">Специализированное контрольно-измерительное оборудование:</div>
+            <ul>
+              <li>ООО «НПФ «Моссар»</li>
+              <li>ООО «Рубеж»</li>
+              <li>ПАО «СЭЗ им. Серго Орджоникидзе»</li>
+            </ul>
+          </div>
+          <div class="promising-direc__blocks-item">
+            <div class="promising-direc__blocks-tit">Оборудование для топливно-энергетического комплекса:</div>
+            <ul>
+              <li>ООО Завод «Газпроммаш»</li>
+              <li>ООО «Завод «Нефтегазоборудование»</li>
+              <li>АО «Газаппарат», ООО «Фойт Гидро»</li>
+            </ul>
+          </div>
+        </div>
+        <div class="promising-direc__blocks-img">
+          <picture><source srcset="assets/img/region-statistics/promising-direc.webp" type="image/webp"><img src="assets/img/region-statistics/promising-direc.png" alt="" /></picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section leading-compains">
+  <div class="container">
+    <div class="leading-compains__container">
+      <h2 class="leading-compains__title">
+        ВЕДУЩИЕ ПРЕДПРИЯТИЯ <br />
+        РЕГИОНА
+      </h2>
+      <div class="leading-compains__blocks">
+        <div class="leading-compains__block">
+          <div class="leading-compains__block-top">
+            <div class="leading-compains__block-icon">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#oil-pump"></use>
+              </svg>
+            </div>
+            <h3 class="leading-compains__block-tit">Невфтехимический кластер</h3>
+          </div>
+          <ul class="leading-compains__block-list">
+            <li>ПАО «Саратовский НПЗ»</li>
+            <li>ООО «Саратоворгсинтез»</li>
+            <li>Балаковский филиал АО «Апатит»</li>
+          </ul>
+        </div>
+        <div class="leading-compains__block">
+          <div class="leading-compains__block-top">
+            <div class="leading-compains__block-icon">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#mover-truck"></use>
+              </svg>
+            </div>
+            <h3 class="leading-compains__block-tit">Машиностроительный кластер</h3>
+          </div>
+          <ul class="leading-compains__block-list">
+            <li>АО «Завод Металлоконструкций»</li>
+            <li>АО «Трансмаш»</li>
+          </ul>
+        </div>
+        <div class="leading-compains__block">
+          <div class="leading-compains__block-top">
+            <div class="leading-compains__block-icon">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#wardrobe-furniture"></use>
+              </svg>
+            </div>
+            <h3 class="leading-compains__block-tit">Мебельный кластер</h3>
+          </div>
+          <ul class="leading-compains__block-list">
+            <li>ООО «Мебельная фабрика Мария»</li>
+            <li>ООО «Король диванов»</li>
+          </ul>
+        </div>
+        <div class="leading-compains__block">
+          <div class="leading-compains__block-top">
+            <div class="leading-compains__block-icon">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#factory"></use>
+              </svg>
+            </div>
+            <h3 class="leading-compains__block-tit">Металлургический кластер</h3>
+          </div>
+          <ul class="leading-compains__block-list">
+            <li>АО «Металлургический завод Балаково»</li>
+            <li>АО «Балаково– Центролит»</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="section energy-sector">
+  <div class="container">
+    <div class="energy-sector__container">
+      <div class="energy-sector__picture picture-text">
+        <div class="picture-text__container">
+          <div class="picture-text__content">
+            <h2 class="picture-text__title">ЭНЕРГЕТИКА РЕГИОНА</h2>
+            <ul class="picture-text__items">
+              <li>
+                <b>6 620 МВт</b>
+                Суммарная мощность электростанций
+              </li>
+              <li>
+                <b>105 МВт</b>
+                Суммарная мощность солнечных электростанций
+              </li>
+              <li>
+                <b>13,05 млрд кВт/ч</b>
+                Региональное потребление
+              </li>
+              <li>
+                <b>72 МВт</b>
+                Планируемое увеличение мощности солнечных электростанций
+              </li>
+              <li>
+                <b>42,5 млрд кВт/ч</b>
+                Объём выработки электроэнергии
+              </li>
+            </ul>
+          </div>
+          <div class="picture-text__img">
+            <picture><source srcset="assets/img/region-statistics/energy-sector.webp" type="image/webp"><img src="assets/img/region-statistics/energy-sector.png" alt="" /></picture>
+          </div>
+        </div>
+      </div>
+      <ul class="energy-sector__items">
+        <li>
+          <b>Саратовская ГЭС</b>
+          Является крупным энергетическим объектом региона с ежегодной выработкой более 5,67 млрд кВт/ч
+        </li>
+        <li>
+          <b>Энергетический кластер</b>
+          Является одним из крупнейших в России, состоит из Саратовской ГЭС, ТЭЦ-4, Балаковской АЭС, Балаковского
+          филиала АО «Апатит»
+        </li>
+        <li>
+          <b>Балаковская АЭС</b>
+          Обеспечивает пятую часть производства электричества в ПФО и шестую часть выработки всех АЭС страны
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+ <section class="section agriculture">
+  <div class="container">
+    <div class="agriculture__container">
+      <h2 class="agriculture__title">СЕЛЬСКОЕ ХОЗЯЙСТВО</h2>
+      <div class="agriculture__content">
+        <ul class="agriculture__items">
+          <li>
+            <b>1 место</b>
+            По выпуску растительного масла среди регионов ПФО (более 486,9 тыс. тонн )
+          </li>
+          <li>
+            <b>1 место</b>
+            По экспорту продукции АПК среди регионов ПФО (526,8 млн долларов)
+          </li>
+          <li>
+            <b>1 место</b>
+            По валовому сбору зерновых и зернобобовых культур среди регионов ПФО (7114,9 тыс. тонн)
+          </li>
+          <li>
+            <b>1 место</b>
+            По сбору подсолнечника среди регионов РФ (2,3 млн тонн)
+          </li>
+          <li>
+            <b>1 место</b>
+            По валовому сбору овощей открытого (280,4 тыс. тонн) и закрытого (39,8 тыс. тонн) грунта среди регионов ПФО
+          </li>
+        </ul>
+        <div class="agriculture__img">
+          <picture><source srcset="assets/img/region-statistics/agriculture.webp" type="image/webp"><img src="assets/img/region-statistics/agriculture.png" alt="" /></picture>
+        </div>
+        <div class="agriculture__block">
+          <h3 class="agriculture__block-tit">
+            Структура почв Саратовской <br />
+            области, тыс. га
+          </h3>
+          <div class="agriculture__block-grafic">
+            <img src="assets/img/region-statistics/agriculture-graf.svg" alt="" />
+          </div>
+        </div>
+        <div class="agriculture__block">
+          <h3 class="agriculture__block-tit">Кластер овощей закрытого грунта</h3>
+          <ul class="agriculture__block-items">
+            <li>
+              <b>5</b>
+              крупных тепличных хозяйств
+            </li>
+            <li>
+              <b>123,9 га</b>
+              общая площадь теплиц
+            </li>
+            <li>
+              <b>39,8 тыс. тонн</b>
+              валовой сбор овощей закрытого грунта
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section inf-tech">
+  <div class="container">
+    <div class="inf-tech__container">
+      <h2 class="inf-tech__title">ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ</h2>
+      <div class="inf-tech__content">
+        <ul class="inf-tech__items">
+          <li class="inf-tech__item">
+            Крупные и средние предприятия ИТ-индустрии области
+            <b>>90</b>
+          </li>
+          <li class="inf-tech__item">
+            Темп роста по сравнению с предыдущим годом
+            <b>104%</b>
+          </li>
+          <li class="inf-tech__item">
+            Общее количество человек, занятых в ИТ-сфере
+            <b>>5 200</b>
+          </li>
+        </ul>
+        <div class="inf-tech__img">
+          <picture><source srcset="assets/img/region-statistics/inf-tech.webp" type="image/webp"><img src="assets/img/region-statistics/inf-tech.png" alt="" /></picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="section tourism-potential">
+  <div class="container">
+    <div class="tourism-potential__container">
+      <h2 class="tourism-potential__title">ТУРИСТИЧЕСКИЙ ПОТЕНЦИАЛ</h2>
+      <div class="tourism-potential__items">
+        <div class="tourism-potential__item tourism-potential__item--img">
+          <div class="tourism-potential__img">
+            <picture><source srcset="assets/img/region-statistics/tourism-potential-1.webp" type="image/webp"><img src="assets/img/region-statistics/tourism-potential-1.png" alt="" /></picture>
+          </div>
+          <div class="tourism-potential__inf">
+            <div class="tourism-potential__inf-num">>1 000 000</div>
+            <div class="tourism-potential__inf-txt">Туристов в год</div>
+          </div>
+        </div>
+        <div class="tourism-potential__item">
+          <div class="tourism-potential__inf">
+            <div class="tourism-potential__inf-num">114</div>
+            <div class="tourism-potential__inf-txt">Туристических баз и баз отдыха</div>
+          </div>
+        </div>
+        <div class="tourism-potential__item">
+          <div class="tourism-potential__inf">
+            <div class="tourism-potential__inf-num">23</div>
+            <div class="tourism-potential__inf-txt">Санаторно-курортные организации</div>
+          </div>
+        </div>
+        <div class="tourism-potential__item">
+          <div class="tourism-potential__inf">
+            <div class="tourism-potential__inf-num">11</div>
+            <div class="tourism-potential__inf-txt">Государственных и муниципальных театров</div>
+          </div>
+        </div>
+        <div class="tourism-potential__item tourism-potential__item--img">
+          <div class="tourism-potential__img">
+            <picture><source srcset="assets/img/region-statistics/tourism-potential-2.webp" type="image/webp"><img src="assets/img/region-statistics/tourism-potential-2.png" alt="" /></picture>
+          </div>
+          <div class="tourism-potential__inf">
+            <div class="tourism-potential__inf-num">87</div>
+            <div class="tourism-potential__inf-txt">
+              Особо охраняемых природных территорий, в т.ч. Национальный парк «Хвалынский» и Государственный природный
+              заказник «Саратовский»
+            </div>
+          </div>
+        </div>
+        <div class="tourism-potential__item">
+          <div class="tourism-potential__inf">
+            <div class="tourism-potential__inf-num">31</div>
+            <div class="tourism-potential__inf-txt">Государственный и муниципальный музей</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="ask-question">
+  <div class="ask-question__container">
+    <div class="ask-question__left">
+      <div class="ask-question__titles">
+        <div class="ask-question__title">Задать вопрос</div>
+        <div class="ask-question__desc">Заполните форму, и мы свяжемся с вами в ближайшее время</div>
+      </div>
+      <div class="ask-question__img">
+        <svg>
+          <use xlink:href="assets/img/icons/icons.svg#ask-question"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="ask-question__right">
+      <div class="ask-question__titles">
+        <div class="ask-question__title">Задать вопрос</div>
+        <div class="ask-question__desc">Заполните форму, и мы свяжемся с вами в ближайшее время</div>
+      </div>
+      <form id="ask-question" class="ask-question__form">
+        <div class="ask-question__input input">
+          <div class="input__head">ФИО</div>
+          <div class="input__input">
+            <input type="text" placeholder="Введите ваше ФИО" />
+          </div>
+          <div class="input__hint">Error</div>
+        </div>
+        <div class="ask-question__input input">
+          <div class="input__head">Электронная почта</div>
+          <div class="input__input">
+            <input type="email" placeholder="Введите электронную почту" />
+          </div>
+          <div class="input__hint">Error</div>
+        </div>
+        <div class="ask-question__textarea textarea">
+          <div class="textarea__head">Текст обращения</div>
+          <div class="textarea__textarea">
+            <textarea name="" id="" placeholder="Опишите суть вопроса или предложения"></textarea>
+          </div>
+          <div class="textarea__hint">Error</div>
+        </div>
+        <div class="ask-question__btns">
+          <button type="submit" class="ask-question__btn btn btn-def">
+            <span>Задать вопрос</span>
+          </button>
+          <p class="ask-question__text">
+            Заполняя форму обратной связи, Вы соглашаетесь с <a href="#">политикой конфиденциальности.</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__logo-column">
+          <a href="./main.html" class="footer__logo logo">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="assets/img/icons/logo.svg" />
+              <img src="assets/img/icons/logo-sm.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <div class="footer__right">
+          <div class="footer__info-block">
+            <p class="footer__info-title">Email</p>
+            <a href="mailto:investsaratov@mai.ru" class="footer__info-link">investsaratov@mai.ru</a>
+          </div>
+          <div class="footer__info-block">
+            <p class="footer__info-title">Телефон</p>
+            <a href="tel:+78452695262" class="footer__info-link">+7 (8452) 69-52-62</a>
+          </div>
+          <div class="footer__info-block">
+            <p class="footer__info-title">Социальные сети</p>
+            <div class="footer__info-socials">
+              <a href="#">
+                <svg width="20" height="20">
+                  <use xlink:href="assets/img/icons/icons.svg#tg"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="20" height="20">
+                  <use xlink:href="assets/img/icons/icons.svg#odnok"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="20" height="20">
+                  <use xlink:href="assets/img/icons/icons.svg#vk"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__info-block">
+            <p class="footer__info-title">Режим работы</p>
+            <p class="footer__info-link">с 9:00 до 18:00 пн-пт</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__center">
+        <div class="footer__lists">
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>О регионе</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Расположение</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Статистика региона</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Социально-экономическое развитие</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Стратегия</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Истории успеха</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Муниципальные образования</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инфраструктурные проекты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Инвестору</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Заявка инвестора</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Корпорация развития</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиционный комитет</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Клуб стратегических инициатив</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиции в туризм</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Законодательство</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Требуется инвестор</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Кадры</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">План создания объектов</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Опросы</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Поддержка</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Единое окно</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Помощь инвестору</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Налоговые льготы</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Субсидии</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">СПИК 2.0</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инфраструктура поддержки</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиционный договор</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Региональный инвестстандарт</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Калькулятор мер поддержки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Площадки</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Предложить площадку</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Реестр свободных земельных участков</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Преференциальные территории</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Площадки с объектами капитального строительства</a>
+              </li>
+            </ul>
+            <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+              <p>О регионе</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+              <p>Контакты</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="footer__list footer__list-hide js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <a href="#">Инвестстандарт</a>
+            </div>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Линия прямых обращений</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Получить консультацию</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Мониторинг обращений</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Подать заявку на сопровождение проекта</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Предложить проект</a>
+              </li>
+            </div>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>ГЧП</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Проекты ГЧП</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Общие сведения</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Меры поддержки</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Реестр объектов для ГЧП</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Контакты ГЧП</a>
+              </li>
+            </div>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Документы</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Законодательство</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Корпоративные облигации</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Презентационные материалы</a>
+              </li>
+            </div>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Медиа</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Мероприятия</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Фото и видеоотчет</a>
+              </li>
+            </div>
+          </div>
+          <div class="footer__list footer__list-hide js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <a href="#">Контакты</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__bottom-txt">© Инвестиционный портал Саратовской области</p>
+        <a class="footer__bottom-txt" href="#"> Политика конфиденциальности </a>
+      </div>
+    </div>
+  </div>
+</footer>
+ <!--Модалка Написать обращение-->
+<div class="modal close-x" data-modal="write-request">
+  <div class="modal__inner">
+    <div class="modal__content modal-write --main">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-write__titles">
+        <div class="modal-write__title">Оставьте ваше обращение</div>
+        <div class="modal-write__subtitle">Заполните форму, и мы свяжемся с вами в ближайшее время</div>
+      </div>
+      <div class="modal-write__content">
+        <form id="modal-write-form" class="modal-write__form">
+          <fieldset class="modal-write__block">
+            <div class="modal-write__block-input input">
+              <div class="input__head">Наименование компании или ИП</div>
+              <div class="input__input">
+                <input autocomplete="off" type="text" placeholder="Введите наименование компании (ИП)" />
+              </div>
+              <div class="input__hint">Error</div>
+            </div>
+            <div class="modal-write__block-input input">
+              <div class="input__head">ФИО</div>
+              <div class="input__input">
+                <input autocomplete="off" type="text" placeholder="Введите ваше ФИО" />
+              </div>
+              <div class="input__hint">Error</div>
+            </div>
+          </fieldset>
+          <fieldset class="modal-write__block">
+            <div class="modal-write__block-input input">
+              <div class="input__head">Телефон</div>
+              <div class="input__input">
+                <input autocomplete="off" type="tel" placeholder="Введите ваш телефон" />
+              </div>
+              <div class="input__hint">Error</div>
+            </div>
+            <div class="modal-write__block-input input">
+              <div class="input__head">Электронная почта</div>
+              <div class="input__input">
+                <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+              </div>
+              <div class="input__hint">Error</div>
+            </div>
+          </fieldset>
+          <fieldset class="modal-write__block">
+            <div class="modal-write__block-dropdown dropdown dropdown-def js-dropdown">
+              <div class="dropdown__headline">Headline</div>
+              <div class="dropdown__header js-dropdown-inner">
+                <div class="dropdown__value js-dropdown-value">Dropdown</div>
+                <button type="button" class="dropdown__btn">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#arrow-black-down"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__items" data-simplebar>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-1" type="radio" name="item" value="item-1" />
+                    <label for="item-1">Item-1</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-2" type="radio" name="item" value="item-2" />
+                    <label for="item-2">Item-2</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-3" type="radio" name="item" value="item-3" />
+                    <label for="item-3">Item-3</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-4" type="radio" name="item" value="item-4" />
+                    <label for="item-4">Item-4</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-5" type="radio" name="item" value="item-5" />
+                    <label for="item-5">Item-5</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-6" type="radio" name="item" value="item-6" />
+                    <label for="item-6">Item-6</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="modal-write__block">
+            <div class="textarea">
+              <div class="textarea__head">Текст обращения</div>
+              <div class="textarea__textarea">
+                <textarea name="#" placeholder="Опишите суть вопроса или предложения"></textarea>
+              </div>
+              <div class="textarea__hint">Error</div>
+            </div>
+          </fieldset>
+          <fieldset class="modal-write__block">
+            <div class="input input-file">
+              <label for="file-add" class="">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#file-icon"></use>
+                </svg>
+                <span>Прикрепить файл</span>
+              </label>
+              <input id="file-add" type="file" />
+            </div>
+          </fieldset>
+        </form>
+        <div class="modal-write__btns">
+          <button type="button" class="btn btn-def">
+            <span>Задать вопрос</span>
+          </button>
+          <div class="modal-write__btns-desc">
+            Заполняя форму обратной связи, вы соглашаетесь с <a href="#">политикой конфиденциальности.</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__content modal-write --success" style="display: none">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-write__title">Ваше обращение отправлено</div>
+      <button type="button" class="modal-write__btn btn btn-def close-x">
+        <span class="close-x">Хорошо</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Учетная запись создана успешна"-->
+<div class="modal close-x" data-modal="account-create-success">
+  <div class="modal__inner">
+    <div class="modal__content modal-pers-cab modal-pers-cab--success">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-pers-cab__content">
+        <div class="modal-pers-cab__title">
+          <svg>
+            <use class="close-x" xlink:href="assets/img/icons/icons.svg#icon-succes"></use>
+          </svg>
+          <p>Учетная запись создана успешно</p>
+        </div>
+        <p class="modal-pers-cab__txt">
+          Для завершения процедуры регистрации в личном кабинете необходимо активировать учетную запись и подтвердить
+          E-mail. Письмо со ссылкой для подтверждения отправлено на
+          <a href="mailto:ivanivanov@mail.ru">ivanivanov@mail.ru.</a>
+        </p>
+      </div>
+      <button type="button" class="modal-pers-cab__btn btn btn-def close-x">
+        <span class="close-x">Хорошо</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Ваш email подтвержден"-->
+<div class="modal close-x" data-modal="email-confirmed">
+  <div class="modal__inner">
+    <div class="modal__content modal-pers-cab modal-pers-cab--email">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-pres-cab__content">
+        <div class="modal-pers-cab__title">
+          <svg>
+            <use xlink:href="assets/img/icons/icons.svg#icon-succes"></use>
+          </svg>
+          <p>Ваш E-mail подтвержден!</p>
+        </div>
+      </div>
+      <button type="button" class="modal-pers-cab__btn btn btn-def close-x">
+        <span class="close-x">Войти в кабинет</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Ваше обращение отправлено"-->
+<div class="modal close-x" data-modal="request-sent">
+  <div class="modal__inner">
+    <div class="modal__content modal-pers-cab modal-pers-cab--sent">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-pres-cab__content">
+        <div class="modal-pers-cab__title">
+          <svg>
+            <use xlink:href="assets/img/icons/icons.svg#icon-succes"></use>
+          </svg>
+          <p>Ваше обращение отправлено</p>
+        </div>
+      </div>
+      <button type="button" class="modal-pers-cab__btn btn btn-def close-x">
+        <span class="close-x">Хорошо</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Подтверждение выхода из аккаунта"-->
+<div class="modal close-x" data-modal="exit-confirmation">
+  <div class="modal__inner">
+    <div class="modal__content modal-pers-cab modal-pers-cab--exit">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-pres-cab__content">
+        <div class="modal-pers-cab__title">
+          <p>Вы действительно хотите выйти из личного кабинета?</p>
+        </div>
+      </div>
+      <div class="modal-pers-cab__btns">
+        <button type="button" class="modal-pers-cab__btn btn btn-sec close-x">
+          <span class="close-x">Отмена</span>
+        </button>
+        <button type="button" class="modal-pers-cab__btn btn btn-def close-x">
+          <span class="close-x">Выйти</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Модалка "Инфракстуктурные проекты" -->
+<div class="modal modal-infrastructure close-x" data-modal="desc-infracture-project">
+  <div class="modal__inner modal-infrastructure__inner">
+    <div class="modal__content modal-infrastructure__content">
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal-2"></use>
+        </svg>
+      </button>
+      <div class="modal-infrastructure__blocks">
+        <div class="modal-infrastructure__title">Модернизация гидротурбин ступени №1-21,24</div>
+        <ul class="modal-infrastructure__items">
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Типы работ</p>
+            <p class="modal-infrastructure__item-txt">Модернизация</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Заказчик:</p>
+            <p class="modal-infrastructure__item-txt">ПАО «РусГидро» Филиал «Саратовская ГЭС»</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Суммарный объем инвестиций:</p>
+            <p class="modal-infrastructure__item-txt">63 400 000,00 тыс. ₽</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">В т.ч. внебюджетные:</p>
+            <p class="modal-infrastructure__item-txt">63 400 000,00 тыс. ₽</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Местоположение объекта:</p>
+            <p class="modal-infrastructure__item-txt">Балаковский муниципальный район области</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Сроки:</p>
+            <p class="modal-infrastructure__item-txt">2011-2028</p>
+          </li>
+          <li class="modal-infrastructure__item">
+            <p class="modal-infrastructure__item-tit">Степень готовности:</p>
+            <p class="modal-infrastructure__item-txt">
+              Проводятся строительно-монтажные работы на газотурбинах: ст.№ 1, ст.№5, ст.№9
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Развитие инновационных предприятий"-->
+<div class="modal modal-innovative-enterprises close-x" data-modal="development-innovative-enterprises">
+  <div class="modal__inner modal-innovative-enterprises__inner">
+    <div class="modal__content modal-innovative-enterprises__content" data-simplebar>
+      <button type="button" class="modal__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal-2"></use>
+        </svg>
+      </button>
+      <div class="modal-innovative-enterprises__title">Развитие инновационных предприятий</div>
+      <div class="modal-innovative-enterprises__subtitle">Наиболее крупные инновационные предприятия</div>
+      <ul class="modal-innovative-enterprises__blocks">
+        <li class="modal-innovative-enterprises__block">
+          <a href="https://www.rubezh.ru/"> ГК «Рубеж» </a>
+          <p>Лидер в России по выпуску систем безопасности</p>
+        </li>
+        <li class="modal-innovative-enterprises__block">
+          <a href="https://www.bioamid.com/"> АО «Биоамид» </a>
+          <p>Уникальный производитель в сфере биотехнологий и фармацевтики.</p>
+        </li>
+        <li class="modal-innovative-enterprises__block">
+          <a href="https://lapic.ru/"> ООО «Лапик» </a>
+          <p>
+            Единственное в России предприятие, специализирующееся в области разработки и производства
+            координатно-измерительных машин КИМ с шестью степенями свободы, не имеющее мировых аналогов.
+          </p>
+        </li>
+        <li class="modal-innovative-enterprises__block">
+          <a href="http://www.sarbazalt.ru/"> ФГУП «Базальт» </a>
+          <p>Уникальный производитель в оборонной тематике.</p>
+        </li>
+        <li class="modal-innovative-enterprises__block">
+          <a href="https://almaz-rpe.ru/"> АО «НПП «Алмаз» </a>
+          <p>
+            Крупнейший научно-производственный центр СВЧ электроники, специализирующийся на разработке и серийном
+            выпуске СВЧ приборов и сложных комплексированных изделий на их основе, используемых в системах связи,
+            радиолокации и навигации, в широкополосных системах специального назначения
+          </p>
+        </li>
+        <li class="modal-innovative-enterprises__block">
+          <a href="http://www.kontakt-saratov.ru/"> НПП «Контакт» </a>
+          <p>
+            Одно из крупнейших предприятий электронной промышленности России, специализирующееся на выпуске мощных
+            вакуумных электронных приборов для радиовещания, телевидения, дальней космической и спутниковой связи,
+            радиолокации, ускорительной техники.
+          </p>
+        </li>
+        <li class="modal-innovative-enterprises__block">
+          <a href="http://www.kontakt-saratov.ru/"> НПП «Контакт» </a>
+          <p>
+            Является одним из ведущих предприятий России, которое разрабатывает и серийно производит оптоэлектронные
+            компоненты - более 30 типов полупроводников, лазеров, суперлюминисцентных диодов, фотодиодов и др.
+          </p>
+        </li>
+        <li class="modal-innovative-enterprises__block">
+          <a href="http://www.kontakt-saratov.ru/"> НПП «Контакт» </a>
+          <p>
+            Одно из крупнейших предприятий электронной промышленности России, специализирующееся на выпуске мощных
+            вакуумных электронных приборов для радиовещания, телевидения, дальней космической и спутниковой связи,
+            радиолокации, ускорительной техники.
+          </p>
+        </li>
+        <li class="modal-innovative-enterprises__block">
+          <a href="http://www.kontakt-saratov.ru/"> НПП «Контакт» </a>
+          <p>
+            Является одним из ведущих предприятий России, которое разрабатывает и серийно производит оптоэлектронные
+            компоненты - более 30 типов полупроводников, лазеров, суперлюминисцентных диодов, фотодиодов и др.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231220092215"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js?_v=20231220092215"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20231220092215"></script>
+
+<script src="js/main.js?_v=20231220092215"></script>
+
+  </body>
+</html>
