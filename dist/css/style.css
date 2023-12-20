@@ -3939,6 +3939,9 @@ fieldset {
 .header-menu .container {
   height: 100%;
 }
+.header-menu__social {
+  display: none;
+}
 .header .footer__list-laptop-hide {
   display: none;
 }
@@ -4136,6 +4139,10 @@ fieldset {
   .header .dropdown__items {
     display: flex;
     column-gap: 8px;
+    width: fit-content;
+  }
+  .header .dropdown__item {
+    padding: 0;
   }
 }
 @media screen and (max-width: 375px) {

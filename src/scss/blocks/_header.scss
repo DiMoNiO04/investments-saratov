@@ -322,10 +322,8 @@
       height: 100%;
     }
 
-    .footer__lists {
-      // overflow-y: auto;
-      // padding-right: 20px;
-      // height: 100%;
+    &__social {
+      display: none;
     }
   }
 
@@ -629,10 +627,11 @@
     .dropdown__items {
       display: flex;
       column-gap: 8px;
+      width: fit-content;
     }
 
     .dropdown__item {
-      
+      padding: 0;
     }
   }
 }
