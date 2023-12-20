@@ -1,0 +1,143 @@
+.ao-dev-corp {
+  &__title {
+    max-width: 870px;
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__blocks {
+    @extend %flexStretchBetween;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  &__block {
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: calc(100% / 2 - 40px / 3);
+    }
+
+    &:not(:last-child) {
+      padding: 32px;
+    }
+
+    &:last-child {
+      padding: 4px 32px;
+    }
+
+    @extend %flexColumn;
+    justify-content: space-between;
+    width: calc(100% / 3 - 60px / 4);
+    border-radius: 4px;
+    background-color: $white;
+    height: 276px;
+  }
+
+  &__txt {
+    @extend %mainTxt;
+  }
+
+  &__tit {
+    color: $bluePrimary;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 8px;
+  }
+
+  &__icon {
+    @include sizes(60px, 60px);
+    @extend %flexCenter;
+    background-color: $bluePrimary;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    svg {
+      @include sizes(32px, 32px);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ao-dev-corp {
+    &__title {
+      max-width: 580px;
+    }
+
+    &__block {
+      justify-content: flex-start;
+      row-gap: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ao-dev-corp {
+    &__title {
+      max-width: 100%;
+      font-size: 36px;
+      margin-bottom: 32px;
+    }
+
+    &__block {
+      height: auto;
+      padding: 24px;
+
+      &:nth-child(n) {
+        width: calc(50% - 20px / 2);
+      }
+
+      &:not(:last-child) {
+        padding: 24px;
+      }
+
+      &:last-child {
+        width: 100%;
+        padding: 22px 32px;
+      }
+    }
+
+    &__tit {
+      margin-bottom: 16px;
+    }
+
+    &__img {
+      @include sizes(258px, 233px);
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ao-dev-corp {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__block {
+      row-gap: 24px;
+
+      &:not(:last-child) {
+        height: 323px;
+      }
+
+      &:nth-child(n) {
+        width: 100%;
+      }
+    }
+
+    &__tit {
+      margin-bottom: 8px;
+    }
+  }
+}

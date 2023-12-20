@@ -1209,6 +1209,10 @@ svg {
   visibility: visible;
 }
 
+.polls__items,
+.ao-dev-corp__block,
+.dev-corporation__container,
+.contacts-corp__item,
 .implement-projects__container,
 .planned-projects__block-item ul,
 .planned-projects__block-item,
@@ -1303,6 +1307,7 @@ svg {
   flex-direction: column;
 }
 
+.ao-dev-corp__icon,
 .availability-stock__block-icon,
 .leading-compains__block-icon,
 .social-infr__icon,
@@ -1355,6 +1360,7 @@ svg {
   justify-content: flex-start;
 }
 
+.polls__items li,
 .big-town__desc,
 .big-town__title-container,
 .regional-project__prices-blocks,
@@ -1389,6 +1395,7 @@ svg {
   justify-content: space-between;
 }
 
+.ao-dev-corp__blocks,
 .promising-direc__blocks-items,
 .availability-stock__blocks,
 .energy-sector__picture .picture-text__items,
@@ -1465,6 +1472,7 @@ svg {
   justify-content: space-between;
 }
 
+.dev-corporation__titles,
 .implement-projects__links,
 .agriculture__content,
 .leading-compains__blocks,
@@ -1493,6 +1501,7 @@ svg {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.contacts-corp__items,
 .planned-projects__block-items,
 .energy-sector__items,
 .tourism-potential__items,
@@ -1602,6 +1611,8 @@ svg {
   text-transform: uppercase;
 }
 
+.polls__title,
+.dev-corporation__title,
 .implement-projects__title,
 .plan-projec__title,
 .region-statistics__title,
@@ -1653,6 +1664,10 @@ svg {
   line-height: 120%;
 }
 
+.polls__items li,
+.polls__subtitles p,
+.ao-dev-corp__txt,
+.contacts-corp__item p,
 .plan-projec__desc p,
 .agriculture__block-items li,
 .scientific-potential__txts p,
@@ -1753,6 +1768,7 @@ svg {
   line-height: 130%;
 }
 
+.polls__subtitle,
 .promising-direc__blocks-tit,
 .func-public-repres__item-tit,
 .tourism-potential__blocks-num,
@@ -1787,6 +1803,8 @@ svg {
   line-height: 130%;
 }
 
+.ao-dev-corp__title,
+.contacts-corp__title,
 .promising-direc__title,
 .availability-stock__title,
 .agriculture__title,
@@ -8238,6 +8256,180 @@ fieldset {
   grid-gap: 20px;
 }
 
+.contacts-corp__title {
+  margin-bottom: 40px;
+}
+
+.contacts-corp__items {
+  grid-auto-rows: 260px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.contacts-corp__item {
+  border-radius: 4px;
+  background-color: #ffffff;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.contacts-corp__item a {
+  color: #2d6fd0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.contacts-corp__item a:hover {
+  color: #2661d4;
+}
+
+.dev-corporation__container {
+  row-gap: 40px;
+}
+
+.dev-corporation__titles {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.dev-corporation__title,
+.dev-corporation__subtitles {
+  padding-right: 20px;
+}
+
+.dev-corporation__subtitles p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.dev-corporation__subtitles p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.dev-corporation__img {
+  width: 100%;
+  height: 500px;
+}
+
+.dev-corporation__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.ao-dev-corp__title {
+  max-width: 870px;
+  margin-bottom: 40px;
+}
+
+.ao-dev-corp__blocks {
+  flex-wrap: wrap;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.ao-dev-corp__block {
+  justify-content: space-between;
+  width: calc(33.3333333333% - 15px);
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 276px;
+}
+
+.ao-dev-corp__block:nth-child(1),
+.ao-dev-corp__block:nth-child(2) {
+  width: calc(50% - 13.3333333333px);
+}
+
+.ao-dev-corp__block:not(:last-child) {
+  padding: 32px;
+}
+
+.ao-dev-corp__block:last-child {
+  padding: 4px 32px;
+}
+
+.ao-dev-corp__tit {
+  color: #2d6fd0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 8px;
+}
+
+.ao-dev-corp__icon {
+  width: 60px;
+  height: 60px;
+  background-color: #2d6fd0;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ao-dev-corp__icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.ao-dev-corp__img {
+  width: 100%;
+  height: 100%;
+}
+
+.ao-dev-corp__img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.polls__titles {
+  display: flex;
+  -moz-column-gap: 72px;
+       column-gap: 72px;
+  margin-bottom: 40px;
+}
+
+.polls__title,
+.polls__subtitles {
+  padding-right: 20px;
+}
+
+.polls__title {
+  flex: 0 0 630px;
+}
+
+.polls__subtitles p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.polls__subtitle {
+  margin-bottom: 20px;
+}
+
+.polls__items {
+  row-gap: 20px;
+}
+
+.polls__items li {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.polls__items a {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+  border-bottom: 1px solid;
+}
+
+.polls__items a:hover {
+  border-color: transparent;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -8311,6 +8503,8 @@ fieldset {
     font-size: 64px;
   }
 
+  .polls__title,
+  .dev-corporation__title,
   .implement-projects__title,
   .plan-projec__title,
   .region-statistics__title,
@@ -8357,6 +8551,10 @@ fieldset {
     font-size: 26px;
   }
 
+  .polls__items li,
+  .polls__subtitles p,
+  .ao-dev-corp__txt,
+  .contacts-corp__item p,
   .plan-projec__desc p,
   .agriculture__block-items li,
   .scientific-potential__txts p,
@@ -8407,6 +8605,7 @@ fieldset {
     line-height: 130%;
   }
 
+  .polls__subtitle,
   .promising-direc__blocks-tit,
   .func-public-repres__item-tit,
   .tourism-potential__blocks-num,
@@ -8432,6 +8631,8 @@ fieldset {
     line-height: 140%;
   }
 
+  .ao-dev-corp__title,
+  .contacts-corp__title,
   .promising-direc__title,
   .availability-stock__title,
   .agriculture__title,
@@ -9336,6 +9537,50 @@ fieldset {
   .implement-projects__title {
     max-width: 900px;
   }
+
+  .contacts-corp__item a {
+    font-size: 24px;
+  }
+
+  .dev-corporation__container {
+    row-gap: 32px;
+  }
+
+  .dev-corporation__subtitles p {
+    font-size: 18px;
+  }
+
+  .dev-corporation__img {
+    height: 383px;
+  }
+
+  .ao-dev-corp__title {
+    max-width: 580px;
+  }
+
+  .ao-dev-corp__block {
+    justify-content: flex-start;
+    row-gap: 32px;
+  }
+
+  .polls__titles {
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+    margin-bottom: 32px;
+  }
+
+  .polls__title,
+  .polls__subtitles {
+    padding: 0;
+  }
+
+  .polls__subtitles p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .polls__title {
+    flex-basis: 460px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -9351,6 +9596,8 @@ fieldset {
     font-size: 48px;
   }
 
+  .polls__title,
+  .dev-corporation__title,
   .implement-projects__title,
   .plan-projec__title,
   .region-statistics__title,
@@ -11361,6 +11608,93 @@ fieldset {
   .implement-projects__links {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .contacts-corp__title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .contacts-corp__items {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 225px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 16px;
+  }
+
+  .contacts-corp__item {
+    padding: 24px;
+  }
+
+  .dev-corporation__titles {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+
+  .dev-corporation__title,
+  .dev-corporation__subtitles {
+    padding-right: 0;
+  }
+
+  .dev-corporation__title {
+    font-size: 48px;
+  }
+
+  .dev-corporation__subtitles p {
+    font-size: 18px;
+  }
+
+  .dev-corporation__img {
+    height: 400px;
+  }
+
+  .ao-dev-corp__title {
+    max-width: 100%;
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .ao-dev-corp__block {
+    height: auto;
+    padding: 24px;
+  }
+
+  .ao-dev-corp__block:nth-child(n) {
+    width: calc(50% - 10px);
+  }
+
+  .ao-dev-corp__block:not(:last-child) {
+    padding: 24px;
+  }
+
+  .ao-dev-corp__block:last-child {
+    width: 100%;
+    padding: 22px 32px;
+  }
+
+  .ao-dev-corp__tit {
+    margin-bottom: 16px;
+  }
+
+  .ao-dev-corp__img {
+    width: 258px;
+    height: 233px;
+    margin: 0 auto;
+  }
+
+  .polls__titles {
+    flex-direction: column;
+    row-gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .polls__title {
+    flex: auto;
+  }
+
+  .polls__subtitle {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -11370,6 +11704,8 @@ fieldset {
     line-height: 110%;
   }
 
+  .polls__title,
+  .dev-corporation__title,
   .implement-projects__title,
   .plan-projec__title,
   .region-statistics__title,
@@ -11418,6 +11754,10 @@ fieldset {
     font-size: 24px;
   }
 
+  .polls__items li,
+  .polls__subtitles p,
+  .ao-dev-corp__txt,
+  .contacts-corp__item p,
   .plan-projec__desc p,
   .agriculture__block-items li,
   .scientific-potential__txts p,
@@ -11467,6 +11807,7 @@ fieldset {
     font-size: 16px;
   }
 
+  .polls__subtitle,
   .promising-direc__blocks-tit,
   .func-public-repres__item-tit,
   .tourism-potential__blocks-num,
@@ -11493,6 +11834,8 @@ fieldset {
     line-height: 120%;
   }
 
+  .ao-dev-corp__title,
+  .contacts-corp__title,
   .promising-direc__title,
   .availability-stock__title,
   .agriculture__title,
@@ -13464,6 +13807,63 @@ fieldset {
 
   .implement-projects__link {
     align-items: flex-start;
+  }
+
+  .contacts-corp__title {
+    font-size: 24px;
+  }
+
+  .contacts-corp__items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 220px;
+    row-gap: 16px;
+  }
+
+  .dev-corporation__title {
+    font-size: 32px;
+  }
+
+  .dev-corporation__subtitles p {
+    font-size: 16px;
+  }
+
+  .ao-dev-corp__title {
+    font-size: 24px;
+  }
+
+  .ao-dev-corp__block {
+    row-gap: 24px;
+  }
+
+  .ao-dev-corp__block:not(:last-child) {
+    height: 323px;
+  }
+
+  .ao-dev-corp__block:nth-child(n) {
+    width: 100%;
+  }
+
+  .ao-dev-corp__tit {
+    margin-bottom: 8px;
+  }
+
+  .polls__titles {
+    margin-bottom: 24px;
+  }
+
+  .polls__items {
+    row-gap: 16px;
+  }
+
+  .polls__items li {
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 20px;
+  }
+
+  .polls__items a {
+    margin: 0 0 0 auto;
+    font-size: 16px;
   }
 }
 

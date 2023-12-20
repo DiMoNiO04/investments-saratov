@@ -1,0 +1,98 @@
+.dev-corporation {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__titles {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__title,
+  &__subtitles {
+    padding-right: 20px;
+  }
+
+  &__title {
+    @extend %h2;
+  }
+
+  &__subtitles {
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 130%;
+      @include mb(12px);
+    }
+  }
+
+  &__img {
+    @include sizes(100%, 500px);
+
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .dev-corporation {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__subtitles {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    &__img {
+      height: 383px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .dev-corporation {
+    &__titles {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+    }
+
+    &__title,
+    &__subtitles {
+      padding-right: 0;
+    }
+
+    &__title {
+      font-size: 48px;
+    }
+
+    &__subtitles {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    &__img {
+      height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .dev-corporation {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__subtitles {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

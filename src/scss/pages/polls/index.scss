@@ -1,0 +1,119 @@
+.polls {
+  &__titles {
+    display: flex;
+    column-gap: 72px;
+    margin-bottom: 40px;
+  }
+
+  &__title,
+  &__subtitles {
+    padding-right: 20px;
+  }
+
+  &__title {
+    @extend %h2;
+    flex: 0 0 630px;
+  }
+
+  &__subtitles {
+    p {
+      @include mb(12px);
+      @extend %mainTxt;
+    }
+  }
+
+  &__subtitle {
+    @extend %subheader;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 20px;
+
+    li {
+      @extend %flexCenterBetween;
+      @extend %mainTxt;
+      column-gap: 32px;
+      padding: 32px;
+      background-color: $white;
+      border-radius: 4px;
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 140%;
+      border-bottom: 1px solid;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .polls {
+    &__titles {
+      column-gap: 40px;
+      margin-bottom: 32px;
+    }
+
+    &__title,
+    &__subtitles {
+      padding: 0;
+    }
+
+    &__subtitles {
+      p {
+        @include mb(8px);
+      }
+    }
+
+    &__title {
+      flex-basis: 460px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .polls {
+    &__titles {
+      flex-direction: column;
+      row-gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    &__title {
+      flex: auto;
+    }
+
+    &__subtitle {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .polls {
+    &__titles {
+      margin-bottom: 24px;
+    }
+
+    &__items {
+      row-gap: 16px;
+
+      li {
+        flex-direction: column;
+        row-gap: 24px;
+        padding: 20px;
+      }
+
+      a {
+        margin: 0 0 0 auto;
+        font-size: 16px;
+      }
+    }
+  }
+}

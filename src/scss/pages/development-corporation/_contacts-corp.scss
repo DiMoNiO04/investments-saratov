@@ -1,0 +1,79 @@
+.contacts-corp {
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    @extend %gridColumnThree;
+    grid-auto-rows: 260px;
+    column-gap: 20px;
+  }
+
+  &__item {
+    border-radius: 4px;
+    background-color: $white;
+    @extend %flexColumn;
+    justify-content: space-between;
+    padding: 32px;
+
+    p {
+      @extend %mainTxt;
+    }
+
+    a {
+      color: $bluePrimary;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 120%;
+
+      &:hover {
+        color: $blueHover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .contacts-corp {
+    &__item {
+      a {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .contacts-corp {
+    &__title {
+      font-size: 36px;
+      margin-bottom: 32px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 225px;
+      column-gap: 20px;
+      row-gap: 16px;
+    }
+
+    &__item {
+      padding: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .contacts-corp {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: 220px;
+      row-gap: 16px;
+    }
+  }
+}
