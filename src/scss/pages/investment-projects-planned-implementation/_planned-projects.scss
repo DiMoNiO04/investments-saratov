@@ -1,0 +1,95 @@
+.planned-projects {
+  &__blocks {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__block-title {
+    @extend %h3;
+    color: $bluePrimary;
+    margin-bottom: 20px;
+    max-width: 1020px;
+  }
+
+  &__block-items {
+    @extend %gridColumnThree;
+    grid-auto-rows: 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  &__block-item {
+    @extend %flexColumn;
+    row-gap: 20px;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 32px;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    ul {
+      @extend %flexColumn;
+      row-gap: 20px;
+
+      li {
+        @extend %regular16;
+
+        b {
+          display: block;
+          margin-bottom: 8px;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 130%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .planned-projects {
+    &__block-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__block-title {
+      max-width: 900px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .planned-projects {
+    &__block-item {
+      padding: 20px;
+
+      h3 {
+        font-size: 18px;
+      }
+
+      ul {
+        row-gap: 12px;
+
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+    &__block-title {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .planned-projects {
+    &__block-items {
+      row-gap: 16px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

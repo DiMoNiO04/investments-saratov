@@ -1,6 +1,9 @@
 .card {
+  @extend %flexColumn;
+
   &__img {
     @include sizes(100%, 350px);
+    flex-shrink: 0;
 
     img {
       border-radius: 4px 4px 0 0;
@@ -14,6 +17,7 @@
     background-color: $white;
     padding: 24px 32px;
     min-height: 295px;
+    height: 100%;
     border-radius: 0 0 4px 4px;
     row-gap: 20px;
   }

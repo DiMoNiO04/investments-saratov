@@ -1209,6 +1209,11 @@ svg {
   visibility: visible;
 }
 
+.implement-projects__container,
+.planned-projects__block-item ul,
+.planned-projects__block-item,
+.planned-projects__blocks,
+.plan-projec__container,
 .promising-direc__blocks-item ul,
 .promising-direc__blocks-item,
 .promising-direc__blocks,
@@ -1292,6 +1297,7 @@ svg {
 .modal-write,
 .footer__list-items,
 .card__content,
+.card,
 .dropdown__content {
   display: flex;
   flex-direction: column;
@@ -1459,6 +1465,7 @@ svg {
   justify-content: space-between;
 }
 
+.implement-projects__links,
 .agriculture__content,
 .leading-compains__blocks,
 .inf-tech__content,
@@ -1486,6 +1493,7 @@ svg {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.planned-projects__block-items,
 .energy-sector__items,
 .tourism-potential__items,
 .region-indystry__blocks,
@@ -1533,6 +1541,7 @@ svg {
   line-height: 130%;
 }
 
+.planned-projects__block-item ul li,
 .promising-direc__blocks-item ul li,
 .availability-stock__block-txt,
 .energy-sector__items li,
@@ -1593,6 +1602,8 @@ svg {
   text-transform: uppercase;
 }
 
+.implement-projects__title,
+.plan-projec__title,
 .region-statistics__title,
 .club-strategic__title,
 .regional-standart__title,
@@ -1608,6 +1619,7 @@ svg {
   text-transform: uppercase;
 }
 
+.planned-projects__block-title,
 .promising-direc__blocks-title,
 .availability-stock__tit,
 .agriculture__block-tit,
@@ -1641,6 +1653,7 @@ svg {
   line-height: 120%;
 }
 
+.plan-projec__desc p,
 .agriculture__block-items li,
 .scientific-potential__txts p,
 .fertile-land__subtitle p,
@@ -3011,6 +3024,7 @@ fieldset {
 .card__img {
   width: 100%;
   height: 350px;
+  flex-shrink: 0;
 }
 
 .card__img img {
@@ -3024,6 +3038,7 @@ fieldset {
   background-color: #ffffff;
   padding: 24px 32px;
   min-height: 295px;
+  height: 100%;
   border-radius: 0 0 4px 4px;
   row-gap: 20px;
 }
@@ -4481,6 +4496,22 @@ fieldset {
 
 .cards-page--infrastructure .card__content-title {
   -webkit-line-clamp: 2;
+}
+
+.cards-page--invest-projects .card__img {
+  height: 343px;
+}
+
+.cards-page--invest-projects .card__content {
+  padding: 32px;
+  min-height: auto;
+  row-gap: 32px;
+}
+
+.cards-page--invest-projects .card__content-title {
+  margin: 0;
+  font-size: 24px;
+  -webkit-line-clamp: inherit;
 }
 
 .project-desc__container {
@@ -8115,6 +8146,98 @@ fieldset {
   border-radius: 4px;
 }
 
+.plan-projec__container {
+  row-gap: 40px;
+}
+
+.plan-projec__title {
+  max-width: 1020px;
+}
+
+.plan-projec__img {
+  width: 100%;
+  height: 500px;
+}
+
+.plan-projec__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.plan-projec__desc {
+  max-width: 660px;
+}
+
+.plan-projec__desc p {
+  margin-bottom: 20px;
+}
+
+.planned-projects__blocks {
+  row-gap: 40px;
+}
+
+.planned-projects__block-title {
+  color: #2d6fd0;
+  margin-bottom: 20px;
+  max-width: 1020px;
+}
+
+.planned-projects__block-items {
+  grid-auto-rows: 1fr;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.planned-projects__block-item {
+  row-gap: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+}
+
+.planned-projects__block-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.planned-projects__block-item ul {
+  row-gap: 20px;
+}
+
+.planned-projects__block-item ul li b {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.implement-projects__container {
+  row-gap: 40px;
+}
+
+.implement-projects__title {
+  max-width: 1020px;
+}
+
+.implement-projects__img {
+  width: 100%;
+  height: 500px;
+}
+
+.implement-projects__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.implement-projects__links {
+  grid-gap: 20px;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -8188,6 +8311,8 @@ fieldset {
     font-size: 64px;
   }
 
+  .implement-projects__title,
+  .plan-projec__title,
   .region-statistics__title,
   .club-strategic__title,
   .regional-standart__title,
@@ -8200,6 +8325,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .planned-projects__block-title,
   .promising-direc__blocks-title,
   .availability-stock__tit,
   .agriculture__block-tit,
@@ -8231,6 +8357,7 @@ fieldset {
     font-size: 26px;
   }
 
+  .plan-projec__desc p,
   .agriculture__block-items li,
   .scientific-potential__txts p,
   .fertile-land__subtitle p,
@@ -8515,6 +8642,18 @@ fieldset {
   .ask-question__img {
     left: -316px;
     bottom: 18px;
+  }
+
+  .cards-page--invest-projects .card__img {
+    height: 300px;
+  }
+
+  .cards-page--invest-projects .card__content {
+    padding: 24px;
+  }
+
+  .cards-page--invest-projects .card__content-title {
+    font-size: 18px;
   }
 
   .project-desc__list {
@@ -9181,6 +9320,22 @@ fieldset {
   .promising-direc__blocks-item {
     row-gap: 24px;
   }
+
+  .plan-projec__desc {
+    max-width: 580px;
+  }
+
+  .planned-projects__block-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .planned-projects__block-title {
+    max-width: 900px;
+  }
+
+  .implement-projects__title {
+    max-width: 900px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -9196,6 +9351,8 @@ fieldset {
     font-size: 48px;
   }
 
+  .implement-projects__title,
+  .plan-projec__title,
   .region-statistics__title,
   .club-strategic__title,
   .regional-standart__title,
@@ -9257,10 +9414,6 @@ fieldset {
 
   .card__content-title {
     margin-bottom: 16px;
-  }
-
-  .doc-download__item {
-    padding: 16px;
   }
 
   .doc-download__item-name {
@@ -9729,6 +9882,10 @@ fieldset {
 
   .cards .card {
     width: calc(50% - 10px);
+  }
+
+  .cards-page--invest-projects .card__img {
+    height: 240px;
   }
 
   .project-desc__container {
@@ -11156,6 +11313,54 @@ fieldset {
   .promising-direc__blocks-img {
     height: 400px;
   }
+
+  .plan-projec__container {
+    row-gap: 32px;
+  }
+
+  .plan-projec__img {
+    height: 400px;
+  }
+
+  .plan-projec__desc {
+    max-width: 100%;
+  }
+
+  .planned-projects__block-item {
+    padding: 20px;
+  }
+
+  .planned-projects__block-item h3 {
+    font-size: 18px;
+  }
+
+  .planned-projects__block-item ul {
+    row-gap: 12px;
+  }
+
+  .planned-projects__block-item ul li {
+    font-size: 14px;
+  }
+
+  .planned-projects__block-title {
+    max-width: 100%;
+  }
+
+  .implement-projects__container {
+    row-gap: 32px;
+  }
+
+  .implement-projects__title {
+    max-width: 100%;
+  }
+
+  .implement-projects__img {
+    height: 400px;
+  }
+
+  .implement-projects__links {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -11165,6 +11370,8 @@ fieldset {
     line-height: 110%;
   }
 
+  .implement-projects__title,
+  .plan-projec__title,
   .region-statistics__title,
   .club-strategic__title,
   .regional-standart__title,
@@ -11175,8 +11382,11 @@ fieldset {
   .regional-project__title,
   .subtitle {
     font-size: 32px;
+    -webkit-hyphens: auto;
+            hyphens: auto;
   }
 
+  .planned-projects__block-title,
   .promising-direc__blocks-title,
   .availability-stock__tit,
   .agriculture__block-tit,
@@ -11208,6 +11418,7 @@ fieldset {
     font-size: 24px;
   }
 
+  .plan-projec__desc p,
   .agriculture__block-items li,
   .scientific-potential__txts p,
   .fertile-land__subtitle p,
@@ -11413,6 +11624,10 @@ fieldset {
   .pagination__btn {
     width: 32px;
     height: 32px;
+  }
+
+  .doc-download__item {
+    padding: 16px;
   }
 
   .list-per__title {
@@ -13237,6 +13452,19 @@ fieldset {
   .promising-direc__blocks-img {
     height: 320px;
   }
+
+  .planned-projects__block-items {
+    row-gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .implement-projects__links {
+    row-gap: 16px;
+  }
+
+  .implement-projects__link {
+    align-items: flex-start;
+  }
 }
 
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -13246,6 +13474,10 @@ fieldset {
 
   .cards .card {
     width: 100%;
+  }
+
+  .cards-page--invest-projects .card__content {
+    padding: 20px 24px;
   }
 }
 

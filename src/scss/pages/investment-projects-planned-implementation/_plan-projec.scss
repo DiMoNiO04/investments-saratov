@@ -1,0 +1,53 @@
+.plan-projec {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %h2;
+    max-width: 1020px;
+  }
+
+  &__img {
+    @include sizes(100%, 500px);
+
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  &__desc {
+    max-width: 660px;
+
+    p {
+      @extend %mainTxt;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .plan-projec {
+    &__desc {
+      max-width: 580px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .plan-projec {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__img {
+      height: 400px;
+    }
+
+    &__desc {
+      max-width: 100%;
+    }
+  }
+}
