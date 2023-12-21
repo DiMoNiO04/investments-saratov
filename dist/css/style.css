@@ -1209,6 +1209,7 @@ svg {
   visibility: visible;
 }
 
+.personnel__item,
 .invest-tourism__item,
 .invest-tourism__container,
 .infr-plan__container,
@@ -1398,6 +1399,8 @@ svg {
   justify-content: space-between;
 }
 
+.personnel__blocks,
+.personnel__items,
 .ao-dev-corp__blocks,
 .promising-direc__blocks-items,
 .availability-stock__blocks,
@@ -1505,6 +1508,7 @@ svg {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.personnel__content,
 .invest-tourism__items,
 .contacts-corp__items,
 .planned-projects__block-items,
@@ -1616,6 +1620,7 @@ svg {
   text-transform: uppercase;
 }
 
+.personnel__title,
 .invest-tourism__title,
 .infr-plan__title,
 .polls__title,
@@ -1777,6 +1782,8 @@ svg {
   line-height: 130%;
 }
 
+.personnel__item-tit,
+.personnel__block-title,
 .polls__subtitle,
 .promising-direc__blocks-tit,
 .func-public-repres__item-tit,
@@ -4431,6 +4438,7 @@ fieldset {
   margin: 0 auto;
   position: absolute;
   right: 0;
+  z-index: 1;
 }
 
 .ask-question__img {
@@ -8519,6 +8527,72 @@ fieldset {
   border-color: transparent;
 }
 
+.personnel__title {
+  margin-bottom: 40px;
+}
+
+.personnel__content {
+  grid-auto-rows: 242px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.personnel__blocks,
+.personnel__items {
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.personnel__block-title {
+  color: #2d6fd0;
+  margin-bottom: 16px;
+}
+
+.personnel__block {
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+}
+
+.personnel__item {
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 32px;
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+}
+
+.personnel__item-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+}
+
+.personnel__item-tit {
+  color: #ffffff;
+}
+
+.personnel__item-link {
+  color: #ffffff;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 1px solid;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.personnel .content ul:not(:first-child) {
+  margin-top: 16px;
+}
+
+.personnel .content ul > li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -8592,6 +8666,7 @@ fieldset {
     font-size: 64px;
   }
 
+  .personnel__title,
   .invest-tourism__title,
   .infr-plan__title,
   .polls__title,
@@ -8698,6 +8773,8 @@ fieldset {
     line-height: 130%;
   }
 
+  .personnel__item-tit,
+  .personnel__block-title,
   .polls__subtitle,
   .promising-direc__blocks-tit,
   .func-public-repres__item-tit,
@@ -9678,6 +9755,14 @@ fieldset {
   .invest-tourism__item h3 {
     font-size: 32px;
   }
+
+  .personnel__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .personnel__item {
+    order: 1;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -9693,6 +9778,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .personnel__title,
   .invest-tourism__title,
   .infr-plan__title,
   .polls__title,
@@ -11850,6 +11936,32 @@ fieldset {
   .invest-tourism__item a {
     font-size: 16px;
   }
+
+  .personnel__title {
+    margin-bottom: 32px;
+  }
+
+  .personnel__content {
+    grid-auto-rows: auto;
+  }
+
+  .personnel__block,
+  .personnel__item {
+    padding: 24px;
+  }
+
+  .personnel__block-title {
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  .personnel__item {
+    min-height: 242px;
+  }
+
+  .personnel__item-tit {
+    line-height: 120%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -11859,6 +11971,7 @@ fieldset {
     line-height: 110%;
   }
 
+  .personnel__title,
   .invest-tourism__title,
   .infr-plan__title,
   .polls__title,
@@ -11966,6 +12079,8 @@ fieldset {
     font-size: 16px;
   }
 
+  .personnel__item-tit,
+  .personnel__block-title,
   .polls__subtitle,
   .promising-direc__blocks-tit,
   .func-public-repres__item-tit,
@@ -14031,6 +14146,21 @@ fieldset {
 
   .infr-plan__img {
     height: 342px;
+  }
+
+  .personnel__content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 288px;
+    row-gap: 16px;
+  }
+
+  .personnel__item,
+  .personnel__block {
+    padding: 20px;
+  }
+
+  .personnel__block-title {
+    line-height: 120%;
   }
 }
 

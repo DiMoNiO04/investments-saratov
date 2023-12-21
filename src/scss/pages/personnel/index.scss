@@ -1,0 +1,130 @@
+.personnel {
+  &__title {
+    @extend %h2;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    @extend %gridColumnThree;
+    grid-auto-rows: 242px;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  &__blocks,
+  &__items {
+    @extend %flexStretchBetween;
+    row-gap: 20px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__block-title {
+    @extend %subheader;
+    color: $bluePrimary;
+    margin-bottom: 16px;
+  }
+
+  &__block {
+    border-radius: 4px;
+    background-color: $white;
+    padding: 32px;
+  }
+
+  &__item {
+    @extend %flexColumn;
+    justify-content: space-between;
+    border-radius: 4px;
+    padding: 32px;
+    background: $blueGradient;
+  }
+
+  &__item-icon {
+    @include sizes(40px, 40px);
+    margin-bottom: 12px;
+  }
+
+  &__item-tit {
+    @extend %subheader;
+    color: $white;
+  }
+
+  &__item-link {
+    color: $white;
+    width: fit-content;
+    border-bottom: 1px solid;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  .content ul:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  .content ul > li {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .personnel {
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      order: 1;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .personnel {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__content {
+      grid-auto-rows: auto;
+    }
+
+    &__block,
+    &__item {
+      padding: 24px;
+    }
+
+    &__block-title {
+      font-size: 20px;
+      line-height: 130%;
+    }
+
+    &__item {
+      min-height: 242px;
+    }
+
+    &__item-tit {
+      line-height: 120%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .personnel {
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: 288px;
+      row-gap: 16px;
+    }
+
+    &__item,
+    &__block {
+      padding: 20px;
+    }
+
+    &__block-title {
+      line-height: 120%;
+    }
+  }
+}
