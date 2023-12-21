@@ -56,10 +56,6 @@
     font-size: 48px;
   }
 
-  @media screen and (max-width: $tablet) {
-    font-size: 40px;
-  }
-
   @media screen and (max-width: $mob) {
     font-size: 32px;
     hyphens: auto;
@@ -179,5 +175,20 @@
 
   @media screen and (max-width: $laptop) {
     font-size: 32px;
+  }
+}
+
+%numTextMid {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+  color: $bluePrimary;
+
+  @media screen and (max-width: $laptop) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: $mob) {
+    font-size: 28px;
   }
 }

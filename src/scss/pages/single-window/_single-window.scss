@@ -1,0 +1,43 @@
+.single-window {
+  &__container {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__title {
+    @extend %h2;
+  }
+
+  &__title,
+  &__subtitles {
+    padding-right: 20px;
+  }
+
+  &__subtitles {
+    p {
+      @include mb(12px);
+      @extend %mainTxt;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .single-window {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+    }
+
+    &__title,
+    &__subtitles {
+      padding-right: 0;
+    }
+
+    &__subtitles {
+      p {
+        @include mb(12px);
+        @extend %mainTxt;
+      }
+    }
+  }
+}

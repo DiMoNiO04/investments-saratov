@@ -1,0 +1,96 @@
+.ao-dev-cor {
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+    max-width: 900px;
+  }
+
+  &__items {
+    @extend %gridColumnFour;
+    column-gap: 20px;
+  }
+
+  &__item {
+    @extend %flexColumn;
+    justify-content: space-between;
+    row-gap: 32px;
+    border-radius: 4px;
+    background-color: $white;
+
+    &:not(:last-child) {
+      padding: 32px;
+    }
+
+    &:last-child {
+      padding: 10px 32px;
+    }
+  }
+
+  &__icon {
+    @include sizes(60px, 60px);
+    @extend %flexCenter;
+    border-radius: 50%;
+    background-color: $bluePrimary;
+
+    svg {
+      @include sizes(40px, 40px);
+    }
+  }
+
+  &__txt {
+    @extend %mainTxt;
+  }
+
+  &__img {
+    @include sizes(296px, 267px);
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ao-dev-cor {
+    &__title {
+      max-width: 580px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+    }
+
+    &__img {
+      @include sizes(228px, 205px);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ao-dev-cor {
+    &__title {
+      max-width: 100%;
+      margin-bottom: 32px;
+    }
+
+    &__item {
+      row-gap: 24px;
+
+      &:not(:last-child) {
+        padding: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ao-dev-cor {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: 1fr;
+      row-gap: 16px;
+    }
+
+    &__img {
+      @include sizes(205px, 198px);
+    }
+  }
+}
