@@ -1,0 +1,414 @@
+.industrial-park {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 60px;
+  }
+
+  &__head {
+    &-container {
+      @extend %flexColumn;
+      row-gap: 40px;
+    }
+  }
+
+  &__title {
+    &-h1 {
+      max-width: 900px;
+      @extend %h2;
+    }
+  }
+
+  &__content {
+    max-width: 870px;
+  }
+
+  &__image {
+    @extend %imageCoverWidth;
+    height: 500px;
+  }
+
+  &__advan {
+    background-color: $white;
+    border-radius: 4px;
+    padding: 32px;
+
+    &-inner {
+      @extend %gridColumnFour;
+      column-gap: 24px;
+    }
+
+    &-item {
+      @extend %flexColumn;
+      align-items: flex-start;
+      row-gap: 8px;
+    }
+
+    &-label {
+      @extend %mainTxt;
+    }
+
+    &-name {
+      @extend %subheader;
+      color: $bluePrimary;
+    }
+  }
+
+  &__records {
+    &-container {
+      @extend %gridColumnTwo;
+      column-gap: 20px;
+      row-gap: 60px;
+    }
+
+    &-item {
+      &-first {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+
+    &-name {
+      @extend %h3;
+      margin-bottom: 20px;
+    }
+
+    &-inner {
+      @extend %flexColumn;
+      row-gap: 60px;
+    }
+  }
+
+  &__dates {
+    @extend %flexColumn;
+    row-gap: 20px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 299px;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background-color: $inputGreyStroke;
+    }
+  }
+
+  &__date {
+    display: grid;
+    grid-template-columns: 270px 650px;
+    align-items: center;
+    column-gap: 60px;
+
+    &-date {
+      flex-shrink: 0;
+      @extend %semibold40;
+      color: $bluePrimary;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: -36px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $inputGreyStroke;
+      }
+    }
+  }
+
+  &__products {
+    @extend %gridColumnFive;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    &-item {
+      background-color: $white;
+      border-radius: 4px;
+      padding: 32px;
+      @extend %flexColumn;
+      align-items: flex-start;
+      justify-content: space-between;
+      row-gap: 16px;
+    }
+
+    &-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    &-name {
+      @extend %mainTxt;
+    }
+  }
+
+  &__contacts {
+    @extend %gridColumnThree;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    &-item {
+      background-color: $white;
+      padding: 32px;
+      border-radius: 4px;
+      @extend %flexColumn;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 222px;
+      flex-shrink: 0;
+    }
+
+    &-label {
+      @extend %mainTxt;
+    }
+
+    &-link {
+      @extend %h3;
+      color: $bluePrimary;
+    }
+  }
+
+  &__gallery {
+    @extend %gridColumnThree;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    &-item {
+      @extend %imageCoverWidth;
+      height: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .industrial-park {
+    &__title {
+      &-h1 {
+        max-width: 680px;
+      }
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__products {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__contacts {
+      &-item {
+        height: 212px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .industrial-park {
+    &__head {
+      &-container {
+        row-gap: 32px;
+      }
+    }
+
+    &__title {
+      &-h1 {
+        max-width: 100%;
+      }
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__image {
+      height: 400px;
+    }
+
+    &__advan {
+      padding: 24px;
+
+      &-inner {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 24px;
+      }
+    }
+
+    &__records {
+      &-container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      &-item {
+        &-first {
+          grid-column-start: inherit;
+          grid-column-end: inherit;
+        }
+      }
+    }
+
+    &__dates {
+      &::before {
+        left: 239px;
+      }
+    }
+
+    &__date {
+      grid-template-columns: 214px 424px;
+      column-gap: 50px;
+
+      &-date {
+        font-size: 32px;
+
+        &::before {
+          right: -32px;
+        }
+      }
+    }
+
+    &__products {
+      grid-template-columns: repeat(3, 1fr);
+
+      &-item {
+        padding: 24px;
+      }
+    }
+
+    &__contacts {
+      grid-template-columns: repeat(2, 1fr);
+
+      &-item {
+        padding: 24px;
+        height: 180px;
+
+        &:last-child {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+      }
+
+      &-label {
+        @extend %mainTxt;
+      }
+
+      &-link {
+        @extend %h3;
+        color: $bluePrimary;
+      }
+    }
+
+    &__gallery {
+      @extend %gridColumnThree;
+      column-gap: 20px;
+      row-gap: 20px;
+
+      &-item {
+        @extend %imageCoverWidth;
+        height: 350px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .industrial-park {
+    &__container {
+      row-gap: 50px;
+    }
+
+    &__title {
+      &-h1 {
+        word-break: break-word;
+      }
+    }
+
+    &__image {
+      height: 340px;
+    }
+
+    &__advan {
+      &-inner {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 16px;
+      }
+    }
+
+    &__records {
+      &-container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 50px;
+      }
+
+      &-item {
+        &-first {
+          grid-column-start: inherit;
+          grid-column-end: inherit;
+        }
+      }
+
+      &-inner {
+        row-gap: 50px;
+      }
+    }
+
+    &__dates {
+      &::before {
+        left: 9px;
+      }
+    }
+
+    &__date {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 4px;
+
+      &-date {
+        font-size: 32px;
+        padding-left: 38px;
+
+        &::before {
+          right: auto;
+          left: 4px;
+        }
+      }
+
+      &-info {
+        padding-left: 38px;
+      }
+    }
+
+    &__products {
+      grid-template-columns: repeat(1, 1fr);
+
+      &-item {
+        padding: 24px;
+      }
+    }
+
+    &__contacts {
+      grid-template-columns: repeat(1, 1fr);
+
+      &-item {
+        padding: 24px;
+        height: 146px;
+
+        &:last-child {
+          grid-column-start: inherit;
+          grid-column-end: inherit;
+        }
+      }
+    }
+
+    &__gallery {
+      grid-template-columns: repeat(1, 1fr);
+
+      &-item {
+        height: 350px;
+      }
+    }
+  }
+}

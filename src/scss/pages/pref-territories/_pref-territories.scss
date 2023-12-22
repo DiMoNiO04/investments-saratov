@@ -1,0 +1,58 @@
+.pref-territories {
+  &__title {
+    &-h1 {
+      @extend %h2;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    .card__content {
+      min-height: auto;
+      row-gap: 32px;
+    }
+
+    .card__content-title {
+      min-height: 62px;
+      @extend %subheader;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .pref-territories {
+    &__item {
+      .card__content {
+        min-height: auto;
+        row-gap: 32px;
+      }
+
+      .card__content-title {
+        min-height: 46px;
+        font-size: 18px;
+        line-height: 130%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .pref-territories {
+    &__title {
+      &-h1 {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .pref-territories {
+    &__title {
+      &-h1 {
+        word-break: break-word;
+      }
+    }
+  }
+}

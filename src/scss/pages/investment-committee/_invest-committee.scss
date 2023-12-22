@@ -5,18 +5,20 @@
   }
 
   &__titles {
-    @extend %flexStartBetween;
+    @extend %gridColumnTwo;
     column-gap: 20px;
   }
 
   &__title {
-    @extend %h2;
-    width: 740px;
-    flex-shrink: 0;
+    &-h1 {
+      @extend %h2;
+      padding-right: 20px;
+    }
   }
 
   &__subtitle {
     @extend %mainTxt;
+    padding-right: 20px;
 
     p {
       &:not(:last-child) {
@@ -35,7 +37,38 @@
 }
 
 @media screen and (max-width: $tablet) {
+  .invest-committee {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__titles {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+    }
+
+    &__title {
+      &-h1 {
+        padding-right: 0px;
+      }
+    }
+
+    &__subtitle {
+      padding-right: 0px;
+    }
+
+    &__image {
+      height: 400px;
+    }
+  }
 }
 
 @media screen and (max-width: $mob) {
+  .invest-committee {
+    &__title {
+      &-h1 {
+        word-break: break-word;
+      }
+    }
+  }
 }

@@ -5,13 +5,14 @@
   }
 
   &__head {
-    max-width: 870px;
+    max-width: 770px;
   }
 
   &__title {
-    @extend %h2;
-    flex-shrink: 0;
-    margin-bottom: 40px;
+    &-h2 {
+      @extend %secondaryH3;
+      margin-bottom: 40px;
+    }
   }
 
   &__descr {
@@ -20,29 +21,16 @@
   }
 
   &__doc {
-    border-radius: 4px;
-    background: $white;
-    @extend %flexCenterStart;
-    column-gap: 16px;
-    padding: 20px;
-
-    &-icon {
-      width: 40px;
-      height: 40px;
-      flex-shrink: 0;
-    }
-
-    &-link {
-      color: $bluePrimary;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 130%;
-    }
+    max-width: 620px;
   }
 
   &__advan {
     @extend %gridColumnTwo;
     column-gap: 20px;
+
+    &-column {
+      padding-right: 20px;
+    }
   }
 
   &__order {
@@ -158,11 +146,94 @@
 
 @media screen and (max-width: $laptop) {
   .regul-committee {
+    &__head {
+      max-width: 870px;
+    }
   }
 }
 
 @media screen and (max-width: $tablet) {
+  .regul-committee {
+    &__titile {
+      &-h2 {
+        margin-bottom: 32px;
+      }
+    }
+
+    &__head {
+      max-width: 100%;
+    }
+
+    &__doc {
+      max-width: 100%;
+    }
+
+    &__container {
+      row-gap: 48px;
+    }
+
+    &__advan {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+
+      &-column {
+        padding-right: 0;
+
+        ul:not(:first-child) {
+          margin-top: 16px;
+        }
+      }
+    }
+
+    &__order {
+      &-items {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+      }
+
+      &-item {
+        padding: 24px;
+        row-gap: 24px;
+      }
+    }
+
+    &__ask {
+      &-items {
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 1fr;
+        row-gap: 20px;
+      }
+
+      &-item {
+        padding: 24px;
+        row-gap: 24px;
+
+        &:last-child {
+          row-gap: 24px;
+        }
+      }
+    }
+
+    &__title {
+      &-h2 {
+        margin-bottom: 32px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $mob) {
+  .regul-committee__ask-soc a:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  .regul-committee {
+    &__ask {
+      &-soc {
+        a {
+          word-break: break-word;
+        }
+      }
+    }
+  }
 }
