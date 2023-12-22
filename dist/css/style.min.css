@@ -1126,17 +1126,17 @@ template {
   height: 100%;
 }
 
-.func-public-repres__item-content, .func-public-repres__item-btn svg:last-child, .func-public-repres__item.active .func-public-repres__item-btn svg:first-child, .success-hist__slide-content, .benefits__slide-content, .steps-investor__item-content, .steps-investor__item-btn svg:last-child, .steps-investor__item.active .steps-investor__item-btn svg:first-child, .header--transparent .header-top__logo a, .header-top__logo a.header-top__logo--transparent, .textarea__hint, .dropdown__content, .input__hint {
+.func-public-repres__item-content, .func-public-repres__item-btn svg:last-child, .func-public-repres__item.active .func-public-repres__item-btn svg:first-child, .success-hist__slide-content, .benefits__slide-content, .steps-investor__item-content, .steps-investor__item-btn svg:last-child, .steps-investor__item.active .steps-investor__item-btn svg:first-child, .header--transparent .header-top__logo a, .header--transparent:hover .header-top__logo a.header-top__logo--transparent, .header-top__logo a.header-top__logo--transparent, .textarea__hint, .dropdown__content, .input__hint {
   opacity: 0;
   visibility: hidden;
 }
 
-.func-public-repres__item-btn svg:first-child, .func-public-repres__item.active .func-public-repres__item-btn svg:last-child, .func-public-repres__item.active .func-public-repres__item-content, .success-hist__slide.swiper-slide-active .success-hist__slide-content, .benefits__slide.swiper-slide-active .benefits__slide-content, .steps-investor__item-btn svg:first-child, .steps-investor__item.active .steps-investor__item-btn svg:last-child, .steps-investor__item.active .steps-investor__item-content, .header--transparent .header-top__logo a.header-top__logo--transparent, .header-top__logo a, .textarea.--error .textarea__hint, .dropdown.--active .dropdown__content, .input.--error .input__hint {
+.func-public-repres__item-btn svg:first-child, .func-public-repres__item.active .func-public-repres__item-btn svg:last-child, .func-public-repres__item.active .func-public-repres__item-content, .success-hist__slide.swiper-slide-active .success-hist__slide-content, .benefits__slide.swiper-slide-active .benefits__slide-content, .steps-investor__item-btn svg:first-child, .steps-investor__item.active .steps-investor__item-btn svg:last-child, .steps-investor__item.active .steps-investor__item-content, .header--transparent .header-top__logo a.header-top__logo--transparent, .header--transparent:hover .header-top__logo a, .header-top__logo a, .textarea.--error .textarea__hint, .dropdown.--active .dropdown__content, .input.--error .input__hint {
   opacity: 1;
   visibility: visible;
 }
 
-.func-public-repres__item-list, .func-public-repres__items, .func-public-repres__container, .public-representative__item, .main-direction__item, .priorities__item, .strategic-priority__descs, .invest-com__links-item, .org-invest__tasks-item, .invest-decl__desc, .regional-standart__elements-item, .municipality__descs-item, .regul-committee__ask-content, .regul-committee__ask-item, .regul-committee__order-item, .regul-committee__container, .invest-committee__container, .result-years__container, .soceconomic-develop__item-content ul, .soceconomic-develop__item-content, .soceconomic-develop__item-result, .soceconomic-develop__items, .soceconomic-develop__container, .location__map-squary, .clim-condition__block, .regional-project__container, .cards-page__container, .story__descs, .legislation__items, .account__fieldset-linkin, .account__form, .account__content, .reg__content-btns, .auth__socials, .news__card-content, .news__card-main, .news__container, .calculator__form, .intro__container > .container, .success-hist__slide-content, .success-hist__container > .container, .benefits__slide-content, .benefits__container > .container, .steps-investor__item-list, .steps-investor__items, .steps-investor__container, .governor__desc-managment, .picture-text__content, .project-desc__desc-items, .project-desc__desc, .project-desc__descs, .project-desc__container, .chat__content-new, .chat__content-blocks, .header-top__phone, .header, .modal-innovative-enterprises__blocks, .modal-infrastructure__items, .modal-infrastructure__blocks, .modal-pers-cab__content, .modal-pers-cab, .modal-write__form, .modal-write__content, .modal-write, .footer__list-items, .card__content, .dropdown__content {
+.industrial-park__contacts-item, .industrial-park__products-item, .industrial-park__dates, .industrial-park__records-inner, .industrial-park__advan-item, .industrial-park__head-container, .industrial-park__container, .offer-area__content .auth__form, .func-public-repres__item-list, .func-public-repres__items, .func-public-repres__container, .public-representative__item, .main-direction__item, .priorities__item, .strategic-priority__descs, .invest-com__links-item, .org-invest__tasks-item, .invest-decl__desc, .regional-standart__elements-item, .municipality__descs-item, .regul-committee__ask-content, .regul-committee__ask-item, .regul-committee__order-item, .regul-committee__container, .invest-committee__container, .result-years__container, .soceconomic-develop__item-content ul, .soceconomic-develop__item-content, .soceconomic-develop__item-result, .soceconomic-develop__items, .soceconomic-develop__container, .location__map-squary, .clim-condition__block, .regional-project__container, .cards-page__container, .story__descs, .legislation__items, .account__fieldset-linkin, .account__form, .account__content, .reg__content-btns, .auth__socials, .news__card-content, .news__card-main, .news__container, .calculator__form, .intro__container > .container, .success-hist__slide-content, .success-hist__container > .container, .benefits__slide-content, .benefits__container > .container, .steps-investor__item-list, .steps-investor__items, .steps-investor__container, .governor__desc-managment, .picture-text__content, .project-desc__desc-items, .project-desc__desc, .project-desc__descs, .project-desc__container, .chat__content-new, .chat__content-blocks, .header-top__phone, .header, .modal-innovative-enterprises__blocks, .modal-infrastructure__items, .modal-infrastructure__blocks, .modal-pers-cab__content, .modal-pers-cab, .modal-write__form, .modal-write__content, .modal-write, .footer__list-items, .card__content, .dropdown__content {
   display: flex;
   flex-direction: column;
 }
@@ -1185,34 +1185,34 @@ template {
   justify-content: space-between;
 }
 
-.regul-committee__ask-info, .regul-committee__doc, .soceconomic-develop__item-bottom, .legislation__item-btn, .account__content--appeals .account__fieldset-file, .account__fieldset-radioboxs, .account__fieldset-inputs, .calculator__block-radiobtns, .calculator__items, .success-hist__slide-items, .header-bottom__links, .header-bottom__list, .header-bottom__btns, .header-top__container, .modal-pers-cab__title, .modal-write__btns, .footer__info-socials, .doc-download__item, .textarea__textarea, .input-labels .input__items {
+.regul-committee__ask-info, .soceconomic-develop__item-bottom, .legislation__item-btn, .account__content--appeals .account__fieldset-file, .account__fieldset-radioboxs, .account__fieldset-inputs, .calculator__block-radiobtns, .calculator__items, .success-hist__slide-items, .header-bottom__links, .header-bottom__list, .header-bottom__btns, .header-top__container, .modal-pers-cab__title, .modal-write__btns, .footer__info-socials, .doc-download__item, .textarea__textarea, .input-labels .input__items {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.func-public-repres__item-content, .regul-committee__ask-item, .invest-committee__titles, .regional-project__descs, .regional-project__titles, .account-menu__item-main {
+.func-public-repres__item-content, .regul-committee__ask-item, .regional-project__descs, .regional-project__titles, .account-menu__item-main {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.task-clubs__container, .club-strategic__container, .strategy-grafic__container, .strategic-priority__container, .strategy__titles, .invest-com__links-items, .org-invest__tasks-items, .invest-decl__container, .regional-standart__titles, .municipality__titles, .regul-committee__advan, .result-years__items, .soceconomic-develop__titles, .list-templates__links, .footer__right, .map__titles {
+.industrial-park__records-container, .reestr__items, .offer-area__block, .task-clubs__container, .club-strategic__container, .strategy-grafic__container, .strategic-priority__container, .strategy__titles, .invest-com__links-items, .org-invest__tasks-items, .invest-decl__container, .regional-standart__titles, .municipality__titles, .regul-committee__advan, .invest-committee__titles, .result-years__items, .soceconomic-develop__titles, .list-templates__links, .footer__right, .map__titles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.public-representative__items, .main-direction__items, .regional-standart__elements-items, .regul-committee__ask-items, .regul-committee__order-items {
+.industrial-park__gallery, .industrial-park__contacts, .public-representative__items, .main-direction__items, .regional-standart__elements-items, .regul-committee__ask-items, .regul-committee__order-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.tourism-potential__blocks-items, .list-per--districs .list-per__items {
+.industrial-park__advan-inner, .tourism-potential__blocks-items, .list-per--districs .list-per__items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.footer__lists, .footer__top {
+.industrial-park__products, .footer__lists, .footer__top {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
@@ -1222,10 +1222,10 @@ template {
   grid-template-columns: repeat(6, 1fr);
 }
 
-.invest-committee__image {
+.industrial-park__gallery-item, .industrial-park__image, .offer-area__image, .invest-committee__image {
   width: 100%;
 }
-.invest-committee__image img {
+.industrial-park__gallery-item img, .industrial-park__image img, .offer-area__image img, .invest-committee__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1256,6 +1256,12 @@ template {
   }
 }
 
+.industrial-park__date-date {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
 .intro__title, .title {
   font-size: 82px;
   font-weight: 600;
@@ -1279,57 +1285,57 @@ template {
   }
 }
 
-.club-strategic__title, .regional-standart__title, .regul-committee__title, .invest-committee__title, .result-years__title, .soceconomic-develop__title, .regional-project__title, .subtitle {
+.industrial-park__title-h1, .pref-territories__title-h1, .reestr__title-h1, .offer-area__title-h1, .club-strategic__title, .regional-standart__title, .invest-committee__title-h1, .result-years__title, .soceconomic-develop__title, .regional-project__title, .subtitle {
   font-size: 58px;
   font-weight: 600;
   line-height: 110%;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1919px) {
-  .club-strategic__title, .regional-standart__title, .regul-committee__title, .invest-committee__title, .result-years__title, .soceconomic-develop__title, .regional-project__title, .subtitle {
+  .industrial-park__title-h1, .pref-territories__title-h1, .reestr__title-h1, .offer-area__title-h1, .club-strategic__title, .regional-standart__title, .invest-committee__title-h1, .result-years__title, .soceconomic-develop__title, .regional-project__title, .subtitle {
     font-size: 48px;
   }
 }
 @media screen and (max-width: 1365px) {
-  .club-strategic__title, .regional-standart__title, .regul-committee__title, .invest-committee__title, .result-years__title, .soceconomic-develop__title, .regional-project__title, .subtitle {
+  .industrial-park__title-h1, .pref-territories__title-h1, .reestr__title-h1, .offer-area__title-h1, .club-strategic__title, .regional-standart__title, .invest-committee__title-h1, .result-years__title, .soceconomic-develop__title, .regional-project__title, .subtitle {
     font-size: 40px;
   }
 }
 @media screen and (max-width: 767px) {
-  .club-strategic__title, .regional-standart__title, .regul-committee__title, .invest-committee__title, .result-years__title, .soceconomic-develop__title, .regional-project__title, .subtitle {
+  .industrial-park__title-h1, .pref-territories__title-h1, .reestr__title-h1, .offer-area__title-h1, .club-strategic__title, .regional-standart__title, .invest-committee__title-h1, .result-years__title, .soceconomic-develop__title, .regional-project__title, .subtitle {
     font-size: 32px;
   }
 }
 
-.public-representative__item-link, .strategy-grafic__grafic-title, .invest-com__links-link, .regional-standart__elements-title, .big-town__peoples, .municipality__descs-title, .regul-committee__ask-soc a, .regul-committee__order-num, .location__map-city, .location__map-country, .clim-condition__block span:first-child, .story__desc-title, .story__item-txt, .authentication__desc-title, .success-hist__slide-desc, .project-desc__desc-title, .project-desc__list li b, .modal-innovative-enterprises__title, .modal-write__title {
+.industrial-park__contacts-link, .industrial-park__records-name, .public-representative__item-link, .strategy-grafic__grafic-title, .invest-com__links-link, .regional-standart__elements-title, .big-town__peoples, .municipality__descs-title, .regul-committee__ask-soc a, .regul-committee__order-num, .location__map-city, .location__map-country, .clim-condition__block span:first-child, .story__desc-title, .story__item-txt, .authentication__desc-title, .success-hist__slide-desc, .project-desc__desc-title, .project-desc__list li b, .modal-innovative-enterprises__title, .modal-write__title {
   font-size: 32px;
   font-weight: 600;
   line-height: 120%;
 }
 @media screen and (max-width: 1919px) {
-  .public-representative__item-link, .strategy-grafic__grafic-title, .invest-com__links-link, .regional-standart__elements-title, .big-town__peoples, .municipality__descs-title, .regul-committee__ask-soc a, .regul-committee__order-num, .location__map-city, .location__map-country, .clim-condition__block span:first-child, .story__desc-title, .story__item-txt, .authentication__desc-title, .success-hist__slide-desc, .project-desc__desc-title, .project-desc__list li b, .modal-innovative-enterprises__title, .modal-write__title {
+  .industrial-park__contacts-link, .industrial-park__records-name, .public-representative__item-link, .strategy-grafic__grafic-title, .invest-com__links-link, .regional-standart__elements-title, .big-town__peoples, .municipality__descs-title, .regul-committee__ask-soc a, .regul-committee__order-num, .location__map-city, .location__map-country, .clim-condition__block span:first-child, .story__desc-title, .story__item-txt, .authentication__desc-title, .success-hist__slide-desc, .project-desc__desc-title, .project-desc__list li b, .modal-innovative-enterprises__title, .modal-write__title {
     font-size: 26px;
   }
 }
 @media screen and (max-width: 767px) {
-  .public-representative__item-link, .strategy-grafic__grafic-title, .invest-com__links-link, .regional-standart__elements-title, .big-town__peoples, .municipality__descs-title, .regul-committee__ask-soc a, .regul-committee__order-num, .location__map-city, .location__map-country, .clim-condition__block span:first-child, .story__desc-title, .story__item-txt, .authentication__desc-title, .success-hist__slide-desc, .project-desc__desc-title, .project-desc__list li b, .modal-innovative-enterprises__title, .modal-write__title {
+  .industrial-park__contacts-link, .industrial-park__records-name, .public-representative__item-link, .strategy-grafic__grafic-title, .invest-com__links-link, .regional-standart__elements-title, .big-town__peoples, .municipality__descs-title, .regul-committee__ask-soc a, .regul-committee__order-num, .location__map-city, .location__map-country, .clim-condition__block span:first-child, .story__desc-title, .story__item-txt, .authentication__desc-title, .success-hist__slide-desc, .project-desc__desc-title, .project-desc__list li b, .modal-innovative-enterprises__title, .modal-write__title {
     font-size: 24px;
   }
 }
 
-.func-public-repres__item-txt, .main-direction__item p, .main-direction__subtitle, .task-clubs__subtitles p, .club-strategic__subtitles p, .strategy-grafic__desc p, .tourism-potential__blocks-txt, .tourism-potential__subtitles p, .strategic-priority__desc p, .strategy__subtitles p, .invest-com__links-tit, .invest-com__subtitle, .org-invest__subtitle, .invest-decl__subtitle, .regional-standart__subtitle p, .municipality__descs-item span:last-child, .municipality__desc p, .regul-committee__ask-text, .regul-committee__order-text, .regul-committee__descr, .invest-committee__subtitle, .soceconomic-develop__subtitle, .regional-project__direction-item, .regional-project__prices-txt, .regional-project__desc p, .regional-project__subtitle, .story__desc-txt, .story__item-title, .news__card-content-text, .news__card-main-text, .region__item-stat__text, .region__text, .calculator__subtitle, .steps-investor__item-txt, .picture-text__desc-txt, .project-desc__desc-txt, .project-desc__list li, .map__text, .map__subtitles p, .content ul > li, .content p {
+.industrial-park__contacts-label, .industrial-park__products-name, .industrial-park__advan-label, .func-public-repres__item-txt, .main-direction__item p, .main-direction__subtitle, .task-clubs__subtitles p, .club-strategic__subtitles p, .strategy-grafic__desc p, .tourism-potential__blocks-txt, .tourism-potential__subtitles p, .strategic-priority__desc p, .strategy__subtitles p, .invest-com__links-tit, .invest-com__subtitle, .org-invest__subtitle, .invest-decl__subtitle, .regional-standart__subtitle p, .municipality__descs-item span:last-child, .municipality__desc p, .regul-committee__ask-text, .regul-committee__order-text, .regul-committee__descr, .invest-committee__subtitle, .soceconomic-develop__subtitle, .regional-project__direction-item, .regional-project__prices-txt, .regional-project__desc p, .regional-project__subtitle, .story__desc-txt, .story__item-title, .news__card-content-text, .news__card-main-text, .region__item-stat__text, .region__text, .calculator__subtitle, .steps-investor__item-txt, .picture-text__desc-txt, .project-desc__desc-txt, .project-desc__list li, .map__text, .map__subtitles p, .content ul > li, .content p {
   font-size: 20px;
   font-weight: 400;
   line-height: 130%;
 }
 @media screen and (max-width: 1919px) {
-  .func-public-repres__item-txt, .main-direction__item p, .main-direction__subtitle, .task-clubs__subtitles p, .club-strategic__subtitles p, .strategy-grafic__desc p, .tourism-potential__blocks-txt, .tourism-potential__subtitles p, .strategic-priority__desc p, .strategy__subtitles p, .invest-com__links-tit, .invest-com__subtitle, .org-invest__subtitle, .invest-decl__subtitle, .regional-standart__subtitle p, .municipality__descs-item span:last-child, .municipality__desc p, .regul-committee__ask-text, .regul-committee__order-text, .regul-committee__descr, .invest-committee__subtitle, .soceconomic-develop__subtitle, .regional-project__direction-item, .regional-project__prices-txt, .regional-project__desc p, .regional-project__subtitle, .story__desc-txt, .story__item-title, .news__card-content-text, .news__card-main-text, .region__item-stat__text, .region__text, .calculator__subtitle, .steps-investor__item-txt, .picture-text__desc-txt, .project-desc__desc-txt, .project-desc__list li, .map__text, .map__subtitles p, .content ul > li, .content p {
+  .industrial-park__contacts-label, .industrial-park__products-name, .industrial-park__advan-label, .func-public-repres__item-txt, .main-direction__item p, .main-direction__subtitle, .task-clubs__subtitles p, .club-strategic__subtitles p, .strategy-grafic__desc p, .tourism-potential__blocks-txt, .tourism-potential__subtitles p, .strategic-priority__desc p, .strategy__subtitles p, .invest-com__links-tit, .invest-com__subtitle, .org-invest__subtitle, .invest-decl__subtitle, .regional-standart__subtitle p, .municipality__descs-item span:last-child, .municipality__desc p, .regul-committee__ask-text, .regul-committee__order-text, .regul-committee__descr, .invest-committee__subtitle, .soceconomic-develop__subtitle, .regional-project__direction-item, .regional-project__prices-txt, .regional-project__desc p, .regional-project__subtitle, .story__desc-txt, .story__item-title, .news__card-content-text, .news__card-main-text, .region__item-stat__text, .region__text, .calculator__subtitle, .steps-investor__item-txt, .picture-text__desc-txt, .project-desc__desc-txt, .project-desc__list li, .map__text, .map__subtitles p, .content ul > li, .content p {
     font-size: 18px;
     line-height: 130%;
   }
 }
 @media screen and (max-width: 767px) {
-  .func-public-repres__item-txt, .main-direction__item p, .main-direction__subtitle, .task-clubs__subtitles p, .club-strategic__subtitles p, .strategy-grafic__desc p, .tourism-potential__blocks-txt, .tourism-potential__subtitles p, .strategic-priority__desc p, .strategy__subtitles p, .invest-com__links-tit, .invest-com__subtitle, .org-invest__subtitle, .invest-decl__subtitle, .regional-standart__subtitle p, .municipality__descs-item span:last-child, .municipality__desc p, .regul-committee__ask-text, .regul-committee__order-text, .regul-committee__descr, .invest-committee__subtitle, .soceconomic-develop__subtitle, .regional-project__direction-item, .regional-project__prices-txt, .regional-project__desc p, .regional-project__subtitle, .story__desc-txt, .story__item-title, .news__card-content-text, .news__card-main-text, .region__item-stat__text, .region__text, .calculator__subtitle, .steps-investor__item-txt, .picture-text__desc-txt, .project-desc__desc-txt, .project-desc__list li, .map__text, .map__subtitles p, .content ul > li, .content p {
+  .industrial-park__contacts-label, .industrial-park__products-name, .industrial-park__advan-label, .func-public-repres__item-txt, .main-direction__item p, .main-direction__subtitle, .task-clubs__subtitles p, .club-strategic__subtitles p, .strategy-grafic__desc p, .tourism-potential__blocks-txt, .tourism-potential__subtitles p, .strategic-priority__desc p, .strategy__subtitles p, .invest-com__links-tit, .invest-com__subtitle, .org-invest__subtitle, .invest-decl__subtitle, .regional-standart__subtitle p, .municipality__descs-item span:last-child, .municipality__desc p, .regul-committee__ask-text, .regul-committee__order-text, .regul-committee__descr, .invest-committee__subtitle, .soceconomic-develop__subtitle, .regional-project__direction-item, .regional-project__prices-txt, .regional-project__desc p, .regional-project__subtitle, .story__desc-txt, .story__item-title, .news__card-content-text, .news__card-main-text, .region__item-stat__text, .region__text, .calculator__subtitle, .steps-investor__item-txt, .picture-text__desc-txt, .project-desc__desc-txt, .project-desc__list li, .map__text, .map__subtitles p, .content ul > li, .content p {
     font-size: 16px;
   }
 }
@@ -1363,18 +1369,18 @@ template {
   line-height: 130%;
 }
 
-.func-public-repres__item-tit, .tourism-potential__blocks-num, .tourism-potential__blocks-title, .priorities__txt, .invest-com__links-title, .org-invest__tasks-title, .regional-standart__elements-txt, .big-town__city, .regul-committee__ask-title, .regul-committee__ask_name, .transport-inf__block-title, .regional-project__prices-title, .regional-project__direction-title, .legislation__item-title, .recovery-pass__title, .calculator__block-title, .success-hist__slide-txt, .benefits__slide-txt, .steps-investor__item-tit, .modal-pers-cab__title p, .content strong {
+.industrial-park__advan-name, .pref-territories__item .card__content-title, .func-public-repres__item-tit, .tourism-potential__blocks-num, .tourism-potential__blocks-title, .priorities__txt, .invest-com__links-title, .org-invest__tasks-title, .regional-standart__elements-txt, .big-town__city, .regul-committee__ask-title, .regul-committee__ask_name, .transport-inf__block-title, .regional-project__prices-title, .regional-project__direction-title, .legislation__item-title, .recovery-pass__title, .calculator__block-title, .success-hist__slide-txt, .benefits__slide-txt, .steps-investor__item-tit, .modal-pers-cab__title p, .content strong {
   font-size: 24px;
   font-weight: 600;
   line-height: 130%;
 }
 @media screen and (max-width: 1919px) {
-  .func-public-repres__item-tit, .tourism-potential__blocks-num, .tourism-potential__blocks-title, .priorities__txt, .invest-com__links-title, .org-invest__tasks-title, .regional-standart__elements-txt, .big-town__city, .regul-committee__ask-title, .regul-committee__ask_name, .transport-inf__block-title, .regional-project__prices-title, .regional-project__direction-title, .legislation__item-title, .recovery-pass__title, .calculator__block-title, .success-hist__slide-txt, .benefits__slide-txt, .steps-investor__item-tit, .modal-pers-cab__title p, .content strong {
+  .industrial-park__advan-name, .pref-territories__item .card__content-title, .func-public-repres__item-tit, .tourism-potential__blocks-num, .tourism-potential__blocks-title, .priorities__txt, .invest-com__links-title, .org-invest__tasks-title, .regional-standart__elements-txt, .big-town__city, .regul-committee__ask-title, .regul-committee__ask_name, .transport-inf__block-title, .regional-project__prices-title, .regional-project__direction-title, .legislation__item-title, .recovery-pass__title, .calculator__block-title, .success-hist__slide-txt, .benefits__slide-txt, .steps-investor__item-tit, .modal-pers-cab__title p, .content strong {
     line-height: 140%;
   }
 }
 @media screen and (max-width: 767px) {
-  .func-public-repres__item-tit, .tourism-potential__blocks-num, .tourism-potential__blocks-title, .priorities__txt, .invest-com__links-title, .org-invest__tasks-title, .regional-standart__elements-txt, .big-town__city, .regul-committee__ask-title, .regul-committee__ask_name, .transport-inf__block-title, .regional-project__prices-title, .regional-project__direction-title, .legislation__item-title, .recovery-pass__title, .calculator__block-title, .success-hist__slide-txt, .benefits__slide-txt, .steps-investor__item-tit, .modal-pers-cab__title p, .content strong {
+  .industrial-park__advan-name, .pref-territories__item .card__content-title, .func-public-repres__item-tit, .tourism-potential__blocks-num, .tourism-potential__blocks-title, .priorities__txt, .invest-com__links-title, .org-invest__tasks-title, .regional-standart__elements-txt, .big-town__city, .regul-committee__ask-title, .regul-committee__ask_name, .transport-inf__block-title, .regional-project__prices-title, .regional-project__direction-title, .legislation__item-title, .recovery-pass__title, .calculator__block-title, .success-hist__slide-txt, .benefits__slide-txt, .steps-investor__item-tit, .modal-pers-cab__title p, .content strong {
     font-size: 20px;
     line-height: 120%;
   }
@@ -1387,19 +1393,19 @@ template {
   line-height: 130%;
 }
 
-.func-public-repres__title, .public-representative__title, .main-direction__title, .task-clubs__title, .strategy-grafic__title, .tourism-potential__title, .priorities__title, .strategic-priority__title, .invest-com__title, .org-invest__title, .invest-decl__title, .picture-text__title, .list-templates__title, .map__title {
+.func-public-repres__title, .public-representative__title, .main-direction__title, .task-clubs__title, .strategy-grafic__title, .tourism-potential__title, .priorities__title, .strategic-priority__title, .invest-com__title, .org-invest__title, .invest-decl__title, .regul-committee__title-h2, .picture-text__title, .list-templates__title, .map__title {
   font-size: 48px;
   font-weight: 600;
   line-height: 110%;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1919px) {
-  .func-public-repres__title, .public-representative__title, .main-direction__title, .task-clubs__title, .strategy-grafic__title, .tourism-potential__title, .priorities__title, .strategic-priority__title, .invest-com__title, .org-invest__title, .invest-decl__title, .picture-text__title, .list-templates__title, .map__title {
+  .func-public-repres__title, .public-representative__title, .main-direction__title, .task-clubs__title, .strategy-grafic__title, .tourism-potential__title, .priorities__title, .strategic-priority__title, .invest-com__title, .org-invest__title, .invest-decl__title, .regul-committee__title-h2, .picture-text__title, .list-templates__title, .map__title {
     font-size: 40px;
   }
 }
 @media screen and (max-width: 767px) {
-  .func-public-repres__title, .public-representative__title, .main-direction__title, .task-clubs__title, .strategy-grafic__title, .tourism-potential__title, .priorities__title, .strategic-priority__title, .invest-com__title, .org-invest__title, .invest-decl__title, .picture-text__title, .list-templates__title, .map__title {
+  .func-public-repres__title, .public-representative__title, .main-direction__title, .task-clubs__title, .strategy-grafic__title, .tourism-potential__title, .priorities__title, .strategic-priority__title, .invest-com__title, .org-invest__title, .invest-decl__title, .regul-committee__title-h2, .picture-text__title, .list-templates__title, .map__title {
     font-size: 24px;
   }
 }
@@ -1477,6 +1483,10 @@ body.ov-hidden {
 
 main {
   padding-top: 160px;
+}
+
+main.main-page {
+  padding-top: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -2750,6 +2760,11 @@ fieldset {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1919px) {
+  .content ul > li {
+    padding-left: 32px;
+  }
+}
 .doc-download__item {
   border-radius: 4px;
   background-color: #ffffff;
@@ -2789,9 +2804,6 @@ fieldset {
 }
 
 @media screen and (max-width: 1365px) {
-  .doc-download__item {
-    padding: 16px;
-  }
   .doc-download__item-name {
     display: -webkit-box;
     -webkit-line-clamp: inherit;
@@ -2941,6 +2953,12 @@ fieldset {
     transform: none;
     display: block;
     margin-bottom: 16px;
+  }
+  .form-search__button-close {
+    display: none;
+  }
+  .form-search__button-close.change {
+    display: block;
   }
 }
 .map__titles {
@@ -3727,7 +3745,6 @@ fieldset {
   right: 0;
   width: 100%;
   display: block;
-  height: 160px;
 }
 .header.active {
   height: auto;
@@ -3942,12 +3959,44 @@ fieldset {
 .header-menu__social {
   display: none;
 }
+.header-menu__inner {
+  overflow-y: auto;
+  height: 100%;
+}
 .header .footer__list-laptop-hide {
   display: none;
 }
 
 .header--transparent {
   background-color: transparent;
+}
+.header--transparent .header-bottom__btn-burg {
+  background-image: url(../assets/img/icons/burger-white-show.svg);
+}
+.header--transparent:hover {
+  background-color: #ffffff;
+}
+.header--transparent:hover * {
+  color: #2f2f2f;
+}
+.header--transparent:hover svg use {
+  stroke: #2f2f2f;
+}
+.header--transparent:hover .btn-sec {
+  border-color: #2f2f2f;
+}
+.header--transparent:hover .btn-sec span {
+  color: #2f2f2f;
+}
+.header--transparent:hover .header-bottom__btn-burg {
+  background-image: url(../assets/img/icons/burger-show.svg);
+}
+.header--transparent:hover .header-bottom__btn-burg.change {
+  background-image: url(../assets/img/icons/burger-close.svg);
+}
+.header--transparent:hover .header-top__socials svg use {
+  fill: #2f2f2f;
+  stroke: none;
 }
 .header--transparent * {
   color: #ffffff;
@@ -4138,11 +4187,18 @@ fieldset {
   }
   .header .dropdown__items {
     display: flex;
+    align-items: center;
     column-gap: 8px;
     width: fit-content;
   }
   .header .dropdown__item {
     padding: 0;
+  }
+  .header .dropdown__item label {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #858c95;
   }
 }
 @media screen and (max-width: 375px) {
@@ -8397,9 +8453,11 @@ fieldset {
 .invest-committee__titles {
   column-gap: 20px;
 }
-.invest-committee__title {
-  width: 740px;
-  flex-shrink: 0;
+.invest-committee__title-h1 {
+  padding-right: 20px;
+}
+.invest-committee__subtitle {
+  padding-right: 20px;
 }
 .invest-committee__subtitle p:not(:last-child) {
   margin-bottom: 12px;
@@ -8408,38 +8466,49 @@ fieldset {
   height: 500px;
 }
 
+@media screen and (max-width: 1365px) {
+  .invest-committee__container {
+    row-gap: 32px;
+  }
+  .invest-committee__titles {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+  .invest-committee__title-h1 {
+    padding-right: 0px;
+  }
+  .invest-committee__subtitle {
+    padding-right: 0px;
+  }
+  .invest-committee__image {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .invest-committee__title-h1 {
+    word-break: break-word;
+  }
+}
 .regul-committee__container {
   row-gap: 60px;
 }
 .regul-committee__head {
-  max-width: 870px;
+  max-width: 770px;
 }
-.regul-committee__title {
-  flex-shrink: 0;
+.regul-committee__title-h2 {
   margin-bottom: 40px;
 }
 .regul-committee__descr {
   margin-bottom: 16px;
 }
 .regul-committee__doc {
-  border-radius: 4px;
-  background: #ffffff;
-  column-gap: 16px;
-  padding: 20px;
-}
-.regul-committee__doc-icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-.regul-committee__doc-link {
-  color: #2d6fd0;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 130%;
+  max-width: 620px;
 }
 .regul-committee__advan {
   column-gap: 20px;
+}
+.regul-committee__advan-column {
+  padding-right: 20px;
 }
 .regul-committee__order-items {
   column-gap: 20px;
@@ -8508,6 +8577,66 @@ fieldset {
   color: #ffffff;
 }
 
+@media screen and (max-width: 1919px) {
+  .regul-committee__head {
+    max-width: 870px;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .regul-committee__titile-h2 {
+    margin-bottom: 32px;
+  }
+  .regul-committee__head {
+    max-width: 100%;
+  }
+  .regul-committee__doc {
+    max-width: 100%;
+  }
+  .regul-committee__container {
+    row-gap: 48px;
+  }
+  .regul-committee__advan {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+  .regul-committee__advan-column {
+    padding-right: 0;
+  }
+  .regul-committee__advan-column ul:not(:first-child) {
+    margin-top: 16px;
+  }
+  .regul-committee__order-items {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+  .regul-committee__order-item {
+    padding: 24px;
+    row-gap: 24px;
+  }
+  .regul-committee__ask-items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1fr;
+    row-gap: 20px;
+  }
+  .regul-committee__ask-item {
+    padding: 24px;
+    row-gap: 24px;
+  }
+  .regul-committee__ask-item:last-child {
+    row-gap: 24px;
+  }
+  .regul-committee__title-h2 {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .regul-committee__ask-soc a:not(:last-child) {
+    margin-bottom: 4px;
+  }
+  .regul-committee__ask-soc a {
+    word-break: break-word;
+  }
+}
 .municipality__titles {
   margin-bottom: 40px;
 }
@@ -9689,5 +9818,366 @@ fieldset {
   }
   .func-public-repres .content ul > li {
     font-size: 16px;
+  }
+}
+.offer-area__title-h1 {
+  margin-bottom: 40px;
+}
+.offer-area__block {
+  height: 737px;
+}
+.offer-area__image {
+  height: 100%;
+}
+.offer-area__content {
+  padding: 60px;
+  background-color: #ffffff;
+}
+.offer-area__content .auth__form {
+  justify-content: space-between;
+  height: 100%;
+}
+.offer-area__content .auth__form-btn {
+  width: 100%;
+}
+
+@media screen and (max-width: 1919px) {
+  .offer-area__title-h1 {
+    margin-bottom: 40px;
+  }
+  .offer-area__block {
+    height: 737px;
+  }
+  .offer-area__image {
+    height: 100%;
+  }
+  .offer-area__content {
+    padding: 60px;
+    background-color: #ffffff;
+  }
+  .offer-area__content .auth__form {
+    justify-content: space-between;
+    height: 100%;
+  }
+  .offer-area__content .auth__form-btn {
+    width: 100%;
+  }
+}
+.reestr__title-h1 {
+  margin-bottom: 40px;
+}
+.reestr__items {
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+@media screen and (max-width: 1365px) {
+  .reestr__title-h1 {
+    margin-bottom: 32px;
+  }
+  .reestr__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.pref-territories__title-h1 {
+  margin-bottom: 40px;
+}
+.pref-territories__item .card__content {
+  min-height: auto;
+  row-gap: 32px;
+}
+.pref-territories__item .card__content-title {
+  min-height: 62px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1919px) {
+  .pref-territories__item .card__content {
+    min-height: auto;
+    row-gap: 32px;
+  }
+  .pref-territories__item .card__content-title {
+    min-height: 46px;
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .pref-territories__title-h1 {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pref-territories__title-h1 {
+    word-break: break-word;
+  }
+}
+.industrial-park__container {
+  row-gap: 60px;
+}
+.industrial-park__head-container {
+  row-gap: 40px;
+}
+.industrial-park__title-h1 {
+  max-width: 900px;
+}
+.industrial-park__content {
+  max-width: 870px;
+}
+.industrial-park__image {
+  height: 500px;
+}
+.industrial-park__advan {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 32px;
+}
+.industrial-park__advan-inner {
+  column-gap: 24px;
+}
+.industrial-park__advan-item {
+  align-items: flex-start;
+  row-gap: 8px;
+}
+.industrial-park__advan-name {
+  color: #2d6fd0;
+}
+.industrial-park__records-container {
+  column-gap: 20px;
+  row-gap: 60px;
+}
+.industrial-park__records-item-first {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.industrial-park__records-name {
+  margin-bottom: 20px;
+}
+.industrial-park__records-inner {
+  row-gap: 60px;
+}
+.industrial-park__dates {
+  row-gap: 20px;
+  position: relative;
+}
+.industrial-park__dates::before {
+  content: "";
+  position: absolute;
+  left: 299px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #dee2e7;
+}
+.industrial-park__date {
+  display: grid;
+  grid-template-columns: 270px 650px;
+  align-items: center;
+  column-gap: 60px;
+}
+.industrial-park__date-date {
+  flex-shrink: 0;
+  color: #2d6fd0;
+  position: relative;
+}
+.industrial-park__date-date::before {
+  content: "";
+  position: absolute;
+  right: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #dee2e7;
+}
+.industrial-park__products {
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.industrial-park__products-item {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 32px;
+  align-items: flex-start;
+  justify-content: space-between;
+  row-gap: 16px;
+}
+.industrial-park__products-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.industrial-park__contacts {
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.industrial-park__contacts-item {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 4px;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 222px;
+  flex-shrink: 0;
+}
+.industrial-park__contacts-link {
+  color: #2d6fd0;
+}
+.industrial-park__gallery {
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.industrial-park__gallery-item {
+  height: 350px;
+}
+
+@media screen and (max-width: 1919px) {
+  .industrial-park__title-h1 {
+    max-width: 680px;
+  }
+  .industrial-park__content {
+    max-width: 100%;
+  }
+  .industrial-park__products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .industrial-park__contacts-item {
+    height: 212px;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .industrial-park__head-container {
+    row-gap: 32px;
+  }
+  .industrial-park__title-h1 {
+    max-width: 100%;
+  }
+  .industrial-park__content {
+    max-width: 100%;
+  }
+  .industrial-park__image {
+    height: 400px;
+  }
+  .industrial-park__advan {
+    padding: 24px;
+  }
+  .industrial-park__advan-inner {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+  }
+  .industrial-park__records-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .industrial-park__records-item-first {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+  .industrial-park__dates::before {
+    left: 239px;
+  }
+  .industrial-park__date {
+    grid-template-columns: 214px 424px;
+    column-gap: 50px;
+  }
+  .industrial-park__date-date {
+    font-size: 32px;
+  }
+  .industrial-park__date-date::before {
+    right: -32px;
+  }
+  .industrial-park__products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .industrial-park__products-item {
+    padding: 24px;
+  }
+  .industrial-park__contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .industrial-park__contacts-item {
+    padding: 24px;
+    height: 180px;
+  }
+  .industrial-park__contacts-item:last-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .industrial-park__contacts-link {
+    color: #2d6fd0;
+  }
+  .industrial-park__gallery {
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  .industrial-park__gallery-item {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .industrial-park__container {
+    row-gap: 50px;
+  }
+  .industrial-park__title-h1 {
+    word-break: break-word;
+  }
+  .industrial-park__image {
+    height: 340px;
+  }
+  .industrial-park__advan-inner {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+  }
+  .industrial-park__records-container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+  .industrial-park__records-item-first {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+  .industrial-park__records-inner {
+    row-gap: 50px;
+  }
+  .industrial-park__dates::before {
+    left: 9px;
+  }
+  .industrial-park__date {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 4px;
+  }
+  .industrial-park__date-date {
+    font-size: 32px;
+    padding-left: 38px;
+  }
+  .industrial-park__date-date::before {
+    right: auto;
+    left: 4px;
+  }
+  .industrial-park__date-info {
+    padding-left: 38px;
+  }
+  .industrial-park__products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .industrial-park__products-item {
+    padding: 24px;
+  }
+  .industrial-park__contacts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .industrial-park__contacts-item {
+    padding: 24px;
+    height: 146px;
+  }
+  .industrial-park__contacts-item:last-child {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+  .industrial-park__gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .industrial-park__gallery-item {
+    height: 350px;
   }
 }

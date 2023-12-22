@@ -88,5 +88,15 @@
       display: block;
       margin-bottom: 16px;
     }
+
+    &__button {
+      &-close {
+        display: none;
+
+        &.change {
+          display: block;
+        }
+      }
+    }
   }
 }

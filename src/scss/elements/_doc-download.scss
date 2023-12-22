@@ -50,10 +50,6 @@
 
 @media screen and (max-width: $tablet) {
   .doc-download {
-    &__item {
-      padding: 16px;
-    }
-
     &__item-name {
       @include croppingText(inherit);
     }

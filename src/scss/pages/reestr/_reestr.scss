@@ -1,0 +1,32 @@
+.reestr {
+  &__title {
+    &-h1 {
+      @extend %h2;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__items {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {
+  .reestr {
+    &__title {
+      &-h1 {
+        margin-bottom: 32px;
+      }
+    }
+  
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {}

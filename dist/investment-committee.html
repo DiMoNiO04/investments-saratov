@@ -106,9 +106,6 @@
                 </div>
               </div>
             </div>
-            <!-- <a href="#" class="header-top__btn btn btn-sec">
-              <span>Линия прямых обращений</span>
-            </a> -->
           </div>
         </div>
         <div class="header-bottom__btns header-top__entrance">
@@ -229,16 +226,16 @@
   </div>
   <div class="header-menu js-header-menu">
     <div class="container">
-      <div class="header-menu__inner">
+      <div class="header-menu__inner" data-simplebar="init">
         <div class="form-search form-search-mobile js-form-search" action="/ru/search.php">
-          <input class="form-search__input js-search-input" size="" name="" id="" value="" type="text"
+          <input class="form-search__input js-search-mob-input js-search-input" size="" name="" id="myInput" value="" type="text"
             autocomplete="off$white" placeholder="Что ищите?" />
           <button class="form-search__button-open">
             <svg>
               <use xlink:href="assets/img/icons/icons.svg#search"></use>
             </svg>
           </button>
-          <button class="form-search__button-close js-search-close">
+          <button class="form-search__button-close js-search-close js-search-mob-close">
             <svg>
               <use xlink:href="assets/img/icons/icons.svg#search-close"></use>
             </svg>
@@ -514,6 +511,7 @@
               <input id="ru" type="radio" name="lang" value="lang-1" checked />
               <label for="ru">RU</label>
             </div>
+            <div class="dropdown__item-separator">/</div>
             <div class="dropdown__item js-dropdown-item">
               <input id="lang-2" type="radio" name="lang" value="lang-2" />
               <label for="lang-2">EN</label>
@@ -543,7 +541,7 @@
   <div class="container">
     <div class="invest-committee__container">
       <div class="invest-committee__titles">
-        <div class="invest-committee__title">Инвестиционный комитет</div>
+        <h1 class="invest-committee__title-h1">Инвестиционный комитет</h1>
         <div class="invest-committee__subtitle">
           <p>
             Инвестиционный комитет – это площадка для разрешения разногласий между инвестором, органами власти субъекта
@@ -556,23 +554,20 @@
       </div>
     </div>
   </div>
-</section>
- <section class="section regul-committee">
+</section> <section class="section regul-committee">
   <div class="container">
     <div class="regul-committee__container">
       <div class="regul-committee__head">
-        <div class="regul-committee__title">Положение об инвестиционном комитете при Губернаторе области</div>
+        <h2 class="regul-committee__title-h2">Положение об инвестиционном комитете при Губернаторе области</h2>
         <div class="regul-committee__descr">Утверждено постановлением Губернатора области № 185 от 08.06.2022.</div>
-        <div class="regul-committee__doc">
-          <div class="regul-committee__doc-icon">
+        <a href="https://investinsaratov.ru/ru/investor/support/" class="regul-committee__doc doc-download__item" target="_blank">
+          <div class="doc-download__item-icon">
             <svg width="40" height="40">
               <use xlink:href="assets/img/icons/icons.svg#doc"></use>
             </svg>
           </div>
-          <a href="#" class="regul-committee__doc-link" download>
-            Инвестиционный комитет при Губернаторе Саратовоской области
-          </a>
-        </div>
+          <div class="doc-download__item-name">Инвестиционный комитет при Губернаторе Саратовоской области</div>
+        </a>
       </div>
       <div class="regul-committee__advan">
         <div class="regul-committee__advan-column content">
@@ -662,7 +657,6 @@
     </div>
   </div>
 </section>
-
   <section class="ask-question">
   <div class="ask-question__container">
     <div class="ask-question__left">

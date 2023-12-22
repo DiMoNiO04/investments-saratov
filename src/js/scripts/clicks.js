@@ -10,8 +10,8 @@ function clickFullText() {
       const dropdownContent = dropdownList.querySelector('.js-dropdown-content');
 
       if (
-        (dropdownList.classList.contains('footer__list') && window.innerWidth < TABLET) ||
-        !dropdownList.classList.contains('footer__list')
+        (dropdownList.classList.contains('footer__list') && window.innerWidth < TABLET)
+        || !dropdownList.classList.contains('footer__list')
       ) {
         dropdownTitle.addEventListener('click', () => {
           const contentHeight = dropdownContent.scrollHeight;

@@ -17,7 +17,7 @@
   }
 
   ul {
-    & > li {
+    &>li {
       @extend %mainTxt;
       position: relative;
       padding-left: 36px;
@@ -40,6 +40,16 @@
 
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .content {
+    ul {
+      &>li {
+        padding-left: 32px;
+      }
     }
   }
 }

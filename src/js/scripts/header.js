@@ -41,44 +41,59 @@ const jsformsearch = document.querySelector('.js-form-search');
 const jsbuttonsearch = document.querySelector('.js-button-search');
 const jssearchclose = document.querySelector('.js-search-close');
 const jsheadertopcontainer = document.querySelector('.js-header-top-container');
-const jsheadercontent = document.querySelector('.js-header-content');
 const jssearchinput = document.querySelector('.js-search-input');
 
 jsbuttonsearch.addEventListener('click', () => {
   jsformsearch.classList.add('show');
   jsheadertopcontainer.classList.add('hide');
-  jsheadercontent.classList.add('change');
 });
 
 jssearchclose.addEventListener('click', () => {
+  jssearchinput.value = '';
   jsformsearch.classList.remove('show');
   jsheadertopcontainer.classList.remove('hide');
-  jsheadercontent.classList.remove('change');
-  jssearchinput.value = '';
+});
+
+window.addEventListener('scroll', () => {
+  jssearchclose.click();
+});
+
+header.addEventListener('mouseleave', () => {
+  jssearchclose.click();
+});
+
+// очистка инпут при заполнении/пустоте
+const searchInput = document.querySelector('.js-search-mob-input');
+const closeButton = document.querySelector('.js-search-mob-close');
+
+searchInput.addEventListener('input', function () {
+  if (this.value.trim() !== '') {
+    closeButton.classList.add('change');
+  } else {
+    closeButton.classList.remove('change');
+  }
+});
+closeButton.addEventListener('click', () => {
+  searchInput.value = '';
+  closeButton.classList.remove('change');
 });
 
 // Header, наведение на пункты
 const headerBottomLinks = document.querySelectorAll('.js-head-link');
 const jsHeadMenus = document.querySelectorAll('.js-head-menu');
-
 headerBottomLinks.forEach((headerBottomLink) => {
   const jsHeadMenu = headerBottomLink.querySelector('.js-head-menu');
-
-  // Добавляем обработчик события для .js-head-link
   headerBottomLink.addEventListener('mouseover', () => {
     jsHeadMenu.classList.add('show');
   });
-
   headerBottomLink.addEventListener('mouseout', () => {
     jsHeadMenu.classList.remove('show');
   });
 });
-
 jsHeadMenus.forEach((jsHeadMenu) => {
   jsHeadMenu.addEventListener('mouseover', () => {
     jsHeadMenu.classList.add('show');
   });
-
   jsHeadMenu.addEventListener('mouseout', () => {
     jsHeadMenu.classList.remove('show');
   });

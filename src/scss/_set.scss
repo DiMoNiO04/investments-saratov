@@ -39,6 +39,10 @@ main {
   padding-top: 160px;
 }
 
+main.main-page {
+  padding-top: 0;
+}
+
 @media screen and (max-width: $mob) {
   main {
     padding-top: 86px;
