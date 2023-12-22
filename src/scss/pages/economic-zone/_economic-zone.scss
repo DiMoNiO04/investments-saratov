@@ -1,4 +1,4 @@
-.industrial-park {
+.economic-zone {
   &__container {
     @extend %flexColumn;
     row-gap: 60px;
@@ -33,7 +33,7 @@
     padding: 32px;
 
     &-inner {
-      @extend %gridColumnFour;
+      @extend %gridColumnThree;
       column-gap: 24px;
     }
 
@@ -55,15 +55,29 @@
 
   &__records {
     &-container {
-      @extend %gridColumnTwo;
+      @extend %flexColumn;
       column-gap: 20px;
       row-gap: 60px;
+    }
+
+    &-items {
+      @extend %gridColumnTwo;
+      column-gap: 20px;
+      row-gap: 20px;
     }
 
     &-item {
       &-first {
         grid-column-start: 1;
         grid-column-end: 3;
+      }
+    }
+
+    &-info {
+      &.block-white {
+        background-color: $white;
+        padding: 32px;
+        border-radius: 4px;
       }
     }
 
@@ -105,6 +119,7 @@
       @extend %semibold40;
       color: $bluePrimary;
       position: relative;
+      text-align: right;
 
       &::before {
         content: '';
@@ -121,7 +136,7 @@
   }
 
   &__products {
-    @extend %gridColumnFive;
+    @extend %gridColumnThree;
     column-gap: 20px;
     row-gap: 20px;
 
@@ -147,7 +162,7 @@
   }
 
   &__contacts {
-    @extend %gridColumnThree;
+    @extend %gridColumnTwo;
     column-gap: 20px;
     row-gap: 20px;
 
@@ -185,10 +200,10 @@
 }
 
 @media screen and (max-width: $laptop) {
-  .industrial-park {
+  .economic-zone {
     &__title {
       &-h1 {
-        max-width: 680px;
+        max-width: 720px;
       }
     }
 
@@ -196,8 +211,12 @@
       max-width: 100%;
     }
 
-    &__products {
-      grid-template-columns: repeat(4, 1fr)
+    &__advan {
+      &-inner {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        row-gap: 24px;
+      }
     }
 
     &__contacts {
@@ -209,7 +228,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-  .industrial-park {
+  .economic-zone {
     &__head {
       &-container {
         row-gap: 32px;
@@ -272,7 +291,7 @@
     }
 
     &__products {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       &-item {
         padding: 24px;
@@ -285,11 +304,6 @@
       &-item {
         padding: 24px;
         height: 180px;
-
-        &:last-child {
-          grid-column-start: 1;
-          grid-column-end: 3;
-        }
       }
 
       &-label {
@@ -313,7 +327,7 @@
 }
 
 @media screen and (max-width: $mob) {
-  .industrial-park {
+  .economic-zone {
     &__container {
       row-gap: 50px;
     }
@@ -354,7 +368,6 @@
     }
 
     &__dates {
-
       &::before {
         left: 9px;
       }
@@ -367,6 +380,7 @@
       &-date {
         font-size: 32px;
         padding-left: 38px;
+        text-align: left;
 
         &::before {
           right: auto;
@@ -398,6 +412,10 @@
           grid-column-start: inherit;
           grid-column-end: inherit;
         }
+      }
+
+      &-link {
+        word-break: break-word;
       }
     }
 
