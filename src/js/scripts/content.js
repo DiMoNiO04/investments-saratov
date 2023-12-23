@@ -28,6 +28,7 @@ function changeContent() {
 
       contents.forEach((cont) => cont.classList.remove('--active'));
       activeContent.forEach((content) => content.classList.add('--active'));
+      btns.forEach((but) => but.classList.remove('--active'));
 
       btns.forEach((bt) => {
         if (bt.getAttribute('data-content-btn') === btn.getAttribute('data-content-btn')) {

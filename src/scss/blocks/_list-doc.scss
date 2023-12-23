@@ -1,0 +1,35 @@
+.list-doc {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+  }
+
+  &__link {
+    max-width: 760px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .list-doc {
+    &__link {
+      max-width: 580px;
+    }
+
+    &__container {
+      row-gap: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .list-doc {
+    &__link {
+      max-width: 100%;
+      align-items: flex-start;
+    }
+  }
+}

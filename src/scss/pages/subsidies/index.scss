@@ -1,0 +1,536 @@
+.subsidies {
+  &__btns {
+    display: flex;
+    max-width: 760px;
+
+    button {
+      flex: 0 0 50%;
+      text-align: center;
+      padding: 8.5px 0;
+      border-bottom: 1px solid #d3dce4;
+
+      &:hover {
+        span {
+          color: $blueHover;
+        }
+      }
+
+      span {
+        color: $greyTxt;
+        @extend %regular16;
+      }
+
+      &.--active {
+        border-bottom: 2px solid $bluePrimary;
+
+        span {
+          color: $bluePrimary;
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    @extend %h3;
+    max-width: 870px;
+  }
+
+  &__subtitle--indystry {
+    max-width: 760px;
+  }
+
+  &__title {
+    @extend %h2;
+    max-width: 870px;
+    margin-bottom: 40px;
+  }
+
+  &__contents {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__content {
+    @extend %flexColumn;
+    row-gap: 40px;
+    display: none;
+
+    &.--active {
+      display: flex;
+    }
+  }
+
+  &__img {
+    flex: 0 0 630px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 24px;
+    width: 100%;
+  }
+
+  &__item {
+    background-color: $white;
+    border-radius: 4px;
+    padding: 40px 32px;
+    position: relative;
+
+    &.active {
+      .subsidies__item-title {
+        padding-bottom: 20px;
+      }
+
+      .subsidies__item-content {
+        @extend %visible;
+      }
+
+      .subsidies__item-btn {
+        svg {
+          &:first-child {
+            @extend %hidden;
+          }
+
+          &:last-child {
+            @extend %visible;
+          }
+        }
+      }
+    }
+  }
+
+  &__item-btn {
+    @include sizes(32px, 32px);
+    border-radius: 4px;
+    border: 1.4px solid $bluePrimary;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    right: 32px;
+
+    svg {
+      @include sizes(11px, 11px);
+      position: absolute;
+      top: calc(50% - 11px / 2);
+      left: calc(50% - 11px / 2);
+      transition: $transitionOpacity, $transitionOpacity;
+
+      &:first-child {
+        @extend %visible;
+      }
+
+      &:last-child {
+        @extend %hidden;
+      }
+    }
+  }
+
+  &__item-title {
+    @extend %flexStart;
+    column-gap: 20px;
+    transition: $transitionPadding;
+    max-width: 90%;
+  }
+
+  &__item-number {
+    color: $bluePrimary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+
+  &__item-tit {
+    @extend %subheader;
+  }
+
+  &__item-content {
+    @extend %hidden;
+    @extend %flexStartBetween;
+    padding-left: 48px;
+    height: 0;
+    transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
+    column-gap: 20px;
+  }
+
+  &__item-desc {
+    padding-right: 20px;
+  }
+
+  &__item-img {
+    flex-shrink: 0;
+    @include sizes(598px, 460px);
+
+    img {
+      border-radius: 4px;
+      object-fit: cover;
+    }
+  }
+
+  &__item-cont {
+    p {
+      font-size: 16px;
+      @include mb(8px);
+      @include mt(0);
+    }
+  }
+
+  &__item-desc {
+    b {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 130%;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 130%;
+      margin: 0;
+      @include mb(8px);
+
+      &.--mb-12 {
+        margin-bottom: 12px;
+      }
+
+      &.--grey {
+        color: $greyTxt;
+      }
+    }
+
+    ul {
+      margin: 0 0 8px 0;
+
+      & > li {
+        position: relative;
+        padding-left: 32px;
+        font-size: 16px;
+        line-height: 130%;
+        margin-bottom: 8px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 10px;
+          background-color: $bluePrimary;
+          width: 24px;
+          height: 2px;
+        }
+      }
+    }
+  }
+
+  &__item-txt {
+    @extend %mainTxt;
+  }
+
+  &__item-but {
+    margin-top: 40px;
+  }
+
+  &__item-list {
+    @extend %flexColumn;
+    row-gap: 8px;
+
+    li {
+      @extend %flexStart;
+      position: relative;
+      column-gap: 4px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 140%;
+
+      &::before {
+        @include sizes(20px, 20px);
+        content: '';
+        background: url('../assets/img/icons/bullet.svg');
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &__items-title {
+    @extend %subheader;
+    max-width: 760px;
+  }
+
+  &__items-list {
+    @extend %gridColumnThree;
+    grid-gap: 20px;
+  }
+
+  &__items-lis {
+    padding: 32px 32px 40px;
+    border-radius: 4px;
+    background-color: $white;
+  }
+
+  &__items-num {
+    color: $bluePrimary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 12px;
+  }
+
+  &__items-txt {
+    @extend %mainTxt;
+  }
+
+  &__blocks {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__block {
+    padding-right: 20px;
+  }
+
+  &__block-item {
+    @include mb(16px);
+  }
+
+  &__block {
+    b {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 130%;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 130%;
+      @include mb(12px);
+    }
+
+    ul {
+      @include mb(8px);
+
+      &:last-child {
+        li {
+          font-size: 20px;
+          padding-left: 32px;
+        }
+      }
+
+      & > li {
+        position: relative;
+        padding-left: 36px;
+        font-size: 16px;
+        line-height: 130%;
+        margin-bottom: 8px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 10px;
+          background-color: $bluePrimary;
+          width: 24px;
+          height: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .subsidies {
+    &__item-img {
+      width: 450px;
+    }
+
+    &__btns {
+      max-width: 580px;
+    }
+
+    &__subtitle--indystry,
+    &__items-title {
+      max-width: 580px;
+      line-height: 130%;
+    }
+
+    &__items-list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 1fr;
+    }
+
+    &__block {
+      p {
+        font-size: 18px;
+      }
+
+      b {
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      ul:last-child {
+        li {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .subsidies {
+    &__item {
+      padding: 32px;
+    }
+
+    &__title {
+      margin-bottom: 32px;
+      font-size: 40px;
+    }
+
+    &__btns {
+      max-width: 100%;
+    }
+
+    &__contents,
+    &__content {
+      row-gap: 32px;
+    }
+
+    &__item-content {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__item-btn {
+      top: 32px;
+    }
+
+    &__item-tit {
+      line-height: 130%;
+    }
+
+    &__items-lis {
+      padding: 24px;
+      &:last-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+
+    &__item.active .subsidies__item-title {
+      padding-bottom: 16px;
+    }
+
+    &__item-desc {
+      padding-right: 0;
+    }
+
+    &__item-img {
+      @include sizes(100%, 350px);
+    }
+
+    &__blocks {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+    }
+
+    &__subtitle--indystry,
+    &__items-title {
+      line-height: 120%;
+      max-width: 100%;
+    }
+
+    &__items-title {
+      font-size: 24px;
+    }
+
+    &__block {
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .subsidies {
+    &__title {
+      max-width: 100%;
+      font-size: 32px;
+    }
+
+    &__btns {
+      button {
+        padding: 11px 0;
+
+        span {
+          font-size: 16px;
+        }
+
+        &.--active span {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__content {
+      row-gap: 24px;
+    }
+
+    &__item-title {
+      flex-direction: column;
+      row-gap: 20px;
+      max-width: 100%;
+    }
+
+    &__item {
+      padding: 24px 20px;
+    }
+
+    &__item-content {
+      padding: 0;
+    }
+
+    &__item-btn {
+      top: 24px;
+      right: 20px;
+    }
+
+    &__item-desc {
+      p {
+        font-size: 14px;
+      }
+
+      ul > li {
+        font-size: 14px;
+      }
+    }
+
+    &__block {
+      p {
+        font-size: 16px;
+      }
+    }
+
+    &__items-title {
+      font-size: 20px;
+    }
+
+    &__items-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__items-lis {
+      &:last-child {
+        grid-column-start: auto;
+        grid-column-end: auto;
+      }
+    }
+  }
+}
