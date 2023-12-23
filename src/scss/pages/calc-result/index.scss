@@ -1,0 +1,239 @@
+.calc-result {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__titles {
+    @extend %flexCenterBetween;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    padding-right: 20px;
+  }
+
+  &__content {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    span {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 140%;
+    }
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 20px;
+    width: 100%;
+  }
+
+  &__item {
+    background-color: $white;
+    border-radius: 4px;
+    padding: 40px 32px;
+    position: relative;
+
+    &.active {
+      .calc-result__item-title {
+        padding-bottom: 20px;
+      }
+
+      .calc-result__item-content {
+        @extend %visible;
+      }
+
+      .calc-result__item-btn {
+        svg {
+          &:first-child {
+            @extend %hidden;
+          }
+
+          &:last-child {
+            @extend %visible;
+          }
+        }
+      }
+    }
+  }
+
+  &__item-btn {
+    @include sizes(32px, 32px);
+    border-radius: 4px;
+    border: 1.4px solid $bluePrimary;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    right: 32px;
+
+    svg {
+      @include sizes(11px, 11px);
+      position: absolute;
+      top: calc(50% - 11px / 2);
+      left: calc(50% - 11px / 2);
+      transition: $transitionOpacity, $transitionOpacity;
+
+      &:first-child {
+        @extend %visible;
+      }
+
+      &:last-child {
+        @extend %hidden;
+      }
+    }
+  }
+
+  &__item-title {
+    @extend %flexStart;
+    column-gap: 20px;
+    transition: $transitionPadding;
+    max-width: 96%;
+  }
+
+  &__item-number {
+    color: $bluePrimary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+
+  &__item-tit {
+    @extend %subheader;
+  }
+
+  &__item-content {
+    @extend %hidden;
+    @extend %flexColumn;
+    padding-left: 48px;
+    height: 0;
+    transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
+    row-gap: 40px;
+  }
+
+  &__item-blocks {
+    @extend %flexColumn;
+    row-gap: 8px;
+  }
+
+  &__item-block {
+    p {
+      @extend %mainTxt;
+    }
+
+    ul {
+      padding-left: 14px;
+
+      li {
+        @extend %mainTxt;
+        position: relative;
+        display: flex;
+        column-gap: 12px;
+
+        &::before {
+          content: '';
+          @include sizes(4px, 4px);
+          background-color: $black;
+          border-radius: 50%;
+          display: block;
+          top: 10px;
+          position: relative;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .calc-result {
+    &__title {
+      font-size: 48px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .calc-result {
+    &__title {
+      font-size: 40px;
+    }
+
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__item {
+      padding: 32px;
+    }
+
+    &__subtitle {
+      span {
+        font-size: 16px;
+      }
+    }
+
+    &__item-tit {
+      line-height: 120%;
+    }
+
+    &__item-content {
+      row-gap: 32px;
+    }
+
+    &__item-title {
+      max-width: 90%;
+    }
+
+    &__item-btn {
+      top: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .calc-result {
+    &__titles {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__title {
+      padding: 0;
+      font-size: 32px;
+    }
+
+    &__item {
+      padding: 24px;
+    }
+
+    &__item-btn {
+      top: 24px;
+      right: 24px;
+    }
+
+    &__item-title {
+      flex-direction: column;
+      row-gap: 20px;
+      max-width: 100%;
+    }
+
+    &__item-content {
+      padding: 0;
+    }
+
+    &__item-block {
+      ul {
+        padding-left: 8px;
+      }
+    }
+  }
+}

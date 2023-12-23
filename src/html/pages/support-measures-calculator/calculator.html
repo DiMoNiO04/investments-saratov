@@ -1,0 +1,303 @@
+<section class="section calculator calculator--other">
+  <div class="container">
+    <div class="calculator__container">
+      <div class="calculator__titles">
+        <h1 class="calculator__title subtitle">Калькулятор мер поддержки</h1>
+        <p class="calculator__subtitle">
+          Калькулятор мер поддержки представляет полный перечень поддержки, предлагаемой инвесторам. Изучите
+          все доступные варианты государственной поддержки для вашего проекта.
+        </p>
+      </div>
+      <form id="calculator-form" class="calculator__form">
+        <fieldset class="calculator__fieldset">
+          <div class="calculator__blocks">
+            <div class="calculator__block">
+              <div class="calculator__block-title">Размер организации</div>
+              <div class="calculator__block-radiobtns">
+                <div class="calculator__block-radiobtn radiobox radiobox-M">
+                  <input id="organization-size-1" type="radio" name="organization-size" value="organization-size-1" />
+                  <label for="organization-size-1">МСП</label>
+                </div>
+                <div class="calculator__block-radiobtn radiobox radiobox-M">
+                  <input id="organization-size-2" type="radio" name="organization-size" value="organization-size-2" />
+                  <label for="organization-size-2">Среднее/крупное предпритие</label>
+                </div>
+              </div>
+            </div>
+            <div class="calculator__block">
+              <div class="calculator__block-title">Тип организации</div>
+              <div class="calculator__block-radiobtns">
+                <div class="calculator__block-radiobtn radiobox radiobox-M">
+                  <input id="organization-type-1" type="radio" name="organization-type" value="organization-type-1" />
+                  <label for="organization-type-1">Действующая</label>
+                </div>
+                <div class="calculator__block-radiobtn radiobox radiobox-M">
+                  <input id="organization-type-2" type="radio" name="organization-type" value="organization-type-2" />
+                  <label for="organization-type-2">Вновь создаваемая</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="calculator__fieldset">
+          <div class="calculator__blocks">
+            <div class="calculator__block">
+              <div class="calculator__block-title">Тип поддержки</div>
+              <div class="calculator__block-dropdown dropdown dropdown-def js-dropdown">
+                <div class="dropdown__header js-dropdown-inner">
+                  <div class="dropdown__value js-dropdown-value">Выберите тип поддержки</div>
+                  <button type="button" class="dropdown__btn">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="dropdown__content">
+                  <div class="dropdown__items" data-simplebar>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="support-1" type="radio" name="support" value="support-1" />
+                      <label for="support-1">Тип поддержки 1</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="support-2" type="radio" name="support" value="support-2" />
+                      <label for="support-2">Тип поддержки 2</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="support-3" type="radio" name="support" value="support-3" />
+                      <label for="support-3">Тип поддержки 3</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="support-4" type="radio" name="support" value="support-4" />
+                      <label for="support-4">Тип поддержки 4</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="support-5" type="radio" name="support" value="support-5" />
+                      <label for="support-5">Тип поддержки 5</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="support-6" type="radio" name="support" value="support-6" />
+                      <label for="support-6">Тип поддержки 6</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="calculator__block">
+              <div class="calculator__block-title">Территория реализации проекта</div>
+              <div class="calculator__block-dropdown dropdown dropdown-def js-dropdown">
+                <div class="dropdown__header js-dropdown-inner">
+                  <div class="dropdown__value js-dropdown-value">Выберите территорию проекта</div>
+                  <button type="button" class="dropdown__btn">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="dropdown__content">
+                  <div class="dropdown__items" data-simplebar>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="territory-1" type="radio" name="territory" value="territory-1" />
+                      <label for="territory-1">Тип территории 1</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="territory-2" type="radio" name="territory" value="territory-2" />
+                      <label for="territory-2">Тип территории 2</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="territory-3" type="radio" name="territory" value="territory-3" />
+                      <label for="territory-3">Тип территории 3</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="territory-4" type="radio" name="territory" value="territory-4" />
+                      <label for="territory-4">Тип территории 4</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="territory-5" type="radio" name="territory" value="territory-5" />
+                      <label for="territory-5">Тип территории 5</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="territory-6" type="radio" name="territory" value="territory-6" />
+                      <label for="territory-6">Тип территории 6</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="calculator__fieldset">
+          <div class="calculator__block">
+            <div class="calculator__block-title">Отрасль инвестиционного проекта</div>
+          </div>
+          <div class="calculator__items js-calc-items-content --hide">
+            <div class="calculator__item">
+              <input id="industry-1" type="radio" name="industry" value="industry-1" />
+              <label for="industry-1">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#house"></use>
+                </svg>
+                <span>Жилищное строительство</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-2" type="radio" name="industry" value="industry-2" />
+              <label for="industry-2">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#transport-communications-logistics"></use>
+                </svg>
+                <span>Транспорт, связь и логистика</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-3" type="radio" name="industry" value="industry-3" />
+              <label for="industry-3">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#agriculture"></use>
+                </svg>
+                <span>Сельское хозяйство</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-4" type="radio" name="industry" value="industry-4" />
+              <label for="industry-4">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#chemical-petrochemical-industry"></use>
+                </svg>
+                <span for="industry-4">Химическая и нефтехимическая промышленность</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-5" type="radio" name="industry" value="industry-5" />
+              <label for="industry-5">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#trade-catering"></use>
+                </svg>
+                <span>Торговля и общественное питание</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-6" type="radio" name="industry" value="industry-6" />
+              <label for="industry-6">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#construction-materials-industry"></use>
+                </svg>
+                <span>Промышленность строительных материалов</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-7" type="radio" name="industry" value="industry-7" />
+              <label for="industry-7">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#forestry"></use>
+                </svg>
+                <span>Лесное хозяйство</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-8" type="radio" name="industry" value="industry-8" />
+              <label for="industry-8">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#healthcare"></use>
+                </svg>
+                <span>Здравоохранение</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-9" type="radio" name="industry" value="industry-9" />
+              <label for="industry-9">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#manufacturing-industries"></use>
+                </svg>
+                <span>Обрабатывающие производства</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-10" type="radio" name="industry" value="industry-10" />
+              <label for="industry-10">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#road-construction"></use>
+                </svg>
+                <span>Строительство дорог, дорожное хозяйство</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-11" type="radio" name="industry" value="industry-11" />
+              <label for="industry-11">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#mining"></use>
+                </svg>
+                <span>Добыча полезных ископаемых</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-12" type="radio" name="industry" value="industry-12" />
+              <label for="industry-12">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#tourism-sales"></use>
+                </svg>
+                <span>Туризм и реализация</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-13" type="radio" name="industry" value="industry-13" />
+              <label for="industry-13">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#housing-communal-services"></use>
+                </svg>
+                <span>ЖКХ</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-14" type="radio" name="industry" value="industry-14" />
+              <label for="industry-14">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#information-technology"></use>
+                </svg>
+                <span>Информационные технологии</span>
+              </label>
+            </div>
+            <div class="calculator__item">
+              <input id="industry-15" type="radio" name="industry" value="industry-15" />
+              <label for="industry-15">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#other"></use>
+                </svg>
+                <span>Другая</span>
+              </label>
+            </div>
+            <button type="button" class="calculator__item calculator__item-btn js-calc-items --mob">
+              <label>
+                <span>Показать больше</span>
+              </label>
+            </button>
+          </div>
+        </fieldset>
+        <fieldset class="calculator__fieldset">
+          <div class="calculator__blocks">
+            <div class="calculator__block">
+              <div class="calculator__block-title">Объём инвестиций, млн руб</div>
+              <div class="calculator__block-input input">
+                <div class="input__input">
+                  <input type="number" min="0" placeholder="Объём инвестиций, млн руб" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+            </div>
+            <div class="calculator__block">
+              <div class="calculator__block-title">Количество рабочих мест</div>
+              <div class="calculator__block-input input">
+                <div class="input__input">
+                  <input type="number" min="0" placeholder="Количество рабочих мест" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <button disabled type="submit" class="calculator__btn btn btn-def" form="calculator-form">
+          <span>Найти субсидию</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

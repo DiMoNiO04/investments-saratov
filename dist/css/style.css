@@ -1175,6 +1175,9 @@ svg {
   height: 100%;
 }
 
+.calc-result__item-content,
+.calc-result__item-btn svg:last-child,
+.calc-result__item.active .calc-result__item-btn svg:first-child,
 .subsidies__item-content,
 .subsidies__item-btn svg:last-child,
 .subsidies__item.active .subsidies__item-btn svg:first-child,
@@ -1196,6 +1199,9 @@ svg {
   visibility: hidden;
 }
 
+.calc-result__item-btn svg:first-child,
+.calc-result__item.active .calc-result__item-btn svg:last-child,
+.calc-result__item.active .calc-result__item-content,
 .subsidies__item-btn svg:first-child,
 .subsidies__item.active .subsidies__item-btn svg:last-child,
 .subsidies__item.active .subsidies__item-content,
@@ -1217,6 +1223,13 @@ svg {
   visibility: visible;
 }
 
+.support-infr__txts,
+.support-infr__content,
+.calc-result__item-blocks,
+.calc-result__item-content,
+.calc-result__items,
+.calc-result__content,
+.calc-result__container,
 .invest-agrement__blocks-item,
 .invest-agrement__blocks,
 .invest-agrement__container,
@@ -1301,7 +1314,6 @@ svg {
 .news__card-content,
 .news__card-main,
 .news__container,
-.calculator__form,
 .intro__container > .container,
 .success-hist__slide-content,
 .success-hist__container > .container,
@@ -1311,6 +1323,7 @@ svg {
 .steps-investor__items,
 .steps-investor__container,
 .governor__desc-managment,
+.calculator__form,
 .list-doc__container,
 .picture-text__content,
 .project-desc__desc-items,
@@ -1374,6 +1387,7 @@ svg {
   justify-content: center;
 }
 
+.calc-result__item-title,
 .subsidies__item-list li,
 .subsidies__item-title,
 .func-public-repres__item-list li,
@@ -1382,9 +1396,9 @@ svg {
 .regul-committee__ask-item:last-child,
 .regul-committee__order-item,
 .authentication__desc-list li,
-.calculator__blocks,
 .steps-investor__item-list li,
 .steps-investor__item-title,
+.calculator__blocks,
 .project-desc__desc-items li,
 .chat__content-theme,
 .modal-write__block {
@@ -1393,6 +1407,7 @@ svg {
   justify-content: flex-start;
 }
 
+.calc-result__titles,
 .polls__items li,
 .big-town__desc,
 .big-town__title-container,
@@ -1477,9 +1492,9 @@ svg {
 .account__content--appeals .account__fieldset-file,
 .account__fieldset-radioboxs,
 .account__fieldset-inputs,
+.success-hist__slide-items,
 .calculator__block-radiobtns,
 .calculator__items,
-.success-hist__slide-items,
 .header-bottom__links,
 .header-bottom__list,
 .header-bottom__btns,
@@ -1507,6 +1522,7 @@ svg {
   justify-content: space-between;
 }
 
+.support-infr__blocks,
 .invest-agrement__titles,
 .subsidies__blocks,
 .industrial-park__records-container,
@@ -1607,6 +1623,7 @@ svg {
   line-height: 130%;
 }
 
+.support-infr__txts p,
 .subsidies__btns button span,
 .planned-projects__block-item ul li,
 .promising-direc__blocks-item ul li,
@@ -1675,6 +1692,7 @@ svg {
   text-transform: uppercase;
 }
 
+.support-infr__title,
 .invest-agrement__title,
 .subsidies__title,
 .industrial-park__title-h1,
@@ -1741,6 +1759,8 @@ svg {
   line-height: 120%;
 }
 
+.calc-result__item-block ul li,
+.calc-result__item-block p,
 .invest-agrement__blocks-txt,
 .invest-agrement__txts p,
 .subsidies__items-txt,
@@ -1792,8 +1812,8 @@ svg {
 .news__card-main-text,
 .region__item-stat__text,
 .region__text,
-.calculator__subtitle,
 .steps-investor__item-txt,
+.calculator__subtitle,
 .picture-text__desc-txt,
 .project-desc__desc-txt,
 .project-desc__list li,
@@ -1855,6 +1875,8 @@ svg {
   line-height: 130%;
 }
 
+.support-infr__tit,
+.calc-result__item-tit,
 .invest-agrement__blocks-subtitle,
 .subsidies__items-title,
 .subsidies__item-tit,
@@ -1879,10 +1901,10 @@ svg {
 .regional-project__direction-title,
 .legislation__item-title,
 .recovery-pass__title,
-.calculator__block-title,
 .success-hist__slide-txt,
 .benefits__slide-txt,
 .steps-investor__item-tit,
+.calculator__block-title,
 .modal-pers-cab__title p,
 .content strong {
   font-size: 24px;
@@ -1897,6 +1919,7 @@ svg {
   line-height: 130%;
 }
 
+.calc-result__title,
 .scheme-inter__title,
 .ao-dev-cor__title,
 .ao-dev-corp__title,
@@ -4870,6 +4893,114 @@ fieldset {
   max-width: 760px;
 }
 
+.calculator__titles {
+  margin-bottom: 40px;
+}
+
+.calculator__title {
+  color: #2f2f2f;
+}
+
+.calculator__subtitle {
+  flex: 0 0 calc(50% - 10px);
+}
+
+.calculator__form {
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 50px;
+  row-gap: 42px;
+}
+
+.calculator__blocks {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.calculator__block {
+  flex-shrink: 0;
+  flex: 0 0 calc(50% - 10px);
+}
+
+.calculator__block-title {
+  margin-bottom: 20px;
+}
+
+.calculator__btn {
+  margin: 0 0 0 auto;
+}
+
+.calculator__items {
+  flex-wrap: wrap;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.calculator__item label,
+.calculator__item div {
+  padding: 11px 16px;
+  border-radius: 4px;
+  background-color: #f5f6f6;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: border 0.4s ease;
+}
+
+.calculator__item input {
+  display: none;
+}
+
+.calculator__item input:checked + label {
+  border-color: #2d6fd0;
+}
+
+.calculator__item input:checked + label span {
+  color: #2d6fd0;
+}
+
+.calculator__item input:checked + label svg use {
+  stroke: #2d6fd0;
+}
+
+.calculator__item svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.calculator__item svg use {
+  stroke: #2f2f2f;
+  transition: stroke 0.4s ease;
+}
+
+.calculator__item span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+.calculator__item.active {
+  border-color: #2d6fd0;
+}
+
+.calculator__item.active svg use {
+  stroke: #2d6fd0;
+}
+
+.calculator__item.active label {
+  color: #2d6fd0;
+}
+
+.calculator__block-radiobtns {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
 .governor {
   background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
   position: relative;
@@ -5269,114 +5400,6 @@ fieldset {
 .intro__slide-img img {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.calculator__titles {
-  margin-bottom: 40px;
-}
-
-.calculator__title {
-  color: #2f2f2f;
-}
-
-.calculator__subtitle {
-  flex: 0 0 calc(50% - 10px);
-}
-
-.calculator__form {
-  border-radius: 4px;
-  background: #ffffff;
-  padding: 50px;
-  row-gap: 42px;
-}
-
-.calculator__blocks {
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-
-.calculator__block {
-  flex-shrink: 0;
-  flex: 0 0 calc(50% - 10px);
-}
-
-.calculator__block-title {
-  margin-bottom: 20px;
-}
-
-.calculator__btn {
-  margin: 0 0 0 auto;
-}
-
-.calculator__items {
-  flex-wrap: wrap;
-  row-gap: 20px;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-
-.calculator__item label,
-.calculator__item div {
-  padding: 11px 16px;
-  border-radius: 4px;
-  background-color: #f5f6f6;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: border 0.4s ease;
-}
-
-.calculator__item input {
-  display: none;
-}
-
-.calculator__item input:checked + label {
-  border-color: #2d6fd0;
-}
-
-.calculator__item input:checked + label span {
-  color: #2d6fd0;
-}
-
-.calculator__item input:checked + label svg use {
-  stroke: #2d6fd0;
-}
-
-.calculator__item svg {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-}
-
-.calculator__item svg use {
-  stroke: #2f2f2f;
-  transition: stroke 0.4s ease;
-}
-
-.calculator__item span {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 140%;
-  cursor: pointer;
-  transition: color 0.4s ease;
-}
-
-.calculator__item.active {
-  border-color: #2d6fd0;
-}
-
-.calculator__item.active svg use {
-  stroke: #2d6fd0;
-}
-
-.calculator__item.active label {
-  color: #2d6fd0;
-}
-
-.calculator__block-radiobtns {
-  -moz-column-gap: 20px;
-       column-gap: 20px;
 }
 
 .region {
@@ -9460,6 +9483,171 @@ fieldset {
   border-color: transparent;
 }
 
+.calc-result__container {
+  row-gap: 40px;
+}
+
+.calc-result__title {
+  padding-right: 20px;
+}
+
+.calc-result__content {
+  row-gap: 20px;
+}
+
+.calc-result__subtitle {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.calc-result__subtitle span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.calc-result__items {
+  row-gap: 20px;
+  width: 100%;
+}
+
+.calc-result__item {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 40px 32px;
+  position: relative;
+}
+
+.calc-result__item.active .calc-result__item-title {
+  padding-bottom: 20px;
+}
+
+.calc-result__item-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1.4px solid #2d6fd0;
+  padding: 10px;
+  position: absolute;
+  top: 40px;
+  right: 32px;
+}
+
+.calc-result__item-btn svg {
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: calc(50% - 5.5px);
+  left: calc(50% - 5.5px);
+  transition: opacity 0.4s ease, opacity 0.4s ease;
+}
+
+.calc-result__item-title {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  transition: padding 0.4s ease;
+  max-width: 96%;
+}
+
+.calc-result__item-number {
+  color: #2d6fd0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+.calc-result__item-content {
+  padding-left: 48px;
+  height: 0;
+  transition: visibility 0.4s ease, opacity 0.4s ease, height 0.4s ease, padding 0.4s ease;
+  row-gap: 40px;
+}
+
+.calc-result__item-blocks {
+  row-gap: 8px;
+}
+
+.calc-result__item-block ul {
+  padding-left: 14px;
+}
+
+.calc-result__item-block ul li {
+  position: relative;
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+
+.calc-result__item-block ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #2f2f2f;
+  border-radius: 50%;
+  display: block;
+  top: 10px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.support-infr__title {
+  margin-bottom: 40px;
+}
+
+.support-infr__blocks {
+  grid-gap: 20px;
+}
+
+.support-infr__block {
+  display: flex;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.support-infr__content {
+  justify-content: space-between;
+  row-gap: 20px;
+  padding: 24px 24px 24px 0;
+}
+
+.support-infr__tit {
+  margin-bottom: 20px;
+}
+
+.support-infr__txts {
+  row-gap: 8px;
+}
+
+.support-infr__btn {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+  border-bottom: 1px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.support-infr__btn:hover {
+  border-color: transparent;
+}
+
+.support-infr__img {
+  width: 298px;
+  height: 380px;
+  flex-shrink: 0;
+  margin: auto 0;
+}
+
+.support-infr__img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -9533,6 +9721,7 @@ fieldset {
     font-size: 64px;
   }
 
+  .support-infr__title,
   .invest-agrement__title,
   .subsidies__title,
   .industrial-park__title-h1,
@@ -9594,6 +9783,8 @@ fieldset {
     font-size: 26px;
   }
 
+  .calc-result__item-block ul li,
+  .calc-result__item-block p,
   .invest-agrement__blocks-txt,
   .invest-agrement__txts p,
   .subsidies__items-txt,
@@ -9645,8 +9836,8 @@ fieldset {
   .news__card-main-text,
   .region__item-stat__text,
   .region__text,
-  .calculator__subtitle,
   .steps-investor__item-txt,
+  .calculator__subtitle,
   .picture-text__desc-txt,
   .project-desc__desc-txt,
   .project-desc__list li,
@@ -9658,39 +9849,7 @@ fieldset {
     line-height: 130%;
   }
 
-  .invest-agrement__blocks-subtitle,
-  .subsidies__items-title,
-  .subsidies__item-tit,
-  .industrial-park__advan-name,
-  .pref-territories__item .card__content-title,
-  .personnel__item-tit,
-  .personnel__block-title,
-  .polls__subtitle,
-  .promising-direc__blocks-tit,
-  .func-public-repres__item-tit,
-  .tourism-potential__blocks-num,
-  .tourism-potential__blocks-title,
-  .priorities__txt,
-  .invest-com__links-title,
-  .org-invest__tasks-title,
-  .regional-standart__elements-txt,
-  .big-town__city,
-  .regul-committee__ask-title,
-  .regul-committee__ask_name,
-  .transport-inf__block-title,
-  .regional-project__prices-title,
-  .regional-project__direction-title,
-  .legislation__item-title,
-  .recovery-pass__title,
-  .calculator__block-title,
-  .success-hist__slide-txt,
-  .benefits__slide-txt,
-  .steps-investor__item-tit,
-  .modal-pers-cab__title p,
-  .content strong {
-    line-height: 140%;
-  }
-
+  .calc-result__title,
   .scheme-inter__title,
   .ao-dev-cor__title,
   .ao-dev-corp__title,
@@ -10820,6 +10979,28 @@ fieldset {
   .invest-agrement__blocks-item:nth-child(5) {
     width: calc(50% - 10px);
   }
+
+  .calc-result__title {
+    font-size: 48px;
+  }
+
+  .support-infr__blocks {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .support-infr__block {
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+  }
+
+  .support-infr__img {
+    width: 248px;
+    height: 253px;
+  }
+
+  .support-infr__content {
+    row-gap: 8px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -10833,6 +11014,32 @@ fieldset {
   .intro__title,
   .title {
     font-size: 48px;
+  }
+
+  .support-infr__title,
+  .invest-agrement__title,
+  .subsidies__title,
+  .industrial-park__title-h1,
+  .pref-territories__title-h1,
+  .reestr__title-h1,
+  .offer-area__title-h1,
+  .single-window__title,
+  .personnel__title,
+  .invest-tourism__title,
+  .infr-plan__title,
+  .polls__title,
+  .dev-corporation__title,
+  .implement-projects__title,
+  .plan-projec__title,
+  .region-statistics__title,
+  .club-strategic__title,
+  .regional-standart__title,
+  .invest-committee__title-h1,
+  .result-years__title,
+  .soceconomic-develop__title,
+  .regional-project__title,
+  .subtitle {
+    font-size: 40px;
   }
 
   .container {
@@ -11503,6 +11710,48 @@ fieldset {
     align-items: flex-start;
   }
 
+  .calculator__titles {
+    flex-direction: column;
+    row-gap: 32px;
+    margin-bottom: 32px;
+    align-items: flex-start;
+  }
+
+  .calculator__subtitle,
+  .calculator__block {
+    flex: auto;
+  }
+
+  .calculator__subtitle {
+    flex-shrink: 0;
+    flex: 0 0 calc(50% - 28px);
+  }
+
+  .calculator__form {
+    padding: 40px 32px;
+    row-gap: 32px;
+  }
+
+  .calculator__items {
+    row-gap: 17px;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+
+  .calculator__blocks {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  .calculator__block {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .calculator__btn {
+    padding: 14px 28px;
+  }
+
   .governor__container {
     padding: 100px 0 550px 0;
     justify-content: center;
@@ -11634,48 +11883,6 @@ fieldset {
 
   .intro .slider-navigation {
     bottom: 8px;
-  }
-
-  .calculator__titles {
-    flex-direction: column;
-    row-gap: 32px;
-    margin-bottom: 32px;
-    align-items: flex-start;
-  }
-
-  .calculator__subtitle,
-  .calculator__block {
-    flex: auto;
-  }
-
-  .calculator__subtitle {
-    flex-shrink: 0;
-    flex: 0 0 calc(50% - 28px);
-  }
-
-  .calculator__form {
-    padding: 40px 32px;
-    row-gap: 26px;
-  }
-
-  .calculator__items {
-    row-gap: 18px;
-    -moz-column-gap: 16px;
-         column-gap: 16px;
-  }
-
-  .calculator__blocks {
-    flex-direction: column;
-    row-gap: 24px;
-  }
-
-  .calculator__block {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .calculator__btn {
-    padding: 14px 28px;
   }
 
   .region__titles {
@@ -13399,6 +13606,46 @@ fieldset {
   .invest-agrement__blocks--esteblish .invest-agrement__blocks-item:last-child {
     width: 100%;
   }
+
+  .calc-result__title {
+    font-size: 40px;
+  }
+
+  .calc-result__container {
+    row-gap: 32px;
+  }
+
+  .calc-result__item {
+    padding: 32px;
+  }
+
+  .calc-result__subtitle span {
+    font-size: 16px;
+  }
+
+  .calc-result__item-tit {
+    line-height: 120%;
+  }
+
+  .calc-result__item-content {
+    row-gap: 32px;
+  }
+
+  .calc-result__item-title {
+    max-width: 90%;
+  }
+
+  .calc-result__item-btn {
+    top: 32px;
+  }
+
+  .support-infr__title {
+    margin-bottom: 32px;
+  }
+
+  .support-infr__img {
+    width: 220px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -13408,6 +13655,7 @@ fieldset {
     line-height: 110%;
   }
 
+  .support-infr__title,
   .invest-agrement__title,
   .subsidies__title,
   .industrial-park__title-h1,
@@ -13471,6 +13719,8 @@ fieldset {
     font-size: 24px;
   }
 
+  .calc-result__item-block ul li,
+  .calc-result__item-block p,
   .invest-agrement__blocks-txt,
   .invest-agrement__txts p,
   .subsidies__items-txt,
@@ -13522,8 +13772,8 @@ fieldset {
   .news__card-main-text,
   .region__item-stat__text,
   .region__text,
-  .calculator__subtitle,
   .steps-investor__item-txt,
+  .calculator__subtitle,
   .picture-text__desc-txt,
   .project-desc__desc-txt,
   .project-desc__list li,
@@ -13534,6 +13784,8 @@ fieldset {
     font-size: 16px;
   }
 
+  .support-infr__tit,
+  .calc-result__item-tit,
   .invest-agrement__blocks-subtitle,
   .subsidies__items-title,
   .subsidies__item-tit,
@@ -13558,16 +13810,17 @@ fieldset {
   .regional-project__direction-title,
   .legislation__item-title,
   .recovery-pass__title,
-  .calculator__block-title,
   .success-hist__slide-txt,
   .benefits__slide-txt,
   .steps-investor__item-tit,
+  .calculator__block-title,
   .modal-pers-cab__title p,
   .content strong {
     font-size: 20px;
     line-height: 120%;
   }
 
+  .calc-result__title,
   .scheme-inter__title,
   .ao-dev-cor__title,
   .ao-dev-corp__title,
@@ -14208,6 +14461,58 @@ fieldset {
     font-size: 18px;
   }
 
+  .calculator .container {
+    padding: 0;
+  }
+
+  .calculator__titles {
+    padding: 0 16px;
+    margin-bottom: 24px;
+  }
+
+  .calculator__subtitle {
+    line-height: 130%;
+  }
+
+  .calculator__blocks {
+    row-gap: 20px;
+  }
+
+  .calculator__form {
+    padding-left: 16px;
+    padding-right: 16px;
+    row-gap: 30px;
+  }
+
+  .calculator__block-radiobtns {
+    flex-direction: column;
+    row-gap: 24px;
+    align-items: flex-start;
+  }
+
+  .calculator__items.--hide .calculator__item:nth-child(n+5):not(:last-child) {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    display: none;
+  }
+
+  .calculator__item {
+    transition: opacity 0.4s ease, height 0.4s ease, visibility 0.4s ease;
+  }
+
+  .calculator__item span {
+    font-size: 16px;
+  }
+
+  .calculator--other .container {
+    padding: 0 16px;
+  }
+
+  .calculator--other .calculator__titles {
+    padding: 0;
+  }
+
   .governor__container {
     padding: 90px 0 360px;
     justify-content: center;
@@ -14386,50 +14691,6 @@ fieldset {
 
   .intro__container {
     padding: 245px 0 80px;
-  }
-
-  .calculator .container {
-    padding: 0;
-  }
-
-  .calculator__titles {
-    padding: 0 16px;
-    margin-bottom: 24px;
-  }
-
-  .calculator__subtitle {
-    line-height: 130%;
-  }
-
-  .calculator__blocks {
-    row-gap: 20px;
-  }
-
-  .calculator__form {
-    padding-left: 16px;
-    padding-right: 16px;
-    row-gap: 30px;
-  }
-
-  .calculator__block-radiobtns {
-    flex-direction: column;
-    row-gap: 24px;
-    align-items: flex-start;
-  }
-
-  .calculator__items.--hide .calculator__item:nth-child(n+5):not(:last-child) {
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    display: none;
-  }
-
-  .calculator__item {
-    transition: opacity 0.4s ease, height 0.4s ease, visibility 0.4s ease;
-  }
-
-  .calculator__item span {
-    font-size: 16px;
   }
 
   .region__title {
@@ -15903,6 +16164,73 @@ fieldset {
 
   .invest-agrement__blocks--esteblish .invest-agrement__blocks-item {
     min-height: 270px;
+  }
+
+  .calc-result__titles {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .calc-result__title {
+    padding: 0;
+    font-size: 32px;
+  }
+
+  .calc-result__item {
+    padding: 24px;
+  }
+
+  .calc-result__item-btn {
+    top: 24px;
+    right: 24px;
+  }
+
+  .calc-result__item-title {
+    flex-direction: column;
+    row-gap: 20px;
+    max-width: 100%;
+  }
+
+  .calc-result__item-content {
+    padding: 0;
+  }
+
+  .calc-result__item-block ul {
+    padding-left: 8px;
+  }
+
+  .support-infr__block {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  .support-infr__blocks {
+    row-gap: 16px;
+  }
+
+  .support-infr__img {
+    width: 100%;
+    height: 240px;
+  }
+
+  .support-infr__content {
+    padding: 0 20px 20px 20px;
+  }
+
+  .support-infr__tit {
+    margin-bottom: 16px;
+  }
+
+  .support-infr__txts p {
+    font-size: 14px;
+  }
+
+  .support-infr__btn {
+    font-size: 16px;
+  }
+
+  .support-infr__content {
+    row-gap: 12px;
   }
 }
 

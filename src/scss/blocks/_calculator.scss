@@ -132,11 +132,11 @@
 
     &__form {
       padding: 40px 32px;
-      row-gap: 26px;
+      row-gap: 32px;
     }
 
     &__items {
-      row-gap: 18px;
+      row-gap: 17px;
       column-gap: 16px;
     }
 
@@ -202,6 +202,16 @@
       span {
         font-size: 16px;
       }
+    }
+  }
+
+  .calculator--other {
+    .container {
+      padding: 0 16px;
+    }
+
+    .calculator__titles {
+      padding: 0;
     }
   }
 }

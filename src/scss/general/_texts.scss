@@ -56,6 +56,10 @@
     font-size: 48px;
   }
 
+  @media screen and (max-width: $tablet) {
+    font-size: 40px;
+  }
+
   @media screen and (max-width: $mob) {
     font-size: 32px;
     hyphens: auto;
@@ -124,10 +128,6 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 130%;
-
-  @media screen and (max-width: $laptop) {
-    line-height: 140%;
-  }
 
   @media screen and (max-width: $mob) {
     font-size: 20px;
