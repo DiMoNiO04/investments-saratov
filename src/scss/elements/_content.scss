@@ -4,6 +4,14 @@
     margin-bottom: 20px;
   }
 
+  b {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
   p {
     @extend %mainTxt;
 
@@ -46,6 +54,10 @@
 
 @media screen and (max-width: $laptop) {
   .content {
+    b {
+      font-size: 18px;
+    }
+
     ul {
       & > li {
         padding-left: 32px;

@@ -1223,6 +1223,11 @@ svg {
   visibility: visible;
 }
 
+.invest-contract__lists-list,
+.invest-contract__lists-block,
+.invest-contract__blocks-item,
+.invest-contract .content ul,
+.invest-contract__container,
 .support-infr__txts,
 .support-infr__content,
 .calc-result__item-blocks,
@@ -1522,6 +1527,8 @@ svg {
   justify-content: space-between;
 }
 
+.invest-contract__lists,
+.invest-contract__txts,
 .support-infr__blocks,
 .invest-agrement__titles,
 .subsidies__blocks,
@@ -1560,6 +1567,7 @@ svg {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.invest-contract__blocks-items--three,
 .subsidies__items-list,
 .industrial-park__gallery,
 .industrial-park__contacts,
@@ -1580,6 +1588,7 @@ svg {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.invest-contract__blocks-items--four,
 .industrial-park__advan-inner,
 .ao-dev-cor__items,
 .tourism-potential__blocks-items,
@@ -1692,6 +1701,7 @@ svg {
   text-transform: uppercase;
 }
 
+.invest-contract__title,
 .support-infr__title,
 .invest-agrement__title,
 .subsidies__title,
@@ -1759,6 +1769,7 @@ svg {
   line-height: 120%;
 }
 
+.invest-contract__blocks-txt,
 .calc-result__item-block ul li,
 .calc-result__item-block p,
 .invest-agrement__blocks-txt,
@@ -1875,6 +1886,8 @@ svg {
   line-height: 130%;
 }
 
+.invest-contract__lists-title,
+.invest-contract__blocks-title,
 .support-infr__tit,
 .calc-result__item-tit,
 .invest-agrement__blocks-subtitle,
@@ -3324,6 +3337,14 @@ fieldset {
 
 .content strong {
   margin-bottom: 20px;
+}
+
+.content b {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
 }
 
 .content p:not(:first-child) {
@@ -9648,6 +9669,76 @@ fieldset {
      object-fit: contain;
 }
 
+.invest-contract__container {
+  row-gap: 40px;
+}
+
+.invest-contract__title {
+  max-width: 1200px;
+}
+
+.invest-contract__txts {
+  grid-gap: 20px;
+}
+
+.invest-contract__txts ul > li {
+  font-size: 16px;
+  padding-left: 36px;
+}
+
+.invest-contract__txts-block {
+  padding-right: 24px;
+}
+
+.invest-contract .content ul > li {
+  margin: 0;
+}
+
+.invest-contract .content ul {
+  row-gap: 8px;
+  margin: 0;
+}
+
+.invest-contract .content p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.invest-contract__blocks-title {
+  margin-bottom: 20px;
+}
+
+.invest-contract__blocks-items {
+  grid-gap: 20px;
+  grid-auto-rows: 1fr;
+}
+
+.invest-contract__blocks-item {
+  row-gap: 8px;
+  padding: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.invest-contract__blocks-num {
+  color: #2d6fd0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.invest-contract__lists {
+  grid-gap: 20px;
+}
+
+.invest-contract__lists-block {
+  padding-right: 20px;
+  row-gap: 24px;
+}
+
+.invest-contract__lists-list {
+  row-gap: 20px;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -9721,6 +9812,7 @@ fieldset {
     font-size: 64px;
   }
 
+  .invest-contract__title,
   .support-infr__title,
   .invest-agrement__title,
   .subsidies__title,
@@ -9783,6 +9875,7 @@ fieldset {
     font-size: 26px;
   }
 
+  .invest-contract__blocks-txt,
   .calc-result__item-block ul li,
   .calc-result__item-block p,
   .invest-agrement__blocks-txt,
@@ -9920,6 +10013,10 @@ fieldset {
   .card__content {
     padding: 24px;
     min-height: 290px;
+  }
+
+  .content b {
+    font-size: 18px;
   }
 
   .content ul > li {
@@ -11001,6 +11098,14 @@ fieldset {
   .support-infr__content {
     row-gap: 8px;
   }
+
+  .invest-contract__title {
+    max-width: 890px;
+  }
+
+  .invest-contract__blocks-item {
+    padding: 24px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -11016,6 +11121,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .invest-contract__title,
   .support-infr__title,
   .invest-agrement__title,
   .subsidies__title,
@@ -13646,6 +13752,41 @@ fieldset {
   .support-infr__img {
     width: 220px;
   }
+
+  .invest-contract__container {
+    row-gap: 32px;
+  }
+
+  .invest-contract__txts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .invest-contract__txts-block,
+  .invest-contract__lists-block {
+    padding: 0;
+  }
+
+  .invest-contract .content p:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  .invest-contract__blocks-items--three,
+  .invest-contract__blocks-items--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .invest-contract__lists {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .invest-contract__lists-block {
+    row-gap: 20px;
+  }
+
+  .invest-contract__lists-title,
+  .invest-contract__blocks-title {
+    line-height: 120%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -13655,6 +13796,7 @@ fieldset {
     line-height: 110%;
   }
 
+  .invest-contract__title,
   .support-infr__title,
   .invest-agrement__title,
   .subsidies__title,
@@ -13719,6 +13861,7 @@ fieldset {
     font-size: 24px;
   }
 
+  .invest-contract__blocks-txt,
   .calc-result__item-block ul li,
   .calc-result__item-block p,
   .invest-agrement__blocks-txt,
@@ -13784,6 +13927,8 @@ fieldset {
     font-size: 16px;
   }
 
+  .invest-contract__lists-title,
+  .invest-contract__blocks-title,
   .support-infr__tit,
   .calc-result__item-tit,
   .invest-agrement__blocks-subtitle,
@@ -16231,6 +16376,23 @@ fieldset {
 
   .support-infr__content {
     row-gap: 12px;
+  }
+
+  .invest-contract .content p:not(:first-child) {
+    margin-top: 12px;
+  }
+
+  .invest-contract__blocks-items {
+    row-gap: 16px;
+  }
+
+  .invest-contract__blocks-items--three,
+  .invest-contract__blocks-items--four {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .invest-contract__lists-list {
+    row-gap: 16px;
   }
 }
 

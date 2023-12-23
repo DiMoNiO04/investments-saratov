@@ -1,0 +1,173 @@
+.invest-contract {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %h2;
+    max-width: 1200px;
+  }
+
+  &__txts {
+    @extend %gridColumnTwo;
+    grid-gap: 20px;
+
+    ul > li {
+      font-size: 16px;
+      padding-left: 36px;
+    }
+  }
+
+  &__txts-block {
+    padding-right: 24px;
+  }
+
+  .content {
+    ul > li {
+      margin: 0;
+    }
+
+    ul {
+      @extend %flexColumn;
+      row-gap: 8px;
+      margin: 0;
+    }
+
+    p {
+      @include mb(12px);
+    }
+  }
+
+  &__blocks-title {
+    @extend %subheader;
+    margin-bottom: 20px;
+  }
+
+  &__blocks-items {
+    grid-gap: 20px;
+    grid-auto-rows: 1fr;
+
+    &--three {
+      @extend %gridColumnThree;
+    }
+
+    &--four {
+      @extend %gridColumnFour;
+    }
+  }
+
+  &__blocks-item {
+    @extend %flexColumn;
+    row-gap: 8px;
+    padding: 32px;
+    border-radius: 4px;
+    background-color: $white;
+  }
+
+  &__blocks-num {
+    color: $bluePrimary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  &__blocks-txt {
+    @extend %mainTxt;
+  }
+
+  &__lists {
+    @extend %gridColumnTwo;
+    grid-gap: 20px;
+  }
+
+  &__lists-block {
+    padding-right: 20px;
+    @extend %flexColumn;
+    row-gap: 24px;
+  }
+
+  &__lists-list {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__lists-title {
+    @extend %subheader;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .invest-contract {
+    &__title {
+      max-width: 890px;
+    }
+
+    &__blocks-item {
+      padding: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .invest-contract {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__txts {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__txts-block,
+    &__lists-block {
+      padding: 0;
+    }
+
+    .content p:not(:first-child) {
+      margin-top: 16px;
+    }
+
+    &__blocks-items {
+      &--three,
+      &--four {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &__lists {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__lists-block {
+      row-gap: 20px;
+    }
+
+    &__lists-title,
+    &__blocks-title {
+      line-height: 120%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .invest-contract {
+
+    .content p:not(:first-child) {
+      margin-top: 12px;
+    }
+
+    &__blocks-items {
+      row-gap: 16px;
+
+      &--three,
+      &--four {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &__lists-list {
+      row-gap: 16px;
+    }
+  }
+}
