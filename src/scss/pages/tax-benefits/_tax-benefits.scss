@@ -1,0 +1,64 @@
+.tax-benefits {
+  &__title {
+    @extend %h2;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .tax-benefits {
+    &__picture {
+      .picture-text {
+        &__img {
+          height: 710px;
+        }
+
+        &__content {
+          left: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .tax-benefits {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__picture {
+      .picture-text {
+        &__content {
+          top: 40px;
+          bottom: 40px;
+          left: 40px;
+          right: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .tax-benefits {
+    &__picture {
+      .picture-text {
+        &__content {
+          top: 32px;
+          bottom: 32px;
+          left: 20px;
+          right: 20px;
+        }
+
+        &__img {
+          height: 580px;
+        }
+
+        &__title {
+          hyphens: none;
+        }
+      }
+    }
+  }
+}

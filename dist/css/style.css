@@ -1223,6 +1223,13 @@ svg {
   visibility: visible;
 }
 
+.privacy-police__block,
+.privacy-police__blocks,
+.tax-blocks__list-block,
+.tax-blocks__list,
+.tax-blocks__items-blocks li,
+.tax-blocks__items,
+.tax-blocks__container,
 .invest-contract__lists-list,
 .invest-contract__lists-block,
 .invest-contract__blocks-item,
@@ -1527,6 +1534,8 @@ svg {
   justify-content: space-between;
 }
 
+.tax-blocks__lists,
+.tax-blocks__txts,
 .invest-contract__lists,
 .invest-contract__txts,
 .support-infr__blocks,
@@ -1560,6 +1569,7 @@ svg {
 .invest-committee__titles,
 .result-years__items,
 .soceconomic-develop__titles,
+.list-doc__links,
 .list-templates__links,
 .footer__right,
 .map__titles {
@@ -1588,6 +1598,7 @@ svg {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.tax-blocks__items-blocks,
 .invest-contract__blocks-items--four,
 .industrial-park__advan-inner,
 .ao-dev-cor__items,
@@ -1632,6 +1643,8 @@ svg {
   line-height: 130%;
 }
 
+.privacy-police__block a,
+.privacy-police__block p,
 .support-infr__txts p,
 .subsidies__btns button span,
 .planned-projects__block-item ul li,
@@ -1668,6 +1681,8 @@ svg {
   line-height: 130%;
 }
 
+.tax-blocks__bold,
+.tax-blocks__list .tax-blocks__bold,
 .news__card-link,
 .news__card-content-title,
 .news__card-title,
@@ -1701,6 +1716,8 @@ svg {
   text-transform: uppercase;
 }
 
+.privacy-police__title,
+.tax-benefits__title,
 .invest-contract__title,
 .support-infr__title,
 .invest-agrement__title,
@@ -1769,6 +1786,12 @@ svg {
   line-height: 120%;
 }
 
+.tax-blocks__list-ul li,
+.tax-blocks__rate span,
+.tax-blocks__list p,
+.tax-blocks__items-tx,
+.tax-blocks__txt p,
+.tax-blocks__items-blocks li,
 .invest-contract__blocks-txt,
 .calc-result__item-block ul li,
 .calc-result__item-block p,
@@ -1843,6 +1866,12 @@ svg {
   line-height: 130%;
 }
 
+.tax-blocks__list-tit {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
 .account__content--appeals .account__fieldset-desc,
 .account__table-item div:last-child,
 .account__table-item,
@@ -1886,6 +1915,8 @@ svg {
   line-height: 130%;
 }
 
+.tax-blocks__list-title,
+.tax-blocks__items-title,
 .invest-contract__lists-title,
 .invest-contract__blocks-title,
 .support-infr__tit,
@@ -1932,6 +1963,7 @@ svg {
   line-height: 130%;
 }
 
+.tax-blocks__title,
 .calc-result__title,
 .scheme-inter__title,
 .ao-dev-cor__title,
@@ -1988,12 +2020,21 @@ svg {
   color: #2d6fd0;
 }
 
+.tax-blocks__rate b,
 .invest-agrement__blocks-num,
 .scheme-inter__block-title {
   font-size: 40px;
   font-weight: 600;
   line-height: 120%;
   color: #2d6fd0;
+}
+
+.tax-blocks__num b,
+.tax-blocks__items-blocks li b {
+  color: #2d6fd0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
 }
 
 @font-face {
@@ -4906,12 +4947,20 @@ fieldset {
   margin-top: 40px;
 }
 
+.picture-text--tax .picture-text__content {
+  max-width: 900px;
+}
+
+.picture-text--tax .picture-text__desc {
+  max-width: 800px;
+}
+
 .list-doc__container {
   row-gap: 40px;
 }
 
-.list-doc__link {
-  max-width: 760px;
+.list-doc__links {
+  grid-gap: 20px;
 }
 
 .calculator__titles {
@@ -9739,6 +9788,133 @@ fieldset {
   row-gap: 20px;
 }
 
+.tax-benefits__title {
+  margin-bottom: 40px;
+}
+
+.tax-blocks__container {
+  row-gap: 40px;
+}
+
+.tax-blocks__title {
+  max-width: calc(50% - 10px);
+}
+
+.tax-blocks__items {
+  row-gap: 20px;
+}
+
+.tax-blocks__items-blocks {
+  grid-auto-rows: 1fr;
+  grid-gap: 20px;
+}
+
+.tax-blocks__items-blocks li {
+  justify-content: space-between;
+  row-gap: 8px;
+  border-radius: 4px;
+  padding: 32px;
+  background-color: #ffffff;
+}
+
+.tax-blocks__items-blocks li b {
+  display: block;
+}
+
+.tax-blocks__items-title {
+  max-width: calc(50% - 10px);
+}
+
+.tax-blocks__txts {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.tax-blocks__txt {
+  padding-right: 20px;
+}
+
+.tax-blocks__items-tx {
+  max-width: calc(50% - 10px);
+}
+
+.tax-blocks__lists {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.tax-blocks__list {
+  padding-right: 20px;
+  row-gap: 16px;
+}
+
+.tax-blocks__num {
+  display: flex;
+  align-items: baseline;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.tax-blocks__num b {
+  display: block;
+}
+
+.tax-blocks__rate b {
+  margin-right: 16px;
+}
+
+.tax-blocks__rate span {
+  margin-bottom: 4px;
+}
+
+.tax-blocks__list-block {
+  row-gap: 8px;
+}
+
+.tax-blocks__list-ul li {
+  position: relative;
+  padding-left: 36px;
+}
+
+.tax-blocks__list-ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.tax-blocks__list-ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  background-color: #2d6fd0;
+  width: 24px;
+  height: 2px;
+}
+
+.privacy-police__container {
+  max-width: 870px;
+}
+
+.privacy-police__title {
+  margin-bottom: 40px;
+}
+
+.privacy-police__blocks {
+  row-gap: 24px;
+}
+
+.privacy-police__block {
+  row-gap: 12px;
+}
+
+.privacy-police__block a {
+  color: #2d6fd0;
+  border-bottom: 1px solid;
+}
+
+.privacy-police__block a:hover {
+  border-color: transparent;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -9812,6 +9988,8 @@ fieldset {
     font-size: 64px;
   }
 
+  .privacy-police__title,
+  .tax-benefits__title,
   .invest-contract__title,
   .support-infr__title,
   .invest-agrement__title,
@@ -9875,6 +10053,12 @@ fieldset {
     font-size: 26px;
   }
 
+  .tax-blocks__list-ul li,
+  .tax-blocks__rate span,
+  .tax-blocks__list p,
+  .tax-blocks__items-tx,
+  .tax-blocks__txt p,
+  .tax-blocks__items-blocks li,
   .invest-contract__blocks-txt,
   .calc-result__item-block ul li,
   .calc-result__item-block p,
@@ -9942,6 +10126,7 @@ fieldset {
     line-height: 130%;
   }
 
+  .tax-blocks__title,
   .calc-result__title,
   .scheme-inter__title,
   .ao-dev-cor__title,
@@ -9989,6 +10174,7 @@ fieldset {
     font-size: 32px;
   }
 
+  .tax-blocks__rate b,
   .invest-agrement__blocks-num,
   .scheme-inter__block-title {
     font-size: 32px;
@@ -10226,12 +10412,13 @@ fieldset {
     height: 586px;
   }
 
-  .list-doc__link {
-    max-width: 580px;
+  .picture-text--tax .picture-text__img {
+    height: 710px;
   }
 
-  .list-doc__container {
-    row-gap: 32px;
+  .picture-text--tax .picture-text__content {
+    max-width: 800px;
+    left: 60px;
   }
 
   .governor__container {
@@ -11106,6 +11293,18 @@ fieldset {
   .invest-contract__blocks-item {
     padding: 24px;
   }
+
+  .tax-benefits__picture .picture-text__img {
+    height: 710px;
+  }
+
+  .tax-benefits__picture .picture-text__content {
+    left: 60px;
+  }
+
+  .tax-blocks__list {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -11121,6 +11320,8 @@ fieldset {
     font-size: 48px;
   }
 
+  .privacy-police__title,
+  .tax-benefits__title,
   .invest-contract__title,
   .support-infr__title,
   .invest-agrement__title,
@@ -11146,6 +11347,79 @@ fieldset {
   .regional-project__title,
   .subtitle {
     font-size: 40px;
+  }
+
+  .tax-blocks__list-title,
+  .tax-blocks__items-title,
+  .invest-contract__lists-title,
+  .invest-contract__blocks-title,
+  .support-infr__tit,
+  .calc-result__item-tit,
+  .invest-agrement__blocks-subtitle,
+  .subsidies__items-title,
+  .subsidies__item-tit,
+  .industrial-park__advan-name,
+  .pref-territories__item .card__content-title,
+  .personnel__item-tit,
+  .personnel__block-title,
+  .polls__subtitle,
+  .promising-direc__blocks-tit,
+  .func-public-repres__item-tit,
+  .tourism-potential__blocks-num,
+  .tourism-potential__blocks-title,
+  .priorities__txt,
+  .invest-com__links-title,
+  .org-invest__tasks-title,
+  .regional-standart__elements-txt,
+  .big-town__city,
+  .regul-committee__ask-title,
+  .regul-committee__ask_name,
+  .transport-inf__block-title,
+  .regional-project__prices-title,
+  .regional-project__direction-title,
+  .legislation__item-title,
+  .recovery-pass__title,
+  .success-hist__slide-txt,
+  .benefits__slide-txt,
+  .steps-investor__item-tit,
+  .calculator__block-title,
+  .modal-pers-cab__title p,
+  .content strong {
+    line-height: 120%;
+  }
+
+  .tax-blocks__title,
+  .calc-result__title,
+  .scheme-inter__title,
+  .ao-dev-cor__title,
+  .ao-dev-corp__title,
+  .contacts-corp__title,
+  .promising-direc__title,
+  .availability-stock__title,
+  .agriculture__title,
+  .leading-compains__title,
+  .inf-tech__title,
+  .region-indystry__title,
+  .scientific-potential__title,
+  .social-infr__title,
+  .fertile-land__title,
+  .func-public-repres__title,
+  .public-representative__title,
+  .main-direction__title,
+  .task-clubs__title,
+  .strategy-grafic__title,
+  .tourism-potential__title,
+  .priorities__title,
+  .strategic-priority__title,
+  .invest-com__title,
+  .org-invest__title,
+  .invest-decl__title,
+  .regul-committee__title-h2,
+  .list-doc__title,
+  .picture-text__title,
+  .list-templates__title,
+  .map__title {
+    font-size: 36px;
   }
 
   .container {
@@ -11811,9 +12085,28 @@ fieldset {
     margin-top: 32px;
   }
 
+  .picture-text--tax .picture-text__img {
+    height: 710px;
+  }
+
+  .picture-text--tax .picture-text__content {
+    left: 40px;
+    top: 40px;
+    right: 40px;
+    bottom: 40px;
+  }
+
+  .list-doc__container {
+    row-gap: 32px;
+  }
+
   .list-doc__link {
     max-width: 100%;
     align-items: flex-start;
+  }
+
+  .list-doc__links {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .calculator__titles {
@@ -13787,6 +14080,57 @@ fieldset {
   .invest-contract__blocks-title {
     line-height: 120%;
   }
+
+  .tax-benefits__title {
+    margin-bottom: 32px;
+  }
+
+  .tax-benefits__picture .picture-text__content {
+    top: 40px;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+  }
+
+  .tax-blocks__container {
+    row-gap: 32px;
+  }
+
+  .tax-blocks__title,
+  .tax-blocks__items-title,
+  .tax-blocks__items-tx {
+    max-width: 100%;
+  }
+
+  .tax-blocks__txts {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 12px;
+  }
+
+  .tax-blocks__txt {
+    padding: 0;
+  }
+
+  .tax-blocks__items-blocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tax-blocks__items-blocks li {
+    padding: 24px;
+  }
+
+  .tax-blocks__lists {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+
+  .privacy-police__container {
+    max-width: 100%;
+  }
+
+  .privacy-police__title {
+    margin-bottom: 32px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -13796,6 +14140,8 @@ fieldset {
     line-height: 110%;
   }
 
+  .privacy-police__title,
+  .tax-benefits__title,
   .invest-contract__title,
   .support-infr__title,
   .invest-agrement__title,
@@ -13861,6 +14207,12 @@ fieldset {
     font-size: 24px;
   }
 
+  .tax-blocks__list-ul li,
+  .tax-blocks__rate span,
+  .tax-blocks__list p,
+  .tax-blocks__items-tx,
+  .tax-blocks__txt p,
+  .tax-blocks__items-blocks li,
   .invest-contract__blocks-txt,
   .calc-result__item-block ul li,
   .calc-result__item-block p,
@@ -13927,6 +14279,12 @@ fieldset {
     font-size: 16px;
   }
 
+  .tax-blocks__list-tit {
+    font-size: 18px;
+  }
+
+  .tax-blocks__list-title,
+  .tax-blocks__items-title,
   .invest-contract__lists-title,
   .invest-contract__blocks-title,
   .support-infr__tit,
@@ -13962,9 +14320,9 @@ fieldset {
   .modal-pers-cab__title p,
   .content strong {
     font-size: 20px;
-    line-height: 120%;
   }
 
+  .tax-blocks__title,
   .calc-result__title,
   .scheme-inter__title,
   .ao-dev-cor__title,
@@ -13998,6 +14356,7 @@ fieldset {
     font-size: 24px;
   }
 
+  .tax-blocks__rate b,
   .invest-agrement__blocks-num,
   .scheme-inter__block-title {
     font-size: 28px;
@@ -14579,6 +14938,17 @@ fieldset {
   }
 
   .picture-text__img {
+    height: 580px;
+  }
+
+  .picture-text--tax .picture-text__content {
+    top: 32px;
+    bottom: 32px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .picture-text--tax .picture-text__img {
     height: 580px;
   }
 
@@ -16393,6 +16763,35 @@ fieldset {
 
   .invest-contract__lists-list {
     row-gap: 16px;
+  }
+
+  .tax-benefits__picture .picture-text__content {
+    top: 32px;
+    bottom: 32px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .tax-benefits__picture .picture-text__img {
+    height: 580px;
+  }
+
+  .tax-benefits__picture .picture-text__title {
+    -webkit-hyphens: none;
+            hyphens: none;
+  }
+
+  .tax-blocks__items-blocks {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+  }
+
+  .tax-blocks__list-ul li {
+    padding-left: 32px;
+  }
+
+  .tax-blocks__list-ul li::before {
+    top: 12px;
   }
 }
 

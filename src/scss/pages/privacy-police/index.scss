@@ -1,0 +1,46 @@
+.privacy-police {
+  &__container {
+    max-width: 870px;
+  }
+
+  &__title {
+    @extend %h2;
+    margin-bottom: 40px;
+  }
+
+  &__blocks {
+    @extend %flexColumn;
+    row-gap: 24px;
+  }
+
+  &__block {
+    @extend %flexColumn;
+    row-gap: 12px;
+
+    p {
+      @extend %regular16;
+    }
+
+    a {
+      @extend %regular16;
+      color: $bluePrimary;
+      border-bottom: 1px solid;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .privacy-police {
+    &__container {
+      max-width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 32px;
+    }
+  }
+}

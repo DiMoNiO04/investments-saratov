@@ -101,6 +101,16 @@
   line-height: 130%;
 }
 
+%semiboldMainTxt {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+
+  @media screen and (max-width: $mob) {
+    font-size: 18px;
+  }
+}
+
 %secondaryTextRegular {
   font-size: 14px;
   font-weight: 400;
@@ -129,9 +139,12 @@
   font-weight: 600;
   line-height: 130%;
 
+  @media screen and (max-width: $tablet) {
+    line-height: 120%;
+  }
+
   @media screen and (max-width: $mob) {
     font-size: 20px;
-    line-height: 120%;
   }
 }
 
@@ -149,6 +162,10 @@
 
   @media screen and (max-width: $laptop) {
     font-size: 40px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    font-size: 36px;
   }
 
   @media screen and (max-width: $mob) {
@@ -191,4 +208,11 @@
   @media screen and (max-width: $mob) {
     font-size: 28px;
   }
+}
+
+%numTextSmall {
+  color: $bluePrimary;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
 }
