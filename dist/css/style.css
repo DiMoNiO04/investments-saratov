@@ -1223,6 +1223,14 @@ svg {
   visibility: visible;
 }
 
+.region-team__links,
+.region-team__block,
+.region-team__blocks,
+.contacts__txt,
+.contacts__item,
+.not-found__container,
+.bonds__more,
+.presentation-materials__blocks,
 .privacy-police__block,
 .privacy-police__blocks,
 .tax-blocks__list-block,
@@ -1419,6 +1427,7 @@ svg {
   justify-content: flex-start;
 }
 
+.useful-links__title-container,
 .calc-result__titles,
 .polls__items li,
 .big-town__desc,
@@ -1455,6 +1464,7 @@ svg {
   justify-content: space-between;
 }
 
+.contacts__items,
 .scheme-inter__blocks,
 .personnel__blocks,
 .personnel__items,
@@ -1498,6 +1508,8 @@ svg {
   justify-content: space-between;
 }
 
+.useful-links__slide,
+.region-team__item,
 .regul-committee__ask-info,
 .soceconomic-develop__item-bottom,
 .legislation__item-btn,
@@ -1534,6 +1546,9 @@ svg {
   justify-content: space-between;
 }
 
+.bonds__mores,
+.bonds__links,
+.presentation-materials__links,
 .tax-blocks__lists,
 .tax-blocks__txts,
 .invest-contract__lists,
@@ -1643,6 +1658,8 @@ svg {
   line-height: 130%;
 }
 
+.useful-links__txt,
+.region-team__job,
 .privacy-police__block a,
 .privacy-police__block p,
 .support-infr__txts p,
@@ -1681,6 +1698,7 @@ svg {
   line-height: 130%;
 }
 
+.bonds__more a,
 .tax-blocks__bold,
 .tax-blocks__list .tax-blocks__bold,
 .news__card-link,
@@ -1716,6 +1734,9 @@ svg {
   text-transform: uppercase;
 }
 
+.contacts__title,
+.corp-bonds__title,
+.presentation-materials__title,
 .privacy-police__title,
 .tax-benefits__title,
 .invest-contract__title,
@@ -1748,6 +1769,7 @@ svg {
   text-transform: uppercase;
 }
 
+.not-found__txt,
 .subsidies__subtitle,
 .industrial-park__contacts-link,
 .industrial-park__records-name,
@@ -1786,6 +1808,7 @@ svg {
   line-height: 120%;
 }
 
+.contacts__tit,
 .tax-blocks__list-ul li,
 .tax-blocks__rate span,
 .tax-blocks__list p,
@@ -1915,6 +1938,8 @@ svg {
   line-height: 130%;
 }
 
+.region-team__block-title,
+.presentation-materials__subtitle,
 .tax-blocks__list-title,
 .tax-blocks__items-title,
 .invest-contract__lists-title,
@@ -1963,6 +1988,9 @@ svg {
   line-height: 130%;
 }
 
+.useful-links__title,
+.region-team__title,
+.bonds__title,
 .tax-blocks__title,
 .calc-result__title,
 .scheme-inter__title,
@@ -5069,6 +5097,34 @@ fieldset {
 .calculator__block-radiobtns {
   -moz-column-gap: 20px;
        column-gap: 20px;
+}
+
+#map {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 500px;
+}
+
+#map .ymaps-2-1-79-map,
+#map .ymaps-2-1-79-inner-panes {
+  border-radius: 4px;
+}
+
+#map .ymaps-2-1-79-controls__control {
+  inset: 27rem auto auto 1rem !important;
+}
+
+#map .ymaps-2-1-79-zoom {
+  top: -180px;
+}
+
+[class*=gototech],
+[class*=copyrights-pane],
+[class*=controls__control],
+[class*=controls__toolbar],
+[class*=controls__bottom] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .governor {
@@ -9915,6 +9971,263 @@ fieldset {
   border-color: transparent;
 }
 
+.presentation-materials__title {
+  margin-bottom: 40px;
+  max-width: calc(50% - 10px);
+}
+
+.presentation-materials__blocks {
+  row-gap: 40px;
+}
+
+.presentation-materials__subtitle {
+  margin-bottom: 20px;
+}
+
+.presentation-materials__links {
+  grid-gap: 20px;
+}
+
+.corp-bonds__title {
+  margin-bottom: 40px;
+}
+
+.corp-bonds__img {
+  width: 100%;
+  height: 500px;
+}
+
+.corp-bonds__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.bonds__title {
+  margin-bottom: 40px;
+  max-width: 870px;
+}
+
+.bonds__links {
+  grid-gap: 20px;
+}
+
+.bonds__txt {
+  margin-bottom: 20px;
+}
+
+.bonds__txt p {
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.bonds__mores {
+  grid-auto-rows: 1fr;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.bonds__more {
+  row-gap: 32px;
+  border-radius: 4px;
+  padding: 32px;
+  background-color: #ffffff;
+}
+
+.bonds__more p {
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.bonds__more a {
+  border-bottom: 1px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.bonds__more a:hover {
+  border-color: transparent;
+}
+
+.not-found {
+  margin-top: 140px;
+  padding-bottom: 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+.not-found__container {
+  align-items: center;
+}
+
+.not-found__title {
+  font-size: 300px;
+  font-weight: 600;
+  line-height: 110%;
+  text-transform: uppercase;
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.not-found__txt {
+  text-align: center;
+}
+
+.not-found__btn {
+  margin-top: 40px;
+}
+
+.not-found__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  bottom: 20px;
+  left: 0;
+}
+
+.not-found__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contacts__title {
+  margin-bottom: 40px;
+}
+
+.contacts__items {
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.contacts__item {
+  justify-content: space-between;
+  row-gap: 48px;
+  width: calc(33.3333333333% - 20px);
+  border-radius: 4px;
+  padding: 32px;
+  background-color: #ffffff;
+}
+
+.contacts__txt {
+  row-gap: 8px;
+}
+
+.contacts__txt p,
+.contacts__txt a {
+  color: #2d6fd0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.contacts__txt a:hover {
+  color: #2661d4;
+}
+
+.region-team__title {
+  margin-bottom: 40px;
+}
+
+.region-team__blocks {
+  row-gap: 40px;
+}
+
+.region-team__block {
+  row-gap: 20px;
+}
+
+.region-team__item {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+}
+
+.region-team__left {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  width: calc(50% - 10px);
+  flex-shrink: 0;
+}
+
+.region-team__icon {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.region-team__name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 2px;
+}
+
+.region-team__links {
+  row-gap: 8px;
+}
+
+.region-team__phones {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+
+.region-team__phone,
+.region-team__mail {
+  color: #2d6fd0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.region-team__phone:hover,
+.region-team__mail:hover {
+  color: #2661d4;
+}
+
+.useful-links__title-container {
+  margin-bottom: 40px;
+}
+
+.useful-links__slider {
+  flex-direction: column;
+  align-items: stretch;
+  height: 356px;
+  row-gap: 20px;
+}
+
+.useful-links__slide {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+  height: auto;
+  height: 168px;
+}
+
+.useful-links__img {
+  width: 64px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 48em) {
+  #map:hover [class*=copyrights-pane],
+  #map:hover [class*=controls__control] {
+    opacity: 1;
+  }
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -9988,6 +10301,9 @@ fieldset {
     font-size: 64px;
   }
 
+  .contacts__title,
+  .corp-bonds__title,
+  .presentation-materials__title,
   .privacy-police__title,
   .tax-benefits__title,
   .invest-contract__title,
@@ -10017,6 +10333,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .not-found__txt,
   .subsidies__subtitle,
   .industrial-park__contacts-link,
   .industrial-park__records-name,
@@ -10053,6 +10370,7 @@ fieldset {
     font-size: 26px;
   }
 
+  .contacts__tit,
   .tax-blocks__list-ul li,
   .tax-blocks__rate span,
   .tax-blocks__list p,
@@ -10126,6 +10444,9 @@ fieldset {
     line-height: 130%;
   }
 
+  .useful-links__title,
+  .region-team__title,
+  .bonds__title,
   .tax-blocks__title,
   .calc-result__title,
   .scheme-inter__title,
@@ -10419,6 +10740,12 @@ fieldset {
   .picture-text--tax .picture-text__content {
     max-width: 800px;
     left: 60px;
+  }
+
+  #map {
+    margin: 0;
+    width: 100%;
+    height: 500px;
   }
 
   .governor__container {
@@ -11305,6 +11632,35 @@ fieldset {
   .tax-blocks__list {
     padding: 0;
   }
+
+  .not-found {
+    margin-top: 120px;
+    padding-bottom: 140px;
+  }
+
+  .not-found__img {
+    width: 1920px;
+    height: 400px;
+    bottom: -10px;
+    left: -100px;
+  }
+
+  .contacts__item {
+    row-gap: 32px;
+  }
+
+  .contacts__txt p,
+  .contacts__txt a {
+    font-size: 24px;
+  }
+
+  .region-team__mail {
+    font-size: 24px;
+  }
+
+  .region-team__links {
+    row-gap: 16px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -11320,6 +11676,9 @@ fieldset {
     font-size: 48px;
   }
 
+  .contacts__title,
+  .corp-bonds__title,
+  .presentation-materials__title,
   .privacy-police__title,
   .tax-benefits__title,
   .invest-contract__title,
@@ -11349,6 +11708,8 @@ fieldset {
     font-size: 40px;
   }
 
+  .region-team__block-title,
+  .presentation-materials__subtitle,
   .tax-blocks__list-title,
   .tax-blocks__items-title,
   .invest-contract__lists-title,
@@ -11386,40 +11747,6 @@ fieldset {
   .modal-pers-cab__title p,
   .content strong {
     line-height: 120%;
-  }
-
-  .tax-blocks__title,
-  .calc-result__title,
-  .scheme-inter__title,
-  .ao-dev-cor__title,
-  .ao-dev-corp__title,
-  .contacts-corp__title,
-  .promising-direc__title,
-  .availability-stock__title,
-  .agriculture__title,
-  .leading-compains__title,
-  .inf-tech__title,
-  .region-indystry__title,
-  .scientific-potential__title,
-  .social-infr__title,
-  .fertile-land__title,
-  .func-public-repres__title,
-  .public-representative__title,
-  .main-direction__title,
-  .task-clubs__title,
-  .strategy-grafic__title,
-  .tourism-potential__title,
-  .priorities__title,
-  .strategic-priority__title,
-  .invest-com__title,
-  .org-invest__title,
-  .invest-decl__title,
-  .regul-committee__title-h2,
-  .list-doc__title,
-  .picture-text__title,
-  .list-templates__title,
-  .map__title {
-    font-size: 36px;
   }
 
   .container {
@@ -12149,6 +12476,10 @@ fieldset {
 
   .calculator__btn {
     padding: 14px 28px;
+  }
+
+  #map {
+    height: 400px;
   }
 
   .governor__container {
@@ -14131,6 +14462,124 @@ fieldset {
   .privacy-police__title {
     margin-bottom: 32px;
   }
+
+  .presentation-materials__title {
+    margin-bottom: 32px;
+    max-width: 100%;
+  }
+
+  .presentation-materials__blocks {
+    row-gap: 32px;
+  }
+
+  .presentation-materials__links {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .corp-bonds__title {
+    margin-bottom: 32px;
+  }
+
+  .corp-bonds__img {
+    height: 400px;
+  }
+
+  .corp-bonds__img img {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+
+  .bonds__links {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bonds__title {
+    margin-bottom: 32px;
+  }
+
+  .bonds__mores {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+
+  .bonds__more {
+    padding: 24px;
+  }
+
+  .not-found {
+    margin-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .not-found__title {
+    font-size: 250px;
+  }
+
+  .not-found__img {
+    bottom: -68px;
+    left: -125px;
+  }
+
+  .contacts__title {
+    margin-bottom: 32px;
+  }
+
+  .contacts__items {
+    flex-wrap: wrap;
+  }
+
+  .contacts__item {
+    width: calc(50% - 10px);
+    padding: 24px;
+    min-height: 168px;
+  }
+
+  .contacts__item:last-child {
+    width: 100%;
+  }
+
+  .region-team__title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .region-team__item {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+  }
+
+  .region-team__left {
+    width: 100%;
+  }
+
+  .region-team__blocks {
+    row-gap: 32px;
+  }
+
+  .region-team__phones {
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
+
+  .useful-links__title {
+    font-size: 36px;
+  }
+
+  .useful-links__title-container {
+    margin-bottom: 32px;
+  }
+
+  .useful-links__slider {
+    height: 496px;
+  }
+
+  .useful-links__slide {
+    padding: 24px;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+    height: 152px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -14140,6 +14589,9 @@ fieldset {
     line-height: 110%;
   }
 
+  .contacts__title,
+  .corp-bonds__title,
+  .presentation-materials__title,
   .privacy-police__title,
   .tax-benefits__title,
   .invest-contract__title,
@@ -14171,6 +14623,7 @@ fieldset {
             hyphens: auto;
   }
 
+  .not-found__txt,
   .subsidies__subtitle,
   .industrial-park__contacts-link,
   .industrial-park__records-name,
@@ -14207,6 +14660,7 @@ fieldset {
     font-size: 24px;
   }
 
+  .contacts__tit,
   .tax-blocks__list-ul li,
   .tax-blocks__rate span,
   .tax-blocks__list p,
@@ -14283,6 +14737,8 @@ fieldset {
     font-size: 18px;
   }
 
+  .region-team__block-title,
+  .presentation-materials__subtitle,
   .tax-blocks__list-title,
   .tax-blocks__items-title,
   .invest-contract__lists-title,
@@ -14322,6 +14778,9 @@ fieldset {
     font-size: 20px;
   }
 
+  .useful-links__title,
+  .region-team__title,
+  .bonds__title,
   .tax-blocks__title,
   .calc-result__title,
   .scheme-inter__title,
@@ -14354,6 +14813,8 @@ fieldset {
   .list-templates__title,
   .map__title {
     font-size: 24px;
+    -webkit-hyphens: auto;
+            hyphens: auto;
   }
 
   .tax-blocks__rate b,
@@ -14467,10 +14928,6 @@ fieldset {
   .pagination__btn {
     width: 32px;
     height: 32px;
-  }
-
-  .doc-download__item {
-    padding: 16px;
   }
 
   .list-per__title {
@@ -16792,6 +17249,106 @@ fieldset {
 
   .tax-blocks__list-ul li::before {
     top: 12px;
+  }
+
+  .presentation-materials__links {
+    grid-gap: 16px;
+  }
+
+  .presentation-materials__subtitle {
+    font-size: 24px;
+  }
+
+  .corp-bonds__img img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .bonds__title {
+    font-size: 32px;
+  }
+
+  .not-found {
+    margin-top: 140px;
+    padding-bottom: 150px;
+  }
+
+  .not-found__title {
+    font-size: 128px;
+  }
+
+  .not-found__img {
+    bottom: 0;
+    left: -546px;
+  }
+
+  .contacts__items {
+    row-gap: 16px;
+  }
+
+  .contacts__item {
+    width: 100%;
+  }
+
+  .region-team__title {
+    font-size: 24px;
+  }
+
+  .region-team__left {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 24px;
+  }
+
+  .region-team__item {
+    padding: 24px;
+  }
+
+  .region-team__name {
+    font-size: 18px;
+  }
+
+  .region-team__job {
+    font-size: 14px;
+  }
+
+  .region-team__phones {
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: flex-start;
+  }
+
+  .region-team__phone {
+    font-size: 24px;
+  }
+
+  .region-team__mail {
+    font-size: 20px;
+  }
+
+  .useful-links {
+    overflow: hidden;
+  }
+
+  .useful-links__title {
+    font-size: 24px;
+  }
+
+  .useful-links__navigation-btns {
+    display: none;
+  }
+
+  .useful-links__swiper {
+    overflow: visible;
+  }
+
+  .useful-links__slider {
+    flex-direction: row;
+  }
+
+  .useful-links__slider,
+  .useful-links__slide {
+    height: auto;
   }
 }
 

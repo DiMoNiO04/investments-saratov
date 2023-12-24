@@ -1,0 +1,46 @@
+#map {
+  margin-bottom: 20px;
+  @include sizes(100%, 500px);
+
+  .ymaps-2-1-79-map,
+  .ymaps-2-1-79-inner-panes {
+    border-radius: 4px;
+  }
+
+  .ymaps-2-1-79-controls__control {
+    inset: 27rem auto auto 1rem !important;
+  }
+
+  .ymaps-2-1-79-zoom {
+    top: -180px;
+  }
+}
+
+[class*='gototech'],
+[class*='copyrights-pane'],
+[class*='controls__control'],
+[class*='controls__toolbar'],
+[class*='controls__bottom'] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 48em) {
+  #map:hover [class*='copyrights-pane'],
+  #map:hover [class*='controls__control'] {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  #map {
+    margin: 0;
+    @include sizes(100%, 500px);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  #map {
+    height: 400px;
+  }
+}

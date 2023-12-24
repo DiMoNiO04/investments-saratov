@@ -1,0 +1,89 @@
+.not-found {
+  margin-top: 140px;
+  padding-bottom: 160px;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    @extend %flexColumn;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 300px;
+    font-weight: 600;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    background: $blueGradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  }
+
+  &__txt {
+    @extend %h3;
+    text-align: center;
+  }
+
+  &__btn {
+    margin-top: 40px;
+  }
+
+  &__img {
+    @include sizes(100%, 100%);
+    position: absolute;
+    z-index: -2;
+    bottom: 20px;
+    left: 0;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .not-found {
+    margin-top: 120px;
+    padding-bottom: 140px;
+
+    &__img {
+      @include sizes(1920px, 400px);
+      bottom: -10px;
+      left: -100px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .not-found {
+    margin-top: 100px;
+    padding-bottom: 100px;
+
+    &__title {
+      font-size: 250px;
+    }
+
+    &__img {
+      bottom: -68px;
+      left: -125px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .not-found {
+    margin-top: 140px;
+    padding-bottom: 150px;
+
+    &__title {
+      font-size: 128px;
+    }
+
+    &__img {
+      bottom: 0;
+      left: -546px;
+    }
+  }
+}

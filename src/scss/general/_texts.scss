@@ -164,12 +164,9 @@
     font-size: 40px;
   }
 
-  @media screen and (max-width: $tablet) {
-    font-size: 36px;
-  }
-
   @media screen and (max-width: $mob) {
     font-size: 24px;
+    hyphens: auto;
   }
 }
 

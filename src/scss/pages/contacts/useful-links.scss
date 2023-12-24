@@ -1,0 +1,85 @@
+.useful-links {
+  &__title-container {
+    @extend %flexCenterBetween;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+  }
+
+  &__slider {
+    flex-direction: column;
+    align-items: stretch;
+    height: 356px;
+    row-gap: 20px;
+  }
+
+  &__slide {
+    @extend %flexCenterStart;
+    column-gap: 32px;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 32px;
+    height: auto;
+    height: 168px;
+  }
+
+  &__txt {
+    @extend %regular16;
+  }
+
+  &__img {
+    @include sizes(64px, auto);
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .useful-links {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__title-container {
+      margin-bottom: 32px;
+    }
+
+    &__slider {
+      height: 496px;
+    }
+
+    &__slide {
+      padding: 24px;
+      column-gap: 16px;
+      height: 152px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .useful-links {
+    overflow: hidden;
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__navigation-btns {
+      display: none;
+    }
+
+    &__swiper {
+      overflow: visible;
+    }
+
+    &__slider {
+      flex-direction: row;
+    }
+
+    &__slider,
+    &__slide {
+      height: auto;
+    }
+  }
+}

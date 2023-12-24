@@ -1,0 +1,117 @@
+.corp-bonds {
+  &__title {
+    @extend %h2;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    @include sizes(100%, 500px);
+
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+}
+
+.bonds {
+  &__title {
+    @extend %secondaryH3;
+    margin-bottom: 40px;
+    max-width: 870px;
+  }
+
+  &__links {
+    @extend %gridColumnTwo;
+    grid-gap: 20px;
+  }
+
+  &__txt {
+    margin-bottom: 20px;
+
+    p {
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+
+  &__mores {
+    @extend %gridColumnTwo;
+    grid-auto-rows: 1fr;
+    column-gap: 20px;
+  }
+
+  &__more {
+    @extend %flexColumn;
+    row-gap: 32px;
+    border-radius: 4px;
+    padding: 32px;
+    background-color: $white;
+
+    p {
+      font-size: 20px;
+      line-height: 130%;
+    }
+
+    a {
+      @extend %medium18;
+      border-bottom: 1px solid;
+      width: fit-content;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .corp-bonds {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__img {
+      height: 400px;
+
+      img {
+        object-fit: fill;
+      }
+    }
+  }
+
+  .bonds {
+    &__links {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__mores {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+
+    &__more {
+      padding: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .corp-bonds {
+    &__img {
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .bonds {
+    &__title {
+      font-size: 32px;
+    }
+  }
+}

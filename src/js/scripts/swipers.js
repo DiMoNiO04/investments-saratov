@@ -215,6 +215,50 @@ function initBigTownSlider() {
   }
 }
 
+function initContactsSlider() {
+  if (document.querySelector('.useful-links__swiper')) {
+    const slider = document.querySelector('.useful-links__swiper');
+    const btnPrev = slider.parentElement.querySelector('.slider-navigation__btns-prev');
+    const btnNext = slider.parentElement.querySelector('.slider-navigation__btns-next');
+
+    new Swiper(slider, {
+      modules: [Navigation],
+      observer: true,
+      watchSlidesProgress: true,
+      spaceBetween: 20,
+      speed: 1000,
+      loop: true,
+      navigation: {
+        nextEl: btnNext,
+        prevEl: btnPrev,
+      },
+      breakpoints: {
+        300: {
+          slidesPerView: 1.06,
+          slidesPerColumn: 1,
+          grid: {
+            rows: 1,
+          },
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerColumn: 2,
+          grid: {
+            rows: 3,
+          },
+        },
+        1366: {
+          slidesPerView: 3,
+          slidesPerColumn: 2,
+          grid: {
+            rows: 2,
+          },
+        },
+      },
+    });
+  }
+}
+
 function initSliders() {
   initBenefitsSlider();
   initSuccessHistSlider();
@@ -225,6 +269,7 @@ function initSliders() {
 
   initStorySlider();
   initBigTownSlider();
+  initContactsSlider();
 }
 // ----------------------------------------------------------------- //
 
