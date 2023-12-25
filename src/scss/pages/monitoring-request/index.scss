@@ -1,0 +1,146 @@
+.monitoring-request {
+  &__titles {
+    max-width: 870px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @extend %h2;
+    margin-bottom: 40px;
+  }
+
+  &__subtitles {
+    p {
+      @extend %mainTxt;
+      @include mb(8px);
+    }
+  }
+
+  &__subtitle {
+    max-width: 870px;
+    @extend %h3;
+    margin-bottom: 20px;
+  }
+
+  &__block {
+    @include mb(40px);
+  }
+
+  &__items,
+  &__list {
+    @extend %gridColumnTwo;
+
+    &--four {
+      @extend %gridColumnThree;
+      grid-auto-rows: 214px;
+
+      b {
+        @extend %numTextMid;
+      }
+    }
+  }
+
+  &__items {
+    grid-gap: 20px;
+
+    &--img {
+      img {
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+
+    li:not(.monitoring-request__items--img) {
+      @extend %flexColumn;
+      @extend %mainTxt;
+      row-gap: 20px;
+      justify-content: space-between;
+      border-radius: 4px;
+      background: $white;
+      padding: 32px;
+    }
+
+    li.monitoring-request__items--last {
+      background: $blueGradient;
+      color: $white;
+
+      b {
+        color: $white;
+      }
+    }
+
+    b {
+      @extend %numTextBig;
+    }
+  }
+
+  &__list {
+    column-gap: 20px;
+    row-gap: 8px;
+  }
+
+  .content ul > li {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .monitoring-request {
+    &__items {
+      grid-auto-rows: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .monitoring-request {
+    &__title,
+    &__titles {
+      margin-bottom: 32px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__items {
+      grid-auto-rows: 1fr;
+      &--four {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      li:not(.monitoring-request__items--img) {
+        padding: 24px;
+      }
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .monitoring-request {
+    &__subtitle {
+      font-size: 20px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: auto;
+
+      li:not(.monitoring-request__items--img) {
+        row-gap: 24px;
+      }
+
+      &--img {
+        height: 200px;
+      }
+    }
+
+    &__block {
+      @include mb(32px);
+    }
+  }
+}

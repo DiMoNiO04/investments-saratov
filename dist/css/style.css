@@ -1238,6 +1238,7 @@ svg {
   visibility: visible;
 }
 
+.monitoring-request__items li:not(.monitoring-request__items--img),
 .region-team__links,
 .region-team__block,
 .region-team__blocks,
@@ -1561,6 +1562,9 @@ svg {
   justify-content: space-between;
 }
 
+.monitoring-request__items,
+.monitoring-request__list,
+.call-line__titles,
 .bonds__mores,
 .bonds__links,
 .presentation-materials__links,
@@ -1607,6 +1611,8 @@ svg {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.monitoring-request__items--four,
+.monitoring-request__list--four,
 .invest-contract__blocks-items--three,
 .subsidies__items-list,
 .industrial-park__gallery,
@@ -1673,6 +1679,7 @@ svg {
   line-height: 130%;
 }
 
+.call-line__policy,
 .useful-links__txt,
 .region-team__job,
 .privacy-police__block a,
@@ -1749,6 +1756,8 @@ svg {
   text-transform: uppercase;
 }
 
+.monitoring-request__title,
+.call-line__title,
 .contacts__title,
 .corp-bonds__title,
 .presentation-materials__title,
@@ -1784,6 +1793,7 @@ svg {
   text-transform: uppercase;
 }
 
+.monitoring-request__subtitle,
 .not-found__txt,
 .subsidies__subtitle,
 .industrial-park__contacts-link,
@@ -1823,6 +1833,9 @@ svg {
   line-height: 120%;
 }
 
+.monitoring-request__items li:not(.monitoring-request__items--img),
+.monitoring-request__subtitles p,
+.call-line__subtitles p,
 .contacts__tit,
 .tax-blocks__list-ul li,
 .tax-blocks__rate span,
@@ -2056,6 +2069,7 @@ svg {
   color: #2d6fd0;
 }
 
+.monitoring-request__items b,
 .agriculture__block-items li b {
   font-size: 48px;
   font-weight: 600;
@@ -2063,6 +2077,8 @@ svg {
   color: #2d6fd0;
 }
 
+.monitoring-request__items--four b,
+.monitoring-request__list--four b,
 .tax-blocks__rate b,
 .invest-agrement__blocks-num,
 .scheme-inter__block-title {
@@ -2545,7 +2561,7 @@ fieldset {
 
 .input__input {
   cursor: pointer;
-  padding: 11px;
+  padding: 12px;
   border-radius: 4px;
   background-color: #ffffff;
   -moz-column-gap: 8px;
@@ -10320,6 +10336,132 @@ fieldset {
   flex-shrink: 0;
 }
 
+.call-line__titles {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  margin-bottom: 40px;
+}
+
+.call-line__title,
+.call-line__subtitles {
+  padding-right: 20px;
+}
+
+.call-line__img {
+  width: calc(50% + 10px);
+}
+
+.call-line__subtitles p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.call-line__content {
+  display: flex;
+  align-items: stretch;
+}
+
+.call-line__img img {
+  border-radius: 4px 0 0 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.call-line__form {
+  background-color: #ffffff;
+  border-radius: 0 4px 4px 0;
+  padding: 50px 60px;
+  width: calc(50% - 10px);
+}
+
+.call-line__inputs {
+  margin-bottom: 40px;
+}
+
+.call-line__input {
+  margin-bottom: 20px;
+}
+
+.call-line__btn {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.call-line__textarea .textarea__textarea {
+  height: 154px;
+}
+
+.call-line__policy a {
+  color: #2d6fd0;
+}
+
+.call-line__policy a:hover {
+  color: #2f2f2f;
+}
+
+.monitoring-request__titles {
+  max-width: 870px;
+  margin-bottom: 40px;
+}
+
+.monitoring-request__title {
+  margin-bottom: 40px;
+}
+
+.monitoring-request__subtitles p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.monitoring-request__subtitle {
+  max-width: 870px;
+  margin-bottom: 20px;
+}
+
+.monitoring-request__block:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.monitoring-request__items--four,
+.monitoring-request__list--four {
+  grid-auto-rows: 214px;
+}
+
+.monitoring-request__items {
+  grid-gap: 20px;
+}
+
+.monitoring-request__items--img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.monitoring-request__items li:not(.monitoring-request__items--img) {
+  row-gap: 20px;
+  justify-content: space-between;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 32px;
+}
+
+.monitoring-request__items li.monitoring-request__items--last {
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+  color: #ffffff;
+}
+
+.monitoring-request__items li.monitoring-request__items--last b {
+  color: #ffffff;
+}
+
+.monitoring-request__list {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 8px;
+}
+
+.monitoring-request .content ul > li {
+  margin: 0;
+}
+
 @media screen and (min-width: 48em) {
   #map:hover [class*=copyrights-pane],
   #map:hover [class*=controls__control] {
@@ -10410,6 +10552,8 @@ fieldset {
     font-size: 64px;
   }
 
+  .monitoring-request__title,
+  .call-line__title,
   .contacts__title,
   .corp-bonds__title,
   .presentation-materials__title,
@@ -10442,6 +10586,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .monitoring-request__subtitle,
   .not-found__txt,
   .subsidies__subtitle,
   .industrial-park__contacts-link,
@@ -10479,6 +10624,9 @@ fieldset {
     font-size: 26px;
   }
 
+  .monitoring-request__items li:not(.monitoring-request__items--img),
+  .monitoring-request__subtitles p,
+  .call-line__subtitles p,
   .contacts__tit,
   .tax-blocks__list-ul li,
   .tax-blocks__rate span,
@@ -10600,10 +10748,13 @@ fieldset {
     font-size: 32px;
   }
 
+  .monitoring-request__items b,
   .agriculture__block-items li b {
     font-size: 32px;
   }
 
+  .monitoring-request__items--four b,
+  .monitoring-request__list--four b,
   .tax-blocks__rate b,
   .invest-agrement__blocks-num,
   .scheme-inter__block-title {
@@ -11771,6 +11922,19 @@ fieldset {
   .region-team__links {
     row-gap: 16px;
   }
+
+  .call-line__form {
+    padding: 40px 50px;
+  }
+
+  .call-line__img,
+  .call-line__form {
+    width: 50%;
+  }
+
+  .monitoring-request__items {
+    grid-auto-rows: 200px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -11786,6 +11950,8 @@ fieldset {
     font-size: 48px;
   }
 
+  .monitoring-request__title,
+  .call-line__title,
   .contacts__title,
   .corp-bonds__title,
   .presentation-materials__title,
@@ -14700,6 +14866,56 @@ fieldset {
          column-gap: 16px;
     height: 152px;
   }
+
+  .call-line__titles {
+    row-gap: 32px;
+    margin-bottom: 32px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .call-line__form {
+    padding: 32px;
+    width: 58%;
+    flex-shrink: 0;
+  }
+
+  .call-line__title,
+  .call-line__subtitles {
+    padding: 0;
+  }
+
+  .call-line__inputs {
+    margin-bottom: 32px;
+  }
+
+  .call-line__btn {
+    padding: 16px 28px;
+  }
+
+  .monitoring-request__title,
+  .monitoring-request__titles {
+    margin-bottom: 32px;
+  }
+
+  .monitoring-request__subtitle {
+    font-size: 24px;
+  }
+
+  .monitoring-request__items {
+    grid-auto-rows: 1fr;
+  }
+
+  .monitoring-request__items--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .monitoring-request__items li:not(.monitoring-request__items--img) {
+    padding: 24px;
+  }
+
+  .monitoring-request__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -14709,6 +14925,8 @@ fieldset {
     line-height: 110%;
   }
 
+  .monitoring-request__title,
+  .call-line__title,
   .contacts__title,
   .corp-bonds__title,
   .presentation-materials__title,
@@ -14743,6 +14961,7 @@ fieldset {
             hyphens: auto;
   }
 
+  .monitoring-request__subtitle,
   .not-found__txt,
   .subsidies__subtitle,
   .industrial-park__contacts-link,
@@ -14780,6 +14999,9 @@ fieldset {
     font-size: 24px;
   }
 
+  .monitoring-request__items li:not(.monitoring-request__items--img),
+  .monitoring-request__subtitles p,
+  .call-line__subtitles p,
   .contacts__tit,
   .tax-blocks__list-ul li,
   .tax-blocks__rate span,
@@ -14937,6 +15159,8 @@ fieldset {
             hyphens: auto;
   }
 
+  .monitoring-request__items--four b,
+  .monitoring-request__list--four b,
   .tax-blocks__rate b,
   .invest-agrement__blocks-num,
   .scheme-inter__block-title {
@@ -17484,6 +17708,53 @@ fieldset {
   .useful-links__slider,
   .useful-links__slide {
     height: auto;
+  }
+
+  .call-line__content {
+    flex-direction: column;
+  }
+
+  .call-line__form {
+    width: 100%;
+  }
+
+  .call-line__titles {
+    row-gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .call-line__form {
+    padding: 32px 16px;
+  }
+
+  .call-line__img {
+    width: 100%;
+    height: 240px;
+  }
+
+  .call-line__btn span {
+    font-size: 18px;
+  }
+
+  .monitoring-request__subtitle {
+    font-size: 20px;
+  }
+
+  .monitoring-request__items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  .monitoring-request__items li:not(.monitoring-request__items--img) {
+    row-gap: 24px;
+  }
+
+  .monitoring-request__items--img {
+    height: 200px;
+  }
+
+  .monitoring-request__block:not(:last-child) {
+    margin-bottom: 32px;
   }
 }
 
