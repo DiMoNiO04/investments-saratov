@@ -8,6 +8,7 @@
   height: 46px;
   width: 100%;
   @extend %hidden;
+  z-index: 2;
 
   &.show {
     @extend %visible;
@@ -21,9 +22,9 @@
     line-height: 140%;
     padding: 12px 40px;
 
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px;
     border: 1px solid var(--input-grey-stroke, #dee2e7);
-    background-color: $white;
+    background-color: transparent;
     height: 100%;
     width: 100%;
   }
@@ -75,6 +76,20 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .form-search {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    margin-bottom: 16px;
+
+    &__button-close {
+      display: none;
     }
   }
 }

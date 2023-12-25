@@ -25,9 +25,21 @@
   opacity: 1;
 }
 
+.header .simplebar-track.simplebar-vertical {
+  right: -30px;
+}
+
+.header .simplebar-track.simplebar-horizontal {
+  display: none;
+}
+
 @media screen and (max-width: $tablet) {
   .chat .simplebar-track.simplebar-vertical {
     margin-right: -24px;
+  }
+
+  .header .simplebar-track.simplebar-vertical {
+    right: -16px;
   }
 }
 

@@ -1,8 +1,13 @@
 const header = document.querySelector('.header');
 
+let isTransparent;
+document.addEventListener('DOMContentLoaded', () => {
+  isTransparent = header.classList.contains('header--transparent');
+});
+
 const scrollHeader = () => {
   window.onscroll = () => {
-    if (window.pageYOffset > 6) {
+    if (window.pageYOffset > 10) {
       header.classList.remove('header--transparent');
     } else {
       header.classList.add('header--transparent');
@@ -11,7 +16,7 @@ const scrollHeader = () => {
 };
 
 const scrollHeaderLoad = () => {
-  if (window.pageYOffset >= 6) {
+  if (window.pageYOffset >= 10) {
     header.classList.remove('header--transparent');
   }
 };
@@ -29,7 +34,7 @@ const mainNav = document.querySelector('.header');
 function windowScroll() {
   const isWideScreen = window.innerWidth > 767;
   if (isWideScreen) {
-    mainNav.classList.toggle('active', mainNav.scrollTop > 50 || document.documentElement.scrollTop > 50);
+    mainNav.classList.toggle('active', mainNav.scrollTop > 10 || document.documentElement.scrollTop > 10);
   }
 }
 windowScroll();
@@ -81,29 +86,35 @@ closeButton.addEventListener('click', () => {
 // Header, наведение на пункты
 const headerBottomLinks = document.querySelectorAll('.js-head-link');
 const jsHeadMenus = document.querySelectorAll('.js-head-menu');
-headerBottomLinks.forEach((headerBottomLink) => {
-  const jsHeadMenu = headerBottomLink.querySelector('.js-head-menu');
-  headerBottomLink.addEventListener('mouseover', () => {
-    if (jsHeadMenu) {
+
+if (headerBottomLinks) {
+  headerBottomLinks.forEach((headerBottomLink) => {
+    const jsHeadMenu = headerBottomLink.querySelector('.js-head-menu');
+    headerBottomLink.addEventListener('mouseover', () => {
+      if (jsHeadMenu) {
+        jsHeadMenu.classList.add('show');
+      }
+      headerBottomLink.classList.add('active');
+    });
+    headerBottomLink.addEventListener('mouseout', () => {
+      if (jsHeadMenu) {
+        jsHeadMenu.classList.remove('show');
+      }
+      headerBottomLink.classList.remove('active');
+    });
+  });
+}
+
+if (jsHeadMenus) {
+  jsHeadMenus.forEach((jsHeadMenu) => {
+    jsHeadMenu.addEventListener('mouseover', () => {
       jsHeadMenu.classList.add('show');
-    }
-    headerBottomLink.classList.add('active');
-  });
-  headerBottomLink.addEventListener('mouseout', () => {
-    if (jsHeadMenu) {
+    });
+    jsHeadMenu.addEventListener('mouseout', () => {
       jsHeadMenu.classList.remove('show');
-    }
-    headerBottomLink.classList.remove('active');
+    });
   });
-});
-jsHeadMenus.forEach((jsHeadMenu) => {
-  jsHeadMenu.addEventListener('mouseover', () => {
-    jsHeadMenu.classList.add('show');
-  });
-  jsHeadMenu.addEventListener('mouseout', () => {
-    jsHeadMenu.classList.remove('show');
-  });
-});
+}
 
 // Бургер
 const jsburgers = document.querySelectorAll('.js-burger');
@@ -114,6 +125,10 @@ const headerbottoms = document.querySelectorAll('.header-bottom__menu');
 function myFunction() {
   jsheadermenus.forEach((jsheadermenu) => {
     jsheadermenu.classList.toggle('show');
+
+    if (isTransparent && document.documentElement.scrollTop < 10) {
+      header.classList.toggle('header--transparent');
+    }
   });
 
   jsburgers.forEach((jsburger) => {

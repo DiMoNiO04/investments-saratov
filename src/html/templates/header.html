@@ -18,7 +18,7 @@
             </picture>
           </a>
         </div>
-        <div class="header-top__content logo-2.svg">
+        <div class="header-top__content">
           <div class="header-top__panel">
             <div class="header-top__search-wr">
               <div class="header-top__phone">
@@ -43,7 +43,7 @@
                     autocomplete="off"
                     placeholder="Что ищите?"
                   />
-                  <button class="form-search__button-open">
+                  <button type="submit" class="form-search__button-open">
                     <svg>
                       <use xlink:href="@img/icons/icons.svg#search"></use>
                     </svg>
@@ -83,8 +83,13 @@
               <div class="dropdown__header js-dropdown-inner">
                 <div class="dropdown__value js-dropdown-value">RU</div>
                 <button type="button" class="dropdown__btn">
-                  <svg>
-                    <use xlink:href="@img/icons/icons.svg#arrow-caret-down"></use>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M9.75 5.5L6 9.25L2.25 5.5"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
@@ -102,6 +107,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="header-top__buttons">
           <div class="header-bottom__btns header-top__entrance">
             <a href="#" class="header-bottom__btn">
               <svg>
@@ -109,7 +116,14 @@
               </svg>
             </a>
           </div>
-          <button type="button" class="header-top__burger js-burger --mob"></button>
+          <button type="button" class="header-top__burger js-burger --mob">
+            <svg>
+              <use xlink:href="@img/icons/icons.svg#burger-list"></use>
+            </svg>
+            <svg>
+              <use xlink:href="@img/icons/icons.svg#close-burger"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -123,13 +137,25 @@
               <img src="@img/icons/logo-2-sm.svg" alt="logo" />
             </a>
           </div>
-          <button type="button" class="header-bottom__btn-burg js-burger"></button>
+          <button type="button" class="header-bottom__btn-burg js-burger">
+            <svg>
+              <use xlink:href="@img/icons/icons.svg#burger-list"></use>
+            </svg>
+            <svg>
+              <use xlink:href="@img/icons/icons.svg#close-burger"></use>
+            </svg>
+          </button>
           <nav class="nav header-bottom__menu">
             <ul class="header-bottom__list">
               <li class="nav__item header-bottom__list-item js-head-link">
                 <a class="nav__link header-bottom__list-link" href="#">О регионе</a>
-                <svg width="12" height="12">
-                  <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M9.75 5.5L6 9.25L2.25 5.5"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
                 <ul class="header-bottom__list-menu js-head-menu">
                   <li class="">
@@ -160,8 +186,13 @@
               </li>
               <li class="nav__item header-bottom__list-item js-head-link">
                 <a class="nav__link header-bottom__list-link" href="#">Инвестору</a>
-                <svg width="12" height="12">
-                  <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M9.75 5.5L6 9.25L2.25 5.5"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
                 <ul class="header-bottom__list-menu js-head-menu">
                   <li class="">
@@ -248,7 +279,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>О регионе</p>
               <svg width="20" height="20">
-                <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <use xlink:href="@img/icons/icons.svg#arrow-black-down-2"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
@@ -279,7 +310,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Инвестору</p>
               <svg width="20" height="20">
-                <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <use xlink:href="@img/icons/icons.svg#arrow-black-down-2"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
@@ -319,7 +350,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Поддержка</p>
               <svg width="20" height="20">
-                <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <use xlink:href="@img/icons/icons.svg#arrow-black-down-2"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
@@ -356,7 +387,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Площадки</p>
               <svg width="20" height="20">
-                <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <use xlink:href="@img/icons/icons.svg#arrow-black-down-2"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
@@ -376,13 +407,13 @@
             <div class="footer__list-title footer__list-title-hide js-dropdown-title">
               <p>Инвестстандарт</p>
               <svg width="20" height="20">
-                <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <use xlink:href="@img/icons/icons.svg#arrow-black-down-2"></use>
               </svg>
             </div>
             <div class="footer__list-title footer__list-title-hide js-dropdown-title">
               <p>Контакты</p>
               <svg width="20" height="20">
-                <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <use xlink:href="@img/icons/icons.svg#arrow-black-down-2"></use>
               </svg>
             </div>
           </div>
@@ -395,7 +426,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Линия прямых обращений</p>
               <svg width="20" height="20">
-                <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <use xlink:href="@img/icons/icons.svg#arrow-black-down-2"></use>
               </svg>
             </div>
             <div class="footer__list-items js-dropdown-content">
@@ -417,7 +448,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>ГЧП</p>
               <svg width="20" height="20">
-                <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <use xlink:href="@img/icons/icons.svg#arrow-black-down-2"></use>
               </svg>
             </div>
             <div class="footer__list-items js-dropdown-content">
@@ -442,7 +473,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Документы</p>
               <svg width="20" height="20">
-                <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <use xlink:href="@img/icons/icons.svg#arrow-black-down-2"></use>
               </svg>
             </div>
             <div class="footer__list-items js-dropdown-content">
@@ -461,7 +492,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Медиа</p>
               <svg width="20" height="20">
-                <use xlink:href="@img/icons/icons.svg#arrow-black-down"></use>
+                <use xlink:href="@img/icons/icons.svg#arrow-black-down-2"></use>
               </svg>
             </div>
             <div class="footer__list-items js-dropdown-content">

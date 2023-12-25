@@ -66,9 +66,11 @@ function removeHelperTooltips() {
   }
 }
 
-$('.municipality__map-item').tooltip({
-  track: true,
-});
+if ($('.municipality__map-item')) {
+  $('.municipality__map-item').tooltip({
+    track: true,
+  });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   removeHelperTooltips();
