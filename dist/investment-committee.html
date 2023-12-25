@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Инвестиционный комитет</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231224204405" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231224204405" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231225101000" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231225101000" />
 </head>
 
 
@@ -45,15 +45,15 @@
                   <span>Поиск</span>
                 </div>
 
-                <div class="form-search js-form-search" action="/ru/search.php">
+                <form class="form-search js-form-search" action="/ru/search.php">
                   <input
                     class="form-search__input js-search-input"
-                    size=""
-                    name=""
-                    id=""
-                    value=""
+                    size="#"
+                    name="#"
+                    id="#"
+                    value="#"
                     type="text"
-                    autocomplete="off$white"
+                    autocomplete="off"
                     placeholder="Что ищите?"
                   />
                   <button class="form-search__button-open">
@@ -66,7 +66,7 @@
                       <use xlink:href="assets/img/icons/icons.svg#search-close"></use>
                     </svg>
                   </button>
-                </div>
+                </form>
               </div>
             </div>
             <a href="#" class="header-bottom__btn">
@@ -104,12 +104,12 @@
               <div class="dropdown__content">
                 <div class="dropdown__items">
                   <div class="dropdown__item js-dropdown-item active">
-                    <input id="ru" type="radio" name="lang" value="lang-1" checked />
+                    <input id="ru" type="radio" name="lang" value="ru" checked />
                     <label for="ru">RU</label>
                   </div>
                   <div class="dropdown__item js-dropdown-item">
-                    <input id="lang-2" type="radio" name="lang" value="lang-2" />
-                    <label for="lang-2">EN</label>
+                    <input id="en" type="radio" name="en" value="en" />
+                    <label for="en">EN</label>
                   </div>
                 </div>
               </div>
@@ -238,12 +238,12 @@
         <div class="form-search form-search-mobile js-form-search" action="/ru/search.php">
           <input
             class="form-search__input js-search-mob-input js-search-input"
-            size=""
-            name=""
+            size="#"
+            name="#"
             id="myInput"
-            value=""
+            value="#"
             type="text"
-            autocomplete="off$white"
+            autocomplete="off"
             placeholder="Что ищите?"
           />
           <button class="form-search__button-open">
@@ -524,13 +524,13 @@
           </div>
           <div class="dropdown__items">
             <div class="dropdown__item js-dropdown-item active">
-              <input id="ru" type="radio" name="lang" value="lang-1" checked />
-              <label for="ru">RU</label>
+              <input id="ru-2" type="radio" name="lang-2" value="ru-2" checked />
+              <label for="ru-2">RU</label>
             </div>
             <div class="dropdown__item-separator">/</div>
             <div class="dropdown__item js-dropdown-item">
-              <input id="lang-2" type="radio" name="lang" value="lang-2" />
-              <label for="lang-2">EN</label>
+              <input id="en-2" type="radio" name="lang-2" value="en-2" />
+              <label for="en-2">EN</label>
             </div>
           </div>
         </div>
@@ -671,7 +671,7 @@
             </div>
             <div class="regul-committee__ask-soc">
               <a class="regul-committee__ask-mail" href="mailto:aokrso@mail.ru">aokrso@mail.ru</a>
-              <a class="regul-committee__ask-tel" href="tel:69 52 34">69 52 34</a>
+              <a class="regul-committee__ask-tel" href="tel:695234">69 52 34</a>
             </div>
           </div>
         </div>
@@ -716,7 +716,7 @@
         <div class="ask-question__textarea textarea">
           <div class="textarea__head">Текст обращения</div>
           <div class="textarea__textarea">
-            <textarea name="" id="" placeholder="Опишите суть вопроса или предложения"></textarea>
+            <textarea name="#" placeholder="Опишите суть вопроса или предложения"></textarea>
           </div>
           <div class="textarea__hint">Error</div>
         </div>
@@ -938,7 +938,7 @@
                 <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
               </svg>
             </div>
-            <div class="footer__list-items js-dropdown-content">
+            <ul class="footer__list-items js-dropdown-content">
               <li class="footer__item">
                 <a href="#">Получить консультацию</a>
               </li>
@@ -951,7 +951,7 @@
               <li class="footer__item">
                 <a href="#">Предложить проект</a>
               </li>
-            </div>
+            </ul>
           </div>
           <div class="footer__list js-dropdown-list">
             <div class="footer__list-title js-dropdown-title">
@@ -960,7 +960,7 @@
                 <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
               </svg>
             </div>
-            <div class="footer__list-items js-dropdown-content">
+            <ul class="footer__list-items js-dropdown-content">
               <li class="footer__item">
                 <a href="#">Проекты ГЧП</a>
               </li>
@@ -976,7 +976,7 @@
               <li class="footer__item">
                 <a href="#">Контакты ГЧП</a>
               </li>
-            </div>
+            </ul>
           </div>
           <div class="footer__list js-dropdown-list">
             <div class="footer__list-title js-dropdown-title">
@@ -985,7 +985,7 @@
                 <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
               </svg>
             </div>
-            <div class="footer__list-items js-dropdown-content">
+            <ul class="footer__list-items js-dropdown-content">
               <li class="footer__item">
                 <a href="#">Законодательство</a>
               </li>
@@ -995,7 +995,7 @@
               <li class="footer__item">
                 <a href="#">Презентационные материалы</a>
               </li>
-            </div>
+            </ul>
           </div>
           <div class="footer__list js-dropdown-list">
             <div class="footer__list-title js-dropdown-title">
@@ -1004,7 +1004,7 @@
                 <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
               </svg>
             </div>
-            <div class="footer__list-items js-dropdown-content">
+            <ul class="footer__list-items js-dropdown-content">
               <li class="footer__item">
                 <a href="#">Новости</a>
               </li>
@@ -1014,7 +1014,7 @@
               <li class="footer__item">
                 <a href="#">Фото и видеоотчет</a>
               </li>
-            </div>
+            </ul>
           </div>
           <div class="footer__list footer__list-hide js-dropdown-list">
             <div class="footer__list-title js-dropdown-title">
@@ -1388,14 +1388,14 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231224204405"></script>
-<script src="//code.jquery.com/jquery-1.10.2.js?_v=20231224204405"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20231224204405"></script>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231224204405"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231225101000"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js?_v=20231225101000"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20231225101000"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231225101000"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231224204405"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231225101000"></script>
 
-<script src="js/main.js?_v=20231224204405"></script>
+<script src="js/main.js?_v=20231225101000"></script>
 
   </body>
 </html>

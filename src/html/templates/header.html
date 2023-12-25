@@ -33,15 +33,15 @@
                   <span>Поиск</span>
                 </div>
 
-                <div class="form-search js-form-search" action="/ru/search.php">
+                <form class="form-search js-form-search" action="/ru/search.php">
                   <input
                     class="form-search__input js-search-input"
-                    size=""
-                    name=""
-                    id=""
-                    value=""
+                    size="#"
+                    name="#"
+                    id="#"
+                    value="#"
                     type="text"
-                    autocomplete="off$white"
+                    autocomplete="off"
                     placeholder="Что ищите?"
                   />
                   <button class="form-search__button-open">
@@ -54,7 +54,7 @@
                       <use xlink:href="@img/icons/icons.svg#search-close"></use>
                     </svg>
                   </button>
-                </div>
+                </form>
               </div>
             </div>
             <a href="#" class="header-bottom__btn">
@@ -92,12 +92,12 @@
               <div class="dropdown__content">
                 <div class="dropdown__items">
                   <div class="dropdown__item js-dropdown-item active">
-                    <input id="ru" type="radio" name="lang" value="lang-1" checked />
+                    <input id="ru" type="radio" name="lang" value="ru" checked />
                     <label for="ru">RU</label>
                   </div>
                   <div class="dropdown__item js-dropdown-item">
-                    <input id="lang-2" type="radio" name="lang" value="lang-2" />
-                    <label for="lang-2">EN</label>
+                    <input id="en" type="radio" name="en" value="en" />
+                    <label for="en">EN</label>
                   </div>
                 </div>
               </div>
@@ -226,12 +226,12 @@
         <div class="form-search form-search-mobile js-form-search" action="/ru/search.php">
           <input
             class="form-search__input js-search-mob-input js-search-input"
-            size=""
-            name=""
+            size="#"
+            name="#"
             id="myInput"
-            value=""
+            value="#"
             type="text"
-            autocomplete="off$white"
+            autocomplete="off"
             placeholder="Что ищите?"
           />
           <button class="form-search__button-open">
@@ -512,13 +512,13 @@
           </div>
           <div class="dropdown__items">
             <div class="dropdown__item js-dropdown-item active">
-              <input id="ru" type="radio" name="lang" value="lang-1" checked />
-              <label for="ru">RU</label>
+              <input id="ru-2" type="radio" name="lang-2" value="ru-2" checked />
+              <label for="ru-2">RU</label>
             </div>
             <div class="dropdown__item-separator">/</div>
             <div class="dropdown__item js-dropdown-item">
-              <input id="lang-2" type="radio" name="lang" value="lang-2" />
-              <label for="lang-2">EN</label>
+              <input id="en-2" type="radio" name="lang-2" value="en-2" />
+              <label for="en-2">EN</label>
             </div>
           </div>
         </div>
