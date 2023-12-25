@@ -35,12 +35,12 @@ body {
   }
 }
 
-main {
+main:not(.main-page) {
   padding-top: 160px;
 }
 
 @media screen and (max-width: $mob) {
-  main {
+  main:not(.main-page) {
     padding-top: 86px;
   }
 }

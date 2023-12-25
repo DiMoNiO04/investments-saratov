@@ -1191,7 +1191,11 @@ svg {
 .steps-investor__item.active .steps-investor__item-btn svg:first-child,
 .header--transparent .header-top__logo a,
 .header--transparent:hover .header-top__logo a.header-top__logo--transparent,
+.header-bottom__menu.hide,
+.header-bottom__list-menu,
+.header-bottom__logo,
 .header-top__logo a.header-top__logo--transparent,
+.form-search,
 .textarea__hint,
 .dropdown__content,
 .input__hint {
@@ -1215,7 +1219,10 @@ svg {
 .steps-investor__item.active .steps-investor__item-content,
 .header--transparent .header-top__logo a.header-top__logo--transparent,
 .header--transparent:hover .header-top__logo a,
+.header-bottom__list-menu.show,
 .header-top__logo a,
+.header.active .header-bottom__logo,
+.form-search.show,
 .textarea.--error .textarea__hint,
 .dropdown.--active .dropdown__content,
 .input.--error .input__hint {
@@ -2142,7 +2149,7 @@ body.ov-hidden {
   overflow: hidden;
 }
 
-main {
+main:not(.main-page) {
   padding-top: 160px;
 }
 
@@ -3537,11 +3544,10 @@ fieldset {
   transform: translateY(-50%);
   height: 46px;
   width: 100%;
-  display: none;
 }
 
 .form-search.show {
-  display: flex;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .form-search__input {
@@ -4061,20 +4067,21 @@ fieldset {
   right: 0;
   width: 100%;
   display: block;
+  transition: transform 0.5s ease-in-out;
 }
 
 .header.active {
   height: auto;
+  transform: translateY(-97px);
 }
 
-.header.active .header-top {
-  display: none;
+.header.active .header-bottom__links {
+  left: 0;
 }
 
 .header.active .header-bottom__logo {
-  display: block;
   position: relative;
-  left: 3px;
+  transition: opacity 1s ease, visibility 1s ease;
 }
 
 .header.active .header-bottom {
@@ -4091,6 +4098,10 @@ fieldset {
   transition: color 0.25s ease, stroke 0.25s ease, fill 0.25s ease, border 0.25s ease, opacity 0.25s ease, visibility 0.25s ease, height 0.5s ease, max-heigth 0.5s ease, padding 0.5s ease;
 }
 
+.header svg {
+  transition: transform 0.4s ease;
+}
+
 .header svg use {
   stroke: #2f2f2f;
 }
@@ -4098,6 +4109,7 @@ fieldset {
 .header button:not(.dropdown__btn):hover,
 .header a:not(.header-top__social):hover {
   color: #2661d4;
+  transition: color 0.4s ease;
 }
 
 .header button:not(.dropdown__btn):hover svg use,
@@ -4108,6 +4120,18 @@ fieldset {
 .header button:not(.dropdown__btn):hover p,
 .header a:not(.header-top__social):hover p {
   color: #2661d4;
+}
+
+.header .header-bottom__list-item:not(.header-top__social):hover > a {
+  color: #2661d4;
+}
+
+.header .header-bottom__list-item:not(.header-top__social):hover svg {
+  transform: rotate(180deg);
+}
+
+.header .header-bottom__list-item:not(.header-top__social):hover svg use {
+  stroke: #2661d4;
 }
 
 .header-top,
@@ -4220,13 +4244,9 @@ fieldset {
   display: none;
 }
 
-.header-bottom {
-  padding: 16px 0;
-}
-
 .header-bottom__logo {
   height: 64px;
-  display: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .header-bottom__logo a {
@@ -4275,8 +4295,11 @@ fieldset {
   cursor: pointer;
 }
 
+.header-bottom__list-item.active {
+  color: red;
+}
+
 .header-bottom__list-menu {
-  display: none;
   position: absolute;
   flex-direction: column;
   align-items: flex-start;
@@ -4300,18 +4323,16 @@ fieldset {
   padding: 12px 20px;
 }
 
-.header-bottom__list-menu.show {
-  display: flex;
-}
-
-.header-bottom__menu.hide {
-  display: none;
-}
-
 .header-bottom__links,
 .header-bottom__list {
   -moz-column-gap: 32px;
        column-gap: 32px;
+}
+
+.header-bottom__links {
+  transition: left 0.6s ease;
+  position: relative;
+  left: -71px;
 }
 
 .header-menu {
@@ -14823,7 +14844,7 @@ fieldset {
     font-size: 28px;
   }
 
-  main {
+  main:not(.main-page) {
     padding-top: 86px;
   }
 

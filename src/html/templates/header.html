@@ -33,13 +33,12 @@
                   <span>Поиск</span>
                 </div>
 
-                <form class="form-search js-form-search" action="/ru/search.php">
+                <form class="form-search js-form-search">
                   <input
                     class="form-search__input js-search-input"
                     size="#"
                     name="#"
                     id="#"
-                    value="#"
                     type="text"
                     autocomplete="off"
                     placeholder="Что ищите?"
@@ -49,7 +48,7 @@
                       <use xlink:href="@img/icons/icons.svg#search"></use>
                     </svg>
                   </button>
-                  <button class="form-search__button-close js-search-close">
+                  <button type="button" class="form-search__button-close js-search-close">
                     <svg>
                       <use xlink:href="@img/icons/icons.svg#search-close"></use>
                     </svg>
@@ -103,15 +102,15 @@
               </div>
             </div>
           </div>
+          <div class="header-bottom__btns header-top__entrance">
+            <a href="#" class="header-bottom__btn">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#entrance"></use>
+              </svg>
+            </a>
+          </div>
+          <button type="button" class="header-top__burger js-burger --mob"></button>
         </div>
-        <div class="header-bottom__btns header-top__entrance">
-          <a href="#" class="header-bottom__btn">
-            <svg>
-              <use xlink:href="@img/icons/icons.svg#entrance"></use>
-            </svg>
-          </a>
-        </div>
-        <button type="button" class="header-top__burger js-burger --mob"></button>
       </div>
     </div>
   </div>
@@ -222,14 +221,13 @@
   </div>
   <div class="header-menu js-header-menu">
     <div class="container">
-      <div class="header-menu__inner" data-simplebar="init">
-        <div class="form-search form-search-mobile js-form-search" action="/ru/search.php">
+      <div class="header-menu__inner" data-simplebar>
+        <form class="form-search form-search-mobile js-form-search">
           <input
             class="form-search__input js-search-mob-input js-search-input"
             size="#"
             name="#"
             id="myInput"
-            value="#"
             type="text"
             autocomplete="off"
             placeholder="Что ищите?"
@@ -239,12 +237,12 @@
               <use xlink:href="@img/icons/icons.svg#search"></use>
             </svg>
           </button>
-          <button class="form-search__button-close js-search-close js-search-mob-close">
+          <button type="button" class="form-search__button-close js-search-close js-search-mob-close">
             <svg>
               <use xlink:href="@img/icons/icons.svg#search-close"></use>
             </svg>
           </button>
-        </div>
+        </form>
         <div class="footer__lists">
           <div class="footer__list js-dropdown-list">
             <div class="footer__list-title js-dropdown-title">

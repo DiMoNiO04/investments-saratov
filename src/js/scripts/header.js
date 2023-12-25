@@ -84,10 +84,16 @@ const jsHeadMenus = document.querySelectorAll('.js-head-menu');
 headerBottomLinks.forEach((headerBottomLink) => {
   const jsHeadMenu = headerBottomLink.querySelector('.js-head-menu');
   headerBottomLink.addEventListener('mouseover', () => {
-    jsHeadMenu.classList.add('show');
+    if (jsHeadMenu) {
+      jsHeadMenu.classList.add('show');
+    }
+    headerBottomLink.classList.add('active');
   });
   headerBottomLink.addEventListener('mouseout', () => {
-    jsHeadMenu.classList.remove('show');
+    if (jsHeadMenu) {
+      jsHeadMenu.classList.remove('show');
+    }
+    headerBottomLink.classList.remove('active');
   });
 });
 jsHeadMenus.forEach((jsHeadMenu) => {
