@@ -1,0 +1,111 @@
+.ppp-proposals {
+  &__title {
+    @extend %h2;
+    margin-bottom: 40px;
+  }
+
+  &__cards {
+    @extend %gridColumnThree;
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+  }
+
+  &__card {
+    @extend %flexColumn;
+  }
+
+  &__img {
+    @include sizes(100%, 350px);
+    flex-shrink: 0;
+
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  &__content {
+    @extend %flexColumn;
+    justify-content: space-between;
+    background-color: $white;
+    border-radius: 0 0 4px 4px;
+    row-gap: 32px;
+    padding: 24px 32px;
+    height: 100%;
+  }
+
+  &__tit {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+    @include croppingText(3);
+  }
+
+  &__desc {
+    @extend %flexCenterBetween;
+  }
+
+  &__date {
+    @extend %regular16;
+  }
+
+  &__btn {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+    border-bottom: 1px solid;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-proposals {
+    &__img {
+      height: 300px;
+    }
+
+    &__content {
+      padding: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-proposals {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__img {
+      height: 240px;
+    }
+
+    &__content {
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-proposals {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 16px;
+    }
+
+    &__date {
+      font-size: 14px;
+    }
+
+    &__btn {
+      font-size: 16px;
+    }
+  }
+}

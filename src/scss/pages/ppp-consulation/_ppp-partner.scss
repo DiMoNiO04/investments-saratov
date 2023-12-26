@@ -1,0 +1,163 @@
+.ppp-partner {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    max-width: 870px;
+  }
+
+  &__list {
+    @extend %flexColumn;
+    row-gap: 8px;
+    max-width: 760px;
+
+    & > li {
+      @extend %mainTxt;
+      position: relative;
+      padding-left: 36px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background-color: $bluePrimary;
+        width: 24px;
+        height: 2px;
+      }
+    }
+  }
+
+  &__blocks {
+    @extend %gridColumnTwo;
+    grid-gap: 20px;
+  }
+
+  &__block {
+    @extend %flexColumn;
+    row-gap: 32px;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 32px;
+  }
+
+  &__block-tit {
+    @extend %h3;
+    color: $bluePrimary;
+  }
+
+  &__block-list {
+    @extend %flexColumn;
+    row-gap: 16px;
+
+    & > li {
+      @extend %mainTxt;
+      position: relative;
+      padding-left: 36px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background-color: $bluePrimary;
+        width: 24px;
+        height: 2px;
+      }
+
+      ul {
+        @extend %flexColumn;
+        row-gap: 8px;
+        margin-top: 16px;
+
+        li {
+          @extend %regular16;
+          display: flex;
+          column-gap: 10px;
+          position: relative;
+
+          &::before {
+            content: '';
+            @include sizes(4px, 4px);
+            border-radius: 50%;
+            background-color: $black;
+            flex-shrink: 0;
+            top: 8px;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-partner {
+    &__title,
+    &__list {
+      max-width: 580px;
+
+      & > li {
+        padding-left: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-partner {
+    &__title {
+      max-width: 100%;
+      font-size: 36px;
+    }
+
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__list {
+      max-width: 100%;
+    }
+
+    &__blocks {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__block {
+      padding: 24px;
+      row-gap: 24px;
+    }
+
+    &__block-list > li {
+      padding-left: 32px;
+    }
+
+    &__block-list > li ul li {
+      column-gap: 10px;
+      padding-left: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ppp-partner {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__block-list {
+      row-gap: 8px;
+    }
+
+    &__block-list > li ul {
+      margin-top: 8px;
+    }
+
+    &__block-list > li ul li {
+      padding: 0;
+    }
+  }
+}

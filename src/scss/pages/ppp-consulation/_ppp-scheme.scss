@@ -1,0 +1,47 @@
+.ppp-scheme {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    max-width: 870px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-scheme {
+    &__title {
+      max-width: 580px;
+    }
+  }
+
+  .ppp-scheme--concluding {
+    .ppp-scheme__title {
+      max-width: 950px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-scheme {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__title {
+      max-width: 100%;
+      font-size: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ppp-scheme {
+    &__title {
+      max-width: 100%;
+      font-size: 24px;
+    }
+  }
+}

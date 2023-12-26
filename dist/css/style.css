@@ -1238,6 +1238,38 @@ svg {
   visibility: visible;
 }
 
+.ppp-other-projects__content li,
+.ppp-other-projects__content,
+.ppp-other-projects__top,
+.ppp-other-projects__block,
+.ppp-other-projects__container,
+.ppp-partner__block-list > li ul,
+.ppp-partner__block-list,
+.ppp-partner__block,
+.ppp-partner__list,
+.ppp-partner__container,
+.ppp-consulation__block:not(.ppp-consulation__block--img),
+.ppp-consulation__container,
+.ppp-scheme__container,
+.ppp-implementation__list li,
+.ppp-implementation__container,
+.ppp-assistance__container,
+.ppp-tax__block,
+.ppp-tax__container,
+.ppp-measures__container,
+.ppp-contacts__links,
+.ppp-contacts__top,
+.ppp-contacts__block,
+.ppp-contacts__container,
+.ppp-proposals__content,
+.ppp-proposals__card,
+.ppp-projects__desc-price,
+.ppp-projects__desc,
+.ppp-projects__result-price,
+.ppp-projects__list li,
+.ppp-projects__content,
+.ppp-projects__card,
+.ppp-projects__container,
 .monitoring-request__items li:not(.monitoring-request__items--img),
 .region-team__links,
 .region-team__block,
@@ -1341,7 +1373,6 @@ svg {
 .regional-project__container,
 .cards-page__container,
 .story__descs,
-.legislation__items,
 .account__fieldset-linkin,
 .account__form,
 .account__content,
@@ -1359,6 +1390,7 @@ svg {
 .steps-investor__items,
 .steps-investor__container,
 .governor__desc-managment,
+.legislation__items,
 .calculator__form,
 .list-doc__container,
 .picture-text__content,
@@ -1386,6 +1418,7 @@ svg {
   flex-direction: column;
 }
 
+.ppp-other-projects__icon,
 .ao-dev-cor__icon,
 .ao-dev-corp__icon,
 .availability-stock__block-icon,
@@ -1443,6 +1476,7 @@ svg {
   justify-content: flex-start;
 }
 
+.ppp-proposals__desc,
 .useful-links__title-container,
 .calc-result__titles,
 .polls__items li,
@@ -1528,11 +1562,11 @@ svg {
 .region-team__item,
 .regul-committee__ask-info,
 .soceconomic-develop__item-bottom,
-.legislation__item-btn,
 .account__content--appeals .account__fieldset-file,
 .account__fieldset-radioboxs,
 .account__fieldset-inputs,
 .success-hist__slide-items,
+.legislation__item-btn,
 .calculator__block-radiobtns,
 .calculator__items,
 .header-bottom__links,
@@ -1562,6 +1596,13 @@ svg {
   justify-content: space-between;
 }
 
+.ppp-partner__blocks,
+.ppp-consulation__blocks,
+.ppp-assistance__list,
+.ppp-contacts__blocks,
+.ppp-projects__desc-prices,
+.ppp-projects__result,
+.ppp-projects__cards,
 .monitoring-request__items,
 .monitoring-request__list,
 .call-line__titles,
@@ -1611,6 +1652,9 @@ svg {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.ppp-other-projects__blocks,
+.ppp-proposals__cards,
+.ppp-projects__list,
 .monitoring-request__items--four,
 .monitoring-request__list--four,
 .invest-contract__blocks-items--three,
@@ -1634,6 +1678,8 @@ svg {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.ppp-implementation__list,
+.ppp-tax__blocks,
 .tax-blocks__items-blocks,
 .invest-contract__blocks-items--four,
 .industrial-park__advan-inner,
@@ -1679,6 +1725,11 @@ svg {
   line-height: 130%;
 }
 
+.ppp-other-projects__content li,
+.ppp-partner__block-list > li ul li,
+.ppp-tax__desc span,
+.ppp-register__block-txt,
+.ppp-proposals__date,
 .call-line__policy,
 .useful-links__txt,
 .region-team__job,
@@ -1699,11 +1750,11 @@ svg {
 .labor-resources__picture .picture-text__items li,
 .social-infr__items li,
 .public-representative__item-txt,
-.legislation__btns button span,
 .recovery-pass__back span,
 .auth__socials-title,
 .authentication__btns button span,
 .news__card-date,
+.legislation__btns button span,
 .chat__content-tetarea,
 .account-menu__item span,
 .header *,
@@ -1756,6 +1807,13 @@ svg {
   text-transform: uppercase;
 }
 
+.ppp-other-projects__title,
+.ppp-consulation__title,
+.ppp-measures__title,
+.ppp-contacts__title,
+.ppp-register__title,
+.ppp-proposals__title,
+.ppp-projects__title,
 .monitoring-request__title,
 .call-line__title,
 .contacts__title,
@@ -1793,6 +1851,8 @@ svg {
   text-transform: uppercase;
 }
 
+.ppp-partner__block-tit,
+.ppp-projects__subtitle,
 .monitoring-request__subtitle,
 .not-found__txt,
 .subsidies__subtitle,
@@ -1833,6 +1893,13 @@ svg {
   line-height: 120%;
 }
 
+.ppp-partner__block-list > li,
+.ppp-partner__list > li,
+.ppp-consulation__block:not(.ppp-consulation__block--img),
+.ppp-consulation__subtitles p,
+.ppp-implementation__list li,
+.ppp-projects__desc-price,
+.ppp-projects__desc-subtitle,
 .monitoring-request__items li:not(.monitoring-request__items--img),
 .monitoring-request__subtitles p,
 .call-line__subtitles p,
@@ -1966,6 +2033,12 @@ svg {
   line-height: 130%;
 }
 
+.ppp-tax__tit,
+.ppp-contacts__tit,
+.ppp-register__block-title,
+.ppp-projects__result-price,
+.ppp-projects__list li,
+.ppp-projects__tit,
 .region-team__block-title,
 .presentation-materials__subtitle,
 .tax-blocks__list-title,
@@ -1996,11 +2069,11 @@ svg {
 .transport-inf__block-title,
 .regional-project__prices-title,
 .regional-project__direction-title,
-.legislation__item-title,
 .recovery-pass__title,
 .success-hist__slide-txt,
 .benefits__slide-txt,
 .steps-investor__item-tit,
+.legislation__item-title,
 .calculator__block-title,
 .modal-pers-cab__title p,
 .content strong {
@@ -2016,6 +2089,11 @@ svg {
   line-height: 130%;
 }
 
+.ppp-partner__title,
+.ppp-scheme__title,
+.ppp-implementation__title,
+.ppp-assistance__title,
+.ppp-tax__title,
 .useful-links__title,
 .region-team__title,
 .bonds__title,
@@ -2077,6 +2155,8 @@ svg {
   color: #2d6fd0;
 }
 
+.ppp-implementation__list li b,
+.ppp-tax__desc b,
 .monitoring-request__items--four b,
 .monitoring-request__list--four b,
 .tax-blocks__rate b,
@@ -2088,6 +2168,7 @@ svg {
   color: #2d6fd0;
 }
 
+.ppp-projects__desc-price b,
 .tax-blocks__num b,
 .tax-blocks__items-blocks li b {
   color: #2d6fd0;
@@ -5242,6 +5323,115 @@ fieldset {
   transition: opacity 0.3s ease-in-out;
 }
 
+.legislation__contents {
+  width: 870px;
+}
+
+.legislation__content {
+  display: none;
+}
+
+.legislation__content.--active {
+  display: flex;
+}
+
+.legislation__title {
+  color: #2f2f2f;
+}
+
+.legislation__btns {
+  display: flex;
+  margin-top: 54px;
+}
+
+.legislation__btns button {
+  flex: 0 0 50%;
+  text-align: center;
+  padding: 8.5px 0;
+  border-bottom: 1px solid #d3dce4;
+}
+
+.legislation__btns button:hover span {
+  color: #2661d4;
+}
+
+.legislation__btns button span {
+  color: #858c95;
+}
+
+.legislation__btns button span:first-child {
+  display: block;
+}
+
+.legislation__btns button span:last-child {
+  display: none;
+}
+
+.legislation__btns button.--active {
+  border-bottom: 2px solid #2d6fd0;
+}
+
+.legislation__btns button.--active span {
+  color: #2d6fd0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.legislation__items {
+  row-gap: 40px;
+  margin-top: 40px;
+}
+
+.legislation__item-title {
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+
+.legislation__item-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 16px;
+}
+
+.legislation__item-txt {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  margin-bottom: 16px;
+}
+
+.legislation__item-btn {
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.legislation__item-btn a {
+  color: #2d6fd0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  transition: color 0.4s ease;
+}
+
+.legislation__item-btn a:hover {
+  color: #2f2f2f;
+}
+
+.legislation__item-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.legislation--ppp .legislation__item-link {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .governor {
   background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
   position: relative;
@@ -6578,110 +6768,6 @@ fieldset {
 
 .account__content--appeals .textarea__textarea {
   height: 154px;
-}
-
-.legislation__contents {
-  width: 870px;
-}
-
-.legislation__content {
-  display: none;
-}
-
-.legislation__content.--active {
-  display: flex;
-}
-
-.legislation__title {
-  color: #2f2f2f;
-}
-
-.legislation__btns {
-  display: flex;
-  margin-top: 54px;
-}
-
-.legislation__btns button {
-  flex: 0 0 50%;
-  text-align: center;
-  padding: 8.5px 0;
-  border-bottom: 1px solid #d3dce4;
-}
-
-.legislation__btns button:hover span {
-  color: #2661d4;
-}
-
-.legislation__btns button span {
-  color: #858c95;
-}
-
-.legislation__btns button span:first-child {
-  display: block;
-}
-
-.legislation__btns button span:last-child {
-  display: none;
-}
-
-.legislation__btns button.--active {
-  border-bottom: 2px solid #2d6fd0;
-}
-
-.legislation__btns button.--active span {
-  color: #2d6fd0;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.legislation__items {
-  row-gap: 40px;
-  margin-top: 40px;
-}
-
-.legislation__item-title {
-  line-height: 130%;
-  margin-bottom: 20px;
-}
-
-.legislation__item-subtitle {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 130%;
-  margin-bottom: 16px;
-}
-
-.legislation__item-txt {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 130%;
-  margin-bottom: 16px;
-}
-
-.legislation__item-btn {
-  -moz-column-gap: 16px;
-       column-gap: 16px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  padding: 20px;
-}
-
-.legislation__item-btn a {
-  color: #2d6fd0;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 130%;
-  transition: color 0.4s ease;
-}
-
-.legislation__item-btn a:hover {
-  color: #2f2f2f;
-}
-
-.legislation__item-icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
 }
 
 .similar-stories__titles {
@@ -10462,6 +10548,568 @@ fieldset {
   margin: 0;
 }
 
+.ppp-projects__container {
+  row-gap: 40px;
+}
+
+.ppp-projects__cards {
+  grid-auto-rows: 1fr;
+  grid-gap: 20px;
+}
+
+.ppp-projects__img {
+  width: 100%;
+  height: 343px;
+  flex-shrink: 0;
+}
+
+.ppp-projects__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.ppp-projects__content {
+  justify-content: space-between;
+  row-gap: 32px;
+  border-radius: 0 0 4px 4px;
+  padding: 32px;
+  background-color: #ffffff;
+  height: 100%;
+}
+
+.ppp-projects__tit {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ppp-projects__link {
+  margin: 0 0 0 auto;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+  border-bottom: 1px solid;
+}
+
+.ppp-projects__link:hover {
+  border-color: transparent;
+}
+
+.ppp-projects__subtitle {
+  margin-bottom: 24px;
+}
+
+.ppp-projects__list {
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.ppp-projects__list li {
+  row-gap: 32px;
+  padding: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.ppp-projects__list li b {
+  color: #2d6fd0;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.ppp-projects__result {
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+  padding: 32px;
+  border-radius: 4px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.ppp-projects__result-price {
+  row-gap: 16px;
+  color: #ffffff;
+}
+
+.ppp-projects__result-price b {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.ppp-projects__desc {
+  row-gap: 16px;
+  color: #ffffff;
+}
+
+.ppp-projects__desc-prices {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.ppp-projects__desc-price {
+  row-gap: 4px;
+  width: 300px;
+}
+
+.ppp-projects__desc-price b {
+  color: #ffffff;
+}
+
+.ppp-proposals__title {
+  margin-bottom: 40px;
+}
+
+.ppp-proposals__cards {
+  grid-auto-rows: 1fr;
+  grid-gap: 20px;
+}
+
+.ppp-proposals__img {
+  width: 100%;
+  height: 350px;
+  flex-shrink: 0;
+}
+
+.ppp-proposals__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.ppp-proposals__content {
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  row-gap: 32px;
+  padding: 24px 32px;
+  height: 100%;
+}
+
+.ppp-proposals__tit {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 130%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ppp-proposals__btn {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 130%;
+  border-bottom: 1px solid;
+}
+
+.ppp-proposals__btn:hover {
+  border-color: transparent;
+}
+
+.ppp-register__title {
+  margin-bottom: 40px;
+}
+
+.ppp-register__block {
+  max-width: 870px;
+}
+
+.ppp-register__block-title {
+  margin-bottom: 20px;
+}
+
+.ppp-register__block-txt {
+  margin-bottom: 16px;
+}
+
+.ppp-register__block-link {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.ppp-contacts__container {
+  row-gap: 40px;
+}
+
+.ppp-contacts__blocks {
+  grid-auto-rows: 1fr;
+  grid-gap: 20px;
+}
+
+.ppp-contacts__block {
+  row-gap: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+}
+
+.ppp-contacts__block:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.ppp-contacts__top {
+  row-gap: 16px;
+}
+
+.ppp-contacts__icon {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.ppp-contacts__txt {
+  max-width: 870px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.ppp-contacts__links {
+  row-gap: 8px;
+}
+
+.ppp-contacts__phone,
+.ppp-contacts__email {
+  color: #2d6fd0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.ppp-contacts__phone:hover,
+.ppp-contacts__email:hover {
+  color: #2661d4;
+}
+
+.ppp-contacts__link {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+  border-bottom: 1px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.ppp-contacts__link:hover {
+  border-color: transparent;
+}
+
+.ppp-measures__container {
+  row-gap: 40px;
+}
+
+.ppp-measures__title {
+  max-width: 870px;
+}
+
+.ppp-measures__img {
+  width: 100%;
+  height: 500px;
+}
+
+.ppp-measures__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.ppp-tax__container {
+  row-gap: 40px;
+}
+
+.ppp-tax__blocks {
+  grid-auto-rows: 1fr;
+  grid-gap: 20px;
+}
+
+.ppp-tax__block {
+  row-gap: 32px;
+  justify-content: space-between;
+  padding: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.ppp-tax__desc {
+  display: flex;
+  align-items: flex-end;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.ppp-tax__desc span {
+  margin-bottom: 5px;
+}
+
+.ppp-assistance__container {
+  row-gap: 40px;
+}
+
+.ppp-assistance__title {
+  max-width: 870px;
+}
+
+.ppp-assistance__list {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 12px;
+}
+
+.ppp-assistance__list li {
+  padding-right: 20px;
+}
+
+.ppp-assistance .content ul:not(:first-child),
+.ppp-assistance .content ul > li {
+  margin: 0;
+}
+
+.ppp-implementation__container {
+  row-gap: 40px;
+}
+
+.ppp-implementation__title {
+  max-width: 870px;
+}
+
+.ppp-implementation__list {
+  grid-auto-rows: 1fr;
+  grid-gap: 20px;
+}
+
+.ppp-implementation__list li {
+  row-gap: 32px;
+  padding: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.ppp-scheme__container {
+  row-gap: 40px;
+}
+
+.ppp-scheme__title {
+  max-width: 870px;
+}
+
+.ppp-consulation__container {
+  row-gap: 40px;
+}
+
+.ppp-consulation__titles {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.ppp-consulation__title {
+  width: calc(50% - 10px);
+  flex-shrink: 0;
+}
+
+.ppp-consulation__subtitles p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.ppp-consulation__title,
+.ppp-consulation__subtitles {
+  padding-right: 20px;
+}
+
+.ppp-consulation__blocks {
+  grid-gap: 20px;
+}
+
+.ppp-consulation__block {
+  background: #ffffff;
+  justify-content: space-between;
+}
+
+.ppp-consulation__block b {
+  color: #2d6fd0;
+}
+
+.ppp-consulation__block:not(.ppp-consulation__block--img) {
+  row-gap: 32px;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.ppp-consulation__block:not(.ppp-consulation__block--img) b {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.ppp-consulation__block--last {
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+  color: #ffffff;
+}
+
+.ppp-consulation__block--last b {
+  color: #ffffff;
+}
+
+.ppp-consulation__block--img {
+  width: 100%;
+  height: auto;
+}
+
+.ppp-consulation__block--img img {
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ppp-partner__container {
+  row-gap: 40px;
+}
+
+.ppp-partner__title {
+  max-width: 870px;
+}
+
+.ppp-partner__list {
+  row-gap: 8px;
+  max-width: 760px;
+}
+
+.ppp-partner__list > li {
+  position: relative;
+  padding-left: 36px;
+}
+
+.ppp-partner__list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: #2d6fd0;
+  width: 24px;
+  height: 2px;
+}
+
+.ppp-partner__blocks {
+  grid-gap: 20px;
+}
+
+.ppp-partner__block {
+  row-gap: 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 32px;
+}
+
+.ppp-partner__block-tit {
+  color: #2d6fd0;
+}
+
+.ppp-partner__block-list {
+  row-gap: 16px;
+}
+
+.ppp-partner__block-list > li {
+  position: relative;
+  padding-left: 36px;
+}
+
+.ppp-partner__block-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: #2d6fd0;
+  width: 24px;
+  height: 2px;
+}
+
+.ppp-partner__block-list > li ul {
+  row-gap: 8px;
+  margin-top: 16px;
+}
+
+.ppp-partner__block-list > li ul li {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  position: relative;
+}
+
+.ppp-partner__block-list > li ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #2f2f2f;
+  flex-shrink: 0;
+  top: 8px;
+  position: relative;
+}
+
+.ppp-other-projects__container {
+  row-gap: 40px;
+}
+
+.ppp-other-projects__title {
+  max-width: 1020px;
+}
+
+.ppp-other-projects__blocks {
+  grid-gap: 20px;
+}
+
+.ppp-other-projects__block {
+  row-gap: 20px;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.ppp-other-projects__top {
+  row-gap: 16px;
+}
+
+.ppp-other-projects__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #dee2e7;
+  background-color: #ffffff;
+}
+
+.ppp-other-projects__icon img {
+  width: 70px;
+  height: 70px;
+}
+
+.ppp-other-projects__link {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  transition: color 0.4s ease;
+}
+
+.ppp-other-projects__link:hover {
+  color: #2d6fd0;
+}
+
+.ppp-other-projects__content {
+  row-gap: 20px;
+}
+
+.ppp-other-projects__content li {
+  row-gap: 8px;
+}
+
+.ppp-other-projects__content li b {
+  font-weight: 600;
+}
+
 @media screen and (min-width: 48em) {
   #map:hover [class*=copyrights-pane],
   #map:hover [class*=controls__control] {
@@ -10552,6 +11200,13 @@ fieldset {
     font-size: 64px;
   }
 
+  .ppp-other-projects__title,
+  .ppp-consulation__title,
+  .ppp-measures__title,
+  .ppp-contacts__title,
+  .ppp-register__title,
+  .ppp-proposals__title,
+  .ppp-projects__title,
   .monitoring-request__title,
   .call-line__title,
   .contacts__title,
@@ -10586,6 +11241,8 @@ fieldset {
     font-size: 48px;
   }
 
+  .ppp-partner__block-tit,
+  .ppp-projects__subtitle,
   .monitoring-request__subtitle,
   .not-found__txt,
   .subsidies__subtitle,
@@ -10624,6 +11281,13 @@ fieldset {
     font-size: 26px;
   }
 
+  .ppp-partner__block-list > li,
+  .ppp-partner__list > li,
+  .ppp-consulation__block:not(.ppp-consulation__block--img),
+  .ppp-consulation__subtitles p,
+  .ppp-implementation__list li,
+  .ppp-projects__desc-price,
+  .ppp-projects__desc-subtitle,
   .monitoring-request__items li:not(.monitoring-request__items--img),
   .monitoring-request__subtitles p,
   .call-line__subtitles p,
@@ -10701,6 +11365,11 @@ fieldset {
     line-height: 130%;
   }
 
+  .ppp-partner__title,
+  .ppp-scheme__title,
+  .ppp-implementation__title,
+  .ppp-assistance__title,
+  .ppp-tax__title,
   .useful-links__title,
   .region-team__title,
   .bonds__title,
@@ -10753,6 +11422,8 @@ fieldset {
     font-size: 32px;
   }
 
+  .ppp-implementation__list li b,
+  .ppp-tax__desc b,
   .monitoring-request__items--four b,
   .monitoring-request__list--four b,
   .tax-blocks__rate b,
@@ -11009,6 +11680,10 @@ fieldset {
     height: 500px;
   }
 
+  .legislation__btns {
+    margin-top: 40px;
+  }
+
   .governor__container {
     padding: 140px 0;
   }
@@ -11257,10 +11932,6 @@ fieldset {
     -webkit-box-orient: vertical;
     overflow: hidden;
     white-space: wrap;
-  }
-
-  .legislation__btns {
-    margin-top: 40px;
   }
 
   .similar-stories__title {
@@ -11935,6 +12606,119 @@ fieldset {
   .monitoring-request__items {
     grid-auto-rows: 200px;
   }
+
+  .ppp-projects__img {
+    height: 300px;
+  }
+
+  .ppp-projects__content {
+    padding: 24px;
+  }
+
+  .ppp-projects__list li b {
+    font-size: 40px;
+  }
+
+  .ppp-projects__result-price b {
+    font-size: 40px;
+  }
+
+  .ppp-projects__desc-price {
+    width: auto;
+  }
+
+  .ppp-projects__desc-subtitle,
+  .ppp-projects__desc-price {
+    font-size: 20px;
+  }
+
+  .ppp-projects__desc-prices {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+
+  .ppp-proposals__img {
+    height: 300px;
+  }
+
+  .ppp-proposals__content {
+    padding: 24px;
+  }
+
+  .ppp-contacts__blocks {
+    row-gap: 40px;
+  }
+
+  .ppp-measures__title {
+    max-width: 670px;
+  }
+
+  .ppp-tax__blocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ppp-assistance__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ppp-assistance__title {
+    max-width: 580px;
+  }
+
+  .ppp-implementation__title {
+    max-width: 580px;
+  }
+
+  .ppp-implementation__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ppp-scheme__title {
+    max-width: 580px;
+  }
+
+  .ppp-scheme--concluding .ppp-scheme__title {
+    max-width: 950px;
+  }
+
+  .ppp-consulation__title {
+    width: calc(40% + 10px);
+  }
+
+  .ppp-consulation__title,
+  .ppp-consulation__subtitles {
+    padding: 0;
+  }
+
+  .ppp-consulation__subtitles p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .ppp-consulation__block:not(.ppp-consulation__block--img) b {
+    font-size: 32px;
+  }
+
+  .ppp-partner__title,
+  .ppp-partner__list {
+    max-width: 580px;
+  }
+
+  .ppp-partner__title > li,
+  .ppp-partner__list > li {
+    padding-left: 32px;
+  }
+
+  .ppp-other-projects__title {
+    max-width: 852px;
+  }
+
+  .ppp-other-projects__blocks {
+    grid-auto-rows: 1fr;
+  }
+
+  .ppp-other-projects__link {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -11950,6 +12734,13 @@ fieldset {
     font-size: 48px;
   }
 
+  .ppp-other-projects__title,
+  .ppp-consulation__title,
+  .ppp-measures__title,
+  .ppp-contacts__title,
+  .ppp-register__title,
+  .ppp-proposals__title,
+  .ppp-projects__title,
   .monitoring-request__title,
   .call-line__title,
   .contacts__title,
@@ -11984,6 +12775,12 @@ fieldset {
     font-size: 40px;
   }
 
+  .ppp-tax__tit,
+  .ppp-contacts__tit,
+  .ppp-register__block-title,
+  .ppp-projects__result-price,
+  .ppp-projects__list li,
+  .ppp-projects__tit,
   .region-team__block-title,
   .presentation-materials__subtitle,
   .tax-blocks__list-title,
@@ -12014,11 +12811,11 @@ fieldset {
   .transport-inf__block-title,
   .regional-project__prices-title,
   .regional-project__direction-title,
-  .legislation__item-title,
   .recovery-pass__title,
   .success-hist__slide-txt,
   .benefits__slide-txt,
   .steps-investor__item-tit,
+  .legislation__item-title,
   .calculator__block-title,
   .modal-pers-cab__title p,
   .content strong {
@@ -12768,6 +13565,40 @@ fieldset {
     height: 400px;
   }
 
+  .legislation__contents {
+    width: 100%;
+  }
+
+  .legislation__btns {
+    margin-top: 32px;
+  }
+
+  .legislation__btns__btns {
+    display: flex;
+    margin-top: 54px;
+  }
+
+  .legislation__items {
+    margin-top: 32px;
+  }
+
+  .legislation__item-title {
+    line-height: 120%;
+  }
+
+  .legislation__item-btn {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  .legislation__title {
+    font-size: 30px;
+  }
+
+  .legislation--ppp .legislation__item-link {
+    width: 100%;
+  }
+
   .governor__container {
     padding: 100px 0 550px 0;
     justify-content: center;
@@ -13141,36 +13972,6 @@ fieldset {
 
   .account__table-item:nth-child(4) {
     width: 19.6%;
-  }
-
-  .legislation__contents {
-    width: 100%;
-  }
-
-  .legislation__btns {
-    margin-top: 32px;
-  }
-
-  .legislation__btns__btns {
-    display: flex;
-    margin-top: 54px;
-  }
-
-  .legislation__items {
-    margin-top: 32px;
-  }
-
-  .legislation__item-title {
-    line-height: 120%;
-  }
-
-  .legislation__item-btn {
-    padding: 16px;
-    align-items: flex-start;
-  }
-
-  .legislation__title {
-    font-size: 30px;
   }
 
   .similar-stories__title {
@@ -14916,6 +15717,269 @@ fieldset {
   .monitoring-request__list {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .ppp-projects__container {
+    row-gap: 32px;
+  }
+
+  .ppp-projects__img {
+    height: 240px;
+  }
+
+  .ppp-projects__tit {
+    line-height: 130%;
+    font-size: 18px;
+  }
+
+  .ppp-projects__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ppp-projects__list li {
+    padding: 24px;
+  }
+
+  .ppp-projects__list li b {
+    font-size: 36px;
+  }
+
+  .ppp-projects__list li:last-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .ppp-projects__result {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 24px 24px 24px 32px;
+    row-gap: 16px;
+  }
+
+  .ppp-projects__result-price b {
+    font-size: 36px;
+  }
+
+  .ppp-projects__desc-subtitle,
+  .ppp-projects__desc-price {
+    font-size: 18px;
+  }
+
+  .ppp-projects__desc-prices {
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+
+  .ppp-proposals__title {
+    margin-bottom: 32px;
+  }
+
+  .ppp-proposals__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ppp-proposals__img {
+    height: 240px;
+  }
+
+  .ppp-proposals__content {
+    padding: 20px;
+  }
+
+  .ppp-proposals__cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+  }
+
+  .ppp-proposals__date {
+    font-size: 14px;
+  }
+
+  .ppp-proposals__btn {
+    font-size: 16px;
+  }
+
+  .ppp-register__title {
+    margin-bottom: 32px;
+  }
+
+  .ppp-register__block {
+    max-width: 100%;
+  }
+
+  .ppp-register__block-link {
+    width: 100%;
+  }
+
+  .ppp-contacts__blocks {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    row-gap: 20px;
+  }
+
+  .ppp-contacts__container {
+    row-gap: 32px;
+  }
+
+  .ppp-contacts__block {
+    padding: 24px;
+  }
+
+  .ppp-contacts__block:last-child {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+
+  .ppp-measures__container {
+    row-gap: 32px;
+  }
+
+  .ppp-measures__title {
+    max-width: 100%;
+  }
+
+  .ppp-measures__img {
+    height: 400px;
+  }
+
+  .ppp-tax__container {
+    row-gap: 32px;
+  }
+
+  .ppp-tax__title {
+    font-size: 36px;
+    max-width: 100%;
+  }
+
+  .ppp-tax__block {
+    padding: 24px;
+  }
+
+  .ppp-assistance__title {
+    font-size: 36px;
+    max-width: 100%;
+  }
+
+  .ppp-assistance__container {
+    row-gap: 32px;
+  }
+
+  .ppp-assistance__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ppp-assistance__list li {
+    padding: 0;
+  }
+
+  .ppp-implementation__title {
+    max-width: 100%;
+    font-size: 36px;
+  }
+
+  .ppp-implementation__container {
+    row-gap: 32px;
+  }
+
+  .ppp-implementation__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ppp-implementation__list li {
+    padding: 24px;
+  }
+
+  .ppp-scheme__container {
+    row-gap: 32px;
+  }
+
+  .ppp-scheme__title {
+    max-width: 100%;
+    font-size: 36px;
+  }
+
+  .ppp-consulation__container {
+    row-gap: 32px;
+  }
+
+  .ppp-consulation__titles {
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  .ppp-consulation__title {
+    width: 100%;
+  }
+
+  .ppp-consulation__title,
+  .ppp-consulation__subtitles {
+    padding: 0;
+  }
+
+  .ppp-consulation__blocks {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(179px, auto);
+  }
+
+  .ppp-consulation__block:not(.ppp-consulation__block--img) {
+    padding: 24px;
+    row-gap: 24px;
+  }
+
+  .ppp-consulation__block--img {
+    order: 1;
+    height: 300px;
+  }
+
+  .ppp-partner__title {
+    max-width: 100%;
+    font-size: 36px;
+  }
+
+  .ppp-partner__container {
+    row-gap: 32px;
+  }
+
+  .ppp-partner__list {
+    max-width: 100%;
+  }
+
+  .ppp-partner__blocks {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ppp-partner__block {
+    padding: 24px;
+    row-gap: 24px;
+  }
+
+  .ppp-partner__block-list > li {
+    padding-left: 32px;
+  }
+
+  .ppp-partner__block-list > li ul li {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    padding-left: 6px;
+  }
+
+  .ppp-other-projects__container {
+    row-gap: 32px;
+  }
+
+  .ppp-other-projects__title {
+    max-width: 100%;
+  }
+
+  .ppp-other-projects__blocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ppp-other-projects__block {
+    padding: 24px;
+  }
+
+  .ppp-other-projects__content {
+    row-gap: 16px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -14925,6 +15989,13 @@ fieldset {
     line-height: 110%;
   }
 
+  .ppp-other-projects__title,
+  .ppp-consulation__title,
+  .ppp-measures__title,
+  .ppp-contacts__title,
+  .ppp-register__title,
+  .ppp-proposals__title,
+  .ppp-projects__title,
   .monitoring-request__title,
   .call-line__title,
   .contacts__title,
@@ -14961,6 +16032,8 @@ fieldset {
             hyphens: auto;
   }
 
+  .ppp-partner__block-tit,
+  .ppp-projects__subtitle,
   .monitoring-request__subtitle,
   .not-found__txt,
   .subsidies__subtitle,
@@ -14999,6 +16072,13 @@ fieldset {
     font-size: 24px;
   }
 
+  .ppp-partner__block-list > li,
+  .ppp-partner__list > li,
+  .ppp-consulation__block:not(.ppp-consulation__block--img),
+  .ppp-consulation__subtitles p,
+  .ppp-implementation__list li,
+  .ppp-projects__desc-price,
+  .ppp-projects__desc-subtitle,
   .monitoring-request__items li:not(.monitoring-request__items--img),
   .monitoring-request__subtitles p,
   .call-line__subtitles p,
@@ -15079,6 +16159,12 @@ fieldset {
     font-size: 18px;
   }
 
+  .ppp-tax__tit,
+  .ppp-contacts__tit,
+  .ppp-register__block-title,
+  .ppp-projects__result-price,
+  .ppp-projects__list li,
+  .ppp-projects__tit,
   .region-team__block-title,
   .presentation-materials__subtitle,
   .tax-blocks__list-title,
@@ -15109,17 +16195,22 @@ fieldset {
   .transport-inf__block-title,
   .regional-project__prices-title,
   .regional-project__direction-title,
-  .legislation__item-title,
   .recovery-pass__title,
   .success-hist__slide-txt,
   .benefits__slide-txt,
   .steps-investor__item-tit,
+  .legislation__item-title,
   .calculator__block-title,
   .modal-pers-cab__title p,
   .content strong {
     font-size: 20px;
   }
 
+  .ppp-partner__title,
+  .ppp-scheme__title,
+  .ppp-implementation__title,
+  .ppp-assistance__title,
+  .ppp-tax__title,
   .useful-links__title,
   .region-team__title,
   .bonds__title,
@@ -15159,6 +16250,8 @@ fieldset {
             hyphens: auto;
   }
 
+  .ppp-implementation__list li b,
+  .ppp-tax__desc b,
   .monitoring-request__items--four b,
   .monitoring-request__list--four b,
   .tax-blocks__rate b,
@@ -15844,6 +16937,14 @@ fieldset {
     padding: 0;
   }
 
+  .legislation__btns button span:first-child {
+    display: none;
+  }
+
+  .legislation__btns button span:last-child {
+    display: block;
+  }
+
   .governor__container {
     padding: 90px 0 360px;
     justify-content: center;
@@ -16364,14 +17465,6 @@ fieldset {
   .account__content--appeals .account__fieldset-file {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .legislation__btns button span:first-child {
-    display: none;
-  }
-
-  .legislation__btns button span:last-child {
-    display: block;
   }
 
   .similar-stories__title {
@@ -17755,6 +18848,144 @@ fieldset {
 
   .monitoring-request__block:not(:last-child) {
     margin-bottom: 32px;
+  }
+
+  .ppp-projects__cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+  }
+
+  .ppp-projects__content {
+    padding: 20px;
+  }
+
+  .ppp-projects__link {
+    font-size: 16px;
+  }
+
+  .ppp-projects__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .ppp-projects__list li:last-child {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+
+  .ppp-projects__list li b {
+    font-size: 32px;
+  }
+
+  .ppp-projects__result {
+    padding: 24px;
+  }
+
+  .ppp-projects__result-price b {
+    font-size: 32px;
+  }
+
+  .ppp-projects__desc-subtitle,
+  .ppp-projects__desc-price {
+    font-size: 16px;
+  }
+
+  .ppp-projects__desc-prices {
+    row-gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ppp-contacts__phone,
+  .ppp-contacts__email {
+    font-size: 20px;
+  }
+
+  .ppp-contacts__blocks {
+    row-gap: 16px;
+  }
+
+  .ppp-contacts__txt {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .ppp-contacts__link {
+    font-size: 16px;
+  }
+
+  .ppp-tax__title {
+    font-size: 24px;
+  }
+
+  .ppp-tax__blocks {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+  }
+
+  .ppp-tax__tit {
+    font-size: 24px;
+  }
+
+  .ppp-tax__desc span {
+    margin: 0;
+  }
+
+  .ppp-tax__desc b {
+    font-size: 32px;
+  }
+
+  .ppp-assistance__title {
+    font-size: 24px;
+  }
+
+  .ppp-assistance__list {
+    row-gap: 8px;
+  }
+
+  .ppp-implementation__title {
+    font-size: 24px;
+  }
+
+  .ppp-implementation__list {
+    grid-gap: 16px;
+  }
+
+  .ppp-scheme__title {
+    max-width: 100%;
+    font-size: 24px;
+  }
+
+  .ppp-consulation__blocks {
+    margin-top: -8px;
+  }
+
+  .ppp-consulation__block:not(.ppp-consulation__block--img) b {
+    font-size: 24px;
+  }
+
+  .ppp-consulation__block--img {
+    height: 248px;
+  }
+
+  .ppp-partner__title {
+    font-size: 24px;
+  }
+
+  .ppp-partner__block-list {
+    row-gap: 8px;
+  }
+
+  .ppp-partner__block-list > li ul {
+    margin-top: 8px;
+  }
+
+  .ppp-partner__block-list > li ul li {
+    padding: 0;
+  }
+
+  .ppp-other-projects__blocks {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

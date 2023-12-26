@@ -1,0 +1,71 @@
+.ppp-assistance {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    max-width: 870px;
+  }
+
+  &__list {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+    row-gap: 12px;
+
+    li {
+      padding-right: 20px;
+    }
+  }
+
+  .content ul:not(:first-child),
+  .content ul > li {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-assistance {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+      max-width: 580px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-assistance {
+    &__title {
+      font-size: 36px;
+      max-width: 100%;
+    }
+
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+
+      li {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ppp-assistance {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__list {
+      row-gap: 8px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.ppp-measures {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %h2;
+    max-width: 870px;
+  }
+
+  &__img {
+    @include sizes(100%, 500px);
+
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-measures {
+    &__title {
+      max-width: 670px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-measures {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__title {
+      max-width: 100%;
+    }
+
+    &__img {
+      height: 400px;
+    }
+  }
+}

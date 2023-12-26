@@ -1,0 +1,279 @@
+.ppp-projects {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %h2;
+  }
+
+  &__cards {
+    @extend %gridColumnTwo;
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+  }
+
+  &__card {
+    @extend %flexColumn;
+  }
+
+  &__img {
+    @include sizes(100%, 343px);
+    flex-shrink: 0;
+
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  &__content {
+    @extend %flexColumn;
+    justify-content: space-between;
+    row-gap: 32px;
+    border-radius: 0 0 4px 4px;
+    padding: 32px;
+    background-color: $white;
+    height: 100%;
+  }
+
+  &__tit {
+    @extend %subheader;
+    @include croppingText(2);
+  }
+
+  &__link {
+    margin: 0 0 0 auto;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+    border-bottom: 1px solid;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  &__subtitle {
+    @extend %h3;
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    @extend %gridColumnThree;
+    grid-gap: 20px;
+    margin-bottom: 20px;
+
+    li {
+      @extend %subheader;
+      @extend %flexColumn;
+      row-gap: 32px;
+      padding: 32px;
+      border-radius: 4px;
+      background-color: $white;
+
+      b {
+        color: $bluePrimary;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__result {
+    @extend %gridColumnTwo;
+    background: $blueGradient;
+    padding: 32px;
+    border-radius: 4px;
+    column-gap: 20px;
+  }
+
+  &__result-price {
+    @extend %subheader;
+    @extend %flexColumn;
+    row-gap: 16px;
+    color: $white;
+
+    b {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 120%;
+      color: $white;
+    }
+  }
+
+  &__desc {
+    @extend %flexColumn;
+    row-gap: 16px;
+    color: $white;
+  }
+
+  &__desc-subtitle {
+    @extend %mainTxt;
+  }
+
+  &__desc-prices {
+    @extend %gridColumnTwo;
+    column-gap: 8px;
+  }
+
+  &__desc-price {
+    @extend %flexColumn;
+    @extend %mainTxt;
+    row-gap: 4px;
+    width: 300px;
+
+    b {
+      @extend %numTextSmall;
+      color: $white;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-projects {
+    &__img {
+      height: 300px;
+    }
+
+    &__content {
+      padding: 24px;
+    }
+
+    &__list {
+      li {
+        b {
+          font-size: 40px;
+        }
+      }
+    }
+
+    &__result-price {
+      b {
+        font-size: 40px;
+      }
+    }
+
+    &__desc-price {
+      width: auto;
+    }
+
+    &__desc-subtitle,
+    &__desc-price {
+      font-size: 20px;
+    }
+
+    &__desc-prices {
+      column-gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-projects {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__img {
+      height: 240px;
+    }
+
+    &__tit {
+      line-height: 130%;
+      font-size: 18px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        padding: 24px;
+
+        b {
+          font-size: 36px;
+        }
+
+        &:last-child {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+      }
+    }
+
+    &__result {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 24px 24px 24px 32px;
+      row-gap: 16px;
+    }
+
+    &__result-price {
+      b {
+        font-size: 36px;
+      }
+    }
+
+    &__desc-subtitle,
+    &__desc-price {
+      font-size: 18px;
+    }
+
+    &__desc-prices {
+      column-gap: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ppp-projects {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 16px;
+    }
+
+    &__content {
+      padding: 20px;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 16px;
+      margin-bottom: 16px;
+
+      li:last-child {
+        grid-column-start: auto;
+        grid-column-end: auto;
+      }
+
+      li b {
+        font-size: 32px;
+      }
+    }
+
+    &__result {
+      padding: 24px;
+    }
+
+    &__result-price {
+      b {
+        font-size: 32px;
+      }
+    }
+
+    &__desc-subtitle,
+    &__desc-price {
+      font-size: 16px;
+    }
+
+    &__desc-prices {
+      row-gap: 16px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

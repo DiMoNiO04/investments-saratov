@@ -1,0 +1,115 @@
+.ppp-other-projects {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %h2;
+    max-width: 1020px;
+  }
+
+  &__blocks {
+    @extend %gridColumnThree;
+    grid-gap: 20px;
+  }
+
+  &__block {
+    @extend %flexColumn;
+    row-gap: 20px;
+    padding: 32px;
+    background-color: $white;
+    border-radius: 4px;
+  }
+
+  &__top {
+    @extend %flexColumn;
+    row-gap: 16px;
+  }
+
+  &__icon {
+    @extend %flexCenter;
+    @include sizes(80px, 80px);
+    border-radius: 50%;
+    border: 1px solid $inputGreyStroke;
+    background-color: $white;
+
+    img {
+      @include sizes(70px, 70px);
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+    transition: $transitionColor;
+
+    &:hover {
+      color: $bluePrimary;
+    }
+  }
+
+  &__content {
+    @extend %flexColumn;
+    row-gap: 20px;
+
+    li {
+      @extend %regular16;
+      @extend %flexColumn;
+      row-gap: 8px;
+
+      b {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-other-projects {
+    &__title {
+      max-width: 852px;
+    }
+
+    &__blocks {
+      grid-auto-rows: 1fr;
+    }
+
+    &__link {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-other-projects {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__title {
+      max-width: 100%;
+    }
+
+    &__blocks {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__block {
+      padding: 24px;
+    }
+
+    &__content {
+      row-gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ppp-other-projects {
+    &__blocks {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

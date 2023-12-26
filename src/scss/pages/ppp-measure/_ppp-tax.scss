@@ -1,0 +1,96 @@
+.ppp-tax {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+  }
+
+  &__blocks {
+    @extend %gridColumnFour;
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+  }
+
+  &__block {
+    @extend %flexColumn;
+    row-gap: 32px;
+    justify-content: space-between;
+    padding: 32px;
+    border-radius: 4px;
+    background-color: $white;
+  }
+
+  &__tit {
+    @extend %subheader;
+  }
+
+  &__desc {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 16px;
+
+    b {
+      @extend %numTextMid;
+    }
+
+    span {
+      @extend %regular16;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-tax {
+    &__blocks {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-tax {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__title {
+      font-size: 36px;
+      max-width: 100%;
+    }
+
+    &__block {
+      padding: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ppp-tax {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__blocks {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 16px;
+    }
+
+    &__tit {
+      font-size: 24px;
+    }
+
+    &__desc {
+      span {
+        margin: 0;
+      }
+
+      b {
+        font-size: 32px;
+      }
+    }
+  }
+}

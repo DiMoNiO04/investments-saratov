@@ -1,0 +1,75 @@
+.ppp-implementation {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    max-width: 870px;
+  }
+
+  &__list {
+    @extend %gridColumnFour;
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+
+    li {
+      @extend %mainTxt;
+      @extend %flexColumn;
+      row-gap: 32px;
+      padding: 32px;
+      border-radius: 4px;
+      background-color: $white;
+
+      b {
+        @extend %numTextMid;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-implementation {
+    &__title {
+      max-width: 580px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-implementation {
+    &__title {
+      max-width: 100%;
+      font-size: 36px;
+    }
+
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+
+      li {
+        padding: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ppp-implementation {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__list {
+      grid-gap: 16px;
+    }
+  }
+}
