@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Технопарк saratov digital</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231227120744" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231227120744" />
 </head>
 
 
@@ -547,7 +547,10 @@
         <p>В 2022 году продолжается реализация проекта по созданию частного технопарка в г. Саратове.</p>
       </div>
       <div class="technopark__image">
-        <img src="assets/img/backgr-image/img3.jpg" alt="">
+        <picture>
+          <source media="(min-width: 768px)" srcset="assets/img/backgr-image/img3.jpg">
+          <img src="assets/img/backgr-image/img3-mob.jpg">
+        </picture>
       </div>
       <div class="technopark__advan">
         <div class="technopark__advan-inner">
@@ -677,19 +680,22 @@
           <div class="technopark__contacts-label">Telegram</div>
           <a class="technopark__contacts-link" href="https://telegram.me/saratovdigital">t.me/saratovdigital</a>
         </div>
-       
       </div>
     </div>
     <div class="technopark__records-item">
-      <div class="technopark__records-name">
-        Фотогалерея
-      </div>
-      <div class="technopark__gallery">
-        <div class="technopark__gallery-item">
-          <img src="assets/img/gallery/img2.jpg" alt="">
-        </div>
-        <div class="technopark__gallery-item">
-          <img src="assets/img/gallery/img3.jpg" alt="">
+      <div class="technopark__records-name">Фотогалерея</div>
+      <div class="swiper image-gallery__swiper territory-develop__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="territory-develop__gallery-item">
+              <picture><source srcset="assets/img/gallery/img2.webp" type="image/webp"><img src="assets/img/gallery/img2.jpg" alt="" /></picture>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="territory-develop__gallery-item">
+              <picture><source srcset="assets/img/gallery/img3.webp" type="image/webp"><img src="assets/img/gallery/img3.jpg" alt="" /></picture>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1403,11 +1409,11 @@
   </div>
 </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231227120744"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js?_v=20231227120744"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20231227120744"></script>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?_v=20231227120744"></script>
 
 </body>
 

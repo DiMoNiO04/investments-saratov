@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Предложить площадку</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231227120744" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231227120744" />
 </head>
 
 
@@ -541,88 +541,101 @@
 
   <section class="section offer-area">
   <div class="container">
-    <h1 class="offer-area__title-h1">Предложить площадку</h1>
+    <div class="offer-area__head">
+      <h1 class="offer-area__title-h1">Предложить площадку</h1>
+      <div class="offer-area__text">
+        <p>Станьте частью перспективного развития! Предоставьте свою площадку для инвестиций и воплотите свои бизнес-идеи в Саратовской области.</p>
+      </div>
+    </div>
     <div class="offer-area__block">
       <div class="offer-area__image">
-        <img src="assets/img/offer-area/offer-area-image.jpg" alt="">
+        <picture><source srcset="assets/img/offer-area/offer-area-image.webp" type="image/webp"><img src="assets/img/offer-area/offer-area-image.jpg" alt="" /></picture>
       </div>
       <div class="offer-area__content">
         <form class="auth__form" id="auth-form">
-          <div class="auth__form-input input">
-            <div class="input__head">Адрес площадки*</div>
-            <div class="input__input">
-              <input autocomplete="off" type="text" placeholder="Введите адрес">
+          <div class="auth__form-block">
+            <div class="auth__form-input input">
+              <div class="input__head">Адрес площадки*</div>
+              <div class="input__input">
+                <input autocomplete="off" type="text" placeholder="Введите адрес" />
+              </div>
+              <div class="input__hint">Error</div>
             </div>
-            <div class="input__hint">Error</div>
-          </div>
-          <div class="dropdown dropdown-def js-dropdown">
-            <div class="dropdown__headline">Вид предоставляемого права</div>
-            <div class="dropdown__header js-dropdown-inner">
-              <div class="dropdown__value js-dropdown-value">Выберите из списка</div>
-              <button type="button" class="dropdown__btn">
-                <svg>
-                  <use xlink:href="assets/img/icons/icons.svg#arrow-black-down"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="dropdown__content">
-              <div class="dropdown__items" data-simplebar="">
-                <div class="dropdown__item js-dropdown-item">
-                  <input id="item-1" type="radio" name="item" value="item-1">
-                  <label for="item-1">Item-1</label>
-                </div>
-                <div class="dropdown__item js-dropdown-item">
-                  <input id="item-2" type="radio" name="item" value="item-2">
-                  <label for="item-2">Item-2</label>
-                </div>
-                <div class="dropdown__item js-dropdown-item">
-                  <input id="item-3" type="radio" name="item" value="item-3">
-                  <label for="item-3">Item-3</label>
-                </div>
-                <div class="dropdown__item js-dropdown-item">
-                  <input id="item-4" type="radio" name="item" value="item-4">
-                  <label for="item-4">Item-4</label>
-                </div>
-                <div class="dropdown__item js-dropdown-item">
-                  <input id="item-5" type="radio" name="item" value="item-5">
-                  <label for="item-5">Item-5</label>
-                </div>
-                <div class="dropdown__item js-dropdown-item">
-                  <input id="item-6" type="radio" name="item" value="item-6">
-                  <label for="item-6">Item-6</label>
+            <div class="dropdown dropdown-def js-dropdown">
+              <div class="dropdown__headline">Вид предоставляемого права</div>
+              <div class="dropdown__header js-dropdown-inner">
+                <div class="dropdown__value js-dropdown-value">Выберите из списка</div>
+                <button type="button" class="dropdown__btn">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#arrow-black-down"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__items" data-simplebar="">
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-1" type="radio" name="item" value="item-1" />
+                    <label for="item-1">Item-1</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-2" type="radio" name="item" value="item-2" />
+                    <label for="item-2">Item-2</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-3" type="radio" name="item" value="item-3" />
+                    <label for="item-3">Item-3</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-4" type="radio" name="item" value="item-4" />
+                    <label for="item-4">Item-4</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-5" type="radio" name="item" value="item-5" />
+                    <label for="item-5">Item-5</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="item-6" type="radio" name="item" value="item-6" />
+                    <label for="item-6">Item-6</label>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="auth__form-input input">
-            <div class="input__head">ФИО контактного лица</div>
-            <div class="input__input">
-              <input autocomplete="off" type="text" placeholder="Введите ФИО">
+            <div class="auth__form-input input">
+              <div class="input__head">ФИО контактного лица</div>
+              <div class="input__input">
+                <input autocomplete="off" type="text" placeholder="Введите ФИО" />
+              </div>
+              <div class="input__hint">Error</div>
             </div>
-            <div class="input__hint">Error</div>
-          </div>
-          <div class="auth__form-input input">
-            <div class="input__head">Телефон</div>
-            <div class="input__input">
-              <input type="tel" autocomplete="off" name="#" placeholder="Введите номер телефона" inputmode="text">
+            <div class="auth__form-input input">
+              <div class="input__head">Телефон</div>
+              <div class="input__input">
+                <input type="tel" autocomplete="off" name="#" placeholder="Введите номер телефона" inputmode="text" />
+              </div>
+              <div class="input__hint">Error</div>
             </div>
-            <div class="input__hint">Error</div>
-          </div>
-          <div class="auth__form-input input">
-            <div class="input__head">Электронная почта</div>
-            <div class="input__input">
-              <input autocomplete="off" type="email" placeholder="Введите электронную почту">
+            <div class="auth__form-input input">
+              <div class="input__head">Электронная почта</div>
+              <div class="input__input">
+                <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+              </div>
+              <div class="input__hint">Error</div>
             </div>
-            <div class="input__hint">Error</div>
           </div>
-          <button type="submit" form="auth-form" class="auth__form-btn btn btn-def">
-            <span>Отправить</span>
-          </button>
+          <div class="auth__form-block">
+            <button type="submit" form="auth-form" class="auth__form-btn btn btn-def">
+              <span>Предложить площадку</span>
+            </button>
+            <div class="modal-write__btns-desc">
+              Заполняя форму обратной связи, вы соглашаетесь с <a href="#">политикой конфиденциальности.</a>
+            </div>
+          </div>
         </form>
       </div>
     </div>
   </div>
 </section>
+
 </main>
   <footer class="footer">
   <div class="container">
@@ -1278,11 +1291,11 @@
   </div>
 </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231227120744"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js?_v=20231227120744"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20231227120744"></script>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?_v=20231227120744"></script>
 
 </body>
 

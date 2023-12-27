@@ -3,13 +3,18 @@
     <div class="economic-zone__head-container">
       <h1 class="economic-zone__title-h1">Особая экономическая зона технико-внедренческого типа «Алмаз»</h1>
       <div class="economic-zone__content content">
-        <p>Особая экономическая зона технико-внедренческого типа Саратовской области создана в 2020 г. Постановлением
+        <p>
+          Особая экономическая зона технико-внедренческого типа Саратовской области создана в 2020 г. Постановлением
           Правительства РФ от 27 мая 2020 г. № 763 «О создании на территориях Энгельсского, Балаковского муниципальных
           районов и муниципального образования «Город Саратов» Саратовской области особой экономической зоны
-          технико-внедренческого типа»</p>
+          технико-внедренческого типа»
+        </p>
       </div>
       <div class="economic-zone__image">
-        <img src="@img/backgr-image/img4.jpg" alt="">
+        <picture>
+          <source media="(min-width: 768px)" srcset="@img/backgr-image/img4.jpg" />
+          <img src="@img/backgr-image/img4-mob.jpg" />
+        </picture>
       </div>
       <div class="economic-zone__advan">
         <div class="economic-zone__advan-inner">
@@ -30,9 +35,7 @@
     </div>
     <div class="economic-zone__records-container">
       <div class="economic-zone__records-item">
-        <div class="economic-zone__records-name">
-          Количество резидентов
-        </div>
+        <div class="economic-zone__records-name">Количество резидентов</div>
         <div class="economic-zone__records-info content">
           <ul>
             <li>3 резидента на площадке в Саратове</li>
@@ -42,18 +45,14 @@
         </div>
       </div>
       <div class="economic-zone__records-item">
-        <div class="economic-zone__records-name">
-          Минимальная стоимость аренды
-        </div>
+        <div class="economic-zone__records-name">Минимальная стоимость аренды</div>
         <div class="economic-zone__records-info content">
           <p><b>от 1680 ₽/ м2/год</b>Свободные промышленные помещения</p>
           <p><b>от 2880 руб./м2/год</b>Свободные офисные помещения</p>
         </div>
       </div>
       <div class="economic-zone__records-item">
-        <div class="economic-zone__records-name">
-          Список отраслей
-        </div>
+        <div class="economic-zone__records-name">Список отраслей</div>
         <div class="economic-zone__records-items">
           <div class="economic-zone__records-info block-white content">
             <p>Технико-внедренческая деятельность</p>
@@ -64,31 +63,29 @@
         </div>
       </div>
       <div class="economic-zone__records-item">
-        <div class="economic-zone__records-name">
-          Инфраструктура и сервисы
-        </div>
+        <div class="economic-zone__records-name">Инфраструктура и сервисы</div>
         <div class="economic-zone__records-info content">
-          <p>На площадках в особой экономической зоны предусмотрены площадки, как обеспеченные инфраструктурной, так и
-            без подведенной инфраструктуры</p>
+          <p>
+            На площадках в особой экономической зоны предусмотрены площадки, как обеспеченные инфраструктурной, так и
+            без подведенной инфраструктуры
+          </p>
         </div>
       </div>
       <div class="economic-zone__records-item">
-        <div class="economic-zone__records-name">
-          Ограничения по видам деятельности
-        </div>
+        <div class="economic-zone__records-name">Ограничения по видам деятельности</div>
         <div class="economic-zone__records-info content">
-          <p>Разработка месторождений полезных ископаемых, за исключением разработки месторождений минеральных вод и
-            других природных лечебных ресурсов;
-            Производство и переработка подакцизных товаров (за исключением производства легковых автомобилей,
-            мотоциклов, производства и переработки этана, сжиженных углеводородных газов и стали жидкой)</p>
+          <p>
+            Разработка месторождений полезных ископаемых, за исключением разработки месторождений минеральных вод и
+            других природных лечебных ресурсов; Производство и переработка подакцизных товаров (за исключением
+            производства легковых автомобилей, мотоциклов, производства и переработки этана, сжиженных углеводородных
+            газов и стали жидкой)
+          </p>
         </div>
       </div>
       <div class="economic-zone__records-item">
-        <div class="economic-zone__records-name">
-          Дополнительные услуги управляющей компании
-        </div>
-        <div class="economic-zone__records-items">
-          <div class="economic-zone__records-info content">
+        <div class="economic-zone__records-name">Дополнительные услуги управляющей компании</div>
+        <div class="economic-zone__records-lists">
+          <div class="economic-zone__records-list content">
             <ul>
               <li>Почтовые услуги</li>
               <li>Бухгалтерские услуги</li>
@@ -97,7 +94,7 @@
               <li>Услуги в сфере земельно-имущественных отношений</li>
             </ul>
           </div>
-          <div class="economic-zone__records-info content">
+          <div class="economic-zone__records-list content">
             <ul>
               <li>Услуги в сфере таможенных отношений</li>
               <li>Услуги закупочной деятельности</li>
@@ -107,71 +104,159 @@
           </div>
         </div>
       </div>
+      <div class="economic-zone__records-item economic-zone__supports">
+        <div class="economic-zone__records-name">Меры поддержки</div>
+        <div class="economic-zone__items">
+          <div class="economic-zone__item">
+            <div class="economic-zone__item-name">Налог на прибыль</div>
+            <div class="economic-zone__item-text">
+              <p>Региональный бюджет: первые пять лет - 0%; с 6 по 10 годы - 5%; начиная с 11 года - 13,5%</p>
+              <p>Федеральный бюджет: 2%</p>
+            </div>
+          </div>
+          <div class="economic-zone__item">
+            <div class="economic-zone__item-name">Налог на имущество</div>
+            <div class="economic-zone__item-text">
+              <p><strong>0%</strong> 10 лет</p>
+            </div>
+          </div>
+          <div class="economic-zone__item">
+            <div class="economic-zone__item-name">Земельный налог</div>
+            <div class="economic-zone__item-text">
+              <p><strong>0%</strong> 5 лет</p>
+            </div>
+          </div>
+          <div class="economic-zone__item">
+            <div class="economic-zone__item-name">Транспортный налог</div>
+            <div class="economic-zone__item-text">
+              <p><strong>0%</strong> 10 лет</p>
+            </div>
+          </div>
+          <div class="economic-zone__item economic-zone__item-last">
+            <div class="economic-zone__item-name">Прочие льготы</div>
+            <div class="economic-zone__item-text">
+              <p>
+                Для резидентов ОЭЗ, применяющих упрощенную систему налогообложения и получивших статус резидента,
+                начиная с 01.01.21, установлены льготные налоговые ставки в следующих размерах:
+              </p>
+              <p><strong>2%</strong>если объектом налогообложения являются доходы (общая ставка 6%)</p>
+              <p>
+                <strong>7,5%</strong>если объектом налогообложения являются доходы, уменьшенные на величину расходов
+                (общая ставка 15%)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="economic-zone__records-item">
+        <div class="economic-zone__records-name">Наличие режима свободной таможенной зоны:</div>
+        <div class="economic-zone__records-info content">
+          <p>Да (на отдельные площадки)</p>
+        </div>
+      </div>
+      <div class="economic-zone__records-item economic-zone__supports economic-zone__supports-num">
+        <div class="economic-zone__records-name">Как стать резидентом</div>
+        <div class="economic-zone__items">
+          <div class="economic-zone__item">
+            <div class="economic-zone__item-name">01</div>
+            <div class="economic-zone__item-text">
+              <p>
+                Направление заявки, бизнес-плана инвестиционного проекта с приложениями в министерство экономического
+                развития Саратовской области (в соответствии со ст. 13 Федерального закона от 22 июля 2005 года № 116-ФЗ
+                «Об особых экономических зонах в Российской Федерации»)
+              </p>
+            </div>
+          </div>
+          <div class="economic-zone__item">
+            <div class="economic-zone__item-name">02</div>
+            <div class="economic-zone__item-text">
+              <p>Получение одобрения бизнес-плана проекта Наблюдательным и Экспертным советом ОЭЗ;</p>
+            </div>
+          </div>
+          <div class="economic-zone__item">
+            <div class="economic-zone__item-name">03</div>
+            <div class="economic-zone__item-text">
+              <p>
+                Заключение соглашения об осуществлении деятельности в ОЭЗ с министерством экономического развития
+                Саратовской области и управляющей компанией;
+              </p>
+            </div>
+          </div>
+          <div class="economic-zone__item">
+            <div class="economic-zone__item-name">04</div>
+            <div class="economic-zone__item-text">
+              <p>Внесение записи в реестр резидентов ОЭЗ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="economic-zone__records-item economic-zone__supports economic-zone__supports-num economic-zone__amount"
+      >
+        <div class="economic-zone__records-name">Минимальный объем инвестиций</div>
+        <div class="economic-zone__items">
+          <div class="economic-zone__item">
+            <div class="economic-zone__item-name">Технико-внедренческая деятельность</div>
+            <div class="economic-zone__item-text">
+              <p>минимальный размер инвестиций для получения статуса резидента отсутствует</p>
+            </div>
+          </div>
+          <div class="economic-zone__item">
+            <div class="economic-zone__item-name">Промышленно-производственная деятельность</div>
+            <div class="economic-zone__item-text">
+              <p>120 млн рублей минимальный размер инвестиций для получения статуса резидента</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="economic-zone__records-item">
-      <div class="economic-zone__records-name">
-        Отраслевая специализация парка
-      </div>
-      <div class="economic-zone__products">
-        <div class="economic-zone__products-item">
-          <div class="economic-zone__products-icon">
-            <img src="@img/icons/product-icon10.svg" alt="">
-          </div>
-          <div class="economic-zone__products-name">
-            Электротехническая промышленность
-          </div>
-        </div>
-        <div class="economic-zone__products-item">
-          <div class="economic-zone__products-icon">
-            <img src="@img/icons/product-icon11.svg" alt="">
-          </div>
-          <div class="economic-zone__products-name">
-            Информационно-коммуникационные технологии
-          </div>
-        </div>
-        <div class="economic-zone__products-item">
-          <div class="economic-zone__products-icon">
-            <img src="@img/icons/product-icon12.svg" alt="">
-          </div>
-          <div class="economic-zone__products-name">
-            Радиоэлектронная промышленность и приборостроение
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="economic-zone__records-item">
-      <div class="economic-zone__records-name">
-        Контактная информация
-      </div>
+      <div class="economic-zone__records-name">Контактная информация</div>
       <div class="economic-zone__contacts">
         <div class="economic-zone__contacts-item">
-          <div class="economic-zone__contacts-label">Email</div>
-          <a class="economic-zone__contacts-link"
-            href="mailto:KarkashinAA@morion.digital">KarkashinAA@morion.digital</a>
+          <div class="economic-zone__contacts-label">Администратор объекта</div>
+          <span class="economic-zone__contacts-link">АО «УК ОЭЗ «Исток»</span>
         </div>
         <div class="economic-zone__contacts-item">
-          <div class="economic-zone__contacts-label">Telegram</div>
-          <a class="economic-zone__contacts-link" href="https://telegram.me/saratovdigital">t.me/saratovdigital</a>
+          <div class="economic-zone__contacts-label">Адрес администратора объекта</div>
+          <span class="economic-zone__contacts-link">Московская обл., г. Фрязино, ул. Вокзальная, 2а</span>
         </div>
-
+        <div class="economic-zone__contacts-item">
+          <div class="economic-zone__contacts-label">Телефон</div>
+          <a class="economic-zone__contacts-link" href="tel:8 (495) 465 86 47">8 (495) 465 86 47</a>
+        </div>
+        <div class="economic-zone__contacts-item">
+          <div class="economic-zone__contacts-label">Сайт</div>
+          <a class="economic-zone__contacts-link" href="https://saratov-oez.ru/">saratov-oez.ru</a>
+        </div>
       </div>
     </div>
     <div class="economic-zone__records-item">
-      <div class="economic-zone__records-name">
-        Фотогалерея
-      </div>
-      <div class="economic-zone__gallery">
-        <div class="economic-zone__gallery-item">
-          <img src="@img/gallery/img3.jpg" alt="">
-        </div>
-        <div class="economic-zone__gallery-item">
-          <img src="@img/gallery/img4.jpg" alt="">
-        </div>
-        <div class="economic-zone__gallery-item">
-          <img src="@img/gallery/img5.jpg" alt="">
-        </div>
-        <div class="economic-zone__gallery-item">
-          <img src="@img/gallery/img6.jpg" alt="">
+      <div class="economic-zone__records-name">Фотогалерея</div>
+      <div class="economic-zone__gallery"></div>
+
+      <div class="swiper image-gallery__swiper economic-zone__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="economic-zone__gallery-item">
+              <img src="@img/gallery/img3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="economic-zone__gallery-item">
+              <img src="@img/gallery/img4.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="economic-zone__gallery-item">
+              <img src="@img/gallery/img5.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="economic-zone__gallery-item">
+              <img src="@img/gallery/img6.jpg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
