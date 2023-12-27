@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Реестр свободных земельных участков</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231227123242" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231227123242" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231227163336" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231227163336" />
 </head>
 
 
@@ -591,7 +591,10 @@
         <p>В 2022 году создан первый области государственный Столыпинский индустриальный парк.</p>
       </div>
       <div class="industrial-park__image">
-        <picture><source srcset="assets/img/backgr-image/img2.webp" type="image/webp"><img src="assets/img/backgr-image/img2.jpg" alt="" /></picture>
+        <picture>
+          <source media="(min-width: 768px)" srcset="assets/img/backgr-image/img2.jpg" />
+          <img src="assets/img/backgr-image/img2-mob.jpg" />
+        </picture>
       </div>
       <div class="industrial-park__advan">
         <div class="industrial-park__advan-inner">
@@ -752,9 +755,13 @@
     </div>
     <div class="industrial-park__records-item">
       <div class="industrial-park__records-name">Фотогалерея</div>
-      <div class="industrial-park__gallery">
-        <div class="industrial-park__gallery-item">
-          <picture><source srcset="assets/img/gallery/img1.webp" type="image/webp"><img src="assets/img/gallery/img1.jpg" alt="" /></picture>
+      <div class="swiper image-gallery__swiper territory-develop__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="territory-develop__gallery-item">
+              <picture><source srcset="assets/img/gallery/img1.webp" type="image/webp"><img src="assets/img/gallery/img1.jpg" alt="" /></picture>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1468,14 +1475,14 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231227123242"></script>
-<script src="//code.jquery.com/jquery-1.10.2.js?_v=20231227123242"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20231227123242"></script>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231227123242"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231227163336"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js?_v=20231227163336"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20231227163336"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231227163336"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231227123242"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20231227163336"></script>
 
-<script src="js/main.js?_v=20231227123242"></script>
+<script src="js/main.js?_v=20231227163336"></script>
 
   </body>
 </html>

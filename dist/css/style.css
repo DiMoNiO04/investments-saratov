@@ -1238,6 +1238,28 @@ svg {
   visibility: visible;
 }
 
+.territory-develop__contacts-bottom,
+.territory-develop__contacts-item,
+.territory-develop__item,
+.territory-develop__records-inner,
+.territory-develop__records-container,
+.territory-develop__advan-item,
+.territory-develop__head-container,
+.territory-develop__container,
+.technopark__contacts-item,
+.technopark__products-item,
+.technopark__dates,
+.technopark__records-inner,
+.technopark__advan-item,
+.technopark__head-container,
+.technopark__container,
+.economic-zone__contacts-item,
+.economic-zone__item,
+.economic-zone__records-inner,
+.economic-zone__records-container,
+.economic-zone__advan-item,
+.economic-zone__head-container,
+.economic-zone__container,
 .search-query__block-desc,
 .search-query__block,
 .search-query__blocks,
@@ -1330,6 +1352,7 @@ svg {
 .industrial-park__advan-item,
 .industrial-park__head-container,
 .industrial-park__container,
+.offer-area__content .auth__form-block,
 .offer-area__content .auth__form,
 .scheme-inter__block,
 .ao-dev-cor__item,
@@ -1618,6 +1641,15 @@ svg {
   justify-content: space-between;
 }
 
+.territory-develop .territory-develop__amount .territory-develop__items,
+.territory-develop__records-lists,
+.territory-develop__records-items,
+.technopark__contacts,
+.technopark__records-container,
+.economic-zone .economic-zone__amount .economic-zone__items,
+.economic-zone__records-lists,
+.economic-zone__records-items,
+.area-objects__items,
 .ppp-project-geografy__lists,
 .ppp-project-financial__lists,
 .ppp-project-blocks__lists,
@@ -1645,6 +1677,7 @@ svg {
 .industrial-park__records-container,
 .reestr__items,
 .offer-area__block,
+.offer-area__head,
 .single-window__container,
 .infr-plan__titles,
 .dev-corporation__titles,
@@ -1673,11 +1706,17 @@ svg {
 .list-doc__links,
 .list-templates__links,
 .footer__right,
-.map__titles {
+.map__titles,
+.doc-download__items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
+.territory-develop__gallery,
+.territory-develop__items,
+.technopark__products,
+.economic-zone__gallery,
+.economic-zone__advan-inner,
 .ppp-project-geografy__items,
 .ppp-project-financial__items,
 .ppp-other-projects__blocks,
@@ -1687,7 +1726,6 @@ svg {
 .monitoring-request__list--four,
 .invest-contract__blocks-items--three,
 .subsidies__items-list,
-.industrial-park__gallery,
 .industrial-park__contacts,
 .personnel__content,
 .invest-tourism__items,
@@ -1701,11 +1739,15 @@ svg {
 .main-direction__items,
 .regional-standart__elements-items,
 .regul-committee__ask-items,
-.regul-committee__order-items {
+.regul-committee__order-items,
+.image-gallery__swiper .swiper-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
+.territory-develop__contacts,
+.economic-zone__contacts,
+.economic-zone__items,
 .ppp-stages__blocks,
 .ppp-implementation__list,
 .ppp-tax__blocks,
@@ -1719,6 +1761,8 @@ svg {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.territory-develop__advan-inner,
+.technopark__advan-inner,
 .industrial-park__products,
 .footer__lists,
 .footer__top {
@@ -1731,14 +1775,22 @@ svg {
   grid-template-columns: repeat(6, 1fr);
 }
 
-.industrial-park__gallery-item,
+.territory-develop__gallery-item,
+.territory-develop__image,
+.technopark__image,
+.economic-zone__gallery-item,
+.economic-zone__image,
 .industrial-park__image,
 .offer-area__image,
 .invest-committee__image {
   width: 100%;
 }
 
-.industrial-park__gallery-item img,
+.territory-develop__gallery-item img,
+.territory-develop__image img,
+.technopark__image img,
+.economic-zone__gallery-item img,
+.economic-zone__image img,
 .industrial-park__image img,
 .offer-area__image img,
 .invest-committee__image img {
@@ -1827,6 +1879,7 @@ svg {
   line-height: 130%;
 }
 
+.technopark__date-date,
 .industrial-park__date-date {
   font-size: 40px;
   font-weight: 600;
@@ -1841,6 +1894,10 @@ svg {
   text-transform: uppercase;
 }
 
+.territory-develop__title-h1,
+.technopark__title-h1,
+.economic-zone__title-h1,
+.area-objects__title-h1,
 .ppp-project__title,
 .ppp-other-projects__title,
 .ppp-consulation__title,
@@ -1886,6 +1943,11 @@ svg {
   text-transform: uppercase;
 }
 
+.territory-develop__records-name,
+.territory-develop__records-info.amount p,
+.technopark__contacts-link,
+.technopark__records-name,
+.economic-zone__records-name,
 .ppp-project-geografy__tit,
 .ppp-project-geografy__descs-tit,
 .ppp-project-geografy__items li b,
@@ -1936,6 +1998,15 @@ svg {
   line-height: 120%;
 }
 
+.territory-develop__contacts-label,
+.territory-develop__item-text p,
+.territory-develop__advan-label,
+.technopark__contacts-label,
+.technopark__products-name,
+.technopark__advan-label,
+.economic-zone__contacts-label,
+.economic-zone__item-text p,
+.economic-zone__advan-label,
 .ppp-project-geografy__lists-list > li,
 .ppp-project-geografy__txt,
 .ppp-project-geografy__descs-txt,
@@ -1976,6 +2047,7 @@ svg {
 .industrial-park__contacts-label,
 .industrial-park__products-name,
 .industrial-park__advan-label,
+.offer-area__text,
 .ao-dev-cor__txt,
 .single-window__subtitles p,
 .infr-plan__subtitles p,
@@ -2089,6 +2161,15 @@ svg {
   line-height: 130%;
 }
 
+.territory-develop__supports-num .territory-develop__item-name,
+.territory-develop__item-text p strong,
+.territory-develop__item-name,
+.territory-develop__advan-name,
+.technopark__advan-name,
+.economic-zone__supports-num .economic-zone__item-name,
+.economic-zone__item-text p strong,
+.economic-zone__item-name,
+.economic-zone__advan-name,
 .search-query__block-title,
 .ppp-tax__tit,
 .ppp-contacts__tit,
@@ -2133,15 +2214,29 @@ svg {
 .legislation__item-title,
 .calculator__block-title,
 .modal-pers-cab__title p,
+.content p b,
 .content strong {
   font-size: 24px;
   font-weight: 600;
   line-height: 130%;
 }
 
+.territory-develop__contacts-link,
+.economic-zone__contacts-link {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
 .footer__list-title p,
 .footer__list-title a {
   font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.territory-develop__item-text > strong {
+  font-size: 20px;
   font-weight: 600;
   line-height: 130%;
 }
@@ -3590,14 +3685,6 @@ fieldset {
   margin-bottom: 20px;
 }
 
-.content b {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 130%;
-}
-
 .content p:not(:first-child) {
   margin-top: 20px;
 }
@@ -3606,9 +3693,17 @@ fieldset {
   margin-bottom: 20px;
 }
 
+.content p b {
+  color: #2d6fd0;
+  margin-right: 8px;
+}
+
 .content ul > li {
   position: relative;
   padding-left: 36px;
+}
+
+.content ul > li:not(:last-child) {
   margin-bottom: 12px;
 }
 
@@ -3616,7 +3711,7 @@ fieldset {
   content: "";
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 12px;
   background-color: #2d6fd0;
   width: 24px;
   height: 2px;
@@ -3628,6 +3723,10 @@ fieldset {
 
 .content ul:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.doc-download__items {
+  grid-gap: 20px;
 }
 
 .doc-download__item {
@@ -3773,6 +3872,16 @@ fieldset {
 
 .form-search__button-close:hover svg path {
   fill: #2f2f2f;
+}
+
+.image-gallery__swiper {
+  width: 100%;
+}
+
+.image-gallery__swiper .swiper-wrapper {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
 }
 
 .map__titles {
@@ -5501,6 +5610,10 @@ fieldset {
   background-color: #ffffff;
   z-index: 10;
   display: none;
+}
+
+.cookies .container {
+  width: 100%;
 }
 
 .cookies__container {
@@ -8812,11 +8925,8 @@ fieldset {
   border-radius: 4px;
 }
 
-.plan-projec__desc {
-  max-width: 660px;
-}
-
 .plan-projec__desc p {
+  max-width: 660px;
   margin-bottom: 20px;
 }
 
@@ -9326,20 +9436,30 @@ fieldset {
   margin-bottom: 0;
 }
 
-.offer-area__title-h1 {
+.offer-area__head {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   margin-bottom: 40px;
 }
 
+.offer-area__title-h1 {
+  padding-right: 20px;
+}
+
+.offer-area__text {
+  padding-right: 20px;
+}
+
 .offer-area__block {
-  height: 737px;
+  height: 700px;
 }
 
 .offer-area__image {
-  height: 100%;
+  height: 700px;
 }
 
 .offer-area__content {
-  padding: 60px;
+  padding: 50px 60px;
   background-color: #ffffff;
 }
 
@@ -9348,8 +9468,25 @@ fieldset {
   height: 100%;
 }
 
+.offer-area__content .auth__form-block {
+  row-gap: 20px;
+}
+
+.offer-area__content .auth__form-input {
+  margin-bottom: 0px;
+}
+
 .offer-area__content .auth__form-btn {
   width: 100%;
+}
+
+.offer-area__content .auth__form .modal-write__btns-desc {
+  width: 100%;
+}
+
+.offer-area__content .auth__form .modal-write__btns-desc a {
+  white-space: nowrap;
+  border-bottom: none;
 }
 
 .reestr__title-h1 {
@@ -9515,16 +9652,6 @@ fieldset {
 
 .industrial-park__contacts-link {
   color: #2d6fd0;
-}
-
-.industrial-park__gallery {
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-  row-gap: 20px;
-}
-
-.industrial-park__gallery-item {
-  height: 350px;
 }
 
 .subsidies__btns {
@@ -11555,6 +11682,538 @@ fieldset {
   color: #2661d4;
 }
 
+.area-objects__title-h1 {
+  margin-bottom: 40px;
+}
+
+.area-objects__items {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.image-gallery__swiper {
+  width: 100%;
+}
+
+.image-gallery__swiper .swiper-wrapper {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.economic-zone .content ul > li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.economic-zone .content p:not(:first-child) {
+  margin-top: 8px;
+}
+
+.economic-zone .content p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.economic-zone__container {
+  row-gap: 60px;
+}
+
+.economic-zone__head-container {
+  row-gap: 40px;
+}
+
+.economic-zone__title-h1 {
+  max-width: 900px;
+}
+
+.economic-zone__content {
+  max-width: 870px;
+}
+
+.economic-zone__image {
+  height: 500px;
+}
+
+.economic-zone__advan {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.economic-zone__advan-inner {
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+
+.economic-zone__advan-item {
+  align-items: flex-start;
+  row-gap: 8px;
+}
+
+.economic-zone__advan-name {
+  color: #2d6fd0;
+}
+
+.economic-zone__records-container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 60px;
+}
+
+.economic-zone__records-items {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.economic-zone__records-lists {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.economic-zone__records-list {
+  padding-right: 20px;
+}
+
+.economic-zone__records-item-first {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.economic-zone__records-info {
+  max-width: 870px;
+}
+
+.economic-zone__records-info.block-white {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.economic-zone__records-name {
+  margin-bottom: 20px;
+}
+
+.economic-zone__records-inner {
+  row-gap: 60px;
+}
+
+.economic-zone__items {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.economic-zone__item {
+  padding: 32px;
+  background-color: #ffffff;
+  align-items: flex-start;
+  justify-content: space-between;
+  row-gap: 32px;
+}
+
+.economic-zone__item-name {
+  color: #2d6fd0;
+}
+
+.economic-zone__item-text p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.economic-zone__item-text p strong {
+  color: #2d6fd0;
+  margin-right: 8px;
+}
+
+.economic-zone__item-last {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background: var(--blue-gradient, linear-gradient(94deg, #144286 0%, #2d6fd0 100%));
+}
+
+.economic-zone__item-last .economic-zone__item-name {
+  color: #ffffff;
+}
+
+.economic-zone__item-last p {
+  color: #ffffff;
+}
+
+.economic-zone__item-last p strong {
+  color: #ffffff;
+}
+
+.economic-zone__supports-num .economic-zone__item {
+  justify-content: flex-start;
+  row-gap: 24px;
+}
+
+.economic-zone__contacts {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.economic-zone__contacts-item {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 4px;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 222px;
+  flex-shrink: 0;
+}
+
+.economic-zone__contacts-link {
+  color: #2d6fd0;
+  display: inline-block;
+}
+
+.economic-zone__gallery {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.economic-zone__gallery-item {
+  height: 350px;
+  flex-shrink: 0;
+}
+
+.technopark__container {
+  row-gap: 60px;
+}
+
+.technopark__head-container {
+  row-gap: 40px;
+}
+
+.technopark__title-h1 {
+  max-width: 900px;
+}
+
+.technopark__content {
+  max-width: 870px;
+}
+
+.technopark__image {
+  height: 500px;
+}
+
+.technopark__advan {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.technopark__advan-inner {
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+
+.technopark__advan-item {
+  align-items: flex-start;
+  row-gap: 8px;
+}
+
+.technopark__advan-name {
+  color: #2d6fd0;
+}
+
+.technopark__records-container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 60px;
+}
+
+.technopark__records-item-first {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.technopark__records-name {
+  margin-bottom: 20px;
+}
+
+.technopark__records-inner {
+  row-gap: 60px;
+}
+
+.technopark__dates {
+  row-gap: 20px;
+  position: relative;
+}
+
+.technopark__dates::before {
+  content: "";
+  position: absolute;
+  left: 299px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #dee2e7;
+}
+
+.technopark__date {
+  display: grid;
+  grid-template-columns: 270px 650px;
+  align-items: center;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+}
+
+.technopark__date-date {
+  flex-shrink: 0;
+  color: #2d6fd0;
+  position: relative;
+  text-align: right;
+}
+
+.technopark__date-date::before {
+  content: "";
+  position: absolute;
+  right: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #dee2e7;
+}
+
+.technopark__products {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.technopark__products-item {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 32px;
+  align-items: flex-start;
+  justify-content: space-between;
+  row-gap: 16px;
+}
+
+.technopark__products-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.technopark__contacts {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.technopark__contacts-item {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 4px;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 222px;
+  flex-shrink: 0;
+}
+
+.technopark__contacts-link {
+  color: #2d6fd0;
+}
+
+.territory-develop .content ul > li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.territory-develop .content p:not(:first-child) {
+  margin-top: 8px;
+}
+
+.territory-develop .content p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.territory-develop__container {
+  row-gap: 60px;
+}
+
+.territory-develop__head-container {
+  row-gap: 40px;
+}
+
+.territory-develop__title-h1 {
+  max-width: 870px;
+}
+
+.territory-develop__content {
+  max-width: 870px;
+}
+
+.territory-develop__image {
+  height: 500px;
+}
+
+.territory-develop__advan {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.territory-develop__advan-inner {
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+
+.territory-develop__advan-item {
+  align-items: flex-start;
+  row-gap: 8px;
+}
+
+.territory-develop__advan-name {
+  color: #2d6fd0;
+}
+
+.territory-develop__records-container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 60px;
+}
+
+.territory-develop__records-items {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.territory-develop__records-lists {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.territory-develop__records-list {
+  padding-right: 20px;
+}
+
+.territory-develop__records-info {
+  max-width: 870px;
+}
+
+.territory-develop__records-info.block-white {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.territory-develop__records-info.amount p {
+  color: #2d6fd0;
+}
+
+.territory-develop__records-name {
+  margin-bottom: 20px;
+}
+
+.territory-develop__records-inner {
+  row-gap: 60px;
+}
+
+.territory-develop__items {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.territory-develop__item {
+  padding: 32px;
+  background-color: #ffffff;
+  align-items: flex-start;
+  justify-content: space-between;
+  row-gap: 32px;
+}
+
+.territory-develop__item-name {
+  color: #2d6fd0;
+}
+
+.territory-develop__item-text > strong {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.territory-develop__item-text > strong:not(:first-child) {
+  margin-top: 8px;
+}
+
+.territory-develop__item-text p:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.territory-develop__item-text p strong {
+  color: #2d6fd0;
+  margin-right: 8px;
+}
+
+.territory-develop__item-last {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background: var(--blue-gradient, linear-gradient(94deg, #144286 0%, #2d6fd0 100%));
+}
+
+.territory-develop__item-last .territory-develop__item-name {
+  color: #ffffff;
+}
+
+.territory-develop__item-last p {
+  color: #ffffff;
+}
+
+.territory-develop__item-last p strong {
+  color: #ffffff;
+}
+
+.territory-develop__supports-num .territory-develop__item {
+  justify-content: flex-start;
+  row-gap: 24px;
+}
+
+.territory-develop__contacts {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.territory-develop__contacts-item {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 4px;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 222px;
+  flex-shrink: 0;
+}
+
+.territory-develop__contacts-bottom {
+  row-gap: 8px;
+}
+
+.territory-develop__contacts-link {
+  color: #2d6fd0;
+  display: inline-block;
+}
+
+.territory-develop__gallery {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.territory-develop__gallery-item {
+  height: 350px;
+  flex-shrink: 0;
+}
+
 @media screen and (min-width: 48em) {
   #map:hover [class*=copyrights-pane],
   #map:hover [class*=controls__control] {
@@ -11645,6 +12304,10 @@ fieldset {
     font-size: 64px;
   }
 
+  .territory-develop__title-h1,
+  .technopark__title-h1,
+  .economic-zone__title-h1,
+  .area-objects__title-h1,
   .ppp-project__title,
   .ppp-other-projects__title,
   .ppp-consulation__title,
@@ -11687,6 +12350,11 @@ fieldset {
     font-size: 48px;
   }
 
+  .territory-develop__records-name,
+  .territory-develop__records-info.amount p,
+  .technopark__contacts-link,
+  .technopark__records-name,
+  .economic-zone__records-name,
   .ppp-project-geografy__tit,
   .ppp-project-geografy__descs-tit,
   .ppp-project-geografy__items li b,
@@ -11735,6 +12403,15 @@ fieldset {
     font-size: 26px;
   }
 
+  .territory-develop__contacts-label,
+  .territory-develop__item-text p,
+  .territory-develop__advan-label,
+  .technopark__contacts-label,
+  .technopark__products-name,
+  .technopark__advan-label,
+  .economic-zone__contacts-label,
+  .economic-zone__item-text p,
+  .economic-zone__advan-label,
   .ppp-project-geografy__lists-list > li,
   .ppp-project-geografy__txt,
   .ppp-project-geografy__descs-txt,
@@ -11775,6 +12452,7 @@ fieldset {
   .industrial-park__contacts-label,
   .industrial-park__products-name,
   .industrial-park__advan-label,
+  .offer-area__text,
   .ao-dev-cor__txt,
   .single-window__subtitles p,
   .infr-plan__subtitles p,
@@ -11830,6 +12508,11 @@ fieldset {
   .content p {
     font-size: 18px;
     line-height: 130%;
+  }
+
+  .territory-develop__contacts-link,
+  .economic-zone__contacts-link {
+    font-size: 24px;
   }
 
   .ppp-project-geografy__title,
@@ -11922,10 +12605,6 @@ fieldset {
   .card__content {
     padding: 24px;
     min-height: 290px;
-  }
-
-  .content b {
-    font-size: 18px;
   }
 
   .content ul > li {
@@ -12789,7 +13468,7 @@ fieldset {
     row-gap: 24px;
   }
 
-  .plan-projec__desc {
+  .plan-projec__desc p {
     max-width: 580px;
   }
 
@@ -12889,30 +13568,16 @@ fieldset {
     margin-bottom: 24px;
   }
 
-  .offer-area__title-h1 {
-    margin-bottom: 40px;
-  }
-
   .offer-area__block {
-    height: 737px;
+    height: 680px;
   }
 
   .offer-area__image {
-    height: 100%;
+    height: 680px;
   }
 
   .offer-area__content {
-    padding: 60px;
-    background-color: #ffffff;
-  }
-
-  .offer-area__content .auth__form {
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  .offer-area__content .auth__form-btn {
-    width: 100%;
+    padding: 40px 50px;
   }
 
   .pref-territories__item .card__content {
@@ -13239,6 +13904,105 @@ fieldset {
   .search-query {
     margin-top: 60px;
   }
+
+  .economic-zone__title-h1 {
+    max-width: 880px;
+  }
+
+  .economic-zone__content {
+    max-width: 760px;
+  }
+
+  .economic-zone__advan-inner {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+    row-gap: 24px;
+  }
+
+  .economic-zone__records-info {
+    max-width: 580px;
+  }
+
+  .economic-zone__contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .economic-zone__contacts-item {
+    height: 205px;
+  }
+
+  .economic-zone__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .economic-zone__item-last {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .economic-zone__supports .economic-zone__item {
+    min-height: 208px;
+  }
+
+  .technopark__title-h1 {
+    max-width: 720px;
+  }
+
+  .technopark__content {
+    max-width: 100%;
+  }
+
+  .technopark__advan-inner {
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 24px;
+  }
+
+  .technopark__contacts-item {
+    height: 212px;
+  }
+
+  .territory-develop__title-h1 {
+    max-width: 880px;
+  }
+
+  .territory-develop__content {
+    max-width: 760px;
+  }
+
+  .territory-develop__advan-inner {
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 24px;
+  }
+
+  .territory-develop__records-info {
+    max-width: 580px;
+  }
+
+  .territory-develop__contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .territory-develop__contacts-item {
+    height: 205px;
+  }
+
+  .territory-develop__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .territory-develop__item-last {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .territory-develop__supports .territory-develop__item {
+    min-height: 208px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -13254,6 +14018,10 @@ fieldset {
     font-size: 48px;
   }
 
+  .territory-develop__title-h1,
+  .technopark__title-h1,
+  .economic-zone__title-h1,
+  .area-objects__title-h1,
   .ppp-project__title,
   .ppp-other-projects__title,
   .ppp-consulation__title,
@@ -13296,6 +14064,15 @@ fieldset {
     font-size: 40px;
   }
 
+  .territory-develop__supports-num .territory-develop__item-name,
+  .territory-develop__item-text p strong,
+  .territory-develop__item-name,
+  .territory-develop__advan-name,
+  .technopark__advan-name,
+  .economic-zone__supports-num .economic-zone__item-name,
+  .economic-zone__item-text p strong,
+  .economic-zone__item-name,
+  .economic-zone__advan-name,
   .search-query__block-title,
   .ppp-tax__tit,
   .ppp-contacts__tit,
@@ -13340,6 +14117,7 @@ fieldset {
   .legislation__item-title,
   .calculator__block-title,
   .modal-pers-cab__title p,
+  .content p b,
   .content strong {
     line-height: 120%;
   }
@@ -13456,6 +14234,10 @@ fieldset {
     overflow: hidden;
   }
 
+  .doc-download__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .list-per__title {
     margin-bottom: 32px;
   }
@@ -13465,6 +14247,10 @@ fieldset {
   }
 
   .list-per--districs .list-per__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-gallery__swiper .swiper-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -15539,7 +16325,7 @@ fieldset {
     height: 400px;
   }
 
-  .plan-projec__desc {
+  .plan-projec__desc p {
     max-width: 100%;
   }
 
@@ -15793,6 +16579,25 @@ fieldset {
     padding: 24px;
   }
 
+  .offer-area__head {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .offer-area__block {
+    grid-template-columns: 40% 60%;
+    height: 667px;
+  }
+
+  .offer-area__image {
+    height: 667px;
+  }
+
+  .offer-area__content {
+    padding: 32px;
+  }
+
   .reestr__title-h1 {
     margin-bottom: 32px;
   }
@@ -15881,16 +16686,6 @@ fieldset {
 
   .industrial-park__contacts-link {
     color: #2d6fd0;
-  }
-
-  .industrial-park__gallery {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-    row-gap: 20px;
-  }
-
-  .industrial-park__gallery-item {
-    height: 350px;
   }
 
   .subsidies__item {
@@ -16647,6 +17442,287 @@ fieldset {
   .search-query__content {
     max-width: 100%;
   }
+
+  .area-objects__title-h1 {
+    margin-bottom: 32px;
+  }
+
+  .area-objects__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image-gallery__swiper .swiper-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .economic-zone__head-container {
+    row-gap: 32px;
+  }
+
+  .economic-zone__title-h1 {
+    max-width: 100%;
+  }
+
+  .economic-zone__content {
+    max-width: 100%;
+  }
+
+  .economic-zone__image {
+    height: 400px;
+  }
+
+  .economic-zone__advan {
+    padding: 24px;
+  }
+
+  .economic-zone__advan-inner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .economic-zone__records-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .economic-zone__records-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .economic-zone__records-info {
+    max-width: 100%;
+  }
+
+  .economic-zone__records-lists {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 8px;
+  }
+
+  .economic-zone__records-item-first {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .economic-zone__item {
+    padding: 24px;
+    row-gap: 20px;
+  }
+
+  .economic-zone__supports .economic-zone__item {
+    min-height: 203px;
+  }
+
+  .economic-zone__dates::before {
+    left: 239px;
+  }
+
+  .economic-zone__date {
+    grid-template-columns: 214px 424px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+
+  .economic-zone__date-date {
+    font-size: 32px;
+  }
+
+  .economic-zone__date-date::before {
+    right: -32px;
+  }
+
+  .economic-zone__products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .economic-zone__products-item {
+    padding: 24px;
+  }
+
+  .economic-zone__contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .economic-zone__contacts-item {
+    padding: 24px;
+    height: 180px;
+  }
+
+  .economic-zone__contacts-link {
+    color: #2d6fd0;
+  }
+
+  .economic-zone__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .economic-zone__gallery-item {
+    height: 350px;
+  }
+
+  .technopark__head-container {
+    row-gap: 32px;
+  }
+
+  .technopark__title-h1 {
+    max-width: 100%;
+  }
+
+  .technopark__content {
+    max-width: 100%;
+  }
+
+  .technopark__image {
+    height: 400px;
+  }
+
+  .technopark__advan {
+    padding: 24px;
+  }
+
+  .technopark__advan-inner {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+  }
+
+  .technopark__records-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .technopark__records-item-first {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .technopark__dates::before {
+    left: 239px;
+  }
+
+  .technopark__date {
+    grid-template-columns: 214px 424px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+
+  .technopark__date-date {
+    font-size: 32px;
+  }
+
+  .technopark__date-date::before {
+    right: -32px;
+  }
+
+  .technopark__products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technopark__products-item {
+    padding: 24px;
+  }
+
+  .technopark__contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technopark__contacts-item {
+    padding: 24px;
+    height: 180px;
+  }
+
+  .technopark__contacts-link {
+    color: #2d6fd0;
+  }
+
+  .territory-develop__head-container {
+    row-gap: 32px;
+  }
+
+  .territory-develop__title-h1 {
+    max-width: 100%;
+  }
+
+  .territory-develop__content {
+    max-width: 100%;
+  }
+
+  .territory-develop__image {
+    height: 400px;
+  }
+
+  .territory-develop__advan {
+    padding: 24px;
+  }
+
+  .territory-develop__advan-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .territory-develop__records-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .territory-develop__records-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .territory-develop__records-info {
+    max-width: 100%;
+  }
+
+  .territory-develop__records-lists {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 8px;
+  }
+
+  .territory-develop__records-item-first {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .territory-develop__item {
+    padding: 24px;
+    row-gap: 20px;
+  }
+
+  .territory-develop__supports .territory-develop__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .territory-develop__supports .territory-develop__item {
+    min-height: 278px;
+  }
+
+  .territory-develop__supports .territory-develop__item-before {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .territory-develop__supports .territory-develop__item-last {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .territory-develop__supports-num .territory-develop__item {
+    min-height: 193px;
+  }
+
+  .territory-develop__contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .territory-develop__contacts-item {
+    padding: 24px;
+    height: 180px;
+  }
+
+  .territory-develop__contacts-link {
+    color: #2d6fd0;
+  }
+
+  .territory-develop__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .territory-develop__gallery-item {
+    height: 350px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -16656,6 +17732,10 @@ fieldset {
     line-height: 110%;
   }
 
+  .territory-develop__title-h1,
+  .technopark__title-h1,
+  .economic-zone__title-h1,
+  .area-objects__title-h1,
   .ppp-project__title,
   .ppp-other-projects__title,
   .ppp-consulation__title,
@@ -16700,6 +17780,11 @@ fieldset {
             hyphens: auto;
   }
 
+  .territory-develop__records-name,
+  .territory-develop__records-info.amount p,
+  .technopark__contacts-link,
+  .technopark__records-name,
+  .economic-zone__records-name,
   .ppp-project-geografy__tit,
   .ppp-project-geografy__descs-tit,
   .ppp-project-geografy__items li b,
@@ -16748,6 +17833,15 @@ fieldset {
     font-size: 24px;
   }
 
+  .territory-develop__contacts-label,
+  .territory-develop__item-text p,
+  .territory-develop__advan-label,
+  .technopark__contacts-label,
+  .technopark__products-name,
+  .technopark__advan-label,
+  .economic-zone__contacts-label,
+  .economic-zone__item-text p,
+  .economic-zone__advan-label,
   .ppp-project-geografy__lists-list > li,
   .ppp-project-geografy__txt,
   .ppp-project-geografy__descs-txt,
@@ -16788,6 +17882,7 @@ fieldset {
   .industrial-park__contacts-label,
   .industrial-park__products-name,
   .industrial-park__advan-label,
+  .offer-area__text,
   .ao-dev-cor__txt,
   .single-window__subtitles p,
   .infr-plan__subtitles p,
@@ -16848,6 +17943,15 @@ fieldset {
     font-size: 18px;
   }
 
+  .territory-develop__supports-num .territory-develop__item-name,
+  .territory-develop__item-text p strong,
+  .territory-develop__item-name,
+  .territory-develop__advan-name,
+  .technopark__advan-name,
+  .economic-zone__supports-num .economic-zone__item-name,
+  .economic-zone__item-text p strong,
+  .economic-zone__item-name,
+  .economic-zone__advan-name,
   .search-query__block-title,
   .ppp-tax__tit,
   .ppp-contacts__tit,
@@ -16892,8 +17996,15 @@ fieldset {
   .legislation__item-title,
   .calculator__block-title,
   .modal-pers-cab__title p,
+  .content p b,
   .content strong {
     font-size: 20px;
+  }
+
+  .territory-develop__contacts-link,
+  .economic-zone__contacts-link {
+    font-size: 20px;
+    line-height: 120%;
   }
 
   .ppp-project-geografy__title,
@@ -17105,6 +18216,12 @@ fieldset {
 
   .form-search__button-close {
     display: none;
+  }
+
+  .image-gallery__swiper .swiper-wrapper {
+    display: flex;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
   }
 
   .map__text,
@@ -19103,6 +20220,28 @@ fieldset {
     row-gap: 16px;
   }
 
+  .offer-area__head {
+    row-gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .offer-area__block {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .offer-area__image {
+    height: 240px;
+  }
+
+  .offer-area__content {
+    padding: 32px 16px;
+  }
+
+  .offer-area__content .auth__form {
+    row-gap: 32px;
+  }
+
   .pref-territories__title-h1 {
     word-break: break-word;
   }
@@ -19181,14 +20320,6 @@ fieldset {
   .industrial-park__contacts-item:last-child {
     grid-column-start: inherit;
     grid-column-end: inherit;
-  }
-
-  .industrial-park__gallery {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .industrial-park__gallery-item {
-    height: 350px;
   }
 
   .subsidies__title {
@@ -19750,6 +20881,344 @@ fieldset {
 
   .search-query__block-title {
     line-height: 130%;
+  }
+
+  .image-gallery__swiper .swiper-wrapper {
+    display: flex;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+
+  .economic-zone__container {
+    row-gap: 50px;
+  }
+
+  .economic-zone__title-h1 {
+    word-break: break-word;
+  }
+
+  .economic-zone__image {
+    height: 400px;
+    flex-shrink: 0;
+  }
+
+  .economic-zone__advan-inner {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+  }
+
+  .economic-zone__records-container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+
+  .economic-zone__records-items {
+    row-gap: 16px;
+  }
+
+  .economic-zone__records-item-first {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .economic-zone__records-inner {
+    row-gap: 50px;
+  }
+
+  .economic-zone__records-info.content b {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .economic-zone__records-info.content p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .economic-zone__records-info.block-white {
+    padding: 24px;
+  }
+
+  .economic-zone__records-list.content ul > li::before {
+    top: 6px;
+  }
+
+  .economic-zone__dates::before {
+    left: 9px;
+  }
+
+  .economic-zone__date {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 4px;
+  }
+
+  .economic-zone__date-date {
+    font-size: 32px;
+    padding-left: 38px;
+    text-align: left;
+  }
+
+  .economic-zone__date-date::before {
+    right: auto;
+    left: 4px;
+  }
+
+  .economic-zone__date-info {
+    padding-left: 38px;
+  }
+
+  .economic-zone__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .economic-zone__supports .economic-zone__item {
+    min-height: 188px;
+  }
+
+  .economic-zone__supports .economic-zone__item-last {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .economic-zone__supports-num .economic-zone__item {
+    min-height: 312px;
+  }
+
+  .economic-zone__amount .economic-zone__items {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .economic-zone__products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .economic-zone__products-item {
+    padding: 24px;
+  }
+
+  .economic-zone__contacts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .economic-zone__contacts-item {
+    padding: 24px;
+    height: 146px;
+  }
+
+  .economic-zone__contacts-item:last-child {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .economic-zone__contacts-link {
+    word-break: break-word;
+  }
+
+  .economic-zone__gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .economic-zone__gallery-item {
+    height: 350px;
+  }
+
+  .technopark__container {
+    row-gap: 50px;
+  }
+
+  .technopark__title-h1 {
+    word-break: break-word;
+  }
+
+  .technopark__image {
+    height: 340px;
+  }
+
+  .technopark__advan-inner {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+  }
+
+  .technopark__records-container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+
+  .technopark__records-item-first {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .technopark__records-inner {
+    row-gap: 50px;
+  }
+
+  .technopark__dates::before {
+    left: 9px;
+  }
+
+  .technopark__date {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 4px;
+  }
+
+  .technopark__date-date {
+    font-size: 32px;
+    padding-left: 38px;
+    text-align: left;
+  }
+
+  .technopark__date-date::before {
+    right: auto;
+    left: 4px;
+  }
+
+  .technopark__date-info {
+    padding-left: 38px;
+  }
+
+  .technopark__products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .technopark__products-item {
+    padding: 24px;
+  }
+
+  .technopark__contacts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .technopark__contacts-item {
+    padding: 24px;
+    height: 146px;
+  }
+
+  .technopark__contacts-item:last-child {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .technopark__contacts-link {
+    word-break: break-word;
+  }
+
+  .territory-develop__container {
+    row-gap: 50px;
+  }
+
+  .territory-develop__title-h1 {
+    word-break: break-word;
+  }
+
+  .territory-develop__image {
+    height: 400px;
+    flex-shrink: 0;
+  }
+
+  .territory-develop__advan-inner {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+  }
+
+  .territory-develop__records-container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+
+  .territory-develop__records-items {
+    row-gap: 16px;
+  }
+
+  .territory-develop__records-item-first {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .territory-develop__records-inner {
+    row-gap: 50px;
+  }
+
+  .territory-develop__records-info.content b {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .territory-develop__records-info.content p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .territory-develop__records-info.block-white {
+    padding: 24px;
+  }
+
+  .territory-develop__records-list.content ul > li::before {
+    top: 6px;
+  }
+
+  .territory-develop__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .territory-develop__supports .territory-develop__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .territory-develop__supports .territory-develop__item {
+    min-height: 273px;
+  }
+
+  .territory-develop__supports .territory-develop__item-before {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .territory-develop__supports .territory-develop__item-last {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .territory-develop__supports-num .territory-develop__item {
+    min-height: 164px;
+  }
+
+  .territory-develop__amount .territory-develop__items {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .territory-develop__products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .territory-develop__products-item {
+    padding: 24px;
+  }
+
+  .territory-develop__contacts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .territory-develop__contacts-item {
+    padding: 24px;
+    height: 181px;
+  }
+
+  .territory-develop__contacts-item:last-child {
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+  }
+
+  .territory-develop__contacts-link {
+    word-break: break-word;
+  }
+
+  .territory-develop__gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .territory-develop__gallery-item {
+    height: 350px;
   }
 }
 

@@ -7,6 +7,10 @@
   z-index: 10;
   display: none;
 
+  .container {
+    width: 100%;
+  }
+
   &__container {
     @extend %flexCenterBetween;
     padding: 32px 0;

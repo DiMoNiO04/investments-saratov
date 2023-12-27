@@ -6,7 +6,10 @@
         <p>В 2022 году создан первый области государственный Столыпинский индустриальный парк.</p>
       </div>
       <div class="industrial-park__image">
-        <img src="@img/backgr-image/img2.jpg" alt="" />
+        <picture>
+          <source media="(min-width: 768px)" srcset="@img/backgr-image/img2.jpg" />
+          <img src="@img/backgr-image/img2-mob.jpg" />
+        </picture>
       </div>
       <div class="industrial-park__advan">
         <div class="industrial-park__advan-inner">
@@ -167,9 +170,13 @@
     </div>
     <div class="industrial-park__records-item">
       <div class="industrial-park__records-name">Фотогалерея</div>
-      <div class="industrial-park__gallery">
-        <div class="industrial-park__gallery-item">
-          <img src="@img/gallery/img1.jpg" alt="" />
+      <div class="swiper image-gallery__swiper territory-develop__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="territory-develop__gallery-item">
+              <img src="@img/gallery/img1.jpg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

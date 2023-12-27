@@ -1,75 +1,127 @@
 .offer-area {
+  &__head {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+    margin-bottom: 40px;
+  }
+
   &__title {
     &-h1 {
       @extend %h2;
-      margin-bottom: 40px;
+      padding-right: 20px;
     }
+  }
+
+  &__text {
+    @extend %mainTxt;
+    padding-right: 20px;
   }
 
   &__block {
     @extend %gridColumnTwo;
-    height: 737px;
+    height: 700px;
   }
 
   &__image {
     @extend %imageCoverWidth;
-    height: 100%;
+    height: 700px;
   }
 
   &__content {
-    padding: 60px;
+    padding: 50px 60px;
     background-color: $white;
 
     .auth__form {
       @extend %flexColumn;
       justify-content: space-between;
       height: 100%;
-    }
 
-    .auth__form-btn {
-      width: 100%;
+      &-block {
+        @extend %flexColumn;
+        row-gap: 20px;
+      }
+
+      &-input {
+        margin-bottom: 0px;
+      }
+
+      &-btn {
+        width: 100%;
+      }
+
+      .modal-write__btns-desc {
+        width: 100%;
+
+        a {
+          white-space: nowrap;
+          border-bottom: none;
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: $laptop) {
   .offer-area {
-    &__title {
-      &-h1 {
-        @extend %h2;
-        margin-bottom: 40px;
-      }
-    }
-
     &__block {
-      @extend %gridColumnTwo;
-      height: 737px;
+      height: 680px;
     }
 
     &__image {
-      @extend %imageCoverWidth;
-      height: 100%;
+      height: 680px;
     }
 
     &__content {
-      padding: 60px;
-      background-color: $white;
-
-      .auth__form {
-        @extend %flexColumn;
-        justify-content: space-between;
-        height: 100%;
-      }
-
-      .auth__form-btn {
-        width: 100%;
-      }
+      padding: 40px 50px;
     }
   }
 }
 
 @media screen and (max-width: $tablet) {
+  .offer-area {
+    &__head {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    &__block {
+      grid-template-columns: 40% 60%;
+      height: 667px;
+    }
+
+    &__image {
+      height: 667px;
+    }
+
+    &__content {
+      padding: 32px;
+    }
+  }
 }
 
 @media screen and (max-width: $mob) {
+  .offer-area {
+    &__head {
+      row-gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    &__block {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    &__image {
+      height: 240px;
+    }
+
+    &__content {
+      padding: 32px 16px;
+
+      .auth__form {
+        row-gap: 32px;
+      }
+    }
+  }
 }

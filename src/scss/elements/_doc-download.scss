@@ -1,4 +1,9 @@
 .doc-download {
+  &__items {
+    @extend %gridColumnTwo;
+    grid-gap: 20px;
+  }
+
   &__item {
     border-radius: 4px;
     background-color: $white;
@@ -52,6 +57,10 @@
   .doc-download {
     &__item-name {
       @include croppingText(inherit);
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

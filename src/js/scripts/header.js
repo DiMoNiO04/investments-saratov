@@ -22,7 +22,7 @@ const scrollHeaderLoad = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.href.includes('main')) {
+  if (window.location.href.includes('main') && isTransparent) {
     scrollHeaderLoad();
     scrollHeader();
   }

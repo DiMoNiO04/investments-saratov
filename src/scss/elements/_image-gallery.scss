@@ -1,0 +1,22 @@
+.image-gallery__swiper {
+  width: 100%;
+
+  .swiper-wrapper {
+    @extend %gridColumnThree;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    .swiper-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: $mob) {
+    .swiper-wrapper {
+      display: flex;
+      column-gap: 0px;
+    }
+  }
+}

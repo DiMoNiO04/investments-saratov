@@ -19,9 +19,8 @@
   }
 
   &__desc {
-    max-width: 660px;
-
     p {
+      max-width: 660px;
       @extend %mainTxt;
       margin-bottom: 20px;
     }
@@ -30,7 +29,7 @@
 
 @media screen and (max-width: $laptop) {
   .plan-projec {
-    &__desc {
+    &__desc p {
       max-width: 580px;
     }
   }
@@ -46,7 +45,7 @@
       height: 400px;
     }
 
-    &__desc {
+    &__desc p {
       max-width: 100%;
     }
   }

@@ -148,8 +148,29 @@
   }
 }
 
+%semiboldText26 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 120%;
+
+  @media screen and (max-width: $laptop) {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: $mob) {
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
+
 %semibold16 {
   font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+%semibold20 {
+  font-size: 20px;
   font-weight: 600;
   line-height: 130%;
 }

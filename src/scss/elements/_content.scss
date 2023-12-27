@@ -4,14 +4,6 @@
     margin-bottom: 20px;
   }
 
-  b {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 130%;
-  }
-
   p {
     @extend %mainTxt;
 
@@ -22,6 +14,12 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+
+    b {
+      @extend %subheader;
+      color: $bluePrimary;
+      margin-right: 8px;
+    }
   }
 
   ul {
@@ -29,13 +27,13 @@
       @extend %mainTxt;
       position: relative;
       padding-left: 36px;
-      margin-bottom: 12px;
+      @include mb(12px);
 
       &::before {
         content: '';
         position: absolute;
         left: 0;
-        top: 10px;
+        top: 12px;
         background-color: $bluePrimary;
         width: 24px;
         height: 2px;
@@ -54,10 +52,6 @@
 
 @media screen and (max-width: $laptop) {
   .content {
-    b {
-      font-size: 18px;
-    }
-
     ul {
       & > li {
         padding-left: 32px;
