@@ -63,3 +63,10 @@
     margin-top: $value;
   }
 }
+
+//
+
+@mixin gridColumn($count) {
+  display: grid;
+  grid-template-columns: repeat($count, 1fr);
+}
