@@ -19,5 +19,6 @@ import './scripts/script.js';
 import './scripts/tooltips.js';
 import './scripts/chat.js';
 import './scripts/map.js';
+import './scripts/cookies.js';
 
 flsFunctions.isWebp();

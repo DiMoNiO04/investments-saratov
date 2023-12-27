@@ -1,0 +1,114 @@
+.search-query {
+  margin-top: 80px;
+
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__form {
+    @extend %flexCenterBetween;
+    column-gap: 40px;
+  }
+
+  &__input {
+    width: 100%;
+  }
+
+  &__btn {
+    padding: 11px 28px;
+  }
+
+  &__result {
+    @extend %regular16;
+    color: $greyTxt;
+  }
+
+  &__content {
+    max-width: 870px;
+  }
+
+  &__blocks {
+    @extend %flexColumn;
+    row-gap: 24px;
+  }
+
+  &__block {
+    @extend %flexColumn;
+    row-gap: 16px;
+
+    &:not(:last-child) {
+      padding-bottom: 24px;
+      border-bottom: 1px solid $inputGreyStroke;
+    }
+  }
+
+  &__block-title {
+    @extend %subheader;
+  }
+
+  &__block-desc {
+    @extend %flexColumn;
+    row-gap: 12px;
+  }
+
+  &__block-txt {
+    @extend %regular16;
+  }
+
+  &__block-link {
+    @extend %regular16;
+    color: $bluePrimary;
+
+    &:hover {
+      color: $blueHover;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .search-query {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .search-query {
+    margin-top: 40px;
+
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__block-title {
+      font-size: 18px;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .search-query {
+    &__form {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    &__btn {
+      span {
+        font-size: 18px;
+      }
+    }
+
+    &__result {
+      font-size: 14px;
+    }
+
+    &__block-title {
+      line-height: 130%;
+    }
+  }
+}

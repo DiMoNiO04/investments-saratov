@@ -1,0 +1,129 @@
+.ppp-project-geografy {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+  }
+
+  &__items {
+    grid-gap: 20px;
+    @extend %gridColumnThree;
+    grid-auto-rows: minmax(222px, 1fr);
+
+    li {
+      @extend %mainTxt;
+      @extend %flexColumn;
+      row-gap: 32px;
+      justify-content: space-between;
+      border-radius: 4px;
+      background-color: $white;
+      padding: 32px;
+
+      b {
+        @extend %h3;
+        color: $bluePrimary;
+      }
+    }
+  }
+
+  &__txts {
+    margin-top: 20px;
+    max-width: 780px;
+  }
+
+  &__tit,
+  &__descs-tit {
+    @extend %h3;
+    margin-bottom: 20px;
+  }
+
+  &__txt,
+  &__descs-txt {
+    @extend %mainTxt;
+  }
+
+  &__lists {
+    @extend %gridColumnTwo;
+    grid-gap: 20px;
+  }
+
+  &__lists-block {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__lists-tit {
+    color: $black;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  &__lists-list {
+    @extend %flexColumn;
+    row-gap: 12px;
+
+    & > li {
+      @extend %mainTxt;
+      position: relative;
+      padding-left: 36px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background-color: $bluePrimary;
+        width: 24px;
+        height: 2px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-project-geografy {
+    &__title {
+      max-width: 800px;
+    }
+
+    &__items {
+      li b {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-project-geografy {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(185px, 1fr);
+
+      li {
+        padding: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ppp-project-geografy {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 16px;
+
+      li {
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.ppp-project-financial {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+  }
+
+  &__items {
+    grid-gap: 20px;
+    @extend %gridColumnThree;
+
+    li {
+      @extend %mainTxt;
+      @extend %flexColumn;
+      row-gap: 32px;
+      justify-content: space-between;
+      border-radius: 4px;
+      background-color: $white;
+      padding: 32px;
+
+      b {
+        color: $bluePrimary;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__txts {
+    margin-top: 20px;
+    max-width: 780px;
+  }
+
+  &__tit,
+  &__descs-tit {
+    @extend %h3;
+    margin-bottom: 20px;
+  }
+
+  &__txt,
+  &__descs-txt {
+    @extend %mainTxt;
+  }
+
+  &__lists {
+    @extend %gridColumnTwo;
+    grid-gap: 20px;
+  }
+
+  &__lists-block {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__lists-tit {
+    color: $black;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  &__lists-list {
+    @extend %flexColumn;
+    row-gap: 12px;
+
+    & > li {
+      @extend %mainTxt;
+      position: relative;
+      padding-left: 36px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background-color: $bluePrimary;
+        width: 24px;
+        height: 2px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-project-financial {
+    &__items {
+      li {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-project-financial {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+
+      li:last-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+
+    &__txts {
+      margin-top: 28px;
+    }
+
+    &__txt {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ppp-project-financial {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 16px;
+
+      li:last-child {
+        grid-column-start: auto;
+        grid-column-end: auto;
+      }
+    }
+
+    &__txts {
+      margin-top: 16px;
+    }
+  }
+}

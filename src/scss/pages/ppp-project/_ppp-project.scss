@@ -1,0 +1,48 @@
+.ppp-project {
+  &__titles {
+    margin-bottom: 40px;
+    max-width: 1020px;
+  }
+
+  &__title {
+    @extend %h2;
+    margin-bottom: 40px;
+  }
+
+  &__subtitles {
+    p {
+      @extend %mainTxt;
+      @include mb(8px);
+    }
+  }
+
+  &__img {
+    @include sizes(100%, 500px);
+
+    img {
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-project {
+    &__titles {
+      max-width: 800px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-project {
+    &__titles,
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__img {
+      height: 400px;
+    }
+  }
+}

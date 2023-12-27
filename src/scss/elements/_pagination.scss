@@ -1,6 +1,7 @@
 .pagination {
   @extend %flexCenter;
   column-gap: 16px;
+  margin-top: 40px;
 
   &__btn {
     @extend %flexCenter;
@@ -50,6 +51,12 @@
 
   div {
     cursor: default;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .pagination {
+    margin-top: 32px;
   }
 }
 

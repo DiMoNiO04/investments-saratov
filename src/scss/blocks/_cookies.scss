@@ -1,0 +1,38 @@
+.cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 10;
+  display: none;
+
+  &__container {
+    @extend %flexCenterBetween;
+    padding: 32px 0;
+  }
+
+  &__txts {
+    max-width: 890px;
+    @extend %regular16;
+
+    a {
+      color: $bluePrimary;
+
+      &:hover {
+        color: $blueHover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .cookies {
+    &__container {
+      padding: 40px 0;
+      flex-direction: column;
+      row-gap: 32px;
+      align-items: flex-start;
+    }
+  }
+}

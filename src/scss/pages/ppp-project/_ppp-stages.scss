@@ -1,0 +1,134 @@
+.ppp-stages {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+  }
+
+  &__blocks {
+    @extend %gridColumnFour;
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+  }
+
+  &__block {
+    @extend %flexColumn;
+    row-gap: 24px;
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 32px;
+
+    &--inprogress {
+      background: $bluePrimary;
+
+      .ppp-stages__desc,
+      .ppp-stages__desc b,
+      .ppp-stages__txt {
+        color: $white;
+      }
+
+      .ppp-stages__icon {
+        background-color: $white;
+
+        svg path {
+          stroke: $bluePrimary;
+        }
+      }
+    }
+
+    &--competion {
+      .ppp-stages__desc,
+      .ppp-stages__desc b,
+      .ppp-stages__txt {
+        color: $greyTxt;
+      }
+
+      .ppp-stages__icon {
+        background-color: $inputGreyStroke;
+      }
+    }
+  }
+
+  &__top {
+    @extend %flexCenterStart;
+    column-gap: 16px;
+  }
+
+  &__icon {
+    @include sizes(32px, 32px);
+    @extend %flexCenter;
+    border-radius: 50%;
+    background-color: $bluePrimary;
+
+    svg {
+      @include sizes(16px, 16px);
+
+      path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &__desc {
+    color: $greyTxt;
+    font-size: 14px;
+    line-height: 130%;
+
+    b {
+      display: block;
+      @extend %regular16;
+      color: $black;
+    }
+  }
+
+  &__txt {
+    color: $bluePrimary;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .ppp-stages {
+    &__blocks {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__blocks-txt {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ppp-stages {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__blocks {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__block {
+      padding: 24px;
+    }
+
+    &__top {
+      column-gap: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .ppp-stages {
+    &__blocks {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 16px;
+    }
+  }
+}
