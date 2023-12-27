@@ -33,7 +33,7 @@
 }
 
 @media screen and (max-width: $laptop) {
-  .news-page {
+  .events {
     &__items {
       row-gap: 20px;
     }
@@ -41,7 +41,7 @@
 }
 
 @media screen and (max-width: $tablet) {
-  .news-page {
+  .events {
     &__container {
       row-gap: 32px;
     }
@@ -61,7 +61,7 @@
 }
 
 @media screen and (max-width: $mob) {
-  .news-page {
+  .events {
     &__container {
       row-gap: 32px;
     }
