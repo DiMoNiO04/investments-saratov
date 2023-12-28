@@ -1,0 +1,67 @@
+.drag-area {
+  border-radius: 12px;
+  border: 1px dashed $inputGreyStroke;
+  background: #f4f6fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 8px;
+  height: 160px;
+
+  &.--active {
+    border: 1px solid $greyTxt;
+    background: $inputGreyStroke;
+  }
+
+  p {
+    color: $greyTxt;
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  button {
+    span {
+      @extend %regular16;
+    }
+  }
+
+  &__files {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+
+  &__file {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #e8f0ff;
+    width: fit-content;
+
+    span {
+      color: $bluePrimary;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 130%;
+    }
+
+    button {
+      @include sizes(20px, 20px);
+
+      svg {
+        stroke: $greyTxt;
+        stroke-linecap: round;
+      }
+
+      &:hover {
+        svg {
+          stroke: $bluePrimary;
+        }
+      }
+    }
+  }
+}

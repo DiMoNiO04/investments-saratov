@@ -1,0 +1,44 @@
+.investor-desc {
+  &__container {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+  }
+
+  &__title {
+    @extend %h2;
+  }
+
+  &__titles {
+    @extend %flexColumn;
+    row-gap: 20px;
+    padding-right: 20px;
+  }
+
+  &__txts {
+    p {
+      @extend %mainTxt;
+      @include mb(8px);
+    }
+  }
+
+  &__link {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .investor-desc {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+    }
+
+    &__titles {
+      padding: 0;
+    }
+
+    &__link {
+      width: 100%;
+    }
+  }
+}

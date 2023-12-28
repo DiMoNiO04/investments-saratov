@@ -20,5 +20,6 @@ import './scripts/tooltips.js';
 import './scripts/chat.js';
 import './scripts/map.js';
 import './scripts/cookies.js';
+import './scripts/drag-area.js';
 
 flsFunctions.isWebp();

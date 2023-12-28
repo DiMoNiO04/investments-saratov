@@ -1,7 +1,9 @@
+import { MOB } from '../modules/consts.js';
+
 function toggleActiveRegNumbers() {
-  if (document.querySelector('.reg__content-fieldset')) {
-    const contents = document.querySelectorAll('.reg__content-fieldset');
-    const numbers = document.querySelectorAll('.reg__form-numbers__block');
+  if (document.querySelector('.js-fieldset')) {
+    const contents = document.querySelectorAll('.js-fieldset');
+    const numbers = document.querySelectorAll('.js-fieldset-num');
 
     contents.forEach((content, indexContent) => {
       if (content.classList.contains('--active')) {
@@ -14,6 +16,15 @@ function toggleActiveRegNumbers() {
         });
       }
     });
+
+    if (document.querySelector('.investor-appl__form') && window.innerWidth < MOB) {
+      $('html, body').animate(
+        {
+          scrollTop: $('.investor-appl__form').offset().top - 60,
+        },
+        750
+      );
+    }
   }
 }
 

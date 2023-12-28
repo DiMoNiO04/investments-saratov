@@ -22,7 +22,7 @@ const scrollHeaderLoad = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.href.includes('main') && isTransparent) {
+  if (isTransparent) {
     scrollHeaderLoad();
     scrollHeader();
   }
@@ -60,10 +60,6 @@ jssearchclose.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
-  jssearchclose.click();
-});
-
-header.addEventListener('mouseleave', () => {
   jssearchclose.click();
 });
 

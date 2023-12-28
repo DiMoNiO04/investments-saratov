@@ -1,0 +1,174 @@
+.investor-appl {
+  &__container {
+    @extend %gridColumnTwo;
+    min-height: 857px;
+  }
+
+  &__desc {
+    @extend %flexColumn;
+    row-gap: 32px;
+    border-radius: 4px 0 0 4px;
+    background: $blueGradient;
+    padding: 60px 0 60px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__desc-title {
+    @extend %secondaryH3;
+    color: $white;
+  }
+
+  &__desc-logo {
+    @include sizes(258px, 64px);
+  }
+
+  &__desc-img {
+    @include sizes(2265px, 470px);
+    position: absolute;
+    left: -180px;
+    bottom: 20px;
+  }
+
+  &__form {
+    @extend %flexColumn;
+    row-gap: 40px;
+    background-color: $white;
+    border-radius: 0 4px 4px 0;
+    padding: 60px;
+  }
+
+  &__fieldset {
+    display: none;
+    flex-direction: column;
+    row-gap: 40px;
+    height: 100%;
+    justify-content: space-between;
+
+    &.--active {
+      display: flex;
+    }
+  }
+
+  &__fieldset-subtitle {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  &__fieldset-radioboxs {
+    @extend %flexColumn;
+    row-gap: 16px;
+  }
+
+  &__fieldset-blocks {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__fieldset-block {
+    @extend %flexColumn;
+    row-gap: 24px;
+  }
+
+  &__fieldset-inputs {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__fieldset-title {
+    @extend %subheader;
+  }
+
+  &__fieldset-btns {
+    @extend %flexColumn;
+    row-gap: 16px;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  &__fieldset-checkbox {
+    label {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  &__drag-area {
+    @extend %flexColumn;
+    row-gap: 24px;
+  }
+
+  .radiobox label {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .investor-appl {
+    &__form {
+      padding: 60px 50px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .investor-appl {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      min-height: 100%;
+    }
+
+    &__desc-img {
+      display: none;
+    }
+
+    &__desc {
+      padding: 40px;
+    }
+
+    &__desc-logo {
+      @include sizes(191px, 54px);
+      order: 1;
+    }
+
+    &__form {
+      padding: 40px;
+      min-height: 788px;
+      row-gap: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .investor-appl {
+    .container {
+      padding: 0;
+    }
+
+    &__desc,
+    &__form {
+      padding: 32px 16px;
+      border-radius: 0;
+    }
+
+    &__fieldset {
+      row-gap: 32px;
+    }
+
+    &__desc {
+      row-gap: 40px;
+    }
+
+    &__form {
+      min-height: 710px;
+    }
+
+    &__fieldset-texrarea {
+      .textarea__textarea {
+        height: 96px;
+      }
+    }
+  }
+}

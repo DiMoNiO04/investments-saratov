@@ -1,4 +1,4 @@
-<section class="authentication">
+<section class="section authentication">
   <div class="container">
     <div class="authentication__container">
       <div class="authentication__content auth --active" data-content-block="auth">
@@ -107,21 +107,22 @@
                 <span>Регистрация</span>
               </button>
             </div>
-            <div class="reg__form-numbers">
-              <div class="reg__form-numbers__block --active">
-                <div class="reg__form-numbers__number">
+            <!--Если поля в fieldset заполнен корректно классу fieldset-numbers__number добавить класс --filled -->
+            <div class="fieldset-numbers">
+              <div class="fieldset-numbers__block js-fieldset-num --active">
+                <div class="fieldset-numbers__number">
                   <svg>
                     <use xlink:href="@img/icons/icons.svg#reg-check"></use>
                   </svg>
                   <span>1</span>
                 </div>
               </div>
-              <div class="reg__form-numbers__block">
-                <svg xmlns="http://www.w3.org/2000/svg" width="141" height="32" viewBox="0 0 141 32" fill="none">
+              <div class="fieldset-numbers__block js-fieldset-num">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none">
                   <line
-                    x1="1"
+                    x1="0"
                     y1="15"
-                    x2="140"
+                    x2="500"
                     y2="15"
                     stroke="#DEE2E7"
                     stroke-width="2"
@@ -129,19 +130,19 @@
                     stroke-dasharray="4 8"
                   />
                 </svg>
-                <div class="reg__form-numbers__number">
+                <div class="fieldset-numbers__number">
                   <svg>
                     <use xlink:href="@img/icons/icons.svg#reg-check"></use>
                   </svg>
                   <span>2</span>
                 </div>
               </div>
-              <div class="reg__form-numbers__block">
-                <svg xmlns="http://www.w3.org/2000/svg" width="141" height="32" viewBox="0 0 141 32" fill="none">
+              <div class="fieldset-numbers__block js-fieldset-num">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none">
                   <line
-                    x1="1"
+                    x1="0"
                     y1="15"
-                    x2="140"
+                    x2="500"
                     y2="15"
                     stroke="#DEE2E7"
                     stroke-width="2"
@@ -149,7 +150,7 @@
                     stroke-dasharray="4 8"
                   />
                 </svg>
-                <div class="reg__form-numbers__number">
+                <div class="fieldset-numbers__number">
                   <svg>
                     <use xlink:href="@img/icons/icons.svg#reg-check"></use>
                   </svg>
@@ -157,7 +158,7 @@
                 </div>
               </div>
             </div>
-            <fieldset class="reg__content-fieldset --active" data-subcontent-block="reg-1">
+            <fieldset class="reg__content-fieldset js-fieldset --active" data-subcontent-block="reg-1">
               <div class="reg__form-input input">
                 <div class="input__head">Имя*</div>
                 <div class="input__input">
@@ -178,7 +179,7 @@
                 </button>
               </div>
             </fieldset>
-            <fieldset class="reg__content-fieldset" data-subcontent-block="reg-2">
+            <fieldset class="reg__content-fieldset js-fieldset" data-subcontent-block="reg-2">
               <div class="reg__form-input input">
                 <div class="input__head">Электронная почта*</div>
                 <div class="input__input">
@@ -202,7 +203,7 @@
                 </button>
               </div>
             </fieldset>
-            <fieldset class="reg__content-fieldset" data-subcontent-block="reg-3">
+            <fieldset class="reg__content-fieldset js-fieldset" data-subcontent-block="reg-3">
               <div class="reg__form-input input input--password">
                 <div class="input__head">Пароль*</div>
                 <div class="input__input">

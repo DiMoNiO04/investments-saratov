@@ -1,0 +1,154 @@
+.investor-scheme {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %secondaryH3;
+    max-width: 740px;
+  }
+
+  &__desc {
+    max-width: 760px;
+    @extend %mainTxt;
+
+    a {
+      color: $bluePrimary;
+    }
+  }
+
+  &__items {
+    @extend %gridColumnFour;
+    overflow: hidden;
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      @include sizes(100%, 2px);
+      background-color: #dee2e7;
+      display: block;
+      top: 88px;
+      left: 28px;
+    }
+
+    &:not(:last-child) {
+      .transport-inf__item-txt {
+        max-width: 208px;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-right: 16px;
+    }
+  }
+
+  &__icon {
+    @extend %numTextMid;
+    @extend %flexCenter;
+    @include sizes(72px, 72px);
+    background-color: $white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  &__txt {
+    @extend %mainTxt;
+    max-width: 270px;
+    position: relative;
+    padding-top: 16px;
+    left: 30px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      @include sizes(12px, 12px);
+      border-radius: 50%;
+      background-color: #dee2e7;
+      display: block;
+      top: -9px;
+      left: -3px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .investor-scheme {
+    &__icon {
+      font-size: 40px;
+    }
+
+    &__desc {
+      max-width: 580px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .investor-scheme {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 40px;
+    }
+
+    &__desc {
+      max-width: 100%;
+    }
+
+    &__txt {
+      max-width: 250px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .investor-scheme {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      padding-left: 42px;
+      row-gap: 20px;
+      position: relative;
+      overflow: visible;
+
+      &::before {
+        content: '';
+        position: absolute;
+        @include sizes(2px, 97%);
+        background-color: #dee2e7;
+        display: block;
+        top: 32px;
+        left: 4px;
+      }
+    }
+
+    &__item::after {
+      display: none;
+    }
+
+    &__icon {
+      margin-bottom: 12px;
+    }
+
+    &__txt {
+      padding: 0;
+      left: 0;
+
+      &::before {
+        top: -54px;
+        left: -42px;
+      }
+    }
+  }
+}

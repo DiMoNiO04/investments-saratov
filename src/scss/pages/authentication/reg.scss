@@ -63,72 +63,6 @@
   &__form-numbers {
     margin-bottom: 40px;
   }
-
-  &__form-numbers,
-  &__form-numbers__block {
-    @extend %flexCenterBetween;
-    column-gap: 8px;
-
-    svg {
-      height: 32px;
-    }
-  }
-
-  &__form-numbers__block {
-    &.--active {
-      .reg__form-numbers__number {
-        background: $blueGradient;
-        color: $white;
-        border-color: transparent;
-      }
-
-      svg line {
-        stroke: #144286;
-      }
-    }
-
-    &.--filled {
-      .reg__form-numbers__number {
-        background: $blueGradient;
-        color: $white;
-        border-color: transparent;
-
-        svg {
-          display: block;
-        }
-
-        span {
-          display: none;
-        }
-      }
-    }
-
-    svg {
-      width: 151px;
-    }
-  }
-
-  &__form-numbers__number {
-    @include sizes(32px, 32px);
-    @extend %flexCenter;
-    border-radius: 50%;
-    border: 1px solid $inputGreyStroke;
-    background-color: $white;
-    flex-shrink: 0;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.16px;
-    color: $greyTxt;
-    transition: $transitionColor, $transitionBgCol;
-
-    svg {
-      display: none;
-      @include sizes(16px, 16px);
-    }
-  }
 }
 
 @media screen and (max-width: $laptop) {
@@ -149,21 +83,6 @@
         @include sizes(92px, 36px);
       }
     }
-    &__form-numbers__block {
-      svg {
-        width: 141px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: $tablet) {
-  .reg {
-    &__form-numbers__block {
-      svg {
-        width: 104px;
-      }
-    }
   }
 }
 
@@ -179,12 +98,6 @@
       .reg__form-input {
         margin-bottom: 0;
         width: 100%;
-      }
-    }
-
-    &__form-numbers__block {
-      svg {
-        width: 100px;
       }
     }
 

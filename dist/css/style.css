@@ -1238,6 +1238,16 @@ svg {
   visibility: visible;
 }
 
+.investor-appl__drag-area,
+.investor-appl__fieldset-btns,
+.investor-appl__fieldset-inputs,
+.investor-appl__fieldset-block,
+.investor-appl__fieldset-blocks,
+.investor-appl__fieldset-radioboxs,
+.investor-appl__form,
+.investor-appl__desc,
+.investor-scheme__container,
+.investor-desc__titles,
 .territory-develop__contacts-bottom,
 .territory-develop__contacts-item,
 .territory-develop__item,
@@ -1459,6 +1469,7 @@ svg {
   flex-direction: column;
 }
 
+.investor-scheme__icon,
 .ppp-stages__icon,
 .ppp-other-projects__icon,
 .ao-dev-cor__icon,
@@ -1472,7 +1483,6 @@ svg {
 .transport-inf__item-icon,
 .account__table-btn,
 .account__fieldset-del,
-.reg__form-numbers__number,
 .recovery-pass__back,
 .auth__socials-items,
 .news__btn-modal,
@@ -1482,6 +1492,7 @@ svg {
 .header-bottom__list-item,
 .header-bottom__btn,
 .header-top__btns-button,
+.fieldset-numbers__number,
 .form-search,
 .list-per__item,
 .pagination__btn,
@@ -1529,8 +1540,6 @@ svg {
 .similar-stories__titles,
 .account__fieldset-subtitles,
 .account__titles,
-.reg__form-numbers,
-.reg__form-numbers__block,
 .auth__form-checkboxes,
 .news__card-more,
 .news__title-container,
@@ -1549,6 +1558,8 @@ svg {
 .header-top__content,
 .footer__bottom,
 .footer__list-title,
+.fieldset-numbers__block,
+.fieldset-numbers,
 .card__more,
 .dropdown__header,
 .input__input,
@@ -1641,6 +1652,8 @@ svg {
   justify-content: space-between;
 }
 
+.investor-appl__container,
+.investor-desc__container,
 .territory-develop .territory-develop__amount .territory-develop__items,
 .territory-develop__records-lists,
 .territory-develop__records-items,
@@ -1745,6 +1758,7 @@ svg {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.investor-scheme__items,
 .territory-develop__contacts,
 .economic-zone__contacts,
 .economic-zone__items,
@@ -1846,6 +1860,7 @@ svg {
 .header *,
 .modal-write__btns-desc,
 .footer__info-title,
+.drag-area button span,
 .textarea__textarea textarea,
 .textarea__textarea textarea::placeholder,
 .dropdown-def .dropdown__value,
@@ -1894,6 +1909,7 @@ svg {
   text-transform: uppercase;
 }
 
+.investor-desc__title,
 .territory-develop__title-h1,
 .technopark__title-h1,
 .economic-zone__title-h1,
@@ -1998,6 +2014,9 @@ svg {
   line-height: 120%;
 }
 
+.investor-scheme__txt,
+.investor-scheme__desc,
+.investor-desc__txts p,
 .territory-develop__contacts-label,
 .territory-develop__item-text p,
 .territory-develop__advan-label,
@@ -2161,6 +2180,7 @@ svg {
   line-height: 130%;
 }
 
+.investor-appl__fieldset-title,
 .territory-develop__supports-num .territory-develop__item-name,
 .territory-develop__item-text p strong,
 .territory-develop__item-name,
@@ -2241,6 +2261,8 @@ svg {
   line-height: 130%;
 }
 
+.investor-appl__desc-title,
+.investor-scheme__title,
 .ppp-project-geografy__title,
 .ppp-project-financial__title,
 .ppp-stages__title,
@@ -2311,6 +2333,7 @@ svg {
   color: #2d6fd0;
 }
 
+.investor-scheme__icon,
 .ppp-implementation__list li b,
 .ppp-tax__desc b,
 .monitoring-request__items--four b,
@@ -3884,6 +3907,139 @@ fieldset {
   row-gap: 20px;
 }
 
+.drag-area {
+  border-radius: 12px;
+  border: 1px dashed #dee2e7;
+  background: #f4f6fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 8px;
+  height: 160px;
+}
+
+.drag-area.--active {
+  border: 1px solid #858c95;
+  background: #dee2e7;
+}
+
+.drag-area p {
+  color: #858c95;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.drag-area__files {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  row-gap: 16px;
+}
+
+.drag-area__file {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #e8f0ff;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.drag-area__file span {
+  color: #2d6fd0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.drag-area__file button {
+  width: 20px;
+  height: 20px;
+}
+
+.drag-area__file button svg {
+  stroke: #858c95;
+  stroke-linecap: round;
+}
+
+.drag-area__file button:hover svg {
+  stroke: #2d6fd0;
+}
+
+.fieldset-numbers {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.fieldset-numbers svg {
+  height: 32px;
+}
+
+.fieldset-numbers__block {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.fieldset-numbers__block svg {
+  height: 32px;
+}
+
+.fieldset-numbers__block.--active .fieldset-numbers__number {
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.fieldset-numbers__block.--active svg line {
+  stroke: #144286;
+}
+
+.fieldset-numbers__block.--filled .fieldset-numbers__number {
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.fieldset-numbers__block.--filled .fieldset-numbers__number svg {
+  display: block;
+}
+
+.fieldset-numbers__block.--filled .fieldset-numbers__number span {
+  display: none;
+}
+
+.fieldset-numbers__block svg {
+  width: 100%;
+}
+
+.fieldset-numbers__number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #dee2e7;
+  background-color: #ffffff;
+  flex-shrink: 0;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  color: #858c95;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.fieldset-numbers__number svg {
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
 .map__titles {
   -moz-column-gap: 20px;
        column-gap: 20px;
@@ -4384,6 +4540,8 @@ fieldset {
 
 .header svg {
   transition: transform 0.4s ease;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .header svg use,
@@ -4395,6 +4553,7 @@ fieldset {
 .header a,
 .header p {
   transition: color 0.4s ease;
+  flex-shrink: 0;
 }
 
 .header button:not(.dropdown__btn):hover,
@@ -4446,7 +4605,7 @@ fieldset {
 .header-top__burger svg {
   top: 0;
   position: absolute;
-  transition-duration: opacity 0.2s ease, visibility 0.2s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .header-top__logo {
@@ -5518,7 +5677,7 @@ fieldset {
   flex: 0 0 50%;
   text-align: center;
   padding: 8.5px 0;
-  border-bottom: 1px solid #d3dce4;
+  border-bottom: 2px solid #d3dce4;
 }
 
 .legislation__btns button:hover span {
@@ -5538,13 +5697,12 @@ fieldset {
 }
 
 .legislation__btns button.--active {
-  border-bottom: 2px solid #2d6fd0;
+  border-color: #2d6fd0;
 }
 
 .legislation__btns button.--active span {
   color: #2d6fd0;
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 500;
 }
 
 .legislation__items {
@@ -6562,68 +6720,6 @@ fieldset {
   margin-bottom: 40px;
 }
 
-.reg__form-numbers,
-.reg__form-numbers__block {
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-}
-
-.reg__form-numbers svg,
-.reg__form-numbers__block svg {
-  height: 32px;
-}
-
-.reg__form-numbers__block.--active .reg__form-numbers__number {
-  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
-  color: #ffffff;
-  border-color: transparent;
-}
-
-.reg__form-numbers__block.--active svg line {
-  stroke: #144286;
-}
-
-.reg__form-numbers__block.--filled .reg__form-numbers__number {
-  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
-  color: #ffffff;
-  border-color: transparent;
-}
-
-.reg__form-numbers__block.--filled .reg__form-numbers__number svg {
-  display: block;
-}
-
-.reg__form-numbers__block.--filled .reg__form-numbers__number span {
-  display: none;
-}
-
-.reg__form-numbers__block svg {
-  width: 151px;
-}
-
-.reg__form-numbers__number {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid #dee2e7;
-  background-color: #ffffff;
-  flex-shrink: 0;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.16px;
-  color: #858c95;
-  transition: color 0.4s ease, background-color 0.4s ease;
-}
-
-.reg__form-numbers__number svg {
-  display: none;
-  width: 16px;
-  height: 16px;
-}
-
 .account {
   margin: 168px 0 140px;
 }
@@ -7299,8 +7395,8 @@ fieldset {
   border-radius: 50%;
   background-color: #dee2e7;
   display: block;
-  top: -14px;
-  left: 3px;
+  top: -12px;
+  left: 4px;
 }
 
 .location__titles {
@@ -9663,7 +9759,7 @@ fieldset {
   flex: 0 0 50%;
   text-align: center;
   padding: 8.5px 0;
-  border-bottom: 1px solid #d3dce4;
+  border-bottom: 2px solid #d3dce4;
 }
 
 .subsidies__btns button:hover span {
@@ -9675,13 +9771,12 @@ fieldset {
 }
 
 .subsidies__btns button.--active {
-  border-bottom: 2px solid #2d6fd0;
+  border-color: #2d6fd0;
 }
 
 .subsidies__btns button.--active span {
   color: #2d6fd0;
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 500;
 }
 
 .subsidies__subtitle {
@@ -12214,6 +12309,186 @@ fieldset {
   flex-shrink: 0;
 }
 
+.investor-desc__container {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.investor-desc__titles {
+  row-gap: 20px;
+  padding-right: 20px;
+}
+
+.investor-desc__txts p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.investor-desc__link {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.investor-scheme__container {
+  row-gap: 40px;
+}
+
+.investor-scheme__title {
+  max-width: 740px;
+}
+
+.investor-scheme__desc {
+  max-width: 760px;
+}
+
+.investor-scheme__desc a {
+  color: #2d6fd0;
+}
+
+.investor-scheme__items {
+  overflow: hidden;
+}
+
+.investor-scheme__item {
+  position: relative;
+}
+
+.investor-scheme__item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #dee2e7;
+  display: block;
+  top: 88px;
+  left: 28px;
+}
+
+.investor-scheme__item:not(:last-child) .transport-inf__item-txt {
+  max-width: 208px;
+}
+
+.investor-scheme__item:not(:last-child) {
+  padding-right: 16px;
+}
+
+.investor-scheme__icon {
+  width: 72px;
+  height: 72px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.investor-scheme__txt {
+  max-width: 270px;
+  position: relative;
+  padding-top: 16px;
+  left: 30px;
+}
+
+.investor-scheme__txt:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #dee2e7;
+  display: block;
+  top: -9px;
+  left: -3px;
+}
+
+.investor-appl__container {
+  min-height: 857px;
+}
+
+.investor-appl__desc {
+  row-gap: 32px;
+  border-radius: 4px 0 0 4px;
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+  padding: 60px 0 60px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.investor-appl__desc-title {
+  color: #ffffff;
+}
+
+.investor-appl__desc-logo {
+  width: 258px;
+  height: 64px;
+}
+
+.investor-appl__desc-img {
+  width: 2265px;
+  height: 470px;
+  position: absolute;
+  left: -180px;
+  bottom: 20px;
+}
+
+.investor-appl__form {
+  row-gap: 40px;
+  background-color: #ffffff;
+  border-radius: 0 4px 4px 0;
+  padding: 60px;
+}
+
+.investor-appl__fieldset {
+  display: none;
+  flex-direction: column;
+  row-gap: 40px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.investor-appl__fieldset.--active {
+  display: flex;
+}
+
+.investor-appl__fieldset-subtitle {
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.investor-appl__fieldset-radioboxs {
+  row-gap: 16px;
+}
+
+.investor-appl__fieldset-blocks {
+  row-gap: 40px;
+}
+
+.investor-appl__fieldset-block {
+  row-gap: 24px;
+}
+
+.investor-appl__fieldset-inputs {
+  row-gap: 20px;
+}
+
+.investor-appl__fieldset-btns {
+  row-gap: 16px;
+}
+
+.investor-appl__fieldset-btns button {
+  width: 100%;
+}
+
+.investor-appl__fieldset-checkbox label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.investor-appl__drag-area {
+  row-gap: 24px;
+}
+
+.investor-appl .radiobox label {
+  align-items: flex-start;
+}
+
 @media screen and (min-width: 48em) {
   #map:hover [class*=copyrights-pane],
   #map:hover [class*=controls__control] {
@@ -12304,6 +12579,7 @@ fieldset {
     font-size: 64px;
   }
 
+  .investor-desc__title,
   .territory-develop__title-h1,
   .technopark__title-h1,
   .economic-zone__title-h1,
@@ -12403,6 +12679,9 @@ fieldset {
     font-size: 26px;
   }
 
+  .investor-scheme__txt,
+  .investor-scheme__desc,
+  .investor-desc__txts p,
   .territory-develop__contacts-label,
   .territory-develop__item-text p,
   .territory-develop__advan-label,
@@ -12515,6 +12794,8 @@ fieldset {
     font-size: 24px;
   }
 
+  .investor-appl__desc-title,
+  .investor-scheme__title,
   .ppp-project-geografy__title,
   .ppp-project-financial__title,
   .ppp-stages__title,
@@ -12576,6 +12857,7 @@ fieldset {
     font-size: 32px;
   }
 
+  .investor-scheme__icon,
   .ppp-implementation__list li b,
   .ppp-tax__desc b,
   .monitoring-request__items--four b,
@@ -13012,10 +13294,6 @@ fieldset {
   .reg__form-captcha-img img {
     width: 92px;
     height: 36px;
-  }
-
-  .reg__form-numbers__block svg {
-    width: 141px;
   }
 
   .account {
@@ -14003,6 +14281,18 @@ fieldset {
   .territory-develop__supports .territory-develop__item {
     min-height: 208px;
   }
+
+  .investor-scheme__icon {
+    font-size: 40px;
+  }
+
+  .investor-scheme__desc {
+    max-width: 580px;
+  }
+
+  .investor-appl__form {
+    padding: 60px 50px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -14018,6 +14308,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .investor-desc__title,
   .territory-develop__title-h1,
   .technopark__title-h1,
   .economic-zone__title-h1,
@@ -14064,6 +14355,7 @@ fieldset {
     font-size: 40px;
   }
 
+  .investor-appl__fieldset-title,
   .territory-develop__supports-num .territory-develop__item-name,
   .territory-develop__item-text p strong,
   .territory-develop__item-name,
@@ -14122,6 +14414,8 @@ fieldset {
     line-height: 120%;
   }
 
+  .investor-appl__desc-title,
+  .investor-scheme__title,
   .ppp-project-geografy__title,
   .ppp-project-financial__title,
   .ppp-stages__title,
@@ -15235,10 +15529,6 @@ fieldset {
   .recovery-pass__text {
     line-height: 130%;
     margin-bottom: 27px;
-  }
-
-  .reg__form-numbers__block svg {
-    width: 104px;
   }
 
   .account {
@@ -17723,6 +18013,57 @@ fieldset {
   .territory-develop__gallery-item {
     height: 350px;
   }
+
+  .investor-desc__container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+
+  .investor-desc__titles {
+    padding: 0;
+  }
+
+  .investor-desc__link {
+    width: 100%;
+  }
+
+  .investor-scheme__items {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+
+  .investor-scheme__desc {
+    max-width: 100%;
+  }
+
+  .investor-scheme__txt {
+    max-width: 250px;
+  }
+
+  .investor-appl__container {
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 100%;
+  }
+
+  .investor-appl__desc-img {
+    display: none;
+  }
+
+  .investor-appl__desc {
+    padding: 40px;
+  }
+
+  .investor-appl__desc-logo {
+    width: 191px;
+    height: 54px;
+    order: 1;
+  }
+
+  .investor-appl__form {
+    padding: 40px;
+    min-height: 788px;
+    row-gap: 32px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -17732,6 +18073,7 @@ fieldset {
     line-height: 110%;
   }
 
+  .investor-desc__title,
   .territory-develop__title-h1,
   .technopark__title-h1,
   .economic-zone__title-h1,
@@ -17833,6 +18175,9 @@ fieldset {
     font-size: 24px;
   }
 
+  .investor-scheme__txt,
+  .investor-scheme__desc,
+  .investor-desc__txts p,
   .territory-develop__contacts-label,
   .territory-develop__item-text p,
   .territory-develop__advan-label,
@@ -17943,6 +18288,7 @@ fieldset {
     font-size: 18px;
   }
 
+  .investor-appl__fieldset-title,
   .territory-develop__supports-num .territory-develop__item-name,
   .territory-develop__item-text p strong,
   .territory-develop__item-name,
@@ -18007,6 +18353,8 @@ fieldset {
     line-height: 120%;
   }
 
+  .investor-appl__desc-title,
+  .investor-scheme__title,
   .ppp-project-geografy__title,
   .ppp-project-financial__title,
   .ppp-stages__title,
@@ -18055,6 +18403,7 @@ fieldset {
             hyphens: auto;
   }
 
+  .investor-scheme__icon,
   .ppp-implementation__list li b,
   .ppp-tax__desc b,
   .monitoring-request__items--four b,
@@ -18222,6 +18571,18 @@ fieldset {
     display: flex;
     -moz-column-gap: 0px;
          column-gap: 0px;
+  }
+
+  .fieldset-numbers--appl {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+  }
+
+  .fieldset-numbers--appl .fieldset-numbers__block:not(:first-child) {
+    width: calc(25% - 6px);
   }
 
   .map__text,
@@ -19112,10 +19473,6 @@ fieldset {
   .reg__form-captcha .reg__form-input {
     margin-bottom: 0;
     width: 100%;
-  }
-
-  .reg__form-numbers__block svg {
-    width: 100px;
   }
 
   .reg__form-captcha-img {
@@ -21219,6 +21576,77 @@ fieldset {
 
   .territory-develop__gallery-item {
     height: 350px;
+  }
+
+  .investor-scheme__title {
+    font-size: 32px;
+  }
+
+  .investor-scheme__container {
+    row-gap: 32px;
+  }
+
+  .investor-scheme__items {
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 42px;
+    row-gap: 20px;
+    position: relative;
+    overflow: visible;
+  }
+
+  .investor-scheme__items::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 97%;
+    background-color: #dee2e7;
+    display: block;
+    top: 32px;
+    left: 4px;
+  }
+
+  .investor-scheme__item::after {
+    display: none;
+  }
+
+  .investor-scheme__icon {
+    margin-bottom: 12px;
+  }
+
+  .investor-scheme__txt {
+    padding: 0;
+    left: 0;
+  }
+
+  .investor-scheme__txt::before {
+    top: -54px;
+    left: -42px;
+  }
+
+  .investor-appl .container {
+    padding: 0;
+  }
+
+  .investor-appl__desc,
+  .investor-appl__form {
+    padding: 32px 16px;
+    border-radius: 0;
+  }
+
+  .investor-appl__fieldset {
+    row-gap: 32px;
+  }
+
+  .investor-appl__desc {
+    row-gap: 40px;
+  }
+
+  .investor-appl__form {
+    min-height: 710px;
+  }
+
+  .investor-appl__fieldset-texrarea .textarea__textarea {
+    height: 96px;
   }
 }
 

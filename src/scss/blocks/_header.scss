@@ -44,6 +44,8 @@
 
   svg {
     transition: $transitionTransform;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   svg use,
@@ -55,6 +57,7 @@
   a,
   p {
     transition: $transitionColor;
+    flex-shrink: 0;
   }
 
   button:not(.dropdown__btn):hover,
@@ -109,7 +112,7 @@
     svg {
       top: 0;
       position: absolute;
-      transition-duration:
+      transition:
         opacity 0.2s ease,
         visibility 0.2s ease;
 
