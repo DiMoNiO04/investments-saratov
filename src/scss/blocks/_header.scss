@@ -44,8 +44,7 @@
 
   svg {
     transition: $transitionTransform;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    @extend %roundSvg;
   }
 
   svg use,

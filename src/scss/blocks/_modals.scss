@@ -40,22 +40,8 @@
     transition:
       transform 700ms,
       opacity 250ms;
-  }
-
-  &__content {
     border-radius: 4px;
     background-color: $white;
-    // display: flex;
-
-    // 		opacity: 0;
-    // 			// visibility: hidden;
-    // 			transition: $transitionOpacity, $transitionVisibility;
-
-    // 			&.active {
-    // 				display: flex;
-    // 				opacity: 1;
-    // 				// visibility: visible
-    // 			}
   }
 
   &__close {
@@ -66,26 +52,325 @@
     right: 20px;
     z-index: 2;
     cursor: pointer;
-    transition: stroke 0.5s ease;
+    transition: fill 0.5s ease;
 
     svg {
-      stroke: $greyTxt;
+      @extend %roundSvg;
+      object-fit: contain;
     }
 
     &:hover {
       svg {
-        stroke: $black;
+        fill: $greyTxt;
+      }
+    }
+  }
+}
+
+.modal-sm {
+  &__content {
+    @extend %flexColumn;
+    align-items: center;
+    row-gap: 40px;
+    padding: 50px 60px;
+    max-width: 500px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  &__close {
+    svg {
+      fill: $greyTxt;
+    }
+
+    &:hover {
+      svg {
+        fill: $black;
       }
     }
   }
 
-  &__close svg {
-    object-fit: contain;
+  &__btns {
+    @extend %flexCenter;
+    column-gap: 16px;
+  }
+}
+
+.modal-bg {
+  width: 837px;
+
+  &__content {
+    padding-top: 50px;
+  }
+
+  &__wrapper {
+    max-height: 78vh;
+    padding: 0 60px 60px 60px;
+
+    .simplebar-content {
+      @extend %flexColumn;
+      row-gap: 40px;
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .dropdown__items {
+    .simplebar-content {
+      row-gap: 0;
+    }
+  }
+
+  &__titles {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__title {
+    @extend %h3;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  &__btns {
+    @extend %flexCenterStart;
+    column-gap: 16px;
+  }
+
+  &__btns-desc {
+    font-size: 14px;
+    line-height: 130%;
+
+    a {
+      color: $bluePrimary;
+      &:hover {
+        color: $blueHover;
+      }
+    }
+  }
+
+  &__txt {
+    @extend %regular16;
+  }
+
+  &__blocks {
+    @extend %flexColumn;
+    row-gap: 20px;
+
+    &--16 {
+      row-gap: 16px;
+    }
+
+    &--32 {
+      row-gap: 32px;
+    }
+  }
+
+  &__block {
+    @extend %flexColumn;
+    row-gap: 16px;
+
+    &--8 {
+      row-gap: 8px;
+    }
+  }
+
+  &__block-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  &__block-list {
+    @extend %flexColumn;
+    row-gap: 8px;
+
+    &--4 {
+      row-gap: 4px;
+    }
+    li {
+      @extend %regular16;
+      position: relative;
+      padding-left: 36px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background-color: $bluePrimary;
+        width: 24px;
+        height: 2px;
+      }
+    }
+
+    &--2 li {
+      padding-left: 24px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: 10px;
+        border-radius: 50%;
+        background-color: $black;
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
+
+  &__block-txts {
+    @extend %flexColumn;
+    row-gap: 8px;
+
+    &--16 {
+      row-gap: 16px;
+    }
+
+    p {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 16px;
+      @extend %regular16;
+
+      span {
+        margin-top: 6px;
+      }
+
+      b {
+        @extend %numTextSmall;
+      }
+    }
+
+    a {
+      border-bottom: 1px solid;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 140%;
+      width: fit-content;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__descs {
+    @extend %flexColumn;
+    row-gap: 20px;
+
+    li {
+      @extend %regular16;
+      @extend %flexColumn;
+      row-gap: 8px;
+
+      b {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__block-descs {
+    @extend %flexColumn;
+    row-gap: 8px;
+
+    p {
+      @extend %regular16;
+
+      b {
+        font-weight: 500;
+        margin-right: 4px;
+      }
+
+      a {
+        color: $bluePrimary;
+        &:hover {
+          color: $blueHover;
+        }
+      }
+    }
+  }
+
+  &__links,
+  &__links-list {
+    @extend %flexColumn;
+    row-gap: 16px;
+
+    li {
+      a {
+        color: $bluePrimary;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 130%;
+        margin-bottom: 2px;
+
+        &:hover {
+          color: $blueHover;
+        }
+      }
+
+      p {
+        @extend %regular16;
+      }
+    }
+  }
+
+  &__links-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+}
+
+.modal-acc-suc {
+  max-width: 595px;
+
+  &__content {
+    padding: 50px 60px;
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__btn {
+    margin: 0 0 0 auto;
+  }
+
+  &__titles {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__title {
+    @extend %subheader;
+  }
+
+  &__subtitle {
+    @extend %regular18;
+
+    a {
+      color: $bluePrimary;
+
+      &:hover {
+        color: $black;
+      }
+    }
   }
 }
 
 .modal-write {
-  padding: 50px 60px;
+  padding: 50px 60px 0 50px;
   width: 837px;
   @extend %flexColumn;
   row-gap: 40px;
@@ -93,6 +378,7 @@
   &__content {
     @extend %flexColumn;
     row-gap: 40px;
+    padding-bottom: 60px;
   }
 
   &__title {
@@ -154,180 +440,63 @@
   }
 }
 
-.modal-pers-cab {
-  @extend %flexColumn;
-  align-items: center;
-  row-gap: 40px;
-  padding: 50px 60px;
-
-  &__title {
-    @extend %flexCenterStart;
-    column-gap: 8px;
-    width: 100%;
-
-    svg {
-      @include sizes(32px, 32px);
+@media screen and (max-width: $tablet) {
+  .modal-sm {
+    &__content {
+      padding: 40px;
+      row-gap: 32px;
     }
 
-    p {
-      @extend %subheader;
+    &__close {
+      top: 12px;
+      right: 12px;
+    }
+
+    &__title {
+      line-height: 120%;
     }
   }
 
-  &__content {
-    @extend %flexColumn;
-    row-gap: 20px;
+  .modal-acc-suc {
+    &__content {
+      padding: 40px;
+      row-gap: 32px;
+    }
+
+    &__close {
+      top: 12px;
+      right: 12px;
+    }
+
+    &__titles {
+      row-gap: 16px;
+    }
   }
 
-  &__txt {
-    @extend %regular18;
+  .modal-bg {
+    width: 85%;
 
-    a {
-      color: $bluePrimary;
-      transition: $transitionColor;
+    &__wrapper {
+      .simplebar-content {
+        row-gap: 32px;
+      }
+    }
 
-      &:hover {
-        color: $black;
+    &__titles {
+      row-gap: 16px;
+    }
+
+    &__btns {
+      align-items: flex-start;
+      flex-direction: column;
+      row-gap: 16px;
+
+      .btn-def {
+        width: 100%;
       }
     }
   }
 
-  &__btns {
-    @extend %flexCenterEnd;
-    column-gap: 20px;
-  }
-
-  &--create,
-  &--sent {
-    width: 595px;
-  }
-
-  &--sent {
-    row-gap: 24px;
-    align-items: flex-start;
-
-    .modal-pers-cab__btn {
-      margin: 0 0 0 auto;
-    }
-  }
-
-  &--exit {
-    width: 502px;
-
-    .modal-pers-cab__btns {
-      margin: 0 0 0 auto;
-    }
-  }
-}
-
-.modal-infrastructure {
-  .modal__close {
-    svg {
-      stroke: $black;
-    }
-  }
-
-  &__inner {
-    width: 837px;
-  }
-
-  &__blocks {
-    @extend %flexColumn;
-    row-gap: 40px;
-    padding: 50px 60px 60px;
-  }
-
-  &__items {
-    @extend %flexColumn;
-    row-gap: 20px;
-  }
-
-  &__title {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 120%;
-  }
-
-  &__item-tit {
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 130%;
-  }
-
-  &__item-txt {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 130%;
-  }
-}
-
-.modal-innovative-enterprises {
-  &__inner {
-    width: 837px;
-  }
-
-  &__content {
-    padding: 50px 60px 60px;
-    max-height: 830px;
-    overflow-y: auto;
-  }
-
-  &__title {
-    @extend %h3;
-    margin-bottom: 40px;
-  }
-
-  &__subtitle {
-    margin-bottom: 16px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 130%;
-  }
-
-  &__blocks {
-    @extend %flexColumn;
-    row-gap: 16px;
-  }
-
-  &__block {
-    a {
-      color: $bluePrimary;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 130%;
-      margin-bottom: 2px;
-    }
-
-    p {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 130%;
-    }
-  }
-}
-
-@media screen and (max-width: $laptop) {
-  .modal-pers-cab--succes {
-    &__btn {
-      margin: 0 0 0 auto;
-    }
-  }
-
-  .modal-pers-cab--sent {
-    row-gap: 40px;
-    width: 500px;
-    padding: 50px 54px;
-  }
-
-  .modal-infrastructure {
-    &__title {
-      font-size: 26px;
-    }
-  }
-}
-
-@media screen and (max-width: $tablet) {
   .modal-write {
     width: 534px;
     row-gap: 32px;
@@ -375,48 +544,73 @@
       }
     }
   }
-
-  .modal-pers-cab {
-    &__content {
-      row-gap: 16px;
-    }
-
-    &__btn {
-      padding: 12px 28px;
-    }
-
-    &--create {
-      padding: 40px;
-      row-gap: 32px;
-    }
-
-    &--email {
-      padding: 50px 40p;
-    }
-
-    &--sent {
-      row-gap: 32px;
-      padding: 40px;
-    }
-
-    &--exit {
-      padding: 40px;
-      row-gap: 32px;
-    }
-  }
-
-  .modal-infrastructure {
-    &__inner {
-      width: 554px;
-    }
-
-    &__blocks {
-      row-gap: 32px;
-    }
-  }
 }
 
 @media screen and (max-width: $mob) {
+  .modal {
+    &__inner {
+      width: 100%;
+    }
+  }
+
+  .modal-bg {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+
+    &__content {
+      padding-top: 72px;
+    }
+
+    &__close {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__wrapper {
+      max-height: calc(100vh - 72px);
+      height: calc(100vh - 72px);
+      padding: 0 20px 40px 20px;
+    }
+
+    &__block-list {
+      li {
+        padding-left: 32px;
+      }
+    }
+  }
+
+  .modal-sm {
+    margin: auto 16px;
+
+    &__content {
+      padding: 40px 20px;
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__btns {
+      flex-direction: column;
+      row-gap: 16px;
+      width: 100%;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .modal-acc-suc {
+    width: calc(100% - 32px);
+
+    &__content {
+      padding: 40px 24px;
+    }
+  }
+
   .modal-write {
     width: 100%;
     padding: 80px 16px;
@@ -446,72 +640,6 @@
       .btn-def {
         padding: 10px 16px;
       }
-    }
-  }
-
-  .modal-pers-cab {
-    width: 328px;
-
-    &__title {
-      flex-direction: column;
-      row-gap: 8px;
-      align-items: flex-start;
-    }
-
-    &__txt {
-      @extend %regular18;
-
-      a {
-        color: $bluePrimary;
-        transition: $transitionColor;
-
-        &:hover {
-          color: $black;
-        }
-      }
-    }
-
-    &--create {
-      padding-right: 24px;
-      padding-left: 24px;
-    }
-
-    &--email {
-      padding: 50px 20px 40px;
-    }
-
-    &--sent {
-      row-gap: 32px;
-      padding: 40px 20px;
-
-      .modal-pers-cab__title p {
-        font-size: 24px;
-      }
-    }
-
-    &--exit {
-      padding-left: 24px;
-      padding-right: 24px;
-
-      .modal-pers-cab__btns {
-        flex-direction: column;
-        row-gap: 16px;
-        width: 100%;
-      }
-    }
-  }
-
-  .modal-infrastructure {
-    &__inner {
-      width: 100%;
-    }
-
-    &__blocks {
-      padding: 72px 24px 40px 24px;
-    }
-
-    &__title {
-      font-size: 20px;
     }
   }
 }

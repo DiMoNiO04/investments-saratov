@@ -13,6 +13,11 @@
   visibility: visible;
 }
 
+%roundSvg {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 //-----Flex----------//
 %flexColumn {
   display: flex;
@@ -118,5 +123,4 @@
     object-fit: cover;
   }
 }
-
 //-------------------------//

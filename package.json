@@ -30,6 +30,8 @@
     "eslint-plugin-prettier": "latest",
     "fs": "latest",
     "gulp": "latest",
+    "gulp-typograf": "latest",
+    "typograf": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",
     "gulp-file-include": "latest",

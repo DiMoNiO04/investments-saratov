@@ -1238,6 +1238,13 @@ svg {
   visibility: visible;
 }
 
+.header svg,
+.modal__close svg,
+.dropdown__btn svg {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .investor-appl__drag-area,
 .investor-appl__fieldset-btns,
 .investor-appl__fieldset-inputs,
@@ -1453,14 +1460,23 @@ svg {
 .chat__content-blocks,
 .header-top__phone,
 .header,
-.modal-innovative-enterprises__blocks,
-.modal-infrastructure__items,
-.modal-infrastructure__blocks,
-.modal-pers-cab__content,
-.modal-pers-cab,
 .modal-write__form,
 .modal-write__content,
 .modal-write,
+.modal-acc-suc__titles,
+.modal-acc-suc__content,
+.modal-bg__links,
+.modal-bg__links-list,
+.modal-bg__block-descs,
+.modal-bg__descs li,
+.modal-bg__descs,
+.modal-bg__block-txts,
+.modal-bg__block-list,
+.modal-bg__block,
+.modal-bg__blocks,
+.modal-bg__titles,
+.modal-bg__wrapper .simplebar-content,
+.modal-sm__content,
 .footer__list-items,
 .card__content,
 .card,
@@ -1492,6 +1508,7 @@ svg {
 .header-bottom__list-item,
 .header-bottom__btn,
 .header-top__btns-button,
+.modal-sm__btns,
 .fieldset-numbers__number,
 .form-search,
 .list-per__item,
@@ -1593,8 +1610,7 @@ svg {
   justify-content: space-between;
 }
 
-.header-top__panel,
-.modal-pers-cab__btns {
+.header-top__panel {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -1629,8 +1645,8 @@ svg {
 .header-bottom__list,
 .header-bottom__btns,
 .header-top__container,
-.modal-pers-cab__title,
 .modal-write__btns,
+.modal-bg__btns,
 .footer__info-socials,
 .doc-download__item,
 .textarea__textarea,
@@ -1859,6 +1875,13 @@ svg {
 .account-menu__item span,
 .header *,
 .modal-write__btns-desc,
+.modal-bg__links li p,
+.modal-bg__links-list li p,
+.modal-bg__block-descs p,
+.modal-bg__descs li,
+.modal-bg__block-txts p,
+.modal-bg__block-list li,
+.modal-bg__txt,
 .footer__info-title,
 .drag-area button span,
 .textarea__textarea textarea,
@@ -1888,7 +1911,7 @@ svg {
 .transport-inf__item-txt,
 .transport-inf__block-txt,
 .authentication__desc-list li span,
-.modal-pers-cab__txt {
+.modal-acc-suc__subtitle {
   font-size: 18px;
   font-weight: 400;
   line-height: 130%;
@@ -2007,8 +2030,8 @@ svg {
 .success-hist__slide-desc,
 .project-desc__desc-title,
 .project-desc__list li b,
-.modal-innovative-enterprises__title,
-.modal-write__title {
+.modal-write__title,
+.modal-bg__title {
   font-size: 32px;
   font-weight: 600;
   line-height: 120%;
@@ -2233,7 +2256,7 @@ svg {
 .steps-investor__item-tit,
 .legislation__item-title,
 .calculator__block-title,
-.modal-pers-cab__title p,
+.modal-acc-suc__title,
 .content p b,
 .content strong {
   font-size: 24px;
@@ -2349,7 +2372,8 @@ svg {
 
 .ppp-projects__desc-price b,
 .tax-blocks__num b,
-.tax-blocks__items-blocks li b {
+.tax-blocks__items-blocks li b,
+.modal-bg__block-txts p b {
   color: #2d6fd0;
   font-size: 24px;
   font-weight: 600;
@@ -3106,6 +3130,10 @@ fieldset {
   padding: 10px 16px;
 }
 
+.dropdown__item:last-child {
+  padding-bottom: 0;
+}
+
 .dropdown__item input {
   display: none;
 }
@@ -3419,6 +3447,7 @@ fieldset {
   border-radius: 10rem;
   margin-right: 4px;
   cursor: pointer;
+  z-index: 111;
 }
 
 .simplebar-scrollbar::before {
@@ -3429,11 +3458,13 @@ fieldset {
   opacity: 1;
   background-color: #dee2e7;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
   top: 0;
   bottom: 0;
+  cursor: pointer;
 }
 
 .simplebar-scrollbar.simplebar-visible::before {
@@ -3444,8 +3475,13 @@ fieldset {
   right: -30px;
 }
 
-.header .simplebar-track.simplebar-horizontal {
+.header .simplebar-track.simplebar-horizontal,
+.modal-bg .simplebar-track.simplebar-horizontal {
   display: none;
+}
+
+.modal-bg .simplebar-track.simplebar-vertical {
+  height: 97%;
 }
 
 .tooltip {
@@ -4275,9 +4311,6 @@ fieldset {
   transform: scale(0.1);
   opacity: 0;
   transition: transform 700ms, opacity 250ms;
-}
-
-.modal__content {
   border-radius: 4px;
   background-color: #ffffff;
 }
@@ -4291,15 +4324,7 @@ fieldset {
   right: 20px;
   z-index: 2;
   cursor: pointer;
-  transition: stroke 0.5s ease;
-}
-
-.modal__close svg {
-  stroke: #858c95;
-}
-
-.modal__close:hover svg {
-  stroke: #2f2f2f;
+  transition: fill 0.5s ease;
 }
 
 .modal__close svg {
@@ -4307,14 +4332,274 @@ fieldset {
      object-fit: contain;
 }
 
-.modal-write {
+.modal__close:hover svg {
+  fill: #858c95;
+}
+
+.modal-sm__content {
+  align-items: center;
+  row-gap: 40px;
   padding: 50px 60px;
+  max-width: 500px;
+}
+
+.modal-sm__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.modal-sm__close svg {
+  fill: #858c95;
+}
+
+.modal-sm__close:hover svg {
+  fill: #2f2f2f;
+}
+
+.modal-sm__btns {
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.modal-bg {
+  width: 837px;
+}
+
+.modal-bg__content {
+  padding-top: 50px;
+}
+
+.modal-bg__wrapper {
+  max-height: 78vh;
+  padding: 0 60px 60px 60px;
+}
+
+.modal-bg__wrapper .simplebar-content {
+  row-gap: 40px;
+}
+
+.modal-bg__wrapper .simplebar-content::after,
+.modal-bg__wrapper .simplebar-content::before {
+  display: none;
+}
+
+.modal-bg .dropdown__items .simplebar-content {
+  row-gap: 0;
+}
+
+.modal-bg__titles {
+  row-gap: 20px;
+}
+
+.modal-bg__subtitle {
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.modal-bg__btns {
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.modal-bg__btns-desc {
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.modal-bg__btns-desc a {
+  color: #2d6fd0;
+}
+
+.modal-bg__btns-desc a:hover {
+  color: #2661d4;
+}
+
+.modal-bg__blocks {
+  row-gap: 20px;
+}
+
+.modal-bg__blocks--16 {
+  row-gap: 16px;
+}
+
+.modal-bg__blocks--32 {
+  row-gap: 32px;
+}
+
+.modal-bg__block {
+  row-gap: 16px;
+}
+
+.modal-bg__block--8 {
+  row-gap: 8px;
+}
+
+.modal-bg__block-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.modal-bg__block-list {
+  row-gap: 8px;
+}
+
+.modal-bg__block-list--4 {
+  row-gap: 4px;
+}
+
+.modal-bg__block-list li {
+  position: relative;
+  padding-left: 36px;
+}
+
+.modal-bg__block-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: #2d6fd0;
+  width: 24px;
+  height: 2px;
+}
+
+.modal-bg__block-list--2 li {
+  padding-left: 24px;
+}
+
+.modal-bg__block-list--2 li::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  border-radius: 50%;
+  background-color: #2f2f2f;
+  width: 4px;
+  height: 4px;
+}
+
+.modal-bg__block-txts {
+  row-gap: 8px;
+}
+
+.modal-bg__block-txts--16 {
+  row-gap: 16px;
+}
+
+.modal-bg__block-txts p {
+  display: flex;
+  align-items: flex-start;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.modal-bg__block-txts p span {
+  margin-top: 6px;
+}
+
+.modal-bg__block-txts a {
+  border-bottom: 1px solid;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.modal-bg__block-txts a:hover {
+  border-color: transparent;
+}
+
+.modal-bg__descs {
+  row-gap: 20px;
+}
+
+.modal-bg__descs li {
+  row-gap: 8px;
+}
+
+.modal-bg__descs li b {
+  font-weight: 600;
+}
+
+.modal-bg__block-descs {
+  row-gap: 8px;
+}
+
+.modal-bg__block-descs p b {
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.modal-bg__block-descs p a {
+  color: #2d6fd0;
+}
+
+.modal-bg__block-descs p a:hover {
+  color: #2661d4;
+}
+
+.modal-bg__links,
+.modal-bg__links-list {
+  row-gap: 16px;
+}
+
+.modal-bg__links li a,
+.modal-bg__links-list li a {
+  color: #2d6fd0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 2px;
+}
+
+.modal-bg__links li a:hover,
+.modal-bg__links-list li a:hover {
+  color: #2661d4;
+}
+
+.modal-bg__links-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.modal-acc-suc {
+  max-width: 595px;
+}
+
+.modal-acc-suc__content {
+  padding: 50px 60px;
+  row-gap: 40px;
+}
+
+.modal-acc-suc__btn {
+  margin: 0 0 0 auto;
+}
+
+.modal-acc-suc__titles {
+  row-gap: 20px;
+}
+
+.modal-acc-suc__subtitle a {
+  color: #2d6fd0;
+}
+
+.modal-acc-suc__subtitle a:hover {
+  color: #2f2f2f;
+}
+
+.modal-write {
+  padding: 50px 60px 0 50px;
   width: 837px;
   row-gap: 40px;
 }
 
 .modal-write__content {
   row-gap: 40px;
+  padding-bottom: 60px;
 }
 
 .modal-write__title {
@@ -4366,138 +4651,6 @@ fieldset {
   line-height: 140%;
 }
 
-.modal-pers-cab {
-  align-items: center;
-  row-gap: 40px;
-  padding: 50px 60px;
-}
-
-.modal-pers-cab__title {
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-  width: 100%;
-}
-
-.modal-pers-cab__title svg {
-  width: 32px;
-  height: 32px;
-}
-
-.modal-pers-cab__content {
-  row-gap: 20px;
-}
-
-.modal-pers-cab__txt a {
-  color: #2d6fd0;
-  transition: color 0.4s ease;
-}
-
-.modal-pers-cab__txt a:hover {
-  color: #2f2f2f;
-}
-
-.modal-pers-cab__btns {
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-
-.modal-pers-cab--create,
-.modal-pers-cab--sent {
-  width: 595px;
-}
-
-.modal-pers-cab--sent {
-  row-gap: 24px;
-  align-items: flex-start;
-}
-
-.modal-pers-cab--sent .modal-pers-cab__btn {
-  margin: 0 0 0 auto;
-}
-
-.modal-pers-cab--exit {
-  width: 502px;
-}
-
-.modal-pers-cab--exit .modal-pers-cab__btns {
-  margin: 0 0 0 auto;
-}
-
-.modal-infrastructure .modal__close svg {
-  stroke: #2f2f2f;
-}
-
-.modal-infrastructure__inner {
-  width: 837px;
-}
-
-.modal-infrastructure__blocks {
-  row-gap: 40px;
-  padding: 50px 60px 60px;
-}
-
-.modal-infrastructure__items {
-  row-gap: 20px;
-}
-
-.modal-infrastructure__title {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 120%;
-}
-
-.modal-infrastructure__item-tit {
-  margin-bottom: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 130%;
-}
-
-.modal-infrastructure__item-txt {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 130%;
-}
-
-.modal-innovative-enterprises__inner {
-  width: 837px;
-}
-
-.modal-innovative-enterprises__content {
-  padding: 50px 60px 60px;
-  max-height: 830px;
-  overflow-y: auto;
-}
-
-.modal-innovative-enterprises__title {
-  margin-bottom: 40px;
-}
-
-.modal-innovative-enterprises__subtitle {
-  margin-bottom: 16px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 130%;
-}
-
-.modal-innovative-enterprises__blocks {
-  row-gap: 16px;
-}
-
-.modal-innovative-enterprises__block a {
-  color: #2d6fd0;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 130%;
-  margin-bottom: 2px;
-}
-
-.modal-innovative-enterprises__block p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 130%;
-}
-
 .header {
   background-color: #ffffff;
   z-index: 10;
@@ -4540,8 +4693,6 @@ fieldset {
 
 .header svg {
   transition: transform 0.4s ease;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .header svg use,
@@ -5347,6 +5498,14 @@ fieldset {
 
 .cards-page--infrastructure .card__content-title {
   -webkit-line-clamp: 2;
+}
+
+.cards-page--infrastructure .card__content-items li {
+  display: none;
+}
+
+.cards-page--infrastructure .card__content-items li:nth-child(-n+3) {
+  display: block;
 }
 
 .cards-page--invest-projects .card__img {
@@ -6564,7 +6723,7 @@ fieldset {
   flex: 0 0 50%;
   text-align: center;
   padding: 8.5px 0;
-  border-bottom: 1px solid #d3dce4;
+  border-bottom: 2px solid #d3dce4;
 }
 
 .authentication__btns button:hover span {
@@ -6576,13 +6735,12 @@ fieldset {
 }
 
 .authentication__btns button.--active {
-  border-bottom: 2px solid #2d6fd0;
+  border-color: #2d6fd0;
 }
 
 .authentication__btns button.--active span {
   color: #2d6fd0;
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 500;
 }
 
 .auth__socials {
@@ -12674,8 +12832,8 @@ fieldset {
   .success-hist__slide-desc,
   .project-desc__desc-title,
   .project-desc__list li b,
-  .modal-innovative-enterprises__title,
-  .modal-write__title {
+  .modal-write__title,
+  .modal-bg__title {
     font-size: 26px;
   }
 
@@ -12975,20 +13133,6 @@ fieldset {
 
   .footer__list-hide {
     display: none;
-  }
-
-  .modal-pers-cab--succes__btn {
-    margin: 0 0 0 auto;
-  }
-
-  .modal-pers-cab--sent {
-    row-gap: 40px;
-    width: 500px;
-    padding: 50px 54px;
-  }
-
-  .modal-infrastructure__title {
-    font-size: 26px;
   }
 
   .header-bottom__links,
@@ -14299,7 +14443,7 @@ fieldset {
   .transport-inf__item-txt,
   .transport-inf__block-txt,
   .authentication__desc-list li span,
-  .modal-pers-cab__txt {
+  .modal-acc-suc__subtitle {
     font-size: 16px;
   }
 
@@ -14408,7 +14552,7 @@ fieldset {
   .steps-investor__item-tit,
   .legislation__item-title,
   .calculator__block-title,
-  .modal-pers-cab__title p,
+  .modal-acc-suc__title,
   .content p b,
   .content strong {
     line-height: 120%;
@@ -14700,6 +14844,56 @@ fieldset {
     height: 20px;
   }
 
+  .modal-sm__content {
+    padding: 40px;
+    row-gap: 32px;
+  }
+
+  .modal-sm__close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal-sm__title {
+    line-height: 120%;
+  }
+
+  .modal-acc-suc__content {
+    padding: 40px;
+    row-gap: 32px;
+  }
+
+  .modal-acc-suc__close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal-acc-suc__titles {
+    row-gap: 16px;
+  }
+
+  .modal-bg {
+    width: 85%;
+  }
+
+  .modal-bg__wrapper .simplebar-content {
+    row-gap: 32px;
+  }
+
+  .modal-bg__titles {
+    row-gap: 16px;
+  }
+
+  .modal-bg__btns {
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .modal-bg__btns .btn-def {
+    width: 100%;
+  }
+
   .modal-write {
     width: 534px;
     row-gap: 32px;
@@ -14746,41 +14940,6 @@ fieldset {
 
   .modal-write.--success .btn-def {
     padding: 12px 28px;
-  }
-
-  .modal-pers-cab__content {
-    row-gap: 16px;
-  }
-
-  .modal-pers-cab__btn {
-    padding: 12px 28px;
-  }
-
-  .modal-pers-cab--create {
-    padding: 40px;
-    row-gap: 32px;
-  }
-
-  .modal-pers-cab--email {
-    padding: 50px 40p;
-  }
-
-  .modal-pers-cab--sent {
-    row-gap: 32px;
-    padding: 40px;
-  }
-
-  .modal-pers-cab--exit {
-    padding: 40px;
-    row-gap: 32px;
-  }
-
-  .modal-infrastructure__inner {
-    width: 554px;
-  }
-
-  .modal-infrastructure__blocks {
-    row-gap: 32px;
   }
 
   .header.active .header-bottom__logo {
@@ -18170,8 +18329,8 @@ fieldset {
   .success-hist__slide-desc,
   .project-desc__desc-title,
   .project-desc__list li b,
-  .modal-innovative-enterprises__title,
-  .modal-write__title {
+  .modal-write__title,
+  .modal-bg__title {
     font-size: 24px;
   }
 
@@ -18341,7 +18500,7 @@ fieldset {
   .steps-investor__item-tit,
   .legislation__item-title,
   .calculator__block-title,
-  .modal-pers-cab__title p,
+  .modal-acc-suc__title,
   .content p b,
   .content strong {
     font-size: 20px;
@@ -18666,6 +18825,66 @@ fieldset {
     row-gap: 20px;
   }
 
+  .modal__inner {
+    width: 100%;
+  }
+
+  .modal-bg {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .modal-bg__content {
+    padding-top: 72px;
+  }
+
+  .modal-bg__close {
+    width: 32px;
+    height: 32px;
+  }
+
+  .modal-bg__wrapper {
+    max-height: calc(100vh - 72px);
+    height: calc(100vh - 72px);
+    padding: 0 20px 40px 20px;
+  }
+
+  .modal-bg__block-list li {
+    padding-left: 32px;
+  }
+
+  .modal-sm {
+    margin: auto 16px;
+  }
+
+  .modal-sm__content {
+    padding: 40px 20px;
+    max-width: 100%;
+  }
+
+  .modal-sm__title {
+    font-size: 20px;
+  }
+
+  .modal-sm__btns {
+    flex-direction: column;
+    row-gap: 16px;
+    width: 100%;
+  }
+
+  .modal-sm__btns .btn {
+    width: 100%;
+  }
+
+  .modal-acc-suc {
+    width: calc(100% - 32px);
+  }
+
+  .modal-acc-suc__content {
+    padding: 40px 24px;
+  }
+
   .modal-write {
     width: 100%;
     padding: 80px 16px;
@@ -18700,66 +18919,6 @@ fieldset {
 
   .modal-write.--success .btn-def {
     padding: 10px 16px;
-  }
-
-  .modal-pers-cab {
-    width: 328px;
-  }
-
-  .modal-pers-cab__title {
-    flex-direction: column;
-    row-gap: 8px;
-    align-items: flex-start;
-  }
-
-  .modal-pers-cab__txt a {
-    color: #2d6fd0;
-    transition: color 0.4s ease;
-  }
-
-  .modal-pers-cab__txt a:hover {
-    color: #2f2f2f;
-  }
-
-  .modal-pers-cab--create {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
-
-  .modal-pers-cab--email {
-    padding: 50px 20px 40px;
-  }
-
-  .modal-pers-cab--sent {
-    row-gap: 32px;
-    padding: 40px 20px;
-  }
-
-  .modal-pers-cab--sent .modal-pers-cab__title p {
-    font-size: 24px;
-  }
-
-  .modal-pers-cab--exit {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .modal-pers-cab--exit .modal-pers-cab__btns {
-    flex-direction: column;
-    row-gap: 16px;
-    width: 100%;
-  }
-
-  .modal-infrastructure__inner {
-    width: 100%;
-  }
-
-  .modal-infrastructure__blocks {
-    padding: 72px 24px 40px 24px;
-  }
-
-  .modal-infrastructure__title {
-    font-size: 20px;
   }
 
   .header {

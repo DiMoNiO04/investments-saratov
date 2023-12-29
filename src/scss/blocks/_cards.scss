@@ -20,6 +20,16 @@
     &__content-title {
       -webkit-line-clamp: 2;
     }
+
+    &__content-items {
+      li {
+        display: none;
+
+        &:nth-child(-n + 3) {
+          display: block;
+        }
+      }
+    }
   }
 }
 

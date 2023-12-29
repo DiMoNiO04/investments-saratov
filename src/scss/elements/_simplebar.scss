@@ -4,6 +4,7 @@
   border-radius: 10rem;
   margin-right: 4px;
   cursor: pointer;
+  z-index: 111;
 }
 
 .simplebar-scrollbar::before {
@@ -14,11 +15,13 @@
   opacity: 1;
   background-color: $inputGreyStroke;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
   top: 0;
   bottom: 0;
+  cursor: pointer;
 }
 
 .simplebar-scrollbar.simplebar-visible::before {
@@ -29,8 +32,13 @@
   right: -30px;
 }
 
-.header .simplebar-track.simplebar-horizontal {
+.header .simplebar-track.simplebar-horizontal,
+.modal-bg .simplebar-track.simplebar-horizontal {
   display: none;
+}
+
+.modal-bg .simplebar-track.simplebar-vertical {
+  height: 97%;
 }
 
 @media screen and (max-width: $tablet) {

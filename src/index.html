@@ -256,27 +256,50 @@
       <h2>Модальные окна:</h2>
       <ol>
         <li>
-          <button type="button" data-modal-el="write-request">Написать обращение</button>
-        </li>
-        <li>
-          <button type="button" data-modal-el="account-create-success">Учетная запись создана успешна</button>
-        </li>
-        <li>
-          <button type="button" data-modal-el="email-confirmed">Ваш email подтвержден</button>
-        </li>
-        <li>
           <button type="button" data-modal-el="request-sent">Ваше обращение отправлено</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="your-offer-sent">Ваше предложение отправлено</button>
         </li>
         <li>
           <button type="button" data-modal-el="exit-confirmation">Подтверждение выхода</button>
         </li>
         <li>
+          <button type="button" data-modal-el="email-confirmed">Ваш email подтвержден</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="account-create-success">Учетная запись создана успешна</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="project-ppp">Проекты ГЧП</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="tax-benefits-agreement">Налоговые льготы (Соглашение)</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="tax-benefits-projects">Налоговые льготы (Проекты)</button>
+        </li>
+        <li>
           <button type="button" data-modal-el="desc-infracture-project">Инфрастуктурный проект</button>
         </li>
         <li>
-          <button type="button" data-modal-el="development-innovative-enterprises">
-            Развитие инновационных предприятий
-          </button>
+          <button type="button" data-modal-el="infracture-project-subs">Инфрастуктурный проект (субсидии)</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="dev-innovative-enterprises">Развитие инновационных предприятий</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="creat-business-env">Создание благоприятной деловой среды</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="agency-expert-network">Экспертная сеть агенства</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="bussines-incubator">Бизнес-инкубатор Саратовской области</button>
+        </li>
+
+        <li>
+          <button type="button" data-modal-el="write-request">Написать обращение</button>
         </li>
       </ol>
     </div>
@@ -397,6 +420,5 @@
     }
   </style>
 
-  @@include('html/templates/modals.html')
-  <script src="./js/main.js"></script>
+  @@include('html/templates/modals.html') @@include('./html/templates/script.html')
 </html>

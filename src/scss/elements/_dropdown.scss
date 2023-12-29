@@ -10,6 +10,7 @@
     svg {
       stroke: $greyTxt;
       transition: $transitionTransform;
+      @extend %roundSvg;
     }
   }
 
@@ -48,6 +49,10 @@
   &__item {
     cursor: pointer;
     padding: 10px 16px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
 
     input {
       display: none;

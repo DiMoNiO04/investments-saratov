@@ -82,17 +82,63 @@ class Modal {
 }
 
 const writeRequest = document.querySelector('[data-modal="write-request"]') ? new Modal('write-request') : null;
+
+const requestSent = document.querySelector('[data-modal="request-sent"]') ? new Modal('request-sent') : null;
+const yourOfferSent = document.querySelector('[data-modal="your-offer-sent"]') ? new Modal('your-offer-sent') : null;
+const exitConfirmation = document.querySelector('[data-modal="exit-confirmation"]')
+  ? new Modal('exit-confirmation')
+  : null;
+const emailConfirmed = document.querySelector('[data-modal="email-confirmed"]') ? new Modal('email-confirmed') : null;
 const accountCreateSuccess = document.querySelector('[data-modal="account-create-success"]')
   ? new Modal('account-create-success')
   : null;
-const emailConfirmed = document.querySelector('[data-modal="email-confirmed"]') ? new Modal('email-confirmed') : null;
-const requestSent = document.querySelector('[data-modal="request-sent"]') ? new Modal('request-sent') : null;
-const exitConfirmation = document.querySelector('[data-modal="exit-confirmation"]')
-  ? new Modal('exit-confirmation')
+const projectPpp = document.querySelector('[data-modal="project-ppp"]') ? new Modal('project-ppp') : null;
+const taxBenefitsAgrement = document.querySelector('[data-modal="tax-benefits-agreement"]')
+  ? new Modal('tax-benefits-agreement')
+  : null;
+const taxBenefitsProjects = document.querySelector('[data-modal="tax-benefits-projects"]')
+  ? new Modal('tax-benefits-projects')
   : null;
 const descInfractureProject = document.querySelector('[data-modal="desc-infracture-project"]')
   ? new Modal('desc-infracture-project')
   : null;
-const developmentInnovativeEnterprises = document.querySelector('[data-modal="development-innovative-enterprises"]')
-  ? new Modal('development-innovative-enterprises')
+const infractureSubs = document.querySelector('[data-modal="infracture-project-subs"]')
+  ? new Modal('infracture-project-subs')
   : null;
+const devInnovativeEnterprises = document.querySelector('[data-modal="dev-innovative-enterprises"]')
+  ? new Modal('dev-innovative-enterprises')
+  : null;
+const creatBusinessEnv = document.querySelector('[data-modal="creat-business-env"]')
+  ? new Modal('creat-business-env')
+  : null;
+const agencyExpertNetwork = document.querySelector('[data-modal="agency-expert-network"]')
+  ? new Modal('agency-expert-network')
+  : null;
+const bussinesIncubator = document.querySelector('[data-modal="bussines-incubator"]')
+  ? new Modal('bussines-incubator')
+  : null;
+
+function renderModalInfrProject() {
+  const btnsDescInfractureProject = document.querySelectorAll('[data-modal-el="desc-infracture-project"]');
+
+  if (btnsDescInfractureProject) {
+    btnsDescInfractureProject.forEach((btn) => {
+      btn.addEventListener('click', function (event) {
+        const modal = document.querySelector('[data-modal="desc-infracture-project"]');
+        const mainDescCard = event.target.previousElementSibling;
+
+        const titleCard = mainDescCard.querySelector('.card__content-title').textContent;
+        const titleModal = modal.querySelector('.modal-bg__title');
+        titleModal.textContent = titleCard;
+
+        const blocksCard = mainDescCard.querySelector('.card__content-items').innerHTML;
+        const blocksModal = modal.querySelector('.modal-bg__descs');
+        blocksModal.innerHTML = blocksCard;
+      });
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderModalInfrProject();
+});

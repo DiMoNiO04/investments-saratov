@@ -66,7 +66,7 @@ function removeHelperTooltips() {
   }
 }
 
-if ($('.municipality__map-item')) {
+if (document.querySelector('.municipality__map-item')) {
   $('.municipality__map-item').tooltip({
     track: true,
   });

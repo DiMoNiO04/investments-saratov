@@ -94,7 +94,7 @@
       flex: 0 0 50%;
       text-align: center;
       padding: 8.5px 0;
-      border-bottom: 1px solid #d3dce4;
+      border-bottom: 2px solid #d3dce4;
 
       &:hover {
         span {
@@ -108,12 +108,11 @@
       }
 
       &.--active {
-        border-bottom: 2px solid $bluePrimary;
+        border-color: $bluePrimary;
 
         span {
           color: $bluePrimary;
-          font-weight: 600;
-          font-size: 18px;
+          font-weight: 500;
         }
       }
     }
