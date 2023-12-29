@@ -1,0 +1,56 @@
+.photo-report {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    &-h1 {
+      @extend %h2;
+    }
+  }
+
+  &__items {
+    @include gridColumn(3);
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  &__item {
+    border-radius: 4px;
+    overflow: hidden;
+    @extend %imageCoverWidth;
+    height: 350px;
+    flex-shrink: 0;
+
+
+
+  }
+}
+
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {
+  .photo-report {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__items {
+      @include gridColumn(2);
+    }
+
+    &__item {
+      height: 260px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .photo-report {
+    &__items {
+      @include gridColumn(1);
+      row-gap: 16px;
+    }
+  }
+}

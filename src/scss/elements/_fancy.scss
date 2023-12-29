@@ -1,0 +1,61 @@
+.fancybox-navigation {
+  button.fancybox-button--arrow_left,
+  button.fancybox-button--arrow_right {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    padding: 0;
+    cursor: pointer !important;
+    background-color: transparent;
+    @include bg-cover;
+
+    &>* {
+      display: none;
+    }
+  }
+
+  .fancybox-button.fancybox-button--arrow_left {
+    background-image: url(../assets/img/icons/arrow-left-light.svg);
+    left: 20px;
+  }
+
+  .fancybox-button.fancybox-button--arrow_right {
+    background-image: url(../assets/img/icons/arrow-right-light.svg);
+    right: 20px;
+  }
+}
+
+.fancybox-toolbar {
+
+  .fancybox-button.fancybox-button--zoom,
+  .fancybox-button.fancybox-button--play,
+  .fancybox-button.fancybox-button--thumbs {
+    display: none !important;
+  }
+
+  .fancybox-button.fancybox-button--close {
+    &>* {
+      display: none;
+    }
+
+    background-image: url(../assets/img/icons/close-light.svg);
+    right: 20px;
+    top: 20px;
+    @include bg-cover;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    padding: 0;
+    cursor: pointer !important;
+    background-color: transparent;
+  }
+}
+
+.fancybox-infobar {
+  left: 20px;
+  top: 20px;
+  &>* {
+    @extend %regular16;
+    color: $white;
+  }
+}

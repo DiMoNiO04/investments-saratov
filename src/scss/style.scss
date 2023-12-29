@@ -1,6 +1,7 @@
 // Libs
 @import './libs/swiper.scss';
 @import './libs/normalize.scss';
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min";
 
 // General
 @import './general/breakpoints.scss';
@@ -32,6 +33,8 @@
 @import './elements/search.scss';
 @import './elements/image-gallery.scss';
 @import './elements/other.scss';
+@import './elements/fancy.scss';
+@import './elements/zoom-show.scss';
 
 // Blocks
 @import './blocks/map.scss';
@@ -72,3 +75,8 @@
 @import './pages/news/index.scss';
 @import './pages/article/index.scss';
 @import './pages/events/index.scss';
+@import './pages/events-page/index.scss';
+@import './pages/contests/index.scss';
+@import './pages/contests-page/index.scss';
+@import './pages/media-materials/index.scss';
+@import './pages/photo-report/index.scss';
