@@ -1,0 +1,13 @@
+.other {
+}
+
+@media screen and (max-width: $mob) {
+  .other {
+    .slider-navigation--rel {
+      display: none;
+    }
+    .container {
+      padding-right: 0;
+    }
+  }
+}

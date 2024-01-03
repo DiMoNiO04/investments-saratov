@@ -568,8 +568,8 @@
     }
 
     &__wrapper {
-      max-height: calc(100vh - 72px);
-      height: calc(100vh - 72px);
+      max-height: calc(100vh - 72px - 100px);
+      height: calc(100vh - 72px - 100px);
       padding: 0 20px 40px 20px;
     }
 

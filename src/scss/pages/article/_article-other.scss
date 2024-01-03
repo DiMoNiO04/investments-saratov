@@ -1,0 +1,12 @@
+.article-other {
+  &__head {
+    @extend %flexCenterBetween;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    &-h2 {
+      @extend %secondaryH3;
+    }
+  }
+}

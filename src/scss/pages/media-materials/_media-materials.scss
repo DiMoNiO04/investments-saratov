@@ -1,0 +1,143 @@
+.media-materials {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    &-h1 {
+      @extend %h2;
+    }
+  }
+
+  &__btns {
+    @extend %flexCenterStart;
+    margin-bottom: 40px;
+
+    button {
+      @extend %regular16;
+      color: $greyTxt;
+      border-bottom: 2px solid $inputGreyStroke;
+      width: 380px;
+      height: 44px;
+      @extend %flexCenter;
+
+      &.--active {
+        border-bottom: 2px solid $bluePrimary;
+        color: $bluePrimary;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &.--active {
+      display: block;
+    }
+  }
+
+  &__items {
+    @include gridColumn(3);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-bottom: 40px;
+
+    &.--video {
+      .media-materials__item-image {
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 60px;
+          height: 60px;
+          flex-shrink: 0;
+          background-image: url(../assets/img/icons/video-play.svg);
+          @include bg-cover;
+        }
+      }
+    }
+  }
+
+  &__item {
+    &-image {
+      display: inline-block;
+      height: 306px;
+      position: relative;
+    }
+
+    &-content {
+      min-height: 140px;
+      padding: 24px;
+      row-gap: 32px;
+    }
+
+    &-title {
+      margin-bottom: 0;
+      -webkit-line-clamp: 2;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .media-materials {
+    &__btns {
+      button {
+        width: 290px;
+      }
+    }
+
+    &__item {
+      &-image {
+        height: 225px;
+      }
+
+      &-content {
+        min-height: 155px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .media-materials {
+    &__container {
+      row-gap: 32px;
+    }
+
+    &__btns {
+      @include gridColumn(2);
+      width: 100%;
+      margin-bottom: 32px;
+
+      button {
+        width: inherit;
+      }
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .media-materials {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    &__item {
+      &-content {
+        min-height: 140px;
+        padding: 20px;
+      }
+    }
+  }
+}

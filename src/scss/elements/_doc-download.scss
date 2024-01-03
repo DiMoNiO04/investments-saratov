@@ -55,12 +55,16 @@
 
 @media screen and (max-width: $tablet) {
   .doc-download {
-    &__item-name {
-      @include croppingText(inherit);
-    }
-
     &__items {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .doc-download {
+    &__item-name {
+      @include croppingText(inherit);
     }
   }
 }

@@ -1,0 +1,18 @@
+.contests-page-doc {
+  &__head {
+    @extend %flexCenterBetween;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    &-h2 {
+      @extend %secondaryH3;
+    }
+  }
+
+  &__items {
+    @extend %gridColumnTwo;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+}

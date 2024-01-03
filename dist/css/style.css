@@ -1245,6 +1245,11 @@ svg {
   stroke-linejoin: round;
 }
 
+.news-page__container,
+.photo-report__container,
+.media-materials__container,
+.events__container,
+.contests__container,
 .investor-appl__drag-area,
 .investor-appl__fieldset-btns,
 .investor-appl__fieldset-inputs,
@@ -1485,6 +1490,7 @@ svg {
   flex-direction: column;
 }
 
+.media-materials__btns button,
 .investor-scheme__icon,
 .ppp-stages__icon,
 .ppp-other-projects__icon,
@@ -1546,6 +1552,12 @@ svg {
   justify-content: flex-start;
 }
 
+.article-other__head,
+.article__head,
+.events-page-other__head,
+.events-page__head,
+.contests-page-doc__head,
+.contests-page__head,
 .search-query__form,
 .ppp-proposals__desc,
 .useful-links__title-container,
@@ -1629,6 +1641,13 @@ svg {
   justify-content: space-between;
 }
 
+.article__links,
+.article__date,
+.media-materials__btns,
+.events-page__links,
+.events-page__date,
+.contests-page__links,
+.contests-page__date,
 .ppp-stages__top,
 .useful-links__slide,
 .region-team__item,
@@ -1668,6 +1687,7 @@ svg {
   justify-content: space-between;
 }
 
+.contests-page-doc__items,
 .investor-appl__container,
 .investor-desc__container,
 .territory-develop .territory-develop__amount .territory-develop__items,
@@ -1805,6 +1825,10 @@ svg {
   grid-template-columns: repeat(6, 1fr);
 }
 
+.article__image,
+.photo-report__item,
+.events-page__image,
+.contests-page__image,
 .territory-develop__gallery-item,
 .territory-develop__image,
 .technopark__image,
@@ -1816,6 +1840,10 @@ svg {
   width: 100%;
 }
 
+.article__image img,
+.photo-report__item img,
+.events-page__image img,
+.contests-page__image img,
 .territory-develop__gallery-item img,
 .territory-develop__image img,
 .technopark__image img,
@@ -1836,6 +1864,13 @@ svg {
   line-height: 130%;
 }
 
+.article__links span,
+.article__date span,
+.media-materials__btns button,
+.events-page__links span,
+.events-page__date span,
+.contests-page__links span,
+.contests-page__date span,
 .search-query__block-link,
 .search-query__block-txt,
 .search-query__result,
@@ -1884,6 +1919,7 @@ svg {
 .modal-bg__txt,
 .footer__info-title,
 .drag-area button span,
+.article-content,
 .textarea__textarea textarea,
 .textarea__textarea textarea::placeholder,
 .dropdown-def .dropdown__value,
@@ -1932,6 +1968,14 @@ svg {
   text-transform: uppercase;
 }
 
+.article__title-h1,
+.news-page__title-h1,
+.photo-report__title-h1,
+.media-materials__title-h1,
+.events-page__title-h1,
+.events__title-h1,
+.contests-page__title-h1,
+.contests__title-h1,
 .investor-desc__title,
 .territory-develop__title-h1,
 .technopark__title-h1,
@@ -2278,12 +2322,16 @@ svg {
   line-height: 130%;
 }
 
-.territory-develop__item-text > strong {
+.territory-develop__item-text > strong,
+.article-content h3 {
   font-size: 20px;
   font-weight: 600;
   line-height: 130%;
 }
 
+.article-other__title-h2,
+.events-page-other__title-h2,
+.contests-page-doc__title-h2,
 .investor-appl__desc-title,
 .investor-scheme__title,
 .ppp-project-geografy__title,
@@ -3501,6 +3549,21 @@ fieldset {
   line-height: 130%;
 }
 
+.tippy-content {
+  font-size: 14px;
+  line-height: 130%;
+  color: #2f2f2f;
+  padding: 0;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+.tippy-box {
+  border-radius: 4px;
+  border: 1px solid #dee2e7;
+  background-color: white;
+  padding: 12px;
+}
+
 .tooltip--map {
   width: 243px;
   height: 68px;
@@ -3724,15 +3787,15 @@ fieldset {
   color: #ffffff;
 }
 
-.pagination button:hover {
+.pagination__btn:hover {
   border-color: #2f2f2f;
 }
 
-.pagination button:hover svg {
+.pagination__btn:hover svg {
   stroke: #2f2f2f;
 }
 
-.pagination button:hover span {
+.pagination__btn:hover span {
   color: #2f2f2f;
 }
 
@@ -3782,6 +3845,104 @@ fieldset {
 
 .content ul:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.article-content p {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.article-content p strong,
+.article-content p .b {
+  margin-bottom: 0;
+}
+
+.article-content strong,
+.article-content b {
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.article-content > strong,
+.article-content > b {
+  display: block;
+}
+
+.article-content ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 0;
+  counter-reset: a 0;
+}
+
+.article-content ol > li {
+  padding-left: 32px;
+  position: relative;
+}
+
+.article-content ol > li:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.article-content ol > li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2d6fd0;
+  font-weight: 500;
+  content: "0" counter(a);
+  counter-increment: a 1;
+}
+
+.article-content ol > li:nth-child(n+10)::before {
+  content: counter(a) !important;
+}
+
+.article-content ul {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 0;
+}
+
+.article-content ul > li {
+  padding-left: 32px;
+  position: relative;
+}
+
+.article-content ul > li:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.article-content ul > li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  background-color: #2d6fd0;
+  width: 24px;
+  height: 2px;
+}
+
+.article-content ul > li:nth-child(n+10)::before {
+  content: counter(a) "." !important;
+}
+
+.article-content h3 {
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.article-content a {
+  color: #2d6fd0;
+  transition: -webkit-text-decoration 0.4s ease;
+  transition: text-decoration 0.4s ease;
+  transition: text-decoration 0.4s ease, -webkit-text-decoration 0.4s ease;
+}
+
+.article-content a:hover {
+  text-decoration: underline;
 }
 
 .doc-download__items {
@@ -4074,6 +4235,45 @@ fieldset {
   display: none;
   width: 16px;
   height: 16px;
+}
+
+.zoom-show {
+  position: relative;
+}
+
+.zoom-show:hover::before {
+  opacity: 1;
+}
+
+.zoom-show:hover::after {
+  opacity: 1;
+}
+
+.zoom-show::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--Main-System-4px, 4px);
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.zoom-show::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-image: url(../assets/img/icons/zoom-light.svg);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .map__titles {
@@ -6138,6 +6338,21 @@ fieldset {
   position: relative;
 }
 
+.benefits__slide::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  border-radius: var(--Main-System-4px, 4px);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.52) 50.63%, rgba(0, 0, 0, 0) 100%);
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .benefits__swiper {
   position: absolute;
   width: 100%;
@@ -6169,20 +6384,6 @@ fieldset {
 .benefits__slide-txt {
   color: #ffffff;
   max-width: 575px;
-}
-
-.benefits__bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 362px;
-  z-index: 2;
-}
-
-.benefits__bg img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .benefits__slide-content {
@@ -6221,6 +6422,21 @@ fieldset {
   top: 0;
 }
 
+.success-hist__slide::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  border-radius: var(--Main-System-4px, 4px);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.52) 50.63%, rgba(0, 0, 0, 0) 100%);
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .success-hist__slide-img {
   position: absolute;
   top: 0;
@@ -6244,20 +6460,6 @@ fieldset {
 .success-hist__slide-txt {
   color: #ffffff;
   max-width: 575px;
-}
-
-.success-hist__bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 362px;
-  z-index: 2;
-}
-
-.success-hist__bg img {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .success-hist__slide-content {
@@ -12130,6 +12332,9 @@ fieldset {
 }
 
 .economic-zone__gallery-item {
+  display: inline-block;
+  border-radius: 4px;
+  overflow: hidden;
   height: 350px;
   flex-shrink: 0;
 }
@@ -12463,6 +12668,9 @@ fieldset {
 }
 
 .territory-develop__gallery-item {
+  display: inline-block;
+  border-radius: 4px;
+  overflow: hidden;
   height: 350px;
   flex-shrink: 0;
 }
@@ -12647,6 +12855,300 @@ fieldset {
   align-items: flex-start;
 }
 
+.contests__container {
+  row-gap: 40px;
+}
+
+.contests__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 40px;
+}
+
+.contests__image {
+  height: 200px;
+}
+
+.contests__content {
+  min-height: 180px;
+  padding: 24px;
+  row-gap: 32px;
+}
+
+.contests__content-title {
+  margin-bottom: 0;
+  -webkit-line-clamp: 3;
+}
+
+.contests-page__title-h1 {
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.contests-page__head {
+  margin-bottom: 20px;
+}
+
+.contests-page__date {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.contests-page__date span {
+  color: #666;
+}
+
+.contests-page__links {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.contests-page__links span {
+  color: #666;
+}
+
+.contests-page__image {
+  height: 500px;
+  margin-bottom: 40px;
+}
+
+.contests-page__content {
+  max-width: 870px;
+}
+
+.contests-page-doc__head {
+  margin-bottom: 40px;
+}
+
+.contests-page-doc__items {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.events__container {
+  row-gap: 40px;
+}
+
+.events__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 40px;
+}
+
+.events__image {
+  height: 200px;
+}
+
+.events__content {
+  min-height: 180px;
+  padding: 24px;
+  row-gap: 32px;
+}
+
+.events__content-title {
+  margin-bottom: 0;
+  -webkit-line-clamp: 3;
+}
+
+.events-page__title-h1 {
+  margin-bottom: 40px;
+}
+
+.events-page__head {
+  margin-bottom: 20px;
+}
+
+.events-page__date {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.events-page__date span {
+  color: #666;
+}
+
+.events-page__links {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.events-page__links span {
+  color: #666;
+}
+
+.events-page__image {
+  height: 500px;
+  margin-bottom: 40px;
+}
+
+.events-page__content {
+  max-width: 870px;
+}
+
+.events-page-other__head {
+  margin-bottom: 40px;
+}
+
+.media-materials__container {
+  row-gap: 40px;
+}
+
+.media-materials__btns {
+  margin-bottom: 40px;
+}
+
+.media-materials__btns button {
+  color: #858c95;
+  border-bottom: 2px solid #dee2e7;
+  width: 380px;
+  height: 44px;
+}
+
+.media-materials__btns button.--active {
+  border-bottom: 2px solid #2d6fd0;
+  color: #2d6fd0;
+  font-weight: 500;
+}
+
+.media-materials__content {
+  display: none;
+}
+
+.media-materials__content.--active {
+  display: block;
+}
+
+.media-materials__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+  margin-bottom: 40px;
+}
+
+.media-materials__items.--video .media-materials__item-image::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  background-image: url(../assets/img/icons/video-play.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.media-materials__item-image {
+  display: inline-block;
+  height: 306px;
+  position: relative;
+}
+
+.media-materials__item-content {
+  min-height: 140px;
+  padding: 24px;
+  row-gap: 32px;
+}
+
+.media-materials__item-title {
+  margin-bottom: 0;
+  -webkit-line-clamp: 2;
+}
+
+.photo-report__container {
+  row-gap: 40px;
+}
+
+.photo-report__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+
+.photo-report__item {
+  border-radius: 4px;
+  overflow: hidden;
+  height: 350px;
+  flex-shrink: 0;
+}
+
+.news-page__container {
+  row-gap: 40px;
+}
+
+.news-page__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 40px;
+}
+
+.news-page__image {
+  height: 200px;
+}
+
+.news-page__content {
+  min-height: 180px;
+  padding: 24px;
+  row-gap: 32px;
+}
+
+.news-page__content-title {
+  margin-bottom: 0;
+  -webkit-line-clamp: 3;
+}
+
+.article__title-h1 {
+  margin-bottom: 40px;
+}
+
+.article__head {
+  margin-bottom: 20px;
+}
+
+.article__date {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.article__date span {
+  color: #666;
+}
+
+.article__links {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.article__links span {
+  color: #666;
+}
+
+.article__image {
+  height: 500px;
+  margin-bottom: 40px;
+}
+
+.article__content {
+  max-width: 870px;
+}
+
+.article-other__head {
+  margin-bottom: 40px;
+}
+
 @media screen and (min-width: 48em) {
   #map:hover [class*=copyrights-pane],
   #map:hover [class*=controls__control] {
@@ -12737,6 +13239,14 @@ fieldset {
     font-size: 64px;
   }
 
+  .article__title-h1,
+  .news-page__title-h1,
+  .photo-report__title-h1,
+  .media-materials__title-h1,
+  .events-page__title-h1,
+  .events__title-h1,
+  .contests-page__title-h1,
+  .contests__title-h1,
   .investor-desc__title,
   .territory-develop__title-h1,
   .technopark__title-h1,
@@ -12952,6 +13462,9 @@ fieldset {
     font-size: 24px;
   }
 
+  .article-other__title-h2,
+  .events-page-other__title-h2,
+  .contests-page-doc__title-h2,
   .investor-appl__desc-title,
   .investor-scheme__title,
   .ppp-project-geografy__title,
@@ -14437,6 +14950,42 @@ fieldset {
   .investor-appl__form {
     padding: 60px 50px;
   }
+
+  .contests__items {
+    row-gap: 20px;
+  }
+
+  .contests-page .header-top__socials {
+    display: flex;
+  }
+
+  .events__items {
+    row-gap: 20px;
+  }
+
+  .events-page .header-top__socials {
+    display: flex;
+  }
+
+  .media-materials__btns button {
+    width: 290px;
+  }
+
+  .media-materials__item-image {
+    height: 225px;
+  }
+
+  .media-materials__item-content {
+    min-height: 155px;
+  }
+
+  .news-page__items {
+    row-gap: 20px;
+  }
+
+  .article .header-top__socials {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -14452,6 +15001,14 @@ fieldset {
     font-size: 48px;
   }
 
+  .article__title-h1,
+  .news-page__title-h1,
+  .photo-report__title-h1,
+  .media-materials__title-h1,
+  .events-page__title-h1,
+  .events__title-h1,
+  .contests-page__title-h1,
+  .contests__title-h1,
   .investor-desc__title,
   .territory-develop__title-h1,
   .technopark__title-h1,
@@ -14558,6 +15115,9 @@ fieldset {
     line-height: 120%;
   }
 
+  .article-other__title-h2,
+  .events-page-other__title-h2,
+  .contests-page-doc__title-h2,
   .investor-appl__desc-title,
   .investor-scheme__title,
   .ppp-project-geografy__title,
@@ -14663,13 +15223,6 @@ fieldset {
 
   .pagination {
     margin-top: 32px;
-  }
-
-  .doc-download__item-name {
-    display: -webkit-box;
-    -webkit-line-clamp: inherit;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .doc-download__items {
@@ -15522,6 +16075,8 @@ fieldset {
 
   .success-hist__slide-items {
     row-gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .success-hist__slide-title {
@@ -18223,6 +18778,114 @@ fieldset {
     min-height: 788px;
     row-gap: 32px;
   }
+
+  .contests__container {
+    row-gap: 32px;
+  }
+
+  .contests__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contests__content {
+    min-height: 155px;
+  }
+
+  .contests__content-title {
+    -webkit-line-clamp: 2;
+  }
+
+  .contests-page__title-h1 {
+    margin-bottom: 32px;
+  }
+
+  .contests-page__image {
+    height: 400px;
+    margin-bottom: 32px;
+  }
+
+  .events__container {
+    row-gap: 32px;
+  }
+
+  .events__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .events__content {
+    min-height: 155px;
+  }
+
+  .events__content-title {
+    -webkit-line-clamp: 2;
+  }
+
+  .events-page__title-h1 {
+    margin-bottom: 32px;
+  }
+
+  .events-page__image {
+    height: 400px;
+    margin-bottom: 32px;
+  }
+
+  .media-materials__container {
+    row-gap: 32px;
+  }
+
+  .media-materials__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .media-materials__btns button {
+    width: inherit;
+  }
+
+  .media-materials__items {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 32px;
+  }
+
+  .photo-report__container {
+    row-gap: 32px;
+  }
+
+  .photo-report__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-report__item {
+    height: 260px;
+  }
+
+  .news-page__container {
+    row-gap: 32px;
+  }
+
+  .news-page__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-page__content {
+    min-height: 155px;
+  }
+
+  .news-page__content-title {
+    -webkit-line-clamp: 2;
+  }
+
+  .article__title-h1 {
+    margin-bottom: 32px;
+  }
+
+  .article__image {
+    height: 400px;
+    margin-bottom: 32px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -18232,6 +18895,14 @@ fieldset {
     line-height: 110%;
   }
 
+  .article__title-h1,
+  .news-page__title-h1,
+  .photo-report__title-h1,
+  .media-materials__title-h1,
+  .events-page__title-h1,
+  .events__title-h1,
+  .contests-page__title-h1,
+  .contests__title-h1,
   .investor-desc__title,
   .territory-develop__title-h1,
   .technopark__title-h1,
@@ -18512,6 +19183,9 @@ fieldset {
     line-height: 120%;
   }
 
+  .article-other__title-h2,
+  .events-page-other__title-h2,
+  .contests-page-doc__title-h2,
   .investor-appl__desc-title,
   .investor-scheme__title,
   .ppp-project-geografy__title,
@@ -18680,6 +19354,13 @@ fieldset {
     height: 32px;
   }
 
+  .doc-download__item-name {
+    display: -webkit-box;
+    -webkit-line-clamp: inherit;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
   .list-per__title {
     font-size: 24px;
     margin-bottom: 32px;
@@ -18742,6 +19423,14 @@ fieldset {
 
   .fieldset-numbers--appl .fieldset-numbers__block:not(:first-child) {
     width: calc(25% - 6px);
+  }
+
+  .other .slider-navigation--rel {
+    display: none;
+  }
+
+  .other .container {
+    padding-right: 0;
   }
 
   .map__text,
@@ -18845,8 +19534,8 @@ fieldset {
   }
 
   .modal-bg__wrapper {
-    max-height: calc(100vh - 72px);
-    height: calc(100vh - 72px);
+    max-height: calc(100vh - 72px - 100px);
+    height: calc(100vh - 72px - 100px);
     padding: 0 20px 40px 20px;
   }
 
@@ -21734,6 +22423,7 @@ fieldset {
   }
 
   .territory-develop__gallery-item {
+    display: inline-block;
     height: 350px;
   }
 
@@ -21806,6 +22496,77 @@ fieldset {
 
   .investor-appl__fieldset-texrarea .textarea__textarea {
     height: 96px;
+  }
+
+  .contests__container {
+    row-gap: 32px;
+  }
+
+  .contests__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contests__content {
+    min-height: 140px;
+  }
+
+  .contests-page__head {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+  }
+
+  .events__container {
+    row-gap: 32px;
+  }
+
+  .events__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .events__content {
+    min-height: 140px;
+  }
+
+  .events-page__head {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+  }
+
+  .media-materials__items {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .media-materials__item-content {
+    min-height: 140px;
+    padding: 20px;
+  }
+
+  .photo-report__items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+  }
+
+  .news-page__container {
+    row-gap: 32px;
+  }
+
+  .news-page__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .news-page__content {
+    min-height: 140px;
+  }
+
+  .article__head {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
   }
 }
 

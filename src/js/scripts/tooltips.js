@@ -1,4 +1,4 @@
-import { TABLET } from '../modules/consts.js';
+import { MOB, TABLET } from '../modules/consts.js';
 
 function tooltip() {
   if (document.querySelectorAll('.account__table-btn')) {
@@ -76,3 +76,28 @@ document.addEventListener('DOMContentLoaded', () => {
   removeHelperTooltips();
   tooltip();
 });
+
+const isTextMoreThanTwoLines = (text) => text.split('\n').length >= 4;
+
+const docDownloadLinks = document.querySelectorAll('.doc-download__item');
+
+if (docDownloadLinks && window.innerWidth > MOB) {
+  docDownloadLinks.forEach((docDownloadLink) => {
+    docDownloadLink.addEventListener('mouseover', (event) => {
+      const text = event.currentTarget.querySelector('.doc-download__item-name');
+      const txt = text.textContent;
+      const txtHeight = text.scrollHeight;
+      const height = 42;
+
+      if (isTextMoreThanTwoLines(txt) && txtHeight > height) {
+        tippy(docDownloadLink, {
+          content: txt,
+          placement: 'bottom',
+          arrow: false,
+          theme: 'light',
+          maxWidth: '525px',
+        });
+      }
+    });
+  });
+}

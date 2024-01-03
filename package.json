@@ -30,8 +30,6 @@
     "eslint-plugin-prettier": "latest",
     "fs": "latest",
     "gulp": "latest",
-    "gulp-typograf": "latest",
-    "typograf": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",
     "gulp-file-include": "latest",
@@ -59,6 +57,7 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "swiper": "^11.0.5"
   }
 }

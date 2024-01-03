@@ -275,6 +275,43 @@ function initImageGallerySliders() {
   });
 }
 
+function initOtherSlider() {
+  if (document.querySelector('.other__swiper')) {
+    const slider = document.querySelector('.other__swiper');
+    const btnPrev = slider.parentElement.querySelector('.slider-navigation__btns-prev');
+    const btnNext = slider.parentElement.querySelector('.slider-navigation__btns-next');
+
+    new Swiper(slider, {
+      modules: [Navigation],
+      slidesPerView: 4,
+      spaceBetween: 20,
+      speed: 1500,
+      loop: true,
+      navigation: {
+        nextEl: btnNext,
+        prevEl: btnPrev,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1.12,
+          spaceBetween: 16,
+        },
+        500: {
+          slidesPerView: 1.06,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1366: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+}
+
 function initSliders() {
   initBenefitsSlider();
   initSuccessHistSlider();
@@ -286,6 +323,7 @@ function initSliders() {
   initStorySlider();
   initBigTownSlider();
   initContactsSlider();
+  initOtherSlider();
 
   if (window.innerWidth < MOB) {
     initImageGallerySliders();

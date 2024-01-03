@@ -1,0 +1,2038 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Страница мероприятия</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20240103125822" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240103125822" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css?_v=20240103125822" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20240103125822" />
+</head>
+
+
+  <body>
+    <!-- <header class="header header--transparent"> -->
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__container js-header-top-container">
+        <div class="header-top__logo logo">
+          <a href="./main.html" class="header-top__logo--transparent">
+            <picture>
+              <source media="(min-width: 1365px)" srcset="assets/img/icons/logo.svg" />
+              <source media="(max-width: 1366px)" srcset="assets/img/icons/logo-sm.svg" />
+              <img src="assets/img/icons/logo.svg" alt="logo" />
+            </picture>
+          </a>
+          <a href="./main.html">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="assets/img/icons/logo-2.svg" />
+              <img src="assets/img/icons/logo-2-sm.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <div class="header-top__content">
+          <div class="header-top__panel">
+            <div class="header-top__search-wr">
+              <div class="header-top__phone">
+                <a href="tel:+78452695262">+7 (8452) 69 52 62</a>
+                <p>Горячая линия</p>
+              </div>
+              <div class="header-top__btns-search">
+                <div class="header-top__btns-button js-button-search">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#search"></use>
+                  </svg>
+                  <span>Поиск</span>
+                </div>
+
+                <form class="form-search js-form-search">
+                  <input
+                    class="form-search__input js-search-input"
+                    size="#"
+                    name="#"
+                    id="#"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Что ищите?"
+                  />
+                  <button type="submit" class="form-search__button-open">
+                    <svg>
+                      <use xlink:href="assets/img/icons/icons.svg#search"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="form-search__button-close js-search-close">
+                    <svg>
+                      <use xlink:href="assets/img/icons/icons.svg#search-close"></use>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <a href="#" class="header-bottom__btn">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#map-pinned"></use>
+              </svg>
+              <p>Инвестиционная карта</p>
+            </a>
+            <div class="header-top__socials">
+              <a href="#" class="header-top__social">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#vk-2"></use>
+                </svg>
+              </a>
+              <a href="#" class="header-top__social">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#tg-2"></use>
+                </svg>
+              </a>
+              <a href="#" class="header-top__social">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#odn-2"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="header-top__dropdown dropdown dropdown-sec js-dropdown">
+              <div class="dropdown__header js-dropdown-inner">
+                <div class="dropdown__value js-dropdown-value">RU</div>
+                <button type="button" class="dropdown__btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M9.75 5.5L6 9.25L2.25 5.5"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__items">
+                  <div class="dropdown__item js-dropdown-item active">
+                    <input id="ru" type="radio" name="lang" value="ru" checked />
+                    <label for="ru">RU</label>
+                  </div>
+                  <div class="dropdown__item js-dropdown-item">
+                    <input id="en" type="radio" name="en" value="en" />
+                    <label for="en">EN</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-top__buttons">
+          <div class="header-bottom__btns header-top__entrance">
+            <a href="#" class="header-bottom__btn">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#entrance"></use>
+              </svg>
+            </a>
+          </div>
+          <button type="button" class="header-top__burger js-burger --mob">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#burger-list"></use>
+            </svg>
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#close-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="container">
+      <div class="header-bottom__container">
+        <div class="header-bottom__links">
+          <div class="header-bottom__logo logo">
+            <a href="./main.html">
+              <img src="assets/img/icons/logo-2-sm.svg" alt="logo" />
+            </a>
+          </div>
+          <button type="button" class="header-bottom__btn-burg js-burger">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#burger-list"></use>
+            </svg>
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#close-burger"></use>
+            </svg>
+          </button>
+          <nav class="nav header-bottom__menu">
+            <ul class="header-bottom__list">
+              <li class="nav__item header-bottom__list-item js-head-link">
+                <a class="nav__link header-bottom__list-link" href="#">О регионе</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M9.75 5.5L6 9.25L2.25 5.5"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <ul class="header-bottom__list-menu js-head-menu">
+                  <li class="">
+                    <a href="#">Расположение</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Статистика региона</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Социально-экономическое развитие</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Стратегия</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Истории успеха</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Муниципальные образования</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Инфраструктурные проекты</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item header-bottom__list-item js-head-link">
+                <a class="nav__link header-bottom__list-link" href="#">Инвестстандарт</a>
+              </li>
+              <li class="nav__item header-bottom__list-item js-head-link">
+                <a class="nav__link header-bottom__list-link" href="#">Инвестору</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M9.75 5.5L6 9.25L2.25 5.5"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <ul class="header-bottom__list-menu js-head-menu">
+                  <li class="">
+                    <a href="#">Заявка инвестора</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Корпорация развития</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Инвестиционный комитет</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Клуб стратегических инициатив</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Инвестиции в туризм</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Требуется инвестор</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Кадры</a>
+                  </li>
+                  <li class="">
+                    <a href="#">План создания объектов</a>
+                  </li>
+                  <li class="">
+                    <a href="#">Опросы</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item header-bottom__list-item js-head-link">
+                <a class="nav__link header-bottom__list-link" href="#">Площадки</a>
+              </li>
+              <li class="nav__item header-bottom__list-item js-head-link">
+                <a class="nav__link header-bottom__list-link" href="#">Поддержка</a>
+              </li>
+              <li class="nav__item header-bottom__list-item js-head-link">
+                <a class="nav__link header-bottom__list-link" href="#">Линия прямых обращений</a>
+              </li>
+              <li class="nav__item header-bottom__list-item js-head-link">
+                <a class="nav__link header-bottom__list-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-bottom__btns">
+          <a href="#" class="header-bottom__btn">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#entrance"></use>
+            </svg>
+            <p>Войти</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-menu js-header-menu">
+    <div class="container">
+      <div class="header-menu__inner" data-simplebar>
+        <form class="form-search form-search-mobile js-form-search">
+          <input
+            class="form-search__input js-search-mob-input js-search-input"
+            size="#"
+            name="#"
+            id="myInput"
+            type="text"
+            autocomplete="off"
+            placeholder="Что ищите?"
+          />
+          <button class="form-search__button-open">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+          <button type="button" class="form-search__button-close js-search-close js-search-mob-close">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#search-close"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="footer__lists">
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>О регионе</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Расположение</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Статистика региона</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Социально-экономическое развитие</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Стратегия</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Истории успеха</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Муниципальные образования</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инфраструктурные проекты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Инвестору</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Заявка инвестора</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Корпорация развития</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиционный комитет</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Клуб стратегических инициатив</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиции в туризм</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Законодательство</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Требуется инвестор</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Кадры</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">План создания объектов</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Опросы</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Поддержка</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Единое окно</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Помощь инвестору</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Налоговые льготы</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Субсидии</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">СПИК 2.0</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инфраструктура поддержки</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиционный договор</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Региональный инвестстандарт</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Калькулятор мер поддержки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Площадки</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Предложить площадку</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Реестр свободных земельных участков</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Преференциальные территории</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Площадки с объектами капитального строительства</a>
+              </li>
+            </ul>
+            <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+              <p>Инвестстандарт</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+              </svg>
+            </div>
+            <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+              <p>Контакты</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="footer__list footer__list-hide js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <a href="#">Инвестстандарт</a>
+            </div>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Линия прямых обращений</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Получить консультацию</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Мониторинг обращений</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Подать заявку на сопровождение проекта</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Предложить проект</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>ГЧП</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Проекты ГЧП</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Общие сведения</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Меры поддержки</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Реестр объектов для ГЧП</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Контакты ГЧП</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Документы</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Законодательство</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Корпоративные облигации</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Презентационные материалы</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Медиа</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Мероприятия</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Фото и видеоотчет</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list footer__list-hide js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <a href="#">Контакты</a>
+            </div>
+          </div>
+          <div class="footer__list footer__list-hide footer__list-laptop-hide js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <a href="#">Инвестстандарт</a>
+            </div>
+            <div class="footer__list-title js-dropdown-title">
+              <a href="#">Контакты</a>
+            </div>
+          </div>
+        </div>
+        <div class="header-menu__social">
+          <div class="header-top__socials">
+            <a href="#" class="header-top__social">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#vk-2"></use>
+              </svg>
+            </a>
+            <a href="#" class="header-top__social">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#tg-2"></use>
+              </svg>
+            </a>
+            <a href="#" class="header-top__social">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#odn-2"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="dropdown__items">
+            <div class="dropdown__item js-dropdown-item active">
+              <input id="ru-2" type="radio" name="lang-2" value="ru-2" checked />
+              <label for="ru-2">RU</label>
+            </div>
+            <div class="dropdown__item-separator">/</div>
+            <div class="dropdown__item js-dropdown-item">
+              <input id="en-2" type="radio" name="lang-2" value="en-2" />
+              <label for="en-2">EN</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ <main>
+  <div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs__container">
+      <a href="#">
+        <span>Главная</span>
+        <span>/</span>
+      </a>
+      <a href="#">
+        <span>О регионе</span>
+        <span>/</span>
+      </a>
+      <span>Социально-экономическое развитие</span>
+    </div>
+  </div>
+</div>
+ <div class="section events-page">
+  <div class="container events-page__container">
+    <h1 class="events-page__title-h1">Состоится ежегодный саммит деловых кругов «сильная россия»</h1>
+    <div class="events-page__head">
+      <div class="events-page__date">
+        <span>Дата публикации:</span>
+        <span>13.09.2023</span>
+      </div>
+      <div class="events-page__links">
+        <span>Поделиться:</span>
+        <div class="header-top__socials">
+          <a href="#" class="header-top__social">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#vk-2"></use>
+            </svg>
+          </a>
+          <a href="#" class="header-top__social">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#tg-2"></use>
+            </svg>
+          </a>
+          <a href="#" class="header-top__social">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#odn-2"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="events-page__image">
+      <picture>
+        <source media="(min-width: 768px)" srcset="assets/img/backgr-image/img7.jpg" />
+        <img src="assets/img/backgr-image/img7-mob.jpg" />
+      </picture>
+    </div>
+    <div class="events-page__content article-content">
+      <p>
+        5 июля 2023 года в Центре событий РБК (г. Москва, Космодамианская наб. 52, строение 7) состоится ежегодный
+        Саммит деловых кругов «Сильная Россия». Мероприятие пройдет при поддержке Российского союза строителей,
+        Торгово-промышленной палаты Российской Федерации и Российского союза промышленников и предпринимателей.
+      </p>
+      <p>
+        Саммит с 2009 года выступает главной дискуссионной площадкой для обсуждения актуальных вопросов в области
+        инфраструктурного развития страны, формирования благоприятного инвестиционного климата и развития экономического
+        потенциала регионов России.
+      </p>
+      <strong>Цель мероприятия</strong>
+      <p>
+        Консолидировать усилия государства, бизнеса и науки для выработки компетентных предложений и прорывных
+        инициатив, нацеленных на ускоренный рост и развитие экономики страны.
+      </p>
+      <strong>Аудитория Саммита</strong>
+      <p>
+        Ведущие игроки строительного рынка, главные бизнес-объединения, ключевые эксперты отрасли, институты развития,
+        инвестиционное и банковское сообщество, руководители промышленных предприятий, представители органов власти и
+        СМИ.
+      </p>
+      <strong>Главная тема в этом году</strong>
+      <p>
+        «Комплексное развитие территорий. Инфраструктурные проекты». В программе мероприятия: деловой завтрак, пленарное
+        заседание, отраслевые сессии, воркшопы, деловые встречи B2B и B2G, работа с прессой, заключение новых
+        партнерских соглашений.
+      </p>
+      <p>Подробнее на сайте и в деловой программе Саммита.</p>
+    </div>
+  </div>
+</div>
+ <section class="section other events-page-other">
+  <div class="container">
+    <div class="events-page-other__head">
+      <h2 class="events-page-other__title-h2">Читайте также</h2>
+      <div class="slider-navigation--rel">
+        <div class="slider-navigation__btns">
+          <button type="button" class="slider-navigation__btns-prev">
+            <svg width="40" height="40">
+              <use xlink:href="assets/img/icons/icons.svg#slide-prev-black"></use>
+            </svg>
+          </button>
+          <button type="button" class="slider-navigation__btns-next">
+            <svg width="40" height="40">
+              <use xlink:href="assets/img/icons/icons.svg#slide-next-black"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="swiper other__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card news-page__item">
+            <div class="card__img news-page__image">
+              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="card-img" /></picture>
+            </div>
+            <div class="card__content news-page__content">
+              <div class="card__content-main">
+                <a href="#!" class="card__content-title news-page__content-title"
+                  >Правительство России усилило поддержку инвесторов в туристической отрасли</a
+                >
+              </div>
+              <div class="card__more">
+                <span class="card__date">16.10.2023</span>
+                <a href="#!" class="card__link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card news-page__item">
+            <div class="card__img news-page__image">
+              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="card-img" /></picture>
+            </div>
+            <div class="card__content news-page__content">
+              <div class="card__content-main">
+                <a href="#!" class="card__content-title news-page__content-title"
+                  >Правительство России усилило поддержку инвесторов в туристической отрасли</a
+                >
+              </div>
+              <div class="card__more">
+                <span class="card__date">16.10.2023</span>
+                <a href="#!" class="card__link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card news-page__item">
+            <div class="card__img news-page__image">
+              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="card-img" /></picture>
+            </div>
+            <div class="card__content news-page__content">
+              <div class="card__content-main">
+                <a href="#!" class="card__content-title news-page__content-title"
+                  >Правительство России усилило поддержку инвесторов в туристической отрасли</a
+                >
+              </div>
+              <div class="card__more">
+                <span class="card__date">16.10.2023</span>
+                <a href="#!" class="card__link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card news-page__item">
+            <div class="card__img news-page__image">
+              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="card-img" /></picture>
+            </div>
+            <div class="card__content news-page__content">
+              <div class="card__content-main">
+                <a href="#!" class="card__content-title news-page__content-title"
+                  >Правительство России усилило поддержку инвесторов в туристической отрасли</a
+                >
+              </div>
+              <div class="card__more">
+                <span class="card__date">16.10.2023</span>
+                <a href="#!" class="card__link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card news-page__item">
+            <div class="card__img news-page__image">
+              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="card-img" /></picture>
+            </div>
+            <div class="card__content news-page__content">
+              <div class="card__content-main">
+                <a href="#!" class="card__content-title news-page__content-title"
+                  >Правительство России усилило поддержку инвесторов в туристической отрасли</a
+                >
+              </div>
+              <div class="card__more">
+                <span class="card__date">16.10.2023</span>
+                <a href="#!" class="card__link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="ask-question">
+  <div class="ask-question__container">
+    <div class="ask-question__left">
+      <div class="ask-question__titles">
+        <div class="ask-question__title">Задать вопрос</div>
+        <div class="ask-question__desc">Заполните форму, и мы свяжемся с вами в ближайшее время</div>
+      </div>
+      <div class="ask-question__img">
+        <svg>
+          <use xlink:href="assets/img/icons/icons.svg#ask-question"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="ask-question__right">
+      <div class="ask-question__titles">
+        <div class="ask-question__title">Задать вопрос</div>
+        <div class="ask-question__desc">Заполните форму, и мы свяжемся с вами в ближайшее время</div>
+      </div>
+      <form id="ask-question" class="ask-question__form">
+        <div class="ask-question__input input">
+          <div class="input__head">ФИО</div>
+          <div class="input__input">
+            <input type="text" placeholder="Введите ваше ФИО" />
+          </div>
+          <div class="input__hint">Error</div>
+        </div>
+        <div class="ask-question__input input">
+          <div class="input__head">Электронная почта</div>
+          <div class="input__input">
+            <input type="email" placeholder="Введите электронную почту" />
+          </div>
+          <div class="input__hint">Error</div>
+        </div>
+        <div class="ask-question__textarea textarea">
+          <div class="textarea__head">Текст обращения</div>
+          <div class="textarea__textarea">
+            <textarea name="#" placeholder="Опишите суть вопроса или предложения"></textarea>
+          </div>
+          <div class="textarea__hint">Error</div>
+        </div>
+        <div class="ask-question__btns">
+          <button type="submit" class="ask-question__btn btn btn-def">
+            <span>Задать вопрос</span>
+          </button>
+          <p class="ask-question__text">
+            Заполняя форму обратной связи, Вы соглашаетесь с <a href="#">политикой конфиденциальности.</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__logo-column">
+          <a href="./main.html" class="footer__logo logo">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="assets/img/icons/logo.svg" />
+              <img src="assets/img/icons/logo-sm.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <div class="footer__right">
+          <div class="footer__info-block">
+            <p class="footer__info-title">Email</p>
+            <a href="mailto:investsaratov@mai.ru" class="footer__info-link">investsaratov@mai.ru</a>
+          </div>
+          <div class="footer__info-block">
+            <p class="footer__info-title">Телефон</p>
+            <a href="tel:+78452695262" class="footer__info-link">+7 (8452) 69-52-62</a>
+          </div>
+          <div class="footer__info-block">
+            <p class="footer__info-title">Социальные сети</p>
+            <div class="footer__info-socials">
+              <a href="#">
+                <svg width="20" height="20">
+                  <use xlink:href="assets/img/icons/icons.svg#tg"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="20" height="20">
+                  <use xlink:href="assets/img/icons/icons.svg#odnok"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="20" height="20">
+                  <use xlink:href="assets/img/icons/icons.svg#vk"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__info-block">
+            <p class="footer__info-title">Режим работы</p>
+            <p class="footer__info-link">с 9:00 до 18:00 пн-пт</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__center">
+        <div class="footer__lists">
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>О регионе</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Расположение</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Статистика региона</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Социально-экономическое развитие</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Стратегия</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Истории успеха</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Муниципальные образования</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инфраструктурные проекты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Инвестору</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Заявка инвестора</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Корпорация развития</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиционный комитет</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Клуб стратегических инициатив</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиции в туризм</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Законодательство</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Требуется инвестор</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Кадры</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">План создания объектов</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Опросы</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Поддержка</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Единое окно</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Помощь инвестору</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Налоговые льготы</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Субсидии</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">СПИК 2.0</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инфраструктура поддержки</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиционный договор</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Региональный инвестстандарт</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Калькулятор мер поддержки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Площадки</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Предложить площадку</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Реестр свободных земельных участков</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Преференциальные территории</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Площадки с объектами капитального строительства</a>
+              </li>
+            </ul>
+            <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+              <p>О регионе</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-title footer__list-title-hide js-dropdown-title">
+              <p>Контакты</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="footer__list footer__list-hide js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <a href="#">Инвестстандарт</a>
+            </div>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Линия прямых обращений</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Получить консультацию</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Мониторинг обращений</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Подать заявку на сопровождение проекта</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Предложить проект</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>ГЧП</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Проекты ГЧП</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Общие сведения</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Меры поддержки</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Реестр объектов для ГЧП</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Контакты ГЧП</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Документы</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Законодательство</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Корпоративные облигации</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Презентационные материалы</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Медиа</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Мероприятия</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Фото и видеоотчет</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list footer__list-hide js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <a href="#">Контакты</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__bottom-txt">© Инвестиционный портал Саратовской области</p>
+        <a class="footer__bottom-txt" href="#"> Политика конфиденциальности </a>
+      </div>
+    </div>
+  </div>
+</footer>
+ <!--Модалка "Ваше предложение отправлено"-->
+<div class="modal close-x" data-modal="request-sent">
+  <div class="modal__inner modal-sm">
+    <div class="modal-sm__content">
+      <button type="button" class="modal__close modal-sm__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-sm__title">Ваше обращение отправлено</div>
+      <button type="button" class="modal-sm__btn btn btn-def close-x">
+        <span class="close-x">Хорошо</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Ваше предложение отправлено"-->
+<div class="modal close-x" data-modal="your-offer-sent">
+  <div class="modal__inner modal-sm">
+    <div class="modal-sm__content">
+      <button type="button" class="modal__close modal-sm__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-sm__title">Ваше предложение отправлено</div>
+      <button type="button" class="modal-sm__btn btn btn-def close-x">
+        <span class="close-x">Хорошо</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Подтверждение выхода из аккаунта"-->
+<div class="modal close-x" data-modal="exit-confirmation">
+  <div class="modal__inner modal-sm">
+    <div class="modal-sm__content">
+      <button type="button" class="modal__close modal-sm__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-sm__title">Вы действительно хотите выйти из личного кабинета?</div>
+      <div class="modal-sm__btns">
+        <button type="button" class="modal-sm__btn btn btn-sec close-x">
+          <span class="close-x">Отмена</span>
+        </button>
+        <button type="button" class="modal-sm__btn btn btn-def close-x">
+          <span class="close-x">Выйти</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Ваш email подтвержден"-->
+<div class="modal close-x" data-modal="email-confirmed">
+  <div class="modal__inner modal-sm">
+    <div class="modal-sm__content">
+      <button type="button" class="modal__close modal-sm__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-sm__title">Ваш E-mail подтвержден!</div>
+      <button type="button" class="modal-sm__btn btn btn-def close-x" data-content-btn="auth">
+        <span class="close-x">Войти в кабинет</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Учетная запись создана успешна"-->
+<div class="modal close-x" data-modal="account-create-success">
+  <div class="modal__inner modal-acc-suc">
+    <div class="modal-acc-suc__content">
+      <button type="button" class="modal__close modal-acc-suc__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-acc-suc__titles">
+        <div class="modal-acc-suc__title">Учетная запись создана успешно</div>
+        <div class="modal-acc-suc__subtitle">
+          Для завершения процедуры регистрации в личном кабинете необходимо активировать учетную запись и подтвердить
+          E-mail. Письмо со ссылкой для подтверждения отправлено на
+          <a href="mailto:ivanivanov@mail.ru">ivanivanov@mail.ru.</a>
+        </div>
+      </div>
+      <button type="button" class="modal-acc-suc__btn btn btn-def clos-x">
+        <span class="close-x">Хорошо</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Проекты ГЧП"-->
+<div class="modal close-x" data-modal="project-ppp">
+  <div class="modal__inner modal-bg">
+    <div class="modal-bg__content">
+      <button type="button" class="modal__close modal-bg__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-bg__wrapper" data-simplebar>
+        <h3 class="modal-bg__title">Развитие парка им. Ю.А. Гагарина в г. Саратове</h3>
+        <div class="modal-bg__blocks">
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Местоположение</p>
+            <ul class="modal-bg__block-list">
+              <li>Саратов, Заводской район</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Кадастровый номер</p>
+            <ul class="modal-bg__block-list">
+              <li>64:48:020412:25</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Площадь застройки</p>
+            <ul class="modal-bg__block-list">
+              <li>60 064 м2</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Налоговые льготы (Соглашение)"-->
+<div class="modal close-x" data-modal="tax-benefits-agreement">
+  <div class="modal__inner modal-bg">
+    <div class="modal-bg__content">
+      <button type="button" class="modal__close modal-bg__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-bg__wrapper" data-simplebar>
+        <h3 class="modal-bg__title">Соглашение о защите и поощрении капиталовложений</h3>
+        <p class="modal-bg__txt">СЗПК: РФ/Субъект РФ/Инвестор/МО</p>
+        <div class="modal-bg__blocks">
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Объем капиталовложений, если сторона соглашения субъект РФ:</p>
+            <ul class="modal-bg__block-list">
+              <li>не менее 200 млн рублей</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Объем капиталовложений, если сторона соглашения РФ и субъект РФ:</p>
+            <ul class="modal-bg__block-list">
+              <li>не менее 750 млн рублей: здравоохранение, образование, культура, физическая культура и спорт</li>
+              <li>
+                не менее 1,5 млрд рублей: цифровая экономика, охрана окружающей среды, сельское хозяйство, пищевая,
+                перерабатывающая промышленность, туризм
+              </li>
+              <li>
+                не менее 4,5 млрд рублей: обрабатывающее производство аэровокзалы (терминалы), общественный транспорт
+                городского и пригородного сообщения, транспортно-логистические центры
+              </li>
+              <li>не менее 10 млрд рублей: все проекты независимо от сферы экономики</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Возмещение фактически понесенных затрат:</p>
+            <ul class="modal-bg__block-list">
+              <li>
+                не может превышать 50% на объекты обеспечивающей инфраструктуры (в том числе на уплату процента по
+                кредитам, купонного дохода по облигационным займам, направленных на объекты инфраструктуры), на уплату
+                процента по кредитам, купонного дохода по облигационным займам в части объектов недвижимости и
+                результатов интеллектуальной деятельности
+              </li>
+              <li>
+                не может превышать 100% на объекты сопутствующей инфраструктуры (в том числе на уплату процента по
+                кредитам, купонного дохода по облигационным займам, направленных на объекты инфраструктуры), на демонтаж
+                объектов военных городков
+              </li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Условия заключения СЗПК:</p>
+            <ul class="modal-bg__block-list">
+              <li>соответствие проекта и организации установленным законодательством сферам экономики</li>
+              <li>
+                решение о бюджете принято не позднее 180 календарных дней со дня получения разрешения на строительство,
+                а заявление на заключение СЗПК подано не позднее 1 года со дня принятия решения о бюджете
+              </li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Исключения по сферам деятельности по СЗПК:</p>
+            <ul class="modal-bg__block-list">
+              <li>игорный бизнес</li>
+              <li>
+                производство табачных изделий, алкоголя, жидкого топлива, за исключением топлива, полученного из угля, а
+                также на установках вторичной переработки нефтяного сырья согласно перечню, утверждаемому Правительством
+                РФ
+              </li>
+              <li>
+                добыча сырой нефти и природного газа, за исключением инвестиционных проектов по снижению природного газа
+              </li>
+              <li>оптовая и розничная торговля</li>
+              <li>
+                деятельность финансовых организаций, поднадзорных ЦБ РФ, за исключением случаев выпуска ценных бумаг для
+                финансирования проектов
+              </li>
+              <li>
+                строительство (модернизация, реконструкция) административно-деловых центров и торговых центров, а также
+                жилых домов
+              </li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Срок действия стабилизационной оговорки:</p>
+            <div class="modal-bg__block-txts modal-bg__block-txts--16">
+              <p>
+                <b>6 лет</b>
+                <span>при капиталовложении до 10 млрд рублей</span>
+              </p>
+              <p>
+                <b>10 лет</b>
+                <span>при капиталовложении от 5 до 10 млрд рублей</span>
+              </p>
+              <p>
+                <b>15 лет</b>
+                <span>при капиталовложении от 10 до 15 млрд рублей</span>
+              </p>
+              <p>
+                <b>20 лет</b>
+                <span>при капиталовложении не менее 15 млрд рублей</span>
+              </p>
+              <p>Соглашение о защите и поощрении капиталовложений может быть заключено не позднее 01.01.2030 г.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Налоговые льготы (Проекты)"-->
+<div class="modal close-x" data-modal="tax-benefits-projects">
+  <div class="modal__inner modal-bg">
+    <div class="modal-bg__content">
+      <button type="button" class="modal__close modal-bg__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-bg__wrapper" data-simplebar>
+        <h3 class="modal-bg__title">Новые инвестиционные проекты в рамках постановления правительства рф № 1704</h3>
+        <div class="modal-bg__blocks">
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Критерии отбора НИП</p>
+            <div class="modal-bg__block-txts">
+              <p>Объем инвестиций – не менее 50 млн рублей.</p>
+              <p>
+                Наличие соглашения о намерениях по реализации НИП, заключенного высшим исполнительным органом власти
+                субъекта РФ и потенциальным инвестором, содержащего информацию о планируемых объемах инвестиций,
+                количестве создаваемых рабочих мест, необходимых для реализации НИП объектов инфраструктуры, объемах
+                налогов, уплаченных в бюджеты всех уровней бюджетной системы РФ, за период реализации проекта, а также
+                обязательства инвестора по представлению отчета о ходе реализации НИП субъекту Российской Федерации.
+              </p>
+              <p>
+                Наличие документа, содержащего краткое описание НИП и его целей, в соответствии с утвержденной формой
+                (резюме НИП).
+              </p>
+              <p>Возмещение 100% затрат инвестора на инфраструктуру.</p>
+            </div>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Сферы реализации НИП</p>
+            <ul class="modal-bg__block-list">
+              <li>сельское хозяйство</li>
+              <li>
+                добыча полезных ископаемых (за исключением добычи и (или) первичной переработки нефти, добычи природного
+                газа и (или) газового конденсата, оказания услуг по транспортировке нефти и (или) нефтепродуктов, газа и
+                (или) газового конденсата)
+              </li>
+              <li>туристская деятельность</li>
+              <li>логистическая деятельность</li>
+              <li>
+                обрабатывающие производства, за исключением производства подакцизных товаров (кроме производства
+                автомобильного бензина 5‑го класса, дизельного топлива 5‑го класса, моторных масел для дизельных и (или)
+                карбюраторных (инжекторных) двигателей, авиационного керосина, продуктов нефтехимии, являющихся
+                подакцизными товарами);
+              </li>
+              <li>жилищное строительство</li>
+              <li>жилищно-коммунальное хозяйство</li>
+              <li>
+                строительство или реконструкция автомобильных дорог (участков), автомобильных дорог и (или)
+                искусственных дорожных сооружений, реализуемых субъектами РФ в рамках концессионных соглашений
+              </li>
+              <li>дорожное хозяйство с применением механизма ГЧП</li>
+              <li>транспорт общего пользования</li>
+              <li>строительство аэропортовой инфраструктуры</li>
+              <li>обеспечение электрической энергией, газом и паром</li>
+              <li>по отраслям, относящимся к перспективным экономическим специализациям Саратовской области</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <div class="modal-bg__block-txts">
+              <p>
+                Постановление Правительства РФ от 19.10.2020 № 1704 «Об утверждении Правил определения новых
+                инвестиционных проектов, в целях реализации которых средства бюджета субъекта Российской Федерации,
+                высвобождаемые в результате снижения объема погашения задолженности субъекта Российской Федерации перед
+                Российской Федерацией по бюджетным кредитам, подлежат направлению на выполнение инженерных изысканий,
+                проектирование, экспертизу проектной документации и (или) результатов инженерных изысканий,
+                строительство, реконструкцию и ввод в эксплуатацию объектов инфраструктуры, а также на подключение
+                (технологическое присоединение) объектов капитального строительства к сетям инженерно-технического
+                обеспечения».
+              </p>
+              <a href="" download> Скачать документ </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Инфраструктурные преокты"-->
+<div class="modal close-x" data-modal="desc-infracture-project">
+  <div class="modal__inner modal-bg">
+    <div class="modal-bg__content">
+      <button type="button" class="modal__close modal-bg__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-bg__wrapper" data-simplebar>
+        <h3 class="modal-bg__title">
+          Модернизация гидротурбин ступени <br />
+          №1-21,24
+        </h3>
+        <ul class="modal-bg__descs">
+          <li>
+            <b>Типы работ</b>
+            Модернизация
+          </li>
+          <li>
+            <b>Заказчик:</b>
+            ПАО «РусГидро» Филиал «Саратовская ГЭС»
+          </li>
+          <li>
+            <b>Суммарный объем инвестиций:</b>
+            63 400 000,00 тыс. ₽
+          </li>
+          <li>
+            <b>В т.ч. внебюджетные:</b>
+            63 400 000,00 тыс. ₽
+          </li>
+          <li>
+            <b>Местоположение объекта:</b>
+            Балаковский муниципальный район области
+          </li>
+          <li>
+            <b>Сроки реализации:</b>
+            2011-2028
+          </li>
+          <li>
+            <b>Степень готовности:</b>
+            Проводятся строительно-монтажные работы на газотурбинах: ст.№ 1, ст.№5, ст.№9
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Инфраструктурные проекты (субсидии)"-->
+<div class="modal close-x" data-modal="infracture-project-subs">
+  <div class="modal__inner modal-bg">
+    <div class="modal-bg__content">
+      <button type="button" class="modal__close modal-bg__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-bg__wrapper" data-simplebar>
+        <h3 class="modal-bg__title">
+          Субсидия субъектам туристской деятельности на возмещение части затрат на организацию чартерных программ, а
+          также на проведение рекламно-информационных туров
+        </h3>
+        <div class="modal-bg__blocks">
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Тип организации</p>
+            <div class="modal-bg__block-txts">
+              <p>Микропредприятие, Малое предприятие, Среднее предприятие</p>
+            </div>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Максимальный размер</p>
+            <div class="modal-bg__block-txts">
+              <p>
+                Льготный коэффициент 0,6 к начальному размеру арендной платы за участки и объекты недвижимости в
+                государственной и муниципальной собственности
+              </p>
+            </div>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Описание</p>
+            <div class="modal-bg__block-txts">
+              <p>
+                Поддержка оказывается в отношении имущества, включенного в перечни государственного имущества и
+                муниципального имущества, предназначенного для предоставления во владение и (или) в пользование
+                субъектам МСП и самозанятым гражданам.
+              </p>
+              <p>
+                При предоставлении государственного имуществапредусмотрены льготы, а именно: проведение
+                специализированных аукционовдля субъектов МСП с применением льготного коэффициента 0,6 к
+                начальномуразмеру арендной платы.По муниципальному имуществу условия предоставления и льготы каждое
+                муниципальное образование определяет самостоятельно и публикует на сайте администрации в сети
+                «Интернет».
+              </p>
+            </div>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Требования (к инвестору, оборудованию, иные)</p>
+            <div class="modal-bg__block-txts">
+              <p>
+                Субъект МСП должен быть внесен в единый реестр субъектов малого и среднего предпринимательства в
+                соответствии с Федеральным законом от 24 июля 2007 г. № 209-ФЗ.
+              </p>
+            </div>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Для получения поддержки заявителю требуется</p>
+            <div class="modal-bg__block-txts">
+              <p>
+                Обратиться в структурные подразделения по управлению муниципальным имуществом в администрациях
+                муниципальных образований
+              </p>
+            </div>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Куда обратиться для получения подробной консультации</p>
+            <div class="modal-bg__block-txts">
+              <p>Министерство промышленности, торговли и предпринимательства Нижегородской области, начальник отдела</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Развитие инновационных предприятий"-->
+<div class="modal close-x" data-modal="dev-innovative-enterprises">
+  <div class="modal__inner modal-bg">
+    <div class="modal-bg__content">
+      <button type="button" class="modal__close modal-bg__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-bg__wrapper" data-simplebar>
+        <h3 class="modal-bg__title">Развитие инновационных предприятий</h3>
+        <div class="modal-bg__links">
+          <p class="modal-bg__links-title">Наиболее крупные инновационные предприятия</p>
+          <ul class="modal-bg__links-list">
+            <li>
+              <a href="https://www.rubezh.ru/"> ГК «Рубеж» </a>
+              <p>Лидер в России по выпуску систем безопасности</p>
+            </li>
+            <li>
+              <a href="https://www.bioamid.com/"> АО «Биоамид» </a>
+              <p>Уникальный производитель в сфере биотехнологий и фармацевтики.</p>
+            </li>
+            <li>
+              <a href="https://lapic.ru/"> ООО «Лапик» </a>
+              <p>
+                Единственное в России предприятие, специализирующееся в области разработки и производства
+                координатно-измерительных машин КИМ с шестью степенями свободы, не имеющее мировых аналогов.
+              </p>
+            </li>
+            <li>
+              <a href="http://www.sarbazalt.ru/"> ФГУП «Базальт» </a>
+              <p>Уникальный производитель в оборонной тематике.</p>
+            </li>
+            <li>
+              <a href="https://almaz-rpe.ru/"> АО «НПП «Алмаз» </a>
+              <p>
+                Крупнейший научно-производственный центр СВЧ электроники, специализирующийся на разработке и серийном
+                выпуске СВЧ приборов и сложных комплексированных изделий на их основе, используемых в системах связи,
+                радиолокации и навигации, в широкополосных системах специального назначения
+              </p>
+            </li>
+            <li>
+              <a href="http://www.kontakt-saratov.ru/"> НПП «Контакт» </a>
+              <p>
+                Одно из крупнейших предприятий электронной промышленности России, специализирующееся на выпуске мощных
+                вакуумных электронных приборов для радиовещания, телевидения, дальней космической и спутниковой связи,
+                радиолокации, ускорительной техники.
+              </p>
+            </li>
+            <li>
+              <a href="http://www.kontakt-saratov.ru/"> НПП «Контакт» </a>
+              <p>
+                Является одним из ведущих предприятий России, которое разрабатывает и серийно производит оптоэлектронные
+                компоненты - более 30 типов полупроводников, лазеров, суперлюминисцентных диодов, фотодиодов и др.
+              </p>
+            </li>
+            <li>
+              <a href="http://www.kontakt-saratov.ru/"> НПП «Контакт» </a>
+              <p>
+                Одно из крупнейших предприятий электронной промышленности России, специализирующееся на выпуске мощных
+                вакуумных электронных приборов для радиовещания, телевидения, дальней космической и спутниковой связи,
+                радиолокации, ускорительной техники.
+              </p>
+            </li>
+            <li>
+              <a href="http://www.kontakt-saratov.ru/"> НПП «Контакт» </a>
+              <p>
+                Является одним из ведущих предприятий России, которое разрабатывает и серийно производит оптоэлектронные
+                компоненты - более 30 типов полупроводников, лазеров, суперлюминисцентных диодов, фотодиодов и др.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Создание благоприятной деловой среды"-->
+<div class="modal close-x" data-modal="creat-business-env">
+  <div class="modal__inner modal-bg">
+    <div class="modal-bg__content">
+      <button type="button" class="modal__close modal-bg__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-bg__wrapper" data-simplebar>
+        <h3 class="modal-bg__title">Создание благоприятной деловой среды</h3>
+        <div class="modal-bg__blocks">
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">
+              Реализация активной инвестиционной политики и мер по созданию благоприятной деловой среды, включая:
+            </p>
+            <ul class="modal-bg__block-list">
+              <li>
+                разработку и реализацию комплексной схемы преимущественного развития, предусматривающей территориальное
+                зонирование области по точкам роста, функционирование территории опережающего социально-экономического
+                развития, особой экономической зоны, сети индустриальных парков и технопарков, объектов
+                транспортно-логистической инфраструктуры, а также максимальное использование экономико-географического
+                потенциала
+              </li>
+              <li>
+                активное привлечение российских и иностранных инвестиций в Саратовскую область за счет укрепления
+                международных и межрегиональных связей региона
+              </li>
+              <li>
+                создание региональных институтов развития (корпораций, агентств и др.), в том числе отраслевых,
+                обеспечивающих формирование современной производственной инфраструктуры, поиск и привлечение инвестиций
+                в экономику области, взаимодействие с представителями приоритетных кластеров
+              </li>
+              <li>развитие системы поддержки предпринимательства в области;</li>
+              <li>
+                снижение административных барьеров и издержек предпринимателей, связанных с подготовкой и реализацией
+                инвестиционных проектов, развитие необходимой инфраструктуры, формирование механизмов для работы с
+                инвесторами и их проблемами
+              </li>
+              <li>
+                совершенствование процедур формирования земельных участков и упрощением подготовки разрешительной и
+                проектной документации для получения разрешения на строительство
+              </li>
+              <li>
+                содействие развитию рыночных институтов и конкуренции на территории региона за счет создания механизмов
+                предотвращения избыточного регулирования, развития транспортной, информационной, финансовой,
+                энергетической инфраструктуры и обеспечения ее доступности для участников рынка
+              </li>
+              <li>
+                увеличение размера дорожного фонда, в том числе через активное участие в федеральных программах, в целях
+                приведения в нормативное состояние, в первую очередь, опорной сети дорог, межпоселковых дорог, а также
+                дорог в границах населенных пунктов
+              </li>
+              <li>
+                сбалансированное пространственное развитие области в направлении совершенствования системы расселения и
+                размещения производительных сил, интенсивного развития агломераций, создания новых территориальных
+                центров роста и повышения степени однородности социально-экономического развития муниципальных районов и
+                городских округов посредством максимально полной реализации их потенциала и преимуществ
+              </li>
+              <li>
+                формирование туристско-рекреационного кластера с использованием механизма государственно-частного
+                партнерства, предусматривающего развитие специализированных видов туризма, разработку узнаваемого
+                туристского бренда области, позволяющего обеспечить к 2030 году двукратный рост количества въездных
+                туристов к численности населения области. Повышение привлекательности области за счет обеспечения
+                высокого уровня обслуживания во всех секторах туристской индустрии, создания новых туристических
+                маршрутов, развития туристской инфраструктуры, в том числе реконструкции действующих и строительства
+                новых лечебно-оздоровительных туристских комплексов
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Экспертная сеть агенства"-->
+<div class="modal close-x" data-modal="agency-expert-network">
+  <div class="modal__inner modal-bg">
+    <div class="modal-bg__content">
+      <button type="button" class="modal__close modal-bg__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-bg__wrapper" data-simplebar>
+        <h3 class="modal-bg__title">ЭКСПЕРТНАЯ СЕТЬ АГЕНТСТВА</h3>
+        <div class="modal-bg__blocks modal-bg__blocks-16">
+          <div class="modal-bg__block-txts">
+            <p>
+              Экспертный потенциал экосистемы АСИ направляется на выработку решений и рекомендаций по рискам и
+              возможностям развития отраслей и профессий с влиянием на достижение национальных целей.
+            </p>
+            <p>Региональные экспертные группы созданы во всех субъектах Российской Федерации по следующим тематикам:</p>
+          </div>
+          <div class="modal-bg__block modal-bg__block--8">
+            <p class="modal-bg__block-title">Социальные проекты</p>
+            <ul class="modal-bg__block-list modal-bg__block-list--4">
+              <li>Здравоохранение</li>
+              <li>Демография</li>
+              <li>Спорт и здоровый образ жизни</li>
+              <li>Социальное предпринимательство и социально ориентированные НКО</li>
+              <li>Корпоративная социальная ответственность и филантропия</li>
+              <li>Волонтёрство</li>
+              <li>Гуманное отношение к животным</li>
+              <li>Развитие лидерства</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block modal-bg__block--8">
+            <p class="modal-bg__block-title">Предпринимательство и технологии</p>
+            <ul class="modal-bg__block-list modal-bg__block-list--4">
+              <li>Предпринимательство</li>
+              <li>Промышленность</li>
+              <li>Цифровая экономика</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block modal-bg__block--8">
+            <p class="modal-bg__block-title">Образование и кадры</p>
+            <ul class="modal-bg__block-list modal-bg__block-list--4">
+              <li>Кадровое обеспечение промышленного роста</li>
+              <li>«Общее и дополнительное образование</li>
+              <li>Новые технологии в высшем образовании</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block modal-bg__block--8">
+            <p class="modal-bg__block-title">Городское развитие</p>
+          </div>
+          <div class="modal-bg__block modal-bg__block--8">
+            <p class="modal-bg__block-title">Туризм</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка "Бизнес-инкубатор Саратовской области"-->
+<div class="modal close-x" data-modal="bussines-incubator">
+  <div class="modal__inner modal-bg">
+    <div class="modal-bg__content">
+      <button type="button" class="modal__close modal-bg__close close-x">
+        <svg class="close-x">
+          <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+        </svg>
+      </button>
+      <div class="modal-bg__wrapper" data-simplebar>
+        <h3 class="modal-bg__title">Бизнес-инкубатор Саратовской области</h3>
+        <div class="modal-bg__blocks modal-bg__blocks--32">
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">
+              Площадь помещений, предоставляемых по льготным арендным ставкам начинающим предпринимателям:
+            </p>
+            <ul class="modal-bg__block-list modal-bg__block-list--2">
+              <li>офисные помещения: от 8,6 до 55 м2</li>
+              <li>производственные помещения: от 47,4 до 61,3 м2</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">
+              Ставки арендной платы по договорам аренды нежилых помещений бизнес-инкубатора:
+            </p>
+            <div class="modal-bg__block-txts">
+              <p>
+                <b>40%</b>
+                <span>в первый год аренды</span>
+              </p>
+              <p>
+                <b>60%</b>
+                <span>во второй год аренды</span>
+              </p>
+              <p>
+                <b>80%</b>
+                <span
+                  >(от рыночной стоимости арендных платежей, определяемой на основании отчета независимого оценщика) в
+                  третий год аренды</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">
+              Характеристики помещений, предоставляемых начинающим предпринимателям в аренду:
+            </p>
+            <ul class="modal-bg__block-list modal-bg__block-list--2">
+              <li>чистовая отделка помещений</li>
+              <li>наличие оргтехники и компьютеров</li>
+              <li>телефон с выходом на городскую и междугороднюю связь</li>
+              <li>доступ в Интернет по оптоволоконному каналу;</li>
+              <li>коллективный доступ к факсу, копировальному аппарату, цветному принтеру, сканеру</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">
+              Пакет услуг, которые получает начинающий предприниматель, став резидентом Саратовского областного
+              бизнес-инкубатора:
+            </p>
+            <ul class="modal-bg__block-list">
+              <li>льготные арендные ставки</li>
+              <li>почтово-секретарские услуги</li>
+              <li>
+                консультационные услуги по вопросам бухучета, налогообложения, правовой защиты, развития предприятия,
+                документооборота и др.
+              </li>
+              <li>предоставление конференц-зала и комнаты переговоров для проведения мероприятий</li>
+              <li>доступ к информационным базам данных и программно-аппаратным комплексам</li>
+              <li>услуги сопровождения и сервисного обслуживания</li>
+              <li>административно-хозяйственные услуги</li>
+              <li>обучение в виде краткосрочных семинаров и тренингов</li>
+            </ul>
+          </div>
+          <div class="modal-bg__block">
+            <p class="modal-bg__block-title">Контактные данные</p>
+            <div class="modal-bg__block-descs">
+              <p>
+                <b>Сайт:</b>
+                <a href="https://saratov-bis.ru/bi/">https://saratov-bis.ru/bi/</a>
+              </p>
+              <p>
+                <b>Адрес:</b>
+                410012, г. Саратов, ул. Краевая, 85
+              </p>
+              <p>
+                <b>Телефон/факс:</b>
+                (8452) 45 00 32
+              </p>
+              <p>
+                <b>E-mail:</b>
+                office@saratov-bi.ru
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Модалка Написать обращение-->
+<div class="modal close-x" data-modal="write-request">
+  <div class="modal__inner modal-bg">
+    <div class="modal__content-write">
+      <div class="modal-bg__content">
+        <button type="button" class="modal__close modal-bg__close close-x">
+          <svg class="close-x">
+            <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+          </svg>
+        </button>
+        <div class="modal-bg__wrapper" data-simplebar>
+          <div class="modal-bg__titles">
+            <div class="modal-bg__title">Оставьте ваше обращение</div>
+            <div class="modal-bg__subtitle">Заполните форму, и мы свяжемся с вами в ближайшее время</div>
+          </div>
+          <form id="modal-write-form" class="modal-write__form">
+            <fieldset class="modal-write__block">
+              <div class="modal-write__block-input input">
+                <div class="input__head">Наименование компании или ИП</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="text" placeholder="Введите наименование компании (ИП)" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="modal-write__block-input input">
+                <div class="input__head">ФИО</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="text" placeholder="Введите ваше ФИО" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+            </fieldset>
+            <fieldset class="modal-write__block">
+              <div class="modal-write__block-input input">
+                <div class="input__head">Телефон</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="tel" placeholder="Введите ваш телефон" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="modal-write__block-input input">
+                <div class="input__head">Электронная почта</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+            </fieldset>
+            <fieldset class="modal-write__block">
+              <div class="modal-write__block-dropdown dropdown dropdown-def js-dropdown">
+                <div class="dropdown__headline">Headline</div>
+                <div class="dropdown__header js-dropdown-inner">
+                  <div class="dropdown__value js-dropdown-value">Dropdown</div>
+                  <button type="button" class="dropdown__btn">
+                    <svg>
+                      <use xlink:href="assets/img/icons/icons.svg#arrow-black-down"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="dropdown__content">
+                  <div class="dropdown__items" data-simplebar>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="item-1" type="radio" name="item" value="item-1" />
+                      <label for="item-1">Item-1</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="item-2" type="radio" name="item" value="item-2" />
+                      <label for="item-2">Item-2</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="item-3" type="radio" name="item" value="item-3" />
+                      <label for="item-3">Item-3</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="item-4" type="radio" name="item" value="item-4" />
+                      <label for="item-4">Item-4</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="item-5" type="radio" name="item" value="item-5" />
+                      <label for="item-5">Item-5</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="item-6" type="radio" name="item" value="item-6" />
+                      <label for="item-6">Item-6</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="modal-write__block">
+              <div class="textarea">
+                <div class="textarea__head">Текст обращения</div>
+                <div class="textarea__textarea">
+                  <textarea name="#" placeholder="Опишите суть вопроса или предложения"></textarea>
+                </div>
+                <div class="textarea__hint">Error</div>
+              </div>
+            </fieldset>
+            <fieldset class="modal-write__block">
+              <div class="input input-file">
+                <label for="file-add" class="">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#file-icon"></use>
+                  </svg>
+                  <span>Прикрепить файл</span>
+                </label>
+                <input id="file-add" type="file" />
+              </div>
+            </fieldset>
+          </form>
+          <div class="modal-bg__btns">
+            <button type="button" class="btn btn-def">
+              <span>Задать вопрос</span>
+            </button>
+            <div class="modal-bg__btns-desc">
+              Заполняя форму обратной связи, вы соглашаетесь <br />
+              с <a href="#">политикой конфиденциальности.</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal__inner modal-sm" style="display: none">
+    <div class="modal__content-write">
+      <div class="modal-sm__content">
+        <button type="button" class="modal__close modal-sm__close close-x">
+          <svg class="close-x">
+            <use class="close-x" xlink:href="assets/img/icons/icons.svg#close-modal"></use>
+          </svg>
+        </button>
+        <div class="modal-sm__title">Ваше обращение отправлено</div>
+        <button type="button" class="modal-sm__btn btn btn-def close-x">
+          <span class="close-x">Хорошо</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20240103125822"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js?_v=20240103125822"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20240103125822"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20240103125822"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240103125822"></script>
+<script src="https://unpkg.com/@popperjs/core@2?_v=20240103125822"></script>
+<script src="https://unpkg.com/tippy.js@6?_v=20240103125822"></script>
+
+<script src="js/main.js?_v=20240103125822"></script>
+
+  </body>
+</html>
