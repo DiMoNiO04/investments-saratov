@@ -175,7 +175,6 @@ fieldset {
 .subtitle {
   @extend %h2;
   color: $white;
-  hyphens: auto;
 }
 
 .hidden {
@@ -221,5 +220,11 @@ fieldset {
 
   .section {
     margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: $miniMob) {
+  .subtitle {
+    hyphens: auto;
   }
 }

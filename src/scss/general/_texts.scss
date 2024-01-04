@@ -62,6 +62,9 @@
 
   @media screen and (max-width: $mob) {
     font-size: 32px;
+  }
+
+  @media screen and (max-width: $miniMob) {
     hyphens: auto;
   }
 }
@@ -191,6 +194,9 @@
 
   @media screen and (max-width: $mob) {
     font-size: 24px;
+  }
+
+  @media screen and (max-width: $miniMob) {
     hyphens: auto;
   }
 }

@@ -149,18 +149,20 @@
       background-color: 0;
       justify-content: flex-end;
       width: 100%;
+
+      &:hover {
+        .dropdown__value {
+          color: $bluePrimary;
+        }
+
+        svg path {
+          stroke: $bluePrimary;
+        }
+      }
     }
 
     &__content {
       border-radius: 1px;
-    }
-  }
-
-  &.active {
-    .dropdown {
-      &__value {
-        color: $black;
-      }
     }
   }
 }

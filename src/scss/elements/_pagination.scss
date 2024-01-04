@@ -35,16 +35,16 @@
     }
   }
 
-  &__btn {
+  &__btn:not(div):not(.--active) {
     &:hover {
-      border-color: $black;
+      border-color: $bluePrimary;
 
       svg {
-        stroke: $black;
+        stroke: $bluePrimary;
       }
 
       span {
-        color: $black;
+        color: $bluePrimary;
       }
     }
   }

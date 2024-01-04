@@ -9,7 +9,7 @@
   right: 0;
   width: 100%;
   display: block;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 
   &.active {
     height: auto;
@@ -93,6 +93,26 @@
     display: flex;
     align-items: center;
     column-gap: 20px;
+  }
+
+  &-top__btns-button {
+    span {
+      transition: $transitionColor;
+    }
+
+    svg {
+      transition: $transitionStroke;
+    }
+
+    &:hover {
+      span {
+        color: $bluePrimary;
+      }
+
+      svg use {
+        stroke: $bluePrimary;
+      }
+    }
   }
 
   &-top,
@@ -233,7 +253,7 @@
       .dropdown {
         &__content {
           @include sizes(auto, auto);
-          transition: all 0.5s ease;
+          transition: all 0.2s ease;
         }
 
         &__value {
@@ -459,6 +479,32 @@
 
   input::placeholder {
     color: $white;
+  }
+
+  .header-top__btns-button {
+    &:hover {
+      span {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      svg use {
+        stroke: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+
+  .dropdown__item:last-child {
+    padding-bottom: 10px;
+  }
+
+  .dropdown__header:hover {
+    .dropdown__value {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    svg path {
+      stroke: rgba(255, 255, 255, 0.6);
+    }
   }
 
   * {

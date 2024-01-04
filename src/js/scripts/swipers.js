@@ -60,7 +60,6 @@ function initBenefitsSlider() {
       modules: [Pagination, Navigation],
       slidesPerView: 1,
       loop: true,
-      speed: 500,
       pagination: {
         el: fraction,
         type: 'fraction',
@@ -84,7 +83,6 @@ function initSuccessHistSlider() {
       modules: [Pagination, Navigation],
       slidesPerView: 1,
       loop: true,
-      speed: 1000,
       pagination: {
         el: fraction,
         type: 'fraction',
@@ -112,7 +110,6 @@ function initIntroSlider() {
       autoplay: {
         delay: 4000,
       },
-      speed: 1500,
       pagination: {
         el: fraction,
         type: 'fraction',
@@ -135,7 +132,6 @@ function initNewsSlider() {
       modules: [Navigation],
       slidesPerView: 1,
       spaceBetween: 20,
-      speed: 1500,
       loop: true,
       navigation: {
         nextEl: btnNext,
@@ -164,7 +160,6 @@ function initStorySlider() {
     new Swiper(slider, {
       modules: [Navigation],
       spaceBetween: 20,
-      speed: 1000,
       loop: true,
       navigation: {
         nextEl: btnNext,
@@ -194,7 +189,6 @@ function initBigTownSlider() {
     new Swiper(slider, {
       modules: [Navigation],
       spaceBetween: 20,
-      speed: 1000,
       loop: true,
       navigation: {
         nextEl: btnNext,
@@ -226,7 +220,6 @@ function initContactsSlider() {
       observer: true,
       watchSlidesProgress: true,
       spaceBetween: 20,
-      speed: 1000,
       loop: true,
       navigation: {
         nextEl: btnNext,
@@ -263,7 +256,6 @@ function initImageGallerySliders() {
   const sliderElements = document.querySelectorAll('.image-gallery__swiper');
   sliderElements.forEach((slider) => {
     new Swiper(slider, {
-      speed: 1000,
       loop: true,
       breakpoints: {
         320: {
@@ -285,7 +277,6 @@ function initOtherSlider() {
       modules: [Navigation],
       slidesPerView: 4,
       spaceBetween: 20,
-      speed: 1500,
       loop: true,
       navigation: {
         nextEl: btnNext,

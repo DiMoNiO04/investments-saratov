@@ -119,13 +119,31 @@
     position: absolute;
     background: $blueGradient;
     transition: $transitionBg;
+    z-index: 2;
+
+    &:before {
+      border-radius: inherit;
+      background: #2d6fd0;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      z-index: -100;
+      transition: opacity 0.3s;
+    }
 
     svg {
       @include sizes(32px, 32px);
     }
 
-    &:hover {
-      background: $bluePrimary;
+    @media screen and (min-width: $tablet) {
+      &:not(:disabled):hover::before {
+        opacity: 1;
+      }
     }
   }
 

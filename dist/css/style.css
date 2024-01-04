@@ -2636,8 +2636,6 @@ fieldset {
 
 .subtitle {
   color: #ffffff;
-  -webkit-hyphens: auto;
-          hyphens: auto;
 }
 
 .hidden {
@@ -2666,12 +2664,14 @@ fieldset {
   border-radius: 4px;
   width: -moz-fit-content;
   width: fit-content;
-  transition: background 0.4s ease, border 0.4s ease;
+  transition: background 0.2s ease, border 0.2s ease;
   padding: 16px 32px;
+  position: relative;
+  z-index: 2;
 }
 
 .btn span {
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .btn svg {
@@ -2700,6 +2700,21 @@ fieldset {
 
 .btn-def {
   background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+}
+
+.btn-def:before {
+  border-radius: inherit;
+  background: #2d6fd0;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  transition: opacity 0.3s;
 }
 
 .btn-def span {
@@ -2811,6 +2826,25 @@ fieldset {
   color: #1d49a0;
 }
 
+.slider-navigation--rel {
+  position: static;
+}
+
+.slider-navigation--rel .slider-navigation__btns {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.slider-navigation--rel .slider-navigation__btns-next,
+.slider-navigation--rel .slider-navigation__btns-prev {
+  background: #ffffff;
+  border-color: none;
+}
+
+.slider-navigation--rel svg {
+  stroke: #2f2f2f;
+}
+
 .slider-navigation {
   -moz-column-gap: 32px;
        column-gap: 32px;
@@ -2836,12 +2870,32 @@ fieldset {
   border-radius: 4px;
   border: 1px solid #ffffff;
   padding: 8px;
+  transition: opacity 0.2s ease, background 0.2s ease, border 0.2s ease;
 }
 
 .slider-navigation__btns-next img,
 .slider-navigation__btns-prev img {
   width: 24px;
   height: 24px;
+}
+
+.slider-navigation__btns-next svg,
+.slider-navigation__btns-prev svg {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.slider-navigation__btns-next:hover,
+.slider-navigation__btns-prev:hover {
+  background: #2d6fd0;
+  border-color: #2d6fd0;
+}
+
+.slider-navigation__btns-next:hover svg,
+.slider-navigation__btns-prev:hover svg {
+  fill: #ffffff;
+  stroke: #ffffff;
 }
 
 .slider-navigation__fraction {
@@ -2864,21 +2918,6 @@ fieldset {
   font-weight: 600;
 }
 
-.slider-navigation--rel {
-  position: static;
-}
-
-.slider-navigation--rel .slider-navigation__btns {
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-
-.slider-navigation--rel .slider-navigation__btns-next,
-.slider-navigation--rel .slider-navigation__btns-prev {
-  background-color: #ffffff;
-  border-color: none;
-}
-
 .input__head {
   margin-bottom: 7px;
   color: #2f2f2f;
@@ -2886,7 +2925,7 @@ fieldset {
 
 .input__hint {
   color: #858c95;
-  transition: color 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease, visibility 0.4s ease, margin 0.4s easy;
+  transition: color 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease, visibility 0.2s ease, margin 0.2s easy;
   height: 0;
   margin-top: 0;
 }
@@ -2900,7 +2939,7 @@ fieldset {
        column-gap: 8px;
   border-radius: 4px;
   border: 1px solid #dee2e7;
-  transition: border 0.4s ease, box-shadow 0.4s ease;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
 .input__input button {
@@ -2911,17 +2950,17 @@ fieldset {
 
 .input__input button svg {
   stroke: #858c95;
-  transition: stroke 0.4s ease;
+  transition: stroke 0.2s ease;
 }
 
 .input__input input::-moz-placeholder {
-  -moz-transition: color 0.4s ease;
-  transition: color 0.4s ease;
+  -moz-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .input__input input,
 .input__input input::placeholder {
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .input__input input {
@@ -3028,7 +3067,7 @@ fieldset {
        column-gap: 8px;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: border 0.4s ease;
+  transition: border 0.2s ease;
 }
 
 .input-labels .input__item input {
@@ -3055,12 +3094,12 @@ fieldset {
 
 .input-labels .input__item svg use {
   stroke: #2f2f2f;
-  transition: stroke 0.4s ease;
+  transition: stroke 0.2s ease;
 }
 
 .input-labels .input__item span {
   cursor: pointer;
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .input-labels .input__item.active {
@@ -3129,14 +3168,14 @@ fieldset {
 }
 
 .dropdown__btn {
-  transition: transform 0.4s ease;
+  transition: transform 0.2s ease;
   width: 20px;
   height: 20px;
 }
 
 .dropdown__btn svg {
   stroke: #858c95;
-  transition: transform 0.4s ease;
+  transition: transform 0.2s ease;
 }
 
 .dropdown__headline {
@@ -3144,7 +3183,7 @@ fieldset {
 }
 
 .dropdown__header {
-  transition: border 0.4s ease, box-shadow 0.4s ease, border-radius 0.4s ease;
+  transition: border 0.2s ease, box-shadow 0.2s ease, border-radius 0.2s ease;
 }
 
 .dropdown__content {
@@ -3191,7 +3230,7 @@ fieldset {
 }
 
 .dropdown__item label {
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -3202,7 +3241,7 @@ fieldset {
 
 .dropdown__value {
   color: #858c95;
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .dropdown.--active .dropdown__content {
@@ -3258,12 +3297,16 @@ fieldset {
   width: 100%;
 }
 
-.dropdown-sec .dropdown__content {
-  border-radius: 1px;
+.dropdown-sec .dropdown__header:hover .dropdown__value {
+  color: #2d6fd0;
 }
 
-.dropdown-sec.active .dropdown__value {
-  color: #2f2f2f;
+.dropdown-sec .dropdown__header:hover svg path {
+  stroke: #2d6fd0;
+}
+
+.dropdown-sec .dropdown__content {
+  border-radius: 1px;
 }
 
 .textarea {
@@ -3278,8 +3321,8 @@ fieldset {
 .textarea__hint {
   margin-top: 8px;
   color: #858c95;
-  transition: color 0.4s ease;
-  transition: color 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease, visibility 0.4s ease, margin 0.4s easy;
+  transition: color 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease, visibility 0.2s ease, margin 0.2s easy;
   margin-top: 0;
   height: 0;
 }
@@ -3295,17 +3338,17 @@ fieldset {
        column-gap: 8px;
   border-radius: 4px;
   border: 1px solid #dee2e7;
-  transition: border 0.4s ease, box-shadow 0.4s ease;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
 .textarea__textarea textarea::-moz-placeholder {
-  -moz-transition: color 0.4s ease;
-  transition: color 0.4s ease;
+  -moz-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .textarea__textarea textarea,
 .textarea__textarea textarea::placeholder {
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .textarea__textarea textarea {
@@ -3761,7 +3804,7 @@ fieldset {
   border: 1px solid #dee2e7;
   background: #ffffff;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
-  transition: border 0.4s ease;
+  transition: border 0.2s ease;
 }
 
 .pagination__btn span {
@@ -3769,14 +3812,14 @@ fieldset {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .pagination__btn svg {
   width: 16px;
   height: 16px;
   stroke: #858c95;
-  transition: stroke 0.4s ease;
+  transition: stroke 0.2s ease;
 }
 
 .pagination__btn.--active {
@@ -3787,16 +3830,16 @@ fieldset {
   color: #ffffff;
 }
 
-.pagination__btn:hover {
-  border-color: #2f2f2f;
+.pagination__btn:not(div):not(.--active):hover {
+  border-color: #2d6fd0;
 }
 
-.pagination__btn:hover svg {
-  stroke: #2f2f2f;
+.pagination__btn:not(div):not(.--active):hover svg {
+  stroke: #2d6fd0;
 }
 
-.pagination__btn:hover span {
-  color: #2f2f2f;
+.pagination__btn:not(div):not(.--active):hover span {
+  color: #2d6fd0;
 }
 
 .pagination div {
@@ -3936,9 +3979,9 @@ fieldset {
 
 .article-content a {
   color: #2d6fd0;
-  transition: -webkit-text-decoration 0.4s ease;
-  transition: text-decoration 0.4s ease;
-  transition: text-decoration 0.4s ease, -webkit-text-decoration 0.4s ease;
+  transition: -webkit-text-decoration 0.2s ease;
+  transition: text-decoration 0.2s ease;
+  transition: text-decoration 0.2s ease, -webkit-text-decoration 0.2s ease;
 }
 
 .article-content a:hover {
@@ -3956,7 +3999,7 @@ fieldset {
   -moz-column-gap: 16px;
        column-gap: 16px;
   cursor: pointer;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.2s ease;
 }
 
 .doc-download__item:hover {
@@ -3979,7 +4022,7 @@ fieldset {
 
 .doc-download__item-icon svg use {
   stroke: #2d6fd0;
-  transition: stroke 0.4s ease;
+  transition: stroke 0.2s ease;
 }
 
 .doc-download__item-name {
@@ -3991,7 +4034,7 @@ fieldset {
   font-size: 16px;
   font-weight: 500;
   line-height: 130%;
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .list-per__title {
@@ -4018,7 +4061,7 @@ fieldset {
   color: #2d6fd0;
   text-align: center;
   height: 90px;
-  transition: color 0.4s ease, background-color 0.4s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .list-per__item:hover {
@@ -4042,7 +4085,7 @@ fieldset {
 }
 
 .form-search.show {
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .form-search__input {
@@ -4228,7 +4271,7 @@ fieldset {
   line-height: 24px;
   letter-spacing: -0.16px;
   color: #858c95;
-  transition: color 0.4s ease, background-color 0.4s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .fieldset-numbers__number svg {
@@ -4259,7 +4302,7 @@ fieldset {
   border-radius: var(--Main-System-4px, 4px);
   background: rgba(0, 0, 0, 0.4);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .zoom-show::after {
@@ -4273,7 +4316,7 @@ fieldset {
   flex-shrink: 0;
   background-image: url(../assets/img/icons/zoom-light.svg);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .map__titles {
@@ -4359,7 +4402,7 @@ fieldset {
   font-weight: 600;
   line-height: 140%;
   border-bottom: 1px solid #fff;
-  transition: border 0.4s ease;
+  transition: border 0.2s ease;
 }
 
 .map__item-link:hover {
@@ -4375,7 +4418,7 @@ fieldset {
 }
 
 .footer a {
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .footer a:hover {
@@ -4447,7 +4490,7 @@ fieldset {
 
 .footer__list-title svg {
   display: none;
-  transition: transform 0.4s ease;
+  transition: transform 0.2s ease;
 }
 
 .footer__list-title:not(:first-child) {
@@ -4831,7 +4874,7 @@ fieldset {
 .modal-write__btns-desc a {
   color: #2d6fd0;
   border-bottom: 1px solid;
-  transition: border 0.4s ease, color 0.4s ease;
+  transition: border 0.2s ease, color 0.2s ease;
 }
 
 .modal-write__btns-desc a:hover {
@@ -4854,14 +4897,14 @@ fieldset {
 .header {
   background-color: #ffffff;
   z-index: 10;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.2s ease;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   display: block;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .header.active {
@@ -4892,25 +4935,25 @@ fieldset {
 }
 
 .header svg {
-  transition: transform 0.4s ease;
+  transition: transform 0.2s ease;
 }
 
 .header svg use,
 .header svg path {
   stroke: #2f2f2f;
-  transition: stroke 0.4s ease, fill 0.4s ease;
+  transition: stroke 0.2s ease, fill 0.2s ease;
 }
 
 .header a,
 .header p {
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
   flex-shrink: 0;
 }
 
 .header button:not(.dropdown__btn):hover,
 .header a:not(.header-top__social):hover {
   color: #2661d4;
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .header button:not(.dropdown__btn):hover p,
@@ -4935,6 +4978,22 @@ fieldset {
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
+}
+
+.header-top__btns-button span {
+  transition: color 0.2s ease;
+}
+
+.header-top__btns-button svg {
+  transition: stroke 0.2s ease;
+}
+
+.header-top__btns-button:hover span {
+  color: #2d6fd0;
+}
+
+.header-top__btns-button:hover svg use {
+  stroke: #2d6fd0;
 }
 
 .header-top,
@@ -5042,7 +5101,7 @@ fieldset {
 .header-top__dropdown .dropdown__content {
   width: auto;
   height: auto;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 
 .header-top__dropdown .dropdown__value {
@@ -5124,7 +5183,7 @@ fieldset {
 }
 
 .header-bottom__list-menu {
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
   position: absolute;
   flex-direction: column;
   align-items: flex-start;
@@ -5153,7 +5212,7 @@ fieldset {
 }
 
 .header-bottom__menu {
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .header-bottom__links,
@@ -5229,6 +5288,26 @@ fieldset {
 
 .header--transparent input::placeholder {
   color: #ffffff;
+}
+
+.header--transparent .header-top__btns-button:hover span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header--transparent .header-top__btns-button:hover svg use {
+  stroke: rgba(255, 255, 255, 0.6);
+}
+
+.header--transparent .dropdown__item:last-child {
+  padding-bottom: 10px;
+}
+
+.header--transparent .dropdown__header:hover .dropdown__value {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header--transparent .dropdown__header:hover svg path {
+  stroke: rgba(255, 255, 255, 0.6);
 }
 
 .header--transparent * {
@@ -5671,7 +5750,7 @@ fieldset {
 
 .ask-question__text a {
   color: #2d6fd0;
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .ask-question__text a:hover {
@@ -5928,7 +6007,7 @@ fieldset {
        column-gap: 8px;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: border 0.4s ease;
+  transition: border 0.2s ease;
 }
 
 .calculator__item input {
@@ -5955,7 +6034,7 @@ fieldset {
 
 .calculator__item svg use {
   stroke: #2f2f2f;
-  transition: stroke 0.4s ease;
+  transition: stroke 0.2s ease;
 }
 
 .calculator__item span {
@@ -5963,7 +6042,7 @@ fieldset {
   font-weight: 500;
   line-height: 140%;
   cursor: pointer;
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .calculator__item.active {
@@ -6008,7 +6087,7 @@ fieldset {
 [class*=controls__toolbar],
 [class*=controls__bottom] {
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .legislation__contents {
@@ -6101,7 +6180,7 @@ fieldset {
   font-size: 16px;
   font-weight: 500;
   line-height: 130%;
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .legislation__item-btn a:hover {
@@ -6265,13 +6344,13 @@ fieldset {
   position: absolute;
   top: calc(50% - 5.5px);
   left: calc(50% - 5.5px);
-  transition: opacity 0.4s ease, opacity 0.4s ease;
+  transition: opacity 0.2s ease, opacity 0.2s ease;
 }
 
 .steps-investor__item-title {
   -moz-column-gap: 20px;
        column-gap: 20px;
-  transition: padding 0.4s ease;
+  transition: padding 0.2s ease;
   max-width: 90%;
 }
 
@@ -6286,7 +6365,7 @@ fieldset {
 .steps-investor__item-content {
   padding-left: 48px;
   height: 0;
-  transition: visibility 0.4s ease, opacity 0.4s ease, height 0.4s ease, padding 0.4s ease;
+  transition: visibility 0.2s ease, opacity 0.2s ease, height 0.2s ease, padding 0.2s ease;
 }
 
 .steps-investor__item-but {
@@ -6350,7 +6429,7 @@ fieldset {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.52) 50.63%, rgba(0, 0, 0, 0) 100%);
   opacity: 1;
   z-index: 2;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .benefits__swiper {
@@ -6434,7 +6513,7 @@ fieldset {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.52) 50.63%, rgba(0, 0, 0, 0) 100%);
   opacity: 1;
   z-index: 2;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .success-hist__slide-img {
@@ -6815,16 +6894,28 @@ fieldset {
   bottom: -125px;
   position: absolute;
   background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
-  transition: background 0.4s ease;
+  transition: background 0.2s ease;
+  z-index: 2;
+}
+
+.news__btn-modal:before {
+  border-radius: inherit;
+  background: #2d6fd0;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  transition: opacity 0.3s;
 }
 
 .news__btn-modal svg {
   width: 32px;
   height: 32px;
-}
-
-.news__btn-modal:hover {
-  background: #2d6fd0;
 }
 
 .news__card-content-text {
@@ -7384,7 +7475,7 @@ fieldset {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.2s ease;
 }
 
 .account__table-btn svg {
@@ -8110,7 +8201,7 @@ fieldset {
 }
 
 .municipality__map-item {
-  transition: fill 0.4s ease-in-out;
+  transition: fill 0.2s ease-in-out;
 }
 
 .municipality__map-item:hover {
@@ -8695,13 +8786,13 @@ fieldset {
   position: absolute;
   top: calc(50% - 5.5px);
   left: calc(50% - 5.5px);
-  transition: opacity 0.4s ease, opacity 0.4s ease;
+  transition: opacity 0.2s ease, opacity 0.2s ease;
 }
 
 .func-public-repres__item-title {
   -moz-column-gap: 20px;
        column-gap: 20px;
-  transition: padding 0.4s ease;
+  transition: padding 0.2s ease;
   max-width: 90%;
 }
 
@@ -8716,7 +8807,7 @@ fieldset {
 .func-public-repres__item-content {
   padding-left: 48px;
   height: 0;
-  transition: visibility 0.4s ease, opacity 0.4s ease, height 0.4s ease, padding 0.4s ease;
+  transition: visibility 0.2s ease, opacity 0.2s ease, height 0.2s ease, padding 0.2s ease;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
@@ -10207,13 +10298,13 @@ fieldset {
   position: absolute;
   top: calc(50% - 5.5px);
   left: calc(50% - 5.5px);
-  transition: opacity 0.4s ease, opacity 0.4s ease;
+  transition: opacity 0.2s ease, opacity 0.2s ease;
 }
 
 .subsidies__item-title {
   -moz-column-gap: 20px;
        column-gap: 20px;
-  transition: padding 0.4s ease;
+  transition: padding 0.2s ease;
   max-width: 90%;
 }
 
@@ -10228,7 +10319,7 @@ fieldset {
 .subsidies__item-content {
   padding-left: 48px;
   height: 0;
-  transition: visibility 0.4s ease, opacity 0.4s ease, height 0.4s ease, padding 0.4s ease;
+  transition: visibility 0.2s ease, opacity 0.2s ease, height 0.2s ease, padding 0.2s ease;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
@@ -10537,13 +10628,13 @@ fieldset {
   position: absolute;
   top: calc(50% - 5.5px);
   left: calc(50% - 5.5px);
-  transition: opacity 0.4s ease, opacity 0.4s ease;
+  transition: opacity 0.2s ease, opacity 0.2s ease;
 }
 
 .calc-result__item-title {
   -moz-column-gap: 20px;
        column-gap: 20px;
-  transition: padding 0.4s ease;
+  transition: padding 0.2s ease;
   max-width: 96%;
 }
 
@@ -10558,7 +10649,7 @@ fieldset {
 .calc-result__item-content {
   padding-left: 48px;
   height: 0;
-  transition: visibility 0.4s ease, opacity 0.4s ease, height 0.4s ease, padding 0.4s ease;
+  transition: visibility 0.2s ease, opacity 0.2s ease, height 0.2s ease, padding 0.2s ease;
   row-gap: 40px;
 }
 
@@ -11760,7 +11851,7 @@ fieldset {
   font-size: 20px;
   font-weight: 600;
   line-height: 130%;
-  transition: color 0.4s ease;
+  transition: color 0.2s ease;
 }
 
 .ppp-other-projects__link:hover {
@@ -13157,8 +13248,8 @@ fieldset {
 }
 
 @media screen and (min-width: 1365px) {
-  .btn-def:not(:disabled):hover {
-    background: #2d6fd0;
+  .btn-def:not(:disabled):hover::before {
+    opacity: 1;
   }
 
   .btn-def--white:not(:disabled):hover {
@@ -13201,6 +13292,10 @@ fieldset {
 
   .account-menu__item.active {
     background-color: #e8f0ff;
+  }
+
+  .news__btn-modal:not(:disabled):hover::before {
+    opacity: 1;
   }
 }
 
@@ -14281,11 +14376,6 @@ fieldset {
 
   .social-infr__block {
     width: 380px;
-  }
-
-  .social-infr__items li {
-    -webkit-hyphens: auto;
-            hyphens: auto;
   }
 
   .social-infr__tit {
@@ -15382,13 +15472,13 @@ fieldset {
     row-gap: 12px;
     padding-top: 0;
     height: 0;
-    transition: visibility 0.4s ease, opacity 0.4s ease, height 0.4s ease, padding 0.4s ease;
+    transition: visibility 0.2s ease, opacity 0.2s ease, height 0.2s ease, padding 0.2s ease;
     overflow: hidden;
     opacity: 0;
   }
 
   .footer__list-title {
-    transition: padding 0.4s ease;
+    transition: padding 0.2s ease;
   }
 
   .footer__list-title svg {
@@ -15587,7 +15677,7 @@ fieldset {
     flex-direction: column;
     overflow: scroll;
     transform: translateX(-100%);
-    transition: transform 0.4s ease;
+    transition: transform 0.2s ease;
   }
 
   .account-menu.active {
@@ -17097,9 +17187,8 @@ fieldset {
   }
 
   .social-infr__items li {
-    width: -webkit-fill-available;
-    -webkit-hyphens: none;
-            hyphens: none;
+    -webkit-hyphens: auto;
+            hyphens: auto;
   }
 
   .social-infr__tit {
@@ -18948,8 +19037,6 @@ fieldset {
   .regional-project__title,
   .subtitle {
     font-size: 32px;
-    -webkit-hyphens: auto;
-            hyphens: auto;
   }
 
   .territory-develop__records-name,
@@ -19232,8 +19319,6 @@ fieldset {
   .list-templates__title,
   .map__title {
     font-size: 24px;
-    -webkit-hyphens: auto;
-            hyphens: auto;
   }
 
   .investor-scheme__icon,
@@ -19942,7 +20027,7 @@ fieldset {
   }
 
   .calculator__item {
-    transition: opacity 0.4s ease, height 0.4s ease, visibility 0.4s ease;
+    transition: opacity 0.2s ease, height 0.2s ease, visibility 0.2s ease;
   }
 
   .calculator__item span {
@@ -20044,7 +20129,7 @@ fieldset {
 
   .steps-investor__item-tit {
     font-size: 20px;
-    transition: font-size 0.4s ease;
+    transition: font-size 0.2s ease;
   }
 
   .steps-investor__item-content {
@@ -21054,11 +21139,6 @@ fieldset {
   .social-infr__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .social-infr__items li {
-    -webkit-hyphens: auto;
-            hyphens: auto;
   }
 
   .labor-resources__picture .picture-text__content {
@@ -22588,6 +22668,121 @@ fieldset {
   .header-top__container {
     -moz-column-gap: 16px;
          column-gap: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .article__title-h1,
+  .news-page__title-h1,
+  .photo-report__title-h1,
+  .media-materials__title-h1,
+  .events-page__title-h1,
+  .events__title-h1,
+  .contests-page__title-h1,
+  .contests__title-h1,
+  .investor-desc__title,
+  .territory-develop__title-h1,
+  .technopark__title-h1,
+  .economic-zone__title-h1,
+  .area-objects__title-h1,
+  .ppp-project__title,
+  .ppp-other-projects__title,
+  .ppp-consulation__title,
+  .ppp-measures__title,
+  .ppp-contacts__title,
+  .ppp-register__title,
+  .ppp-proposals__title,
+  .ppp-projects__title,
+  .monitoring-request__title,
+  .call-line__title,
+  .contacts__title,
+  .corp-bonds__title,
+  .presentation-materials__title,
+  .privacy-police__title,
+  .tax-benefits__title,
+  .invest-contract__title,
+  .support-infr__title,
+  .invest-agrement__title,
+  .subsidies__title,
+  .industrial-park__title-h1,
+  .pref-territories__title-h1,
+  .reestr__title-h1,
+  .offer-area__title-h1,
+  .single-window__title,
+  .personnel__title,
+  .invest-tourism__title,
+  .infr-plan__title,
+  .polls__title,
+  .dev-corporation__title,
+  .implement-projects__title,
+  .plan-projec__title,
+  .region-statistics__title,
+  .club-strategic__title,
+  .regional-standart__title,
+  .invest-committee__title-h1,
+  .result-years__title,
+  .soceconomic-develop__title,
+  .regional-project__title,
+  .subtitle {
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .article-other__title-h2,
+  .events-page-other__title-h2,
+  .contests-page-doc__title-h2,
+  .investor-appl__desc-title,
+  .investor-scheme__title,
+  .ppp-project-geografy__title,
+  .ppp-project-financial__title,
+  .ppp-stages__title,
+  .ppp-project-blocks__title,
+  .ppp-partner__title,
+  .ppp-scheme__title,
+  .ppp-implementation__title,
+  .ppp-assistance__title,
+  .ppp-tax__title,
+  .useful-links__title,
+  .region-team__title,
+  .bonds__title,
+  .tax-blocks__title,
+  .calc-result__title,
+  .scheme-inter__title,
+  .ao-dev-cor__title,
+  .ao-dev-corp__title,
+  .contacts-corp__title,
+  .promising-direc__title,
+  .availability-stock__title,
+  .agriculture__title,
+  .leading-compains__title,
+  .inf-tech__title,
+  .region-indystry__title,
+  .scientific-potential__title,
+  .social-infr__title,
+  .fertile-land__title,
+  .func-public-repres__title,
+  .public-representative__title,
+  .main-direction__title,
+  .task-clubs__title,
+  .strategy-grafic__title,
+  .tourism-potential__title,
+  .priorities__title,
+  .strategic-priority__title,
+  .invest-com__title,
+  .org-invest__title,
+  .invest-decl__title,
+  .regul-committee__title-h2,
+  .list-doc__title,
+  .picture-text__title,
+  .list-templates__title,
+  .map__title {
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .subtitle {
+    -webkit-hyphens: auto;
+            hyphens: auto;
   }
 }
 

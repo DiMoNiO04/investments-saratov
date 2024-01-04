@@ -13,50 +13,6 @@
     column-gap: 20px;
     row-gap: 20px;
   }
-
-  // &__item {
-  //   border-radius: 4px;
-  //   background-color: $white;
-  //   padding: 20px;
-  //   @extend %flexCenterStart;
-  //   column-gap: 16px;
-  //   cursor: pointer;
-
-  //   &:hover {
-  //     background-color: $bluePrimary;
-
-  //     .result-years__item-icon {
-  //       svg {
-  //         use {
-  //           stroke: $white;
-  //         }
-  //       }
-  //     }
-
-  //     .result-years__item-link {
-  //       color: $white;
-  //     }
-  //   }
-
-  //   &-icon {
-  //     width: 40px;
-  //     height: 40px;
-  //     flex-shrink: 0;
-
-  //     svg {
-  //       use {
-  //         stroke: $bluePrimary;
-  //       }
-  //     }
-  //   }
-
-  //   &-name {
-  //     color: $bluePrimary;
-  //     font-size: 16px;
-  //     font-weight: 500;
-  //     line-height: 130%;
-  //   }
-  // }
 }
 
 @media screen and (max-width: $laptop) {

@@ -60,12 +60,6 @@
       width: 380px;
     }
 
-    &__items {
-      li {
-        hyphens: auto;
-      }
-    }
-
     &__tit {
       min-height: 93px;
     }
@@ -95,8 +89,7 @@
       justify-content: space-between;
 
       li {
-        width: -webkit-fill-available;
-        hyphens: none;
+        hyphens: auto;
       }
     }
 
@@ -127,10 +120,6 @@
     &__items {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-
-      li {
-        hyphens: auto;
-      }
     }
   }
 }
