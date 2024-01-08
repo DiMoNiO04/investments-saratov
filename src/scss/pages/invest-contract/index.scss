@@ -9,6 +9,11 @@
     max-width: 1200px;
   }
 
+  &__contents {
+    @extend %flexColumn;
+    row-gap: 60px;
+  }
+
   &__txts {
     @extend %gridColumnTwo;
     grid-gap: 20px;
@@ -115,6 +120,10 @@
       row-gap: 32px;
     }
 
+    &__contents {
+      row-gap: 32px;
+    }
+
     &__txts {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -140,7 +149,7 @@
     }
 
     &__lists-block {
-      row-gap: 20px;
+      row-gap: 32px;
     }
 
     &__lists-title,

@@ -31,15 +31,11 @@
   }
 
   &__img {
-    @include sizes(100%, 100%);
+    @include sizes(100%, auto);
     position: absolute;
     z-index: -2;
     bottom: 20px;
     left: 0;
-
-    img {
-      object-fit: cover;
-    }
   }
 }
 
@@ -51,7 +47,6 @@
     &__img {
       @include sizes(1920px, 400px);
       bottom: -10px;
-      left: -100px;
     }
   }
 }
@@ -82,8 +77,8 @@
     }
 
     &__img {
-      bottom: 0;
-      left: -546px;
+      bottom: 32px;
+      left: -549px;
     }
   }
 }

@@ -35,16 +35,18 @@
     }
   }
 
-  &__btn:not(div):not(.--active) {
-    &:hover {
-      border-color: $bluePrimary;
+  @media screen and (min-width: $tablet) {
+    &__btn:not(div):not(.--active) {
+      &:hover {
+        border-color: $bluePrimary;
 
-      svg {
-        stroke: $bluePrimary;
-      }
+        svg {
+          stroke: $bluePrimary;
+        }
 
-      span {
-        color: $bluePrimary;
+        span {
+          color: $bluePrimary;
+        }
       }
     }
   }

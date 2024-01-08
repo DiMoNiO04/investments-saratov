@@ -58,13 +58,21 @@
     &__items {
       grid-template-columns: repeat(1, 1fr);
     }
+
+    &__item-name {
+      @include croppingText(inherit);
+    }
   }
 }
 
 @media screen and (max-width: $mob) {
   .doc-download {
+    &__item {
+      align-items: flex-start;
+    }
+
     &__item-name {
-      @include croppingText(inherit);
+      margin: auto 0;
     }
   }
 }

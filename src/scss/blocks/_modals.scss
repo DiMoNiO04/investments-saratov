@@ -83,18 +83,6 @@
     line-height: 130%;
   }
 
-  &__close {
-    svg {
-      fill: $greyTxt;
-    }
-
-    &:hover {
-      svg {
-        fill: $black;
-      }
-    }
-  }
-
   &__btns {
     @extend %flexCenter;
     column-gap: 16px;
@@ -109,7 +97,7 @@
   }
 
   &__wrapper {
-    max-height: 78vh;
+    max-height: 90vh;
     padding: 0 60px 60px 60px;
 
     .simplebar-content {
@@ -477,6 +465,8 @@
     width: 85%;
 
     &__wrapper {
+      max-height: 78vh;
+
       .simplebar-content {
         row-gap: 32px;
       }

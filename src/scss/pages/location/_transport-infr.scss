@@ -86,8 +86,8 @@
       @include sizes(100%, 2px);
       background-color: #dee2e7;
       display: block;
-      top: 86px;
-      left: 28px;
+      top: 89px;
+      left: 30px;
     }
 
     &:not(:last-child) {
@@ -166,7 +166,6 @@
     &__block {
       &:nth-child(1) {
         width: 100%;
-        order: 1;
         min-height: 324px;
 
         .transport-inf__block-img {
@@ -284,14 +283,6 @@
     }
 
     &__block {
-      &:nth-child(2) {
-        order: -1;
-      }
-
-      &:nth-child(1) {
-        order: 0;
-      }
-
       &:nth-child(n) {
         min-height: 100%;
       }
@@ -307,21 +298,7 @@
       }
 
       &:nth-child(3) {
-        background-color: $white;
-        padding: 24px 20px;
-
-        .transport-inf__block-desc {
-          position: static;
-        }
-
-        .transport-inf__block-img {
-          display: none;
-        }
-
-        .transport-inf__block-title,
-        .transport-inf__block-txt {
-          color: $black;
-        }
+        height: 436px;
       }
     }
 

@@ -43,8 +43,6 @@
   }
 
   &__text {
-    justify-self: end;
-    text-align: center;
     color: $black;
     max-width: 760px;
     @extend %mainTxt;

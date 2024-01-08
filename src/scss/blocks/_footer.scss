@@ -51,8 +51,17 @@
       @extend %flexCenterStart;
       column-gap: 20px;
 
+      svg {
+        fill: $white;
+        transition: $transitionFill;
+      }
+
       a {
         @include sizes(32px, 32px);
+
+        &:hover svg use {
+          fill: $bluePrimary;
+        }
       }
     }
   }

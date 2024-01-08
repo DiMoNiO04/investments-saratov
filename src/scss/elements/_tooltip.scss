@@ -1,5 +1,4 @@
 .tooltip {
-  @include sizes(166px, 40px);
   position: fixed;
   padding: 8px 12px 12px 12px;
   border-radius: 4px;
@@ -7,18 +6,21 @@
   background-image: url('../assets/img/icons/tooltip.svg');
   background-repeat: no-repeat;
   background-size: auto;
-  width: 166px;
-  height: 40px;
+  width: 192px;
+  height: 42px;
   font-size: 14px;
   font-weight: 500;
   line-height: 130%;
+  margin-top: 4px;
 }
 
 .tippy-content {
   font-size: 14px;
   line-height: 130%;
+  font-weight: 500;
   color: $black;
   padding: 0;
+  text-align: center;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
@@ -27,6 +29,7 @@
   border: 1px solid $inputGreyStroke;
   background-color: white;
   padding: 12px;
+  min-width: 245px;
 }
 
 @media screen and (max-width: $tablet) {

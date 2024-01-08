@@ -203,9 +203,51 @@
   }
 }
 
+.btn-widget {
+  @extend %flexCenter;
+  @include sizes(60px, 60px);
+  border-radius: 50%;
+  right: 60px;
+  bottom: 30px;
+  position: fixed;
+  background: $blueGradient;
+  transition: $transitionBg;
+  z-index: 2;
+
+  &:before {
+    border-radius: inherit;
+    background: #2d6fd0;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity 0.3s;
+  }
+
+  svg {
+    @include sizes(32px, 32px);
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:not(:disabled):hover::before {
+      opacity: 1;
+    }
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .btn {
     padding: 11px 28px;
+  }
+
+  .btn-widget {
+    right: 40px;
+    bottom: 20px;
   }
 }
 
@@ -216,5 +258,9 @@
     span {
       font-size: 16px;
     }
+  }
+
+  .btn-widget {
+    display: none;
   }
 }

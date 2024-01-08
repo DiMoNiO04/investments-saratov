@@ -1,14 +1,14 @@
 <section class="section authentication">
   <div class="container">
     <div class="authentication__container">
-      <div class="authentication__content auth --active" data-content-block="auth">
+      <div class="authentication__content auth --active">
         <div class="authentication__btns">
-          <button type="button" class="--active" data-content-btn="auth">
+          <a href="#" class="--active">
             <span>Вход</span>
-          </button>
-          <button type="button" data-content-btn="reg">
+          </a>
+          <a href="#">
             <span>Регистрация</span>
-          </button>
+          </a>
         </div>
         <form class="auth__form" id="auth-form">
           <div class="auth__form-input input">
@@ -96,16 +96,16 @@
           </button>
         </form>
       </div>
-      <div class="authentication__content reg" data-content-block="reg">
+      <div class="authentication__content reg">
         <div class="reg__content">
           <form class="reg__content-form" id="reg-form">
             <div class="authentication__btns">
-              <button type="button" data-content-btn="auth">
+              <a href="#">
                 <span>Вход</span>
-              </button>
-              <button type="button" class="--active" data-content-btn="reg">
+              </a>
+              <a href="#">
                 <span>Регистрация</span>
-              </button>
+              </a>
             </div>
             <!--Если поля в fieldset заполнен корректно классу fieldset-numbers__number добавить класс --filled -->
             <div class="fieldset-numbers">
@@ -169,7 +169,7 @@
               <div class="reg__form-input input">
                 <div class="input__head">Фамилия*</div>
                 <div class="input__input">
-                  <input autocomplete="off" type="password" placeholder="Введите фамилию" />
+                  <input autocomplete="off" type="text" placeholder="Введите фамилию" />
                 </div>
                 <div class="input__hint">Error</div>
               </div>
@@ -195,11 +195,11 @@
                 <div class="input__hint">Error</div>
               </div>
               <div class="reg__content-btns">
-                <button type="button" class="btn btn-sec" data-subcontent-btn="reg-1">
-                  <span>Назад</span>
-                </button>
                 <button type="button" class="btn btn-def" data-subcontent-btn="reg-3">
                   <span>Продолжить</span>
+                </button>
+                <button type="button" class="btn btn-sec" data-subcontent-btn="reg-1">
+                  <span>Назад</span>
                 </button>
               </div>
             </fieldset>

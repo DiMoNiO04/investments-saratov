@@ -14,10 +14,12 @@
   }
 
   &__img {
-    flex: 0 0 630px;
+    @include sizes(603px, 100%);
+    flex-shrink: 0;
 
     img {
       object-fit: cover;
+      border-radius: 4px;
     }
   }
 
@@ -133,6 +135,8 @@
         content: '';
         background: url('../assets/img/icons/bullet.svg');
         flex-shrink: 0;
+        top: -1px;
+        position: relative;
       }
     }
   }
@@ -141,7 +145,7 @@
 @media screen and (max-width: $laptop) {
   .steps-investor {
     &__img {
-      flex: 0 0 480px;
+      @include sizes(480px, 717px);
     }
 
     &__item-content {

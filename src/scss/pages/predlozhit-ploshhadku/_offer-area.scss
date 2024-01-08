@@ -25,11 +25,16 @@
   &__image {
     @extend %imageCoverWidth;
     height: 700px;
+
+    img {
+      border-radius: 4px 0 0 4px;
+    }
   }
 
   &__content {
     padding: 50px 60px;
     background-color: $white;
+    border-radius: 0 4px 4px 0;
 
     .auth__form {
       @extend %flexColumn;
@@ -114,10 +119,15 @@
 
     &__image {
       height: 240px;
+
+      img {
+        border-radius: 4px 4px 0 0;
+      }
     }
 
     &__content {
       padding: 32px 16px;
+      border-radius: 0 0 4px 4px;
 
       .auth__form {
         row-gap: 32px;

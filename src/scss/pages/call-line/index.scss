@@ -10,6 +10,11 @@
     padding-right: 20px;
   }
 
+  &__form {
+    @extend %flexColumn;
+    justify-content: space-between;
+  }
+
   &__title {
     @extend %h2;
   }
@@ -40,7 +45,7 @@
   &__form {
     background-color: $white;
     border-radius: 0 4px 4px 0;
-    padding: 50px 60px;
+    padding: 60px;
     width: calc(50% - 10px);
   }
 
@@ -133,10 +138,15 @@
 
     &__form {
       padding: 32px 16px;
+      border-radius: 0 0 4px 4px;
     }
 
     &__img {
       @include sizes(100%, 240px);
+
+      img {
+        border-radius: 4px 4px 0 0;
+      }
     }
 
     &__btn {

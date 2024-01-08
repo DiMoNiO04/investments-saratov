@@ -91,11 +91,13 @@
 
     &__mores {
       grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: auto;
       row-gap: 20px;
     }
 
     &__more {
       padding: 24px;
+      justify-content: space-between;
     }
   }
 }
@@ -112,6 +114,10 @@
   .bonds {
     &__title {
       font-size: 32px;
+    }
+
+    &__more {
+      row-gap: 24px;
     }
   }
 }

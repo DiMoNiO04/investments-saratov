@@ -1,10 +1,12 @@
 function dragAreaDrops() {
   if (document.querySelector('.drag-area')) {
     const dragArea = document.querySelector('.drag-area');
-    const btnDrag = dragArea.querySelector('button');
+    const btnDrag = document.querySelector('.drag-area__btn');
     const inputDrag = dragArea.querySelector('input');
 
-    btnDrag.addEventListener('click', inputDrag.click());
+    btnDrag.addEventListener('click', () => {
+      inputDrag.click();
+    });
 
     dragArea.addEventListener('dragover', (event) => {
       event.preventDefault();

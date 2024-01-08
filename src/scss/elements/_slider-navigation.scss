@@ -51,14 +51,16 @@
       stroke-width: 2;
     }
 
-    &:hover {
-      svg {
-        fill: $white;
-        stroke: $white;
-      }
+    @media screen and (min-width: $tablet) {
+      &:hover {
+        svg {
+          fill: $white;
+          stroke: $white;
+        }
 
-      background: $bluePrimary;
-      border-color: $bluePrimary;
+        background: $bluePrimary;
+        border-color: $bluePrimary;
+      }
     }
   }
 

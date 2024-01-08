@@ -117,6 +117,7 @@ const agencyExpertNetwork = document.querySelector('[data-modal="agency-expert-n
 const bussinesIncubator = document.querySelector('[data-modal="bussines-incubator"]')
   ? new Modal('bussines-incubator')
   : null;
+const strongEconomy = document.querySelector('[data-modal="strong-economy"]') ? new Modal('strong-economy') : null;
 
 function renderModalInfrProject() {
   const btnsDescInfractureProject = document.querySelectorAll('[data-modal-el="desc-infracture-project"]');

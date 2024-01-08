@@ -40,6 +40,10 @@ main:not(.main-page) {
   padding-top: 160px;
 }
 
+.main-page {
+  position: relative;
+}
+
 @media screen and (max-width: $mob) {
   main:not(.main-page) {
     padding-top: 86px;

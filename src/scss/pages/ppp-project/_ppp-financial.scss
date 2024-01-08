@@ -126,6 +126,10 @@
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 16px;
 
+      li {
+        padding: 32px 24px;
+      }
+
       li:last-child {
         grid-column-start: auto;
         grid-column-end: auto;

@@ -101,3 +101,19 @@ if (docDownloadLinks && window.innerWidth > MOB) {
     });
   });
 }
+
+function tooltipSocial() {
+  const socialTooltips = document.querySelectorAll('.soceconomic-develop__item-tooltip');
+
+  if (socialTooltips) {
+    socialTooltips.forEach((socialTooltip) => {
+      tippy(socialTooltip, {
+        content: 'Характеристика',
+        theme: 'light',
+        arrow: false,
+      });
+    });
+  }
+}
+
+tooltipSocial();

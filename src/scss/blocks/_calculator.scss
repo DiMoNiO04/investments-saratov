@@ -172,18 +172,18 @@
     }
 
     &__blocks {
-      row-gap: 20px;
+      row-gap: 32px;
     }
 
     &__form {
       padding-left: 16px;
       padding-right: 16px;
-      row-gap: 30px;
+      row-gap: 32px;
     }
 
     &__block-radiobtns {
       flex-direction: column;
-      row-gap: 24px;
+      row-gap: 16px;
       align-items: flex-start;
     }
 

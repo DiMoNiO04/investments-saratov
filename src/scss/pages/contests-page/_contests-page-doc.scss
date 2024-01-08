@@ -16,3 +16,23 @@
     row-gap: 20px;
   }
 }
+
+@media screen and (max-width: $tablet) {
+  .contests-page-doc {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__head {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .contests-page-doc {
+    &__items {
+      row-gap: 16px;
+    }
+  }
+}
