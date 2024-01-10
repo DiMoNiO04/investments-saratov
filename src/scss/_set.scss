@@ -40,6 +40,19 @@ main:not(.main-page) {
   padding-top: 160px;
 }
 
+main.authentication-page,
+main.pers-cab-page {
+  padding-top: 168px;
+
+  @media screen and (max-width: $laptop) {
+    padding-top: 148px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding-top: 128px;
+  }
+}
+
 .main-page {
   position: relative;
 }
@@ -47,6 +60,14 @@ main:not(.main-page) {
 @media screen and (max-width: $mob) {
   main:not(.main-page) {
     padding-top: 86px;
+  }
+
+  main.authentication-page {
+    padding-top: 110px;
+  }
+
+  main.pers-cab-page {
+    padding-top: 120px;
   }
 }
 

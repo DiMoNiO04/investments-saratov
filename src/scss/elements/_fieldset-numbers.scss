@@ -20,7 +20,7 @@
       .fieldset-numbers__number {
         background: $blueGradient;
         color: $white;
-        border-color: transparent;
+        border: none;
       }
 
       svg line {
@@ -32,7 +32,7 @@
       .fieldset-numbers__number {
         background: $blueGradient;
         color: $white;
-        border-color: transparent;
+        border: none;
 
         svg {
           display: block;
@@ -45,7 +45,7 @@
     }
 
     svg {
-      width: 100%;
+      max-width: 100%;
     }
   }
 
@@ -72,6 +72,38 @@
   }
 }
 
+.fieldset-numbers--appl {
+  column-gap: 7px;
+
+  .fieldset-numbers__block svg {
+    max-width: 36px;
+  }
+
+  .fieldset-numbers {
+    &__block {
+      column-gap: 7px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .fieldset-numbers--appl {
+    .fieldset-numbers__block {
+      svg {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .fieldset-numbers {
+    column-gap: 7px;
+
+    &__block {
+      column-gap: 7px;
+    }
+  }
+}
+
 @media screen and (max-width: $mob) {
   .fieldset-numbers--appl {
     flex-wrap: wrap;
@@ -82,7 +114,7 @@
     .fieldset-numbers {
       &__block {
         &:not(:first-child) {
-          width: calc(100% / 4 - 6px);
+          width: calc(100% / 4 - 7px);
         }
       }
     }

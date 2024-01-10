@@ -20,7 +20,17 @@
 
     ul > li {
       font-size: 16px;
-      padding-left: 36px;
+
+      p {
+        @extend %flexColumn;
+        row-gap: 4px;
+        font-size: 16px;
+
+        b {
+          color: $black;
+          font-size: 20px;
+        }
+      }
     }
   }
 
@@ -31,6 +41,10 @@
   .content {
     ul > li {
       margin: 0;
+
+      &::before {
+        top: 2px;
+      }
     }
 
     ul {
@@ -59,6 +73,18 @@
 
     &--four {
       @extend %gridColumnFour;
+    }
+  }
+
+  &__lists {
+    .content {
+      ul > li {
+        margin: 0;
+
+        &::before {
+          top: 4px;
+        }
+      }
     }
   }
 
@@ -111,6 +137,33 @@
     &__blocks-item {
       padding: 24px;
     }
+
+    &__txts {
+      ul > li {
+        p {
+          b {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .content {
+      ul > li {
+        &::before {
+          top: 0.5px;
+        }
+      }
+    }
+    &__lists {
+      .content {
+        ul > li {
+          &::before {
+            top: 2px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -156,6 +209,20 @@
     &__blocks-title {
       line-height: 120%;
     }
+
+    .content ul > li::before {
+      top: -0.5px;
+    }
+
+    &__lists {
+      .content {
+        ul > li {
+          &::before {
+            top: 2px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -176,6 +243,16 @@
 
     &__lists-list {
       row-gap: 16px;
+    }
+
+    &__lists {
+      .content {
+        ul > li {
+          &::before {
+            top: 0.5px;
+          }
+        }
+      }
     }
   }
 }

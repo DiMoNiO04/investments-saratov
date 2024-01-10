@@ -34,7 +34,7 @@
       }
 
       .scheme-inter__block-list li::before {
-        background-color: $white;
+        background: url('../assets/img/icons/bullet-big-white.svg');
       }
     }
   }
@@ -60,6 +60,9 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+    &::before {
+      top: 0;
     }
   }
 }

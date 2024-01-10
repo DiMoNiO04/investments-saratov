@@ -14,7 +14,7 @@
   }
 
   &__img {
-    @include sizes(603px, 100%);
+    @include sizes(603px, 700px);
     flex-shrink: 0;
 
     img {
@@ -61,17 +61,17 @@
   &__item-btn {
     @include sizes(32px, 32px);
     border-radius: 4px;
-    border: 1.4px solid $bluePrimary;
+    border: 1.8px solid $bluePrimary;
     padding: 10px;
     position: absolute;
     top: 40px;
     right: 32px;
 
     svg {
-      @include sizes(11px, 11px);
+      @include sizes(12.4px, 12.4px);
       position: absolute;
-      top: calc(50% - 11px / 2);
-      left: calc(50% - 11px / 2);
+      top: calc(50% - 12.4px / 2);
+      left: calc(50% - 12.4px / 2);
       transition: $transitionOpacity, $transitionOpacity;
 
       &:first-child {
@@ -178,10 +178,6 @@
       line-height: 120%;
     }
 
-    &__item-but {
-      padding: 12px 28px;
-    }
-
     &__item-content {
       width: 100%;
     }
@@ -222,6 +218,10 @@
       span {
         font-size: 18px;
       }
+    }
+
+    &__item-list li::before {
+      top: -3px;
     }
 
     &__item-title {

@@ -17,16 +17,16 @@
     & > li {
       @extend %mainTxt;
       position: relative;
-      padding-left: 36px;
+      @extend %flexStart;
+      column-gap: 12px;
 
       &::before {
+        @include sizes(24px, 20px);
         content: '';
-        position: absolute;
-        left: 0;
-        top: 10px;
-        background-color: $bluePrimary;
-        width: 24px;
-        height: 2px;
+        background: url('../assets/img/icons/bullet-big.svg');
+        flex-shrink: 0;
+        top: 2px;
+        position: relative;
       }
     }
   }
@@ -62,7 +62,7 @@
         content: '';
         position: absolute;
         left: 0;
-        top: 10px;
+        top: 13px;
         background-color: $bluePrimary;
         width: 24px;
         height: 2px;
@@ -99,9 +99,26 @@
     &__title,
     &__list {
       max-width: 580px;
+    }
+
+    &__list {
+      & > li {
+        column-gap: 8px;
+
+        &::before {
+          top: 1px;
+        }
+      }
+    }
+
+    &__block-list {
+      @extend %flexColumn;
+      row-gap: 16px;
 
       & > li {
-        padding-left: 32px;
+        &::before {
+          top: 11px;
+        }
       }
     }
   }
@@ -158,6 +175,22 @@
 
     &__block-list > li ul li {
       padding: 0;
+    }
+
+    &__list {
+      & > li {
+        &::before {
+          top: -0.5px;
+        }
+      }
+    }
+
+    &__block-list {
+      & > li {
+        &::before {
+          top: 9px;
+        }
+      }
     }
   }
 }

@@ -114,10 +114,6 @@
     &__inputs {
       margin-bottom: 32px;
     }
-
-    &__btn {
-      padding: 16px 28px;
-    }
   }
 }
 
@@ -141,17 +137,17 @@
       border-radius: 0 0 4px 4px;
     }
 
+    &__policy {
+      br {
+        display: none;
+      }
+    }
+
     &__img {
       @include sizes(100%, 240px);
 
       img {
         border-radius: 4px 4px 0 0;
-      }
-    }
-
-    &__btn {
-      span {
-        font-size: 18px;
       }
     }
   }

@@ -1,6 +1,6 @@
-import { TABLET } from '../modules/consts.js';
+import { MOB } from '../modules/consts.js';
 
-if (window.outerWidth < TABLET) {
+if (window.outerWidth < MOB) {
   if (
     window.location.href.includes('auth-reg') ||
     window.location.href.includes('personal') ||

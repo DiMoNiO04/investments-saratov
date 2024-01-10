@@ -1229,6 +1229,7 @@ svg {
 .header-top__burger.change svg:last-child,
 .header-bottom__btn-burg svg:first-child,
 .header-top__burger svg:first-child,
+.header--pers-cab .header-bottom__logo,
 .header.active .header-bottom__logo,
 .form-search.show,
 .textarea.--error .textarea__hint,
@@ -1353,6 +1354,7 @@ svg {
 .invest-contract__lists-block,
 .invest-contract__blocks-item,
 .invest-contract .content ul,
+.invest-contract__txts ul > li p,
 .invest-contract__contents,
 .invest-contract__container,
 .support-infr__txts,
@@ -1534,8 +1536,13 @@ svg {
   justify-content: center;
 }
 
+.ppp-project-blocks__lists-list > li,
+.ppp-partner__list > li,
+.tax-blocks__list-ul li,
+.calc-result__item-block ul li,
 .calc-result__item-title,
 .subsidies__item-list li,
+.subsidies__item-desc ul > li,
 .subsidies__item-title,
 .func-public-repres__item-list li,
 .func-public-repres__item-title,
@@ -1548,7 +1555,10 @@ svg {
 .calculator__blocks,
 .project-desc__desc-items li,
 .chat__content-theme,
-.modal-write__block {
+.modal-write__block,
+.modal-bg__block-list li,
+.article-content ul > li,
+.content ul > li {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -2510,6 +2520,11 @@ body.ov-hidden {
 
 main:not(.main-page) {
   padding-top: 160px;
+}
+
+main.authentication-page,
+main.pers-cab-page {
+  padding-top: 168px;
 }
 
 .main-page {
@@ -3714,7 +3729,7 @@ fieldset {
   line-height: 120%;
 }
 
-.breadcrumbs a:hover span {
+.breadcrumbs a:hover span:first-child {
   color: #2d6fd0;
   text-shadow: 0 0 0.2px #2f2f2f, 0 0 0.2px #2f2f2f;
 }
@@ -3881,7 +3896,8 @@ fieldset {
 
 .content ul > li {
   position: relative;
-  padding-left: 36px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
 }
 
 .content ul > li:not(:last-child) {
@@ -3889,13 +3905,13 @@ fieldset {
 }
 
 .content ul > li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 12px;
-  background-color: #2d6fd0;
   width: 24px;
-  height: 2px;
+  height: 20px;
+  content: "";
+  background: url("../assets/img/icons/bullet-big.svg");
+  flex-shrink: 0;
+  top: 3px;
+  position: relative;
 }
 
 .content ul:not(:first-child) {
@@ -3966,22 +3982,23 @@ fieldset {
 }
 
 .article-content ul > li {
-  padding-left: 32px;
   position: relative;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
 }
 
 .article-content ul > li:not(:last-child) {
   margin-bottom: 4px;
 }
 
-.article-content ul > li:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 8px;
-  background-color: #2d6fd0;
+.article-content ul > li::before {
   width: 24px;
-  height: 2px;
+  height: 20px;
+  content: "";
+  background: url("../assets/img/icons/bullet-big.svg");
+  flex-shrink: 0;
+  top: 0.5px;
+  position: relative;
 }
 
 .article-content ul > li:nth-child(n+10)::before {
@@ -4248,7 +4265,7 @@ fieldset {
 .fieldset-numbers__block.--active .fieldset-numbers__number {
   background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
   color: #ffffff;
-  border-color: transparent;
+  border: none;
 }
 
 .fieldset-numbers__block.--active svg line {
@@ -4258,7 +4275,7 @@ fieldset {
 .fieldset-numbers__block.--filled .fieldset-numbers__number {
   background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
   color: #ffffff;
-  border-color: transparent;
+  border: none;
 }
 
 .fieldset-numbers__block.--filled .fieldset-numbers__number svg {
@@ -4270,7 +4287,7 @@ fieldset {
 }
 
 .fieldset-numbers__block svg {
-  width: 100%;
+  max-width: 100%;
 }
 
 .fieldset-numbers__number {
@@ -4294,6 +4311,20 @@ fieldset {
   display: none;
   width: 16px;
   height: 16px;
+}
+
+.fieldset-numbers--appl {
+  -moz-column-gap: 7px;
+       column-gap: 7px;
+}
+
+.fieldset-numbers--appl .fieldset-numbers__block svg {
+  max-width: 36px;
+}
+
+.fieldset-numbers--appl .fieldset-numbers__block {
+  -moz-column-gap: 7px;
+       column-gap: 7px;
 }
 
 .zoom-show {
@@ -4712,17 +4743,18 @@ fieldset {
 
 .modal-bg__block-list li {
   position: relative;
-  padding-left: 36px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
 }
 
 .modal-bg__block-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  background-color: #2d6fd0;
   width: 24px;
-  height: 2px;
+  height: 20px;
+  content: "";
+  background: url("../assets/img/icons/bullet-big.svg");
+  flex-shrink: 0;
+  top: 1px;
+  position: relative;
 }
 
 .modal-bg__block-list--2 li {
@@ -4824,6 +4856,10 @@ fieldset {
   font-size: 16px;
   font-weight: 600;
   line-height: 130%;
+}
+
+[data-modal=project-ppp] .modal-bg__block-list li::before {
+  top: 0;
 }
 
 .modal-acc-suc {
@@ -4944,7 +4980,30 @@ fieldset {
 }
 
 .header.active .header-menu {
-  height: calc(100vh - 88px);
+  height: calc(100vh - 128px);
+}
+
+.header--pers-cab {
+  height: auto;
+  transform: translateY(-97px);
+}
+
+.header--pers-cab .header-bottom__links {
+  left: 0;
+}
+
+.header--pers-cab .header-bottom__logo {
+  position: relative;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.header--pers-cab .header-bottom {
+  padding: 12px 0;
+  border-bottom: none;
+}
+
+.header--pers-cab .header-menu {
+  height: calc(100vh - 128px);
 }
 
 .header * {
@@ -5251,10 +5310,10 @@ fieldset {
 .header-menu {
   transform: translateX(-200%);
   transition: transform 0.75s ease;
-  position: absolute;
+  position: fixed;
   width: 100%;
   background-color: #ffffff;
-  height: 100vh;
+  height: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
   height: calc(100vh - 160px);
@@ -5293,10 +5352,6 @@ fieldset {
 .header--transparent .header-bottom,
 .header--transparent .header-top {
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.header--transparent .header-top__content {
-  border-left: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .header--transparent input::-moz-placeholder {
@@ -6322,7 +6377,7 @@ fieldset {
 
 .steps-investor__img {
   width: 603px;
-  height: 100%;
+  height: 700px;
   flex-shrink: 0;
 }
 
@@ -6352,7 +6407,7 @@ fieldset {
   width: 32px;
   height: 32px;
   border-radius: 4px;
-  border: 1.4px solid #2d6fd0;
+  border: 1.8px solid #2d6fd0;
   padding: 10px;
   position: absolute;
   top: 40px;
@@ -6360,11 +6415,11 @@ fieldset {
 }
 
 .steps-investor__item-btn svg {
-  width: 11px;
-  height: 11px;
+  width: 12.4px;
+  height: 12.4px;
   position: absolute;
-  top: calc(50% - 5.5px);
-  left: calc(50% - 5.5px);
+  top: calc(50% - 6.2px);
+  left: calc(50% - 6.2px);
   transition: opacity 0.2s ease, opacity 0.2s ease;
 }
 
@@ -6914,7 +6969,7 @@ fieldset {
 .authentication__container {
   display: flex;
   align-items: stretch;
-  margin: 168px auto 0 auto;
+  margin: 0 auto;
   width: 1080px;
 }
 
@@ -7161,7 +7216,7 @@ fieldset {
 }
 
 .account {
-  margin: 168px 0 140px;
+  margin-bottom: 140px;
 }
 
 .account__container {
@@ -7789,6 +7844,14 @@ fieldset {
   position: relative;
 }
 
+.transport-inf__item:not(:last-child) .transport-inf__item-txt {
+  width: calc(100% - 48px);
+}
+
+.transport-inf__item:last-child .transport-inf__item-txt {
+  width: calc(100% - 25px);
+}
+
 .transport-inf__item:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -7798,14 +7861,6 @@ fieldset {
   display: block;
   top: 89px;
   left: 30px;
-}
-
-.transport-inf__item:not(:last-child) .transport-inf__item-txt {
-  max-width: 208px;
-}
-
-.transport-inf__item:not(:last-child) {
-  padding-right: 16px;
 }
 
 .transport-inf__item-icon {
@@ -8132,7 +8187,7 @@ fieldset {
 
 .regul-committee__ask-item:last-child {
   background: var(--blue-gradient, linear-gradient(94deg, #144286 0%, #2d6fd0 100%));
-  row-gap: 32px;
+  row-gap: 64px;
 }
 
 .regul-committee__ask-item:last-child .regul-committee__ask-soc a {
@@ -8767,7 +8822,7 @@ fieldset {
   width: 32px;
   height: 32px;
   border-radius: 4px;
-  border: 1.4px solid #2d6fd0;
+  border: 1.8px solid #2d6fd0;
   padding: 10px;
   position: absolute;
   top: 40px;
@@ -8775,11 +8830,11 @@ fieldset {
 }
 
 .func-public-repres__item-btn svg {
-  width: 11px;
-  height: 11px;
+  width: 12.4px;
+  height: 12.4px;
   position: absolute;
-  top: calc(50% - 5.5px);
-  left: calc(50% - 5.5px);
+  top: calc(50% - 6.2px);
+  left: calc(50% - 6.2px);
   transition: opacity 0.2s ease, opacity 0.2s ease;
 }
 
@@ -9860,6 +9915,10 @@ fieldset {
   margin-bottom: 8px;
 }
 
+.personnel .content ul > li::before {
+  top: 0px;
+}
+
 .single-window__container {
   -moz-column-gap: 20px;
        column-gap: 20px;
@@ -9952,7 +10011,7 @@ fieldset {
 }
 
 .scheme-inter__block:last-child .scheme-inter__block-list li::before {
-  background-color: #ffffff;
+  background: url("../assets/img/icons/bullet-big-white.svg");
 }
 
 .scheme-inter__block-title {
@@ -9979,6 +10038,10 @@ fieldset {
 
 .scheme-inter .content ul > li:last-child {
   margin-bottom: 0;
+}
+
+.scheme-inter .content ul > li::before {
+  top: 0;
 }
 
 .offer-area__head {
@@ -10292,7 +10355,7 @@ fieldset {
   width: 32px;
   height: 32px;
   border-radius: 4px;
-  border: 1.4px solid #2d6fd0;
+  border: 1.8px solid #2d6fd0;
   padding: 10px;
   position: absolute;
   top: 40px;
@@ -10300,11 +10363,11 @@ fieldset {
 }
 
 .subsidies__item-btn svg {
-  width: 11px;
-  height: 11px;
+  width: 12.4px;
+  height: 12.4px;
   position: absolute;
-  top: calc(50% - 5.5px);
-  left: calc(50% - 5.5px);
+  top: calc(50% - 6.2px);
+  left: calc(50% - 6.2px);
   transition: opacity 0.2s ease, opacity 0.2s ease;
 }
 
@@ -10391,20 +10454,24 @@ fieldset {
 
 .subsidies__item-desc ul > li {
   position: relative;
-  padding-left: 32px;
   font-size: 16px;
   line-height: 130%;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.subsidies__item-desc ul > li:not(:last-child) {
   margin-bottom: 8px;
 }
 
 .subsidies__item-desc ul > li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  background-color: #2d6fd0;
   width: 24px;
-  height: 2px;
+  height: 20px;
+  content: "";
+  background: url("../assets/img/icons/bullet-big.svg");
+  flex-shrink: 0;
+  top: 0.5px;
+  position: relative;
 }
 
 .subsidies__item-but {
@@ -10505,7 +10572,7 @@ fieldset {
   content: "";
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 12px;
   background-color: #2d6fd0;
   width: 24px;
   height: 2px;
@@ -10622,7 +10689,7 @@ fieldset {
   width: 32px;
   height: 32px;
   border-radius: 4px;
-  border: 1.4px solid #2d6fd0;
+  border: 1.8px solid #2d6fd0;
   padding: 10px;
   position: absolute;
   top: 40px;
@@ -10630,11 +10697,11 @@ fieldset {
 }
 
 .calc-result__item-btn svg {
-  width: 11px;
-  height: 11px;
+  width: 12.4px;
+  height: 12.4px;
   position: absolute;
-  top: calc(50% - 5.5px);
-  left: calc(50% - 5.5px);
+  top: calc(50% - 6.2px);
+  left: calc(50% - 6.2px);
   transition: opacity 0.2s ease, opacity 0.2s ease;
 }
 
@@ -10670,7 +10737,6 @@ fieldset {
 
 .calc-result__item-block ul li {
   position: relative;
-  display: flex;
   -moz-column-gap: 12px;
        column-gap: 12px;
 }
@@ -10682,7 +10748,7 @@ fieldset {
   background-color: #2f2f2f;
   border-radius: 50%;
   display: block;
-  top: 10px;
+  top: 13px;
   position: relative;
   flex-shrink: 0;
 }
@@ -10760,7 +10826,16 @@ fieldset {
 
 .invest-contract__txts ul > li {
   font-size: 16px;
-  padding-left: 36px;
+}
+
+.invest-contract__txts ul > li p {
+  row-gap: 4px;
+  font-size: 16px;
+}
+
+.invest-contract__txts ul > li p b {
+  color: #2f2f2f;
+  font-size: 20px;
 }
 
 .invest-contract__txts-block {
@@ -10769,6 +10844,10 @@ fieldset {
 
 .invest-contract .content ul > li {
   margin: 0;
+}
+
+.invest-contract .content ul > li::before {
+  top: 2px;
 }
 
 .invest-contract .content ul {
@@ -10787,6 +10866,14 @@ fieldset {
 .invest-contract__blocks-items {
   grid-gap: 20px;
   grid-auto-rows: 1fr;
+}
+
+.invest-contract__lists .content ul > li {
+  margin: 0;
+}
+
+.invest-contract__lists .content ul > li::before {
+  top: 4px;
 }
 
 .invest-contract__blocks-item {
@@ -10901,21 +10988,22 @@ fieldset {
 
 .tax-blocks__list-ul li {
   position: relative;
-  padding-left: 36px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
 }
 
 .tax-blocks__list-ul li:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .tax-blocks__list-ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 14px;
-  background-color: #2d6fd0;
   width: 24px;
-  height: 2px;
+  height: 20px;
+  content: "";
+  background: url("../assets/img/icons/bullet-big.svg");
+  flex-shrink: 0;
+  top: 4px;
+  position: relative;
 }
 
 .privacy-police__container {
@@ -11755,17 +11843,18 @@ fieldset {
 
 .ppp-partner__list > li {
   position: relative;
-  padding-left: 36px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
 }
 
 .ppp-partner__list > li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  background-color: #2d6fd0;
   width: 24px;
-  height: 2px;
+  height: 20px;
+  content: "";
+  background: url("../assets/img/icons/bullet-big.svg");
+  flex-shrink: 0;
+  top: 2px;
+  position: relative;
 }
 
 .ppp-partner__blocks {
@@ -11796,7 +11885,7 @@ fieldset {
   content: "";
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 13px;
   background-color: #2d6fd0;
   width: 24px;
   height: 2px;
@@ -11959,17 +12048,18 @@ fieldset {
 
 .ppp-project-blocks__lists-list > li {
   position: relative;
-  padding-left: 36px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
 }
 
 .ppp-project-blocks__lists-list > li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  background-color: #2d6fd0;
   width: 24px;
-  height: 2px;
+  height: 20px;
+  content: "";
+  background: url("../assets/img/icons/bullet-big.svg");
+  flex-shrink: 0;
+  top: 1px;
+  position: relative;
 }
 
 .ppp-stages__container {
@@ -12592,6 +12682,10 @@ fieldset {
 
 .technopark__contacts-link {
   color: #2d6fd0;
+}
+
+.technopark .content ul > li::before {
+  top: 4px;
 }
 
 .territory-develop .content ul > li:not(:last-child) {
@@ -13359,6 +13453,10 @@ fieldset {
   .account-menu__item.active {
     background-color: #e8f0ff;
   }
+
+  .func-public-repres .content ul > li::before {
+    top: 0;
+  }
 }
 
 @media screen and (min-width: 1919px) {
@@ -13696,6 +13794,11 @@ fieldset {
     font-size: 32px;
   }
 
+  main.authentication-page,
+  main.pers-cab-page {
+    padding-top: 148px;
+  }
+
   .container {
     padding: 0 93px;
   }
@@ -13718,7 +13821,12 @@ fieldset {
   }
 
   .content ul > li {
-    padding-left: 32px;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+
+  .content ul > li::before {
+    top: 1px;
   }
 
   .list-per__title {
@@ -13903,6 +14011,16 @@ fieldset {
     line-height: 130%;
   }
 
+  .project-desc__desc-items li {
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+  }
+
+  .project-desc__desc-items li::before {
+    top: -2px;
+    position: relative;
+  }
+
   .picture-text__content {
     left: 48px;
   }
@@ -14057,7 +14175,6 @@ fieldset {
 
   .authentication__container {
     width: 980px;
-    margin-top: 148px;
   }
 
   .authentication__desc {
@@ -14112,7 +14229,7 @@ fieldset {
   }
 
   .account {
-    margin: 148px 0 120px;
+    margin-bottom: 120px;
   }
 
   .account__content {
@@ -14283,6 +14400,14 @@ fieldset {
 
   .regul-committee__head {
     max-width: 870px;
+  }
+
+  .regul-committee__ask-info {
+    align-items: flex-start;
+  }
+
+  .regul-committee__ask-item:last-child {
+    row-gap: 32px;
   }
 
   .municipality__descs-items {
@@ -14727,6 +14852,10 @@ fieldset {
     font-size: 18px;
   }
 
+  .subsidies__block ul > li::before {
+    top: 11px;
+  }
+
   .invest-agrement__blocks-item {
     row-gap: 24px;
     justify-content: flex-start;
@@ -14749,6 +14878,10 @@ fieldset {
 
   .calc-result__title {
     font-size: 48px;
+  }
+
+  .calc-result__item-block ul li::before {
+    top: 12px;
   }
 
   .support-infr__blocks {
@@ -14777,6 +14910,18 @@ fieldset {
     padding: 24px;
   }
 
+  .invest-contract__txts ul > li p b {
+    font-size: 18px;
+  }
+
+  .invest-contract .content ul > li::before {
+    top: 0.5px;
+  }
+
+  .invest-contract__lists .content ul > li::before {
+    top: 2px;
+  }
+
   .tax-benefits__picture .picture-text__img {
     height: 710px;
   }
@@ -14787,6 +14932,15 @@ fieldset {
 
   .tax-blocks__list {
     padding: 0;
+  }
+
+  .tax-blocks__list-ul li {
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+
+  .tax-blocks__list-ul li::before {
+    top: 2.5px;
   }
 
   .not-found {
@@ -14930,9 +15084,21 @@ fieldset {
     max-width: 580px;
   }
 
-  .ppp-partner__title > li,
   .ppp-partner__list > li {
-    padding-left: 32px;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+
+  .ppp-partner__list > li::before {
+    top: 1px;
+  }
+
+  .ppp-partner__block-list {
+    row-gap: 16px;
+  }
+
+  .ppp-partner__block-list > li::before {
+    top: 11px;
   }
 
   .ppp-other-projects__title {
@@ -14958,6 +15124,11 @@ fieldset {
 
   .ppp-project-blocks__items li b {
     font-size: 32px;
+  }
+
+  .ppp-project-blocks__lists-list > li {
+    -moz-column-gap: 8px;
+         column-gap: 8px;
   }
 
   .ppp-project-blocks__descs-tit {
@@ -15053,6 +15224,10 @@ fieldset {
 
   .technopark__contacts-item {
     height: 212px;
+  }
+
+  .technopark .content ul > li::before {
+    top: 2px;
   }
 
   .territory-develop__title-h1 {
@@ -15322,6 +15497,11 @@ fieldset {
     font-size: 36px;
   }
 
+  main.authentication-page,
+  main.pers-cab-page {
+    padding-top: 128px;
+  }
+
   .container {
     padding: 0 40px;
   }
@@ -15331,7 +15511,7 @@ fieldset {
   }
 
   .btn {
-    padding: 11px 28px;
+    padding: 12px 28px;
   }
 
   .btn-widget {
@@ -15386,6 +15566,11 @@ fieldset {
     margin-top: 32px;
   }
 
+  .article-content ul > li {
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+
   .doc-download__items {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -15411,6 +15596,20 @@ fieldset {
 
   .image-gallery__swiper .swiper-wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fieldset-numbers--appl .fieldset-numbers__block svg {
+    max-width: 100%;
+  }
+
+  .fieldset-numbers {
+    -moz-column-gap: 7px;
+         column-gap: 7px;
+  }
+
+  .fieldset-numbers__block {
+    -moz-column-gap: 7px;
+         column-gap: 7px;
   }
 
   .map__titles {
@@ -15754,9 +15953,8 @@ fieldset {
     left: 0;
     top: 88px;
     position: fixed;
-    z-index: 10;
+    z-index: 8;
     padding: 40px;
-    flex-direction: column;
     overflow: scroll;
     transform: translateX(-100%);
     transition: transform 0.2s ease;
@@ -15979,10 +16177,6 @@ fieldset {
     row-gap: 32px;
   }
 
-  .project-desc__btn {
-    padding: 16px 32px;
-  }
-
   .project-desc--investor .project-desc__list {
     padding: 24px;
   }
@@ -16093,10 +16287,6 @@ fieldset {
     width: 100%;
   }
 
-  .calculator__btn {
-    padding: 14px 28px;
-  }
-
   #map {
     height: 400px;
   }
@@ -16200,10 +16390,6 @@ fieldset {
 
   .steps-investor__item-tit {
     line-height: 120%;
-  }
-
-  .steps-investor__item-but {
-    padding: 12px 28px;
   }
 
   .steps-investor__item-content {
@@ -16361,7 +16547,6 @@ fieldset {
   }
 
   .authentication__container {
-    margin-top: 128px;
     width: 688px;
   }
 
@@ -16418,7 +16603,7 @@ fieldset {
   }
 
   .account {
-    margin: 128px 0 100px;
+    margin-bottom: 100px;
   }
 
   .account__content {
@@ -16675,6 +16860,10 @@ fieldset {
     min-height: 413px;
   }
 
+  .transport-inf__item:not(:last-child) .transport-inf__item-txt {
+    width: calc(100% - 32px);
+  }
+
   .transport-inf__block-desc {
     left: 24px;
     right: 24px;
@@ -16696,7 +16885,7 @@ fieldset {
   }
 
   .transport-inf__item:not(:last-child)::after {
-    top: 71.5px;
+    top: 73px;
   }
 
   .transport-inf__item:nth-child(4)::after {
@@ -16836,6 +17025,18 @@ fieldset {
 
   .regul-committee__doc {
     max-width: 100%;
+  }
+
+  .regul-committee__ask-info {
+    align-items: center;
+  }
+
+  .regul-committee__ask-item:last-child {
+    padding: 32px;
+  }
+
+  .regul-committee__ask-soc a:not(:last-child) {
+    margin-bottom: 4px;
   }
 
   .regul-committee__container {
@@ -17270,6 +17471,10 @@ fieldset {
   .social-infr__items li {
     -webkit-hyphens: auto;
             hyphens: auto;
+  }
+
+  .social-infr__block {
+    min-width: 100%;
   }
 
   .social-infr__tit {
@@ -18051,6 +18256,14 @@ fieldset {
     line-height: 120%;
   }
 
+  .invest-contract .content ul > li::before {
+    top: -0.5px;
+  }
+
+  .invest-contract__lists .content ul > li::before {
+    top: 2px;
+  }
+
   .tax-benefits__title {
     margin-bottom: 32px;
   }
@@ -18243,10 +18456,6 @@ fieldset {
     margin-bottom: 32px;
   }
 
-  .call-line__btn {
-    padding: 16px 28px;
-  }
-
   .monitoring-request__title,
   .monitoring-request__titles {
     margin-bottom: 32px;
@@ -18270,6 +18479,10 @@ fieldset {
 
   .monitoring-request__list {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .monitoring-request .content ul > li::before {
+    top: 2.5px;
   }
 
   .ppp-projects__container {
@@ -19431,6 +19644,14 @@ fieldset {
     padding-top: 86px;
   }
 
+  main.authentication-page {
+    padding-top: 110px;
+  }
+
+  main.pers-cab-page {
+    padding-top: 120px;
+  }
+
   .container {
     padding: 0 16px;
   }
@@ -19449,10 +19670,6 @@ fieldset {
 
   .btn {
     width: 100%;
-  }
-
-  .btn span {
-    font-size: 16px;
   }
 
   .btn-widget {
@@ -19538,6 +19755,10 @@ fieldset {
     height: 32px;
   }
 
+  .content ul > li::before {
+    top: -0.5px;
+  }
+
   .doc-download__item {
     align-items: flex-start;
   }
@@ -19607,7 +19828,7 @@ fieldset {
   }
 
   .fieldset-numbers--appl .fieldset-numbers__block:not(:first-child) {
-    width: calc(25% - 6px);
+    width: calc(25% - 7px);
   }
 
   .other .slider-navigation--rel {
@@ -19724,10 +19945,6 @@ fieldset {
     padding: 0 20px 40px 20px;
   }
 
-  .modal-bg__block-list li {
-    padding-left: 32px;
-  }
-
   .modal-sm {
     margin: auto 16px;
   }
@@ -19799,6 +20016,10 @@ fieldset {
     height: 88px;
   }
 
+  .header--pers-cab {
+    transform: translateY(0);
+  }
+
   .header-top__search-wr {
     justify-content: center;
   }
@@ -19862,7 +20083,7 @@ fieldset {
   }
 
   .header-menu {
-    height: calc(100vh - 88px);
+    height: calc(100% - 88px);
     padding-top: 24px;
     padding-bottom: 32px;
   }
@@ -19976,10 +20197,6 @@ fieldset {
     width: 100%;
   }
 
-  .ask-question__btn span {
-    font-size: 16px;
-  }
-
   .ask-question__text {
     font-size: 14px;
   }
@@ -19996,14 +20213,6 @@ fieldset {
     margin-top: 8px;
   }
 
-  .project-desc__btn {
-    padding: 11px 28px;
-  }
-
-  .project-desc__btn span {
-    font-size: 18px;
-  }
-
   .project-desc--investor .project-desc__list {
     padding: 19px;
   }
@@ -20014,10 +20223,6 @@ fieldset {
 
   .project-desc--investor .project-desc__list b {
     margin-top: 8px;
-  }
-
-  .project-desc--investor .project-desc__btn {
-    padding: 16px 32px;
   }
 
   .project-desc--investor .project-desc__desc-items li::before {
@@ -20219,6 +20424,10 @@ fieldset {
 
   .steps-investor__item-but span {
     font-size: 18px;
+  }
+
+  .steps-investor__item-list li::before {
+    top: -3px;
   }
 
   .steps-investor__item-title {
@@ -20441,6 +20650,10 @@ fieldset {
     padding: 0 16px;
   }
 
+  .news__navigation-btns {
+    display: none;
+  }
+
   .news__card-pic {
     height: 239px;
   }
@@ -20475,7 +20688,6 @@ fieldset {
 
   .authentication__container {
     width: 100%;
-    margin-top: 110px;
   }
 
   .authentication__content {
@@ -20509,7 +20721,7 @@ fieldset {
   }
 
   .account {
-    margin: 118px 0 80px;
+    margin-bottom: 80px;
   }
 
   .account__fieldset-input {
@@ -20727,14 +20939,22 @@ fieldset {
     row-gap: 27px;
   }
 
+  .transport-inf__item:not(:last-child) .transport-inf__item-txt {
+    width: calc(100% - 20px);
+  }
+
   .transport-inf__item:not(:last-child)::after {
-    top: 61.5px;
+    top: 61px;
   }
 
   .transport-inf__item:nth-child(3)::after,
   .transport-inf__item:nth-child(5)::after {
     left: 0;
     width: 112%;
+  }
+
+  .transport-inf__item:last-child .transport-inf__item-txt {
+    width: calc(100% - 16px);
   }
 
   .transport-inf__block-txt {
@@ -20838,9 +21058,7 @@ fieldset {
   }
 
   .location__map-img {
-    min-width: 338px;
-    left: -5px;
-    position: relative;
+    width: 100%;
   }
 
   .location__map-city__pin {
@@ -20931,8 +21149,27 @@ fieldset {
     margin-bottom: 4px;
   }
 
+  .regul-committee__ask-name {
+    font-size: 18px;
+  }
+
+  .regul-committee__ask-post {
+    font-size: 14px;
+  }
+
   .regul-committee__ask-soc a {
-    word-break: break-word;
+    word-break: break-all;
+    font-size: 22px;
+  }
+
+  .regul-committee__ask-item:last-child {
+    padding: 24px;
+  }
+
+  .regul-committee__ask-item:last-child .regul-committee__ask-info {
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: flex-start;
   }
 
   .municipality__descs-title {
@@ -21084,8 +21321,6 @@ fieldset {
   }
 
   .strategy-grafic__title {
-    -webkit-hyphens: auto;
-            hyphens: auto;
     font-size: 24px;
   }
 
@@ -21146,7 +21381,7 @@ fieldset {
   }
 
   .public-representative__item-link {
-    word-break: break-all;
+    font-size: 22px;
   }
 
   .func-public-repres__title {
@@ -21751,6 +21986,10 @@ fieldset {
     grid-column-end: auto;
   }
 
+  .subsidies__item-desc ul > li::before {
+    top: -0.5px;
+  }
+
   .invest-agrement__title {
     font-size: 32px;
   }
@@ -21812,6 +22051,10 @@ fieldset {
     padding-left: 8px;
   }
 
+  .calc-result__item-block ul li::before {
+    top: 10px;
+  }
+
   .support-infr__block {
     flex-direction: column;
     row-gap: 24px;
@@ -21863,6 +22106,10 @@ fieldset {
     row-gap: 16px;
   }
 
+  .invest-contract__lists .content ul > li::before {
+    top: 0.5px;
+  }
+
   .tax-benefits__picture .picture-text__content {
     top: 32px;
     bottom: 32px;
@@ -21884,12 +22131,8 @@ fieldset {
     grid-gap: 16px;
   }
 
-  .tax-blocks__list-ul li {
-    padding-left: 32px;
-  }
-
   .tax-blocks__list-ul li::before {
-    top: 12px;
+    top: 1px;
   }
 
   .presentation-materials__links {
@@ -22014,6 +22257,10 @@ fieldset {
     border-radius: 0 0 4px 4px;
   }
 
+  .call-line__policy br {
+    display: none;
+  }
+
   .call-line__img {
     width: 100%;
     height: 240px;
@@ -22021,10 +22268,6 @@ fieldset {
 
   .call-line__img img {
     border-radius: 4px 4px 0 0;
-  }
-
-  .call-line__btn span {
-    font-size: 18px;
   }
 
   .monitoring-request__subtitle {
@@ -22046,6 +22289,10 @@ fieldset {
 
   .monitoring-request__block:not(:last-child) {
     margin-bottom: 32px;
+  }
+
+  .monitoring-request .content ul > li::before {
+    top: 1px;
   }
 
   .ppp-projects__cards {
@@ -22182,6 +22429,14 @@ fieldset {
     padding: 0;
   }
 
+  .ppp-partner__list > li::before {
+    top: -0.5px;
+  }
+
+  .ppp-partner__block-list > li::before {
+    top: 9px;
+  }
+
   .ppp-other-projects__blocks {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -22205,10 +22460,6 @@ fieldset {
 
   .ppp-project-blocks__lists-list li {
     font-size: 18px;
-  }
-
-  .ppp-project-blocks__lists-list > li {
-    padding-left: 32px;
   }
 
   .ppp-stages__blocks {
@@ -22314,10 +22565,6 @@ fieldset {
 
   .economic-zone__records-info.block-white {
     padding: 24px;
-  }
-
-  .economic-zone__records-list.content ul > li::before {
-    top: 6px;
   }
 
   .economic-zone__dates::before {
@@ -22480,6 +22727,10 @@ fieldset {
     word-break: break-word;
   }
 
+  .technopark .content ul > li::before {
+    top: 1.5px;
+  }
+
   .territory-develop__container {
     row-gap: 50px;
   }
@@ -22528,10 +22779,6 @@ fieldset {
 
   .territory-develop__records-info.block-white {
     padding: 24px;
-  }
-
-  .territory-develop__records-list.content ul > li::before {
-    top: 6px;
   }
 
   .territory-develop__items {
@@ -22877,6 +23124,11 @@ fieldset {
   }
 
   .subtitle {
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .picture-text--tax .picture-text__title {
     -webkit-hyphens: auto;
             hyphens: auto;
   }

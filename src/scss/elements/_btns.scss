@@ -242,7 +242,7 @@
 
 @media screen and (max-width: $tablet) {
   .btn {
-    padding: 11px 28px;
+    padding: 12px 28px;
   }
 
   .btn-widget {
@@ -254,10 +254,6 @@
 @media screen and (max-width: $mob) {
   .btn {
     width: 100%;
-
-    span {
-      font-size: 16px;
-    }
   }
 
   .btn-widget {

@@ -89,7 +89,7 @@
       &:last-child {
         background: var(--blue-gradient, linear-gradient(94deg, #144286 0%, #2d6fd0 100%));
         @extend %flexStart;
-        row-gap: 32px;
+        row-gap: 64px;
 
         .regul-committee__ask-soc {
           a {
@@ -149,6 +149,14 @@
     &__head {
       max-width: 870px;
     }
+
+    &__ask-info {
+      align-items: flex-start;
+    }
+
+    &__ask-item:last-child {
+      row-gap: 32px;
+    }
   }
 }
 
@@ -166,6 +174,18 @@
 
     &__doc {
       max-width: 100%;
+    }
+
+    &__ask-info {
+      align-items: center;
+    }
+
+    &__ask-item:last-child {
+      padding: 32px;
+    }
+
+    &__ask-soc a:not(:last-child) {
+      margin-bottom: 4px;
     }
 
     &__container {
@@ -228,11 +248,26 @@
   }
 
   .regul-committee {
-    &__ask {
-      &-soc {
-        a {
-          word-break: break-word;
-        }
+    &__ask-name {
+      font-size: 18px;
+    }
+
+    &__ask-post {
+      font-size: 14px;
+    }
+
+    &__ask-soc a {
+      word-break: break-all;
+      font-size: 22px;
+    }
+
+    &__ask-item:last-child {
+      padding: 24px;
+
+      .regul-committee__ask-info {
+        flex-direction: column;
+        row-gap: 16px;
+        align-items: flex-start;
       }
     }
   }

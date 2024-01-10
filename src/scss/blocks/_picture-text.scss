@@ -182,3 +182,11 @@
     }
   }
 }
+
+@media screen and (max-width: $miniMob) {
+  .picture-text--tax {
+    .picture-text__title {
+      hyphens: auto;
+    }
+  }
+}

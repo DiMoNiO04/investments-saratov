@@ -496,18 +496,6 @@
           padding: 24px;
         }
       }
-
-      &-list {
-        &.content {
-          ul {
-            & > li {
-              &::before {
-                top: 6px;
-              }
-            }
-          }
-        }
-      }
     }
 
     &__dates {

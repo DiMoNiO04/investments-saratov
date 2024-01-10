@@ -189,17 +189,17 @@
     }
     li {
       @extend %regular16;
+      @extend %flexStart;
       position: relative;
-      padding-left: 36px;
+      column-gap: 8px;
 
       &::before {
+        @include sizes(24px, 20px);
         content: '';
-        position: absolute;
-        left: 0;
-        top: 10px;
-        background-color: $bluePrimary;
-        width: 24px;
-        height: 2px;
+        background: url('../assets/img/icons/bullet-big.svg');
+        flex-shrink: 0;
+        top: 1px;
+        position: relative;
       }
     }
 
@@ -319,6 +319,12 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 130%;
+  }
+}
+
+[data-modal='project-ppp'] {
+  .modal-bg__block-list li::before {
+    top: 0;
   }
 }
 
@@ -561,12 +567,6 @@
       max-height: calc(100vh - 72px - 100px);
       height: calc(100vh - 72px - 100px);
       padding: 0 20px 40px 20px;
-    }
-
-    &__block-list {
-      li {
-        padding-left: 32px;
-      }
     }
   }
 

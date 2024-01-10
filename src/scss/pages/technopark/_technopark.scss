@@ -176,6 +176,14 @@
       color: $bluePrimary;
     }
   }
+
+  .content {
+    ul > li {
+      &::before {
+        top: 4px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $laptop) {
@@ -201,6 +209,14 @@
     &__contacts {
       &-item {
         height: 212px;
+      }
+    }
+
+    .content {
+      ul > li {
+        &::before {
+          top: 2px;
+        }
       }
     }
   }
@@ -387,6 +403,14 @@
 
       &-link {
         word-break: break-word;
+      }
+    }
+
+    .content {
+      ul > li {
+        &::before {
+          top: 1.5px;
+        }
       }
     }
   }

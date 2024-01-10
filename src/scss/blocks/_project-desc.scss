@@ -132,6 +132,16 @@
     &__desc-txt {
       line-height: 130%;
     }
+
+    &__desc-items {
+      li {
+        column-gap: 12px;
+        &::before {
+          top: -2px;
+          position: relative;
+        }
+      }
+    }
   }
 }
 
@@ -163,10 +173,6 @@
 
     &__blocks {
       row-gap: 32px;
-    }
-
-    &__btn {
-      padding: 16px 32px;
     }
   }
 
@@ -204,14 +210,6 @@
         margin-top: 8px;
       }
     }
-
-    &__btn {
-      padding: 11px 28px;
-
-      span {
-        font-size: 18px;
-      }
-    }
   }
 
   .project-desc--investor {
@@ -226,10 +224,6 @@
         b {
           margin-top: 8px;
         }
-      }
-
-      &__btn {
-        padding: 16px 32px;
       }
 
       &__desc-items {

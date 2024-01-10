@@ -1,5 +1,5 @@
 .account {
-  margin: 168px 0 140px;
+  margin-bottom: 140px;
 
   &__container {
     display: flex;
@@ -369,7 +369,7 @@
 
 @media screen and (max-width: $laptop) {
   .account {
-    margin: 148px 0 120px;
+    margin-bottom: 120px;
 
     &__content {
       flex-basis: 880px;
@@ -442,7 +442,7 @@
 
 @media screen and (max-width: $tablet) {
   .account {
-    margin: 128px 0 100px;
+    margin-bottom: 100px;
 
     &__content {
       flex-basis: 100%;
@@ -548,7 +548,7 @@
 
 @media screen and (max-width: $mob) {
   .account {
-    margin: 118px 0 80px;
+    margin-bottom: 80px;
 
     &__fieldset-input {
       flex-basis: 100%;

@@ -117,17 +117,17 @@
     li {
       @extend %mainTxt;
       position: relative;
-      padding-left: 36px;
-      @include mb(8px);
+      @include mb(12px);
+      @extend %flexStart;
+      column-gap: 12px;
 
       &::before {
+        @include sizes(24px, 20px);
         content: '';
-        position: absolute;
-        left: 0;
-        top: 14px;
-        background-color: $bluePrimary;
-        width: 24px;
-        height: 2px;
+        background: url('../assets/img/icons/bullet-big.svg');
+        flex-shrink: 0;
+        top: 4px;
+        position: relative;
       }
     }
   }
@@ -141,6 +141,16 @@
   .tax-blocks {
     &__list {
       padding: 0;
+    }
+
+    &__list-ul {
+      li {
+        column-gap: 8px;
+
+        &::before {
+          top: 2.5px;
+        }
+      }
     }
   }
 }
@@ -188,12 +198,8 @@
       grid-gap: 16px;
     }
 
-    &__list-ul li {
-      padding-left: 32px;
-
-      &::before {
-        top: 12px;
-      }
+    &__list-ul li::before {
+      top: 1px;
     }
   }
 }

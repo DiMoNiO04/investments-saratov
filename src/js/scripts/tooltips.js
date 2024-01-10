@@ -1,9 +1,9 @@
 import { MOB, TABLET } from '../modules/consts.js';
 
-function tooltip() {
-  if (document.querySelectorAll('.account__table-btn')) {
+function tooltip(className) {
+  if (document.querySelectorAll(className)) {
     let tooltipElem;
-    const btns = document.querySelectorAll('.account__table-btn');
+    const btns = document.querySelectorAll(className);
 
     btns.forEach((btn) => {
       btn.addEventListener('mouseover', (event) => {
@@ -32,7 +32,7 @@ function tooltip() {
           top = coords.top - tooltipElem.offsetHeight - -34;
           if (top < 0) top = coords.top + target.offsetHeight + -34;
         } else {
-          left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
+          left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2 - 1;
           if (left < 0) left = 5;
 
           top = coords.top - tooltipElem.offsetHeight - 8;
@@ -72,11 +72,6 @@ if (document.querySelector('.municipality__map-item')) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  removeHelperTooltips();
-  tooltip();
-});
-
 const isTextMoreThanTwoLines = (text) => text.split('\n').length >= 4;
 
 const docDownloadLinks = document.querySelectorAll('.doc-download__item');
@@ -102,18 +97,8 @@ if (docDownloadLinks && window.innerWidth > MOB) {
   });
 }
 
-function tooltipSocial() {
-  const socialTooltips = document.querySelectorAll('.soceconomic-develop__item-tooltip');
-
-  if (socialTooltips) {
-    socialTooltips.forEach((socialTooltip) => {
-      tippy(socialTooltip, {
-        content: 'Характеристика',
-        theme: 'light',
-        arrow: false,
-      });
-    });
-  }
-}
-
-tooltipSocial();
+document.addEventListener('DOMContentLoaded', () => {
+  removeHelperTooltips();
+  tooltip('.account__table-btn');
+  tooltip('.soceconomic-develop__item-tooltip');
+});
