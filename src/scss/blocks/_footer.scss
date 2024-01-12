@@ -256,10 +256,11 @@
     &__list-items {
       row-gap: 12px;
       padding-top: 0;
-      height: 0;
-      transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
-      overflow: hidden;
-      opacity: 0;
+      display: none;
+      // height: 0;
+      // transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
+      // overflow: hidden;
+      // opacity: 0;
     }
 
     &__list-title {

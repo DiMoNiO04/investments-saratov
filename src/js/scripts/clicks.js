@@ -1,54 +1,44 @@
 import { fadeIn } from '../modules/animation.js';
 // import { TABLET } from '../modules/consts.js';
 
-function clickFullText() {
-  if (document.querySelector('.js-dropdown-list')) {
-    const dropdownLists = document.querySelectorAll('.js-dropdown-list');
+// function clickFullText() {
+//   if (document.querySelector('.js-dropdown-list')) {
+//     const dropdownLists = document.querySelectorAll('.js-dropdown-list');
 
-    dropdownLists.forEach((dropdownList) => {
-      const dropdownTitle = dropdownList.querySelector('.js-dropdown-title');
-      const dropdownContent = dropdownList.querySelector('.js-dropdown-content');
+//     dropdownLists.forEach((dropdownList) => {
+//       const dropdownTitle = dropdownList.querySelector('.js-dropdown-title');
+//       const dropdownContent = dropdownList.querySelector('.js-dropdown-content');
 
-      dropdownTitle.addEventListener('click', () => {
-        // if (
-        //   (dropdownList.classList.contains('footer__list') && window.innerWidth < TABLET) ||
-        //   !dropdownList.classList.contains('footer__list')
-        // ) {
+//       dropdownTitle.addEventListener('click', () => {
+//         // if (
+//         //   (dropdownList.classList.contains('footer__list') && window.innerWidth < TABLET) ||
+//         //   !dropdownList.classList.contains('footer__list')
+//         // ) {
 
-        // }
+//         // }
 
-        const contentHeight = dropdownContent.scrollHeight;
+//         const contentHeight = dropdownContent.scrollHeight;
 
-        if (dropdownList.classList.contains('active')) {
-          dropdownContent.style.height = '0px';
-        } else {
-          dropdownContent.style.height = `${contentHeight}px`;
-        }
+//         if (dropdownList.classList.contains('active')) {
+//           dropdownContent.style.height = '0px';
+//         } else {
+//           dropdownContent.style.height = `${contentHeight}px`;
+//         }
 
-        dropdownList.classList.toggle('active');
-      });
+//         dropdownList.classList.toggle('active');
+//       });
+//     });
+//   }
+// }
 
-      dropdownTitle.addEventListener('touchstart', () => {
-        // if (
-        //   (dropdownList.classList.contains('footer__list') && window.innerWidth < TABLET) ||
-        //   !dropdownList.classList.contains('footer__list')
-        // ) {
+$('.js-dropdown-list').each(function () {
+  const dropdownTitle = $(this).find('.js-dropdown-title');
+  const dropdownContent = $(this).find('.js-dropdown-content');
 
-        // }
-
-        const contentHeight = dropdownContent.scrollHeight;
-
-        if (dropdownList.classList.contains('active')) {
-          dropdownContent.style.height = '0px';
-        } else {
-          dropdownContent.style.height = `${contentHeight}px`;
-        }
-
-        dropdownList.classList.toggle('active');
-      });
-    });
-  }
-}
+  dropdownTitle.on('click touchstart', () => {
+    dropdownContent.slideToggle();
+  });
+});
 
 function addActiveFirstStepsOnLoad() {
   const dropdownLists = document.querySelectorAll('.js-dropdown-list');
@@ -129,7 +119,7 @@ function toggleActive() {
 
 document.addEventListener('DOMContentLoaded', () => {
   addActiveFirstStepsOnLoad();
-  clickFullText();
+  // clickFullText();
   clickCalculatorBtn();
   openAsideMenuProfile();
   toggleAddOrganization();
@@ -137,5 +127,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('resize', () => {
-  clickFullText();
+  // clickFullText();
 });

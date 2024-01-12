@@ -1178,7 +1178,6 @@ svg {
 .calc-result__item-content,
 .calc-result__item-btn svg:last-child,
 .calc-result__item.active .calc-result__item-btn svg:first-child,
-.subsidies__item-content,
 .subsidies__item-btn svg:last-child,
 .subsidies__item.active .subsidies__item-btn svg:first-child,
 .func-public-repres__item-content,
@@ -10398,10 +10397,9 @@ fieldset {
 
 .subsidies__item-content {
   padding-left: 48px;
-  height: 0;
-  transition: visibility 0.2s ease, opacity 0.2s ease, height 0.2s ease, padding 0.2s ease;
   -moz-column-gap: 20px;
        column-gap: 20px;
+  display: none;
 }
 
 .subsidies__item-desc {
@@ -15808,10 +15806,7 @@ fieldset {
   .footer__list-items {
     row-gap: 12px;
     padding-top: 0;
-    height: 0;
-    transition: visibility 0.2s ease, opacity 0.2s ease, height 0.2s ease, padding 0.2s ease;
-    overflow: hidden;
-    opacity: 0;
+    display: none;
   }
 
   .footer__list-title {
