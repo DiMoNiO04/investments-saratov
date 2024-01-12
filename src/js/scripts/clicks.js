@@ -27,6 +27,25 @@ function clickFullText() {
 
         dropdownList.classList.toggle('active');
       });
+
+      dropdownTitle.addEventListener('touchstart', () => {
+        // if (
+        //   (dropdownList.classList.contains('footer__list') && window.innerWidth < TABLET) ||
+        //   !dropdownList.classList.contains('footer__list')
+        // ) {
+
+        // }
+
+        const contentHeight = dropdownContent.scrollHeight;
+
+        if (dropdownList.classList.contains('active')) {
+          dropdownContent.style.height = '0px';
+        } else {
+          dropdownContent.style.height = `${contentHeight}px`;
+        }
+
+        dropdownList.classList.toggle('active');
+      });
     });
   }
 }
