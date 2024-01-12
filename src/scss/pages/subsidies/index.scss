@@ -112,7 +112,6 @@
     position: absolute;
     top: 40px;
     right: 32px;
-    z-index: 4;
 
     svg {
       @include sizes(12.4px, 12.4px);
@@ -151,13 +150,12 @@
   }
 
   &__item-content {
-    // @extend %hidden;
+    @extend %hidden;
     @extend %flexStartBetween;
     padding-left: 48px;
-    // height: 0;
-    // transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
+    height: 0;
+    transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
     column-gap: 20px;
-    display: none;
   }
 
   &__item-desc {

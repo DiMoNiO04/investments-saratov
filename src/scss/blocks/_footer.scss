@@ -239,28 +239,21 @@
 
       &.active {
         .footer__list-title {
-          padding-bottom: 12px;
-
           svg {
             transform: rotate(180deg);
           }
-        }
-
-        .footer__list-items {
-          overflow: visible;
-          opacity: 1;
         }
       }
     }
 
     &__list-items {
       row-gap: 12px;
-      padding-top: 0;
       display: none;
-      // height: 0;
-      // transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
-      // overflow: hidden;
-      // opacity: 0;
+      padding-top: 12px;
+    }
+
+    &__item {
+      @include mb(12px);
     }
 
     &__list-title {

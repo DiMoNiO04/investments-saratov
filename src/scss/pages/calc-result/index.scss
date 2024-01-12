@@ -43,14 +43,6 @@
     position: relative;
 
     &.active {
-      .calc-result__item-title {
-        padding-bottom: 20px;
-      }
-
-      .calc-result__item-content {
-        @extend %visible;
-      }
-
       .calc-result__item-btn {
         svg {
           &:first-child {
@@ -111,17 +103,15 @@
   }
 
   &__item-content {
-    @extend %hidden;
-    @extend %flexColumn;
+    display: none;
+    padding-top: 20px;
     padding-left: 48px;
-    height: 0;
-    transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
-    row-gap: 40px;
   }
 
   &__item-blocks {
     @extend %flexColumn;
     row-gap: 8px;
+    @include mb(40px);
   }
 
   &__item-block {
@@ -195,8 +185,8 @@
       line-height: 120%;
     }
 
-    &__item-content {
-      row-gap: 32px;
+    &__item-blocks {
+      @include mb(32px);
     }
 
     &__item-title {
@@ -237,7 +227,7 @@
     }
 
     &__item-content {
-      padding: 0;
+      padding-left: 0;
     }
 
     &__item-block {

@@ -36,14 +36,6 @@
     position: relative;
 
     &.active {
-      .steps-investor__item-title {
-        padding-bottom: 20px;
-      }
-
-      .steps-investor__item-content {
-        @extend %visible;
-      }
-
       .steps-investor__item-btn {
         svg {
           &:first-child {
@@ -104,10 +96,9 @@
   }
 
   &__item-content {
-    @extend %hidden;
+    display: none;
     padding-left: 48px;
-    height: 0;
-    transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
+    padding-top: 20px;
   }
 
   &__item-txt {

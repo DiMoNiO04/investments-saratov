@@ -1,59 +1,26 @@
 import { fadeIn } from '../modules/animation.js';
-// import { TABLET } from '../modules/consts.js';
-
-// function clickFullText() {
-//   if (document.querySelector('.js-dropdown-list')) {
-//     const dropdownLists = document.querySelectorAll('.js-dropdown-list');
-
-//     dropdownLists.forEach((dropdownList) => {
-//       const dropdownTitle = dropdownList.querySelector('.js-dropdown-title');
-//       const dropdownContent = dropdownList.querySelector('.js-dropdown-content');
-
-//       dropdownTitle.addEventListener('click', () => {
-//         // if (
-//         //   (dropdownList.classList.contains('footer__list') && window.innerWidth < TABLET) ||
-//         //   !dropdownList.classList.contains('footer__list')
-//         // ) {
-
-//         // }
-
-//         const contentHeight = dropdownContent.scrollHeight;
-
-//         if (dropdownList.classList.contains('active')) {
-//           dropdownContent.style.height = '0px';
-//         } else {
-//           dropdownContent.style.height = `${contentHeight}px`;
-//         }
-
-//         dropdownList.classList.toggle('active');
-//       });
-//     });
-//   }
-// }
+import { MOB } from '../modules/consts.js';
 
 $('.js-dropdown-list').each(function () {
+  const dropdownList = $(this);
   const dropdownTitle = $(this).find('.js-dropdown-title');
   const dropdownContent = $(this).find('.js-dropdown-content');
 
-  dropdownTitle.on('click touchstart', () => {
-    dropdownContent.slideToggle();
+  dropdownTitle.on('click', () => {
+    if (dropdownList.hasClass('footer__list') && $(window).width() > MOB) {
+      return;
+    }
+    if (dropdownList.parent().parent()) dropdownContent.slideToggle();
+    dropdownList.toggleClass('active');
   });
 });
 
-function addActiveFirstStepsOnLoad() {
-  const dropdownLists = document.querySelectorAll('.js-dropdown-list');
-
-  let isFind = false;
-  dropdownLists.forEach((dropdownList) => {
-    if (dropdownList.classList.contains('steps-investor__item') && !isFind) {
-      const dropdownContent = dropdownList.querySelector('.js-dropdown-content');
-      const contentHeight = dropdownContent.scrollHeight;
-      dropdownContent.style.height = `${contentHeight}px`;
-      dropdownList.classList.add('active');
-      isFind = true;
-    }
+$(document).ready(() => {
+  $('.js-dropdown-list.active').each(function () {
+    const dropdownContent = $(this).find('.js-dropdown-content');
+    dropdownContent.slideDown();
   });
-}
+});
 
 function clickCalculatorBtn() {
   const btn = document.querySelector('.js-calc-items');
@@ -118,14 +85,8 @@ function toggleActive() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  addActiveFirstStepsOnLoad();
-  // clickFullText();
   clickCalculatorBtn();
   openAsideMenuProfile();
   toggleAddOrganization();
   toggleActive();
-});
-
-window.addEventListener('resize', () => {
-  // clickFullText();
 });
