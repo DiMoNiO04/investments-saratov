@@ -74,12 +74,33 @@
 
     &__block {
       row-gap: 14px;
+      min-width: 580px;
+    }
+
+    &__block--graf {
+      align-items: center;
+    }
+
+    &__block-tit {
+      width: 100%;
+    }
+
+    &__block-items {
+      row-gap: 36px;
+    }
+
+    &__block-items li b {
+      font-size: 40px;
     }
 
     &__block-tit {
       br {
         display: none;
       }
+    }
+
+    &__block-grafic {
+      width: 696px;
     }
   }
 }
@@ -107,7 +128,13 @@
 
     &__block {
       padding: 24px;
-      row-gap: 24px;
+      row-gap: 20px;
+    }
+
+    &__block--graf {
+      .agriculture__block-tit {
+        margin-bottom: 8px;
+      }
     }
 
     &__block-items {
@@ -125,6 +152,20 @@
     &__title {
       font-size: 24px;
       margin-bottom: 32px;
+    }
+
+    &__block {
+      min-width: 100%;
+    }
+
+    &__block-grafic {
+      width: 100%;
+    }
+
+    &__block--graf {
+      .agriculture__block-tit {
+        margin-bottom: 0;
+      }
     }
 
     &__items {

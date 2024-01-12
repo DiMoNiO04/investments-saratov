@@ -15,7 +15,7 @@
 
   &__subtitle {
     p {
-      @include mb(8px);
+      @include mb(6px);
       @extend %mainTxt;
     }
   }

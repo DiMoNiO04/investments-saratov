@@ -37,6 +37,14 @@
     &__items {
       row-gap: 20px;
     }
+
+    &__image {
+      height: 200px;
+    }
+
+    &__content {
+      min-height: 180px;
+    }
   }
 }
 

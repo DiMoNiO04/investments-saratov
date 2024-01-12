@@ -28,13 +28,18 @@
         <div class="agriculture__img">
           <img src="@img/region-statistics/agriculture.png" alt="" />
         </div>
-        <div class="agriculture__block">
+        <div class="agriculture__block agriculture__block--graf">
           <h3 class="agriculture__block-tit">
             Структура почв Саратовской <br />
             области, тыс. га
           </h3>
           <div class="agriculture__block-grafic">
-            <img src="@img/region-statistics/agriculture-graf.svg" alt="" />
+            <picture>
+              <source media="(min-width: 1920px)" srcset="@img/region-statistics/agriculture-graf.svg" />
+              <source media="(min-width: 768px)" srcset="@img/region-statistics/agriculture-graf-2.svg" />
+              <source media="(max-width: 767px)" srcset="@img/region-statistics/agriculture-graf-mob.svg" />
+              <img src="@img/region-statistics/agriculture-graf.svg" alt="" />
+            </picture>
           </div>
         </div>
         <div class="agriculture__block">

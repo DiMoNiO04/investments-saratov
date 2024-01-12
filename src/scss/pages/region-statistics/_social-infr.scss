@@ -39,6 +39,8 @@
     column-gap: 24px;
 
     li {
+      word-break: break-word;
+
       b {
         @extend %numText;
         margin-bottom: 8px;
@@ -89,12 +91,25 @@
       justify-content: space-between;
 
       li {
-        hyphens: auto;
+        hyphens: none;
+        word-break: normal;
       }
     }
 
     &__block {
       min-width: 100%;
+
+      &:nth-child(1) li {
+        width: 25%;
+      }
+
+      &:nth-child(2) li {
+        width: 33.3%;
+      }
+
+      &:nth-child(3) li {
+        width: 50%;
+      }
     }
 
     &__tit {
@@ -111,6 +126,16 @@
 
     &__block {
       padding: 32px 24px;
+
+      &:nth-child(n) li {
+        width: 100%;
+      }
+
+      &:nth-child(3) {
+        .social-infr__items {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
     }
 
     &__icon {
@@ -124,6 +149,18 @@
     &__items {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
+      li {
+        hyphens: auto;
+      }
+
+      li b {
+        font-size: 28px;
+      }
+    }
+
+    &__tit {
+      margin-bottom: 24px;
     }
   }
 }

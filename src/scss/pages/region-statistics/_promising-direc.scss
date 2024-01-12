@@ -82,7 +82,7 @@
 @media screen and (max-width: $laptop) {
   .promising-direc {
     &__blocks-item {
-      row-gap: 24px;
+      row-gap: 28px;
     }
   }
 }
@@ -99,6 +99,7 @@
 
     &__blocks-item {
       padding: 24px;
+      row-gap: 24px;
       width: calc(50% - 20px / 2);
       justify-content: flex-start;
 

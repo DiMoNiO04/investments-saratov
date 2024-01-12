@@ -8927,7 +8927,10 @@ fieldset {
        column-gap: 20px;
 }
 
-.region-statistics__title,
+.region-statistics__title {
+  padding-right: 28px;
+}
+
 .region-statistics__subtitle {
   padding-right: 20px;
 }
@@ -8950,7 +8953,7 @@ fieldset {
 }
 
 .fertile-land__subtitle p:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .fertile-land__img img {
@@ -8998,6 +9001,10 @@ fieldset {
        column-gap: 24px;
 }
 
+.social-infr__items li {
+  word-break: break-word;
+}
+
 .social-infr__items li b {
   margin-bottom: 8px;
   display: block;
@@ -9016,6 +9023,8 @@ fieldset {
   background-color: #ffffff;
   padding: 32px;
   width: calc(25% - 15px);
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 
 .labor-resources__picture .picture-text__items li b {
@@ -10360,6 +10369,7 @@ fieldset {
   position: absolute;
   top: 40px;
   right: 32px;
+  z-index: 4;
 }
 
 .subsidies__item-btn svg {
@@ -14143,6 +14153,11 @@ fieldset {
     font-size: 32px;
   }
 
+  .region__item-chart__pic picture {
+    display: block;
+    width: calc(100% + 32px);
+  }
+
   .region__item-stat__text {
     line-height: 130%;
   }
@@ -14571,7 +14586,7 @@ fieldset {
   }
 
   .labor-resources__picture .picture-text__content {
-    max-width: calc(100% - 98px);
+    max-width: calc(100% - 96px);
   }
 
   .labor-resources__picture .picture-text__items li {
@@ -14671,14 +14686,35 @@ fieldset {
 
   .agriculture__block {
     row-gap: 14px;
+    min-width: 580px;
+  }
+
+  .agriculture__block--graf {
+    align-items: center;
+  }
+
+  .agriculture__block-tit {
+    width: 100%;
+  }
+
+  .agriculture__block-items {
+    row-gap: 36px;
+  }
+
+  .agriculture__block-items li b {
+    font-size: 40px;
   }
 
   .agriculture__block-tit br {
     display: none;
   }
 
+  .agriculture__block-grafic {
+    width: 696px;
+  }
+
   .promising-direc__blocks-item {
-    row-gap: 24px;
+    row-gap: 28px;
   }
 
   .plan-projec__desc p {
@@ -15286,12 +15322,28 @@ fieldset {
     row-gap: 20px;
   }
 
+  .contests__image {
+    height: 200px;
+  }
+
+  .contests__content {
+    min-height: 180px;
+  }
+
   .contests-page .header-top__socials {
     display: flex;
   }
 
   .events__items {
     row-gap: 20px;
+  }
+
+  .events__image {
+    height: 200px;
+  }
+
+  .events__content {
+    min-height: 180px;
   }
 
   .events-page .header-top__socials {
@@ -15312,6 +15364,14 @@ fieldset {
 
   .news-page__items {
     row-gap: 20px;
+  }
+
+  .news-page__image {
+    height: 200px;
+  }
+
+  .news-page__content {
+    min-height: 180px;
   }
 
   .article .header-top__socials {
@@ -16474,6 +16534,14 @@ fieldset {
     grid-template-columns: 1fr 1fr;
   }
 
+  .region__item-chart__pic picture {
+    width: 100%;
+  }
+
+  .region__item-chart__pic {
+    height: 100%;
+  }
+
   .region__text {
     text-align: start;
     max-width: 100%;
@@ -17469,12 +17537,25 @@ fieldset {
   }
 
   .social-infr__items li {
-    -webkit-hyphens: auto;
-            hyphens: auto;
+    -webkit-hyphens: none;
+            hyphens: none;
+    word-break: normal;
   }
 
   .social-infr__block {
     min-width: 100%;
+  }
+
+  .social-infr__block:nth-child(1) li {
+    width: 25%;
+  }
+
+  .social-infr__block:nth-child(2) li {
+    width: 33.3%;
+  }
+
+  .social-infr__block:nth-child(3) li {
+    width: 50%;
   }
 
   .social-infr__tit {
@@ -17632,7 +17713,11 @@ fieldset {
 
   .agriculture__block {
     padding: 24px;
-    row-gap: 24px;
+    row-gap: 20px;
+  }
+
+  .agriculture__block--graf .agriculture__block-tit {
+    margin-bottom: 8px;
   }
 
   .agriculture__block-items {
@@ -17680,6 +17765,7 @@ fieldset {
 
   .promising-direc__blocks-item {
     padding: 24px;
+    row-gap: 24px;
     width: calc(50% - 10px);
     justify-content: flex-start;
   }
@@ -20575,10 +20661,6 @@ fieldset {
     height: 200px;
   }
 
-  .region__item-chart__pic {
-    height: 188px;
-  }
-
   .region__item-about {
     min-height: 200px;
   }
@@ -20618,6 +20700,11 @@ fieldset {
   .region__stat-one,
   .region__stat-two {
     flex: 0 1 auto;
+  }
+
+  .region__item-chart__pic picture {
+    display: block;
+    width: 100%;
   }
 
   .region__item-chart-title {
@@ -21435,6 +21522,14 @@ fieldset {
     padding: 32px 24px;
   }
 
+  .social-infr__block:nth-child(n) li {
+    width: 100%;
+  }
+
+  .social-infr__block:nth-child(3) .social-infr__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .social-infr__icon {
     width: 64px;
     height: 64px;
@@ -21448,6 +21543,19 @@ fieldset {
   .social-infr__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-infr__items li {
+    -webkit-hyphens: auto;
+            hyphens: auto;
+  }
+
+  .social-infr__items li b {
+    font-size: 28px;
+  }
+
+  .social-infr__tit {
+    margin-bottom: 24px;
   }
 
   .labor-resources__picture .picture-text__content {
@@ -21465,6 +21573,7 @@ fieldset {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
     margin-bottom: 16px;
+    grid-gap: 16px;
   }
 
   .labor-resources__picture .picture-text__img {
@@ -21630,6 +21739,18 @@ fieldset {
   .agriculture__title {
     font-size: 24px;
     margin-bottom: 32px;
+  }
+
+  .agriculture__block {
+    min-width: 100%;
+  }
+
+  .agriculture__block-grafic {
+    width: 100%;
+  }
+
+  .agriculture__block--graf .agriculture__block-tit {
+    margin-bottom: 0;
   }
 
   .agriculture__items {
