@@ -36,12 +36,11 @@ body {
   }
 }
 
-main:not(.main-page) {
+main:not(.main-page):not(.pers-cab-page) {
   padding-top: 160px;
 }
 
-main.authentication-page,
-main.pers-cab-page {
+main.authentication-page {
   padding-top: 168px;
 
   @media screen and (max-width: $laptop) {
@@ -67,7 +66,7 @@ main.pers-cab-page {
   }
 
   main.pers-cab-page {
-    padding-top: 120px;
+    padding-top: 86px;
   }
 }
 

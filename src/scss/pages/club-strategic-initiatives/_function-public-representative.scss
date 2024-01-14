@@ -35,14 +35,6 @@
     position: relative;
 
     &.active {
-      .func-public-repres__item-title {
-        padding-bottom: 20px;
-      }
-
-      .func-public-repres__item-content {
-        @extend %visible;
-      }
-
       .func-public-repres__item-btn {
         svg {
           &:first-child {
@@ -103,12 +95,14 @@
   }
 
   &__item-content {
-    @extend %hidden;
-    @extend %flexStartBetween;
+    display: flex;
+    padding-top: 20px;
     padding-left: 48px;
-    height: 0;
-    transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
     column-gap: 20px;
+  }
+
+  &__item-block {
+    display: none;
   }
 
   &__item-desc {
@@ -234,7 +228,8 @@
     }
 
     &__item-content {
-      padding: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &__item-btn {

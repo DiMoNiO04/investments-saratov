@@ -12,12 +12,19 @@
     background-color: $white;
     border-radius: 4px;
     width: 970px;
+    margin-top: 168px;
   }
 
   &__form,
-  &__content {
+  &__content,
+  &__content-container {
     @extend %flexColumn;
     row-gap: 40px;
+  }
+
+  &__content-container {
+    @include showDesc();
+    max-width: 1620px;
   }
 
   &__title {
@@ -373,6 +380,7 @@
 
     &__content {
       flex-basis: 880px;
+      margin-top: 148px;
     }
 
     &__fieldset-linkin {
@@ -444,6 +452,18 @@
   .account {
     margin-bottom: 100px;
 
+    &__content-container {
+      @include showMob();
+    }
+
+    &__content {
+      margin-top: 128px;
+    }
+
+    &__content-container {
+      padding: 0 40px;
+    }
+
     &__content {
       flex-basis: 100%;
       padding: 0;
@@ -451,7 +471,8 @@
     }
 
     &__form,
-    &__content {
+    &__content,
+    &__content-container {
       row-gap: 32px;
     }
 
@@ -544,6 +565,18 @@
       }
     }
   }
+
+  [data-content-block='appeals-chat'] {
+    margin-top: 88px;
+
+    .account__content-container {
+      padding: 0;
+    }
+    .account__back,
+    .account__title {
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: $mob) {
@@ -552,6 +585,14 @@
 
     &__fieldset-input {
       flex-basis: 100%;
+    }
+
+    &__content {
+      margin: 0;
+    }
+
+    &__content-container {
+      padding: 0 16px;
     }
 
     &__title {

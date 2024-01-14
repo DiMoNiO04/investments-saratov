@@ -43,16 +43,10 @@
 
 @media screen and (max-width: $tablet) {
   .chat .simplebar-track.simplebar-vertical {
-    margin-right: -24px;
+    margin-right: 6px;
   }
 
   .header .simplebar-track.simplebar-vertical {
     right: -16px;
-  }
-}
-
-@media screen and (max-width: $mob) {
-  .chat .simplebar-track.simplebar-vertical {
-    margin-right: -10px;
   }
 }

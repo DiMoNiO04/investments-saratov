@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="styles.css?_v=20240114125335"> -->
+    <title>Пример чата</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .chat-container {
+        max-width: 400px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .chat-box {
+        height: 200px;
+        overflow-y: scroll;
+      }
+
+      .message {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .received {
+        background-color: #e8e8e8;
+      }
+
+      .sent {
+        background-color: #d9f4f4;
+      }
+
+      .message-input {
+        width: calc(100% - 80px);
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      .send-button {
+        width: 60px;
+        padding: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="chat-container">
+      <div class="chat-box">
+        <div class="message received">Привет! Как дела?</div>
+        <div class="message sent">Привет! Всё отлично, спасибо!</div>
+        <div class="message received">Это замечательно!</div>
+      </div>
+      <input type="text" placeholder="Введите сообщение..." class="message-input" />
+      <button class="send-button">Отправить</button>
+    </div>
+  </body>
+</html>

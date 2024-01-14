@@ -82,14 +82,6 @@
     position: relative;
 
     &.active {
-      .subsidies__item-title {
-        padding-bottom: 20px;
-      }
-
-      .subsidies__item-content {
-        @extend %visible;
-      }
-
       .subsidies__item-btn {
         svg {
           &:first-child {
@@ -150,12 +142,14 @@
   }
 
   &__item-content {
-    @extend %hidden;
+    padding-top: 20px;
     @extend %flexStartBetween;
     padding-left: 48px;
-    height: 0;
-    transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
     column-gap: 20px;
+  }
+
+  &__item-block {
+    display: none;
   }
 
   &__item-desc {

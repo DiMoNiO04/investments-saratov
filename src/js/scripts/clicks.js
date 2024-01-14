@@ -1,5 +1,5 @@
 import { fadeIn } from '../modules/animation.js';
-import { MOB } from '../modules/consts.js';
+import { MOB, TABLET } from '../modules/consts.js';
 
 $('.js-dropdown-list').each(function () {
   const dropdownList = $(this);
@@ -7,7 +7,10 @@ $('.js-dropdown-list').each(function () {
   const dropdownContent = $(this).find('.js-dropdown-content');
 
   dropdownTitle.on('click', () => {
-    if (dropdownList.hasClass('footer__list') && $(window).width() > MOB) {
+    if (dropdownList.parent().parent().parent().hasClass('simplebar-content-wrapper') && $(window).width() >= MOB) {
+      return;
+    }
+    if (dropdownList.parent().parent().parent().hasClass('footer__container') && $(window).width() >= TABLET) {
       return;
     }
     if (dropdownList.parent().parent()) dropdownContent.slideToggle();

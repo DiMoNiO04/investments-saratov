@@ -5,6 +5,7 @@
   width: 311px;
   flex-shrink: 0;
   height: fit-content;
+  margin-top: 168px;
 
   &__items {
     &:nth-child(2) {
@@ -80,6 +81,7 @@
 @media screen and (max-width: $laptop) {
   .account-menu {
     flex-basis: 280px;
+    margin-top: 148px;
   }
 }
 
@@ -95,6 +97,7 @@
     overflow: scroll;
     transform: translateX(-100%);
     transition: $transitionTransform;
+    margin: 0;
 
     &.active {
       transform: translateX(0);

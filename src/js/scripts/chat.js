@@ -1,23 +1,32 @@
 import { TABLET } from '../modules/consts.js';
 
-const menuItems = document.querySelectorAll('.chat__menu-item');
 const menu = document.querySelector('.chat__left');
 const content = document.querySelector('.chat__content');
 const btnBack = document.querySelector('.chat__content-button');
+const accountBtns = document.querySelectorAll('.account__table-btn');
 
 let scrollbar;
 
-if (document.querySelector('.chat__content-blocks')) {
-  const outerBlock = document.querySelector('.chat__content-blocks');
+if (document.querySelector('.chat__content-cont')) {
+  const outerBlock = document.querySelector('.chat__content-cont');
   scrollbar = new SimpleBar(outerBlock);
 }
 
 function scrollToNewSms() {
-  const newBlock = document.querySelector('.chat__content-new');
+  const newBlocks = document.querySelectorAll('.chat__content-block');
+  const newBlock = newBlocks[newBlocks.length - 1];
 
   const distance = newBlock.offsetTop;
   scrollbar.getScrollElement().scrollTo({
     top: distance,
+  });
+}
+
+function clickAccountBtn() {
+  accountBtns.forEach((accountBtn) => {
+    accountBtn.addEventListener('click', () => {
+      scrollToNewSms();
+    });
   });
 }
 
@@ -26,38 +35,13 @@ function clickBtnBack() {
     btnBack.addEventListener('click', () => {
       menu.classList.remove('--hide');
       content.classList.remove('--active');
-      menuItems.forEach((it) => it.classList.remove('--active'));
     });
-  }
-}
-
-function clickItems() {
-  menuItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      menuItems.forEach((it) => it.classList.remove('--active'));
-      item.classList.add('--active');
-
-      if (window.outerWidth < TABLET) {
-        menu.classList.add('--hide');
-        content.classList.add('--active');
-      }
-
-      scrollToNewSms();
-    });
-  });
-}
-
-function removeActiveItems() {
-  if (window.outerWidth < TABLET) {
-    menuItems.forEach((menuItem) => menuItem.classList.remove('--active'));
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.chat')) {
     clickBtnBack();
-    clickItems();
-    removeActiveItems();
-    scrollToNewSms();
+    clickAccountBtn();
   }
 });

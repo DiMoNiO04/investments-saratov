@@ -4,107 +4,10 @@
   overflow: hidden;
   align-items: flex-end;
 
-  &__menu {
-    width: 320px;
-    flex-shrink: 0;
-  }
-
-  &__left {
-    .account__back,
-    .account__titles {
-      margin-bottom: 40px;
-    }
-  }
-
-  &__menu-name,
-  &__menu-theme,
-  &__menu-date,
-  &__content-name {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  &__menu-input {
-    height: 86px;
-    padding: 20px;
-    border-radius: 12px 0 0 0;
-    border: 1px solid $inputGreyStroke;
-  }
-
-  &__menu-list {
-    border-radius: 0 0 0 12px;
-    border-bottom: 1px solid $inputGreyStroke;
-    border-left: 1px solid $inputGreyStroke;
-    border-right: 1px solid $inputGreyStroke;
-    padding: 20px 0 20px 20px;
-  }
-
-  &__menu-items {
-    padding-right: 20px;
-    height: 537px;
-  }
-
-  &__menu-item {
-    padding: 16px;
-    border-radius: 4px;
-    border: 1px solid $inputGreyStroke;
-    cursor: pointer;
-
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
-
-    &.--active {
-      border-color: transparent;
-      background-color: #e8f0ff;
-    }
-  }
-
-  &__menu-dates {
-    @extend %flexCenterBetween;
-    margin-bottom: 8px;
-  }
-
-  &__menu-date,
-  &__menu-time {
-    @extend %secondaryTextRegular12;
-  }
-
-  &__menu-time {
-    color: $greyTxt;
-  }
-
-  &__menu-theme {
-    @extend %semiboldTextRegular;
-    margin-bottom: 2px;
-  }
-
-  &__menu-desc {
-    @extend %flexCenterBetween;
-    column-gap: 10px;
-  }
-
-  &__menu-name {
-    @extend %secondaryTextRegular;
-  }
-
-  &__menu-count {
-    @include sizes(20px, 20px);
-    @extend %flexCenter;
-    border-radius: 50%;
-    background-color: $bluePrimary;
-    flex-shrink: 0;
-
-    span {
-      color: $white;
-      font-size: 12px;
-      line-height: 100%;
-    }
-  }
-
   &__content {
-    width: 570px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid $inputGreyStroke;
   }
 
   &__content-theme {
@@ -118,12 +21,8 @@
   }
 
   &__content-theme {
-    height: 86px;
-    padding: 20px;
-    border-radius: 0px 12px 0 0;
+    padding: 22px 32px;
     border-bottom: 1px solid $inputGreyStroke;
-    border-top: 1px solid $inputGreyStroke;
-    border-right: 1px solid $inputGreyStroke;
   }
 
   &__content-title {
@@ -136,11 +35,7 @@
   }
 
   &__content-chat {
-    height: 578px;
-    padding: 24px 0 20px 20px;
-    border-radius: 0 0 12px 0;
-    border-bottom: 1px solid $inputGreyStroke;
-    border-right: 1px solid $inputGreyStroke;
+    padding: 20px 0 20px 32px;
   }
 
   &__content-form {
@@ -193,22 +88,60 @@
 
   &__content-blocks {
     @extend %flexColumn;
-    margin-bottom: 24px;
+    padding-right: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__content-cont {
     height: 460px;
-    padding-right: 20px;
+    margin-bottom: 28px;
   }
 
   &__content-block {
-    padding: 12px;
+    @include mb(16px);
+
+    &--admin {
+      .chat__content-txts {
+        background-color: #f5f6f6;
+      }
+    }
+  }
+
+  &__content-dates {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  &__content-txts {
+    padding: 20px;
     border-radius: 4px;
+    background-color: #e8f0ff;
+    width: fit-content;
+  }
 
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
+  &__content-author {
+    color: #1e1e1e;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 8px;
+  }
 
-    &.--user {
-      background-color: #e8f0ff;
-    }
+  &__content-txt {
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  &__content-date,
+  &__content-time {
+    color: $greyTxt;
+    font-size: 12px;
+    line-height: 130%;
   }
 
   &__content-new {
@@ -234,131 +167,73 @@
     color: $greyTxt;
   }
 
-  &__content-block-name,
+  &__content-block-author,
   &__content-block-text {
     font-size: 14px;
     line-height: 130%;
   }
 
-  &__content-block-name {
+  &__content-block-author {
     font-weight: 500;
-  }
-}
-
-@media screen and (max-width: $laptop) {
-  .chat {
-    &__content {
-      width: 480px;
-    }
   }
 }
 
 @media screen and (max-width: $tablet) {
   .chat {
-    overflow: visible;
-    background-color: transparent;
-
     &__content {
-      display: none;
-
-      &.--active {
-        display: block;
-      }
-    }
-
-    &__left {
-      .account__back {
-        margin-bottom: 32px;
-      }
-
-      .account__titles {
-        margin-bottom: 24px;
-      }
-
-      &.--hide {
-        display: none;
-      }
-    }
-
-    &__menu,
-    &__left,
-    &__content {
-      width: 100%;
-    }
-
-    &__menu-input,
-    &__menu-list {
-      padding: 0;
-      border: 0;
-      height: auto;
       border-radius: 0;
-    }
-
-    &__menu-list {
-      margin-top: 24px;
-    }
-
-    &__menu-items {
-      height: 100%;
-      padding: 0;
     }
 
     &__content-theme {
       padding: 24px 40px;
-      height: auto;
-      border: 0;
-      border-radius: 0;
+    }
+
+    &__content-chat {
       position: fixed;
-      z-index: 2;
-      left: 0;
-      top: 88px;
+      background: white;
+      height: calc(100% - 250px);
       width: 100%;
-      border-top: 1px solid $inputGreyStroke;
-      border-bottom: 1px solid $inputGreyStroke;
-      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      padding-left: 40px;
+    }
+
+    &__content-cont {
+      height: 100%;
+    }
+
+    &__content-blocks {
+      padding-right: 40px;
+    }
+
+    &__content-form {
+      width: calc(100% - 80px);
+      position: fixed;
+      bottom: 20px;
     }
 
     &__content-button {
       display: block;
-    }
-
-    &__content-chat {
-      padding: 0;
-      border: 0;
-      border-radius: 0;
-      height: auto;
-      margin-top: 64px;
-    }
-
-    &__content-new {
-      div {
-        font-size: 12px;
-      }
-    }
-
-    &__content-form {
-      position: fixed;
-      bottom: 30px;
-      margin: 0;
-      width: calc(100% - 80px);
-    }
-
-    &__content-blocks {
-      margin-bottom: 0;
-      height: calc(100vh - 120px - 80px - 90px);
-      padding: 0;
     }
   }
 }
 
 @media screen and (max-width: $mob) {
   .chat {
-    &__content-form {
-      width: calc(100% - 32px);
-    }
-
     &__content-theme {
       padding: 24px 16px;
+    }
+
+    &__content-chat {
+      padding-left: 16px;
+    }
+
+    &__content-blocks {
+      padding-right: 16px;
+    }
+
+    &__content-form {
+      width: calc(100% - 32px);
     }
   }
 }
