@@ -1,9 +1,5 @@
-import { TABLET } from '../modules/consts.js';
-
-const menu = document.querySelector('.chat__left');
-const content = document.querySelector('.chat__content');
-const btnBack = document.querySelector('.chat__content-button');
 const accountBtns = document.querySelectorAll('.account__table-btn');
+const accountTableBtns = document.querySelectorAll('.account__table-btns .btn-def');
 
 let scrollbar;
 
@@ -22,26 +18,21 @@ function scrollToNewSms() {
   });
 }
 
-function clickAccountBtn() {
-  accountBtns.forEach((accountBtn) => {
-    accountBtn.addEventListener('click', () => {
+function scrollChatAfterClick(elements) {
+  elements.forEach((element) => {
+    element.addEventListener('click', () => {
       scrollToNewSms();
     });
   });
 }
 
-function clickBtnBack() {
-  if (window.outerWidth < TABLET) {
-    btnBack.addEventListener('click', () => {
-      menu.classList.remove('--hide');
-      content.classList.remove('--active');
-    });
-  }
+function clickAccountBtn() {
+  scrollChatAfterClick(accountBtns);
+  scrollChatAfterClick(accountTableBtns);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.chat')) {
-    clickBtnBack();
     clickAccountBtn();
   }
 });

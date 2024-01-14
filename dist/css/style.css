@@ -2497,7 +2497,7 @@ body.ov-hidden {
   overflow: hidden;
 }
 
-main:not(.main-page):not(.pers-cab-page) {
+main:not(.main-page):not(.pers-cab-page):not(.authentication-page) {
   padding-top: 160px;
 }
 
@@ -3669,7 +3669,7 @@ fieldset {
 }
 
 .breadcrumbs {
-  margin: 62px 0;
+  margin: 60px 0;
 }
 
 .breadcrumbs__container {
@@ -4427,7 +4427,7 @@ fieldset {
 }
 
 .map__item-link:hover {
-  border-bottom: transparent;
+  border-color: transparent;
 }
 
 .map--invest .map__items {
@@ -4954,7 +4954,7 @@ fieldset {
 }
 
 .header.active .header-menu {
-  height: 100vh;
+  height: calc(100vh - 88px);
 }
 
 .header--pers-cab {
@@ -4974,6 +4974,10 @@ fieldset {
 .header--pers-cab .header-bottom {
   padding: 12px 0;
   border-bottom: none;
+}
+
+.header--pers-cab .header-menu {
+  height: calc(100vh - 88px);
 }
 
 .header * {
@@ -5283,7 +5287,7 @@ fieldset {
   position: fixed;
   width: 100%;
   background-color: #ffffff;
-  height: 100%;
+  height: calc(100vh - 160px);
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -15840,6 +15844,10 @@ fieldset {
     left: 0;
   }
 
+  .header--pers-cab {
+    border-bottom: 1px solid var(--input-grey-stroke, #dee2e7);
+  }
+
   .header-top__container.hide .header-top__dropdown,
   .header-top__container.hide .header-bottom__btn {
     opacity: 0;
@@ -15973,7 +15981,7 @@ fieldset {
   .chat__content-chat {
     position: fixed;
     background: white;
-    height: calc(100% - 250px);
+    height: calc(100% - 240px);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16529,14 +16537,6 @@ fieldset {
 
   .account {
     margin-bottom: 100px;
-  }
-
-  .account__content-container .--desc {
-    display: none;
-  }
-
-  .account__content-container .--mob {
-    display: flex;
   }
 
   .account__content {
@@ -19613,12 +19613,12 @@ fieldset {
     font-size: 28px;
   }
 
-  main:not(.main-page) {
-    padding-top: 86px;
+  main.authentication-page {
+    padding-top: 112px;
   }
 
-  main.authentication-page {
-    padding-top: 110px;
+  main:not(.main-page):not(.pers-cab-page):not(.authentication-page) {
+    padding-top: 88px;
   }
 
   main.pers-cab-page {
@@ -20060,7 +20060,7 @@ fieldset {
   }
 
   .header-menu {
-    height: calc(100% - 88px);
+    height: calc(100vh - 88px);
     padding-top: 24px;
     padding-bottom: 32px;
   }
@@ -20703,12 +20703,20 @@ fieldset {
     margin-bottom: 80px;
   }
 
+  .account__content-container .--desc {
+    display: none;
+  }
+
+  .account__content-container .--mob {
+    display: flex;
+  }
+
   .account__fieldset-input {
     flex-basis: 100%;
   }
 
   .account__content {
-    margin: 0;
+    margin-top: 32px;
   }
 
   .account__content-container {
@@ -20861,6 +20869,10 @@ fieldset {
   .account__content--appeals .account__fieldset-file {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  [data-content-block=appeals-chat] {
+    margin-top: 0;
   }
 
   .similar-stories__title {

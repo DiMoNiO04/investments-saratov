@@ -83,7 +83,7 @@
     border-bottom: 1px solid #fff;
     transition: $transitionBorder;
     &:hover {
-      border-bottom: transparent;
+      border-color: transparent;
     }
   }
 }

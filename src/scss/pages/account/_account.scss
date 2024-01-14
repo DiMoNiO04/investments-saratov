@@ -452,10 +452,6 @@
   .account {
     margin-bottom: 100px;
 
-    &__content-container {
-      @include showMob();
-    }
-
     &__content {
       margin-top: 128px;
     }
@@ -583,12 +579,16 @@
   .account {
     margin-bottom: 80px;
 
+    &__content-container {
+      @include showMob();
+    }
+
     &__fieldset-input {
       flex-basis: 100%;
     }
 
     &__content {
-      margin: 0;
+      margin-top: 32px;
     }
 
     &__content-container {
@@ -746,5 +746,9 @@
         align-items: flex-start;
       }
     }
+  }
+
+  [data-content-block='appeals-chat'] {
+    margin-top: 0;
   }
 }

@@ -33,7 +33,7 @@
     }
 
     .header-menu {
-      height: 100vh;
+      height: calc(100vh - 88px);
     }
   }
 
@@ -56,6 +56,10 @@
     .header-bottom {
       padding: 12px 0;
       border-bottom: none;
+    }
+
+    .header-menu {
+      height: calc(100vh - 88px);
     }
   }
 
@@ -441,7 +445,7 @@
     position: fixed;
     width: 100%;
     background-color: $white;
-    height: 100%;
+    height: calc(100vh - 160px);
     padding-top: 60px;
     padding-bottom: 60px;
 
@@ -666,6 +670,10 @@
       }
     }
 
+    &--pers-cab {
+      border-bottom: 1px solid var(--input-grey-stroke, #dee2e7);
+    }
+
     &-top {
       &__container {
         &.hide {
@@ -846,7 +854,7 @@
     }
 
     &-menu {
-      height: calc(100% - 88px);
+      height: calc(100vh - 88px);
       padding-top: 24px;
       padding-bottom: 32px;
     }
