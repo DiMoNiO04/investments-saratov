@@ -59,7 +59,11 @@
       a {
         @include sizes(32px, 32px);
 
-        &:hover svg use {
+        &:hover svg path {
+          fill: $white;
+        }
+
+        &:hover svg rect {
           fill: $bluePrimary;
         }
       }
@@ -91,6 +95,10 @@
       svg {
         display: none;
         transition: $transitionTransform;
+        stroke: $white;
+        stroke-width: 1.5;
+        stroke-linejoin: round;
+        stroke-linecap: round;
       }
 
       &:not(:first-child) {
@@ -112,6 +120,45 @@
   &__item {
     @extend %secondaryTextRegular;
     color: $grey;
+
+    &.active {
+      span {
+        color: $bluePrimary;
+      }
+
+      svg {
+        transform: rotate(180deg);
+
+        path {
+          stroke: $bluePrimary;
+        }
+      }
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 4px;
+    }
+
+    svg {
+      display: none;
+      @include sizes(12px, 12px);
+    }
+  }
+
+  &__list-sub {
+    padding-left: 16px;
+    padding-top: 16px;
+    display: none;
+  }
+
+  &__list-sub {
+    display: block;
+  }
+
+  &__list-sub-item {
+    @include mb(12px);
   }
 
   &__bottom {
@@ -173,6 +220,14 @@
       &-hide {
         display: none;
       }
+    }
+
+    &__list-sub {
+      padding-top: 10px;
+    }
+
+    &__list-sub-item {
+      @include mb(10px);
     }
   }
 }
@@ -310,6 +365,26 @@
       flex-direction: column-reverse;
       align-items: flex-start;
       row-gap: 20px;
+    }
+
+    &__list-sub {
+      padding-top: 12px;
+    }
+
+    &__item {
+      span {
+        svg {
+          display: none;
+        }
+      }
+    }
+
+    &__list-sub-item {
+      @include mb(8px);
+    }
+
+    &__list-sub {
+      display: block;
     }
   }
 }

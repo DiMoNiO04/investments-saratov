@@ -1,3 +1,5 @@
+import { MOB, TABLET } from '../modules/consts.js';
+
 const header = document.querySelector('.header');
 
 const scrollHeader = () => {
@@ -143,3 +145,25 @@ if (header) {
     jsburger.addEventListener('click', myFunction);
   });
 }
+
+$('.header .js-submenu').each(function () {
+  const submenu = $(this);
+  const title = $(this).find('.js-submenu-title');
+  const content = $(this).find('.js-submenu-content');
+
+  if ($(window).width() > TABLET) {
+    title.on('mouseenter', () => {
+      content.stop(true, true).slideDown();
+      submenu.addClass('active');
+    });
+    submenu.on('mouseleave', () => {
+      content.stop(true, true).slideUp();
+      submenu.removeClass('active');
+    });
+  } else if ($(window).width() >= MOB) {
+    title.on('click', () => {
+      content.slideToggle();
+      submenu.toggleClass('active');
+    });
+  }
+});

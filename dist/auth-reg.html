@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Вход-Регистрация</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20240114210233" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240114210233" />
-  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css?_v=20240114210233" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20240114210233" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20240116201618" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240116201618" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css?_v=20240116201618" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20240116201618" />
 </head>
 
 
@@ -292,21 +292,36 @@
             <div class="footer__list-title js-dropdown-title">
               <p>О регионе</p>
               <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-list"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
-              <li class="footer__item">
-                <a href="#">Расположение</a>
-              </li>
-              <li class="footer__item">
-                <a href="#">Статистика региона</a>
-              </li>
-              <li class="footer__item">
-                <a href="#">Социально-экономическое развитие</a>
-              </li>
-              <li class="footer__item">
-                <a href="#">Стратегия</a>
+              <li class="footer__item js-submenu">
+                <span class="js-submenu-title">
+                  Общие сведения
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M9.75 5.5L6 9.25L2.25 5.5"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <ul class="footer__list-sub js-submenu-content">
+                  <li class="footer__list-sub-item">
+                    <a href="">Расположение</a>
+                  </li>
+                  <li class="footer__list-sub-item">
+                    <a href="">Статистика региона</a>
+                  </li>
+                  <li class="footer__list-sub-item">
+                    <a href="">Социально-экономическое развитие</a>
+                  </li>
+                  <li class="footer__list-sub-item">
+                    <a href="">Стратегия</a>
+                  </li>
+                </ul>
               </li>
               <li class="footer__item">
                 <a href="#">Истории успеха</a>
@@ -323,7 +338,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Инвестору</p>
               <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-list"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
@@ -363,33 +378,45 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Поддержка</p>
               <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-list"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
               <li class="footer__item">
                 <a href="#">Единое окно</a>
               </li>
-              <li class="footer__item">
-                <a href="#">Помощь инвестору</a>
-              </li>
-              <li class="footer__item">
-                <a href="#">Налоговые льготы</a>
-              </li>
-              <li class="footer__item">
-                <a href="#">Субсидии</a>
-              </li>
-              <li class="footer__item">
-                <a href="#">СПИК 2.0</a>
-              </li>
-              <li class="footer__item">
-                <a href="#">Инфраструктура поддержки</a>
-              </li>
-              <li class="footer__item">
-                <a href="#">Инвестиционный договор</a>
-              </li>
-              <li class="footer__item">
-                <a href="#">Региональный инвестстандарт</a>
+              <li class="footer__item js-submenu">
+                <span class="js-submenu-title">
+                  Меры поддрежки
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M9.75 5.5L6 9.25L2.25 5.5"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <ul class="footer__list-sub js-submenu-content">
+                  <li class="footer__list-sub-item">
+                    <a href="">Налоговые льготы</a>
+                  </li>
+                  <li class="footer__list-sub-item">
+                    <a href="">Субсидии</a>
+                  </li>
+                  <li class="footer__list-sub-item">
+                    <a href="">СПИК 2.0</a>
+                  </li>
+                  <li class="footer__list-sub-item">
+                    <a href="">Инфраструктура поддержки</a>
+                  </li>
+                  <li class="footer__list-sub-item">
+                    <a href="">Инвестиционный договор</a>
+                  </li>
+                  <li class="footer__list-sub-item">
+                    <a href="">Региональный инвестстандарт</a>
+                  </li>
+                </ul>
               </li>
               <li class="footer__item">
                 <a href="#">Калькулятор мер поддержки</a>
@@ -400,7 +427,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Площадки</p>
               <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-list"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
@@ -420,13 +447,13 @@
             <div class="footer__list-title footer__list-title-hide js-dropdown-title">
               <p>Инвестстандарт</p>
               <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-list"></use>
               </svg>
             </div>
             <div class="footer__list-title footer__list-title-hide js-dropdown-title">
               <p>Контакты</p>
               <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-list"></use>
               </svg>
             </div>
           </div>
@@ -439,7 +466,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Линия прямых обращений</p>
               <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-list"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
@@ -461,7 +488,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>ГЧП</p>
               <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-list"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
@@ -486,7 +513,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Документы</p>
               <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-list"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
@@ -505,7 +532,7 @@
             <div class="footer__list-title js-dropdown-title">
               <p>Медиа</p>
               <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-black-down-2"></use>
+                <use xlink:href="assets/img/icons/icons.svg#arrow-list"></use>
               </svg>
             </div>
             <ul class="footer__list-items js-dropdown-content">
@@ -1858,15 +1885,15 @@
     </div>
   </div>
 </div>
- <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20240114210233"></script>
-<script src="//code.jquery.com/jquery-1.10.2.js?_v=20240114210233"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20240114210233"></script>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20240114210233"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240114210233"></script>
-<script src="https://unpkg.com/@popperjs/core@2?_v=20240114210233"></script>
-<script src="https://unpkg.com/tippy.js@6?_v=20240114210233"></script>
+ <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20240116201618"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js?_v=20240116201618"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js?_v=20240116201618"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20240116201618"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240116201618"></script>
+<script src="https://unpkg.com/@popperjs/core@2?_v=20240116201618"></script>
+<script src="https://unpkg.com/tippy.js@6?_v=20240116201618"></script>
 
-<script src="js/main.js?_v=20240114210233"></script>
+<script src="js/main.js?_v=20240116201618"></script>
 
   </body>
 </html>
