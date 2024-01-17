@@ -106,6 +106,10 @@
       color: $blueHover;
     }
 
+    & > p {
+      color: $blueHover;
+    }
+
     & > svg {
       transform: rotate(180deg);
 
@@ -149,6 +153,7 @@
       column-gap: 4px;
       cursor: pointer;
       padding: 12px 20px;
+      color: $black;
     }
 
     svg {
@@ -163,7 +168,8 @@
   }
 
   &__list-sub-item {
-    @include mb(8px);
+    @include mb(12px);
+    font-size: 14px;
     a {
       font-size: 14px;
     }
@@ -584,12 +590,25 @@
   }
 
   .header-bottom__list-item:not(.header-top__social):hover {
-    & > a {
+    & > a,
+    & > p {
       color: rgba(255, 255, 255, 0.6);
     }
 
-    svg path {
+    & > svg path {
       stroke: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .header__list-sub {
+    svg path {
+      stroke: $black;
+    }
+
+    &:hover {
+      svg path {
+        stroke: $bluePrimary;
+      }
     }
   }
 

@@ -224,10 +224,16 @@
 
     &__list-sub {
       padding-top: 10px;
+      padding-left: 12px;
     }
 
     &__list-sub-item {
       @include mb(10px);
+      font-size: 14px;
+
+      a {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -380,7 +386,9 @@
     }
 
     &__list-sub-item {
-      @include mb(8px);
+      a {
+        line-height: 130%;
+      }
     }
 
     &__list-sub {
