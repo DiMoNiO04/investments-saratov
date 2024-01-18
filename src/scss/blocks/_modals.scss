@@ -163,6 +163,40 @@
     &--32 {
       row-gap: 32px;
     }
+
+    &--ppp {
+      & > li {
+        @extend %flexColumn;
+        row-gap: 16px;
+      }
+
+      b {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 130%;
+      }
+
+      ul {
+        @extend %flexColumn;
+        row-gap: 8px;
+
+        li {
+          @extend %regular16;
+          @extend %flexStart;
+          position: relative;
+          column-gap: 8px;
+
+          &::before {
+            @include sizes(24px, 20px);
+            content: '';
+            background: url('../assets/img/icons/bullet-big.svg');
+            flex-shrink: 0;
+            top: 0;
+            position: relative;
+          }
+        }
+      }
+    }
   }
 
   &__block {

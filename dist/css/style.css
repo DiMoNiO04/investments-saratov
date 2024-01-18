@@ -1474,6 +1474,8 @@ svg {
 .modal-bg__block-txts,
 .modal-bg__block-list,
 .modal-bg__block,
+.modal-bg__blocks--ppp ul,
+.modal-bg__blocks--ppp > li,
 .modal-bg__blocks,
 .modal-bg__titles,
 .modal-bg__wrapper .simplebar-content,
@@ -1548,6 +1550,7 @@ svg {
 .chat__content-theme,
 .modal-write__block,
 .modal-bg__block-list li,
+.modal-bg__blocks--ppp ul li,
 .article-content ul > li,
 .content ul > li {
   display: flex;
@@ -1916,6 +1919,7 @@ svg {
 .modal-bg__descs li,
 .modal-bg__block-txts p,
 .modal-bg__block-list li,
+.modal-bg__blocks--ppp ul li,
 .modal-bg__txt,
 .footer__info-title,
 .drag-area button span,
@@ -4738,6 +4742,36 @@ fieldset {
 
 .modal-bg__blocks--32 {
   row-gap: 32px;
+}
+
+.modal-bg__blocks--ppp > li {
+  row-gap: 16px;
+}
+
+.modal-bg__blocks--ppp b {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.modal-bg__blocks--ppp ul {
+  row-gap: 8px;
+}
+
+.modal-bg__blocks--ppp ul li {
+  position: relative;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.modal-bg__blocks--ppp ul li::before {
+  width: 24px;
+  height: 20px;
+  content: "";
+  background: url("../assets/img/icons/bullet-big.svg");
+  flex-shrink: 0;
+  top: 0;
+  position: relative;
 }
 
 .modal-bg__block {
@@ -11603,6 +11637,10 @@ fieldset {
   row-gap: 32px;
   padding: 24px 32px;
   height: 100%;
+}
+
+.ppp-proposals__cont {
+  display: none;
 }
 
 .ppp-proposals__tit {

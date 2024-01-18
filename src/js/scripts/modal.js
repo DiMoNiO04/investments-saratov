@@ -140,6 +140,28 @@ function renderModalInfrProject() {
   }
 }
 
+function renderModalPPPProject() {
+  const btnsDescInfractureProject = document.querySelectorAll('[data-modal-el="project-ppp"]');
+
+  if (btnsDescInfractureProject) {
+    btnsDescInfractureProject.forEach((btn) => {
+      btn.addEventListener('click', function (event) {
+        const modal = document.querySelector('[data-modal="project-ppp"]');
+        const mainDescCard = event.target.parentElement.parentElement;
+
+        const titleCard = mainDescCard.querySelector('.ppp-proposals__tit').textContent;
+        const titleModal = modal.querySelector('.modal-bg__title');
+        titleModal.textContent = titleCard;
+
+        const blocksCard = mainDescCard.querySelector('.ppp-proposals__cont').innerHTML;
+        const blocksModal = modal.querySelector('.modal-bg__blocks');
+        blocksModal.innerHTML = blocksCard;
+      });
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderModalInfrProject();
+  renderModalPPPProject();
 });
