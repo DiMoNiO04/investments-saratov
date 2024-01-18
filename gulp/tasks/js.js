@@ -13,7 +13,7 @@ export const js = () => {
     )
     .pipe(
       webpack({
-        mode: 'development',
+        mode: 'production',
         optimization: {
           minimize: false,
         },
