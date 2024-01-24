@@ -4305,6 +4305,10 @@ fieldset {
        column-gap: 7px;
 }
 
+.other__swiper .swiper-slide {
+  width: 25%;
+}
+
 .zoom-show {
   position: relative;
 }
@@ -6986,6 +6990,11 @@ fieldset {
   height: 200px;
 }
 
+.news__card-pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .news__card-content-title {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -8334,6 +8343,10 @@ fieldset {
 }
 
 .municipality__map-item:hover {
+  fill: #2d6fd0;
+}
+
+.municipality__map-item:hover path {
   fill: #2d6fd0;
 }
 
@@ -15767,6 +15780,10 @@ fieldset {
          column-gap: 7px;
   }
 
+  .other__swiper .swiper-slide {
+    width: 50%;
+  }
+
   .map__titles {
     display: flex;
     flex-direction: column;
@@ -19979,6 +19996,10 @@ fieldset {
 
   .other .container {
     padding-right: 0;
+  }
+
+  .other__swiper .swiper-slide {
+    width: 100%;
   }
 
   .map__text,

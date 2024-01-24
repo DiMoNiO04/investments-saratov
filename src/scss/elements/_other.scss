@@ -1,4 +1,19 @@
 .other {
+  &__swiper {
+    .swiper-slide {
+      width: 25%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .other {
+    &__swiper {
+      .swiper-slide {
+        width: 50%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $mob) {
@@ -8,6 +23,12 @@
     }
     .container {
       padding-right: 0;
+    }
+
+    &__swiper {
+      .swiper-slide {
+        width: 100%;
+      }
     }
   }
 }

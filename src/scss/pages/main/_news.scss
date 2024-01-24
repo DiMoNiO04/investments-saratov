@@ -63,6 +63,10 @@
   &__card-pic {
     flex-shrink: 0;
     @include sizes(100%, 200px);
+
+    img {
+      object-fit: cover;
+    }
   }
 
   &__card-content-title {
