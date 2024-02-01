@@ -15051,7 +15051,6 @@ if (docDownloadLinks && window.innerWidth > MOB) {
 document.addEventListener('DOMContentLoaded', () => {
   removeHelperTooltips();
   tooltip('.account__table-btn');
-  tooltip('.soceconomic-develop__item-tooltip');
 });
 
 ;// CONCATENATED MODULE: ./src/js/scripts/chat.js

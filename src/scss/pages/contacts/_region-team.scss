@@ -38,6 +38,11 @@
     @include sizes(120px, 120px);
     flex-shrink: 0;
     border-radius: 50%;
+
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+    }
   }
 
   &__name {
