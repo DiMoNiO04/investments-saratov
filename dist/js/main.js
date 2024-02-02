@@ -14773,22 +14773,6 @@ if (header) {
     jssearchclose.click();
   });
 
-  // очистка инпут при заполнении/пустоте
-  const searchInput = document.querySelector('.js-search-mob-input');
-  const closeButton = document.querySelector('.js-search-mob-close');
-
-  searchInput.addEventListener('input', function () {
-    if (this.value.trim() !== '') {
-      closeButton.classList.add('change');
-    } else {
-      closeButton.classList.remove('change');
-    }
-  });
-  closeButton.addEventListener('click', () => {
-    searchInput.value = '';
-    closeButton.classList.remove('change');
-  });
-
   // Header, наведение на пункты
   const headerBottomLinks = document.querySelectorAll('.js-head-link');
   const jsHeadMenus = document.querySelectorAll('.js-head-menu');
