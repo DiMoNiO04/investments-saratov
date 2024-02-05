@@ -9,6 +9,7 @@
   &__head {
     @extend %flexCenterBetween;
     margin-bottom: 20px;
+    max-width: 870px;
   }
 
   &__date {
@@ -33,11 +34,13 @@
 
   &__image {
     @extend %imageCoverWidth;
-    height: 500px;
+    height: 600px;
     margin-bottom: 40px;
 
     img {
       border-radius: 4px;
+      max-width: 870px;
+      object-fit: cover;
     }
   }
 

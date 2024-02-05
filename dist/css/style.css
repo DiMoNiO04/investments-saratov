@@ -13445,6 +13445,7 @@ fieldset {
 
 .article__head {
   margin-bottom: 20px;
+  max-width: 870px;
 }
 
 .article__date {
@@ -13466,12 +13467,15 @@ fieldset {
 }
 
 .article__image {
-  height: 500px;
+  height: 600px;
   margin-bottom: 40px;
 }
 
 .article__image img {
   border-radius: 4px;
+  max-width: 870px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .article__content {
