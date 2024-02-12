@@ -2346,6 +2346,7 @@ svg {
 .ao-dev-cor__title,
 .ao-dev-corp__title,
 .contacts-corp__title,
+.fin-credit__title,
 .promising-direc__title,
 .availability-stock__title,
 .agriculture__title,
@@ -9604,6 +9605,31 @@ fieldset {
   border-radius: 4px;
 }
 
+.fin-credit__container {
+  max-width: 870px;
+}
+
+.fin-credit__title {
+  margin-bottom: 40px;
+}
+
+.fin-credit a {
+  color: #2d6fd0;
+  transition: color 0.2s ease;
+}
+
+.fin-credit a:hover {
+  color: #2661d4;
+}
+
+.fin-credit .content p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.fin-credit .content p:not(:first-child) {
+  margin-top: 12px;
+}
+
 .plan-projec__container {
   row-gap: 40px;
 }
@@ -13854,6 +13880,7 @@ fieldset {
   .ao-dev-cor__title,
   .ao-dev-corp__title,
   .contacts-corp__title,
+  .fin-credit__title,
   .promising-direc__title,
   .availability-stock__title,
   .agriculture__title,
@@ -15644,6 +15671,7 @@ fieldset {
   .ao-dev-cor__title,
   .ao-dev-corp__title,
   .contacts-corp__title,
+  .fin-credit__title,
   .promising-direc__title,
   .availability-stock__title,
   .agriculture__title,
@@ -17861,6 +17889,22 @@ fieldset {
     height: 400px;
   }
 
+  .fin-credit__container {
+    max-width: 100%;
+  }
+
+  .fin-credit__title {
+    margin-bottom: 32px;
+  }
+
+  .fin-credit .content p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .fin-credit .content p:not(:first-child) {
+    margin-top: 8px;
+  }
+
   .plan-projec__container {
     row-gap: 32px;
   }
@@ -19766,6 +19810,7 @@ fieldset {
   .ao-dev-cor__title,
   .ao-dev-corp__title,
   .contacts-corp__title,
+  .fin-credit__title,
   .promising-direc__title,
   .availability-stock__title,
   .agriculture__title,
@@ -23349,6 +23394,7 @@ fieldset {
   .ao-dev-cor__title,
   .ao-dev-corp__title,
   .contacts-corp__title,
+  .fin-credit__title,
   .promising-direc__title,
   .availability-stock__title,
   .agriculture__title,
