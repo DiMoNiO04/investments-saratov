@@ -19501,7 +19501,7 @@ fieldset {
   }
 
   .article__image {
-    height: 400px;
+    height: 100%;
     margin-bottom: 32px;
   }
 }
