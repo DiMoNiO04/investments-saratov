@@ -5775,6 +5775,7 @@ fieldset {
 .chat__content-txt {
   font-size: 14px;
   line-height: 130%;
+  word-break: break-all;
 }
 
 .chat__content-date,

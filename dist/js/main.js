@@ -14916,18 +14916,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 if (window.outerWidth < MOB) {
-  if (window.location.href.includes('auth-reg')) {
+  if (
+    window.location.href === 'https://investinsaratov.ru/en/account/' ||
+    window.location.href === 'https://investinsaratov.ru/ru/account/'
+  ) {
     document.body.style.backgroundColor = '#fff';
   }
 }
 
 if (window.outerWidth < TABLET) {
-  if (
-    window.location.href.includes('personal') ||
-    window.location.href.includes('appeals') ||
-    window.location.href.includes('settings') ||
-    window.location.href.includes('organization')
-  ) {
+  if (window.location.href.includes('account')) {
     document.body.style.backgroundColor = '#fff';
   }
 }
