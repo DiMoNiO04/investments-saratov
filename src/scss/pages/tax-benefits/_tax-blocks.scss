@@ -4,6 +4,30 @@
     row-gap: 40px;
   }
 
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 0.5fr;
+    grid-gap: 30px;
+  }
+
+  &__row-title {
+    margin-right: 30px;
+  }
+
+  &__row-title,
+  &__row-percent,
+  &__row-txt {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
   &__title {
     @extend %secondaryH3;
     max-width: calc(50% - 10px);
@@ -161,6 +185,28 @@
       row-gap: 32px;
     }
 
+    &__row-title {
+      margin: 0;
+    }
+
+    &__row-title,
+    &__row-percent,
+    &__row-txt,
+    &__list-tit {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    &__list-block,
+    &__row-percent {
+      margin-left: 30px;
+    }
+
+    &__row {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+    }
+
     &__title,
     &__items-title,
     &__items-tx {
@@ -196,6 +242,19 @@
     &__items-blocks {
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 16px;
+    }
+
+    &__list-block,
+    &__row-percent {
+      margin-left: 20px;
+    }
+
+    &__row-title,
+    &__row-percent,
+    &__row-txt,
+    &__list-tit {
+      font-size: 16px;
+      line-height: 120%;
     }
 
     &__list-ul li::before {

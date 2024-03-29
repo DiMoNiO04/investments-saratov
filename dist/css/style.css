@@ -11050,6 +11050,30 @@ fieldset {
   row-gap: 40px;
 }
 
+.tax-blocks__rows {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.tax-blocks__row {
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 0.5fr;
+  grid-gap: 30px;
+}
+
+.tax-blocks__row-title {
+  margin-right: 30px;
+}
+
+.tax-blocks__row-title,
+.tax-blocks__row-percent,
+.tax-blocks__row-txt {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
 .tax-blocks__title {
   max-width: calc(50% - 10px);
 }
@@ -18501,6 +18525,28 @@ fieldset {
     row-gap: 32px;
   }
 
+  .tax-blocks__row-title {
+    margin: 0;
+  }
+
+  .tax-blocks__row-title,
+  .tax-blocks__row-percent,
+  .tax-blocks__row-txt,
+  .tax-blocks__list-tit {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .tax-blocks__list-block,
+  .tax-blocks__row-percent {
+    margin-left: 30px;
+  }
+
+  .tax-blocks__row {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+  }
+
   .tax-blocks__title,
   .tax-blocks__items-title,
   .tax-blocks__items-tx {
@@ -22442,6 +22488,19 @@ fieldset {
   .tax-blocks__items-blocks {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 16px;
+  }
+
+  .tax-blocks__list-block,
+  .tax-blocks__row-percent {
+    margin-left: 20px;
+  }
+
+  .tax-blocks__row-title,
+  .tax-blocks__row-percent,
+  .tax-blocks__row-txt,
+  .tax-blocks__list-tit {
+    font-size: 16px;
+    line-height: 120%;
   }
 
   .tax-blocks__list-ul li::before {
